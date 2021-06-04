@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/tqfx/tqfx.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/tqfx/tqfx.github.io/actions/workflows/deploy.yml)
+[![gh-pages](https://github.com/tqfx/tqfx.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/tqfx/tqfx.github.io/actions/workflows/gh-pages.yml)
 
 <p align="center">
 <img width=128 src="static/sponsor/images/WeChatQR.png" />
