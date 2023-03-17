@@ -1,0 +1,26 @@
+<map id="a.h" name="a.h">
+<area shape="rect" id="node1" title="algorithm library" alt="" coords="746,5,789,32"/>
+<area shape="rect" id="node2" href="$d3/d51/avl_8h.html" title="Adelson&#45;Velsky and Landis self&#45;balancing binary search tree." alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$d6/d6d/buf_8h.html" title="basic buffer library" alt="" coords="84,80,139,107"/>
+<area shape="rect" id="node4" href="$d7/d3b/complex_8h.html" title="complex number" alt="" coords="163,80,254,107"/>
+<area shape="rect" id="node5" href="$dc/de6/crc_8h.html" title="Cyclic Redundancy Check." alt="" coords="278,80,331,107"/>
+<area shape="rect" id="node6" href="$df/d2a/fuzzy_8h.html" title="fuzzy operator" alt="" coords="689,80,755,107"/>
+<area shape="rect" id="node8" href="$d0/d97/host_2a_8h.html" title="algorithm library on host" alt="" coords="435,80,510,107"/>
+<area shape="rect" id="node13" href="$da/d23/list_8h.html" title="circular doubly linked list implementation" alt="" coords="356,80,411,107"/>
+<area shape="rect" id="node14" href="$df/db1/math_8h.html" title="mathematical algorithm library" alt="" coords="780,80,848,107"/>
+<area shape="rect" id="node15" href="$d5/d1e/real_8h.html" title="real number" alt="" coords="874,155,933,181"/>
+<area shape="rect" id="node16" href="$d6/dea/mf_8h.html" title="membership function" alt="" coords="534,80,585,107"/>
+<area shape="rect" id="node17" href="$d4/ddc/oop_8h.html" title="Object Oriented Programming Macros." alt="" coords="897,80,955,107"/>
+<area shape="rect" id="node18" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="609,80,664,107"/>
+<area shape="rect" id="node19" href="$db/d57/poly_8h.html" title="polynomial" alt="" coords="1031,80,1091,107"/>
+<area shape="rect" id="node20" href="$dc/d23/polytrack_8h.html" title="polynomial trajectory" alt="" coords="1115,80,1209,107"/>
+<area shape="rect" id="node21" href="$d6/d1b/rbt_8h.html" title="red–black self&#45;balancing binary search tree" alt="" coords="1233,80,1285,107"/>
+<area shape="rect" id="node22" href="$d1/dad/slist_8h.html" title="circular singly linked list implementation" alt="" coords="1310,80,1371,107"/>
+<area shape="rect" id="node23" href="$d2/d16/tf_8h.html" title="transfer function" alt="" coords="1395,80,1438,107"/>
+<area shape="rect" id="node24" href="$df/dfc/version_8h.html" title="algorithm library version" alt="" coords="1462,80,1545,107"/>
+<area shape="rect" id="node7" href="$d4/d05/fpid_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="683,155,742,181"/>
+<area shape="rect" id="node9" href="$d9/dc9/que_8h.html" title="basic queue library" alt="" coords="217,155,307,181"/>
+<area shape="rect" id="node10" href="$d1/d93/str_8h.html" title="basic string library" alt="" coords="331,155,414,181"/>
+<area shape="rect" id="node11" href="$db/d65/vec_8h.html" title="basic vector library" alt="" coords="439,155,528,181"/>
+<area shape="rect" id="node12" href="$d6/d68/vector_8h.html" title="basic vector library" alt="" coords="553,155,659,181"/>
+</map>

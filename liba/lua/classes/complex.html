@@ -1,0 +1,1250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><strong>complex</strong></li>
+  <li><a href="../classes/fpid.html">fpid</a></li>
+  <li><a href="../classes/pid.html">pid</a></li>
+  <li><a href="../classes/polytrack3.html">polytrack3</a></li>
+  <li><a href="../classes/polytrack5.html">polytrack5</a></li>
+  <li><a href="../classes/polytrack7.html">polytrack7</a></li>
+  <li><a href="../classes/tf.html">tf</a></li>
+  <li><a href="../classes/version.html">version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.fpid.html">liba.fpid</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>complex</code></h1>
+<p>complex number</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#complex.complex">complex.complex</a></td>
+	<td class="summary">complex number</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#complex:new">complex:new (real, imag)</a></td>
+	<td class="summary">constructor for complex number from rectangular Cartesian components</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:polar">complex:polar (r, theta)</a></td>
+	<td class="summary">constructor for complex number from polar form</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:logabs">complex:logabs ()</a></td>
+	<td class="summary">computes the natural logarithm of magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:abs2">complex:abs2 ()</a></td>
+	<td class="summary">computes the squared magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:abs">complex:abs ()</a></td>
+	<td class="summary">computes the magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:arg">complex:arg ()</a></td>
+	<td class="summary">computes the phase angle of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:conj">complex:conj ()</a></td>
+	<td class="summary">computes the complex conjugate</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:unm">complex:unm ()</a></td>
+	<td class="summary">computes the complex negative</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:inv">complex:inv ()</a></td>
+	<td class="summary">inverse of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:add">complex:add (z)</a></td>
+	<td class="summary">addition of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sub">complex:sub (z)</a></td>
+	<td class="summary">subtraction of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:mul">complex:mul (z)</a></td>
+	<td class="summary">multiplication of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:div">complex:div (z)</a></td>
+	<td class="summary">division of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:pow">complex:pow (a)</a></td>
+	<td class="summary">complex number z raised to complex power a</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:logb">complex:logb (b)</a></td>
+	<td class="summary">computes the complex base-b logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:exp">complex:exp ()</a></td>
+	<td class="summary">computes the complex base-e exponential</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:log">complex:log ()</a></td>
+	<td class="summary">computes the complex natural logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sqrt">complex:sqrt ()</a></td>
+	<td class="summary">computes the complex square root</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:log2">complex:log2 ()</a></td>
+	<td class="summary">computes the complex base-2 logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:log10">complex:log10 ()</a></td>
+	<td class="summary">computes the complex base-10 logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sin">complex:sin ()</a></td>
+	<td class="summary">computes the complex sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:cos">complex:cos ()</a></td>
+	<td class="summary">computes the complex cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:tan">complex:tan ()</a></td>
+	<td class="summary">computes the complex tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sec">complex:sec ()</a></td>
+	<td class="summary">computes the complex secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:csc">complex:csc ()</a></td>
+	<td class="summary">computes the complex cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:cot">complex:cot ()</a></td>
+	<td class="summary">computes the complex cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:asin">complex:asin ()</a></td>
+	<td class="summary">computes the complex arc sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acos">complex:acos ()</a></td>
+	<td class="summary">computes the complex arc cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:atan">complex:atan ()</a></td>
+	<td class="summary">computes the complex arc tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:asec">complex:asec ()</a></td>
+	<td class="summary">computes the complex arc secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acsc">complex:acsc ()</a></td>
+	<td class="summary">computes the complex arc cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acot">complex:acot ()</a></td>
+	<td class="summary">computes the complex arc cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sinh">complex:sinh ()</a></td>
+	<td class="summary">computes the complex hyperbolic sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:cosh">complex:cosh ()</a></td>
+	<td class="summary">computes the complex hyperbolic cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:tanh">complex:tanh ()</a></td>
+	<td class="summary">computes the complex hyperbolic tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:sech">complex:sech ()</a></td>
+	<td class="summary">computes the complex hyperbolic secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:csch">complex:csch ()</a></td>
+	<td class="summary">computes the complex hyperbolic cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:coth">complex:coth ()</a></td>
+	<td class="summary">computes the complex hyperbolic cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:asinh">complex:asinh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acosh">complex:acosh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:atanh">complex:atanh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:asech">complex:asech ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acsch">complex:acsch ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#complex:acoth">complex:acoth ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cotangent</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "complex.complex"></a>
+    <strong>complex.complex</strong>
+    </dt>
+    <dd>
+    complex number
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">real</span>
+         real part of complex number
+        </li>
+        <li><span class="parameter">imag</span>
+         imaginary part of complex number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "complex:new"></a>
+    <strong>complex:new (real, imag)</strong>
+    </dt>
+    <dd>
+    constructor for complex number from rectangular Cartesian components
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">real</span>
+            <span class="types"><span class="type">number</span></span>
+         real part of complex number
+        </li>
+        <li><span class="parameter">imag</span>
+            <span class="types"><span class="type">number</span></span>
+         imaginary part of complex number
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:polar"></a>
+    <strong>complex:polar (r, theta)</strong>
+    </dt>
+    <dd>
+    constructor for complex number from polar form
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">r</span>
+            <span class="types"><span class="type">number</span></span>
+         a distance from a reference point
+        </li>
+        <li><span class="parameter">theta</span>
+            <span class="types"><span class="type">number</span></span>
+         an angle from a reference direction
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:logabs"></a>
+    <strong>complex:logabs ()</strong>
+    </dt>
+    <dd>
+    computes the natural logarithm of magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:abs2"></a>
+    <strong>complex:abs2 ()</strong>
+    </dt>
+    <dd>
+    computes the squared magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:abs"></a>
+    <strong>complex:abs ()</strong>
+    </dt>
+    <dd>
+    computes the magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:arg"></a>
+    <strong>complex:arg ()</strong>
+    </dt>
+    <dd>
+    computes the phase angle of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:conj"></a>
+    <strong>complex:conj ()</strong>
+    </dt>
+    <dd>
+    computes the complex conjugate
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:unm"></a>
+    <strong>complex:unm ()</strong>
+    </dt>
+    <dd>
+    computes the complex negative
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:inv"></a>
+    <strong>complex:inv ()</strong>
+    </dt>
+    <dd>
+    inverse of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:add"></a>
+    <strong>complex:add (z)</strong>
+    </dt>
+    <dd>
+    addition of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sub"></a>
+    <strong>complex:sub (z)</strong>
+    </dt>
+    <dd>
+    subtraction of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:mul"></a>
+    <strong>complex:mul (z)</strong>
+    </dt>
+    <dd>
+    multiplication of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:div"></a>
+    <strong>complex:div (z)</strong>
+    </dt>
+    <dd>
+    division of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:pow"></a>
+    <strong>complex:pow (a)</strong>
+    </dt>
+    <dd>
+    complex number z raised to complex power a
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:logb"></a>
+    <strong>complex:logb (b)</strong>
+    </dt>
+    <dd>
+    computes the complex base-b logarithm
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">b</span>
+            <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:exp"></a>
+    <strong>complex:exp ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-e exponential
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:log"></a>
+    <strong>complex:log ()</strong>
+    </dt>
+    <dd>
+    computes the complex natural logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sqrt"></a>
+    <strong>complex:sqrt ()</strong>
+    </dt>
+    <dd>
+    computes the complex square root
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:log2"></a>
+    <strong>complex:log2 ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-2 logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:log10"></a>
+    <strong>complex:log10 ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-10 logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sin"></a>
+    <strong>complex:sin ()</strong>
+    </dt>
+    <dd>
+    computes the complex sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:cos"></a>
+    <strong>complex:cos ()</strong>
+    </dt>
+    <dd>
+    computes the complex cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:tan"></a>
+    <strong>complex:tan ()</strong>
+    </dt>
+    <dd>
+    computes the complex tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sec"></a>
+    <strong>complex:sec ()</strong>
+    </dt>
+    <dd>
+    computes the complex secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:csc"></a>
+    <strong>complex:csc ()</strong>
+    </dt>
+    <dd>
+    computes the complex cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:cot"></a>
+    <strong>complex:cot ()</strong>
+    </dt>
+    <dd>
+    computes the complex cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:asin"></a>
+    <strong>complex:asin ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acos"></a>
+    <strong>complex:acos ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:atan"></a>
+    <strong>complex:atan ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:asec"></a>
+    <strong>complex:asec ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acsc"></a>
+    <strong>complex:acsc ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acot"></a>
+    <strong>complex:acot ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sinh"></a>
+    <strong>complex:sinh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:cosh"></a>
+    <strong>complex:cosh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:tanh"></a>
+    <strong>complex:tanh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:sech"></a>
+    <strong>complex:sech ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:csch"></a>
+    <strong>complex:csch ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:coth"></a>
+    <strong>complex:coth ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:asinh"></a>
+    <strong>complex:asinh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acosh"></a>
+    <strong>complex:acosh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:atanh"></a>
+    <strong>complex:atanh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:asech"></a>
+    <strong>complex:asech ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acsch"></a>
+    <strong>complex:acsch ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "complex:acoth"></a>
+    <strong>complex:acoth ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/complex.html#">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2023-03-17 18:29:08 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

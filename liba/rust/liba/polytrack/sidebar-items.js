@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["PolyTrack3","cubic polynomial trajectory"],["PolyTrack5","quintic polynomial trajectory"],["PolyTrack7","hepta polynomial trajectory"]]};

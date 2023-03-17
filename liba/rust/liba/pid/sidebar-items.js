@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":[["INC","incremental PID controller"],["OFF","turn off PID controller"],["POS","positional PID controller"]],"struct":[["PID","proportional integral derivative controller"]]};

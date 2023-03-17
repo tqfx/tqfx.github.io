@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.fpid.html">liba.fpid</a></li>
+  <li><strong>liba.mf</strong></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/complex.html">complex</a></li>
+  <li><a href="../classes/fpid.html">fpid</a></li>
+  <li><a href="../classes/pid.html">pid</a></li>
+  <li><a href="../classes/polytrack3.html">polytrack3</a></li>
+  <li><a href="../classes/polytrack5.html">polytrack5</a></li>
+  <li><a href="../classes/polytrack7.html">polytrack7</a></li>
+  <li><a href="../classes/tf.html">tf</a></li>
+  <li><a href="../classes/version.html">version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>liba.mf</code></h1>
+<p>membership function</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#gauss">gauss (x, sigma, c)</a></td>
+	<td class="summary">gaussian membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gbell">gbell (x, a, b, c)</a></td>
+	<td class="summary">generalized bell-shaped membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sig">sig (x, a, c)</a></td>
+	<td class="summary">sigmoidal membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trap">trap (x, a, b, c, d)</a></td>
+	<td class="summary">trapezoidal membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tri">tri (x, a, b, c)</a></td>
+	<td class="summary">triangular membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#z">z (x, a, b)</a></td>
+	<td class="summary">z-shaped membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#mf">mf (e, x, ...)</a></td>
+	<td class="summary">membership function</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#mf">mf</a></td>
+	<td class="summary">type for membership function</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "gauss"></a>
+    <strong>gauss (x, sigma, c)</strong>
+    </dt>
+    <dd>
+    gaussian membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">sigma</span>
+            <span class="types"><span class="type">number</span></span>
+         sigma
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         c
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gbell"></a>
+    <strong>gbell (x, a, b, c)</strong>
+    </dt>
+    <dd>
+    generalized bell-shaped membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         a
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         b
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         c
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sig"></a>
+    <strong>sig (x, a, c)</strong>
+    </dt>
+    <dd>
+    sigmoidal membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         a
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         c
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trap"></a>
+    <strong>trap (x, a, b, c, d)</strong>
+    </dt>
+    <dd>
+    trapezoidal membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         a
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         b
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         c
+        </li>
+        <li><span class="parameter">d</span>
+            <span class="types"><span class="type">number</span></span>
+         d
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tri"></a>
+    <strong>tri (x, a, b, c)</strong>
+    </dt>
+    <dd>
+    triangular membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         a
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         b
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         c
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "z"></a>
+    <strong>z (x, a, b)</strong>
+    </dt>
+    <dd>
+    z-shaped membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         a
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         b
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mf"></a>
+    <strong>mf (e, x, ...)</strong>
+    </dt>
+    <dd>
+    membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">e</span>
+            <span class="types"><span class="type">int</span></span>
+         type for membership function
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         any element
+        </li>
+        <li><span class="parameter">...</span>
+            <span class="types"><span class="type">number</span></span>
+         paramarrays
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "mf"></a>
+    <strong>mf</strong>
+    </dt>
+    <dd>
+    type for membership function
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">NUL</span>
+         none
+        </li>
+        <li><span class="parameter">GAUSS</span>
+         gaussian membership function
+        </li>
+        <li><span class="parameter">GBELL</span>
+         generalized bell-shaped membership function
+        </li>
+        <li><span class="parameter">SIG</span>
+         sigmoidal membership function
+        </li>
+        <li><span class="parameter">TRAP</span>
+         trapezoidal membership function
+        </li>
+        <li><span class="parameter">TRI</span>
+         triangular membership function
+        </li>
+        <li><span class="parameter">Z</span>
+         z-shaped membership function
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2023-03-17 18:29:08 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

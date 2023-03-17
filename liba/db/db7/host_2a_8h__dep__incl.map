@@ -1,0 +1,7 @@
+<map id="host/a.h" name="host/a.h">
+<area shape="rect" id="node1" title="algorithm library on host" alt="" coords="179,5,253,32"/>
+<area shape="rect" id="node2" href="$d9/dc9/que_8h.html" title="basic queue library" alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$d1/d93/str_8h.html" title="basic string library" alt="" coords="120,80,203,107"/>
+<area shape="rect" id="node4" href="$db/d65/vec_8h.html" title="basic vector library" alt="" coords="227,80,317,107"/>
+<area shape="rect" id="node5" href="$d6/d68/vector_8h.html" title="basic vector library" alt="" coords="341,80,448,107"/>
+</map>

@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/complex.html">complex</a></li>
+  <li><a href="../classes/fpid.html">fpid</a></li>
+  <li><a href="../classes/pid.html">pid</a></li>
+  <li><a href="../classes/polytrack3.html">polytrack3</a></li>
+  <li><a href="../classes/polytrack5.html">polytrack5</a></li>
+  <li><strong>polytrack7</strong></li>
+  <li><a href="../classes/tf.html">tf</a></li>
+  <li><a href="../classes/version.html">version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.fpid.html">liba.fpid</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>polytrack7</code></h1>
+<p>hepta polynomial trajectory</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7.polytrack7">polytrack7.polytrack7</a></td>
+	<td class="summary">hepta polynomial trajectory</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:new">polytrack7:new (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
+	<td class="summary">constructor for hepta polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:init">polytrack7:init (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
+	<td class="summary">initialize function for hepta polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:gen">polytrack7:gen ()</a></td>
+	<td class="summary">generation function for hepta polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:out">polytrack7:out (ts)</a></td>
+	<td class="summary">process function for hepta polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:pos">polytrack7:pos (ts)</a></td>
+	<td class="summary">process function for hepta polynomial trajectory position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:vec">polytrack7:vec (ts)</a></td>
+	<td class="summary">process function for hepta polynomial trajectory velocity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:acc">polytrack7:acc (ts)</a></td>
+	<td class="summary">process function for hepta polynomial trajectory acceleration</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#polytrack7:jer">polytrack7:jer (ts)</a></td>
+	<td class="summary">process function for hepta polynomial trajectory jerk</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "polytrack7.polytrack7"></a>
+    <strong>polytrack7.polytrack7</strong>
+    </dt>
+    <dd>
+    hepta polynomial trajectory
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">k</span>
+         quantity table
+        </li>
+        <li><span class="parameter">t</span>
+         time table
+        </li>
+        <li><span class="parameter">p</span>
+         position table
+        </li>
+        <li><span class="parameter">v</span>
+         velocity table
+        </li>
+        <li><span class="parameter">a</span>
+         acceleration table
+        </li>
+        <li><span class="parameter">j</span>
+         jerk table
+        </li>
+        <li><span class="parameter">t0</span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+         velocity for source
+        </li>
+        <li><span class="parameter">v1</span>
+         velocity for target
+        </li>
+        <li><span class="parameter">a0</span>
+         acceleration for source
+        </li>
+        <li><span class="parameter">a1</span>
+         acceleration for target
+        </li>
+        <li><span class="parameter">j0</span>
+         jerk for source
+        </li>
+        <li><span class="parameter">j1</span>
+         jerk for target
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "polytrack7:new"></a>
+    <strong>polytrack7:new (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
+    </dt>
+    <dd>
+    constructor for hepta polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">a0</span>
+            <span class="types"><span class="type">number</span></span>
+         acceleration for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">a1</span>
+            <span class="types"><span class="type">number</span></span>
+         acceleration for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">j0</span>
+            <span class="types"><span class="type">number</span></span>
+         jerk for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">j1</span>
+            <span class="types"><span class="type">number</span></span>
+         jerk for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/polytrack7.html#">polytrack7</a></span>
+        hepta polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:init"></a>
+    <strong>polytrack7:init (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
+    </dt>
+    <dd>
+    initialize function for hepta polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">a0</span>
+            <span class="types"><span class="type">number</span></span>
+         acceleration for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">a1</span>
+            <span class="types"><span class="type">number</span></span>
+         acceleration for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">j0</span>
+            <span class="types"><span class="type">number</span></span>
+         jerk for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">j1</span>
+            <span class="types"><span class="type">number</span></span>
+         jerk for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/polytrack7.html#">polytrack7</a></span>
+        hepta polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:gen"></a>
+    <strong>polytrack7:gen ()</strong>
+    </dt>
+    <dd>
+    generation function for hepta polynomial trajectory
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/polytrack7.html#">polytrack7</a></span>
+        hepta polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:out"></a>
+    <strong>polytrack7:out (ts)</strong>
+    </dt>
+    <dd>
+    process function for hepta polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         current time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        {position,velocity,acceleration,jerk}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:pos"></a>
+    <strong>polytrack7:pos (ts)</strong>
+    </dt>
+    <dd>
+    process function for hepta polynomial trajectory position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         current time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        position output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:vec"></a>
+    <strong>polytrack7:vec (ts)</strong>
+    </dt>
+    <dd>
+    process function for hepta polynomial trajectory velocity
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         current time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        velocity output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:acc"></a>
+    <strong>polytrack7:acc (ts)</strong>
+    </dt>
+    <dd>
+    process function for hepta polynomial trajectory acceleration
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         current time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        acceleration output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "polytrack7:jer"></a>
+    <strong>polytrack7:jer (ts)</strong>
+    </dt>
+    <dd>
+    process function for hepta polynomial trajectory jerk
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         current time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        jerk output
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2023-03-17 18:29:08 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
