@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sponsor-Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <link rel="stylesheet" href="sponsor.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
+    <script src="sponsor.js"></script>
+</head>
+
+<body>
+    <a id="github" href="//github.com/tqfx/" target="_blank" class="pos-f tr3" title="Github"></a>
+    <div id="DonateText" class="tr3">Sponsor</div>
+    <ul id="donateBox" class="list pos-f tr3">
+        <li id="PayPal"><a href="//www.paypal.me/tqfx/" target="_blank">PayPal</a></li>
+        <li id="BTC" data-footnote="Copy addres and show QRCod"><button id="BTCBn" data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li>
+        <li id="AliPay">AliPay</li>
+        <li id="WeChat">WeChat</li>
+    </ul>
+    <div id="QRBox" class="pos-f left-100">
+        <div id="MainBox"></div>
+    </div>
+    <input id="btc-key" type="text" value="bc1qevcu5k99dmlefyh99ngsrctz9t3dxz50vwucvf" readonly="readonly">
+</body>
+
+</html>

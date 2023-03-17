@@ -1,0 +1,57 @@
+tqfx
+==================================================================
+https://keybase.io/tqfx
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tqfx.org
+  * I am tqfx (https://keybase.io/tqfx) on keybase.
+  * I have a public key ASCjAA_lU5sSdJG7qFJ5b44A2wt6P8HK6MbWkUBO8TwNwQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f784ae2325d63dea307b9837493d9ecdba60588247fda836edeea07bb264709f0a",
+      "host": "keybase.io",
+      "kid": "0120a3000fe5539b127491bba852796f8e00db0b7a3fc1cae8c6d691404ef13c0dc10a",
+      "uid": "58889a6429167b45c4f89cbad7d77719",
+      "username": "tqfx"
+    },
+    "merkle_root": {
+      "ctime": 1648038951,
+      "hash": "7df1b538ba312b1cb9f23d402fb172725353a5369556798775222db15204a56a3e83933db72fafb588c06507a3a1077c47b5d4199dacf1adc03b246d2c1a89a0",
+      "hash_meta": "4aade6e03a12b517b64dfcbbeb576639e31648bb1b8ee360c887b59b1aa254ee",
+      "seqno": 22144487
+    },
+    "service": {
+      "entropy": "nALMSbrPB5qIFmlXnfyMWcBz",
+      "hostname": "tqfx.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1648039018,
+  "expire_in": 504576000,
+  "prev": "0a5cf87ad1b3fbb4d9613dfc790562452f6bc535d60d6192d86870fcdc7716e7",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgowAP5VObEnSRu6hSeW+OANsLej/ByujG1pFATvE8DcEKp3BheWxvYWTESpcCGMQgClz4etGz+7TZYT38eQViRS9rxTXWDWGS2Ghw/Nx3FufEIPSzVD2QUtfOLB1vtsd7dwi14LrtkoBcsa83khtqeqAdAgHCo3NpZ8RAeG2vWzxlV9Er3hWyFHXce/FPhUeeCdcaxV0NmAR2Ytu/d6RXvsDleXCR5ibqq0Vol/Nq/KEnc7BluohparUCD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICPTOdXLuhwiX+rDitIQjhdGGSHaxlEKXRTWBPIh6T/So3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tqfx
+
+==================================================================
