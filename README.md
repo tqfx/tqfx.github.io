@@ -2,7 +2,7 @@
 
 ## [博客](https://blog.tqfx.org)
 
-## [笔记](https://note.tqfx.org)
+## [维基](https://wiki.tqfx.org)
 
 ## 项目
 
