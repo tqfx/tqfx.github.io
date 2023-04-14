@@ -121,6 +121,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga70e621151ad6124d39cb7da2239a65d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8f/group__A__AVL.html#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#gae3489cf8f60e1bda778a057b27c6afd7">a_avl_post_tail</a>(root); cur; cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#ga2568e8b1fbcf4c9bacedcf91c69a2502">a_avl_post_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga70e621151ad6124d39cb7da2239a65d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree postorder reverse  <a href="../../d6/d8f/group__A__AVL.html#ga70e621151ad6124d39cb7da2239a65d7">More...</a><br /></td></tr>
 <tr class="separator:ga70e621151ad6124d39cb7da2239a65d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga854f43a862872615c76a393b566838dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d8f/group__A__AVL.html#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *next = A_NULL, *cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#gaaed07c1e148badd4cceb5e1e6aeff3ca">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#gaaed07c1e148badd4cceb5e1e6aeff3ca">a_avl_tear</a>(root, &amp;next))</td></tr>
+<tr class="memdesc:ga854f43a862872615c76a393b566838dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a AVL binary search tree using postorder traversal  <a href="../../d6/d8f/group__A__AVL.html#ga854f43a862872615c76a393b566838dc">More...</a><br /></td></tr>
+<tr class="separator:ga854f43a862872615c76a393b566838dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -319,6 +322,57 @@ Functions</h2></td></tr>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga854f43a862872615c76a393b566838dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga854f43a862872615c76a393b566838dc">&#9670;&nbsp;</a></span>a_avl_fortear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_avl_fortear</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cur, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">next, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">root&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *next = A_NULL, *cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#gaaed07c1e148badd4cceb5e1e6aeff3ca">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="../../d6/d8f/group__A__AVL.html#gaaed07c1e148badd4cceb5e1e6aeff3ca">a_avl_tear</a>(root, &amp;next))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tear a AVL binary search tree using postorder traversal </p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
+<div class="line"><a class="code" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="line"><a class="code" href="../../d6/d8f/group__A__AVL.html#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a>(cur, next, &amp;root)</div>
+<div class="line">{</div>
+<div class="line">    T *it = <a class="code" href="../../d6/d8f/group__A__AVL.html#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__A__AVL_html_ga854f43a862872615c76a393b566838dc"><div class="ttname"><a href="../../d6/d8f/group__A__AVL.html#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a></div><div class="ttdeci">#define a_avl_fortear(cur, next, root)</div><div class="ttdoc">tear a AVL binary search tree using postorder traversal</div><div class="ttdef"><b>Definition:</b> avl.h:339</div></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as next node </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>

@@ -129,6 +129,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga523ec97a16f4af03765499018640d519"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d06/group__A__RBT.html#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="../../d7/d06/group__A__RBT.html#gaab4d41eef7f41c4f5bf60900ca35ba50">a_rbt_post_tail</a>(root); cur; cur = <a class="el" href="../../d7/d06/group__A__RBT.html#ga353e5f52b95fedf08721be5ddb05726d">a_rbt_post_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga523ec97a16f4af03765499018640d519"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree postorder reverse  <a href="../../d7/d06/group__A__RBT.html#ga523ec97a16f4af03765499018640d519">More...</a><br /></td></tr>
 <tr class="separator:ga523ec97a16f4af03765499018640d519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02459a57098710b5438cea2bce6e1522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d06/group__A__RBT.html#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *next = A_NULL, *cur = <a class="el" href="../../d7/d06/group__A__RBT.html#gab60f673551e4031700df292f9124bcf0">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="../../d7/d06/group__A__RBT.html#gab60f673551e4031700df292f9124bcf0">a_rbt_tear</a>(root, &amp;next))</td></tr>
+<tr class="memdesc:ga02459a57098710b5438cea2bce6e1522"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a red–black binary search tree using postorder traversal  <a href="../../d7/d06/group__A__RBT.html#ga02459a57098710b5438cea2bce6e1522">More...</a><br /></td></tr>
+<tr class="separator:ga02459a57098710b5438cea2bce6e1522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -327,6 +330,57 @@ Functions</h2></td></tr>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga02459a57098710b5438cea2bce6e1522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02459a57098710b5438cea2bce6e1522">&#9670;&nbsp;</a></span>a_rbt_fortear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_rbt_fortear</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cur, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">next, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">root&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *next = A_NULL, *cur = <a class="el" href="../../d7/d06/group__A__RBT.html#gab60f673551e4031700df292f9124bcf0">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="../../d7/d06/group__A__RBT.html#gab60f673551e4031700df292f9124bcf0">a_rbt_tear</a>(root, &amp;next))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tear a red–black binary search tree using postorder traversal </p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
+<div class="line"><a class="code" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_AVL_ROOT;</div>
+<div class="line"><a class="code" href="../../d7/d06/group__A__RBT.html#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a>(cur, next, &amp;root)</div>
+<div class="line">{</div>
+<div class="line">    T *it = <a class="code" href="../../d7/d06/group__A__RBT.html#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__A__RBT_html_ga02459a57098710b5438cea2bce6e1522"><div class="ttname"><a href="../../d7/d06/group__A__RBT.html#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a></div><div class="ttdeci">#define a_rbt_fortear(cur, next, root)</div><div class="ttdoc">tear a red–black binary search tree using postorder traversal</div><div class="ttdef"><b>Definition:</b> rbt.h:336</div></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as next node </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
