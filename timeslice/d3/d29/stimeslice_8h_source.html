@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *tail;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d3/d29/stimeslice_8h.html#a357e3a9d24ec8ab392edcf8ce56b9aa9">   31</a></span>&#160;} <a class="code" href="../../d3/d29/stimeslice_8h.html#a357e3a9d24ec8ab392edcf8ce56b9aa9">slist_s</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">   39</a></span>&#160;<span class="preprocessor">#define slist_entry(ptr, type, member) ((type *)((size_t)(ptr)-offsetof(type, member)))</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">   39</a></span>&#160;<span class="preprocessor">#define slist_entry(ptr, type, member) ((type *)((char *)(ptr)-offsetof(type, member)))</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d3/d29/stimeslice_8h.html#afc8c5c3f793e659a7c752d7ba838b680">   46</a></span>&#160;<span class="preprocessor">#define slist_foreach(ptr, ctx) \</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    for ((ptr) = (ctx)-&gt;head-&gt;next; (ptr) != (ctx)-&gt;head; (ptr) = (ptr)-&gt;next)</span></div>

@@ -99,7 +99,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a78cb21e71ef21de5aafb59a3dbf9a5ee"><td class="memItemLeft" align="right" valign="top"><a id="a78cb21e71ef21de5aafb59a3dbf9a5ee"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LIST_INIT</b>(node)&#160;&#160;&#160;{&amp;(node), &amp;(node)}</td></tr>
 <tr class="separator:a78cb21e71ef21de5aafb59a3dbf9a5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  type,  member)&#160;&#160;&#160;((type *)((size_t)(ptr)-offsetof(type, member)))</td></tr>
+<tr class="memitem:a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  type,  member)&#160;&#160;&#160;((type *)((char *)(ptr)-offsetof(type, member)))</td></tr>
 <tr class="memdesc:a26c976b7f654e70df318c1843e5094de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the struct for this entry.  <a href="../../d2/d6d/timeslice_8h.html#a26c976b7f654e70df318c1843e5094de">More...</a><br /></td></tr>
 <tr class="separator:a26c976b7f654e70df318c1843e5094de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616e2a4d96ad19cef0614e272375a3e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a616e2a4d96ad19cef0614e272375a3e2">list_foreach</a>(ptr,  ctx)&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;next; (ptr) != (ctx); (ptr) = (ptr)-&gt;next)</td></tr>
@@ -197,7 +197,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((type *)((size_t)(ptr)-offsetof(type, member)))</td>
+          <td></td><td>&#160;&#160;&#160;((type *)((char *)(ptr)-offsetof(type, member)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
