@@ -103,13 +103,13 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    tail-&gt;prev = head;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> list_add(<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> node)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> list_join(<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> node)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    list_link(ctx-&gt;prev, node);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    list_link(node, ctx);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> list_del(<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> node)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> list_drop(<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *<span class="keyword">const</span> node)</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    list_link(node-&gt;prev, node-&gt;next);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>

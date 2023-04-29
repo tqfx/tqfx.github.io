@@ -108,14 +108,14 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> slist_link(<a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> head, <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> tail) { head-&gt;next = tail; }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> slist_add(<a class="code" href="../../d7/d0a/structslist__s.html">slist_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> node)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> slist_join(<a class="code" href="../../d7/d0a/structslist__s.html">slist_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> node)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    slist_link(node, ctx-&gt;head);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    slist_link(ctx-&gt;tail, node);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    ctx-&gt;tail = node;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> slist_del(<a class="code" href="../../d7/d0a/structslist__s.html">slist_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> prev)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> slist_drop(<a class="code" href="../../d7/d0a/structslist__s.html">slist_s</a> *<span class="keyword">const</span> ctx, <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> prev)</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *<span class="keyword">const</span> node = prev-&gt;next;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    slist_link(prev, node-&gt;next);</div>
