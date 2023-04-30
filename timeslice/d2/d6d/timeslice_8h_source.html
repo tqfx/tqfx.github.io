@@ -162,7 +162,9 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;} <span class="comment">/* extern &quot;C&quot; */</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* timeslice.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#define timeslice() for (timeslice_init();; timeslice_exec())</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* timeslice.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="astructlist__s_html"><div class="ttname"><a href="../../d6/df5/structlist__s.html">list_s</a></div><div class="ttdoc">Instance structure for circular doubly linked list.</div><div class="ttdef"><b>Definition:</b> timeslice.h:19</div></div>
 <div class="ttc" id="astructtimeslice__s_html"><div class="ttname"><a href="../../d2/df3/structtimeslice__s.html">timeslice_s</a></div><div class="ttdoc">Instance structure for timeslice.</div><div class="ttdef"><b>Definition:</b> timeslice.h:113</div></div>
 <div class="ttc" id="atimeslice_8h_html_a0c7bda96f92f112cc89c034f56b16edf"><div class="ttname"><a href="../../d2/d6d/timeslice_8h.html#a0c7bda96f92f112cc89c034f56b16edf">timeslice_set_slice</a></div><div class="ttdeci">void timeslice_set_slice(timeslice_s *ctx, size_t slice)</div><div class="ttdoc">Set the slice.</div></div>

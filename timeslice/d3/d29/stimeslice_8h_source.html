@@ -174,7 +174,9 @@ $(function() {
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;} <span class="comment">/* extern &quot;C&quot; */</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* stimeslice.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#define stimeslice() for (stimeslice_init();; stimeslice_exec())</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* stimeslice.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="astimeslice_8h_html_a087492c49a6ffcc57be7406c442b7620"><div class="ttname"><a href="../../d3/d29/stimeslice_8h.html#a087492c49a6ffcc57be7406c442b7620">slist_u</a></div><div class="ttdeci">union slist_u slist_u</div><div class="ttdoc">Instance structure for circular singly linked list node.</div></div>
 <div class="ttc" id="astimeslice_8h_html_a134c33ca4ff251655fc4fd6892151328"><div class="ttname"><a href="../../d3/d29/stimeslice_8h.html#a134c33ca4ff251655fc4fd6892151328">stimeslice_s</a></div><div class="ttdeci">struct stimeslice_s stimeslice_s</div><div class="ttdoc">Instance structure for timeslice.</div></div>
 <div class="ttc" id="astimeslice_8h_html_a2e6a1c0468000c89325081469c37208c"><div class="ttname"><a href="../../d3/d29/stimeslice_8h.html#a2e6a1c0468000c89325081469c37208c">stimeslice_init</a></div><div class="ttdeci">void stimeslice_init(void)</div><div class="ttdoc">A function to execute before the main loop.</div></div>
