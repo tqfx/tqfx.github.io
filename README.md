@@ -14,6 +14,7 @@
 - [GitLab](https://gitlab.com/tqfx)
 - [GitLink](https://gitlink.org.cn/tqfx)
 - [Gitee](https://gitee.com/sutqfx)
+- [Gitea](https://gitea.com/tqfx)
 - [SourceForge](https://sf.net/u/tqfx)
 - [SourceHub](https://sr.ht/~tqfx)
 - [Codeberg](https://codeberg.org/tqfx)
