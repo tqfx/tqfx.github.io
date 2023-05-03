@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":[["FPID","fuzzy proportional integral derivative controller"]]};
+window.SIDEBAR_ITEMS = {"struct":["FPID"]};

@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":[["TF","transfer function"]]};
+window.SIDEBAR_ITEMS = {"struct":["TF"]};
