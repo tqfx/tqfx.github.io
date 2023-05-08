@@ -103,12 +103,12 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_NODE</b>(node)&#160;&#160;&#160;{&amp;(node)}</td></tr>
 <tr class="separator:ab7d6f2df35bcffe0e9d76b36fa3420ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49707721fde2adba8e88efcc5f1ee613"><td class="memItemLeft" align="right" valign="top"><a id="a49707721fde2adba8e88efcc5f1ee613"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_INIT</b>(list)&#160;&#160;&#160;{{{(list).head}}, (list).head}</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_INIT</b>(list)&#160;&#160;&#160;{{&amp;(list).head}, &amp;(list).head}</td></tr>
 <tr class="separator:a49707721fde2adba8e88efcc5f1ee613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea8856f39f597a427225dec1c02ba42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">slist_entry</a>(ptr,  type,  member)&#160;&#160;&#160;((type *)((char *)(ptr)-offsetof(type, member)))</td></tr>
 <tr class="memdesc:abea8856f39f597a427225dec1c02ba42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the struct for this entry.  <a href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">More...</a><br /></td></tr>
 <tr class="separator:abea8856f39f597a427225dec1c02ba42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc8c5c3f793e659a7c752d7ba838b680"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#afc8c5c3f793e659a7c752d7ba838b680">slist_foreach</a>(ptr,  ctx)&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;head-&gt;next; (ptr) != (ctx)-&gt;head; (ptr) = (ptr)-&gt;next)</td></tr>
+<tr class="memitem:afc8c5c3f793e659a7c752d7ba838b680"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#afc8c5c3f793e659a7c752d7ba838b680">slist_foreach</a>(ptr,  ctx)&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;head.next; (ptr) != (ctx)-&gt;head; (ptr) = (ptr)-&gt;next)</td></tr>
 <tr class="memdesc:afc8c5c3f793e659a7c752d7ba838b680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list.  <a href="../../d3/d29/stimeslice_8h.html#afc8c5c3f793e659a7c752d7ba838b680">More...</a><br /></td></tr>
 <tr class="separator:afc8c5c3f793e659a7c752d7ba838b680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33cd0d3cfeddbc97335ae3799831fd44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a33cd0d3cfeddbc97335ae3799831fd44">slist_forsafe</a>(ptr,  pre,  ctx)</td></tr>
@@ -252,7 +252,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;head-&gt;next; (ptr) != (ctx)-&gt;head; (ptr) = (ptr)-&gt;next)</td>
+          <td></td><td>&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;head.next; (ptr) != (ctx)-&gt;head; (ptr) = (ptr)-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -299,8 +299,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> ((pre) = (ctx)-&gt;head, (ptr) = (pre)-&gt;next;     \</div>
-<div class="line">         (ptr) != (ctx)-&gt;head &amp;&amp; (ptr) != (ptr)-&gt;next; \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> ((pre) = &amp;(ctx)-&gt;head, (ptr) = (pre)-&gt;next;     \</div>
+<div class="line">         (ptr) != &amp;(ctx)-&gt;head &amp;&amp; (ptr) != (ptr)-&gt;next; \</div>
 <div class="line">         (pre) = ((pre)-&gt;next == (ptr) ? (ptr) : (pre)), (ptr) = (pre)-&gt;next)</div>
 </div><!-- fragment -->
 <p>Iterate over a list safe against removal of list entry. </p>
