@@ -137,6 +137,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d82/group__A__MATH.html#ga6616a52c6eb69d1026c534ed1a54aebb">A_SGN</a>(x)&#160;&#160;&#160;((0 &lt; (x)) - ((x) &lt; 0))</td></tr>
 <tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}{x}=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \) <br /></td></tr>
 <tr class="separator:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d82/group__A__MATH.html#ga0f84bc53cc98d629c23ce6448bd96fed">A_SAT</a>(x,  min,  max)&#160;&#160;&#160;((min) &lt; (x) ? (x) &lt; (max) ? (x) : (max) : (min))</td></tr>
+<tr class="memdesc:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">saturation value of x, \( \texttt{sat}(x,min,max)=\begin{cases}min&amp;min&gt;x\\max&amp;x&gt;max\\x&amp;else\end{cases} \) <br /></td></tr>
+<tr class="separator:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga18369a0f3a42b955e2aa28e31c5515b9"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_f32_fpclassify</b>&#160;&#160;&#160;A_F32_F(fpclassify)</td></tr>
 <tr class="separator:ga18369a0f3a42b955e2aa28e31c5515b9"><td class="memSeparator" colspan="2">&#160;</td></tr>

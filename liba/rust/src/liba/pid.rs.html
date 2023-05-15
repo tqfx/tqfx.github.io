@@ -227,29 +227,31 @@
 <a href="#227" id="227">227</a>
 <a href="#228" id="228">228</a>
 <a href="#229" id="229">229</a>
+<a href="#230" id="230">230</a>
 </pre><pre class="rust"><code><span class="doccomment">//! proportional integral derivative controller
 
-</span><span class="kw">use </span><span class="kw">crate</span>::Real;
-<span class="kw">use </span><span class="kw">crate</span>::Uint;
+</span><span class="kw">use </span><span class="kw">crate</span>::real;
+<span class="kw">use </span><span class="kw">crate</span>::uint;
+<span class="kw">use </span><span class="kw">crate</span>::Real;
 
 <span class="doccomment">/// turn off PID controller
-</span><span class="kw">pub const </span>OFF: Uint = <span class="number">0</span>;
+</span><span class="kw">pub const </span>OFF: uint = <span class="number">0</span>;
 <span class="doccomment">/// positional PID controller
-</span><span class="kw">pub const </span>POS: Uint = <span class="number">1</span>;
+</span><span class="kw">pub const </span>POS: uint = <span class="number">1</span>;
 <span class="doccomment">/// incremental PID controller
-</span><span class="kw">pub const </span>INC: Uint = <span class="number">2</span>;
+</span><span class="kw">pub const </span>INC: uint = <span class="number">2</span>;
 
 <span class="doccomment">/// proportional integral derivative controller
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>PID {
     <span class="doccomment">/// sampling time unit(s)
-    </span>dt: Real,
+    </span>dt: real,
     <span class="doccomment">/// proportional constant
-    </span>kp: Real,
+    </span>kp: real,
     <span class="doccomment">/// integral constant
-    </span>ki: Real,
+    </span>ki: real,
     <span class="doccomment">/// derivative constant
-    </span>kd: Real,
+    </span>kd: real,
     <span class="doccomment">/// controller output
     </span><span class="kw">pub </span>out: Real,
     <span class="doccomment">/// (integral) output item sum
@@ -261,50 +263,50 @@
     <span class="doccomment">/// error input
     </span><span class="kw">pub </span>e: Real,
     <span class="doccomment">/// minimum output
-    </span><span class="kw">pub </span>outmin: Real,
+    </span><span class="kw">pub </span>outmin: real,
     <span class="doccomment">/// maximum output
-    </span><span class="kw">pub </span>outmax: Real,
+    </span><span class="kw">pub </span>outmax: real,
     <span class="doccomment">/// maximum integral output
-    </span><span class="kw">pub </span>summax: Real,
-    num: Uint,
-    reg: Uint,
+    </span><span class="kw">pub </span>summax: real,
+    num: uint,
+    reg: uint,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_pid_off(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
     <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>PID, max: Real) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>PID, kp: Real, ki: Real, kd: Real) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_outv(ctx: <span class="kw-2">*mut </span>PID, set: Real, fdb: Real) -&gt; Real;
+    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>PID, max: real) -&gt; <span class="kw-2">*mut </span>PID;
+    <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>PID, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">*mut </span>PID;
+    <span class="kw">fn </span>a_pid_outf(ctx: <span class="kw-2">*mut </span>PID, set: real, fdb: real) -&gt; real;
     <span class="kw">fn </span>a_pid_zero(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_set_dt(ctx: <span class="kw-2">*mut </span>PID, dt: Real);
-    <span class="kw">fn </span>a_pid_dt(ctx: <span class="kw-2">*const </span>PID) -&gt; Real;
-    <span class="kw">fn </span>a_pid_set_kp(ctx: <span class="kw-2">*mut </span>PID, kp: Real);
-    <span class="kw">fn </span>a_pid_kp(ctx: <span class="kw-2">*const </span>PID) -&gt; Real;
-    <span class="kw">fn </span>a_pid_set_ki(ctx: <span class="kw-2">*mut </span>PID, ki: Real);
-    <span class="kw">fn </span>a_pid_ki(ctx: <span class="kw-2">*const </span>PID) -&gt; Real;
-    <span class="kw">fn </span>a_pid_set_kd(ctx: <span class="kw-2">*mut </span>PID, kd: Real);
-    <span class="kw">fn </span>a_pid_kd(ctx: <span class="kw-2">*const </span>PID) -&gt; Real;
-    <span class="kw">fn </span>a_pid_set_mode(ctx: <span class="kw-2">*mut </span>PID, mode: Uint);
-    <span class="kw">fn </span>a_pid_mode(ctx: <span class="kw-2">*const </span>PID) -&gt; Uint;
+    <span class="kw">fn </span>a_pid_set_dt(ctx: <span class="kw-2">*mut </span>PID, dt: real);
+    <span class="kw">fn </span>a_pid_dt(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
+    <span class="kw">fn </span>a_pid_set_kp(ctx: <span class="kw-2">*mut </span>PID, kp: real);
+    <span class="kw">fn </span>a_pid_kp(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
+    <span class="kw">fn </span>a_pid_set_ki(ctx: <span class="kw-2">*mut </span>PID, ki: real);
+    <span class="kw">fn </span>a_pid_ki(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
+    <span class="kw">fn </span>a_pid_set_kd(ctx: <span class="kw-2">*mut </span>PID, kd: real);
+    <span class="kw">fn </span>a_pid_kd(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
+    <span class="kw">fn </span>a_pid_set_mode(ctx: <span class="kw-2">*mut </span>PID, mode: uint);
+    <span class="kw">fn </span>a_pid_mode(ctx: <span class="kw-2">*const </span>PID) -&gt; uint;
 }
 
 <span class="kw">impl </span>PID {
     <span class="doccomment">/// initialize function for PID controller, default is turn off
-    </span><span class="kw">pub fn </span>new(dt: Real, outmin: Real, outmax: Real) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(dt: real, outmin: real, outmax: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
-            out: <span class="number">0.0</span>,
+            out: Real { f: <span class="number">0.0 </span>},
+            sum: Real { f: <span class="number">0.0 </span>},
+            fdb: Real { f: <span class="number">0.0 </span>},
+            ec: Real { f: <span class="number">0.0 </span>},
+            e: Real { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
-            sum: <span class="number">0.0</span>,
             summax: <span class="number">0.0</span>,
-            e: <span class="number">0.0</span>,
-            ec: <span class="number">0.0</span>,
-            fdb: <span class="number">0.0</span>,
             reg: OFF,
             num: <span class="number">0</span>,
         }
@@ -312,47 +314,47 @@
 
     <span class="doccomment">/// initialize function for positional PID controller
     </span><span class="kw">pub fn </span>new_pos(
-        dt: Real,
-        kp: Real,
-        ki: Real,
-        kd: Real,
-        outmin: Real,
-        outmax: Real,
-        summax: Real,
+        dt: real,
+        kp: real,
+        ki: real,
+        kd: real,
+        outmin: real,
+        outmax: real,
+        summax: real,
     ) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp,
             ki,
             kd,
-            out: <span class="number">0.0</span>,
+            out: Real { f: <span class="number">0.0 </span>},
+            sum: Real { f: <span class="number">0.0 </span>},
+            fdb: Real { f: <span class="number">0.0 </span>},
+            ec: Real { f: <span class="number">0.0 </span>},
+            e: Real { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
-            sum: <span class="number">0.0</span>,
             summax,
-            e: <span class="number">0.0</span>,
-            ec: <span class="number">0.0</span>,
-            fdb: <span class="number">0.0</span>,
             reg: POS,
             num: <span class="number">0</span>,
         }
     }
 
     <span class="doccomment">/// initialize function for incremental PID controller
-    </span><span class="kw">pub fn </span>new_inc(dt: Real, kp: Real, ki: Real, kd: Real, outmin: Real, outmax: Real) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new_inc(dt: real, kp: real, ki: real, kd: real, outmin: real, outmax: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp,
             ki,
             kd,
-            out: <span class="number">0.0</span>,
+            out: Real { f: <span class="number">0.0 </span>},
+            sum: Real { f: <span class="number">0.0 </span>},
+            fdb: Real { f: <span class="number">0.0 </span>},
+            ec: Real { f: <span class="number">0.0 </span>},
+            e: Real { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
-            sum: <span class="number">0.0</span>,
             summax: <span class="number">0.0</span>,
-            e: <span class="number">0.0</span>,
-            ec: <span class="number">0.0</span>,
-            fdb: <span class="number">0.0</span>,
             reg: INC,
             num: <span class="number">0</span>,
         }
@@ -369,18 +371,18 @@
     }
 
     <span class="doccomment">/// positional PID controller
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_pos(<span class="self">self</span>, max).as_mut().unwrap_unchecked() }
     }
 
     <span class="doccomment">/// set proportional integral derivative constant for PID controller
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: Real, ki: Real, kd: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_kpid(<span class="self">self</span>, kp, ki, kd).as_mut().unwrap_unchecked() }
     }
 
-    <span class="doccomment">/// process function for PID controller
-    </span><span class="kw">pub fn </span>proc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: Real, fdb: Real) -&gt; Real {
-        <span class="kw">unsafe </span>{ a_pid_outv(<span class="self">self</span>, set, fdb) }
+    <span class="doccomment">/// calculate function for PID controller
+    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
+        <span class="kw">unsafe </span>{ a_pid_outf(<span class="self">self</span>, set, fdb) }
     }
 
     <span class="doccomment">/// zero function for PID controller
@@ -389,51 +391,51 @@
     }
 
     <span class="doccomment">/// get sampling time unit(s) for PID controller
-    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Real {
+    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_dt(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set sampling time unit(s) for PID controller
-    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_dt(<span class="self">self</span>, dt) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get proportional constant for PID controller
-    </span><span class="kw">pub fn </span>kp(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Real {
+    </span><span class="kw">pub fn </span>kp(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_kp(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set proportional constant for PID controller
-    </span><span class="kw">pub fn </span>set_kp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_kp(<span class="self">self</span>, kp) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get integral constant for PID controller
-    </span><span class="kw">pub fn </span>ki(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Real {
+    </span><span class="kw">pub fn </span>ki(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_ki(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set integral constant for PID controller
-    </span><span class="kw">pub fn </span>set_ki(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ki: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_ki(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ki: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_ki(<span class="self">self</span>, ki) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get derivative constant for PID controller
-    </span><span class="kw">pub fn </span>kd(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Real {
+    </span><span class="kw">pub fn </span>kd(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_kd(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set derivative constant for PID controller
-    </span><span class="kw">pub fn </span>set_kd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kd: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_kd(<span class="self">self</span>, kd) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get mode for PID controller
-    </span><span class="kw">pub fn </span>mode(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Uint {
+    </span><span class="kw">pub fn </span>mode(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; uint {
         <span class="kw">unsafe </span>{ a_pid_mode(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set mode for PID controller
-    </span><span class="kw">pub fn </span>set_mode(<span class="kw-2">&amp;mut </span><span class="self">self</span>, mode: Uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_mode(<span class="kw-2">&amp;mut </span><span class="self">self</span>, mode: uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_mode(<span class="self">self</span>, mode) };
         <span class="self">self
     </span>}
@@ -443,17 +445,17 @@
 </span><span class="kw">fn </span>pid() {
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::PID::new_pos(<span class="number">0.1</span>, <span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>, -<span class="number">10.0</span>, <span class="number">10.0</span>, <span class="number">10.0</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.proc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.iter(<span class="number">1.0</span>, <span class="number">0.0</span>));
     }
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::PID::new_inc(<span class="number">0.1</span>, <span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>, -<span class="number">10.0</span>, <span class="number">10.0</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.proc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+        <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.iter(<span class="number">1.0</span>, <span class="number">0.0</span>));
     }
     <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::PID::new(<span class="number">1.0</span>, -<span class="number">10.0</span>, <span class="number">10.0</span>);
     a.kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>);
     a.pos(<span class="number">10.0</span>).off().inc().set_dt(<span class="number">0.1</span>);
     <span class="macro">assert!</span>(a.mode() == <span class="kw">crate</span>::pid::INC);
-    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.proc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.iter(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.zero();
 }
 </code></pre></div>

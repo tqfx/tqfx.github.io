@@ -292,94 +292,129 @@
 <a href="#292" id="292">292</a>
 <a href="#293" id="293">293</a>
 <a href="#294" id="294">294</a>
+<a href="#295" id="295">295</a>
+<a href="#296" id="296">296</a>
+<a href="#297" id="297">297</a>
+<a href="#298" id="298">298</a>
+<a href="#299" id="299">299</a>
+<a href="#300" id="300">300</a>
+<a href="#301" id="301">301</a>
+<a href="#302" id="302">302</a>
+<a href="#303" id="303">303</a>
+<a href="#304" id="304">304</a>
+<a href="#305" id="305">305</a>
+<a href="#306" id="306">306</a>
+<a href="#307" id="307">307</a>
+<a href="#308" id="308">308</a>
+<a href="#309" id="309">309</a>
+<a href="#310" id="310">310</a>
+<a href="#311" id="311">311</a>
+<a href="#312" id="312">312</a>
+<a href="#313" id="313">313</a>
+<a href="#314" id="314">314</a>
+<a href="#315" id="315">315</a>
+<a href="#316" id="316">316</a>
+<a href="#317" id="317">317</a>
+<a href="#318" id="318">318</a>
+<a href="#319" id="319">319</a>
+<a href="#320" id="320">320</a>
+<a href="#321" id="321">321</a>
+<a href="#322" id="322">322</a>
+<a href="#323" id="323">323</a>
+<a href="#324" id="324">324</a>
+<a href="#325" id="325">325</a>
+<a href="#326" id="326">326</a>
+<a href="#327" id="327">327</a>
+<a href="#328" id="328">328</a>
+<a href="#329" id="329">329</a>
+<a href="#330" id="330">330</a>
+<a href="#331" id="331">331</a>
+<a href="#332" id="332">332</a>
+<a href="#333" id="333">333</a>
+<a href="#334" id="334">334</a>
+<a href="#335" id="335">335</a>
+<a href="#336" id="336">336</a>
 </pre><pre class="rust"><code><span class="doccomment">//! fuzzy proportional integral derivative controller
 
 </span><span class="kw">use </span><span class="kw">crate</span>::pid::PID;
-<span class="kw">use </span><span class="kw">crate</span>::Real;
-<span class="kw">use </span><span class="kw">crate</span>::Uint;
+<span class="kw">use </span><span class="kw">crate</span>::real;
+<span class="kw">use </span><span class="kw">crate</span>::uint;
 
 <span class="doccomment">/// fuzzy proportional integral derivative controller
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>FPID {
     <span class="doccomment">/// proportional integral derivative controller
     </span><span class="kw">pub </span>pid: PID,
-    mmp: <span class="kw-2">*const </span>Real,
-    mkp: <span class="kw-2">*const </span>Real,
-    mki: <span class="kw-2">*const </span>Real,
-    mkd: <span class="kw-2">*const </span>Real,
-    idx: <span class="kw-2">*mut </span>Uint,
-    mms: <span class="kw-2">*mut </span>Real,
-    mat: <span class="kw-2">*mut </span>Real,
+    me: <span class="kw-2">*const </span>real,
+    mec: <span class="kw-2">*const </span>real,
+    mkp: <span class="kw-2">*const </span>real,
+    mki: <span class="kw-2">*const </span>real,
+    mkd: <span class="kw-2">*const </span>real,
+    idx: <span class="kw-2">*mut </span>uint,
+    val: <span class="kw-2">*mut </span>real,
     <span class="doccomment">/// fuzzy relational operator
-    </span>op: <span class="prelude-ty">Option</span>&lt;<span class="kw">extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(Real, Real) -&gt; Real&gt;,
-    sigma: Real,
-    alpha: Real,
+    </span>op: <span class="prelude-ty">Option</span>&lt;<span class="kw">extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(real, real) -&gt; real&gt;,
     <span class="doccomment">/// base proportional constant
-    </span><span class="kw">pub </span>kp: Real,
+    </span><span class="kw">pub </span>kp: real,
     <span class="doccomment">/// base integral constant
-    </span><span class="kw">pub </span>ki: Real,
+    </span><span class="kw">pub </span>ki: real,
     <span class="doccomment">/// base derivative constant
-    </span><span class="kw">pub </span>kd: Real,
+    </span><span class="kw">pub </span>kd: real,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_fpid_off(ctx: <span class="kw-2">*mut </span>FPID) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_inc(ctx: <span class="kw-2">*mut </span>FPID) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_pos(ctx: <span class="kw-2">*mut </span>FPID, max: Real) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_ilim(ctx: <span class="kw-2">*mut </span>FPID, min: Real, max: Real) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_olim(ctx: <span class="kw-2">*mut </span>FPID, min: Real, max: Real) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_kpid(ctx: <span class="kw-2">*mut </span>FPID, kp: Real, ki: Real, kd: Real) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_buff(ctx: <span class="kw-2">*mut </span>FPID, idx: <span class="kw-2">*mut </span>Uint, mms: <span class="kw-2">*mut </span>Real, mat: <span class="kw-2">*mut </span>Real) -&gt; <span class="kw-2">*mut </span>FPID;
+    <span class="kw">fn </span>a_fpid_pos(ctx: <span class="kw-2">*mut </span>FPID, max: real) -&gt; <span class="kw-2">*mut </span>FPID;
+    <span class="kw">fn </span>a_fpid_kpid(ctx: <span class="kw-2">*mut </span>FPID, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">*mut </span>FPID;
+    <span class="kw">fn </span>a_fpid_buff(ctx: <span class="kw-2">*mut </span>FPID, idx: <span class="kw-2">*mut </span>uint, val: <span class="kw-2">*mut </span>real) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_base(
         ctx: <span class="kw-2">*mut </span>FPID,
-        num: Uint,
-        mmp: <span class="kw-2">*const </span>Real,
-        mkp: <span class="kw-2">*const </span>Real,
-        mki: <span class="kw-2">*const </span>Real,
-        mkd: <span class="kw-2">*const </span>Real,
+        num: uint,
+        me: <span class="kw-2">*const </span>real,
+        mec: <span class="kw-2">*const </span>real,
+        mkp: <span class="kw-2">*const </span>real,
+        mki: <span class="kw-2">*const </span>real,
+        mkd: <span class="kw-2">*const </span>real,
     ) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_init(
         ctx: <span class="kw-2">*mut </span>FPID,
-        dt: Real,
-        num: Uint,
-        mmp: <span class="kw-2">*const </span>Real,
-        mkp: <span class="kw-2">*const </span>Real,
-        mki: <span class="kw-2">*const </span>Real,
-        mkd: <span class="kw-2">*const </span>Real,
-        imin: Real,
-        imax: Real,
-        omin: Real,
-        omax: Real,
+        dt: real,
+        col: uint,
+        me: <span class="kw-2">*const </span>real,
+        mec: <span class="kw-2">*const </span>real,
+        mkp: <span class="kw-2">*const </span>real,
+        mki: <span class="kw-2">*const </span>real,
+        mkd: <span class="kw-2">*const </span>real,
+        min: real,
+        max: real,
     ) -&gt; <span class="kw-2">*mut </span>FPID;
-    <span class="kw">fn </span>a_fpid_outv(ctx: <span class="kw-2">*mut </span>FPID, set: Real, fdb: Real) -&gt; Real;
+    <span class="kw">fn </span>a_fpid_outf(ctx: <span class="kw-2">*mut </span>FPID, set: real, fdb: real) -&gt; real;
     <span class="kw">fn </span>a_fpid_zero(ctx: <span class="kw-2">*mut </span>FPID) -&gt; <span class="kw-2">*mut </span>FPID;
 }
 
 <span class="kw">impl </span>FPID {
     <span class="doccomment">/// initialize function for fuzzy PID controller, default is turn off
     </span><span class="kw">pub fn </span>new(
-        dt: Real,
-        num: usize,
-        mmp: <span class="kw-2">&amp;</span>[Real],
-        mkp: <span class="kw-2">&amp;</span>[Real],
-        mki: <span class="kw-2">&amp;</span>[Real],
-        mkd: <span class="kw-2">&amp;</span>[Real],
-        imin: Real,
-        imax: Real,
-        omin: Real,
-        omax: Real,
+        dt: real,
+        col: usize,
+        me: <span class="kw-2">&amp;</span>[real],
+        mec: <span class="kw-2">&amp;</span>[real],
+        mkp: <span class="kw-2">&amp;</span>[real],
+        mki: <span class="kw-2">&amp;</span>[real],
+        mkd: <span class="kw-2">&amp;</span>[real],
+        min: real,
+        max: real,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
-            pid: PID::new(dt, omin, omax),
+            pid: PID::new(dt, min, max),
+            me: std::ptr::null(),
+            mec: std::ptr::null(),
             mkp: std::ptr::null(),
             mki: std::ptr::null(),
             mkd: std::ptr::null(),
-            mmp: std::ptr::null(),
-            sigma: <span class="number">0.0</span>,
-            alpha: <span class="number">0.0</span>,
             idx: std::ptr::null_mut(),
-            mms: std::ptr::null_mut(),
-            mat: std::ptr::null_mut(),
+            val: std::ptr::null_mut(),
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
@@ -389,15 +424,14 @@
             a_fpid_init(
                 <span class="kw-2">&amp;mut </span>ctx,
                 dt,
-                num <span class="kw">as </span>Uint,
-                mmp.as_ptr(),
+                col <span class="kw">as </span>uint,
+                me.as_ptr(),
+                mec.as_ptr(),
                 mkp.as_ptr(),
                 mki.as_ptr(),
                 mkd.as_ptr(),
-                imin,
-                imax,
-                omin,
-                omax,
+                min,
+                max,
             );
         };
         ctx
@@ -414,29 +448,19 @@
     }
 
     <span class="doccomment">/// positional fuzzy PID controller
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_fpid_pos(<span class="self">self</span>, max).as_mut().unwrap_unchecked() }
     }
 
-    <span class="doccomment">/// set input extreme value for fuzzy PID controller
-    </span><span class="kw">pub fn </span>ilim(<span class="kw-2">&amp;mut </span><span class="self">self</span>, min: Real, max: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_fpid_ilim(<span class="self">self</span>, min, max).as_mut().unwrap_unchecked() }
-    }
-
-    <span class="doccomment">/// set output extreme value for fuzzy PID controller
-    </span><span class="kw">pub fn </span>olim(<span class="kw-2">&amp;mut </span><span class="self">self</span>, min: Real, max: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_fpid_olim(<span class="self">self</span>, min, max).as_mut().unwrap_unchecked() }
-    }
-
     <span class="doccomment">/// set proportional integral derivative constant for fuzzy PID controller
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: Real, ki: Real, kd: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_fpid_kpid(<span class="self">self</span>, kp, ki, kd).as_mut().unwrap_unchecked() }
     }
 
     <span class="doccomment">/// set buffer for fuzzy PID controller
-    </span><span class="kw">pub fn </span>buff(<span class="kw-2">&amp;mut </span><span class="self">self</span>, idx: <span class="kw-2">&amp;mut </span>[u32], mms: <span class="kw-2">&amp;mut </span>[Real], mat: <span class="kw-2">&amp;mut </span>[Real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>buff(<span class="kw-2">&amp;mut </span><span class="self">self</span>, idx: <span class="kw-2">&amp;mut </span>[u32], val: <span class="kw-2">&amp;mut </span>[real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
-            a_fpid_buff(<span class="self">self</span>, idx.as_mut_ptr(), mms.as_mut_ptr(), mat.as_mut_ptr())
+            a_fpid_buff(<span class="self">self</span>, idx.as_mut_ptr(), val.as_mut_ptr())
                 .as_mut()
                 .unwrap_unchecked()
         }
@@ -445,17 +469,19 @@
     <span class="doccomment">/// set rule base for fuzzy PID controller
     </span><span class="kw">pub fn </span>base(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        num: usize,
-        mmp: <span class="kw-2">&amp;</span>[Real],
-        mkp: <span class="kw-2">&amp;</span>[Real],
-        mki: <span class="kw-2">&amp;</span>[Real],
-        mkd: <span class="kw-2">&amp;</span>[Real],
+        col: usize,
+        me: <span class="kw-2">&amp;</span>[real],
+        mec: <span class="kw-2">&amp;</span>[real],
+        mkp: <span class="kw-2">&amp;</span>[real],
+        mki: <span class="kw-2">&amp;</span>[real],
+        mkd: <span class="kw-2">&amp;</span>[real],
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
             a_fpid_base(
                 <span class="self">self</span>,
-                num <span class="kw">as </span>Uint,
-                mmp.as_ptr(),
+                col <span class="kw">as </span>uint,
+                me.as_ptr(),
+                mec.as_ptr(),
                 mkp.as_ptr(),
                 mki.as_ptr(),
                 mkd.as_ptr(),
@@ -465,9 +491,9 @@
         }
     }
 
-    <span class="doccomment">/// process function for fuzzy PID controller
-    </span><span class="kw">pub fn </span>proc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: Real, fdb: Real) -&gt; Real {
-        <span class="kw">unsafe </span>{ a_fpid_outv(<span class="self">self</span>, set, fdb) }
+    <span class="doccomment">/// calculate function for fuzzy PID controller
+    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
+        <span class="kw">unsafe </span>{ a_fpid_outf(<span class="self">self</span>, set, fdb) }
     }
 
     <span class="doccomment">/// zero function for fuzzy PID controller
@@ -476,36 +502,37 @@
     }
 
     <span class="doccomment">/// get sampling time unit(s) for fuzzy PID controller
-    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Uint {
+    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; uint {
         <span class="self">self</span>.pid.mode()
     }
     <span class="doccomment">/// set sampling time unit(s) for fuzzy PID controller
-    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: Real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="self">self</span>.pid.set_dt(dt);
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get mode for fuzzy PID controller
-    </span><span class="kw">pub fn </span>mode(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Uint {
+    </span><span class="kw">pub fn </span>mode(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; uint {
         <span class="self">self</span>.pid.mode()
     }
     <span class="doccomment">/// set mode for PID controller
-    </span><span class="kw">pub fn </span>set_mode(<span class="kw-2">&amp;mut </span><span class="self">self</span>, reg: Uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_mode(<span class="kw-2">&amp;mut </span><span class="self">self</span>, reg: uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="self">self</span>.pid.set_mode(reg);
         <span class="self">self
     </span>}
 }
 
 <span class="attr">#[test]
+#[allow(non_snake_case)]
 </span><span class="kw">fn </span>fpid() {
-    <span class="kw">const </span>NB: Real = -<span class="number">3.0</span>;
-    <span class="kw">const </span>NM: Real = -<span class="number">2.0</span>;
-    <span class="kw">const </span>NS: Real = -<span class="number">1.0</span>;
-    <span class="kw">const </span>ZO: Real = <span class="number">0.0</span>;
-    <span class="kw">const </span>PS: Real = <span class="number">1.0</span>;
-    <span class="kw">const </span>PM: Real = <span class="number">2.0</span>;
-    <span class="kw">const </span>PB: Real = <span class="number">3.0</span>;
-    <span class="kw">let </span>mmp = [
+    <span class="kw">let </span>NB: real = -<span class="number">3.0</span>;
+    <span class="kw">let </span>NM: real = -<span class="number">2.0</span>;
+    <span class="kw">let </span>NS: real = -<span class="number">1.0</span>;
+    <span class="kw">let </span>ZO: real = <span class="number">0.0</span>;
+    <span class="kw">let </span>PS: real = <span class="number">1.0</span>;
+    <span class="kw">let </span>PM: real = <span class="number">2.0</span>;
+    <span class="kw">let </span>PB: real = <span class="number">3.0</span>;
+    <span class="kw">let </span>me = [
         <span class="kw">crate</span>::mf::TRI,
         NB,
         NB,
@@ -536,6 +563,51 @@
         PB,
         <span class="kw">crate</span>::mf::NUL,
     ];
+    <span class="kw">let </span>NB: real = -<span class="number">3.0</span>;
+    <span class="kw">let </span>NM: real = -<span class="number">2.0</span>;
+    <span class="kw">let </span>NS: real = -<span class="number">1.0</span>;
+    <span class="kw">let </span>ZO: real = <span class="number">0.0</span>;
+    <span class="kw">let </span>PS: real = <span class="number">1.0</span>;
+    <span class="kw">let </span>PM: real = <span class="number">2.0</span>;
+    <span class="kw">let </span>PB: real = <span class="number">3.0</span>;
+    <span class="kw">let </span>mec = [
+        <span class="kw">crate</span>::mf::TRI,
+        NB,
+        NB,
+        NM,
+        <span class="kw">crate</span>::mf::TRI,
+        NB,
+        NM,
+        NS,
+        <span class="kw">crate</span>::mf::TRI,
+        NM,
+        NS,
+        ZO,
+        <span class="kw">crate</span>::mf::TRI,
+        NS,
+        ZO,
+        PS,
+        <span class="kw">crate</span>::mf::TRI,
+        ZO,
+        PS,
+        PM,
+        <span class="kw">crate</span>::mf::TRI,
+        PS,
+        PM,
+        PB,
+        <span class="kw">crate</span>::mf::TRI,
+        PM,
+        PB,
+        PB,
+        <span class="kw">crate</span>::mf::NUL,
+    ];
+    <span class="kw">let </span>NB: real = -<span class="number">15.0</span>;
+    <span class="kw">let </span>NM: real = -<span class="number">10.0</span>;
+    <span class="kw">let </span>NS: real = -<span class="number">5.0</span>;
+    <span class="kw">let </span>ZO: real = <span class="number">0.0</span>;
+    <span class="kw">let </span>PS: real = <span class="number">5.0</span>;
+    <span class="kw">let </span>PM: real = <span class="number">10.0</span>;
+    <span class="kw">let </span>PB: real = <span class="number">15.0</span>;
     <span class="kw">let </span>mkp = [
         [NB, NB, NM, NM, NS, ZO, ZO],
         [NB, NB, NM, NS, NS, ZO, PS],
@@ -545,6 +617,13 @@
         [NS, ZO, PS, PM, PM, PM, PB],
         [ZO, ZO, PM, PM, PM, PB, PB],
     ];
+    <span class="kw">let </span>NB: real = -<span class="number">3.0</span>;
+    <span class="kw">let </span>NM: real = -<span class="number">2.0</span>;
+    <span class="kw">let </span>NS: real = -<span class="number">1.0</span>;
+    <span class="kw">let </span>ZO: real = <span class="number">0.0</span>;
+    <span class="kw">let </span>PS: real = <span class="number">1.0</span>;
+    <span class="kw">let </span>PM: real = <span class="number">2.0</span>;
+    <span class="kw">let </span>PB: real = <span class="number">3.0</span>;
     <span class="kw">let </span>mki = [
         [PB, PB, PM, PM, PS, ZO, ZO],
         [PB, PB, PM, PS, PS, ZO, ZO],
@@ -566,24 +645,29 @@
     <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::FPID::new(
         <span class="number">1.0</span>,
         mkp.len(),
-        <span class="kw-2">&amp;</span>mmp,
+        <span class="kw-2">&amp;</span>me,
+        <span class="kw-2">&amp;</span>mec,
         <span class="kw-2">&amp;</span>mkp.concat(),
         <span class="kw-2">&amp;</span>mki.concat(),
         <span class="kw-2">&amp;</span>mkd.concat(),
         -<span class="number">10.0</span>,
         <span class="number">10.0</span>,
-        -<span class="number">10.0</span>,
-        <span class="number">10.0</span>,
     );
-    a.base(mkp.len(), <span class="kw-2">&amp;</span>mmp, <span class="kw-2">&amp;</span>mkp.concat(), <span class="kw-2">&amp;</span>mki.concat(), <span class="kw-2">&amp;</span>mkd.concat());
+    a.base(
+        mkp.len(),
+        <span class="kw-2">&amp;</span>me,
+        <span class="kw-2">&amp;</span>mec,
+        <span class="kw-2">&amp;</span>mkp.concat(),
+        <span class="kw-2">&amp;</span>mki.concat(),
+        <span class="kw-2">&amp;</span>mkd.concat(),
+    );
     a.kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>);
     <span class="kw">let </span><span class="kw-2">mut </span>idx = [<span class="number">0u32</span>; <span class="number">4</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>mms = [<span class="number">0.0</span>; <span class="number">4</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>mat = [<span class="number">0.0</span>; <span class="number">4</span>];
-    a.buff(<span class="kw-2">&amp;mut </span>idx, <span class="kw-2">&amp;mut </span>mms, <span class="kw-2">&amp;mut </span>mat);
+    <span class="kw">let </span><span class="kw-2">mut </span>val = [<span class="number">0.0</span>; <span class="number">8</span>];
+    a.buff(<span class="kw-2">&amp;mut </span>idx, <span class="kw-2">&amp;mut </span>val);
     a.pos(<span class="number">10.0</span>).off().inc().set_dt(<span class="number">0.1</span>);
     <span class="macro">assert!</span>(a.mode() == <span class="kw">crate</span>::pid::INC);
-    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.proc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.iter(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.zero();
 }
 </code></pre></div>

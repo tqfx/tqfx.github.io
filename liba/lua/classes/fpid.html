@@ -86,15 +86,15 @@
 	<td class="summary">destructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fpid:new">fpid:new (num, dt, mmp, mkp, mki, mkd, imin, imax, omin, omax[, sum])</a></td>
+	<td class="name" nowrap><a href="#fpid:new">fpid:new (num, dt, me, mec, mkp, mki, mkd, imin, imax, min, max[, sum])</a></td>
 	<td class="summary">constructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fpid:init">fpid:init (num, dt, mmp, mkp, mki, mkd, imin, imax, omin, omax[, sum])</a></td>
+	<td class="name" nowrap><a href="#fpid:init">fpid:init (num, dt, me, mec, mkp, mki, mkd, min, max[, sum])</a></td>
 	<td class="summary">initialize function for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fpid:proc">fpid:proc (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#fpid:iter">fpid:iter (set, fdb)</a></td>
 	<td class="summary">calculate function for fuzzy PID controller</td>
 	</tr>
 	<tr>
@@ -102,20 +102,12 @@
 	<td class="summary">zero function for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fpid:buff">fpid:buff (mmp, mkp, mki, mkd)</a></td>
+	<td class="name" nowrap><a href="#fpid:buff">fpid:buff (me, mec, mkp, mki, mkd)</a></td>
 	<td class="summary">set rule base for fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#fpid:kpid">fpid:kpid (kp, ki, kd)</a></td>
 	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#fpid:ilim">fpid:ilim (min, max)</a></td>
-	<td class="summary">set input extreme value for fuzzy PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#fpid:olim">fpid:olim (min, max)</a></td>
-	<td class="summary">set output extreme value for fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#fpid:pos">fpid:pos (max)</a></td>
@@ -217,7 +209,7 @@
 </dd>
     <dt>
     <a name = "fpid:new"></a>
-    <strong>fpid:new (num, dt, mmp, mkp, mki, mkd, imin, imax, omin, omax[, sum])</strong>
+    <strong>fpid:new (num, dt, me, mec, mkp, mki, mkd, imin, imax, min, max[, sum])</strong>
     </dt>
     <dd>
     constructor for fuzzy PID controller
@@ -233,9 +225,13 @@
             <span class="types"><span class="type">number</span></span>
          sampling time unit(s)
         </li>
-        <li><span class="parameter">mmp</span>
+        <li><span class="parameter">me</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to membership function parameter table, an array terminated by 0
+         points to membership function parameter table, terminated by 0
+        </li>
+        <li><span class="parameter">mec</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to membership function parameter table, terminated by 0
         </li>
         <li><span class="parameter">mkp</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
@@ -257,11 +253,11 @@
             <span class="types"><span class="type">number</span></span>
          maximum input
         </li>
-        <li><span class="parameter">omin</span>
+        <li><span class="parameter">min</span>
             <span class="types"><span class="type">number</span></span>
          minimum output
         </li>
-        <li><span class="parameter">omax</span>
+        <li><span class="parameter">max</span>
             <span class="types"><span class="type">number</span></span>
          maximum output
         </li>
@@ -285,7 +281,7 @@
 </dd>
     <dt>
     <a name = "fpid:init"></a>
-    <strong>fpid:init (num, dt, mmp, mkp, mki, mkd, imin, imax, omin, omax[, sum])</strong>
+    <strong>fpid:init (num, dt, me, mec, mkp, mki, mkd, min, max[, sum])</strong>
     </dt>
     <dd>
     initialize function for fuzzy PID controller
@@ -301,9 +297,13 @@
             <span class="types"><span class="type">number</span></span>
          sampling time unit(s)
         </li>
-        <li><span class="parameter">mmp</span>
+        <li><span class="parameter">me</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to membership function parameter table, an array terminated by 0
+         points to membership function parameter table, terminated by 0
+        </li>
+        <li><span class="parameter">mec</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to membership function parameter table, terminated by 0
         </li>
         <li><span class="parameter">mkp</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
@@ -317,19 +317,11 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          points to Kd's rule base table, the rule base must be square
         </li>
-        <li><span class="parameter">imin</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum input
-        </li>
-        <li><span class="parameter">imax</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum input
-        </li>
-        <li><span class="parameter">omin</span>
+        <li><span class="parameter">min</span>
             <span class="types"><span class="type">number</span></span>
          minimum output
         </li>
-        <li><span class="parameter">omax</span>
+        <li><span class="parameter">max</span>
             <span class="types"><span class="type">number</span></span>
          maximum output
         </li>
@@ -352,8 +344,8 @@
 
 </dd>
     <dt>
-    <a name = "fpid:proc"></a>
-    <strong>fpid:proc (set, fdb)</strong>
+    <a name = "fpid:iter"></a>
+    <strong>fpid:iter (set, fdb)</strong>
     </dt>
     <dd>
     calculate function for fuzzy PID controller
@@ -404,7 +396,7 @@
 </dd>
     <dt>
     <a name = "fpid:buff"></a>
-    <strong>fpid:buff (mmp, mkp, mki, mkd)</strong>
+    <strong>fpid:buff (me, mec, mkp, mki, mkd)</strong>
     </dt>
     <dd>
     set rule base for fuzzy PID controller
@@ -412,9 +404,13 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">mmp</span>
+        <li><span class="parameter">me</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to membership function parameter table, an array terminated by 0
+         points to membership function parameter table, terminated by 0
+        </li>
+        <li><span class="parameter">mec</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to membership function parameter table, terminated by 0
         </li>
         <li><span class="parameter">mkp</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
@@ -462,68 +458,6 @@
         <li><span class="parameter">kd</span>
             <span class="types"><span class="type">number</span></span>
          derivative constant
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/fpid.html#">fpid</a></span>
-        fuzzy PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "fpid:ilim"></a>
-    <strong>fpid:ilim (min, max)</strong>
-    </dt>
-    <dd>
-    set input extreme value for fuzzy PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         mininum input
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maxinum input
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/fpid.html#">fpid</a></span>
-        fuzzy PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "fpid:olim"></a>
-    <strong>fpid:olim (min, max)</strong>
-    </dt>
-    <dd>
-    set output extreme value for fuzzy PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         mininum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maxinum output
         </li>
     </ul>
 
@@ -612,7 +546,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-05-04 20:20:31 </i>
+<i style="float:right;">Last updated 2023-05-15 19:52:49 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

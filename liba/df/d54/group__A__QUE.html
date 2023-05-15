@@ -259,9 +259,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;_head-&gt;next),                   \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;_head.next),                    \</div>
 <div class="line">           *it##_ = a_cast_r(T *, <a class="code" href="../../d8/de5/group__A__LIST.html#ga7b0b512dff77a6a057c6240d433c6d91">a_list_from</a>(it)-&gt;next);             \</div>
-<div class="line">         a_list_from(it) != (ctx)-&gt;_head                              \</div>
+<div class="line">         a_list_from(it) != &amp;(ctx)-&gt;_head                             \</div>
 <div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_s(T *, <a class="code" href="../../df/d54/group__A__QUE.html#ga4bdd5f9f47b69f513142f9a681e39643">a_que_from</a>(it)-&gt;_data)), 1) \</div>
 <div class="line">             : (0);                                                   \</div>
 <div class="line">         it = it##_, it##_ = a_cast_r(T *, <a class="code" href="../../d8/de5/group__A__LIST.html#ga7b0b512dff77a6a057c6240d433c6d91">a_list_from</a>(it)-&gt;next))</div>
@@ -317,9 +317,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;_head-&gt;prev),                   \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;_head.prev),                    \</div>
 <div class="line">           *it##_ = a_cast_r(T *, <a class="code" href="../../d8/de5/group__A__LIST.html#ga7b0b512dff77a6a057c6240d433c6d91">a_list_from</a>(it)-&gt;prev);             \</div>
-<div class="line">         a_list_from(it) != (ctx)-&gt;_head                              \</div>
+<div class="line">         a_list_from(it) != &amp;(ctx)-&gt;_head                             \</div>
 <div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_s(T *, <a class="code" href="../../df/d54/group__A__QUE.html#ga4bdd5f9f47b69f513142f9a681e39643">a_que_from</a>(it)-&gt;_data)), 1) \</div>
 <div class="line">             : (0);                                                   \</div>
 <div class="line">         it = it##_, it##_ = a_cast_r(T *, <a class="code" href="../../d8/de5/group__A__LIST.html#ga7b0b512dff77a6a057c6240d433c6d91">a_list_from</a>(it)-&gt;prev))</div>
