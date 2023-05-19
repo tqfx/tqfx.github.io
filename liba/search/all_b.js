@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['m_951',['m',['../d0/d16/structa__tf__s.html#add0704f8ca4b077d9458aa93a81bf2b7',1,'a_tf_s']]],
-  ['math_2eh_952',['math.h',['../df/db1/math_8h.html',1,'']]],
-  ['mathematical_20algorithm_20library_953',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
-  ['me_954',['me',['../d6/d9e/structa__fpid__s.html#afb21b04031406835d8b996ec58651a89',1,'a_fpid_s']]],
-  ['mec_955',['mec',['../d6/d9e/structa__fpid__s.html#a0db6d78429a83543a6d275177797ad75',1,'a_fpid_s']]],
-  ['membership_20function_956',['membership function',['../dd/d37/group__A__MF.html',1,'']]],
-  ['mf_2eh_957',['mf.h',['../d6/dea/mf_8h.html',1,'']]],
-  ['mkd_958',['mkd',['../d6/d9e/structa__fpid__s.html#ad5fdae0f20fbf1575890d73c46f36d1d',1,'a_fpid_s']]],
-  ['mki_959',['mki',['../d6/d9e/structa__fpid__s.html#a06f3a72e07d3b4dd504931a507f4fb55',1,'a_fpid_s']]],
-  ['mkp_960',['mkp',['../d6/d9e/structa__fpid__s.html#a7b7f7a52d94dc7e62335c26f3c98f1e7',1,'a_fpid_s']]]
+  ['n_958',['n',['../d0/d16/structa__tf__s.html#acba66b40f993f167d78ba7d1128d10e3',1,'a_tf_s']]],
+  ['node_959',['node',['../d4/dc0/uniona__avl__u.html#af3660eb582772f4615869e6fa81bf0e4',1,'a_avl_u::node()'],['../df/dfa/uniona__rbt__u.html#ad47472a820d64839caaa260795285332',1,'a_rbt_u::node()']]],
+  ['note_20frequency_20table_960',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]],
+  ['notefreqs_2eh_961',['notefreqs.h',['../dd/d08/notefreqs_8h.html',1,'']]],
+  ['num_962',['num',['../de/def/structa__pid__s.html#a01f4d1f6ad2de33e68a8bba8826ec3c5',1,'a_pid_s::num()'],['../d0/d16/structa__tf__s.html#ac08888cee600b831851a00ee8ff5210f',1,'a_tf_s::num()']]]
 ];

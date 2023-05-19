@@ -86,27 +86,23 @@
 	<td class="summary">constructor for cubic polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack3:init">polytrack3:init (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
-	<td class="summary">initialize function for cubic polynomial trajectory</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#polytrack3:gen">polytrack3:gen ()</a></td>
+	<td class="name" nowrap><a href="#polytrack3:gen">polytrack3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
 	<td class="summary">generation function for cubic polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack3:out">polytrack3:out (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack3:out">polytrack3:out (dt)</a></td>
 	<td class="summary">calculate function for cubic polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack3:pos">polytrack3:pos (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack3:pos">polytrack3:pos (dt)</a></td>
 	<td class="summary">calculate function for cubic polynomial trajectory position</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack3:vec">polytrack3:vec (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack3:vec">polytrack3:vec (dt)</a></td>
 	<td class="summary">calculate function for cubic polynomial trajectory velocity</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack3:acc">polytrack3:acc (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack3:acc">polytrack3:acc (dt)</a></td>
 	<td class="summary">calculate function for cubic polynomial trajectory acceleration</td>
 	</tr>
 </table>
@@ -130,33 +126,6 @@
     <ul>
         <li><span class="parameter">k</span>
          quantity table
-        </li>
-        <li><span class="parameter">t</span>
-         time table
-        </li>
-        <li><span class="parameter">p</span>
-         position table
-        </li>
-        <li><span class="parameter">v</span>
-         velocity table
-        </li>
-        <li><span class="parameter">t0</span>
-         time for source
-        </li>
-        <li><span class="parameter">t1</span>
-         time for target
-        </li>
-        <li><span class="parameter">q0</span>
-         position for source
-        </li>
-        <li><span class="parameter">q1</span>
-         position for target
-        </li>
-        <li><span class="parameter">v0</span>
-         velocity for source
-        </li>
-        <li><span class="parameter">v1</span>
-         velocity for target
         </li>
     </ul>
 
@@ -229,11 +198,11 @@
 
 </dd>
     <dt>
-    <a name = "polytrack3:init"></a>
-    <strong>polytrack3:init (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
+    <a name = "polytrack3:gen"></a>
+    <strong>polytrack3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
     </dt>
     <dd>
-    initialize function for cubic polynomial trajectory
+    generation function for cubic polynomial trajectory
 
 
     <h3>Parameters:</h3>
@@ -288,28 +257,8 @@
 
 </dd>
     <dt>
-    <a name = "polytrack3:gen"></a>
-    <strong>polytrack3:gen ()</strong>
-    </dt>
-    <dd>
-    generation function for cubic polynomial trajectory
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/polytrack3.html#">polytrack3</a></span>
-        cubic polynomial trajectory userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
     <a name = "polytrack3:out"></a>
-    <strong>polytrack3:out (ts)</strong>
+    <strong>polytrack3:out (dt)</strong>
     </dt>
     <dd>
     calculate function for cubic polynomial trajectory
@@ -317,9 +266,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -336,7 +285,7 @@
 </dd>
     <dt>
     <a name = "polytrack3:pos"></a>
-    <strong>polytrack3:pos (ts)</strong>
+    <strong>polytrack3:pos (dt)</strong>
     </dt>
     <dd>
     calculate function for cubic polynomial trajectory position
@@ -344,9 +293,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -363,7 +312,7 @@
 </dd>
     <dt>
     <a name = "polytrack3:vec"></a>
-    <strong>polytrack3:vec (ts)</strong>
+    <strong>polytrack3:vec (dt)</strong>
     </dt>
     <dd>
     calculate function for cubic polynomial trajectory velocity
@@ -371,9 +320,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -390,7 +339,7 @@
 </dd>
     <dt>
     <a name = "polytrack3:acc"></a>
-    <strong>polytrack3:acc (ts)</strong>
+    <strong>polytrack3:acc (dt)</strong>
     </dt>
     <dd>
     calculate function for cubic polynomial trajectory acceleration
@@ -398,9 +347,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -422,7 +371,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-05-15 19:52:49 </i>
+<i style="float:right;">Last updated 2023-05-19 18:26:28 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

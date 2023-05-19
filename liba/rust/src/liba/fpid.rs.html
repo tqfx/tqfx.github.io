@@ -334,11 +334,110 @@
 <a href="#334" id="334">334</a>
 <a href="#335" id="335">335</a>
 <a href="#336" id="336">336</a>
+<a href="#337" id="337">337</a>
+<a href="#338" id="338">338</a>
+<a href="#339" id="339">339</a>
+<a href="#340" id="340">340</a>
+<a href="#341" id="341">341</a>
+<a href="#342" id="342">342</a>
+<a href="#343" id="343">343</a>
+<a href="#344" id="344">344</a>
+<a href="#345" id="345">345</a>
+<a href="#346" id="346">346</a>
+<a href="#347" id="347">347</a>
+<a href="#348" id="348">348</a>
+<a href="#349" id="349">349</a>
+<a href="#350" id="350">350</a>
+<a href="#351" id="351">351</a>
+<a href="#352" id="352">352</a>
+<a href="#353" id="353">353</a>
+<a href="#354" id="354">354</a>
+<a href="#355" id="355">355</a>
+<a href="#356" id="356">356</a>
+<a href="#357" id="357">357</a>
+<a href="#358" id="358">358</a>
+<a href="#359" id="359">359</a>
+<a href="#360" id="360">360</a>
+<a href="#361" id="361">361</a>
+<a href="#362" id="362">362</a>
+<a href="#363" id="363">363</a>
+<a href="#364" id="364">364</a>
+<a href="#365" id="365">365</a>
+<a href="#366" id="366">366</a>
+<a href="#367" id="367">367</a>
+<a href="#368" id="368">368</a>
+<a href="#369" id="369">369</a>
+<a href="#370" id="370">370</a>
+<a href="#371" id="371">371</a>
+<a href="#372" id="372">372</a>
+<a href="#373" id="373">373</a>
+<a href="#374" id="374">374</a>
+<a href="#375" id="375">375</a>
+<a href="#376" id="376">376</a>
+<a href="#377" id="377">377</a>
+<a href="#378" id="378">378</a>
+<a href="#379" id="379">379</a>
+<a href="#380" id="380">380</a>
+<a href="#381" id="381">381</a>
+<a href="#382" id="382">382</a>
+<a href="#383" id="383">383</a>
+<a href="#384" id="384">384</a>
+<a href="#385" id="385">385</a>
+<a href="#386" id="386">386</a>
+<a href="#387" id="387">387</a>
+<a href="#388" id="388">388</a>
+<a href="#389" id="389">389</a>
+<a href="#390" id="390">390</a>
+<a href="#391" id="391">391</a>
+<a href="#392" id="392">392</a>
+<a href="#393" id="393">393</a>
+<a href="#394" id="394">394</a>
+<a href="#395" id="395">395</a>
+<a href="#396" id="396">396</a>
+<a href="#397" id="397">397</a>
+<a href="#398" id="398">398</a>
+<a href="#399" id="399">399</a>
+<a href="#400" id="400">400</a>
+<a href="#401" id="401">401</a>
+<a href="#402" id="402">402</a>
+<a href="#403" id="403">403</a>
+<a href="#404" id="404">404</a>
+<a href="#405" id="405">405</a>
+<a href="#406" id="406">406</a>
+<a href="#407" id="407">407</a>
+<a href="#408" id="408">408</a>
+<a href="#409" id="409">409</a>
+<a href="#410" id="410">410</a>
+<a href="#411" id="411">411</a>
+<a href="#412" id="412">412</a>
+<a href="#413" id="413">413</a>
+<a href="#414" id="414">414</a>
+<a href="#415" id="415">415</a>
+<a href="#416" id="416">416</a>
 </pre><pre class="rust"><code><span class="doccomment">//! fuzzy proportional integral derivative controller
 
 </span><span class="kw">use </span><span class="kw">crate</span>::pid::PID;
 <span class="kw">use </span><span class="kw">crate</span>::real;
 <span class="kw">use </span><span class="kw">crate</span>::uint;
+
+<span class="doccomment">/// enumeration for fuzzy PID controller operator
+</span><span class="attr">#[repr(C)]
+</span><span class="kw">pub enum </span>op {
+    <span class="doccomment">/// sqrt(l,r)*sqrt(1-(1-r)*(1-r))
+    </span>EQU,
+    <span class="doccomment">/// min(l,r)
+    </span>AND = <span class="number">0b00010000</span>,
+    <span class="doccomment">/// l*r
+    </span>AND_ALGEBRA = <span class="number">0b00010100</span>,
+    <span class="doccomment">/// max(l,r)
+    </span>AND_BOUNDED = <span class="number">0b00011000</span>,
+    <span class="doccomment">/// max(l,r)
+    </span>OR = <span class="number">0b00100000</span>,
+    <span class="doccomment">/// l+r-l*r
+    </span>OR_ALGEBRA = <span class="number">0b00100100</span>,
+    <span class="doccomment">/// min(l,r)
+    </span>OR_BOUNDED = <span class="number">0b00101000</span>,
+}
 
 <span class="doccomment">/// fuzzy proportional integral derivative controller
 </span><span class="attr">#[repr(C)]
@@ -368,6 +467,15 @@
     <span class="kw">fn </span>a_fpid_pos(ctx: <span class="kw-2">*mut </span>FPID, max: real) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_kpid(ctx: <span class="kw-2">*mut </span>FPID, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_buff(ctx: <span class="kw-2">*mut </span>FPID, idx: <span class="kw-2">*mut </span>uint, val: <span class="kw-2">*mut </span>real) -&gt; <span class="kw-2">*mut </span>FPID;
+    <span class="kw">fn </span>a_fpid_chan(
+        ctx: <span class="kw-2">*mut </span>FPID,
+        num: uint,
+        out: <span class="kw-2">*mut </span>real,
+        fdb: <span class="kw-2">*mut </span>real,
+        sum: <span class="kw-2">*mut </span>real,
+        ec: <span class="kw-2">*mut </span>real,
+        e: <span class="kw-2">*mut </span>real,
+    ) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_base(
         ctx: <span class="kw-2">*mut </span>FPID,
         num: uint,
@@ -390,7 +498,10 @@
         max: real,
     ) -&gt; <span class="kw-2">*mut </span>FPID;
     <span class="kw">fn </span>a_fpid_outf(ctx: <span class="kw-2">*mut </span>FPID, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_fpid_outp(ctx: <span class="kw-2">*mut </span>FPID, set: <span class="kw-2">*const </span>real, fdb: <span class="kw-2">*const </span>real) -&gt; <span class="kw-2">*const </span>real;
     <span class="kw">fn </span>a_fpid_zero(ctx: <span class="kw-2">*mut </span>FPID) -&gt; <span class="kw-2">*mut </span>FPID;
+    <span class="kw">fn </span>a_fpid_set_op(ctx: <span class="kw-2">*mut </span>FPID, op: uint);
+    <span class="kw">fn </span>a_pid_num(ctx: <span class="kw-2">*const </span>PID) -&gt; uint;
 }
 
 <span class="kw">impl </span>FPID {
@@ -466,6 +577,30 @@
         }
     }
 
+    <span class="doccomment">/// set buffer for multichannel fuzzy PID controller
+    </span><span class="kw">pub fn </span>chan(
+        <span class="kw-2">&amp;mut </span><span class="self">self</span>,
+        out: <span class="kw-2">&amp;mut </span>[real],
+        fdb: <span class="kw-2">&amp;mut </span>[real],
+        sum: <span class="kw-2">&amp;mut </span>[real],
+        ec: <span class="kw-2">&amp;mut </span>[real],
+        e: <span class="kw-2">&amp;mut </span>[real],
+    ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{
+            a_fpid_chan(
+                <span class="self">self</span>,
+                out.len() <span class="kw">as </span>uint,
+                out.as_mut_ptr(),
+                fdb.as_mut_ptr(),
+                sum.as_mut_ptr(),
+                ec.as_mut_ptr(),
+                e.as_mut_ptr(),
+            )
+            .as_mut()
+            .unwrap_unchecked()
+        }
+    }
+
     <span class="doccomment">/// set rule base for fuzzy PID controller
     </span><span class="kw">pub fn </span>base(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
@@ -492,14 +627,29 @@
     }
 
     <span class="doccomment">/// calculate function for fuzzy PID controller
-    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
+    </span><span class="kw">pub fn </span>outf(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_fpid_outf(<span class="self">self</span>, set, fdb) }
+    }
+    <span class="doccomment">/// calculate function for multichannel fuzzy PID controller
+    </span><span class="kw">pub fn </span>outp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: <span class="kw-2">&amp;</span>[real], fdb: <span class="kw-2">&amp;</span>[real]) -&gt; <span class="kw-2">&amp;</span>[real] {
+        <span class="kw">unsafe </span>{
+            std::slice::from_raw_parts(
+                a_fpid_outp(<span class="self">self</span>, set.as_ptr(), fdb.as_ptr()),
+                a_pid_num(<span class="kw-2">&amp;</span><span class="self">self</span>.pid) <span class="kw">as </span>usize,
+            )
+        }
     }
 
     <span class="doccomment">/// zero function for fuzzy PID controller
     </span><span class="kw">pub fn </span>zero(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_fpid_zero(<span class="self">self</span>).as_mut().unwrap_unchecked() }
     }
+
+    <span class="doccomment">/// set fuzzy relational operator for fuzzy PID controller
+    </span><span class="kw">pub fn </span>set_op(<span class="kw-2">&amp;mut </span><span class="self">self</span>, op: op) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_fpid_set_op(<span class="self">self</span>, op <span class="kw">as </span>uint) };
+        <span class="self">self
+    </span>}
 
     <span class="doccomment">/// get sampling time unit(s) for fuzzy PID controller
     </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; uint {
@@ -667,8 +817,18 @@
     a.buff(<span class="kw-2">&amp;mut </span>idx, <span class="kw-2">&amp;mut </span>val);
     a.pos(<span class="number">10.0</span>).off().inc().set_dt(<span class="number">0.1</span>);
     <span class="macro">assert!</span>(a.mode() == <span class="kw">crate</span>::pid::INC);
-    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.iter(<span class="number">1.0</span>, <span class="number">0.0</span>));
-    a.zero();
+    <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.outf(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    a.set_op(op::AND_ALGEBRA).zero();
+    {
+        <span class="kw">let </span><span class="kw-2">mut </span>out: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>fdb: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>sum: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>ec: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>e: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        a.chan(<span class="kw-2">&amp;mut </span>out, <span class="kw-2">&amp;mut </span>fdb, <span class="kw-2">&amp;mut </span>sum, <span class="kw-2">&amp;mut </span>ec, <span class="kw-2">&amp;mut </span>e);
+        a.outp(<span class="kw-2">&amp;</span>[<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>], <span class="kw-2">&amp;</span>[<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>]);
+        <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);
+    }
 }
 </code></pre></div>
 </section></main><div id="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="liba" data-themes="" data-resource-suffix="" data-rustdoc-version="1.69.0 (84c898d65 2023-04-16)" data-search-js="search-8a59a8356673ec1f.js" data-settings-js="settings-f0c5c39777a9a2f6.js" data-settings-css="settings-0bcba95ff279c1db.css" ></div></body></html>

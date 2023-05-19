@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['real_20number_1539',['real number',['../da/d70/group__A__REAL.html',1,'']]],
-  ['red–black_20binary_20search_20tree_1540',['red–black binary search tree',['../d7/d06/group__A__RBT.html',1,'']]]
+  ['real_20number_1532',['real number',['../da/d70/group__A__REAL.html',1,'']]],
+  ['red–black_20binary_20search_20tree_1533',['red–black binary search tree',['../d7/d06/group__A__RBT.html',1,'']]]
 ];

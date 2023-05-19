@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['object_20oriented_20programming_966',['Object Oriented Programming',['../df/db1/group__A__OOP.html',1,'']]],
-  ['oop_2eh_967',['oop.h',['../d4/ddc/oop_8h.html',1,'']]],
-  ['op_968',['op',['../d6/d9e/structa__fpid__s.html#a656639d0b6c213215fbd7fb0e90b4ae9',1,'a_fpid_s']]],
-  ['operator_2eh_969',['operator.h',['../d7/de0/operator_8h.html',1,'']]],
-  ['out_970',['out',['../de/def/structa__pid__s.html#aad09b2e1bd2964ea4893482d062ced99',1,'a_pid_s']]],
-  ['outmax_971',['outmax',['../de/def/structa__pid__s.html#ac22b272ff34b8bf8d09aed04c28bd9c8',1,'a_pid_s']]],
-  ['outmin_972',['outmin',['../de/def/structa__pid__s.html#ae90e4d2d64030a7511f5cca733c82511',1,'a_pid_s']]]
+  ['p_970',['p',['../da/d4d/uniona__real__u.html#a167d6af5c5260831487621d07b223097',1,'a_real_u']]],
+  ['patch_971',['patch',['../d5/d01/structa_1_1version.html#aa2f483a8456dfd2841e08b61e6c5da62',1,'a::version']]],
+  ['pid_972',['pid',['../d6/d9e/structa__fpid__s.html#a1c34632d951b43f84da9672481487dc2',1,'a_fpid_s']]],
+  ['pid_2eh_973',['pid.h',['../da/df0/pid_8h.html',1,'']]],
+  ['poly_2eh_974',['poly.h',['../db/d57/poly_8h.html',1,'']]],
+  ['polynomial_975',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
+  ['polynomial_20trajectory_976',['polynomial trajectory',['../d1/d97/group__A__POLYTRACK.html',1,'']]],
+  ['polytrack_2eh_977',['polytrack.h',['../dc/d23/polytrack_8h.html',1,'']]],
+  ['proportional_20integral_20derivative_20controller_978',['proportional integral derivative controller',['../d8/da8/group__A__PID.html',1,'']]]
 ];

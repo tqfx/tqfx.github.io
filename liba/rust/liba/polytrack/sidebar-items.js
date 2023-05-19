@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["PolyTrack3","PolyTrack5","PolyTrack7"]};
+window.SIDEBAR_ITEMS = {"struct":["polytrack3","polytrack5","polytrack7"]};

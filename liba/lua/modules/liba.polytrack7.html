@@ -78,31 +78,27 @@
 	<td class="summary">constructor for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#init">init (ctx, t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
-	<td class="summary">initialize function for hepta polynomial trajectory</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#gen">gen (ctx)</a></td>
+	<td class="name" nowrap><a href="#gen">gen (ctx, t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
 	<td class="summary">generation function for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#out">out (ctx, ts)</a></td>
+	<td class="name" nowrap><a href="#out">out (ctx, dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#pos">pos (ctx, ts)</a></td>
+	<td class="name" nowrap><a href="#pos">pos (ctx, dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory position</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#vec">vec (ctx, ts)</a></td>
+	<td class="name" nowrap><a href="#vec">vec (ctx, dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory velocity</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#acc">acc (ctx, ts)</a></td>
+	<td class="name" nowrap><a href="#acc">acc (ctx, dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory acceleration</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#jer">jer (ctx, ts)</a></td>
+	<td class="name" nowrap><a href="#jer">jer (ctx, dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory jerk</td>
 	</tr>
 </table>
@@ -194,11 +190,11 @@
 
 </dd>
     <dt>
-    <a name = "init"></a>
-    <strong>init (ctx, t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
+    <a name = "gen"></a>
+    <strong>gen (ctx, t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
     </dt>
     <dd>
-    initialize function for hepta polynomial trajectory
+    generation function for hepta polynomial trajectory
 
 
     <h3>Parameters:</h3>
@@ -276,34 +272,8 @@
 
 </dd>
     <dt>
-    <a name = "gen"></a>
-    <strong>gen (ctx)</strong>
-    </dt>
-    <dd>
-    generation function for hepta polynomial trajectory
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         hepta polynomial trajectory userdata
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/polytrack7.html#">polytrack7</a></span>
-        hepta polynomial trajectory userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
     <a name = "out"></a>
-    <strong>out (ctx, ts)</strong>
+    <strong>out (ctx, dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory
@@ -314,9 +284,9 @@
         <li><span class="parameter">ctx</span>
          hepta polynomial trajectory userdata
         </li>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -333,7 +303,7 @@
 </dd>
     <dt>
     <a name = "pos"></a>
-    <strong>pos (ctx, ts)</strong>
+    <strong>pos (ctx, dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory position
@@ -344,9 +314,9 @@
         <li><span class="parameter">ctx</span>
          hepta polynomial trajectory userdata
         </li>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -363,7 +333,7 @@
 </dd>
     <dt>
     <a name = "vec"></a>
-    <strong>vec (ctx, ts)</strong>
+    <strong>vec (ctx, dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory velocity
@@ -374,9 +344,9 @@
         <li><span class="parameter">ctx</span>
          hepta polynomial trajectory userdata
         </li>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -393,7 +363,7 @@
 </dd>
     <dt>
     <a name = "acc"></a>
-    <strong>acc (ctx, ts)</strong>
+    <strong>acc (ctx, dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory acceleration
@@ -404,9 +374,9 @@
         <li><span class="parameter">ctx</span>
          hepta polynomial trajectory userdata
         </li>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -423,7 +393,7 @@
 </dd>
     <dt>
     <a name = "jer"></a>
-    <strong>jer (ctx, ts)</strong>
+    <strong>jer (ctx, dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory jerk
@@ -434,9 +404,9 @@
         <li><span class="parameter">ctx</span>
          hepta polynomial trajectory userdata
         </li>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -458,7 +428,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-05-15 19:52:49 </i>
+<i style="float:right;">Last updated 2023-05-19 18:26:28 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

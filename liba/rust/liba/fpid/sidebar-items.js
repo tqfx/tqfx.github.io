@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["FPID"]};
+window.SIDEBAR_ITEMS = {"enum":["op"],"struct":["FPID"]};

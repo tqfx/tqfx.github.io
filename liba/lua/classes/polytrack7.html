@@ -86,31 +86,27 @@
 	<td class="summary">constructor for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:init">polytrack7:init (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
-	<td class="summary">initialize function for hepta polynomial trajectory</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#polytrack7:gen">polytrack7:gen ()</a></td>
+	<td class="name" nowrap><a href="#polytrack7:gen">polytrack7:gen (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</a></td>
 	<td class="summary">generation function for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:out">polytrack7:out (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack7:out">polytrack7:out (dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:pos">polytrack7:pos (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack7:pos">polytrack7:pos (dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory position</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:vec">polytrack7:vec (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack7:vec">polytrack7:vec (dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory velocity</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:acc">polytrack7:acc (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack7:acc">polytrack7:acc (dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory acceleration</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#polytrack7:jer">polytrack7:jer (ts)</a></td>
+	<td class="name" nowrap><a href="#polytrack7:jer">polytrack7:jer (dt)</a></td>
 	<td class="summary">calculate function for hepta polynomial trajectory jerk</td>
 	</tr>
 </table>
@@ -134,51 +130,6 @@
     <ul>
         <li><span class="parameter">k</span>
          quantity table
-        </li>
-        <li><span class="parameter">t</span>
-         time table
-        </li>
-        <li><span class="parameter">p</span>
-         position table
-        </li>
-        <li><span class="parameter">v</span>
-         velocity table
-        </li>
-        <li><span class="parameter">a</span>
-         acceleration table
-        </li>
-        <li><span class="parameter">j</span>
-         jerk table
-        </li>
-        <li><span class="parameter">t0</span>
-         time for source
-        </li>
-        <li><span class="parameter">t1</span>
-         time for target
-        </li>
-        <li><span class="parameter">q0</span>
-         position for source
-        </li>
-        <li><span class="parameter">q1</span>
-         position for target
-        </li>
-        <li><span class="parameter">v0</span>
-         velocity for source
-        </li>
-        <li><span class="parameter">v1</span>
-         velocity for target
-        </li>
-        <li><span class="parameter">a0</span>
-         acceleration for source
-        </li>
-        <li><span class="parameter">a1</span>
-         acceleration for target
-        </li>
-        <li><span class="parameter">j0</span>
-         jerk for source
-        </li>
-        <li><span class="parameter">j1</span>
-         jerk for target
         </li>
     </ul>
 
@@ -271,11 +222,11 @@
 
 </dd>
     <dt>
-    <a name = "polytrack7:init"></a>
-    <strong>polytrack7:init (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
+    <a name = "polytrack7:gen"></a>
+    <strong>polytrack7:gen (t0, t1, q0, q1[, v0[, v1[, a0[, a1[, j0[, j1[, source[, target]]]]]]]])</strong>
     </dt>
     <dd>
-    initialize function for hepta polynomial trajectory
+    generation function for hepta polynomial trajectory
 
 
     <h3>Parameters:</h3>
@@ -350,28 +301,8 @@
 
 </dd>
     <dt>
-    <a name = "polytrack7:gen"></a>
-    <strong>polytrack7:gen ()</strong>
-    </dt>
-    <dd>
-    generation function for hepta polynomial trajectory
-
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/polytrack7.html#">polytrack7</a></span>
-        hepta polynomial trajectory userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
     <a name = "polytrack7:out"></a>
-    <strong>polytrack7:out (ts)</strong>
+    <strong>polytrack7:out (dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory
@@ -379,9 +310,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -398,7 +329,7 @@
 </dd>
     <dt>
     <a name = "polytrack7:pos"></a>
-    <strong>polytrack7:pos (ts)</strong>
+    <strong>polytrack7:pos (dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory position
@@ -406,9 +337,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -425,7 +356,7 @@
 </dd>
     <dt>
     <a name = "polytrack7:vec"></a>
-    <strong>polytrack7:vec (ts)</strong>
+    <strong>polytrack7:vec (dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory velocity
@@ -433,9 +364,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -452,7 +383,7 @@
 </dd>
     <dt>
     <a name = "polytrack7:acc"></a>
-    <strong>polytrack7:acc (ts)</strong>
+    <strong>polytrack7:acc (dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory acceleration
@@ -460,9 +391,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -479,7 +410,7 @@
 </dd>
     <dt>
     <a name = "polytrack7:jer"></a>
-    <strong>polytrack7:jer (ts)</strong>
+    <strong>polytrack7:jer (dt)</strong>
     </dt>
     <dd>
     calculate function for hepta polynomial trajectory jerk
@@ -487,9 +418,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ts</span>
+        <li><span class="parameter">dt</span>
             <span class="types"><span class="type">number</span></span>
-         current time unit(s)
+         difference between current time and initial time
         </li>
     </ul>
 
@@ -511,7 +442,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-05-15 19:52:49 </i>
+<i style="float:right;">Last updated 2023-05-19 18:26:28 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
