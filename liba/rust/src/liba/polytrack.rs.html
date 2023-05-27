@@ -271,66 +271,82 @@
 <a href="#271" id="271">271</a>
 <a href="#272" id="272">272</a>
 <a href="#273" id="273">273</a>
+<a href="#274" id="274">274</a>
+<a href="#275" id="275">275</a>
+<a href="#276" id="276">276</a>
+<a href="#277" id="277">277</a>
+<a href="#278" id="278">278</a>
+<a href="#279" id="279">279</a>
+<a href="#280" id="280">280</a>
+<a href="#281" id="281">281</a>
 </pre><pre class="rust"><code><span class="doccomment">//! polynomial trajectory
 
-</span><span class="kw">use </span><span class="kw">crate</span>::real;
+</span><span class="kw">use </span><span class="kw">crate</span>::float;
 
 <span class="doccomment">/// cubic polynomial trajectory
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>polytrack3 {
     <span class="doccomment">/// quantity
-    </span>k: [real; <span class="number">4</span>],
+    </span>k: [float; <span class="number">4</span>],
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_polytrack3_gen(
         ctx: <span class="kw-2">*mut </span>polytrack3,
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
     );
-    <span class="kw">fn </span>a_polytrack3_pos(ctx: <span class="kw-2">*const </span>polytrack3, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack3_vec(ctx: <span class="kw-2">*const </span>polytrack3, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack3_acc(ctx: <span class="kw-2">*const </span>polytrack3, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack3_out(ctx: <span class="kw-2">*const </span>polytrack3, dt: real, out: <span class="kw-2">*mut </span>[real; <span class="number">3</span>]);
+    <span class="kw">fn </span>a_polytrack3_pos(ctx: <span class="kw-2">*const </span>polytrack3, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack3_vec(ctx: <span class="kw-2">*const </span>polytrack3, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack3_acc(ctx: <span class="kw-2">*const </span>polytrack3, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack3_out(ctx: <span class="kw-2">*const </span>polytrack3, dt: float, out: <span class="kw-2">*mut </span>[float; <span class="number">3</span>]);
 }
 
 <span class="kw">impl </span>polytrack3 {
     <span class="doccomment">/// initialize function for cubic polynomial trajectory
-    </span><span class="kw">pub fn </span>new(t0: real, t1: real, q0: real, q1: real, v0: real, v1: real) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(t0: float, t1: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ k: [<span class="number">0.0</span>; <span class="number">4</span>] };
         <span class="kw">unsafe </span>{ a_polytrack3_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1) };
         ctx
     }
 
     <span class="doccomment">/// generation function for cubic polynomial trajectory
-    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, t0: real, t1: real, q0: real, q1: real, v0: real, v1: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>gen(
+        <span class="kw-2">&amp;mut </span><span class="self">self</span>,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+    ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_polytrack3_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// calculate function for cubic polynomial trajectory
-    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; [real; <span class="number">3</span>] {
-        <span class="kw">let </span><span class="kw-2">mut </span>out: [real; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
+    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">3</span>] {
+        <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
         <span class="kw">unsafe </span>{ a_polytrack3_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
     <span class="doccomment">/// calculate function for cubic polynomial trajectory position
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_pos(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for cubic polynomial trajectory velocity
-    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_vec(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for cubic polynomial trajectory acceleration
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_acc(<span class="self">self</span>, dt) }
     }
 }
@@ -349,38 +365,38 @@
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>polytrack5 {
     <span class="doccomment">/// quantity
-    </span>k: [real; <span class="number">6</span>],
+    </span>k: [float; <span class="number">6</span>],
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_polytrack5_gen(
         ctx: <span class="kw-2">*mut </span>polytrack5,
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
     );
-    <span class="kw">fn </span>a_polytrack5_pos(ctx: <span class="kw-2">*const </span>polytrack5, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack5_vec(ctx: <span class="kw-2">*const </span>polytrack5, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack5_acc(ctx: <span class="kw-2">*const </span>polytrack5, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack5_out(ctx: <span class="kw-2">*const </span>polytrack5, dt: real, out: <span class="kw-2">*mut </span>[real; <span class="number">3</span>]);
+    <span class="kw">fn </span>a_polytrack5_pos(ctx: <span class="kw-2">*const </span>polytrack5, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack5_vec(ctx: <span class="kw-2">*const </span>polytrack5, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack5_acc(ctx: <span class="kw-2">*const </span>polytrack5, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack5_out(ctx: <span class="kw-2">*const </span>polytrack5, dt: float, out: <span class="kw-2">*mut </span>[float; <span class="number">3</span>]);
 }
 
 <span class="kw">impl </span>polytrack5 {
     <span class="doccomment">/// initialize function for quintic polynomial trajectory
     </span><span class="kw">pub fn </span>new(
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ k: [<span class="number">0.0</span>; <span class="number">6</span>] };
         <span class="kw">unsafe </span>{ a_polytrack5_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1, a0, a1) };
@@ -390,38 +406,38 @@
     <span class="doccomment">/// generation function for quintic polynomial trajectory
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_polytrack5_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1, a0, a1) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// calculate function for quintic polynomial trajectory
-    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; [real; <span class="number">3</span>] {
-        <span class="kw">let </span><span class="kw-2">mut </span>out: [real; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
+    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">3</span>] {
+        <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
         <span class="kw">unsafe </span>{ a_polytrack5_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
     <span class="doccomment">/// calculate function for quintic polynomial trajectory position
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_pos(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for quintic polynomial trajectory velocity
-    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_vec(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for quintic polynomial trajectory acceleration
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_acc(<span class="self">self</span>, dt) }
     }
 }
@@ -440,43 +456,43 @@
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>polytrack7 {
     <span class="doccomment">/// quantity
-    </span>k: [real; <span class="number">8</span>],
+    </span>k: [float; <span class="number">8</span>],
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_polytrack7_gen(
         ctx: <span class="kw-2">*mut </span>polytrack7,
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
-        j0: real,
-        j1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
+        j0: float,
+        j1: float,
     );
-    <span class="kw">fn </span>a_polytrack7_pos(ctx: <span class="kw-2">*const </span>polytrack7, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack7_vec(ctx: <span class="kw-2">*const </span>polytrack7, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack7_acc(ctx: <span class="kw-2">*const </span>polytrack7, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack7_jer(ctx: <span class="kw-2">*const </span>polytrack7, dt: real) -&gt; real;
-    <span class="kw">fn </span>a_polytrack7_out(ctx: <span class="kw-2">*const </span>polytrack7, dt: real, out: <span class="kw-2">*mut </span>[real; <span class="number">4</span>]);
+    <span class="kw">fn </span>a_polytrack7_pos(ctx: <span class="kw-2">*const </span>polytrack7, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack7_vec(ctx: <span class="kw-2">*const </span>polytrack7, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack7_acc(ctx: <span class="kw-2">*const </span>polytrack7, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack7_jer(ctx: <span class="kw-2">*const </span>polytrack7, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_polytrack7_out(ctx: <span class="kw-2">*const </span>polytrack7, dt: float, out: <span class="kw-2">*mut </span>[float; <span class="number">4</span>]);
 }
 
 <span class="kw">impl </span>polytrack7 {
     <span class="doccomment">/// initialize function for hepta polynomial trajectory
     </span><span class="kw">pub fn </span>new(
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
-        j0: real,
-        j1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
+        j0: float,
+        j1: float,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ k: [<span class="number">0.0</span>; <span class="number">8</span>] };
         <span class="kw">unsafe </span>{ a_polytrack7_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1, a0, a1, j0, j1) };
@@ -486,45 +502,45 @@
     <span class="doccomment">/// generation function for hepta polynomial trajectory
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        t0: real,
-        t1: real,
-        q0: real,
-        q1: real,
-        v0: real,
-        v1: real,
-        a0: real,
-        a1: real,
-        j0: real,
-        j1: real,
+        t0: float,
+        t1: float,
+        q0: float,
+        q1: float,
+        v0: float,
+        v1: float,
+        a0: float,
+        a1: float,
+        j0: float,
+        j1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_polytrack7_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1, a0, a1, j0, j1) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// calculate function for hepta polynomial trajectory
-    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; [real; <span class="number">4</span>] {
-        <span class="kw">let </span><span class="kw-2">mut </span>out: [real; <span class="number">4</span>] = [<span class="number">0.0</span>; <span class="number">4</span>];
+    </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">4</span>] {
+        <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">4</span>] = [<span class="number">0.0</span>; <span class="number">4</span>];
         <span class="kw">unsafe </span>{ a_polytrack7_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
     <span class="doccomment">/// calculate function for hepta polynomial trajectory position
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_pos(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for hepta polynomial trajectory velocity
-    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>vec(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_vec(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for hepta polynomial trajectory acceleration
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_acc(<span class="self">self</span>, dt) }
     }
 
     <span class="doccomment">/// calculate function for hepta polynomial trajectory jerk
-    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; real {
+    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_jer(<span class="self">self</span>, dt) }
     }
 }

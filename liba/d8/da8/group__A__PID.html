@@ -95,24 +95,45 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gaa66af3b7759ecd4f9748dcc0761b309f"><td class="memItemLeft" align="right" valign="top"><a id="gaa66af3b7759ecd4f9748dcc0761b309f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BITS</b>&#160;&#160;&#160;8</td></tr>
-<tr class="separator:gaa66af3b7759ecd4f9748dcc0761b309f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafbda36c2fbb1be8612c84cbda328ef6f"><td class="memItemLeft" align="right" valign="top"><a id="gafbda36c2fbb1be8612c84cbda328ef6f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_MASK</b>&#160;&#160;&#160;((1U &lt;&lt; A_PID_NUM_BITS) - 1U)</td></tr>
-<tr class="separator:gafbda36c2fbb1be8612c84cbda328ef6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43690b82493ecdb5aa46d5f0ed210e0f"><td class="memItemLeft" align="right" valign="top"><a id="ga43690b82493ecdb5aa46d5f0ed210e0f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BITS</b>&#160;&#160;&#160;8</td></tr>
-<tr class="separator:ga43690b82493ecdb5aa46d5f0ed210e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab1e52ac9581e6a39eaa384137b8bdc51"><td class="memItemLeft" align="right" valign="top"><a id="gab1e52ac9581e6a39eaa384137b8bdc51"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_MASK</b>&#160;&#160;&#160;((1U &lt;&lt; A_PID_REG_BITS) - 1U)</td></tr>
-<tr class="separator:gab1e52ac9581e6a39eaa384137b8bdc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab2f6c8f30551e3febcc9b7550eb3c40b"><td class="memItemLeft" align="right" valign="top"><a id="gab2f6c8f30551e3febcc9b7550eb3c40b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BITS</b>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:gab2f6c8f30551e3febcc9b7550eb3c40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5705d69b7f466682c831bdc0983d5f3e"><td class="memItemLeft" align="right" valign="top"><a id="ga5705d69b7f466682c831bdc0983d5f3e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_MASK</b>&#160;&#160;&#160;((1U &lt;&lt; A_PID_MODE_BITS) - 1U)</td></tr>
-<tr class="separator:ga5705d69b7f466682c831bdc0983d5f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac670ec69079d64d2f0c1ffc3d6432eaa"><td class="memItemLeft" align="right" valign="top"><a id="gac670ec69079d64d2f0c1ffc3d6432eaa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BITL</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gac670ec69079d64d2f0c1ffc3d6432eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a2998787a025886e74999a222a43a07"><td class="memItemLeft" align="right" valign="top"><a id="ga0a2998787a025886e74999a222a43a07"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BIT</b>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:ga0a2998787a025886e74999a222a43a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53ce50a64f4abbe5ed0a260b508e383e"><td class="memItemLeft" align="right" valign="top"><a id="ga53ce50a64f4abbe5ed0a260b508e383e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BITH</b>&#160;&#160;&#160;(A_PID_NUM_BITL + A_PID_NUM_BIT)</td></tr>
+<tr class="separator:ga53ce50a64f4abbe5ed0a260b508e383e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f54799009ad69192a351dc1c25d6650"><td class="memItemLeft" align="right" valign="top"><a id="ga8f54799009ad69192a351dc1c25d6650"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_NUM_BITH) &amp; (~0U &lt;&lt; A_PID_NUM_BITL))</td></tr>
+<tr class="separator:ga8f54799009ad69192a351dc1c25d6650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe2951ee62217823befb9e68dd03e072"><td class="memItemLeft" align="right" valign="top"><a id="gabe2951ee62217823befb9e68dd03e072"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_MAX</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_NUM_BIT))</td></tr>
+<tr class="separator:gabe2951ee62217823befb9e68dd03e072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b1a8a118f517113358e2aa2f0efced2"><td class="memItemLeft" align="right" valign="top"><a id="ga2b1a8a118f517113358e2aa2f0efced2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BITL</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ga2b1a8a118f517113358e2aa2f0efced2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace1177fac36d5ca3edf994e24ebc88ae"><td class="memItemLeft" align="right" valign="top"><a id="gace1177fac36d5ca3edf994e24ebc88ae"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BIT</b>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:gace1177fac36d5ca3edf994e24ebc88ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga087f9ef42fff5082a5558f1bc73b1d2d"><td class="memItemLeft" align="right" valign="top"><a id="ga087f9ef42fff5082a5558f1bc73b1d2d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BITH</b>&#160;&#160;&#160;(A_PID_REG_BITL + A_PID_REG_BIT)</td></tr>
+<tr class="separator:ga087f9ef42fff5082a5558f1bc73b1d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga743ecb5d2146ee5c712d7f975b9a0a55"><td class="memItemLeft" align="right" valign="top"><a id="ga743ecb5d2146ee5c712d7f975b9a0a55"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_REG_BITH) &amp; (~0U &lt;&lt; A_PID_REG_BITL))</td></tr>
+<tr class="separator:ga743ecb5d2146ee5c712d7f975b9a0a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54f211796c4b362347ebcbb4bffa026b"><td class="memItemLeft" align="right" valign="top"><a id="ga54f211796c4b362347ebcbb4bffa026b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BITL</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ga54f211796c4b362347ebcbb4bffa026b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac07957d1e3a0bd1e487dafc6aedaae38"><td class="memItemLeft" align="right" valign="top"><a id="gac07957d1e3a0bd1e487dafc6aedaae38"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BIT</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:gac07957d1e3a0bd1e487dafc6aedaae38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga136d5f8f818739e9fa14af523b56d0d5"><td class="memItemLeft" align="right" valign="top"><a id="ga136d5f8f818739e9fa14af523b56d0d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BITH</b>&#160;&#160;&#160;(A_PID_MODE_BITL + A_PID_MODE_BIT)</td></tr>
+<tr class="separator:ga136d5f8f818739e9fa14af523b56d0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6614c69569887bbb75f5053f0c4bfd1"><td class="memItemLeft" align="right" valign="top"><a id="gad6614c69569887bbb75f5053f0c4bfd1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_MODE_BITH) &amp; (~0U &lt;&lt; A_PID_MODE_BITL))</td></tr>
+<tr class="separator:gad6614c69569887bbb75f5053f0c4bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -136,72 +157,72 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga7a4a4b7f7c1c6c5dae0810eb8cb0df16"><td class="memItemLeft" align="right" valign="top"><a id="ga7a4a4b7f7c1c6c5dae0810eb8cb0df16"></a>
-<a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga7a4a4b7f7c1c6c5dae0810eb8cb0df16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabcab039d3db22d990dae5460050dc658"><td class="memItemLeft" align="right" valign="top"><a id="gabcab039d3db22d990dae5460050dc658"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> dt)</td></tr>
-<tr class="separator:gabcab039d3db22d990dae5460050dc658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade56acdf5042965c41eaa5aec887ddf2"><td class="memItemLeft" align="right" valign="top"><a id="gade56acdf5042965c41eaa5aec887ddf2"></a>
-<a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:gade56acdf5042965c41eaa5aec887ddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2fc6449bd5724683471a9076bbbf9f3c"><td class="memItemLeft" align="right" valign="top"><a id="ga2fc6449bd5724683471a9076bbbf9f3c"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> kp)</td></tr>
-<tr class="separator:ga2fc6449bd5724683471a9076bbbf9f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaacc8121c95b7accfb3f4bc3ec50a35c9"><td class="memItemLeft" align="right" valign="top"><a id="gaacc8121c95b7accfb3f4bc3ec50a35c9"></a>
-<a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:gaacc8121c95b7accfb3f4bc3ec50a35c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8585b83a5dd9984065e28a531211b5b4"><td class="memItemLeft" align="right" valign="top"><a id="ga8585b83a5dd9984065e28a531211b5b4"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> ki)</td></tr>
-<tr class="separator:ga8585b83a5dd9984065e28a531211b5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga16115c417e552776fb1d6926533d27ba"><td class="memItemLeft" align="right" valign="top"><a id="ga16115c417e552776fb1d6926533d27ba"></a>
-<a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga16115c417e552776fb1d6926533d27ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f7f90dcb5181e559bdce7ef3ec9c923"><td class="memItemLeft" align="right" valign="top"><a id="ga2f7f90dcb5181e559bdce7ef3ec9c923"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> kd)</td></tr>
-<tr class="separator:ga2f7f90dcb5181e559bdce7ef3ec9c923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga792556b98b28b266943a18e6e8e0321f"><td class="memItemLeft" align="right" valign="top"><a id="ga792556b98b28b266943a18e6e8e0321f"></a>
-a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga792556b98b28b266943a18e6e8e0321f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga303a994568b6e66a3f1df5a4819fa092"><td class="memItemLeft" align="right" valign="top"><a id="ga303a994568b6e66a3f1df5a4819fa092"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, a_uint_t num)</td></tr>
-<tr class="separator:ga303a994568b6e66a3f1df5a4819fa092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga894872c16d6428ce8bec10a6c19eb9a8"><td class="memItemLeft" align="right" valign="top"><a id="ga894872c16d6428ce8bec10a6c19eb9a8"></a>
-a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga894872c16d6428ce8bec10a6c19eb9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7a69db9cd36e13fe2b6691dd461006b4"><td class="memItemLeft" align="right" valign="top"><a id="ga7a69db9cd36e13fe2b6691dd461006b4"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, a_uint_t reg)</td></tr>
-<tr class="separator:ga7a69db9cd36e13fe2b6691dd461006b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1edd5dbb1f1ade5cb49bd57ecbc5c5c4"><td class="memItemLeft" align="right" valign="top"><a id="ga1edd5dbb1f1ade5cb49bd57ecbc5c5c4"></a>
-a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *mode)</td></tr>
-<tr class="separator:ga1edd5dbb1f1ade5cb49bd57ecbc5c5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b5543c3084efb2907d81f346cd18de9"><td class="memItemLeft" align="right" valign="top"><a id="ga0b5543c3084efb2907d81f346cd18de9"></a>
-<a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, a_uint_t mode)</td></tr>
-<tr class="separator:ga0b5543c3084efb2907d81f346cd18de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4f13bf959d86e090fca7db847fb8a73"><td class="memItemLeft" align="right" valign="top"><a id="gaf4f13bf959d86e090fca7db847fb8a73"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:gaf4f13bf959d86e090fca7db847fb8a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5e2aec03a46c48dd52583c9a3216a50"><td class="memItemLeft" align="right" valign="top"><a id="gaa5e2aec03a46c48dd52583c9a3216a50"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> dt)</td></tr>
+<tr class="separator:gaa5e2aec03a46c48dd52583c9a3216a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91a5cc6260d9c80b4b7bb3989c1ba6ea"><td class="memItemLeft" align="right" valign="top"><a id="ga91a5cc6260d9c80b4b7bb3989c1ba6ea"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:ga91a5cc6260d9c80b4b7bb3989c1ba6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17f15657a8f1c32d500997f9672a6876"><td class="memItemLeft" align="right" valign="top"><a id="ga17f15657a8f1c32d500997f9672a6876"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kp)</td></tr>
+<tr class="separator:ga17f15657a8f1c32d500997f9672a6876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61f8af468a2677ba0cb6e74705f58e52"><td class="memItemLeft" align="right" valign="top"><a id="ga61f8af468a2677ba0cb6e74705f58e52"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:ga61f8af468a2677ba0cb6e74705f58e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b4b58a6caeca0c070c576ac57f3f8ea"><td class="memItemLeft" align="right" valign="top"><a id="ga8b4b58a6caeca0c070c576ac57f3f8ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> ki)</td></tr>
+<tr class="separator:ga8b4b58a6caeca0c070c576ac57f3f8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7dd615a126660c591ec9fbeab979433"><td class="memItemLeft" align="right" valign="top"><a id="gab7dd615a126660c591ec9fbeab979433"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:gab7dd615a126660c591ec9fbeab979433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b63d60175a969b248a4b520913f1d38"><td class="memItemLeft" align="right" valign="top"><a id="ga0b63d60175a969b248a4b520913f1d38"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kd)</td></tr>
+<tr class="separator:ga0b63d60175a969b248a4b520913f1d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93c7c97875387d9b7ad98e349e0039a3"><td class="memItemLeft" align="right" valign="top"><a id="ga93c7c97875387d9b7ad98e349e0039a3"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:ga93c7c97875387d9b7ad98e349e0039a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65b75e6917bebd3e9f5ef37b80d4f5e3"><td class="memItemLeft" align="right" valign="top"><a id="ga65b75e6917bebd3e9f5ef37b80d4f5e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num)</td></tr>
+<tr class="separator:ga65b75e6917bebd3e9f5ef37b80d4f5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga499ff576f1a177986929590f111eabb7"><td class="memItemLeft" align="right" valign="top"><a id="ga499ff576f1a177986929590f111eabb7"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
+<tr class="separator:ga499ff576f1a177986929590f111eabb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fbcf579ee529976b2023c12b96ed6e8"><td class="memItemLeft" align="right" valign="top"><a id="ga3fbcf579ee529976b2023c12b96ed6e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int reg)</td></tr>
+<tr class="separator:ga3fbcf579ee529976b2023c12b96ed6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1b531c1b5890e523c1829320aac7eca"><td class="memItemLeft" align="right" valign="top"><a id="gaa1b531c1b5890e523c1829320aac7eca"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *mode)</td></tr>
+<tr class="separator:gaa1b531c1b5890e523c1829320aac7eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b6068226811df8387cd8d4e84d575f2"><td class="memItemLeft" align="right" valign="top"><a id="ga7b6068226811df8387cd8d4e84d575f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int mode)</td></tr>
+<tr class="separator:ga7b6068226811df8387cd8d4e84d575f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga009a6746e4d985610d093ae7f50d95b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga009a6746e4d985610d093ae7f50d95b1">a_pid_off</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
 <tr class="memdesc:ga009a6746e4d985610d093ae7f50d95b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn off PID controller  <a href="../../d8/da8/group__A__PID.html#ga009a6746e4d985610d093ae7f50d95b1">More...</a><br /></td></tr>
 <tr class="separator:ga009a6746e4d985610d093ae7f50d95b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7699706d2e4c1b95d3a388fac9ec8db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gaa7699706d2e4c1b95d3a388fac9ec8db">a_pid_inc</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
 <tr class="memdesc:gaa7699706d2e4c1b95d3a388fac9ec8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">incremental PID controller  <a href="../../d8/da8/group__A__PID.html#gaa7699706d2e4c1b95d3a388fac9ec8db">More...</a><br /></td></tr>
 <tr class="separator:gaa7699706d2e4c1b95d3a388fac9ec8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe51970f3bfd797f9e68023bbfecbc9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gabe51970f3bfd797f9e68023bbfecbc9b">a_pid_pos</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> max)</td></tr>
-<tr class="memdesc:gabe51970f3bfd797f9e68023bbfecbc9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">positional PID controller  <a href="../../d8/da8/group__A__PID.html#gabe51970f3bfd797f9e68023bbfecbc9b">More...</a><br /></td></tr>
-<tr class="separator:gabe51970f3bfd797f9e68023bbfecbc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0c5d914166a1eedcc207a6bd4b90a4f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga0c5d914166a1eedcc207a6bd4b90a4f0">a_pid_kpid</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> kp, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> ki, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> kd)</td></tr>
-<tr class="memdesc:ga0c5d914166a1eedcc207a6bd4b90a4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <a href="../../d8/da8/group__A__PID.html#ga0c5d914166a1eedcc207a6bd4b90a4f0">More...</a><br /></td></tr>
-<tr class="separator:ga0c5d914166a1eedcc207a6bd4b90a4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad24a5b7fd6d5cc6ec54070cafbe9c8b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gad24a5b7fd6d5cc6ec54070cafbe9c8b9">a_pid_chan</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, a_uint_t num, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *out, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *fdb, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *sum, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *ec, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *e)</td></tr>
-<tr class="memdesc:gad24a5b7fd6d5cc6ec54070cafbe9c8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">set buffer for multichannel PID controller  <a href="../../d8/da8/group__A__PID.html#gad24a5b7fd6d5cc6ec54070cafbe9c8b9">More...</a><br /></td></tr>
-<tr class="separator:gad24a5b7fd6d5cc6ec54070cafbe9c8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae569ecd35614b82c0a3d5611e44fd89c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gae569ecd35614b82c0a3d5611e44fd89c">a_pid_init</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> dt, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> min, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> max)</td></tr>
-<tr class="memdesc:gae569ecd35614b82c0a3d5611e44fd89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize function for PID controller, default is turn off  <a href="../../d8/da8/group__A__PID.html#gae569ecd35614b82c0a3d5611e44fd89c">More...</a><br /></td></tr>
-<tr class="separator:gae569ecd35614b82c0a3d5611e44fd89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga89fda79c110bd45abfd5230a5219c870"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga89fda79c110bd45abfd5230a5219c870">a_pid_outf</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> set, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> fdb)</td></tr>
-<tr class="memdesc:ga89fda79c110bd45abfd5230a5219c870"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for PID controller  <a href="../../d8/da8/group__A__PID.html#ga89fda79c110bd45abfd5230a5219c870">More...</a><br /></td></tr>
-<tr class="separator:ga89fda79c110bd45abfd5230a5219c870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga23778d29c23ade4c5bcafc97ecd0d7bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga23778d29c23ade4c5bcafc97ecd0d7bd">a_pid_outp</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const *set, <a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const *fdb)</td></tr>
-<tr class="memdesc:ga23778d29c23ade4c5bcafc97ecd0d7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for multichannel PID controller  <a href="../../d8/da8/group__A__PID.html#ga23778d29c23ade4c5bcafc97ecd0d7bd">More...</a><br /></td></tr>
-<tr class="separator:ga23778d29c23ade4c5bcafc97ecd0d7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga328fed969c0e197d41cb0d0ee3522d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga328fed969c0e197d41cb0d0ee3522d67">a_pid_pos</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> max)</td></tr>
+<tr class="memdesc:ga328fed969c0e197d41cb0d0ee3522d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">positional PID controller  <a href="../../d8/da8/group__A__PID.html#ga328fed969c0e197d41cb0d0ee3522d67">More...</a><br /></td></tr>
+<tr class="separator:ga328fed969c0e197d41cb0d0ee3522d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga773460a9b305bc3e51a54bb135d03dbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga773460a9b305bc3e51a54bb135d03dbe">a_pid_kpid</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kp, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> ki, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kd)</td></tr>
+<tr class="memdesc:ga773460a9b305bc3e51a54bb135d03dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <a href="../../d8/da8/group__A__PID.html#ga773460a9b305bc3e51a54bb135d03dbe">More...</a><br /></td></tr>
+<tr class="separator:ga773460a9b305bc3e51a54bb135d03dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e3f1f6d1a59df551689d515bb3a98f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga5e3f1f6d1a59df551689d515bb3a98f0">a_pid_chan</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *out, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *fdb, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *sum, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *ec, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *e)</td></tr>
+<tr class="memdesc:ga5e3f1f6d1a59df551689d515bb3a98f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set buffer for multichannel PID controller  <a href="../../d8/da8/group__A__PID.html#ga5e3f1f6d1a59df551689d515bb3a98f0">More...</a><br /></td></tr>
+<tr class="separator:ga5e3f1f6d1a59df551689d515bb3a98f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ff2138b66537e26ce7febc94049f345"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga4ff2138b66537e26ce7febc94049f345">a_pid_init</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> dt, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> min, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> max)</td></tr>
+<tr class="memdesc:ga4ff2138b66537e26ce7febc94049f345"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize function for PID controller, default is turn off  <a href="../../d8/da8/group__A__PID.html#ga4ff2138b66537e26ce7febc94049f345">More...</a><br /></td></tr>
+<tr class="separator:ga4ff2138b66537e26ce7febc94049f345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gac2a0381b1a81b37f5835790a6e80fb7c">a_pid_outf</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> fdb)</td></tr>
+<tr class="memdesc:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for PID controller  <a href="../../d8/da8/group__A__PID.html#gac2a0381b1a81b37f5835790a6e80fb7c">More...</a><br /></td></tr>
+<tr class="separator:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d2ebf117490c0c38926c45246b29bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga4d2ebf117490c0c38926c45246b29bd9">a_pid_outp</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *fdb)</td></tr>
+<tr class="memdesc:ga4d2ebf117490c0c38926c45246b29bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for multichannel PID controller  <a href="../../d8/da8/group__A__PID.html#ga4d2ebf117490c0c38926c45246b29bd9">More...</a><br /></td></tr>
+<tr class="separator:ga4d2ebf117490c0c38926c45246b29bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6c2e1dac00adeea421ba626d22242d17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga6c2e1dac00adeea421ba626d22242d17">a_pid_exit</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
 <tr class="memdesc:ga6c2e1dac00adeea421ba626d22242d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">terminate function for PID controller  <a href="../../d8/da8/group__A__PID.html#ga6c2e1dac00adeea421ba626d22242d17">More...</a><br /></td></tr>
 <tr class="separator:ga6c2e1dac00adeea421ba626d22242d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,8 +257,8 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad24a5b7fd6d5cc6ec54070cafbe9c8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad24a5b7fd6d5cc6ec54070cafbe9c8b9">&#9670;&nbsp;</a></span>a_pid_chan()</h2>
+<a id="ga5e3f1f6d1a59df551689d515bb3a98f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e3f1f6d1a59df551689d515bb3a98f0">&#9670;&nbsp;</a></span>a_pid_chan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,37 +272,37 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">a_uint_t&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>num</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
           <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
           <td class="paramname"><em>fdb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
           <td class="paramname"><em>sum</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
           <td class="paramname"><em>ec</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
           <td class="paramname"><em>e</em>&#160;</td>
         </tr>
         <tr>
@@ -360,8 +381,8 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 
 </div>
 </div>
-<a id="gae569ecd35614b82c0a3d5611e44fd89c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae569ecd35614b82c0a3d5611e44fd89c">&#9670;&nbsp;</a></span>a_pid_init()</h2>
+<a id="ga4ff2138b66537e26ce7febc94049f345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ff2138b66537e26ce7febc94049f345">&#9670;&nbsp;</a></span>a_pid_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,19 +396,19 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>dt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>min</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
@@ -411,8 +432,8 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 
 </div>
 </div>
-<a id="ga0c5d914166a1eedcc207a6bd4b90a4f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0c5d914166a1eedcc207a6bd4b90a4f0">&#9670;&nbsp;</a></span>a_pid_kpid()</h2>
+<a id="ga773460a9b305bc3e51a54bb135d03dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga773460a9b305bc3e51a54bb135d03dbe">&#9670;&nbsp;</a></span>a_pid_kpid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,19 +447,19 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>kp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>ki</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>kd</em>&#160;</td>
         </tr>
         <tr>
@@ -488,14 +509,14 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 
 </div>
 </div>
-<a id="ga89fda79c110bd45abfd5230a5219c870"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89fda79c110bd45abfd5230a5219c870">&#9670;&nbsp;</a></span>a_pid_outf()</h2>
+<a id="gac2a0381b1a81b37f5835790a6e80fb7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2a0381b1a81b37f5835790a6e80fb7c">&#9670;&nbsp;</a></span>a_pid_outf()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> a_pid_outf </td>
+          <td class="memname"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> a_pid_outf </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
@@ -503,13 +524,13 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>set</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>fdb</em>&#160;</td>
         </tr>
         <tr>
@@ -539,14 +560,14 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 
 </div>
 </div>
-<a id="ga23778d29c23ade4c5bcafc97ecd0d7bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23778d29c23ade4c5bcafc97ecd0d7bd">&#9670;&nbsp;</a></span>a_pid_outp()</h2>
+<a id="ga4d2ebf117490c0c38926c45246b29bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d2ebf117490c0c38926c45246b29bd9">&#9670;&nbsp;</a></span>a_pid_outp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const* a_pid_outp </td>
+          <td class="memname"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const* a_pid_outp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
@@ -554,13 +575,13 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td>
           <td class="paramname"><em>set</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a> const *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td>
           <td class="paramname"><em>fdb</em>&#160;</td>
         </tr>
         <tr>
@@ -590,8 +611,8 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
 
 </div>
 </div>
-<a id="gabe51970f3bfd797f9e68023bbfecbc9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabe51970f3bfd797f9e68023bbfecbc9b">&#9670;&nbsp;</a></span>a_pid_pos()</h2>
+<a id="ga328fed969c0e197d41cb0d0ee3522d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga328fed969c0e197d41cb0d0ee3522d67">&#9670;&nbsp;</a></span>a_pid_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,7 +626,7 @@ a_uint_t&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d70/group__A__REAL.html#ga1a57c61b5549a6fe25b31d4c210f25ee">a_real_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td>
           <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>

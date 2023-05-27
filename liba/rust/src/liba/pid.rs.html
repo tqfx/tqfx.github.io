@@ -281,11 +281,18 @@
 <a href="#281" id="281">281</a>
 <a href="#282" id="282">282</a>
 <a href="#283" id="283">283</a>
+<a href="#284" id="284">284</a>
+<a href="#285" id="285">285</a>
+<a href="#286" id="286">286</a>
+<a href="#287" id="287">287</a>
+<a href="#288" id="288">288</a>
+<a href="#289" id="289">289</a>
+<a href="#290" id="290">290</a>
 </pre><pre class="rust"><code><span class="doccomment">//! proportional integral derivative controller
 
-</span><span class="kw">use </span><span class="kw">crate</span>::real;
+</span><span class="kw">use </span><span class="kw">crate</span>::float;
 <span class="kw">use </span><span class="kw">crate</span>::uint;
-<span class="kw">use </span><span class="kw">crate</span>::Real;
+<span class="kw">use </span><span class="kw">crate</span>::Float;
 
 <span class="doccomment">/// turn off PID controller
 </span><span class="kw">pub const </span>OFF: uint = <span class="number">0</span>;
@@ -298,29 +305,29 @@
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>PID {
     <span class="doccomment">/// sampling time unit(s)
-    </span>dt: real,
+    </span>dt: float,
     <span class="doccomment">/// proportional constant
-    </span>kp: real,
+    </span>kp: float,
     <span class="doccomment">/// integral constant
-    </span>ki: real,
+    </span>ki: float,
     <span class="doccomment">/// derivative constant
-    </span>kd: real,
+    </span>kd: float,
     <span class="doccomment">/// controller output
-    </span><span class="kw">pub </span>out: Real,
+    </span><span class="kw">pub </span>out: Float,
     <span class="doccomment">/// (integral) output item sum
-    </span><span class="kw">pub </span>sum: Real,
+    </span><span class="kw">pub </span>sum: Float,
     <span class="doccomment">/// cache feedback
-    </span><span class="kw">pub </span>fdb: Real,
+    </span><span class="kw">pub </span>fdb: Float,
     <span class="doccomment">/// error change
-    </span><span class="kw">pub </span>ec: Real,
+    </span><span class="kw">pub </span>ec: Float,
     <span class="doccomment">/// error input
-    </span><span class="kw">pub </span>e: Real,
+    </span><span class="kw">pub </span>e: Float,
     <span class="doccomment">/// minimum output
-    </span><span class="kw">pub </span>outmin: real,
+    </span><span class="kw">pub </span>outmin: float,
     <span class="doccomment">/// maximum output
-    </span><span class="kw">pub </span>outmax: real,
+    </span><span class="kw">pub </span>outmax: float,
     <span class="doccomment">/// maximum integral output
-    </span><span class="kw">pub </span>summax: real,
+    </span><span class="kw">pub </span>summax: float,
     num: uint,
     reg: uint,
 }
@@ -328,46 +335,46 @@
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_pid_off(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
     <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>PID, max: real) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>PID, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">*mut </span>PID;
+    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>PID, max: float) -&gt; <span class="kw-2">*mut </span>PID;
+    <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>PID, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">*mut </span>PID;
     <span class="kw">fn </span>a_pid_chan(
         ctx: <span class="kw-2">*mut </span>PID,
         num: uint,
-        out: <span class="kw-2">*mut </span>real,
-        fdb: <span class="kw-2">*mut </span>real,
-        sum: <span class="kw-2">*mut </span>real,
-        ec: <span class="kw-2">*mut </span>real,
-        e: <span class="kw-2">*mut </span>real,
+        out: <span class="kw-2">*mut </span>float,
+        fdb: <span class="kw-2">*mut </span>float,
+        sum: <span class="kw-2">*mut </span>float,
+        ec: <span class="kw-2">*mut </span>float,
+        e: <span class="kw-2">*mut </span>float,
     ) -&gt; <span class="kw-2">*mut </span>PID;
-    <span class="kw">fn </span>a_pid_outf(ctx: <span class="kw-2">*mut </span>PID, set: real, fdb: real) -&gt; real;
-    <span class="kw">fn </span>a_pid_outp(ctx: <span class="kw-2">*mut </span>PID, set: <span class="kw-2">*const </span>real, fdb: <span class="kw-2">*const </span>real) -&gt; <span class="kw-2">*const </span>real;
+    <span class="kw">fn </span>a_pid_outf(ctx: <span class="kw-2">*mut </span>PID, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_outp(ctx: <span class="kw-2">*mut </span>PID, set: <span class="kw-2">*const </span>float, fdb: <span class="kw-2">*const </span>float) -&gt; <span class="kw-2">*const </span>float;
     <span class="kw">fn </span>a_pid_zero(ctx: <span class="kw-2">*mut </span>PID) -&gt; <span class="kw-2">*mut </span>PID;
     <span class="kw">fn </span>a_pid_num(ctx: <span class="kw-2">*const </span>PID) -&gt; uint;
-    <span class="kw">fn </span>a_pid_dt(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
-    <span class="kw">fn </span>a_pid_set_dt(ctx: <span class="kw-2">*mut </span>PID, dt: real);
-    <span class="kw">fn </span>a_pid_kp(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
-    <span class="kw">fn </span>a_pid_set_kp(ctx: <span class="kw-2">*mut </span>PID, kp: real);
-    <span class="kw">fn </span>a_pid_ki(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
-    <span class="kw">fn </span>a_pid_set_ki(ctx: <span class="kw-2">*mut </span>PID, ki: real);
-    <span class="kw">fn </span>a_pid_kd(ctx: <span class="kw-2">*const </span>PID) -&gt; real;
-    <span class="kw">fn </span>a_pid_set_kd(ctx: <span class="kw-2">*mut </span>PID, kd: real);
+    <span class="kw">fn </span>a_pid_dt(ctx: <span class="kw-2">*const </span>PID) -&gt; float;
+    <span class="kw">fn </span>a_pid_set_dt(ctx: <span class="kw-2">*mut </span>PID, dt: float);
+    <span class="kw">fn </span>a_pid_kp(ctx: <span class="kw-2">*const </span>PID) -&gt; float;
+    <span class="kw">fn </span>a_pid_set_kp(ctx: <span class="kw-2">*mut </span>PID, kp: float);
+    <span class="kw">fn </span>a_pid_ki(ctx: <span class="kw-2">*const </span>PID) -&gt; float;
+    <span class="kw">fn </span>a_pid_set_ki(ctx: <span class="kw-2">*mut </span>PID, ki: float);
+    <span class="kw">fn </span>a_pid_kd(ctx: <span class="kw-2">*const </span>PID) -&gt; float;
+    <span class="kw">fn </span>a_pid_set_kd(ctx: <span class="kw-2">*mut </span>PID, kd: float);
     <span class="kw">fn </span>a_pid_mode(ctx: <span class="kw-2">*const </span>PID) -&gt; uint;
     <span class="kw">fn </span>a_pid_set_mode(ctx: <span class="kw-2">*mut </span>PID, mode: uint);
 }
 
 <span class="kw">impl </span>PID {
     <span class="doccomment">/// initialize function for PID controller, default is turn off
-    </span><span class="kw">pub fn </span>new(dt: real, outmin: real, outmax: real) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(dt: float, outmin: float, outmax: float) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
-            out: Real { f: <span class="number">0.0 </span>},
-            sum: Real { f: <span class="number">0.0 </span>},
-            fdb: Real { f: <span class="number">0.0 </span>},
-            ec: Real { f: <span class="number">0.0 </span>},
-            e: Real { f: <span class="number">0.0 </span>},
+            out: Float { f: <span class="number">0.0 </span>},
+            sum: Float { f: <span class="number">0.0 </span>},
+            fdb: Float { f: <span class="number">0.0 </span>},
+            ec: Float { f: <span class="number">0.0 </span>},
+            e: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax: <span class="number">0.0</span>,
@@ -378,24 +385,24 @@
 
     <span class="doccomment">/// initialize function for positional PID controller
     </span><span class="kw">pub fn </span>new_pos(
-        dt: real,
-        kp: real,
-        ki: real,
-        kd: real,
-        outmin: real,
-        outmax: real,
-        summax: real,
+        dt: float,
+        kp: float,
+        ki: float,
+        kd: float,
+        outmin: float,
+        outmax: float,
+        summax: float,
     ) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp,
             ki: ki * dt,
             kd: kd / dt,
-            out: Real { f: <span class="number">0.0 </span>},
-            sum: Real { f: <span class="number">0.0 </span>},
-            fdb: Real { f: <span class="number">0.0 </span>},
-            ec: Real { f: <span class="number">0.0 </span>},
-            e: Real { f: <span class="number">0.0 </span>},
+            out: Float { f: <span class="number">0.0 </span>},
+            sum: Float { f: <span class="number">0.0 </span>},
+            fdb: Float { f: <span class="number">0.0 </span>},
+            ec: Float { f: <span class="number">0.0 </span>},
+            e: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax,
@@ -405,17 +412,24 @@
     }
 
     <span class="doccomment">/// initialize function for incremental PID controller
-    </span><span class="kw">pub fn </span>new_inc(dt: real, kp: real, ki: real, kd: real, outmin: real, outmax: real) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new_inc(
+        dt: float,
+        kp: float,
+        ki: float,
+        kd: float,
+        outmin: float,
+        outmax: float,
+    ) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             dt,
             kp,
             ki: ki * dt,
             kd: kd / dt,
-            out: Real { f: <span class="number">0.0 </span>},
-            sum: Real { f: <span class="number">0.0 </span>},
-            fdb: Real { f: <span class="number">0.0 </span>},
-            ec: Real { f: <span class="number">0.0 </span>},
-            e: Real { f: <span class="number">0.0 </span>},
+            out: Float { f: <span class="number">0.0 </span>},
+            sum: Float { f: <span class="number">0.0 </span>},
+            fdb: Float { f: <span class="number">0.0 </span>},
+            ec: Float { f: <span class="number">0.0 </span>},
+            e: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax: <span class="number">0.0</span>,
@@ -435,23 +449,23 @@
     }
 
     <span class="doccomment">/// positional PID controller
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, max: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_pos(<span class="self">self</span>, max).as_mut().unwrap_unchecked() }
     }
 
     <span class="doccomment">/// set proportional integral derivative constant for PID controller
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_kpid(<span class="self">self</span>, kp, ki, kd).as_mut().unwrap_unchecked() }
     }
 
     <span class="doccomment">/// set buffer for multichannel PID controller
     </span><span class="kw">pub fn </span>chan(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        out: <span class="kw-2">&amp;mut </span>[real],
-        fdb: <span class="kw-2">&amp;mut </span>[real],
-        sum: <span class="kw-2">&amp;mut </span>[real],
-        ec: <span class="kw-2">&amp;mut </span>[real],
-        e: <span class="kw-2">&amp;mut </span>[real],
+        out: <span class="kw-2">&amp;mut </span>[float],
+        fdb: <span class="kw-2">&amp;mut </span>[float],
+        sum: <span class="kw-2">&amp;mut </span>[float],
+        ec: <span class="kw-2">&amp;mut </span>[float],
+        e: <span class="kw-2">&amp;mut </span>[float],
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
             a_pid_chan(
@@ -469,11 +483,11 @@
     }
 
     <span class="doccomment">/// calculate function for PID controller
-    </span><span class="kw">pub fn </span>outf(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
+    </span><span class="kw">pub fn </span>outf(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_pid_outf(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate function for multichannel PID controller
-    </span><span class="kw">pub fn </span>outp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: <span class="kw-2">&amp;</span>[real], fdb: <span class="kw-2">&amp;</span>[real]) -&gt; <span class="kw-2">&amp;</span>[real] {
+    </span><span class="kw">pub fn </span>outp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: <span class="kw-2">&amp;</span>[float], fdb: <span class="kw-2">&amp;</span>[float]) -&gt; <span class="kw-2">&amp;</span>[float] {
         <span class="kw">unsafe </span>{
             std::slice::from_raw_parts(
                 a_pid_outp(<span class="self">self</span>, set.as_ptr(), fdb.as_ptr()),
@@ -488,41 +502,41 @@
     }
 
     <span class="doccomment">/// get sampling time unit(s) for PID controller
-    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
+    </span><span class="kw">pub fn </span>dt(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; float {
         <span class="kw">unsafe </span>{ a_pid_dt(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set sampling time unit(s) for PID controller
-    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_dt(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_dt(<span class="self">self</span>, dt) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get proportional constant for PID controller
-    </span><span class="kw">pub fn </span>kp(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
+    </span><span class="kw">pub fn </span>kp(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; float {
         <span class="kw">unsafe </span>{ a_pid_kp(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set proportional constant for PID controller
-    </span><span class="kw">pub fn </span>set_kp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kp(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_kp(<span class="self">self</span>, kp) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get integral constant for PID controller
-    </span><span class="kw">pub fn </span>ki(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
+    </span><span class="kw">pub fn </span>ki(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; float {
         <span class="kw">unsafe </span>{ a_pid_ki(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set integral constant for PID controller
-    </span><span class="kw">pub fn </span>set_ki(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ki: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_ki(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ki: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_ki(<span class="self">self</span>, ki) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get derivative constant for PID controller
-    </span><span class="kw">pub fn </span>kd(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; real {
+    </span><span class="kw">pub fn </span>kd(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; float {
         <span class="kw">unsafe </span>{ a_pid_kd(<span class="self">self</span>) }
     }
     <span class="doccomment">/// set derivative constant for PID controller
-    </span><span class="kw">pub fn </span>set_kd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_kd(<span class="self">self</span>, kd) };
         <span class="self">self
     </span>}
@@ -554,11 +568,11 @@
     <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, a.outf(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.zero();
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>out: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>fdb: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>sum: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>ec: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>e: [real; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>fdb: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>sum: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>ec: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>e: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
         a.chan(<span class="kw-2">&amp;mut </span>out, <span class="kw-2">&amp;mut </span>fdb, <span class="kw-2">&amp;mut </span>sum, <span class="kw-2">&amp;mut </span>ec, <span class="kw-2">&amp;mut </span>e);
         a.outp(<span class="kw-2">&amp;</span>[<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>], <span class="kw-2">&amp;</span>[<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>]);
         <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);

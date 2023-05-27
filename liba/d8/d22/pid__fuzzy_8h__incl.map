@@ -1,0 +1,11 @@
+<map id="pid_fuzzy.h" name="pid_fuzzy.h">
+<area shape="rect" id="node1" title="fuzzy proportional integral derivative controller" alt="" coords="139,5,234,32"/>
+<area shape="rect" id="node2" href="$d6/dea/mf_8h.html" title="membership function" alt="" coords="84,80,135,107"/>
+<area shape="rect" id="node8" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="159,80,214,107"/>
+<area shape="rect" id="node9" href="$df/d2a/fuzzy_8h.html" title="fuzzy operator" alt="" coords="239,80,305,107"/>
+<area shape="rect" id="node3" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,155,208,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,80,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="105,229,175,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="199,229,270,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="294,229,357,256"/>
+</map>

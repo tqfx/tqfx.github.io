@@ -228,12 +228,97 @@ $(function() {
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#define a_f64_acosh A_F64_F(acosh)</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#define a_f64_atanh A_F64_F(atanh)</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* math.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga767a9ebfacc9c7540aa8684605d52d3e">  205</a></span>&#160;<span class="preprocessor">#define A_FLOAT_E A_FLOAT_C(2.71828182845904523536)</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga7f7efad331bcef557b07c8a289b58332">  207</a></span>&#160;<span class="preprocessor">#define A_FLOAT_LOG2E A_FLOAT_C(1.44269504088896340736)</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gadedaca651b165bbd5e5369909bb43766">  209</a></span>&#160;<span class="preprocessor">#define A_FLOAT_LOG10E A_FLOAT_C(0.434294481903251827651)</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gab46466debada98beebb3b16a4c88d941">  211</a></span>&#160;<span class="preprocessor">#define A_FLOAT_LN2 A_FLOAT_C(0.693147180559945309417)</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gac6680c04037cde863ed563aafdfd5ca8">  213</a></span>&#160;<span class="preprocessor">#define A_FLOAT_LN10 A_FLOAT_C(2.30258509299404568402)</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga21d946db17605a064660abb8f1f23d69">  215</a></span>&#160;<span class="preprocessor">#define A_FLOAT_PI A_FLOAT_C(3.14159265358979323846)</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga6cb0fb15221f7c4a0b1c98ec03aa2b75">  217</a></span>&#160;<span class="preprocessor">#define A_FLOAT_PI_2 A_FLOAT_C(1.57079632679489661923)</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga8796e589a949df8f8c63c1819d095360">  219</a></span>&#160;<span class="preprocessor">#define A_FLOAT_PI_4 A_FLOAT_C(0.785398163397448309616)</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga07cf621e7e90745b6d50cc338a766964">  221</a></span>&#160;<span class="preprocessor">#define A_FLOAT_1_PI A_FLOAT_C(0.318309886183790671538)</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gadaadaf3847e79b6e89f5c6b41128c3c7">  223</a></span>&#160;<span class="preprocessor">#define A_FLOAT_2_PI A_FLOAT_C(0.636619772367581343076)</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gab7898e0f4546e22333911454f06fe89d">  225</a></span>&#160;<span class="preprocessor">#define A_FLOAT_2_SQRTPI A_FLOAT_C(1.12837916709551257390)</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga6ce52c750445c2c199ab111d0741229a">  227</a></span>&#160;<span class="preprocessor">#define A_FLOAT_SQRT2 A_FLOAT_C(1.41421356237309504880)</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#gaa1dbb00170ac43d94dfd2616d2f0062f">  229</a></span>&#160;<span class="preprocessor">#define A_FLOAT_SQRT1_2 A_FLOAT_C(0.707106781186547524401)</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;A_EXTERN <a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> a_float_log1p(<a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> x);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;A_EXTERN <a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> a_float_hypot(<a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> x, <a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> y);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;A_EXTERN <a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> a_float_atan2(<a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> x, <a class="code" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> y);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;} <span class="comment">/* extern &quot;C&quot; */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#define a_float_fpclassify A_FLOAT_F(fpclassify)</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#define a_float_copysign A_FLOAT_F(copysign)</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#define a_float_isfinite A_FLOAT_F(isfinite)</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#define a_float_isnormal A_FLOAT_F(isnormal)</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#define a_float_signbit A_FLOAT_F(signbit)</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#define a_float_isinf A_FLOAT_F(isinf)</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#define a_float_isnan A_FLOAT_F(isnan)</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#define a_float_islt A_FLOAT_F(isless)</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#define a_float_isle A_FLOAT_F(islessequal)</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#define a_float_isgt A_FLOAT_F(isgreater)</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#define a_float_isge A_FLOAT_F(isgreaterequal)</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#define a_float_islg A_FLOAT_F(islessgreater)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#define a_float_isun A_FLOAT_F(isunordered)</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#define a_float_ma A_FLOAT_F(fma)</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#define a_float_nan A_FLOAT_F(nan)</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#define a_float_abs A_FLOAT_F(fabs)</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#define a_float_mod A_FLOAT_F(fmod)</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#define a_float_max A_FLOAT_F(fmax)</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#define a_float_min A_FLOAT_F(fmin)</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#define a_float_dim A_FLOAT_F(fdim)</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">#define a_float_exp A_FLOAT_F(exp)</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#define a_float_exp2 A_FLOAT_F(exp2)</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#define a_float_expm1 A_FLOAT_F(expm1)</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#define a_float_log A_FLOAT_F(log)</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#define a_float_logb A_FLOAT_F(logb)</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#define a_float_log2 A_FLOAT_F(log2)</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#define a_float_log10 A_FLOAT_F(log10)</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#if defined(A_HAVE_LOG1P) &amp;&amp; (A_HAVE_LOG1P + 0 &gt; 0)</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#define a_float_log1p A_FLOAT_F(log1p)</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_LOG1P */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">#define a_float_pow A_FLOAT_F(pow)</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#define a_float_sqrt A_FLOAT_F(sqrt)</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#define a_float_cbrt A_FLOAT_F(cbrt)</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#if defined(A_HAVE_HYPOT) &amp;&amp; (A_HAVE_HYPOT + 0 &gt; 0)</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#define a_float_hypot A_FLOAT_F(hypot)</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_HYPOT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#define a_float_sin A_FLOAT_F(sin)</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#define a_float_cos A_FLOAT_F(cos)</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">#define a_float_tan A_FLOAT_F(tan)</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#define a_float_asin A_FLOAT_F(asin)</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#define a_float_acos A_FLOAT_F(acos)</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">#define a_float_atan A_FLOAT_F(atan)</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#if defined(A_HAVE_ATAN2) &amp;&amp; (A_HAVE_ATAN2 + 0 &gt; 0)</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#define a_float_atan2 A_FLOAT_F(atan2)</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_ATAN2 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#define a_float_sinh A_FLOAT_F(sinh)</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#define a_float_cosh A_FLOAT_F(cosh)</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#define a_float_tanh A_FLOAT_F(tanh)</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">#define a_float_asinh A_FLOAT_F(asinh)</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#define a_float_acosh A_FLOAT_F(acosh)</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#define a_float_atanh A_FLOAT_F(atanh)</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* math.h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__A__FLOAT_html_ga153ee92531fb33699248c4cabffb4219"><div class="ttname"><a href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a></div><div class="ttdeci">#define a_float_t</div><div class="ttdef"><b>Definition:</b> a.h:798</div></div>
 <div class="ttc" id="agroup__A__MATH_html_ga560857d0ebbd7ebe6a86f7bf5f9f37f5"><div class="ttname"><a href="../../d1/d82/group__A__MATH.html#ga560857d0ebbd7ebe6a86f7bf5f9f37f5">a_f32_rsqrt</a></div><div class="ttdeci">a_f32_t a_f32_rsqrt(a_f32_t x)</div><div class="ttdoc">fast inverse square-root,</div></div>
-<div class="ttc" id="agroup__A_html_ga04136a06392b5cf66f3a8b678b3ce350"><div class="ttname"><a href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a></div><div class="ttdeci">#define a_u64_t</div><div class="ttdef"><b>Definition:</b> a.h:651</div></div>
-<div class="ttc" id="agroup__A_html_ga29352a189b9c745014ad0b0dfc79c0cb"><div class="ttname"><a href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a></div><div class="ttdeci">#define a_f64_t</div><div class="ttdef"><b>Definition:</b> a.h:817</div></div>
-<div class="ttc" id="agroup__A_html_ga8d50f180ce7dbe5682ab90e01dd9fdf4"><div class="ttname"><a href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a></div><div class="ttdeci">#define a_f32_t</div><div class="ttdef"><b>Definition:</b> a.h:782</div></div>
-<div class="ttc" id="agroup__A_html_gaf1750ccfa763fcb254c1337d6b7e95b8"><div class="ttname"><a href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a></div><div class="ttdeci">#define a_u32_t</div><div class="ttdef"><b>Definition:</b> a.h:617</div></div>
+<div class="ttc" id="agroup__A_html_ga04136a06392b5cf66f3a8b678b3ce350"><div class="ttname"><a href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a></div><div class="ttdeci">#define a_u64_t</div><div class="ttdef"><b>Definition:</b> a.h:515</div></div>
+<div class="ttc" id="agroup__A_html_ga29352a189b9c745014ad0b0dfc79c0cb"><div class="ttname"><a href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a></div><div class="ttdeci">#define a_f64_t</div><div class="ttdef"><b>Definition:</b> a.h:667</div></div>
+<div class="ttc" id="agroup__A_html_ga8d50f180ce7dbe5682ab90e01dd9fdf4"><div class="ttname"><a href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a></div><div class="ttdeci">#define a_f32_t</div><div class="ttdef"><b>Definition:</b> a.h:634</div></div>
+<div class="ttc" id="agroup__A_html_gaf1750ccfa763fcb254c1337d6b7e95b8"><div class="ttname"><a href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a></div><div class="ttdeci">#define a_u32_t</div><div class="ttdef"><b>Definition:</b> a.h:484</div></div>
 <div class="ttc" id="ahost_2a_8h_html"><div class="ttname"><a href="../../d0/d97/host_2a_8h.html">a.h</a></div><div class="ttdoc">algorithm library on host</div></div>
 <div class="ttc" id="amath_8h_html"><div class="ttname"><a href="../../df/db1/math_8h.html">math.h</a></div><div class="ttdoc">mathematical algorithm library</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -85,59 +85,59 @@
 <a href="#85" id="85">85</a>
 </pre><pre class="rust"><code><span class="doccomment">//! membership function
 
-</span><span class="kw">use </span><span class="kw">crate</span>::real;
+</span><span class="kw">use </span><span class="kw">crate</span>::float;
 
 <span class="doccomment">/// none
-</span><span class="kw">pub const </span>NUL: real = <span class="number">0.0</span>;
+</span><span class="kw">pub const </span>NUL: float = <span class="number">0.0</span>;
 <span class="doccomment">/// gaussian membership function
-</span><span class="kw">pub const </span>GAUSS: real = <span class="number">1.0</span>;
+</span><span class="kw">pub const </span>GAUSS: float = <span class="number">1.0</span>;
 <span class="doccomment">/// generalized bell-shaped membership function
-</span><span class="kw">pub const </span>GBELL: real = <span class="number">2.0</span>;
+</span><span class="kw">pub const </span>GBELL: float = <span class="number">2.0</span>;
 <span class="doccomment">/// sigmoidal membership function
-</span><span class="kw">pub const </span>SIG: real = <span class="number">3.0</span>;
+</span><span class="kw">pub const </span>SIG: float = <span class="number">3.0</span>;
 <span class="doccomment">/// trapezoidal membership function
-</span><span class="kw">pub const </span>TRAP: real = <span class="number">4.0</span>;
+</span><span class="kw">pub const </span>TRAP: float = <span class="number">4.0</span>;
 <span class="doccomment">/// triangular membership function
-</span><span class="kw">pub const </span>TRI: real = <span class="number">5.0</span>;
+</span><span class="kw">pub const </span>TRI: float = <span class="number">5.0</span>;
 <span class="doccomment">/// z-shaped membership function
-</span><span class="kw">pub const </span>Z: real = <span class="number">6.0</span>;
+</span><span class="kw">pub const </span>Z: float = <span class="number">6.0</span>;
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_mf_gauss(x: real, sigma: real, c: real) -&gt; real;
-    <span class="kw">fn </span>a_mf_gbell(x: real, a: real, b: real, c: real) -&gt; real;
-    <span class="kw">fn </span>a_mf_sig(x: real, a: real, c: real) -&gt; real;
-    <span class="kw">fn </span>a_mf_trap(x: real, a: real, b: real, c: real, d: real) -&gt; real;
-    <span class="kw">fn </span>a_mf_tri(x: real, a: real, b: real, c: real) -&gt; real;
-    <span class="kw">fn </span>a_mf_z(x: real, a: real, b: real) -&gt; real;
+    <span class="kw">fn </span>a_mf_gauss(x: float, sigma: float, c: float) -&gt; float;
+    <span class="kw">fn </span>a_mf_gbell(x: float, a: float, b: float, c: float) -&gt; float;
+    <span class="kw">fn </span>a_mf_sig(x: float, a: float, c: float) -&gt; float;
+    <span class="kw">fn </span>a_mf_trap(x: float, a: float, b: float, c: float, d: float) -&gt; float;
+    <span class="kw">fn </span>a_mf_tri(x: float, a: float, b: float, c: float) -&gt; float;
+    <span class="kw">fn </span>a_mf_z(x: float, a: float, b: float) -&gt; float;
 }
 
 <span class="doccomment">/// gaussian membership function
-</span><span class="kw">pub fn </span>gauss(x: real, sigma: real, c: real) -&gt; real {
+</span><span class="kw">pub fn </span>gauss(x: float, sigma: float, c: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_gauss(x, sigma, c) }
 }
 
 <span class="doccomment">/// generalized bell-shaped membership function
-</span><span class="kw">pub fn </span>gbell(x: real, a: real, b: real, c: real) -&gt; real {
+</span><span class="kw">pub fn </span>gbell(x: float, a: float, b: float, c: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_gbell(x, a, b, c) }
 }
 
 <span class="doccomment">/// sigmoidal membership function
-</span><span class="kw">pub fn </span>sig(x: real, a: real, c: real) -&gt; real {
+</span><span class="kw">pub fn </span>sig(x: float, a: float, c: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_sig(x, a, c) }
 }
 
 <span class="doccomment">/// trapezoidal membership function
-</span><span class="kw">pub fn </span>trap(x: real, a: real, b: real, c: real, d: real) -&gt; real {
+</span><span class="kw">pub fn </span>trap(x: float, a: float, b: float, c: float, d: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_trap(x, a, b, c, d) }
 }
 
 <span class="doccomment">/// triangular membership function
-</span><span class="kw">pub fn </span>tri(x: real, a: real, b: real, c: real) -&gt; real {
+</span><span class="kw">pub fn </span>tri(x: float, a: float, b: float, c: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_tri(x, a, b, c) }
 }
 
 <span class="doccomment">/// z-shaped membership function
-</span><span class="kw">pub fn </span>z(x: real, a: real, b: real) -&gt; real {
+</span><span class="kw">pub fn </span>z(x: float, a: float, b: float) -&gt; float {
     <span class="kw">unsafe </span>{ a_mf_z(x, a, b) }
 }
 

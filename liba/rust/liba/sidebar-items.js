@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["f32_rsqrt","f64_rsqrt","version","version_major","version_minor","version_patch"],"mod":["fpid","mf","pid","polytrack","tf"],"type":["real","uint"],"union":["Real"]};
+window.SIDEBAR_ITEMS = {"fn":["f32_rsqrt","f64_rsqrt","version","version_major","version_minor","version_patch"],"mod":["mf","pid","pid_fuzzy","polytrack","tf"],"type":["float","uint"],"union":["Float"]};
