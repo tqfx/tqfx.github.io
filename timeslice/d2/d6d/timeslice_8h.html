@@ -102,12 +102,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  type,  member)&#160;&#160;&#160;((type *)((char *)(ptr)-offsetof(type, member)))</td></tr>
 <tr class="memdesc:a26c976b7f654e70df318c1843e5094de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the struct for this entry.  <a href="../../d2/d6d/timeslice_8h.html#a26c976b7f654e70df318c1843e5094de">More...</a><br /></td></tr>
 <tr class="separator:a26c976b7f654e70df318c1843e5094de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a616e2a4d96ad19cef0614e272375a3e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a616e2a4d96ad19cef0614e272375a3e2">list_foreach</a>(ptr,  ctx)&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;next; (ptr) != (ctx); (ptr) = (ptr)-&gt;next)</td></tr>
-<tr class="memdesc:a616e2a4d96ad19cef0614e272375a3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list.  <a href="../../d2/d6d/timeslice_8h.html#a616e2a4d96ad19cef0614e272375a3e2">More...</a><br /></td></tr>
-<tr class="separator:a616e2a4d96ad19cef0614e272375a3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a385116ec651fc64b7784cea578054048"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a385116ec651fc64b7784cea578054048">list_forsafe</a>(ptr,  pre,  ctx)</td></tr>
-<tr class="memdesc:a385116ec651fc64b7784cea578054048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list safe against removal of list entry.  <a href="../../d2/d6d/timeslice_8h.html#a385116ec651fc64b7784cea578054048">More...</a><br /></td></tr>
-<tr class="separator:a385116ec651fc64b7784cea578054048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4ffa512a36fadb87c0937f8c2d69af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a0e4ffa512a36fadb87c0937f8c2d69af">list_foreach</a>(it,  ctx)&#160;&#160;&#160;    for (<a class="el" href="../../d6/df5/structlist__s.html">list_s</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td></tr>
+<tr class="memdesc:a0e4ffa512a36fadb87c0937f8c2d69af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list.  <a href="../../d2/d6d/timeslice_8h.html#a0e4ffa512a36fadb87c0937f8c2d69af">More...</a><br /></td></tr>
+<tr class="separator:a0e4ffa512a36fadb87c0937f8c2d69af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424b94030998e9a54906b03405f2491b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/timeslice_8h.html#a424b94030998e9a54906b03405f2491b">list_forsafe</a>(it,  at,  ctx)</td></tr>
+<tr class="memdesc:a424b94030998e9a54906b03405f2491b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list safe against removal of list entry.  <a href="../../d2/d6d/timeslice_8h.html#a424b94030998e9a54906b03405f2491b">More...</a><br /></td></tr>
+<tr class="separator:a424b94030998e9a54906b03405f2491b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8293ac8da4313846f53c5a34f13a1375"><td class="memItemLeft" align="right" valign="top"><a id="a8293ac8da4313846f53c5a34f13a1375"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>timeslice</b>()&#160;&#160;&#160;for (<a class="el" href="../../d2/d6d/timeslice_8h.html#af1aba1fc922b143ee1b243849c458f21">timeslice_init</a>();; <a class="el" href="../../d2/d6d/timeslice_8h.html#a4ff09fea541c1904b457fb04669b5f61">timeslice_exec</a>())</td></tr>
 <tr class="separator:a8293ac8da4313846f53c5a34f13a1375"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,8 +221,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 </div>
 </div>
-<a id="a616e2a4d96ad19cef0614e272375a3e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a616e2a4d96ad19cef0614e272375a3e2">&#9670;&nbsp;</a></span>list_foreach</h2>
+<a id="a0e4ffa512a36fadb87c0937f8c2d69af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4ffa512a36fadb87c0937f8c2d69af">&#9670;&nbsp;</a></span>list_foreach</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +231,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
           <td class="memname">#define list_foreach</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr, </td>
+          <td class="paramname">it, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,7 +242,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    for ((ptr) = (ctx)-&gt;next; (ptr) != (ctx); (ptr) = (ptr)-&gt;next)</td>
+          <td></td><td>&#160;&#160;&#160;    for (<a class="el" href="../../d6/df5/structlist__s.html">list_s</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,7 +250,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <p>Iterate over a list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
   </table>
   </dd>
@@ -258,8 +258,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 </div>
 </div>
-<a id="a385116ec651fc64b7784cea578054048"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a385116ec651fc64b7784cea578054048">&#9670;&nbsp;</a></span>list_forsafe</h2>
+<a id="a424b94030998e9a54906b03405f2491b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424b94030998e9a54906b03405f2491b">&#9670;&nbsp;</a></span>list_forsafe</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,13 +268,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
           <td class="memname">#define list_forsafe</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr, </td>
+          <td class="paramname">it, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">pre, </td>
+          <td class="paramname">at, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -289,15 +289,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> ((ptr) = (ctx)-&gt;next, (pre) = (ptr)-&gt;next; \</div>
-<div class="line">         (ptr) != (ctx) &amp;&amp; (ptr) != (ptr)-&gt;next;   \</div>
-<div class="line">         (ptr) = (pre), (pre) = (ptr)-&gt;next)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *it = (ctx)-&gt;next, *at = it-&gt;next; \</div>
+<div class="line">         it != (ctx) &amp;&amp; it != it-&gt;next;            \</div>
+<div class="line">         it = at, at = it-&gt;next)</div>
+<div class="ttc" id="astructlist__s_html"><div class="ttname"><a href="../../d6/df5/structlist__s.html">list_s</a></div><div class="ttdoc">Instance structure for circular doubly linked list.</div><div class="ttdef"><b>Definition:</b> timeslice.h:19</div></div>
 </div><!-- fragment -->
 <p>Iterate over a list safe against removal of list entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as a loop counter </td></tr>
-    <tr><td class="paramname">pre</td><td>another &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as temporary storage </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">at</td><td>another &amp;<a class="el" href="../../d6/df5/structlist__s.html" title="Instance structure for circular doubly linked list.">list_s</a> to use as temporary storage </td></tr>
     <tr><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
   </table>
   </dd>
