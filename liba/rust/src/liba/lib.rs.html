@@ -176,18 +176,18 @@ println!(&quot;version {}&quot;, liba::version());
 }
 
 <span class="doccomment">/// algorithm library version major
-</span><span class="kw">pub fn </span>version_major() -&gt; u32 {
-    <span class="kw">unsafe </span>{ a_version_major() <span class="kw">as </span>u32 }
+</span><span class="kw">pub fn </span>version_major() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_major() }
 }
 
 <span class="doccomment">/// algorithm library version minor
-</span><span class="kw">pub fn </span>version_minor() -&gt; u32 {
-    <span class="kw">unsafe </span>{ a_version_minor() <span class="kw">as </span>u32 }
+</span><span class="kw">pub fn </span>version_minor() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_minor() }
 }
 
 <span class="doccomment">/// algorithm library version patch
-</span><span class="kw">pub fn </span>version_patch() -&gt; u32 {
-    <span class="kw">unsafe </span>{ a_version_patch() <span class="kw">as </span>u32 }
+</span><span class="kw">pub fn </span>version_patch() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_patch() }
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{

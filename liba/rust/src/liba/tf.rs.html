@@ -190,8 +190,8 @@
     }
 
     <span class="doccomment">/// get input for transfer function
-    </span><span class="kw">pub fn </span>u(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts_mut(<span class="self">self</span>.u, <span class="self">self</span>.m <span class="kw">as </span>usize) }
+    </span><span class="kw">pub fn </span>u(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.u, <span class="self">self</span>.m <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// get numerator for transfer function
@@ -206,8 +206,8 @@
     </span>}
 
     <span class="doccomment">/// get output for transfer function
-    </span><span class="kw">pub fn </span>v(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts_mut(<span class="self">self</span>.v, <span class="self">self</span>.n <span class="kw">as </span>usize) }
+    </span><span class="kw">pub fn </span>v(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.v, <span class="self">self</span>.n <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// get denominator for transfer function
