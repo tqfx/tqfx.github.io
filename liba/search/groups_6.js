@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['object_20oriented_20programming_1517',['Object Oriented Programming',['../df/db1/group__A__OOP.html',1,'']]]
+  ['mathematical_20algorithm_20library_1550',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
+  ['membership_20function_1551',['membership function',['../dd/d37/group__A__MF.html',1,'']]]
 ];

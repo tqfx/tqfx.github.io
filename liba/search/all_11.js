@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tf_2eh_980',['tf.h',['../d2/d16/tf_8h.html',1,'']]],
-  ['transfer_20function_981',['transfer function',['../d0/ddd/group__A__TF.html',1,'']]]
+  ['slist_2eh_991',['slist.h',['../d1/dad/slist_8h.html',1,'']]],
+  ['str_2eh_992',['str.h',['../d1/d93/str_8h.html',1,'']]],
+  ['sum_993',['sum',['../de/def/structa__pid__s.html#a23a4ba4e071aefb8600ff32c9d926305',1,'a_pid_s']]],
+  ['summax_994',['summax',['../de/def/structa__pid__s.html#a95c60908839d85b23786e984f454321e',1,'a_pid_s']]]
 ];

@@ -1,3 +1,5 @@
 <map id="math.h" name="math.h">
-<area shape="rect" id="node1" title="mathematical algorithm library" alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node1" title="mathematical algorithm library" alt="" coords="37,6,105,33"/>
+<area shape="rect" id="node2" href="$d1/df9/hpf_8h.html" title="High Pass Filter." alt="" coords="5,81,60,107"/>
+<area shape="rect" id="node3" href="$db/d80/lpf_8h.html" title="Low Pass Filter." alt="" coords="85,81,135,107"/>
 </map>
