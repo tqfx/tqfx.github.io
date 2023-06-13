@@ -1,8 +1,14 @@
 <map id="math.h" name="math.h">
-<area shape="rect" id="node1" title="mathematical algorithm library" alt="" coords="153,7,221,33"/>
-<area shape="rect" id="node2" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,81,208,108"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,156,80,183"/>
-<area shape="rect" id="node4" title=" " alt="" coords="105,156,175,183"/>
-<area shape="rect" id="node5" title=" " alt="" coords="199,156,270,183"/>
-<area shape="rect" id="node6" title=" " alt="" coords="294,156,357,183"/>
+<area shape="rect" id="Node000001" title="mathematical algorithm library" alt="" coords="153,7,221,32"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="214,4,236,5,244,11,247,20,242,31,228,35,227,30,238,27,242,19,240,14,234,10,214,9"/>
+<area shape="rect" id="Node000002" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,80,208,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,32,189,67,184,67,184,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,80,179"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,107,79,150,77,145,164,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,153,175,179"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="181,107,157,143,153,140,177,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="199,153,270,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="197,104,222,141,217,144,192,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="294,153,357,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="210,103,292,145,290,150,207,107"/>
 </map>

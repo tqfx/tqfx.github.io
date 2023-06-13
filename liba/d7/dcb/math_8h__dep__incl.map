@@ -1,5 +1,8 @@
 <map id="math.h" name="math.h">
-<area shape="rect" id="node1" title="mathematical algorithm library" alt="" coords="37,6,105,33"/>
-<area shape="rect" id="node2" href="$d1/df9/hpf_8h.html" title="High Pass Filter." alt="" coords="5,81,60,107"/>
-<area shape="rect" id="node3" href="$db/d80/lpf_8h.html" title="Low Pass Filter." alt="" coords="85,81,135,107"/>
+<area shape="rect" id="Node000001" title="mathematical algorithm library" alt="" coords="37,6,105,31"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="113,3,126,7,132,18,129,27,121,33,99,34,99,29,119,28,125,24,127,19,123,11,111,8"/>
+<area shape="rect" id="Node000002" href="$d1/df9/hpf_8h.html" title="High Pass Filter." alt="" coords="5,79,60,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,45,41,80,37,78,56,42"/>
+<area shape="rect" id="Node000003" href="$db/d80/lpf_8h.html" title="Low Pass Filter." alt="" coords="85,79,135,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,42,106,78,101,80,82,45"/>
 </map>

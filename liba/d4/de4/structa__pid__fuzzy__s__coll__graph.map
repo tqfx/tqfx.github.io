@@ -1,5 +1,7 @@
 <map id="a_pid_fuzzy_s" name="a_pid_fuzzy_s">
-<area shape="rect" id="node1" title="instance structure for fuzzy PID controller" alt="" coords="5,243,119,269"/>
-<area shape="rect" id="node2" href="$de/def/structa__pid__s.html" title="instance structure for PID controller" alt="" coords="27,153,97,180"/>
-<area shape="rect" id="node3" href="$d2/d53/uniona__float__u.html" title=" " alt="" coords="21,5,103,32"/>
+<area shape="rect" id="Node000001" title="instance structure for fuzzy PID controller" alt="" coords="5,225,119,251"/>
+<area shape="rect" id="Node000002" href="$de/def/structa__pid__s.html" title="instance structure for PID controller" alt="" coords="27,137,97,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,177,65,225,59,225,59,177"/>
+<area shape="rect" id="Node000003" href="$d2/d53/uniona__float__u.html" title=" " alt="" coords="21,5,103,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="65,44,65,137,59,137,59,44"/>
 </map>

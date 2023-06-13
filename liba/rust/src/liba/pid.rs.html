@@ -279,15 +279,6 @@
 <a href="#279" id="279">279</a>
 <a href="#280" id="280">280</a>
 <a href="#281" id="281">281</a>
-<a href="#282" id="282">282</a>
-<a href="#283" id="283">283</a>
-<a href="#284" id="284">284</a>
-<a href="#285" id="285">285</a>
-<a href="#286" id="286">286</a>
-<a href="#287" id="287">287</a>
-<a href="#288" id="288">288</a>
-<a href="#289" id="289">289</a>
-<a href="#290" id="290">290</a>
 </pre><pre class="rust"><code><span class="doccomment">//! proportional integral derivative controller
 
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
@@ -314,14 +305,12 @@
     </span>kd: float,
     <span class="doccomment">/// controller output
     </span><span class="kw">pub </span>out: Float,
-    <span class="doccomment">/// (integral) output item sum
-    </span><span class="kw">pub </span>sum: Float,
     <span class="doccomment">/// cache feedback
     </span><span class="kw">pub </span>fdb: Float,
-    <span class="doccomment">/// error change
-    </span><span class="kw">pub </span>ec: Float,
-    <span class="doccomment">/// error input
-    </span><span class="kw">pub </span>e: Float,
+    <span class="doccomment">/// cache variable
+    </span>tmp: Float,
+    <span class="doccomment">/// cache error
+    </span><span class="kw">pub </span>err: Float,
     <span class="doccomment">/// minimum output
     </span><span class="kw">pub </span>outmin: float,
     <span class="doccomment">/// maximum output
@@ -342,9 +331,8 @@
         num: uint,
         out: <span class="kw-2">*mut </span>float,
         fdb: <span class="kw-2">*mut </span>float,
-        sum: <span class="kw-2">*mut </span>float,
-        ec: <span class="kw-2">*mut </span>float,
-        e: <span class="kw-2">*mut </span>float,
+        tmp: <span class="kw-2">*mut </span>float,
+        err: <span class="kw-2">*mut </span>float,
     ) -&gt; <span class="kw-2">*mut </span>PID;
     <span class="kw">fn </span>a_pid_outf(ctx: <span class="kw-2">*mut </span>PID, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_outp(ctx: <span class="kw-2">*mut </span>PID, set: <span class="kw-2">*const </span>float, fdb: <span class="kw-2">*const </span>float) -&gt; <span class="kw-2">*const </span>float;
@@ -371,10 +359,9 @@
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
             out: Float { f: <span class="number">0.0 </span>},
-            sum: Float { f: <span class="number">0.0 </span>},
             fdb: Float { f: <span class="number">0.0 </span>},
-            ec: Float { f: <span class="number">0.0 </span>},
-            e: Float { f: <span class="number">0.0 </span>},
+            tmp: Float { f: <span class="number">0.0 </span>},
+            err: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax: <span class="number">0.0</span>,
@@ -399,10 +386,9 @@
             ki: ki * dt,
             kd: kd / dt,
             out: Float { f: <span class="number">0.0 </span>},
-            sum: Float { f: <span class="number">0.0 </span>},
             fdb: Float { f: <span class="number">0.0 </span>},
-            ec: Float { f: <span class="number">0.0 </span>},
-            e: Float { f: <span class="number">0.0 </span>},
+            tmp: Float { f: <span class="number">0.0 </span>},
+            err: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax,
@@ -426,10 +412,9 @@
             ki: ki * dt,
             kd: kd / dt,
             out: Float { f: <span class="number">0.0 </span>},
-            sum: Float { f: <span class="number">0.0 </span>},
             fdb: Float { f: <span class="number">0.0 </span>},
-            ec: Float { f: <span class="number">0.0 </span>},
-            e: Float { f: <span class="number">0.0 </span>},
+            tmp: Float { f: <span class="number">0.0 </span>},
+            err: Float { f: <span class="number">0.0 </span>},
             outmin,
             outmax,
             summax: <span class="number">0.0</span>,
@@ -463,9 +448,8 @@
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         out: <span class="kw-2">&amp;mut </span>[float],
         fdb: <span class="kw-2">&amp;mut </span>[float],
-        sum: <span class="kw-2">&amp;mut </span>[float],
-        ec: <span class="kw-2">&amp;mut </span>[float],
-        e: <span class="kw-2">&amp;mut </span>[float],
+        tmp: <span class="kw-2">&amp;mut </span>[float],
+        err: <span class="kw-2">&amp;mut </span>[float],
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
             a_pid_chan(
@@ -473,9 +457,8 @@
                 out.len() <span class="kw">as </span>uint,
                 out.as_mut_ptr(),
                 fdb.as_mut_ptr(),
-                sum.as_mut_ptr(),
-                ec.as_mut_ptr(),
-                e.as_mut_ptr(),
+                tmp.as_mut_ptr(),
+                err.as_mut_ptr(),
             )
             .as_mut()
             .unwrap_unchecked()
@@ -570,10 +553,9 @@
     {
         <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
         <span class="kw">let </span><span class="kw-2">mut </span>fdb: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>sum: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>ec: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        <span class="kw">let </span><span class="kw-2">mut </span>e: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
-        a.chan(<span class="kw-2">&amp;mut </span>out, <span class="kw-2">&amp;mut </span>fdb, <span class="kw-2">&amp;mut </span>sum, <span class="kw-2">&amp;mut </span>ec, <span class="kw-2">&amp;mut </span>e);
+        <span class="kw">let </span><span class="kw-2">mut </span>tmp: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        <span class="kw">let </span><span class="kw-2">mut </span>err: [float; <span class="number">4</span>] = [<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>];
+        a.chan(<span class="kw-2">&amp;mut </span>out, <span class="kw-2">&amp;mut </span>fdb, <span class="kw-2">&amp;mut </span>tmp, <span class="kw-2">&amp;mut </span>err);
         a.outp(<span class="kw-2">&amp;</span>[<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>], <span class="kw-2">&amp;</span>[<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>]);
         <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);
     }
