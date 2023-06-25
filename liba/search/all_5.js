@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['err_0',['err',['../de/def/structa__pid__s.html#a7c1ad8cd4cd2319ffad23791b55f2f08',1,'a_pid_s']]]
+  ['ec_0',['ec',['../d0/d04/structa__pid__expert__s.html#a1dcce3ce7806be209631afed1af9cc70',1,'a_pid_expert_s']]],
+  ['epsilon_1',['epsilon',['../d0/d04/structa__pid__expert__s.html#a57ed6567a0b71362eb51a691b4158282',1,'a_pid_expert_s']]],
+  ['err_2',['err',['../de/def/structa__pid__s.html#a7c1ad8cd4cd2319ffad23791b55f2f08',1,'a_pid_s']]],
+  ['expert_20proportional_20integral_20derivative_20controller_3',['expert proportional integral derivative controller',['../df/db4/group__A__PID__EXPERT.html',1,'']]]
 ];

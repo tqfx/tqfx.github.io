@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["INIT16","INIT32","INIT64","INIT8","POLY16","POLY32","POLY64","POLY8"],"struct":["crc16","crc32","crc64","crc8"]};

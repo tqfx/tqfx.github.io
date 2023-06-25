@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['object_20oriented_20programming_0',['Object Oriented Programming',['../df/db1/group__A__OOP.html',1,'']]]
+  ['note_20frequency_20table_0',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]]
 ];

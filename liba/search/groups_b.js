@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transfer_20function_0',['transfer function',['../d0/ddd/group__A__TF.html',1,'']]]
+  ['red–black_20binary_20search_20tree_0',['red–black binary search tree',['../d7/d06/group__A__RBT.html',1,'']]]
 ];

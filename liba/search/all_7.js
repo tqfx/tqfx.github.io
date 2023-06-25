@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['high_20pass_20filter_0',['High Pass Filter',['../dd/d71/group__A__HPF.html',1,'']]],
-  ['hpf_2eh_1',['hpf.h',['../d1/df9/hpf_8h.html',1,'']]]
+  ['gain_0',['gain',['../d0/d04/structa__pid__expert__s.html#ad80ab909abb9c3d908743ca4f2b99b29',1,'a_pid_expert_s']]]
 ];

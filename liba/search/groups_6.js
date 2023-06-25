@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mathematical_20algorithm_20library_0',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
-  ['membership_20function_1',['membership function',['../dd/d37/group__A__MF.html',1,'']]]
+  ['low_20pass_20filter_0',['Low Pass Filter',['../df/d27/group__A__LPF.html',1,'']]]
 ];

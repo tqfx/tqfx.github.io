@@ -231,11 +231,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<
 <tr class="memitem:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga822dcaa031eb08d821f87899ea6d0ac0">a_pid_outp</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *fdb)</td></tr>
 <tr class="memdesc:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for multichannel PID controller  <br /></td></tr>
 <tr class="separator:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8845ca41202dd67f7df541a5ca11476a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga8845ca41202dd67f7df541a5ca11476a">a_pid_exit</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga8845ca41202dd67f7df541a5ca11476a"><td class="mdescLeft">&#160;</td><td class="mdescRight">terminate function for PID controller  <br /></td></tr>
-<tr class="separator:ga8845ca41202dd67f7df541a5ca11476a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gaeb692d99b81a7b1729a62d40556c8c1d">a_pid_zero</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
-<tr class="memdesc:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero function for PID controller  <br /></td></tr>
+<tr class="memdesc:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero clear function for PID controller  <br /></td></tr>
 <tr class="separator:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -324,32 +321,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<
     <tr><td class="paramdir">[in]</td><td class="paramname">fdb</td><td>points to cache feedback buffer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tmp</td><td>points to cache variable buffer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">err</td><td>points to cache error buffer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga8845ca41202dd67f7df541a5ca11476a" name="ga8845ca41202dd67f7df541a5ca11476a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8845ca41202dd67f7df541a5ca11476a">&#9670;&#160;</a></span>a_pid_exit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> * a_pid_exit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td>
-          <td class="paramname"><em>ctx</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>terminate function for PID controller </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
   </table>
   </dd>
 </dl>
@@ -665,7 +636,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<
       </table>
 </div><div class="memdoc">
 
-<p>zero function for PID controller </p>
+<p>zero clear function for PID controller </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
