@@ -283,6 +283,17 @@
 <a href="#283" id="283">283</a>
 <a href="#284" id="284">284</a>
 <a href="#285" id="285">285</a>
+<a href="#286" id="286">286</a>
+<a href="#287" id="287">287</a>
+<a href="#288" id="288">288</a>
+<a href="#289" id="289">289</a>
+<a href="#290" id="290">290</a>
+<a href="#291" id="291">291</a>
+<a href="#292" id="292">292</a>
+<a href="#293" id="293">293</a>
+<a href="#294" id="294">294</a>
+<a href="#295" id="295">295</a>
+<a href="#296" id="296">296</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! polynomial trajectory
 
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
@@ -357,11 +368,16 @@
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>polytrack3() {
+    <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytrack3::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, a.pos(dt), a.vel(dt), a.acc(dt));
-        <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, a.out(dt));
+        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytrack::polytrack3::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span>pos = a.pos(dt);
+        <span class="kw">let </span>vel = a.vel(dt);
+        <span class="kw">let </span>acc = a.acc(dt);
+        <span class="kw">let </span>out = a.out(dt);
+        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, pos, vel, acc);
+        <span class="macro">std::println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);
     }
 }
 
@@ -450,11 +466,16 @@
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>polytrack5() {
+    <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytrack5::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, a.pos(dt), a.vel(dt), a.acc(dt));
-        <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, a.out(dt));
+        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytrack::polytrack5::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span>pos = a.pos(dt);
+        <span class="kw">let </span>vel = a.vel(dt);
+        <span class="kw">let </span>acc = a.acc(dt);
+        <span class="kw">let </span>out = a.out(dt);
+        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, pos, vel, acc);
+        <span class="macro">std::println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);
     }
 }
 
@@ -555,17 +576,18 @@
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>polytrack7() {
+    <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytrack7::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">println!</span>(<span class="string">&quot;{:?}&quot;</span>, a.out(dt));
-        <span class="macro">println!</span>(
-            <span class="string">&quot;[{}, {}, {}, {}]&quot;</span>,
-            a.pos(dt),
-            a.vel(dt),
-            a.acc(dt),
-            a.jer(dt)
-        );
+        <span class="kw">let </span><span class="kw-2">mut </span>a =
+            <span class="kw">crate</span>::polytrack::polytrack7::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span>pos = a.pos(dt);
+        <span class="kw">let </span>vel = a.vel(dt);
+        <span class="kw">let </span>acc = a.acc(dt);
+        <span class="kw">let </span>jer = a.jer(dt);
+        <span class="kw">let </span>out = a.out(dt);
+        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}, {}]&quot;</span>, pos, vel, acc, jer);
+        <span class="macro">std::println!</span>(<span class="string">&quot;{:?}&quot;</span>, out);
     }
 }
 </code></pre></div></section></main></body></html>

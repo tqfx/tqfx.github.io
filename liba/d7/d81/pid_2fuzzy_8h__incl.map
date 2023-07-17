@@ -1,0 +1,21 @@
+<map id="pid/fuzzy.h" name="pid/fuzzy.h">
+<area shape="rect" id="Node000001" title="fuzzy proportional integral derivative controller" alt="" coords="141,5,232,31"/>
+<area shape="rect" id="Node000002" href="$d6/dea/mf_8h.html" title="membership function" alt="" coords="66,79,129,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,33,124,72,121,68,171,29"/>
+<area shape="rect" id="Node000008" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="153,79,220,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="189,31,189,65,184,65,184,31"/>
+<area shape="rect" id="Node000009" href="$df/d2a/fuzzy_8h.html" title="fuzzy operator" alt="" coords="245,79,323,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="204,29,258,68,255,72,201,33"/>
+<area shape="rect" id="Node000003" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,152,208,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,102,163,141,160,145,110,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,80,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,179,79,222,77,217,164,174"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="105,225,175,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="181,179,157,215,153,212,177,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="199,225,270,251"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="197,176,222,213,217,216,192,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="294,225,357,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="210,175,292,217,290,222,207,179"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="189,104,189,138,184,138,184,104"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="270,106,215,146,212,141,267,102"/>
+</map>

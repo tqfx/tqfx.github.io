@@ -98,10 +98,6 @@ Collaboration diagram for a_pid_s:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a27583a528a9d768c8687647b4a12c444"><td class="memItemLeft" align="right" valign="top"><a id="a27583a528a9d768c8687647b4a12c444" name="a27583a528a9d768c8687647b4a12c444"></a>
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dt</b></td></tr>
-<tr class="memdesc:a27583a528a9d768c8687647b4a12c444"><td class="mdescLeft">&#160;</td><td class="mdescRight">sampling time unit(s) <br /></td></tr>
-<tr class="separator:a27583a528a9d768c8687647b4a12c444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61a384e5a85405a1f71bc8d782189343"><td class="memItemLeft" align="right" valign="top"><a id="a61a384e5a85405a1f71bc8d782189343" name="a61a384e5a85405a1f71bc8d782189343"></a>
 <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>kp</b></td></tr>
 <tr class="memdesc:a61a384e5a85405a1f71bc8d782189343"><td class="mdescLeft">&#160;</td><td class="mdescRight">proportional constant <br /></td></tr>
@@ -114,6 +110,18 @@ Data Fields</h2></td></tr>
 <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>kd</b></td></tr>
 <tr class="memdesc:afd0383d78e17afa53ffbf5059ad6ed08"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivative constant <br /></td></tr>
 <tr class="separator:afd0383d78e17afa53ffbf5059ad6ed08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c60908839d85b23786e984f454321e"><td class="memItemLeft" align="right" valign="top"><a id="a95c60908839d85b23786e984f454321e" name="a95c60908839d85b23786e984f454321e"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>summax</b></td></tr>
+<tr class="memdesc:a95c60908839d85b23786e984f454321e"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum integral output <br /></td></tr>
+<tr class="separator:a95c60908839d85b23786e984f454321e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cefa1a026da270c8ca1d063924581b"><td class="memItemLeft" align="right" valign="top"><a id="a63cefa1a026da270c8ca1d063924581b" name="a63cefa1a026da270c8ca1d063924581b"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>outmax</b></td></tr>
+<tr class="memdesc:a63cefa1a026da270c8ca1d063924581b"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum final output <br /></td></tr>
+<tr class="separator:a63cefa1a026da270c8ca1d063924581b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="memItemLeft" align="right" valign="top"><a id="a1a66a13a2c2a36a361e4488d1b7b2956" name="a1a66a13a2c2a36a361e4488d1b7b2956"></a>
+<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>outmin</b></td></tr>
+<tr class="memdesc:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum final output <br /></td></tr>
+<tr class="separator:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a754a32f480c69c58ffd2f04539819c03"><td class="memItemLeft" align="right" valign="top"><a id="a754a32f480c69c58ffd2f04539819c03" name="a754a32f480c69c58ffd2f04539819c03"></a>
 <a class="el" href="../../d2/d53/uniona__float__u.html">a_float_u</a>&#160;</td><td class="memItemRight" valign="bottom"><b>out</b></td></tr>
 <tr class="memdesc:a754a32f480c69c58ffd2f04539819c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">controller output <br /></td></tr>
@@ -130,26 +138,14 @@ Data Fields</h2></td></tr>
 <a class="el" href="../../d2/d53/uniona__float__u.html">a_float_u</a>&#160;</td><td class="memItemRight" valign="bottom"><b>err</b></td></tr>
 <tr class="memdesc:a7c1ad8cd4cd2319ffad23791b55f2f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache error <br /></td></tr>
 <tr class="separator:a7c1ad8cd4cd2319ffad23791b55f2f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="memItemLeft" align="right" valign="top"><a id="a1a66a13a2c2a36a361e4488d1b7b2956" name="a1a66a13a2c2a36a361e4488d1b7b2956"></a>
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>outmin</b></td></tr>
-<tr class="memdesc:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum final output <br /></td></tr>
-<tr class="separator:a1a66a13a2c2a36a361e4488d1b7b2956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63cefa1a026da270c8ca1d063924581b"><td class="memItemLeft" align="right" valign="top"><a id="a63cefa1a026da270c8ca1d063924581b" name="a63cefa1a026da270c8ca1d063924581b"></a>
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>outmax</b></td></tr>
-<tr class="memdesc:a63cefa1a026da270c8ca1d063924581b"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum final output <br /></td></tr>
-<tr class="separator:a63cefa1a026da270c8ca1d063924581b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c60908839d85b23786e984f454321e"><td class="memItemLeft" align="right" valign="top"><a id="a95c60908839d85b23786e984f454321e" name="a95c60908839d85b23786e984f454321e"></a>
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>summax</b></td></tr>
-<tr class="memdesc:a95c60908839d85b23786e984f454321e"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum integral output <br /></td></tr>
-<tr class="separator:a95c60908839d85b23786e984f454321e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac73bea9a910d78168588a424a4450fea"><td class="memItemLeft" align="right" valign="top"><a id="ac73bea9a910d78168588a424a4450fea" name="ac73bea9a910d78168588a424a4450fea"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>num</b></td></tr>
-<tr class="memdesc:ac73bea9a910d78168588a424a4450fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">number register <br /></td></tr>
-<tr class="separator:ac73bea9a910d78168588a424a4450fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61e4844d23748a98648a4a955e711ad4"><td class="memItemLeft" align="right" valign="top"><a id="a61e4844d23748a98648a4a955e711ad4" name="a61e4844d23748a98648a4a955e711ad4"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>reg</b></td></tr>
-<tr class="memdesc:a61e4844d23748a98648a4a955e711ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">status register <br /></td></tr>
-<tr class="separator:a61e4844d23748a98648a4a955e711ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b59a93be0baed2030d593eff7413c7"><td class="memItemLeft" align="right" valign="top"><a id="a45b59a93be0baed2030d593eff7413c7" name="a45b59a93be0baed2030d593eff7413c7"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>chan</b></td></tr>
+<tr class="memdesc:a45b59a93be0baed2030d593eff7413c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">channel <br /></td></tr>
+<tr class="separator:a45b59a93be0baed2030d593eff7413c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a04d528392b15e6c6b63ea51bb2960f"><td class="memItemLeft" align="right" valign="top"><a id="a4a04d528392b15e6c6b63ea51bb2960f" name="a4a04d528392b15e6c6b63ea51bb2960f"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
+<tr class="memdesc:a4a04d528392b15e6c6b63ea51bb2960f"><td class="mdescLeft">&#160;</td><td class="mdescRight">mode <br /></td></tr>
+<tr class="separator:a4a04d528392b15e6c6b63ea51bb2960f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>instance structure for PID controller </p>

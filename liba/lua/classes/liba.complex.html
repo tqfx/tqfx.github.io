@@ -1,0 +1,1253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><strong>liba.complex</strong></li>
+  <li><a href="../classes/liba.pid.html">liba.pid</a></li>
+  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
+  <li><a href="../classes/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><strong>liba.complex</strong></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>liba.complex</code></h1>
+<p>complex number</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex">liba.complex</a></td>
+	<td class="summary">complex number</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:new">liba.complex:new (real, imag)</a></td>
+	<td class="summary">constructor for complex number from rectangular Cartesian components</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:polar">liba.complex:polar (r, theta)</a></td>
+	<td class="summary">constructor for complex number from polar form</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:logabs">liba.complex:logabs ()</a></td>
+	<td class="summary">computes the natural logarithm of magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:abs2">liba.complex:abs2 ()</a></td>
+	<td class="summary">computes the squared magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:abs">liba.complex:abs ()</a></td>
+	<td class="summary">computes the magnitude of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:arg">liba.complex:arg ()</a></td>
+	<td class="summary">computes the phase angle of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:conj">liba.complex:conj ()</a></td>
+	<td class="summary">computes the complex conjugate</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:unm">liba.complex:unm ()</a></td>
+	<td class="summary">computes the complex negative</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:inv">liba.complex:inv ()</a></td>
+	<td class="summary">inverse of a complex number</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:add">liba.complex:add (z)</a></td>
+	<td class="summary">addition of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sub">liba.complex:sub (z)</a></td>
+	<td class="summary">subtraction of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:mul">liba.complex:mul (z)</a></td>
+	<td class="summary">multiplication of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:div">liba.complex:div (z)</a></td>
+	<td class="summary">division of complex numbers</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:pow">liba.complex:pow (a)</a></td>
+	<td class="summary">complex number z raised to complex power a</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:logb">liba.complex:logb (b)</a></td>
+	<td class="summary">computes the complex base-b logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:exp">liba.complex:exp ()</a></td>
+	<td class="summary">computes the complex base-e exponential</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:log">liba.complex:log ()</a></td>
+	<td class="summary">computes the complex natural logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sqrt">liba.complex:sqrt ()</a></td>
+	<td class="summary">computes the complex square root</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:log2">liba.complex:log2 ()</a></td>
+	<td class="summary">computes the complex base-2 logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:log10">liba.complex:log10 ()</a></td>
+	<td class="summary">computes the complex base-10 logarithm</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sin">liba.complex:sin ()</a></td>
+	<td class="summary">computes the complex sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:cos">liba.complex:cos ()</a></td>
+	<td class="summary">computes the complex cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:tan">liba.complex:tan ()</a></td>
+	<td class="summary">computes the complex tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sec">liba.complex:sec ()</a></td>
+	<td class="summary">computes the complex secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:csc">liba.complex:csc ()</a></td>
+	<td class="summary">computes the complex cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:cot">liba.complex:cot ()</a></td>
+	<td class="summary">computes the complex cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:asin">liba.complex:asin ()</a></td>
+	<td class="summary">computes the complex arc sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acos">liba.complex:acos ()</a></td>
+	<td class="summary">computes the complex arc cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:atan">liba.complex:atan ()</a></td>
+	<td class="summary">computes the complex arc tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:asec">liba.complex:asec ()</a></td>
+	<td class="summary">computes the complex arc secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acsc">liba.complex:acsc ()</a></td>
+	<td class="summary">computes the complex arc cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acot">liba.complex:acot ()</a></td>
+	<td class="summary">computes the complex arc cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sinh">liba.complex:sinh ()</a></td>
+	<td class="summary">computes the complex hyperbolic sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:cosh">liba.complex:cosh ()</a></td>
+	<td class="summary">computes the complex hyperbolic cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:tanh">liba.complex:tanh ()</a></td>
+	<td class="summary">computes the complex hyperbolic tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:sech">liba.complex:sech ()</a></td>
+	<td class="summary">computes the complex hyperbolic secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:csch">liba.complex:csch ()</a></td>
+	<td class="summary">computes the complex hyperbolic cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:coth">liba.complex:coth ()</a></td>
+	<td class="summary">computes the complex hyperbolic cotangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:asinh">liba.complex:asinh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic sine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acosh">liba.complex:acosh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cosine</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:atanh">liba.complex:atanh ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic tangent</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:asech">liba.complex:asech ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic secant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acsch">liba.complex:acsch ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cosecant</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.complex:acoth">liba.complex:acoth ()</a></td>
+	<td class="summary">computes the complex arc hyperbolic cotangent</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.complex"></a>
+    <strong>liba.complex</strong>
+    </dt>
+    <dd>
+    complex number
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">real</span>
+         real part of complex number
+        </li>
+        <li><span class="parameter">imag</span>
+         imaginary part of complex number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.complex:new"></a>
+    <strong>liba.complex:new (real, imag)</strong>
+    </dt>
+    <dd>
+    constructor for complex number from rectangular Cartesian components
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">real</span>
+            <span class="types"><span class="type">number</span></span>
+         real part of complex number
+        </li>
+        <li><span class="parameter">imag</span>
+            <span class="types"><span class="type">number</span></span>
+         imaginary part of complex number
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:polar"></a>
+    <strong>liba.complex:polar (r, theta)</strong>
+    </dt>
+    <dd>
+    constructor for complex number from polar form
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">r</span>
+            <span class="types"><span class="type">number</span></span>
+         a distance from a reference point
+        </li>
+        <li><span class="parameter">theta</span>
+            <span class="types"><span class="type">number</span></span>
+         an angle from a reference direction
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:logabs"></a>
+    <strong>liba.complex:logabs ()</strong>
+    </dt>
+    <dd>
+    computes the natural logarithm of magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:abs2"></a>
+    <strong>liba.complex:abs2 ()</strong>
+    </dt>
+    <dd>
+    computes the squared magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:abs"></a>
+    <strong>liba.complex:abs ()</strong>
+    </dt>
+    <dd>
+    computes the magnitude of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:arg"></a>
+    <strong>liba.complex:arg ()</strong>
+    </dt>
+    <dd>
+    computes the phase angle of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:conj"></a>
+    <strong>liba.complex:conj ()</strong>
+    </dt>
+    <dd>
+    computes the complex conjugate
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:unm"></a>
+    <strong>liba.complex:unm ()</strong>
+    </dt>
+    <dd>
+    computes the complex negative
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:inv"></a>
+    <strong>liba.complex:inv ()</strong>
+    </dt>
+    <dd>
+    inverse of a complex number
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:add"></a>
+    <strong>liba.complex:add (z)</strong>
+    </dt>
+    <dd>
+    addition of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sub"></a>
+    <strong>liba.complex:sub (z)</strong>
+    </dt>
+    <dd>
+    subtraction of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:mul"></a>
+    <strong>liba.complex:mul (z)</strong>
+    </dt>
+    <dd>
+    multiplication of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:div"></a>
+    <strong>liba.complex:div (z)</strong>
+    </dt>
+    <dd>
+    division of complex numbers
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:pow"></a>
+    <strong>liba.complex:pow (a)</strong>
+    </dt>
+    <dd>
+    complex number z raised to complex power a
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:logb"></a>
+    <strong>liba.complex:logb (b)</strong>
+    </dt>
+    <dd>
+    computes the complex base-b logarithm
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">b</span>
+            <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+         complex number userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:exp"></a>
+    <strong>liba.complex:exp ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-e exponential
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:log"></a>
+    <strong>liba.complex:log ()</strong>
+    </dt>
+    <dd>
+    computes the complex natural logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sqrt"></a>
+    <strong>liba.complex:sqrt ()</strong>
+    </dt>
+    <dd>
+    computes the complex square root
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:log2"></a>
+    <strong>liba.complex:log2 ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-2 logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:log10"></a>
+    <strong>liba.complex:log10 ()</strong>
+    </dt>
+    <dd>
+    computes the complex base-10 logarithm
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sin"></a>
+    <strong>liba.complex:sin ()</strong>
+    </dt>
+    <dd>
+    computes the complex sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:cos"></a>
+    <strong>liba.complex:cos ()</strong>
+    </dt>
+    <dd>
+    computes the complex cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:tan"></a>
+    <strong>liba.complex:tan ()</strong>
+    </dt>
+    <dd>
+    computes the complex tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sec"></a>
+    <strong>liba.complex:sec ()</strong>
+    </dt>
+    <dd>
+    computes the complex secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:csc"></a>
+    <strong>liba.complex:csc ()</strong>
+    </dt>
+    <dd>
+    computes the complex cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:cot"></a>
+    <strong>liba.complex:cot ()</strong>
+    </dt>
+    <dd>
+    computes the complex cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:asin"></a>
+    <strong>liba.complex:asin ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acos"></a>
+    <strong>liba.complex:acos ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:atan"></a>
+    <strong>liba.complex:atan ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:asec"></a>
+    <strong>liba.complex:asec ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acsc"></a>
+    <strong>liba.complex:acsc ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acot"></a>
+    <strong>liba.complex:acot ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sinh"></a>
+    <strong>liba.complex:sinh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:cosh"></a>
+    <strong>liba.complex:cosh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:tanh"></a>
+    <strong>liba.complex:tanh ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:sech"></a>
+    <strong>liba.complex:sech ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:csch"></a>
+    <strong>liba.complex:csch ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:coth"></a>
+    <strong>liba.complex:coth ()</strong>
+    </dt>
+    <dd>
+    computes the complex hyperbolic cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:asinh"></a>
+    <strong>liba.complex:asinh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic sine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acosh"></a>
+    <strong>liba.complex:acosh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cosine
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:atanh"></a>
+    <strong>liba.complex:atanh ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic tangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:asech"></a>
+    <strong>liba.complex:asech ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic secant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acsch"></a>
+    <strong>liba.complex:acsch ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cosecant
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.complex:acoth"></a>
+    <strong>liba.complex:acoth ()</strong>
+    </dt>
+    <dd>
+    computes the complex arc hyperbolic cotangent
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.complex.html">complex</a></span>
+        complex number userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-07-17 07:31:27 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

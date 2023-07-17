@@ -1,47 +1,49 @@
 <map id="a.h" name="a.h">
-<area shape="rect" id="Node000001" title="algorithm library" alt="" coords="798,5,841,31"/>
+<area shape="rect" id="Node000001" title="algorithm library" alt="" coords="847,5,890,31"/>
 <area shape="rect" id="Node000002" href="$d3/d51/avl_8h.html" title="Adelson&#45;Velsky and Landis self&#45;balancing binary search tree." alt="" coords="5,79,60,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="784,22,665,25,489,34,282,51,176,64,72,81,61,84,60,79,71,76,175,59,282,46,489,28,665,20,784,17"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="833,22,708,24,519,32,298,50,183,64,72,81,61,84,60,79,71,76,183,58,297,45,519,27,708,19,833,17"/>
 <area shape="rect" id="Node000003" href="$d6/d6d/buf_8h.html" title="basic buffer library" alt="" coords="84,79,139,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="784,23,677,27,520,37,337,54,152,81,139,84,138,79,151,76,337,49,520,31,676,22,784,17"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="833,23,719,26,550,35,353,53,152,81,139,84,138,79,151,76,352,47,550,30,719,21,833,17"/>
 <area shape="rect" id="Node000004" href="$d7/d3b/complex_8h.html" title="complex number" alt="" coords="163,79,254,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="784,25,565,45,417,61,266,81,255,83,254,78,266,76,416,56,565,39,784,19"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="834,24,596,43,433,60,266,81,255,83,254,78,266,76,432,55,595,38,834,19"/>
 <area shape="rect" id="Node000005" href="$dc/de6/crc_8h.html" title="Cyclic Redundancy Check." alt="" coords="278,79,331,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="785,24,596,42,470,59,344,81,332,84,331,79,343,76,470,54,595,37,784,19"/>
-<area shape="rect" id="Node000006" href="$df/d2a/fuzzy_8h.html" title="fuzzy operator" alt="" coords="827,79,894,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="835,41,856,77,852,80,831,44"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="833,24,625,41,485,58,344,81,332,84,331,79,343,76,484,52,624,35,833,19"/>
+<area shape="rect" id="Node000006" href="$df/d2a/fuzzy_8h.html" title="fuzzy operator" alt="" coords="753,79,819,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="847,42,801,80,798,76,843,38"/>
 <area shape="rect" id="Node000008" href="$d0/d97/host_2a_8h.html" title="algorithm library on host" alt="" coords="355,79,430,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="785,27,636,48,442,81,431,84,430,78,442,76,635,43,784,21"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="834,26,665,47,442,81,431,84,430,78,442,76,664,41,833,21"/>
 <area shape="rect" id="Node000013" href="$d1/df9/hpf_8h.html" title="High Pass Filter." alt="" coords="585,152,640,177"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="785,25,729,32,666,43,610,59,589,69,576,80,571,97,576,116,588,135,602,150,598,154,584,138,571,119,565,97,572,77,586,65,608,55,665,38,729,27,784,20"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="834,24,768,29,690,39,619,56,593,67,576,80,570,97,576,116,588,135,602,150,598,154,584,138,571,118,565,97,572,77,590,63,617,51,689,34,767,24,833,18"/>
 <area shape="rect" id="Node000014" href="$da/d23/list_8h.html" title="circular doubly linked list implementation" alt="" coords="455,79,509,104"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="785,29,529,81,510,86,509,81,528,76,784,23"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="834,27,700,49,529,81,510,86,509,80,528,76,699,44,833,22"/>
 <area shape="rect" id="Node000015" href="$db/d80/lpf_8h.html" title="Low Pass Filter." alt="" coords="681,152,731,177"/>
-<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="789,40,764,58,743,80,722,118,711,153,706,151,717,116,739,77,761,54,785,36"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="835,30,788,49,764,63,743,80,730,98,721,117,711,152,705,151,716,115,725,95,739,77,760,58,785,44,833,25"/>
 <area shape="rect" id="Node000016" href="$df/db1/math_8h.html" title="mathematical algorithm library" alt="" coords="585,79,653,104"/>
-<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="786,34,652,81,651,76,784,29"/>
-<area shape="rect" id="Node000017" href="$d6/dea/mf_8h.html" title="membership function" alt="" coords="753,79,803,104"/>
-<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="808,44,787,80,782,77,803,41"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="835,32,654,83,653,78,833,27"/>
+<area shape="rect" id="Node000017" href="$d6/dea/mf_8h.html" title="membership function" alt="" coords="843,79,894,104"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="871,44,871,79,866,79,866,44"/>
 <area shape="rect" id="Node000018" href="$d4/ddc/oop_8h.html" title="Object Oriented Programming Macros." alt="" coords="918,79,977,104"/>
-<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="853,35,928,76,925,81,851,40"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="893,38,936,76,933,80,890,42"/>
 <area shape="rect" id="Node000019" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="1001,79,1056,104"/>
-<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="855,28,1002,78,1000,83,853,34"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="904,32,1004,76,1002,81,901,37"/>
 <area shape="rect" id="Node000021" href="$db/d57/poly_8h.html" title="polynomial" alt="" coords="1080,79,1140,104"/>
-<area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="855,25,1069,76,1080,79,1079,84,1068,81,854,30"/>
+<area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="904,27,1080,79,1079,84,902,32"/>
 <area shape="rect" id="Node000022" href="$dc/d23/polytrack_8h.html" title="polynomial trajectory" alt="" coords="1164,79,1259,104"/>
-<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="854,23,1153,76,1164,78,1163,83,1152,81,854,28"/>
-<area shape="rect" id="Node000023" href="$d6/d1b/rbt_8h.html" title="red–black self&#45;balancing binary search tree" alt="" coords="1283,79,1335,104"/>
-<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="854,19,1034,38,1152,54,1272,76,1283,79,1282,84,1271,81,1152,59,1033,43,854,25"/>
-<area shape="rect" id="Node000024" href="$d1/dad/slist_8h.html" title="circular singly linked list implementation" alt="" coords="1359,79,1421,104"/>
-<area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="855,19,1064,37,1205,53,1348,76,1359,79,1358,84,1347,81,1204,59,1064,42,854,24"/>
-<area shape="rect" id="Node000025" href="$d2/d16/tf_8h.html" title="transfer function" alt="" coords="1445,79,1487,104"/>
-<area shape="poly" id="edge30_Node000001_Node000025" title=" " alt="" coords="855,17,954,21,1098,30,1265,47,1433,76,1445,79,1444,84,1432,81,1264,53,1098,35,954,26,854,23"/>
-<area shape="rect" id="Node000026" href="$de/db7/utf_8h.html" title="Unicode Transformation Format." alt="" coords="1511,79,1562,104"/>
-<area shape="poly" id="edge31_Node000001_Node000026" title=" " alt="" coords="854,17,963,21,1123,30,1310,47,1500,76,1512,79,1511,84,1499,81,1309,53,1123,35,963,26,854,22"/>
-<area shape="rect" id="Node000027" href="$df/dfc/version_8h.html" title="algorithm library version" alt="" coords="1586,79,1669,104"/>
-<area shape="poly" id="edge32_Node000001_Node000027" title=" " alt="" coords="855,18,1152,33,1361,51,1574,76,1586,78,1585,83,1574,81,1361,56,1152,39,855,23"/>
-<area shape="rect" id="Node000007" href="$d7/d30/pid__fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="813,152,908,177"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="863,118,863,152,858,152,858,118"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="904,24,1164,78,1163,83,903,29"/>
+<area shape="rect" id="Node000023" href="$d8/dfc/rbf_8h.html" title="radial basis function" alt="" coords="1283,79,1334,104"/>
+<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="904,20,1064,39,1168,56,1272,76,1284,79,1282,84,1271,81,1167,61,1063,45,904,25"/>
+<area shape="rect" id="Node000024" href="$d6/d1b/rbt_8h.html" title="red–black self&#45;balancing binary search tree" alt="" coords="1359,79,1411,104"/>
+<area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="904,19,1094,37,1219,54,1347,76,1359,79,1358,84,1345,81,1219,59,1093,42,903,24"/>
+<area shape="rect" id="Node000025" href="$d1/dad/slist_8h.html" title="circular singly linked list implementation" alt="" coords="1435,79,1497,104"/>
+<area shape="poly" id="edge30_Node000001_Node000025" title=" " alt="" coords="905,19,1125,36,1273,53,1424,76,1435,79,1434,84,1423,81,1272,58,1124,41,904,24"/>
+<area shape="rect" id="Node000026" href="$d2/d16/tf_8h.html" title="transfer function" alt="" coords="1521,79,1563,104"/>
+<area shape="poly" id="edge31_Node000001_Node000026" title=" " alt="" coords="904,17,1008,20,1158,29,1333,47,1509,76,1521,79,1520,84,1508,81,1332,52,1158,34,1008,25,904,22"/>
+<area shape="rect" id="Node000027" href="$de/db7/utf_8h.html" title="Unicode Transformation Format." alt="" coords="1587,79,1638,104"/>
+<area shape="poly" id="edge32_Node000001_Node000027" title=" " alt="" coords="904,17,1017,20,1184,29,1378,46,1576,76,1588,79,1587,84,1575,81,1378,52,1183,34,1017,25,904,22"/>
+<area shape="rect" id="Node000028" href="$df/dfc/version_8h.html" title="algorithm library version" alt="" coords="1662,79,1745,104"/>
+<area shape="poly" id="edge33_Node000001_Node000028" title=" " alt="" coords="904,18,1211,33,1429,50,1650,76,1662,78,1661,83,1650,81,1428,55,1211,38,904,23"/>
+<area shape="rect" id="Node000007" href="$d2/d03/pid_2fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="823,152,914,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="811,111,857,150,853,154,808,115"/>
 <area shape="rect" id="Node000009" href="$d9/dc9/que_8h.html" title="basic queue library" alt="" coords="462,152,553,177"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="424,109,490,150,487,154,421,113"/>
 <area shape="rect" id="Node000010" href="$d1/d93/str_8h.html" title="basic string library" alt="" coords="241,152,323,177"/>
@@ -54,8 +56,8 @@
 <area shape="poly" id="edge17_Node000016_Node000013" title=" " alt="" coords="620,118,616,152,611,152,614,118"/>
 <area shape="poly" id="edge18_Node000016_Node000015" title=" " alt="" coords="645,110,694,150,690,154,642,115"/>
 <area shape="poly" id="edge19_Node000016_Node000016" title=" " alt="" coords="661,76,674,80,680,91,677,100,669,105,647,107,647,101,667,100,673,97,675,92,671,84,659,81"/>
-<area shape="poly" id="edge21_Node000017_Node000007" title=" " alt="" coords="803,111,849,150,845,154,800,115"/>
-<area shape="poly" id="edge25_Node000019_Node000007" title=" " alt="" coords="990,112,889,154,887,149,988,107"/>
-<area shape="rect" id="Node000020" href="$dd/d53/pid__expert_8h.html" title="expert proportional integral derivative controller" alt="" coords="977,152,1080,177"/>
-<area shape="poly" id="edge24_Node000019_Node000020" title=" " alt="" coords="1031,118,1031,152,1026,152,1026,118"/>
+<area shape="poly" id="edge21_Node000017_Node000007" title=" " alt="" coords="871,118,871,152,866,152,866,118"/>
+<area shape="poly" id="edge24_Node000019_Node000007" title=" " alt="" coords="992,112,896,154,894,149,990,107"/>
+<area shape="rect" id="Node000020" href="$de/d38/neuron_8h.html" title="single neuron proportional integral derivative controller" alt="" coords="977,152,1080,177"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="1031,118,1031,152,1026,152,1026,118"/>
 </map>

@@ -45,6 +45,7 @@
   <li><a href="../modules/liba.mf.html">liba.mf</a></li>
   <li><strong>liba.pid</strong></li>
   <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
   <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
   <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
   <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
@@ -53,14 +54,15 @@
 </ul>
 <h2>Classes</h2>
 <ul class="nowrap">
-  <li><a href="../classes/complex.html">complex</a></li>
-  <li><a href="../classes/pid.html">pid</a></li>
-  <li><a href="../classes/pid_fuzzy.html">pid_fuzzy</a></li>
-  <li><a href="../classes/polytrack3.html">polytrack3</a></li>
-  <li><a href="../classes/polytrack5.html">polytrack5</a></li>
-  <li><a href="../classes/polytrack7.html">polytrack7</a></li>
-  <li><a href="../classes/tf.html">tf</a></li>
-  <li><a href="../classes/version.html">version</a></li>
+  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
+  <li><strong>liba.pid</strong></li>
+  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
+  <li><a href="../classes/liba.version.html">liba.version</a></li>
 </ul>
 
 </div>
@@ -75,12 +77,16 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#new">new (dt[, kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#new">new ([kp][, ki][, kd], min, max[, sum])</a></td>
 	<td class="summary">constructor for PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#init">init (ctx, dt[, kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#init">init (ctx[, kp][, ki][, kd], min, max[, sum])</a></td>
 	<td class="summary">calculate function for PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kpid">kpid (ctx, kp, ki, kd)</a></td>
+	<td class="summary">set proportional integral derivative constant for PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#iter">iter (ctx, set, fdb)</a></td>
@@ -89,22 +95,6 @@
 	<tr>
 	<td class="name" nowrap><a href="#zero">zero (ctx)</a></td>
 	<td class="summary">zero clear function for PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#kpid">kpid (ctx, kp, ki, kd)</a></td>
-	<td class="summary">set proportional integral derivative constant for PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#pos">pos (ctx, max)</a></td>
-	<td class="summary">positional PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#inc">inc (ctx)</a></td>
-	<td class="summary">incremental PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#off">off (ctx)</a></td>
-	<td class="summary">turn off PID controller</td>
 	</tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
@@ -124,7 +114,7 @@
     <dl class="function">
     <dt>
     <a name = "new"></a>
-    <strong>new (dt[, kp][, ki][, kd], min, max[, sum])</strong>
+    <strong>new ([kp][, ki][, kd], min, max[, sum])</strong>
     </dt>
     <dd>
     constructor for PID controller
@@ -132,10 +122,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">dt</span>
-            <span class="types"><span class="type">number</span></span>
-         sampling time unit(s)
-        </li>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
          proportional constant
@@ -169,7 +155,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
         PID controller userdata
     </ol>
 
@@ -179,7 +165,7 @@
 </dd>
     <dt>
     <a name = "init"></a>
-    <strong>init (ctx, dt[, kp][, ki][, kd], min, max[, sum])</strong>
+    <strong>init (ctx[, kp][, ki][, kd], min, max[, sum])</strong>
     </dt>
     <dd>
     calculate function for PID controller
@@ -190,10 +176,6 @@
         <li><span class="parameter">ctx</span>
          PID controller userdata
         </li>
-        <li><span class="parameter">dt</span>
-            <span class="types"><span class="type">number</span></span>
-         sampling time unit(s)
-        </li>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
          proportional constant
@@ -227,7 +209,45 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
+        PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kpid"></a>
+    <strong>kpid (ctx, kp, ki, kd)</strong>
+    </dt>
+    <dd>
+    set proportional integral derivative constant for PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+         PID controller userdata
+        </li>
+        <li><span class="parameter">kp</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional constant
+        </li>
+        <li><span class="parameter">ki</span>
+            <span class="types"><span class="type">number</span></span>
+         integral constant
+        </li>
+        <li><span class="parameter">kd</span>
+            <span class="types"><span class="type">number</span></span>
+         derivative constant
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
         PID controller userdata
     </ol>
 
@@ -287,127 +307,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
-        PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "kpid"></a>
-    <strong>kpid (ctx, kp, ki, kd)</strong>
-    </dt>
-    <dd>
-    set proportional integral derivative constant for PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         PID controller userdata
-        </li>
-        <li><span class="parameter">kp</span>
-            <span class="types"><span class="type">number</span></span>
-         proportional constant
-        </li>
-        <li><span class="parameter">ki</span>
-            <span class="types"><span class="type">number</span></span>
-         integral constant
-        </li>
-        <li><span class="parameter">kd</span>
-            <span class="types"><span class="type">number</span></span>
-         derivative constant
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
-        PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "pos"></a>
-    <strong>pos (ctx, max)</strong>
-    </dt>
-    <dd>
-    positional PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         PID controller userdata
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
-        PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "inc"></a>
-    <strong>inc (ctx)</strong>
-    </dt>
-    <dd>
-    incremental PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         PID controller userdata
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
-        PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "off"></a>
-    <strong>off (ctx)</strong>
-    </dt>
-    <dd>
-    turn off PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         PID controller userdata
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/pid.html#">pid</a></span>
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
         PID controller userdata
     </ol>
 
@@ -452,7 +352,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-06-25 16:28:28 </i>
+<i style="float:right;">Last updated 2023-07-17 07:31:27 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -109,11 +109,6 @@
 <a href="#109" id="109">109</a>
 <a href="#110" id="110">110</a>
 <a href="#111" id="111">111</a>
-<a href="#112" id="112">112</a>
-<a href="#113" id="113">113</a>
-<a href="#114" id="114">114</a>
-<a href="#115" id="115">115</a>
-<a href="#116" id="116">116</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++ language
 
@@ -129,10 +124,11 @@ liba = &quot;0.1&quot;
 
 </span><span class="attr">#![warn(missing_docs)]
 #![allow(non_camel_case_types)]
+#![cfg_attr(not(features = <span class="string">&quot;std&quot;</span>), no_std)]
 
-</span><span class="kw">use </span>std::os::raw::c_char;
+</span><span class="kw">use </span>core::ffi::c_char;
 <span class="doccomment">/// Equivalent to C’s unsigned int type.
-</span><span class="kw">pub type </span>uint = std::os::raw::c_uint;
+</span><span class="kw">pub type </span>uint = core::ffi::c_uint;
 <span class="doccomment">/// floating-point number stored using `f64`
 </span><span class="attr">#[cfg(not(feature = <span class="string">&quot;float&quot;</span>))]
 </span><span class="kw">pub type </span>float = f64;
@@ -148,22 +144,11 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub </span>p: <span class="kw-2">*mut </span>float,
 }
 
-<span class="kw">pub mod </span>mf;
-<span class="kw">pub mod </span>tf;
-<span class="kw">pub use </span><span class="kw">crate</span>::tf::TF;
 <span class="kw">pub mod </span>crc;
-<span class="kw">pub use </span><span class="kw">crate</span>::crc::crc16;
-<span class="kw">pub use </span><span class="kw">crate</span>::crc::crc32;
-<span class="kw">pub use </span><span class="kw">crate</span>::crc::crc64;
-<span class="kw">pub use </span><span class="kw">crate</span>::crc::crc8;
+<span class="kw">pub mod </span>mf;
 <span class="kw">pub mod </span>pid;
-<span class="kw">pub use </span><span class="kw">crate</span>::pid::PID;
-<span class="kw">pub mod </span>pid_fuzzy;
-<span class="kw">pub use </span><span class="kw">crate</span>::pid_fuzzy::PID_fuzzy;
 <span class="kw">pub mod </span>polytrack;
-<span class="kw">pub use </span><span class="kw">crate</span>::polytrack::polytrack3;
-<span class="kw">pub use </span><span class="kw">crate</span>::polytrack::polytrack5;
-<span class="kw">pub use </span><span class="kw">crate</span>::polytrack::polytrack7;
+<span class="kw">pub mod </span>tf;
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_version() -&gt; <span class="kw-2">*const </span>c_char;
@@ -182,7 +167,11 @@ println!(&quot;version {}&quot;, liba::version());
 ```
 */
 </span><span class="kw">pub fn </span>version() -&gt; <span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span>str {
-    <span class="kw">unsafe </span>{ std::ffi::CStr::from_ptr(a_version()).to_str().unwrap() }
+    <span class="kw">unsafe </span>{
+        core::ffi::CStr::from_ptr(a_version())
+            .to_str()
+            .unwrap_unchecked()
+    }
 }
 
 <span class="doccomment">/// algorithm library version major
@@ -217,17 +206,18 @@ println!(&quot;version {}&quot;, liba::version());
 
 <span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>test {
+    <span class="kw">extern crate </span>std;
     <span class="attr">#[test]
     </span><span class="kw">fn </span>version() {
-        <span class="macro">println!</span>(<span class="string">&quot;version {}&quot;</span>, <span class="kw">crate</span>::version());
-        <span class="macro">println!</span>(<span class="string">&quot;major {}&quot;</span>, <span class="kw">crate</span>::version_major());
-        <span class="macro">println!</span>(<span class="string">&quot;minor {}&quot;</span>, <span class="kw">crate</span>::version_minor());
-        <span class="macro">println!</span>(<span class="string">&quot;patch {}&quot;</span>, <span class="kw">crate</span>::version_patch());
+        <span class="macro">std::println!</span>(<span class="string">&quot;version {}&quot;</span>, <span class="kw">crate</span>::version());
+        <span class="macro">std::println!</span>(<span class="string">&quot;major {}&quot;</span>, <span class="kw">crate</span>::version_major());
+        <span class="macro">std::println!</span>(<span class="string">&quot;minor {}&quot;</span>, <span class="kw">crate</span>::version_minor());
+        <span class="macro">std::println!</span>(<span class="string">&quot;patch {}&quot;</span>, <span class="kw">crate</span>::version_patch());
     }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>rsqrt() {
-        <span class="macro">println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f32_rsqrt(<span class="number">4.0</span>));
-        <span class="macro">println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f64_rsqrt(<span class="number">4.0</span>));
+        <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f32_rsqrt(<span class="number">4.0</span>));
+        <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f64_rsqrt(<span class="number">4.0</span>));
     }
 }
 </code></pre></div></section></main></body></html>

@@ -270,11 +270,11 @@
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc8() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc8::new_low(POLY8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_low(POLY8);
         ctx.low(<span class="string">b&quot;&quot;</span>, INIT8);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc8::new_high(POLY8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_high(POLY8);
         ctx.high(<span class="string">b&quot;&quot;</span>, INIT8);
     }
 }
@@ -326,11 +326,11 @@
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc16() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc16::new_low(POLY16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_low(POLY16);
         ctx.low(<span class="string">b&quot;&quot;</span>, INIT16);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc16::new_high(POLY16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_high(POLY16);
         ctx.high(<span class="string">b&quot;&quot;</span>, INIT16);
     }
 }
@@ -382,11 +382,11 @@
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc32() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc32::new_low(POLY32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_low(POLY32);
         ctx.low(<span class="string">b&quot;&quot;</span>, INIT32);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc32::new_high(POLY32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_high(POLY32);
         ctx.high(<span class="string">b&quot;&quot;</span>, INIT32);
     }
 }
@@ -438,11 +438,11 @@
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc64() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc64::new_low(POLY64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_low(POLY64);
         ctx.low(<span class="string">b&quot;&quot;</span>, INIT64);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc64::new_high(POLY64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_high(POLY64);
         ctx.high(<span class="string">b&quot;&quot;</span>, INIT64);
     }
 }

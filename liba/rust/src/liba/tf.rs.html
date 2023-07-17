@@ -116,6 +116,9 @@
 <a href="#116" id="116">116</a>
 <a href="#117" id="117">117</a>
 <a href="#118" id="118">118</a>
+<a href="#119" id="119">119</a>
+<a href="#120" id="120">120</a>
+<a href="#121" id="121">121</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! transfer function
 
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
@@ -123,57 +126,57 @@
 
 <span class="doccomment">/// transfer function
 </span><span class="attr">#[repr(C)]
-</span><span class="kw">pub struct </span>TF {
+</span><span class="kw">pub struct </span>tf {
     <span class="doccomment">/// input
-    </span>u: <span class="kw-2">*mut </span>float,
+    </span>input: <span class="kw-2">*mut </span>float,
     <span class="doccomment">/// output
-    </span>v: <span class="kw-2">*mut </span>float,
+    </span>output: <span class="kw-2">*mut </span>float,
     <span class="doccomment">/// numerator
-    </span>num: <span class="kw-2">*const </span>float,
+    </span>num_p: <span class="kw-2">*const </span>float,
     <span class="doccomment">/// denominator
-    </span>den: <span class="kw-2">*const </span>float,
+    </span>den_p: <span class="kw-2">*const </span>float,
     <span class="doccomment">/// numerator number
-    </span>m: uint,
+    </span>num_n: uint,
     <span class="doccomment">/// denominator number
-    </span>n: uint,
+    </span>den_n: uint,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_tf_set_num(ctx: <span class="kw-2">*mut </span>TF, m: uint, num: <span class="kw-2">*const </span>float, u: <span class="kw-2">*mut </span>float);
-    <span class="kw">fn </span>a_tf_set_den(ctx: <span class="kw-2">*mut </span>TF, n: uint, den: <span class="kw-2">*const </span>float, v: <span class="kw-2">*mut </span>float);
+    <span class="kw">fn </span>a_tf_set_num(ctx: <span class="kw-2">*mut </span>tf, num_n: uint, num_p: <span class="kw-2">*const </span>float, input: <span class="kw-2">*mut </span>float);
+    <span class="kw">fn </span>a_tf_set_den(ctx: <span class="kw-2">*mut </span>tf, den_n: uint, den_p: <span class="kw-2">*const </span>float, output: <span class="kw-2">*mut </span>float);
     <span class="kw">fn </span>a_tf_init(
-        ctx: <span class="kw-2">*mut </span>TF,
-        m: uint,
-        num: <span class="kw-2">*const </span>float,
-        u: <span class="kw-2">*mut </span>float,
-        n: uint,
-        den: <span class="kw-2">*const </span>float,
-        v: <span class="kw-2">*mut </span>float,
-    ) -&gt; <span class="kw-2">*mut </span>TF;
-    <span class="kw">fn </span>a_tf_iter(ctx: <span class="kw-2">*mut </span>TF, x: float) -&gt; float;
-    <span class="kw">fn </span>a_tf_zero(ctx: <span class="kw-2">*mut </span>TF) -&gt; <span class="kw-2">*mut </span>TF;
+        ctx: <span class="kw-2">*mut </span>tf,
+        num_n: uint,
+        num_p: <span class="kw-2">*const </span>float,
+        input: <span class="kw-2">*mut </span>float,
+        den_n: uint,
+        den_p: <span class="kw-2">*const </span>float,
+        output: <span class="kw-2">*mut </span>float,
+    );
+    <span class="kw">fn </span>a_tf_iter(ctx: <span class="kw-2">*const </span>tf, x: float) -&gt; float;
+    <span class="kw">fn </span>a_tf_zero(ctx: <span class="kw-2">*const </span>tf);
 }
 
-<span class="kw">impl </span>TF {
+<span class="kw">impl </span>tf {
     <span class="doccomment">/// initialize function for transfer function
-    </span><span class="kw">pub fn </span>new(num: <span class="kw-2">&amp;</span>[float], u: <span class="kw-2">&amp;mut </span>[float], den: <span class="kw-2">&amp;</span>[float], v: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(num: <span class="kw-2">&amp;</span>[float], input: <span class="kw-2">&amp;mut </span>[float], den: <span class="kw-2">&amp;</span>[float], output: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
-            u: std::ptr::null_mut(),
-            v: std::ptr::null_mut(),
-            num: std::ptr::null(),
-            den: std::ptr::null(),
-            m: <span class="number">0</span>,
-            n: <span class="number">0</span>,
+            input: core::ptr::null_mut(),
+            output: core::ptr::null_mut(),
+            num_p: core::ptr::null(),
+            den_p: core::ptr::null(),
+            num_n: <span class="number">0</span>,
+            den_n: <span class="number">0</span>,
         };
         <span class="kw">unsafe </span>{
             a_tf_init(
                 <span class="kw-2">&amp;mut </span>ctx,
                 num.len() <span class="kw">as </span>uint,
                 num.as_ptr(),
-                u.as_mut_ptr(),
+                input.as_mut_ptr(),
                 den.len() <span class="kw">as </span>uint,
                 den.as_ptr(),
-                v.as_mut_ptr(),
+                output.as_mut_ptr(),
             )
         };
         ctx
@@ -186,52 +189,55 @@
 
     <span class="doccomment">/// zero clear function for transfer function
     </span><span class="kw">pub fn </span>zero(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_tf_zero(<span class="self">self</span>).as_mut().unwrap_unchecked() }
-    }
+        <span class="kw">unsafe </span>{ a_tf_zero(<span class="self">self</span>) };
+        <span class="self">self
+    </span>}
 
     <span class="doccomment">/// get input for transfer function
-    </span><span class="kw">pub fn </span>u(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.u, <span class="self">self</span>.m <span class="kw">as </span>usize) }
+    </span><span class="kw">pub fn </span>input(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+        <span class="kw">unsafe </span>{ core::slice::from_raw_parts(<span class="self">self</span>.input, <span class="self">self</span>.num_n <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// get numerator for transfer function
     </span><span class="kw">pub fn </span>num(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.num, <span class="self">self</span>.m <span class="kw">as </span>usize) }
+        <span class="kw">unsafe </span>{ core::slice::from_raw_parts(<span class="self">self</span>.num_p, <span class="self">self</span>.num_n <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// set numerator for transfer function
-    </span><span class="kw">pub fn </span>set_num(<span class="kw-2">&amp;mut </span><span class="self">self</span>, num: <span class="kw-2">&amp;</span>[float], u: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_tf_set_num(<span class="self">self</span>, num.len() <span class="kw">as </span>uint, num.as_ptr(), u.as_mut_ptr()) };
+    </span><span class="kw">pub fn </span>set_num(<span class="kw-2">&amp;mut </span><span class="self">self</span>, num: <span class="kw-2">&amp;</span>[float], input: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_tf_set_num(<span class="self">self</span>, num.len() <span class="kw">as </span>uint, num.as_ptr(), input.as_mut_ptr()) };
         <span class="self">self
     </span>}
 
     <span class="doccomment">/// get output for transfer function
-    </span><span class="kw">pub fn </span>v(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.v, <span class="self">self</span>.n <span class="kw">as </span>usize) }
+    </span><span class="kw">pub fn </span>output(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+        <span class="kw">unsafe </span>{ core::slice::from_raw_parts(<span class="self">self</span>.output, <span class="self">self</span>.den_n <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// get denominator for transfer function
     </span><span class="kw">pub fn </span>den(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
-        <span class="kw">unsafe </span>{ std::slice::from_raw_parts(<span class="self">self</span>.den, <span class="self">self</span>.n <span class="kw">as </span>usize) }
+        <span class="kw">unsafe </span>{ core::slice::from_raw_parts(<span class="self">self</span>.den_p, <span class="self">self</span>.den_n <span class="kw">as </span>usize) }
     }
 
     <span class="doccomment">/// set denominator for transfer function
-    </span><span class="kw">pub fn </span>set_den(<span class="kw-2">&amp;mut </span><span class="self">self</span>, den: <span class="kw-2">&amp;</span>[float], v: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_tf_set_den(<span class="self">self</span>, den.len() <span class="kw">as </span>uint, den.as_ptr(), v.as_mut_ptr()) };
+    </span><span class="kw">pub fn </span>set_den(<span class="kw-2">&amp;mut </span><span class="self">self</span>, den: <span class="kw-2">&amp;</span>[float], output: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_tf_set_den(<span class="self">self</span>, den.len() <span class="kw">as </span>uint, den.as_ptr(), output.as_mut_ptr()) };
         <span class="self">self
     </span>}
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>tf() {
+    <span class="kw">extern crate </span>std;
     <span class="kw">let </span>num = [<span class="number">6.59492796e-05</span>, <span class="number">6.54019884e-05</span>];
     <span class="kw">let </span>den = [-<span class="number">1.97530991</span>, <span class="number">0.97530991</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>u = [<span class="number">0.0</span>; <span class="number">2</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>v = [<span class="number">0.0</span>; <span class="number">2</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::TF::new(<span class="kw-2">&amp;</span>num, <span class="kw-2">&amp;mut </span>u, <span class="kw-2">&amp;</span>den, <span class="kw-2">&amp;mut </span>v);
-    <span class="macro">println!</span>(<span class="string">&quot;{} {}&quot;</span>, a.iter(<span class="number">10.0</span>), a.iter(<span class="number">10.0</span>));
-    <span class="macro">println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.num(), a.u());
-    <span class="macro">println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.den(), a.v());
+    <span class="kw">let </span><span class="kw-2">mut </span>input = [<span class="number">0.0</span>; <span class="number">2</span>];
+    <span class="kw">let </span><span class="kw-2">mut </span>output = [<span class="number">0.0</span>; <span class="number">2</span>];
+    <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::tf::tf::new(<span class="kw-2">&amp;</span>num, <span class="kw-2">&amp;mut </span>input, <span class="kw-2">&amp;</span>den, <span class="kw-2">&amp;mut </span>output);
+    a.set_num(<span class="kw-2">&amp;</span>num, <span class="kw-2">&amp;mut </span>input).set_den(<span class="kw-2">&amp;</span>den, <span class="kw-2">&amp;mut </span>output);
+    <span class="macro">std::println!</span>(<span class="string">&quot;{} {}&quot;</span>, a.iter(<span class="number">10.0</span>), a.iter(<span class="number">10.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.num(), a.input());
+    <span class="macro">std::println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.den(), a.output());
     a.zero();
 }
 </code></pre></div></section></main></body></html>

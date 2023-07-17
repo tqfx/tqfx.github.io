@@ -82,7 +82,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -101,7 +100,7 @@ Include dependency graph for pid.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/ddc/pid_8h__dep__incl.svg" width="232" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/ddc/pid_8h__dep__incl.svg" width="230" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../da/df0/pid_8h_source.html">Go to the source code of this file.</a></p>
@@ -111,48 +110,6 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for PID controller  <a href="../../de/def/structa__pid__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:gac670ec69079d64d2f0c1ffc3d6432eaa"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BITL</b>&#160;&#160;&#160;0x00</td></tr>
-<tr class="separator:gac670ec69079d64d2f0c1ffc3d6432eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0a2998787a025886e74999a222a43a07"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BIT</b>&#160;&#160;&#160;0x08</td></tr>
-<tr class="separator:ga0a2998787a025886e74999a222a43a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53ce50a64f4abbe5ed0a260b508e383e"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_BITH</b>&#160;&#160;&#160;(A_PID_NUM_BITL + A_PID_NUM_BIT)</td></tr>
-<tr class="separator:ga53ce50a64f4abbe5ed0a260b508e383e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f54799009ad69192a351dc1c25d6650"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_NUM_BITH) &amp; (~0U &lt;&lt; A_PID_NUM_BITL))</td></tr>
-<tr class="separator:ga8f54799009ad69192a351dc1c25d6650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe2951ee62217823befb9e68dd03e072"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_NUM_MAX</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_NUM_BIT))</td></tr>
-<tr class="separator:gabe2951ee62217823befb9e68dd03e072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2b1a8a118f517113358e2aa2f0efced2"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BITL</b>&#160;&#160;&#160;0x00</td></tr>
-<tr class="separator:ga2b1a8a118f517113358e2aa2f0efced2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gace1177fac36d5ca3edf994e24ebc88ae"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BIT</b>&#160;&#160;&#160;0x08</td></tr>
-<tr class="separator:gace1177fac36d5ca3edf994e24ebc88ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga087f9ef42fff5082a5558f1bc73b1d2d"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_BITH</b>&#160;&#160;&#160;(A_PID_REG_BITL + A_PID_REG_BIT)</td></tr>
-<tr class="separator:ga087f9ef42fff5082a5558f1bc73b1d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga743ecb5d2146ee5c712d7f975b9a0a55"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_REG_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_REG_BITH) &amp; (~0U &lt;&lt; A_PID_REG_BITL))</td></tr>
-<tr class="separator:ga743ecb5d2146ee5c712d7f975b9a0a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54f211796c4b362347ebcbb4bffa026b"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BITL</b>&#160;&#160;&#160;0x00</td></tr>
-<tr class="separator:ga54f211796c4b362347ebcbb4bffa026b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac07957d1e3a0bd1e487dafc6aedaae38"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BIT</b>&#160;&#160;&#160;0x02</td></tr>
-<tr class="separator:gac07957d1e3a0bd1e487dafc6aedaae38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga136d5f8f818739e9fa14af523b56d0d5"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_BITH</b>&#160;&#160;&#160;(A_PID_MODE_BITL + A_PID_MODE_BIT)</td></tr>
-<tr class="separator:ga136d5f8f818739e9fa14af523b56d0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad6614c69569887bbb75f5053f0c4bfd1"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_PID_MODE_MSK</b>&#160;&#160;&#160;(~(~0U &lt;&lt; A_PID_MODE_BITH) &amp; (~0U &lt;&lt; A_PID_MODE_BITL))</td></tr>
-<tr class="separator:gad6614c69569887bbb75f5053f0c4bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -176,75 +133,27 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaf4f13bf959d86e090fca7db847fb8a73"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:gaf4f13bf959d86e090fca7db847fb8a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa5e2aec03a46c48dd52583c9a3216a50"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_dt</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> dt)</td></tr>
-<tr class="separator:gaa5e2aec03a46c48dd52583c9a3216a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga91a5cc6260d9c80b4b7bb3989c1ba6ea"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga91a5cc6260d9c80b4b7bb3989c1ba6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga17f15657a8f1c32d500997f9672a6876"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kp</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kp)</td></tr>
-<tr class="separator:ga17f15657a8f1c32d500997f9672a6876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga61f8af468a2677ba0cb6e74705f58e52"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga61f8af468a2677ba0cb6e74705f58e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8b4b58a6caeca0c070c576ac57f3f8ea"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_ki</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> ki)</td></tr>
-<tr class="separator:ga8b4b58a6caeca0c070c576ac57f3f8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab7dd615a126660c591ec9fbeab979433"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:gab7dd615a126660c591ec9fbeab979433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b63d60175a969b248a4b520913f1d38"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_kd</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kd)</td></tr>
-<tr class="separator:ga0b63d60175a969b248a4b520913f1d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga93c7c97875387d9b7ad98e349e0039a3"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga93c7c97875387d9b7ad98e349e0039a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga65b75e6917bebd3e9f5ef37b80d4f5e3"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_num</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num)</td></tr>
-<tr class="separator:ga65b75e6917bebd3e9f5ef37b80d4f5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga499ff576f1a177986929590f111eabb7"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx)</td></tr>
-<tr class="separator:ga499ff576f1a177986929590f111eabb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fbcf579ee529976b2023c12b96ed6e8"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_reg</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int reg)</td></tr>
-<tr class="separator:ga3fbcf579ee529976b2023c12b96ed6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa1b531c1b5890e523c1829320aac7eca"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *mode)</td></tr>
-<tr class="separator:gaa1b531c1b5890e523c1829320aac7eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b6068226811df8387cd8d4e84d575f2"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int mode)</td></tr>
-<tr class="separator:ga7b6068226811df8387cd8d4e84d575f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga81522817201b54952c6aadade61eeea5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga81522817201b54952c6aadade61eeea5">a_pid_off</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga81522817201b54952c6aadade61eeea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn off PID controller  <br /></td></tr>
-<tr class="separator:ga81522817201b54952c6aadade61eeea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab91c5fccb5cd7816bc3b9c53851e275f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gab91c5fccb5cd7816bc3b9c53851e275f">a_pid_inc</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
-<tr class="memdesc:gab91c5fccb5cd7816bc3b9c53851e275f"><td class="mdescLeft">&#160;</td><td class="mdescRight">incremental PID controller  <br /></td></tr>
-<tr class="separator:gab91c5fccb5cd7816bc3b9c53851e275f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6118886475cc0962d8768d647af2a97c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga6118886475cc0962d8768d647af2a97c">a_pid_pos</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> max)</td></tr>
-<tr class="memdesc:ga6118886475cc0962d8768d647af2a97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">positional PID controller  <br /></td></tr>
-<tr class="separator:ga6118886475cc0962d8768d647af2a97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1d1eced5c4d6eba04163f071ffbe48c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga1d1eced5c4d6eba04163f071ffbe48c6">a_pid_kpid</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kp, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> ki, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kd)</td></tr>
-<tr class="memdesc:ga1d1eced5c4d6eba04163f071ffbe48c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <br /></td></tr>
-<tr class="separator:ga1d1eced5c4d6eba04163f071ffbe48c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga804909ec4ec39040047750a83d4538bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga804909ec4ec39040047750a83d4538bd">a_pid_chan</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *out, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *fdb, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *tmp, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *err)</td></tr>
-<tr class="memdesc:ga804909ec4ec39040047750a83d4538bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">set buffer for multichannel PID controller  <br /></td></tr>
-<tr class="separator:ga804909ec4ec39040047750a83d4538bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad41941a267d3ffb45e5ad8fb6b9d3754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gad41941a267d3ffb45e5ad8fb6b9d3754">a_pid_init</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> dt, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> min, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> max)</td></tr>
-<tr class="memdesc:gad41941a267d3ffb45e5ad8fb6b9d3754"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize function for PID controller, default is turn off  <br /></td></tr>
-<tr class="separator:gad41941a267d3ffb45e5ad8fb6b9d3754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae68f1cf3bc587e9b5e6d06a77128362b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gae68f1cf3bc587e9b5e6d06a77128362b">a_pid_init</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num)</td></tr>
+<tr class="memdesc:gae68f1cf3bc587e9b5e6d06a77128362b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize function for PID controller  <br /></td></tr>
+<tr class="separator:gae68f1cf3bc587e9b5e6d06a77128362b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeaee9d2d45ea766065c7af7141f0efa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gaeaee9d2d45ea766065c7af7141f0efa7">a_pid_chan</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, unsigned int num, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *out, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *fdb, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *tmp, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *err)</td></tr>
+<tr class="memdesc:gaeaee9d2d45ea766065c7af7141f0efa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set buffer for multichannel PID controller  <br /></td></tr>
+<tr class="separator:gaeaee9d2d45ea766065c7af7141f0efa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga960ef223e865dbf5bfd6bc7e0a68ccf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga960ef223e865dbf5bfd6bc7e0a68ccf6">a_pid_kpid</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kp, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> ki, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> kd)</td></tr>
+<tr class="memdesc:ga960ef223e865dbf5bfd6bc7e0a68ccf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <br /></td></tr>
+<tr class="separator:ga960ef223e865dbf5bfd6bc7e0a68ccf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gac2a0381b1a81b37f5835790a6e80fb7c">a_pid_outf</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> fdb)</td></tr>
 <tr class="memdesc:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for PID controller  <br /></td></tr>
 <tr class="separator:gac2a0381b1a81b37f5835790a6e80fb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga822dcaa031eb08d821f87899ea6d0ac0">a_pid_outp</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *fdb)</td></tr>
-<tr class="memdesc:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for multichannel PID controller  <br /></td></tr>
-<tr class="separator:ga822dcaa031eb08d821f87899ea6d0ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gaeb692d99b81a7b1729a62d40556c8c1d">a_pid_zero</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
-<tr class="memdesc:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero clear function for PID controller  <br /></td></tr>
-<tr class="separator:gaeb692d99b81a7b1729a62d40556c8c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad68840e3f2b4592b312aa01f0ec675d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gad68840e3f2b4592b312aa01f0ec675d4">a_pid_outp</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> const *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *fdb)</td></tr>
+<tr class="memdesc:gad68840e3f2b4592b312aa01f0ec675d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for multichannel PID controller  <br /></td></tr>
+<tr class="separator:gad68840e3f2b4592b312aa01f0ec675d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0d96f6b4bd3541bb16e040dbbd75f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gab0d96f6b4bd3541bb16e040dbbd75f6f">a_pid_iter</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *set, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *fdb)</td></tr>
+<tr class="memdesc:gab0d96f6b4bd3541bb16e040dbbd75f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for PID controller  <br /></td></tr>
+<tr class="separator:gab0d96f6b4bd3541bb16e040dbbd75f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga275892798a6003ff9add1800b37ffdc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga275892798a6003ff9add1800b37ffdc8">a_pid_zero</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx)</td></tr>
+<tr class="memdesc:ga275892798a6003ff9add1800b37ffdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero clear function for PID controller  <br /></td></tr>
+<tr class="separator:ga275892798a6003ff9add1800b37ffdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>proportional integral derivative controller </p>
@@ -255,7 +164,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid_set_mode</b> (<
 </p>
   <p class="formulaDsp">
 \[
- u(t) = K_p\left[e(t)+\frac{T}{T_i}\sum^k_{i=0}e(i)+\frac{T_d}{T}[e(k)-e(k-1)]\right]
+ u(k) = K_p\left[e(k)+\frac{T}{T_i}\sum^k_{i=0}e(i)+\frac{T_d}{T}[e(k)-e(k-1)]\right]
 \]
 </p>
 <ul>

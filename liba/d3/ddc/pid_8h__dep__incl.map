@@ -1,7 +1,7 @@
 <map id="pid.h" name="pid.h">
-<area shape="rect" id="Node000001" title="proportional integral derivative controller" alt="" coords="91,5,145,31"/>
-<area shape="rect" id="Node000002" href="$dd/d53/pid__expert_8h.html" title="expert proportional integral derivative controller" alt="" coords="5,79,108,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,43,69,80,65,77,97,40"/>
-<area shape="rect" id="Node000003" href="$d7/d30/pid__fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="132,79,227,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,40,171,77,167,80,135,43"/>
+<area shape="rect" id="Node000001" title="proportional integral derivative controller" alt="" coords="83,5,138,31"/>
+<area shape="rect" id="Node000002" href="$d2/d03/pid_2fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="5,79,96,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,43,62,80,58,77,90,40"/>
+<area shape="rect" id="Node000003" href="$de/d38/neuron_8h.html" title="single neuron proportional integral derivative controller" alt="" coords="121,79,223,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,40,164,77,160,80,128,43"/>
 </map>

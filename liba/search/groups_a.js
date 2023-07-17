@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['polynomial_0',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
-  ['polynomial_20trajectory_1',['polynomial trajectory',['../d1/d97/group__A__POLYTRACK.html',1,'']]],
-  ['proportional_20integral_20derivative_20controller_2',['proportional integral derivative controller',['../d8/da8/group__A__PID.html',1,'']]]
+  ['radial_20basis_20function_0',['radial basis function',['../dd/dd8/group__A__RBF.html',1,'']]],
+  ['red–black_20binary_20search_20tree_1',['red–black binary search tree',['../d7/d06/group__A__RBT.html',1,'']]]
 ];

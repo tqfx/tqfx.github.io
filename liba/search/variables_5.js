@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['f_0',['f',['../d2/d53/uniona__float__u.html#a0c62df0a670ad4e8486fc9e9e153aa8d',1,'a_float_u']]],
-  ['fdb_1',['fdb',['../de/def/structa__pid__s.html#a0861310c375e607f091016be7205f5d4',1,'a_pid_s']]]
+  ['ec_0',['ec',['../d9/dfe/structa__pid__neuron__s.html#a33e7ae72e65993a333661f47c1ab102b',1,'a_pid_neuron_s']]],
+  ['err_1',['err',['../de/def/structa__pid__s.html#a7c1ad8cd4cd2319ffad23791b55f2f08',1,'a_pid_s']]]
 ];

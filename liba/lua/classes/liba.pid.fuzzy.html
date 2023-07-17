@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
+  <li><a href="../classes/liba.pid.html">liba.pid</a></li>
+  <li><strong>liba.pid.fuzzy</strong></li>
+  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
+  <li><a href="../classes/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>liba.pid.fuzzy</code></h1>
+<p>fuzzy proportional integral derivative controller</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy">liba.pid.fuzzy</a></td>
+	<td class="summary">fuzzy proportional integral derivative controller</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:die">liba.pid.fuzzy:die ()</a></td>
+	<td class="summary">destructor for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:new">liba.pid.fuzzy:new ([kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="summary">constructor for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:init">liba.pid.fuzzy:init ([kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="summary">initialize function for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:rule">liba.pid.fuzzy:rule (me, mec, mkp, mki, mkd)</a></td>
+	<td class="summary">set rule base for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:kpid">liba.pid.fuzzy:kpid (kp, ki, kd)</a></td>
+	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:buff">liba.pid.fuzzy:buff (num)</a></td>
+	<td class="summary">set buffer for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:op">liba.pid.fuzzy:op (ctx, op)</a></td>
+	<td class="summary">set fuzzy relational operator for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:iter">liba.pid.fuzzy:iter (set, fdb)</a></td>
+	<td class="summary">calculate function for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.pid.fuzzy:zero">liba.pid.fuzzy:zero ()</a></td>
+	<td class="summary">zero clear function for fuzzy PID controller</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.pid.fuzzy"></a>
+    <strong>liba.pid.fuzzy</strong>
+    </dt>
+    <dd>
+    fuzzy proportional integral derivative controller
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">kp</span>
+         proportional constant
+        </li>
+        <li><span class="parameter">ki</span>
+         integral constant
+        </li>
+        <li><span class="parameter">kd</span>
+         derivative constant
+        </li>
+        <li><span class="parameter">summax</span>
+         maximum integral output
+        </li>
+        <li><span class="parameter">outmax</span>
+         maximum final output
+        </li>
+        <li><span class="parameter">outmin</span>
+         minimum final output
+        </li>
+        <li><span class="parameter">out</span>
+         controller output
+        </li>
+        <li><span class="parameter">fdb</span>
+         cache feedback
+        </li>
+        <li><span class="parameter">err</span>
+         cache error
+        </li>
+        <li><span class="parameter">mode</span>
+         controller mode
+        </li>
+        <li><span class="parameter">col</span>
+         number of columns in the rule base
+        </li>
+        <li><span class="parameter">buf</span>
+         maximum number triggered by the rule
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.pid.fuzzy:die"></a>
+    <strong>liba.pid.fuzzy:die ()</strong>
+    </dt>
+    <dd>
+    destructor for fuzzy PID controller
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:new"></a>
+    <strong>liba.pid.fuzzy:new ([kp][, ki][, kd], min, max[, sum])</strong>
+    </dt>
+    <dd>
+    constructor for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">kp</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">ki</span>
+            <span class="types"><span class="type">number</span></span>
+         integral constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">kd</span>
+            <span class="types"><span class="type">number</span></span>
+         derivative constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">min</span>
+            <span class="types"><span class="type">number</span></span>
+         minimum output
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">number</span></span>
+         maximum output
+        </li>
+        <li><span class="parameter">sum</span>
+            <span class="types"><span class="type">number</span></span>
+         maximum intergral output
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:init"></a>
+    <strong>liba.pid.fuzzy:init ([kp][, ki][, kd], min, max[, sum])</strong>
+    </dt>
+    <dd>
+    initialize function for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">kp</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">ki</span>
+            <span class="types"><span class="type">number</span></span>
+         integral constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">kd</span>
+            <span class="types"><span class="type">number</span></span>
+         derivative constant
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">min</span>
+            <span class="types"><span class="type">number</span></span>
+         minimum output
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">number</span></span>
+         maximum output
+        </li>
+        <li><span class="parameter">sum</span>
+            <span class="types"><span class="type">number</span></span>
+         maximum intergral output
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:rule"></a>
+    <strong>liba.pid.fuzzy:rule (me, mec, mkp, mki, mkd)</strong>
+    </dt>
+    <dd>
+    set rule base for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">me</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to membership function parameter table, terminated by 0
+        </li>
+        <li><span class="parameter">mec</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to membership function parameter table, terminated by 0
+        </li>
+        <li><span class="parameter">mkp</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to Kp's rule base table, the rule base must be square
+        </li>
+        <li><span class="parameter">mki</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to Ki's rule base table, the rule base must be square
+        </li>
+        <li><span class="parameter">mkd</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         points to Kd's rule base table, the rule base must be square
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:kpid"></a>
+    <strong>liba.pid.fuzzy:kpid (kp, ki, kd)</strong>
+    </dt>
+    <dd>
+    set proportional integral derivative constant for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">kp</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional constant
+        </li>
+        <li><span class="parameter">ki</span>
+            <span class="types"><span class="type">number</span></span>
+         integral constant
+        </li>
+        <li><span class="parameter">kd</span>
+            <span class="types"><span class="type">number</span></span>
+         derivative constant
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:buff"></a>
+    <strong>liba.pid.fuzzy:buff (num)</strong>
+    </dt>
+    <dd>
+    set buffer for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">num</span>
+            <span class="types"><span class="type">int</span></span>
+         maximum number triggered by the rule
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:op"></a>
+    <strong>liba.pid.fuzzy:op (ctx, op)</strong>
+    </dt>
+    <dd>
+    set fuzzy relational operator for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+         fuzzy PID controller userdata
+        </li>
+        <li><span class="parameter">op</span>
+            <span class="types"><span class="type">int</span></span>
+         enumeration for fuzzy PID controller operator
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:iter"></a>
+    <strong>liba.pid.fuzzy:iter (set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate function for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.pid.fuzzy:zero"></a>
+    <strong>liba.pid.fuzzy:zero ()</strong>
+    </dt>
+    <dd>
+    zero clear function for fuzzy PID controller
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-07-17 07:31:27 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -5,5 +5,5 @@ var searchData=
   ['floating_2dpoint_20number_2',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
   ['fuzzy_20operator_3',['fuzzy operator',['../d6/d0a/group__A__FUZZY.html',1,'']]],
   ['fuzzy_20proportional_20integral_20derivative_20controller_4',['fuzzy proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'']]],
-  ['fuzzy_2eh_5',['fuzzy.h',['../df/d2a/fuzzy_8h.html',1,'']]]
+  ['fuzzy_2eh_5',['fuzzy.h',['../df/d2a/fuzzy_8h.html',1,'(Global Namespace)'],['../d2/d03/pid_2fuzzy_8h.html',1,'(Global Namespace)']]]
 ];

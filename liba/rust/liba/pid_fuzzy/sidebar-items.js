@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["op"],"struct":["PID_fuzzy"]};

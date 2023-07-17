@@ -1,5 +1,5 @@
 <map id="mf.h" name="mf.h">
-<area shape="rect" id="Node000001" title="membership function" alt="" coords="27,5,78,31"/>
-<area shape="rect" id="Node000002" href="$d7/d30/pid__fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="5,79,100,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,44,55,79,50,79,50,44"/>
+<area shape="rect" id="Node000001" title="membership function" alt="" coords="25,5,76,31"/>
+<area shape="rect" id="Node000002" href="$d2/d03/pid_2fuzzy_8h.html" title="fuzzy proportional integral derivative controller" alt="" coords="5,79,96,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
 </map>

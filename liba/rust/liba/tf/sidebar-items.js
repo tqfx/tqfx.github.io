@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["TF"]};
+window.SIDEBAR_ITEMS = {"struct":["tf"]};

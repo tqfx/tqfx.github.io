@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
+  <li><a href="../classes/liba.pid.html">liba.pid</a></li>
+  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><strong>liba.polytrack3</strong></li>
+  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
+  <li><a href="../classes/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><strong>liba.polytrack3</strong></li>
+  <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
+  <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>liba.polytrack3</code></h1>
+<p>cubic polynomial trajectory</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3">liba.polytrack3</a></td>
+	<td class="summary">cubic polynomial trajectory</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:new">liba.polytrack3:new (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
+	<td class="summary">constructor for cubic polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:gen">liba.polytrack3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
+	<td class="summary">generation function for cubic polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:out">liba.polytrack3:out (dt)</a></td>
+	<td class="summary">calculate function for cubic polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:pos">liba.polytrack3:pos (dt)</a></td>
+	<td class="summary">calculate function for cubic polynomial trajectory position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:vel">liba.polytrack3:vel (dt)</a></td>
+	<td class="summary">calculate function for cubic polynomial trajectory velocity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#liba.polytrack3:acc">liba.polytrack3:acc (dt)</a></td>
+	<td class="summary">calculate function for cubic polynomial trajectory acceleration</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.polytrack3"></a>
+    <strong>liba.polytrack3</strong>
+    </dt>
+    <dd>
+    cubic polynomial trajectory
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">k</span>
+         quantity table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "liba.polytrack3:new"></a>
+    <strong>liba.polytrack3:new (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
+    </dt>
+    <dd>
+    constructor for cubic polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.polytrack3.html">polytrack3</a></span>
+        cubic polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.polytrack3:gen"></a>
+    <strong>liba.polytrack3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
+    </dt>
+    <dd>
+    generation function for cubic polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.polytrack3.html">polytrack3</a></span>
+        cubic polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.polytrack3:out"></a>
+    <strong>liba.polytrack3:out (dt)</strong>
+    </dt>
+    <dd>
+    calculate function for cubic polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+        {position,velocity,acceleration}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.polytrack3:pos"></a>
+    <strong>liba.polytrack3:pos (dt)</strong>
+    </dt>
+    <dd>
+    calculate function for cubic polynomial trajectory position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        position output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.polytrack3:vel"></a>
+    <strong>liba.polytrack3:vel (dt)</strong>
+    </dt>
+    <dd>
+    calculate function for cubic polynomial trajectory velocity
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        velocity output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "liba.polytrack3:acc"></a>
+    <strong>liba.polytrack3:acc (dt)</strong>
+    </dt>
+    <dd>
+    calculate function for cubic polynomial trajectory acceleration
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        acceleration output
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-07-17 07:31:27 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

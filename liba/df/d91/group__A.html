@@ -134,13 +134,15 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d8/da8/group__A__PID"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html">proportional integral derivative controller</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:df/db4/group__A__PID__EXPERT"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db4/group__A__PID__EXPERT.html">expert proportional integral derivative controller</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:dc/db1/group__A__PID__FUZZY"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html">fuzzy proportional integral derivative controller</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:df/df3/group__A__PID__NEURON"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df3/group__A__PID__NEURON.html">single neuron proportional integral derivative controller</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/de7/group__A__POLY"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de7/group__A__POLY.html">polynomial</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/d97/group__A__POLYTRACK"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/group__A__POLYTRACK.html">polynomial trajectory</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/dd8/group__A__RBF"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd8/group__A__RBF.html">radial basis function</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d7/d06/group__A__RBT"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d06/group__A__RBT.html">red–black binary search tree</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +174,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga31fab031905440652e6cbf4bf6243465"><td class="memItemLeft" align="right" valign="top"><a id="ga31fab031905440652e6cbf4bf6243465" name="ga31fab031905440652e6cbf4bf6243465"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_cast_c</b>(T,  x)&#160;&#160;&#160;const_cast&lt;T&gt;(x)</td></tr>
 <tr class="separator:ga31fab031905440652e6cbf4bf6243465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74704b15c41a72d82b01d3e22b26d485"><td class="memItemLeft" align="right" valign="top"><a id="ga74704b15c41a72d82b01d3e22b26d485" name="ga74704b15c41a72d82b01d3e22b26d485"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_CASE_3</b>(a,  b,  c)&#160;&#160;&#160;a##b##c</td></tr>
+<tr class="separator:ga74704b15c41a72d82b01d3e22b26d485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d1bcd2c45583dc968922537df06959"><td class="memItemLeft" align="right" valign="top"><a id="ga87d1bcd2c45583dc968922537df06959" name="ga87d1bcd2c45583dc968922537df06959"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_CASE_2</b>(a,  b)&#160;&#160;&#160;a##b</td></tr>
+<tr class="separator:ga87d1bcd2c45583dc968922537df06959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15b0b89281c485a3ccd8d6f3a007633c"><td class="memItemLeft" align="right" valign="top"><a id="ga15b0b89281c485a3ccd8d6f3a007633c" name="ga15b0b89281c485a3ccd8d6f3a007633c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_CASE_1</b>(a)&#160;&#160;&#160;#a</td></tr>
+<tr class="separator:ga15b0b89281c485a3ccd8d6f3a007633c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4944644e353eab67418be2122c76bdd1"><td class="memItemLeft" align="right" valign="top"><a id="ga4944644e353eab67418be2122c76bdd1" name="ga4944644e353eab67418be2122c76bdd1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_NULL</b>&#160;&#160;&#160;NULL</td></tr>
 <tr class="separator:ga4944644e353eab67418be2122c76bdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,19 +405,19 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_T</b>&#160;&#160;&#160;float</td></tr>
 <tr class="separator:ga8d5ec95928adefeacc4e82a40de4c7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb20e876e1b82cbd602d6df6e62ec97e"><td class="memItemLeft" align="right" valign="top"><a id="gadb20e876e1b82cbd602d6df6e62ec97e" name="gadb20e876e1b82cbd602d6df6e62ec97e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_C</b>(X)&#160;&#160;&#160;X##F</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_C</b>(X)&#160;&#160;&#160;A_CASE_2(X, F)</td></tr>
 <tr class="separator:gadb20e876e1b82cbd602d6df6e62ec97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gace8f4f3db80b9e610ae86654ef72b6c3"><td class="memItemLeft" align="right" valign="top"><a id="gace8f4f3db80b9e610ae86654ef72b6c3" name="gace8f4f3db80b9e610ae86654ef72b6c3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F</b>(F)&#160;&#160;&#160;F##f</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F</b>(F)&#160;&#160;&#160;A_CASE_2(F, f)</td></tr>
 <tr class="separator:gace8f4f3db80b9e610ae86654ef72b6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga039d5333824e0d7ce7aeab9a5d522803"><td class="memItemLeft" align="right" valign="top"><a id="ga039d5333824e0d7ce7aeab9a5d522803" name="ga039d5333824e0d7ce7aeab9a5d522803"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F1</b>(F,  a)&#160;&#160;&#160;F##f(a)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F1</b>(F,  a)&#160;&#160;&#160;A_CASE_2(F, f)(a)</td></tr>
 <tr class="separator:ga039d5333824e0d7ce7aeab9a5d522803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3d68d8b2254598fe02ccafea07709bb3"><td class="memItemLeft" align="right" valign="top"><a id="ga3d68d8b2254598fe02ccafea07709bb3" name="ga3d68d8b2254598fe02ccafea07709bb3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F2</b>(F,  a,  b)&#160;&#160;&#160;F##f(a, b)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F2</b>(F,  a,  b)&#160;&#160;&#160;A_CASE_2(F, f)(a, b)</td></tr>
 <tr class="separator:ga3d68d8b2254598fe02ccafea07709bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1c7c1790ec178c768490d5c1b927c8e5"><td class="memItemLeft" align="right" valign="top"><a id="ga1c7c1790ec178c768490d5c1b927c8e5" name="ga1c7c1790ec178c768490d5c1b927c8e5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F3</b>(F,  a,  b,  c)&#160;&#160;&#160;F##f(a, b, c)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_F3</b>(F,  a,  b,  c)&#160;&#160;&#160;A_CASE_2(F, f)(a, b, c)</td></tr>
 <tr class="separator:ga1c7c1790ec178c768490d5c1b927c8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga05f5948498c3f4fd7635c2aa62afe2b1"><td class="memItemLeft" align="right" valign="top"><a id="ga05f5948498c3f4fd7635c2aa62afe2b1" name="ga05f5948498c3f4fd7635c2aa62afe2b1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_DIG</b>&#160;&#160;&#160;FLT_DIG</td></tr>
@@ -592,42 +603,33 @@ Functions</h2></td></tr>
 <tr class="memitem:gab1509d1d155a436e609bd0ffd4a92940"><td class="memItemLeft" align="right" valign="top"><a id="gab1509d1d155a436e609bd0ffd4a92940" name="gab1509d1d155a436e609bd0ffd4a92940"></a>
 <a class="el" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_f64_into</b> (<a class="el" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x)</td></tr>
 <tr class="separator:gab1509d1d155a436e609bd0ffd4a92940"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3480be7e330b2d4123107b87c4a5eb0b"><td class="memItemLeft" align="right" valign="top"><a id="ga3480be7e330b2d4123107b87c4a5eb0b" name="ga3480be7e330b2d4123107b87c4a5eb0b"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_copy</b> (void *A_RESTRICT dst, void const *A_RESTRICT src, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memitem:ga3480be7e330b2d4123107b87c4a5eb0b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga3480be7e330b2d4123107b87c4a5eb0b">a_copy</a> (void *A_RESTRICT dst, void const *A_RESTRICT src, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memdesc:ga3480be7e330b2d4123107b87c4a5eb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy one buffer to another  <br /></td></tr>
 <tr class="separator:ga3480be7e330b2d4123107b87c4a5eb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a9c76aa521d1216c17c7a8dfc1fe27e"><td class="memItemLeft" align="right" valign="top"><a id="ga9a9c76aa521d1216c17c7a8dfc1fe27e" name="ga9a9c76aa521d1216c17c7a8dfc1fe27e"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_move</b> (void *dst, void const *src, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memitem:ga9a9c76aa521d1216c17c7a8dfc1fe27e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga9a9c76aa521d1216c17c7a8dfc1fe27e">a_move</a> (void *dst, void const *src, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memdesc:ga9a9c76aa521d1216c17c7a8dfc1fe27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">move one buffer to another  <br /></td></tr>
 <tr class="separator:ga9a9c76aa521d1216c17c7a8dfc1fe27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafad11ec93b93addfa6ac7e19f82dacbc"><td class="memItemLeft" align="right" valign="top"><a id="gafad11ec93b93addfa6ac7e19f82dacbc" name="gafad11ec93b93addfa6ac7e19f82dacbc"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_fill</b> (void *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, int val)</td></tr>
+<tr class="memitem:gafad11ec93b93addfa6ac7e19f82dacbc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc">a_fill</a> (void *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, int val)</td></tr>
+<tr class="memdesc:gafad11ec93b93addfa6ac7e19f82dacbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill a buffer with a character  <br /></td></tr>
 <tr class="separator:gafad11ec93b93addfa6ac7e19f82dacbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga70d61823629443f3555c86191672134a"><td class="memItemLeft" align="right" valign="top"><a id="ga70d61823629443f3555c86191672134a" name="ga70d61823629443f3555c86191672134a"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_zero</b> (void *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memitem:ga70d61823629443f3555c86191672134a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga70d61823629443f3555c86191672134a">a_zero</a> (void *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
+<tr class="memdesc:ga70d61823629443f3555c86191672134a"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill a buffer with zero  <br /></td></tr>
 <tr class="separator:ga70d61823629443f3555c86191672134a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga01331a677ef4be4e91c129e93a80b64c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c">a_swap</a> (void *lhs, void *rhs, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz)</td></tr>
 <tr class="memdesc:ga01331a677ef4be4e91c129e93a80b64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap two different memory blocks of the same size  <br /></td></tr>
 <tr class="separator:ga01331a677ef4be4e91c129e93a80b64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9f962a8b824ef1bdebb98e270eb20b0"><td class="memItemLeft" align="right" valign="top"><a id="gab9f962a8b824ef1bdebb98e270eb20b0" name="gab9f962a8b824ef1bdebb98e270eb20b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swap1</b> (void *lhs, void *rhs)</td></tr>
-<tr class="separator:gab9f962a8b824ef1bdebb98e270eb20b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fdf48205090960b6aa8e69f8165a2ff"><td class="memItemLeft" align="right" valign="top"><a id="ga3fdf48205090960b6aa8e69f8165a2ff" name="ga3fdf48205090960b6aa8e69f8165a2ff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swap2</b> (void *lhs, void *rhs)</td></tr>
-<tr class="separator:ga3fdf48205090960b6aa8e69f8165a2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga015b13c7320fc3e1a97a9c39c19562e5"><td class="memItemLeft" align="right" valign="top"><a id="ga015b13c7320fc3e1a97a9c39c19562e5" name="ga015b13c7320fc3e1a97a9c39c19562e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swap4</b> (void *lhs, void *rhs)</td></tr>
-<tr class="separator:ga015b13c7320fc3e1a97a9c39c19562e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga65af3529d963d7e62d14c81578caddac"><td class="memItemLeft" align="right" valign="top"><a id="ga65af3529d963d7e62d14c81578caddac" name="ga65af3529d963d7e62d14c81578caddac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swap8</b> (void *lhs, void *rhs)</td></tr>
-<tr class="separator:ga65af3529d963d7e62d14c81578caddac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga868d81779b494a9c7d5f271089aac07b"><td class="memItemLeft" align="right" valign="top"><a id="ga868d81779b494a9c7d5f271089aac07b" name="ga868d81779b494a9c7d5f271089aac07b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lhs, void *rhs)</td></tr>
-<tr class="separator:ga868d81779b494a9c7d5f271089aac07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0707786f2aa95b2b25c77fc992ccbeed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga0707786f2aa95b2b25c77fc992ccbeed">a_hash_bkdr</a> (void const *str, <a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val)</td></tr>
 <tr class="memdesc:ga0707786f2aa95b2b25c77fc992ccbeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brian Kernighan and Dennis Ritchie.  <br /></td></tr>
 <tr class="separator:ga0707786f2aa95b2b25c77fc992ccbeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e9d173812542f2ca94c584de9265d6e"><td class="memItemLeft" align="right" valign="top"><a id="ga6e9d173812542f2ca94c584de9265d6e" name="ga6e9d173812542f2ca94c584de9265d6e"></a>
-<a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_hash_bkdrn</b> (void const *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val)</td></tr>
+<tr class="memitem:ga6e9d173812542f2ca94c584de9265d6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga6e9d173812542f2ca94c584de9265d6e">a_hash_bkdrn</a> (void const *ptr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val)</td></tr>
+<tr class="memdesc:ga6e9d173812542f2ca94c584de9265d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brian Kernighan and Dennis Ritchie.  <br /></td></tr>
 <tr class="separator:ga6e9d173812542f2ca94c584de9265d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b6dda381741196cb05e6f295a35d965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga2b6dda381741196cb05e6f295a35d965">a_float_save</a> (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *cache_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> cache_n)</td></tr>
+<tr class="memdesc:ga2b6dda381741196cb05e6f295a35d965"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array and save the cache array  <br /></td></tr>
+<tr class="separator:ga2b6dda381741196cb05e6f295a35d965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75b6ec9089219da696045a2195737946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946">a_float_roll</a> (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *shift_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> shift_n)</td></tr>
+<tr class="memdesc:ga75b6ec9089219da696045a2195737946"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array circularly, array&gt;&gt;shift  <br /></td></tr>
+<tr class="separator:ga75b6ec9089219da696045a2195737946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -727,7 +729,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga202083c58f3d38f0cf5349f0d76196db">a_byte_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga202083c58f3d38f0cf5349f0d76196db">a_byte_t</a> . </p>
 
 </div>
 </div>
@@ -771,7 +773,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaddeaa52897ce3c9d619bb7cbe672533a">a_c8_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaddeaa52897ce3c9d619bb7cbe672533a">a_c8_t</a> . </p>
 
 </div>
 </div>
@@ -885,7 +887,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga6dd2d2e04a3fc55cb72a6bb3bbb145ee">a_diff_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga6dd2d2e04a3fc55cb72a6bb3bbb145ee">a_diff_t</a> . </p>
 
 </div>
 </div>
@@ -929,7 +931,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> . </p>
 
 </div>
 </div>
@@ -1031,7 +1033,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> . </p>
 
 </div>
 </div>
@@ -1329,7 +1331,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#gab91684ff78945077c566502e1bdf72e7">a_i16_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#gab91684ff78945077c566502e1bdf72e7">a_i16_t</a> . </p>
 
 </div>
 </div>
@@ -1373,7 +1375,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaa82b3d511c83f259a7c34fa8b9931f8c">a_i32_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaa82b3d511c83f259a7c34fa8b9931f8c">a_i32_t</a> . </p>
 
 </div>
 </div>
@@ -1417,7 +1419,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga181611e7519001d01651db90536411d6">a_i64_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga181611e7519001d01651db90536411d6">a_i64_t</a> . </p>
 
 </div>
 </div>
@@ -1461,7 +1463,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga9bd307545f0adad33442a5f4d2976e21">a_i8_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga9bd307545f0adad33442a5f4d2976e21">a_i8_t</a> . </p>
 
 </div>
 </div>
@@ -1505,7 +1507,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga6c749eb4cf5f90cc40ced4c9c981f2b5">a_imax_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga6c749eb4cf5f90cc40ced4c9c981f2b5">a_imax_t</a> . </p>
 
 </div>
 </div>
@@ -1549,7 +1551,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga4eede463b3f3ea9f1ccc6afa6a44380b">a_int_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga4eede463b3f3ea9f1ccc6afa6a44380b">a_int_t</a> . </p>
 
 </div>
 </div>
@@ -1593,7 +1595,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga04bfc669b92fa941426118317583f978">a_iptr_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga04bfc669b92fa941426118317583f978">a_iptr_t</a> . </p>
 
 </div>
 </div>
@@ -1742,7 +1744,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga16e8364dd56d657de5c4298c61343280">a_long_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga16e8364dd56d657de5c4298c61343280">a_long_t</a> . </p>
 
 </div>
 </div>
@@ -1823,7 +1825,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga581a123ba05a207dcd0c2ffbaca12b59">a_shrt_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga581a123ba05a207dcd0c2ffbaca12b59">a_shrt_t</a> . </p>
 
 </div>
 </div>
@@ -1867,7 +1869,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> . </p>
 
 </div>
 </div>
@@ -1911,7 +1913,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga5de19d621518d17d7da56b1cc924117d">a_u16_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga5de19d621518d17d7da56b1cc924117d">a_u16_t</a> . </p>
 
 </div>
 </div>
@@ -1955,7 +1957,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> . </p>
 
 </div>
 </div>
@@ -1999,7 +2001,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> . </p>
 
 </div>
 </div>
@@ -2043,7 +2045,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga534b4f5d286d90e05830f11843494353">a_u8_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga534b4f5d286d90e05830f11843494353">a_u8_t</a> . </p>
 
 </div>
 </div>
@@ -2087,7 +2089,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga44f550a24e3ec7bd66700b00ff269fea">a_uint_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga44f550a24e3ec7bd66700b00ff269fea">a_uint_t</a> . </p>
 
 </div>
 </div>
@@ -2131,7 +2133,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga1ed1bcc6de295a39d2b7c46d21847851">a_ulong_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga1ed1bcc6de295a39d2b7c46d21847851">a_ulong_t</a> . </p>
 
 </div>
 </div>
@@ -2175,7 +2177,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> . </p>
 
 </div>
 </div>
@@ -2219,7 +2221,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga5ae6fe33a35c06073ac45e01e9127afc">a_uptr_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga5ae6fe33a35c06073ac45e01e9127afc">a_uptr_t</a> . </p>
 
 </div>
 </div>
@@ -2263,7 +2265,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
         </tr>
       </table>
 </div><div class="memdoc">
-<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga259ef4f523519ad39697ad0723c8b033">a_ushrt_t</a> _ </p>
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga259ef4f523519ad39697ad0723c8b033">a_ushrt_t</a> . </p>
 
 </div>
 </div>
@@ -2308,6 +2310,198 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga3480be7e330b2d4123107b87c4a5eb0b" name="ga3480be7e330b2d4123107b87c4a5eb0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3480be7e330b2d4123107b87c4a5eb0b">&#9670;&#160;</a></span>a_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_copy </td>
+          <td>(</td>
+          <td class="paramtype">void *A_RESTRICT&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void const *A_RESTRICT&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>siz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copy one buffer to another </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dst</td><td>pointer to the object to copy to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>pointer to the object to copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">siz</td><td>number of bytes to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of dest </dd></dl>
+
+</div>
+</div>
+<a id="gafad11ec93b93addfa6ac7e19f82dacbc" name="gafad11ec93b93addfa6ac7e19f82dacbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafad11ec93b93addfa6ac7e19f82dacbc">&#9670;&#160;</a></span>a_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_fill </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>siz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fill a buffer with a character </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the object to fill </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">siz</td><td>number of bytes to fill </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>fill byte </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of dest </dd></dl>
+
+</div>
+</div>
+<a id="ga75b6ec9089219da696045a2195737946" name="ga75b6ec9089219da696045a2195737946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75b6ec9089219da696045a2195737946">&#9670;&#160;</a></span>a_float_roll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_roll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
+          <td class="paramname"><em>array_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>array_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
+          <td class="paramname"><em>shift_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>shift_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>roll back the elements of a float array circularly, array&gt;&gt;shift </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_p</td><td>points to a shift array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_n</td><td>number of a shift array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2b6dda381741196cb05e6f295a35d965" name="ga2b6dda381741196cb05e6f295a35d965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b6dda381741196cb05e6f295a35d965">&#9670;&#160;</a></span>a_float_save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *&#160;</td>
+          <td class="paramname"><em>array_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>array_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const *&#160;</td>
+          <td class="paramname"><em>cache_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>cache_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>roll back the elements of a float array and save the cache array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_p</td><td>points to a cache array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_n</td><td>number of a cache array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga0707786f2aa95b2b25c77fc992ccbeed" name="ga0707786f2aa95b2b25c77fc992ccbeed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0707786f2aa95b2b25c77fc992ccbeed">&#9670;&#160;</a></span>a_hash_bkdr()</h2>
 
@@ -2343,6 +2537,96 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>hash value </dd></dl>
+
+</div>
+</div>
+<a id="ga6e9d173812542f2ca94c584de9265d6e" name="ga6e9d173812542f2ca94c584de9265d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e9d173812542f2ca94c584de9265d6e">&#9670;&#160;</a></span>a_hash_bkdrn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> a_hash_bkdrn </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>siz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Brian Kernighan and Dennis Ritchie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>points to string to be processed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">siz</td><td>length of string to be processed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>initial value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>hash value </dd></dl>
+
+</div>
+</div>
+<a id="ga9a9c76aa521d1216c17c7a8dfc1fe27e" name="ga9a9c76aa521d1216c17c7a8dfc1fe27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a9c76aa521d1216c17c7a8dfc1fe27e">&#9670;&#160;</a></span>a_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_move </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>siz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>move one buffer to another </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dst</td><td>pointer to the object to copy to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>pointer to the object to copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">siz</td><td>number of bytes to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of dest </dd></dl>
 
 </div>
 </div>
@@ -2387,6 +2671,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_swapz</b> (void *lh
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga70d61823629443f3555c86191672134a" name="ga70d61823629443f3555c86191672134a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga70d61823629443f3555c86191672134a">&#9670;&#160;</a></span>a_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_zero </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>&#160;</td>
+          <td class="paramname"><em>siz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fill a buffer with zero </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the object to fill </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">siz</td><td>number of bytes to fill </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of dest </dd></dl>
 
 </div>
 </div>
