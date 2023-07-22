@@ -168,7 +168,7 @@ var searchData=
   ['a_5fpid_5fzero_165',['a_pid_zero',['../d8/da8/group__A__PID.html#ga275892798a6003ff9add1800b37ffdc8',1,'pid.h']]],
   ['a_5fpoly_5feval_166',['a_poly_eval',['../d6/de7/group__A__POLY.html#ga72897f5338d7c5be57d3a4560174be05',1,'poly.h']]],
   ['a_5fpoly_5fevar_167',['a_poly_evar',['../d6/de7/group__A__POLY.html#ga35ffe7ebd473b1d6f94dcd237e1f4cd2',1,'poly.h']]],
-  ['a_5fpoly_5finv_168',['a_poly_inv',['../d6/de7/group__A__POLY.html#ga55556dc4b5fa2d7bb77d671cde068049',1,'poly.h']]],
+  ['a_5fpoly_5fswap_168',['a_poly_swap',['../d6/de7/group__A__POLY.html#ga1034f7accdf38758b42e94887a7e169f',1,'poly.h']]],
   ['a_5fpolytrack3_5facc_169',['a_polytrack3_acc',['../d1/d97/group__A__POLYTRACK.html#ga2765325b388ac16e2b90c03005eef50c',1,'polytrack.h']]],
   ['a_5fpolytrack3_5fgen_170',['a_polytrack3_gen',['../d1/d97/group__A__POLYTRACK.html#gaf2bbf738b65c1cdeecfc9aba3730f930',1,'polytrack.h']]],
   ['a_5fpolytrack3_5fout_171',['a_polytrack3_out',['../d1/d97/group__A__POLYTRACK.html#ga85d6680c00a621fdd0d18a2884ce6847',1,'polytrack.h']]],
