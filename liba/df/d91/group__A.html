@@ -162,7 +162,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gad19d4682c55e2cde2b9768f60b5e86ca">A_ASSERT_BUILD</a>(x)&#160;&#160;&#160;(sizeof(char[1 - 2 * !(x)]) - 1)</td></tr>
+<tr class="memitem:gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gad19d4682c55e2cde2b9768f60b5e86ca">A_ASSERT_BUILD</a>(x)&#160;&#160;&#160;((void)(sizeof(char[1 - 2 * !(x)]) - 1))</td></tr>
 <tr class="separator:gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f6a4b67ef4ab58e54b308e750b5839c"><td class="memItemLeft" align="right" valign="top"><a id="ga7f6a4b67ef4ab58e54b308e750b5839c" name="ga7f6a4b67ef4ab58e54b308e750b5839c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_cast_r</b>(T,  x)&#160;&#160;&#160;reinterpret_cast&lt;T&gt;(x)</td></tr>
@@ -709,7 +709,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;(sizeof(char[1 - 2 * !(x)]) - 1)</td>
+          <td>&#160;&#160;&#160;((void)(sizeof(char[1 - 2 * !(x)]) - 1))</td>
         </tr>
       </table>
 </div><div class="memdoc">

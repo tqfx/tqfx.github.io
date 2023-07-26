@@ -87,7 +87,8 @@ $(function() {
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">a.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -114,9 +115,9 @@ Macros</h2></td></tr>
 <tr class="memitem:aeafc9a0aa993eeb2cedf5f10a5f835eb"><td class="memItemLeft" align="right" valign="top"><a id="aeafc9a0aa993eeb2cedf5f10a5f835eb" name="aeafc9a0aa993eeb2cedf5f10a5f835eb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_new</b>(T,  ptr,  num)&#160;&#160;&#160;a_cast_s(T *, a_alloc(ptr, sizeof(T) * (num)))</td></tr>
 <tr class="separator:aeafc9a0aa993eeb2cedf5f10a5f835eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a904278928db57e3c74ed0ee4bdcbabb7"><td class="memItemLeft" align="right" valign="top"><a id="a904278928db57e3c74ed0ee4bdcbabb7" name="a904278928db57e3c74ed0ee4bdcbabb7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_die</b>(T,  ptr)&#160;&#160;&#160;a_cast_s(T *, a_alloc(ptr, 0))</td></tr>
-<tr class="separator:a904278928db57e3c74ed0ee4bdcbabb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78f4da02e1b8bb1510e2290f02e8ac1"><td class="memItemLeft" align="right" valign="top"><a id="ae78f4da02e1b8bb1510e2290f02e8ac1" name="ae78f4da02e1b8bb1510e2290f02e8ac1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_die</b>(ptr)&#160;&#160;&#160;a_alloc(ptr, 0)</td></tr>
+<tr class="separator:ae78f4da02e1b8bb1510e2290f02e8ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -126,15 +127,15 @@ typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><b>a_alloc_f
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afcd11159a7b9d3a65c21a8807131c0f1"><td class="memItemLeft" align="right" valign="top"><a id="afcd11159a7b9d3a65c21a8807131c0f1" name="afcd11159a7b9d3a65c21a8807131c0f1"></a>
-a_alloc_f&#160;</td><td class="memItemRight" valign="bottom"><b>a_alloc_reg</b> (a_alloc_f alloc)</td></tr>
-<tr class="separator:afcd11159a7b9d3a65c21a8807131c0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8f52bb0722b1baa81b7e9fdc03398d6"><td class="memItemLeft" align="right" valign="top"><a id="ac8f52bb0722b1baa81b7e9fdc03398d6" name="ac8f52bb0722b1baa81b7e9fdc03398d6"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_alloc</b> (void *addr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size)</td></tr>
-<tr class="separator:ac8f52bb0722b1baa81b7e9fdc03398d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec1c771c194a8490fb94df34c0a13cda"><td class="memItemLeft" align="right" valign="top"><a id="aec1c771c194a8490fb94df34c0a13cda" name="aec1c771c194a8490fb94df34c0a13cda"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>a_alloc_</b> (void *addr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size)</td></tr>
 <tr class="separator:aec1c771c194a8490fb94df34c0a13cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa3af2c3f5bdd00630e885eee7b31ad8f"><td class="memItemLeft" align="right" valign="top"><a id="aa3af2c3f5bdd00630e885eee7b31ad8f" name="aa3af2c3f5bdd00630e885eee7b31ad8f"></a>
+a_alloc_f&#160;</td><td class="memItemRight" valign="bottom"><b>a_alloc</b></td></tr>
+<tr class="separator:aa3af2c3f5bdd00630e885eee7b31ad8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>algorithm library on host </p>

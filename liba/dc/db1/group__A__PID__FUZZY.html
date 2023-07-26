@@ -135,16 +135,13 @@ typedef struct <a class="el" href="../../d5/d1d/structa__pid__fuzzy__s.html">a_p
 Enumerations</h2></td></tr>
 <tr class="memitem:ga717bd50b8de6f6169bde4d7ac073ceef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga717bd50b8de6f6169bde4d7ac073ceef">a_pid_fuzzy_e</a> { <br />
 &#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefabf0c4a73b243ab94d15e52dfa79ecdf6">A_PID_FUZZY_EQU</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefab0f1adda8e06954aea9cbfab1560fbf9">A_PID_FUZZY_AND_DEFAULT</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa4cbdd8c1d171cf7d6ed77ca45fc9bcc2">A_PID_FUZZY_AND_ALGEBRA</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa170d1ff15043263cecb32e7d20d01643">A_PID_FUZZY_AND_BOUNDED</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa0eedd0967ae258997a93483246e7d02d">A_PID_FUZZY_CAP</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefaf4cb1140bac298cb0ab78c42533b54ec">A_PID_FUZZY_CAP_ALGEBRA</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa27893fc7f7f2ceb9b63b1e1fe875d0ba">A_PID_FUZZY_CAP_BOUNDED</a>
 , <br />
-&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa2028335919acb9d7ec5a47de87a26b88">A_PID_FUZZY_OR_DEFAULT</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa5db260b25c9f551a9744b077246caed9">A_PID_FUZZY_OR_ALGEBRA</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa0c192da034650744463eb8ef5953ef1e">A_PID_FUZZY_OR_BOUNDED</a>
-, <b>A_PID_FUZZY_AND</b> = A_PID_FUZZY_AND_DEFAULT
-, <br />
-&#160;&#160;<b>A_PID_FUZZY_OR</b> = A_PID_FUZZY_OR_DEFAULT
+&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa528655813bbbfd40eee65d6e35537301">A_PID_FUZZY_CUP</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa2b97833ed0ef93fecc2b794f08bb7e8a">A_PID_FUZZY_CUP_ALGEBRA</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga717bd50b8de6f6169bde4d7ac073ceefa7eb02b809362f9480244f5b228208ccf">A_PID_FUZZY_CUP_BOUNDED</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ga717bd50b8de6f6169bde4d7ac073ceef"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance enumeration for fuzzy PID controller operator  <a href="../../dc/db1/group__A__PID__FUZZY.html#ga717bd50b8de6f6169bde4d7ac073ceef">More...</a><br /></td></tr>
@@ -211,19 +208,19 @@ Variables</h2></td></tr>
 
 <p>instance enumeration for fuzzy PID controller operator </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefabf0c4a73b243ab94d15e52dfa79ecdf6" name="gga717bd50b8de6f6169bde4d7ac073ceefabf0c4a73b243ab94d15e52dfa79ecdf6"></a>A_PID_FUZZY_EQU&#160;</td><td class="fielddoc"><p>sqrt(l,r)*sqrt(1-(1-r)*(1-r)) </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefabf0c4a73b243ab94d15e52dfa79ecdf6" name="gga717bd50b8de6f6169bde4d7ac073ceefabf0c4a73b243ab94d15e52dfa79ecdf6"></a>A_PID_FUZZY_EQU&#160;</td><td class="fielddoc"><p>sqrt(a,b)*sqrt(1-(1-a)*(1-b)) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefab0f1adda8e06954aea9cbfab1560fbf9" name="gga717bd50b8de6f6169bde4d7ac073ceefab0f1adda8e06954aea9cbfab1560fbf9"></a>A_PID_FUZZY_AND_DEFAULT&#160;</td><td class="fielddoc"><p>min(l,r) </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa0eedd0967ae258997a93483246e7d02d" name="gga717bd50b8de6f6169bde4d7ac073ceefa0eedd0967ae258997a93483246e7d02d"></a>A_PID_FUZZY_CAP&#160;</td><td class="fielddoc"><p>min(a,b) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa4cbdd8c1d171cf7d6ed77ca45fc9bcc2" name="gga717bd50b8de6f6169bde4d7ac073ceefa4cbdd8c1d171cf7d6ed77ca45fc9bcc2"></a>A_PID_FUZZY_AND_ALGEBRA&#160;</td><td class="fielddoc"><p>l*r </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefaf4cb1140bac298cb0ab78c42533b54ec" name="gga717bd50b8de6f6169bde4d7ac073ceefaf4cb1140bac298cb0ab78c42533b54ec"></a>A_PID_FUZZY_CAP_ALGEBRA&#160;</td><td class="fielddoc"><p>a*b </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa170d1ff15043263cecb32e7d20d01643" name="gga717bd50b8de6f6169bde4d7ac073ceefa170d1ff15043263cecb32e7d20d01643"></a>A_PID_FUZZY_AND_BOUNDED&#160;</td><td class="fielddoc"><p>max(l,r) </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa27893fc7f7f2ceb9b63b1e1fe875d0ba" name="gga717bd50b8de6f6169bde4d7ac073ceefa27893fc7f7f2ceb9b63b1e1fe875d0ba"></a>A_PID_FUZZY_CAP_BOUNDED&#160;</td><td class="fielddoc"><p>max(a+b-1,0) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa2028335919acb9d7ec5a47de87a26b88" name="gga717bd50b8de6f6169bde4d7ac073ceefa2028335919acb9d7ec5a47de87a26b88"></a>A_PID_FUZZY_OR_DEFAULT&#160;</td><td class="fielddoc"><p>max(l,r) </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa528655813bbbfd40eee65d6e35537301" name="gga717bd50b8de6f6169bde4d7ac073ceefa528655813bbbfd40eee65d6e35537301"></a>A_PID_FUZZY_CUP&#160;</td><td class="fielddoc"><p>max(a,b) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa5db260b25c9f551a9744b077246caed9" name="gga717bd50b8de6f6169bde4d7ac073ceefa5db260b25c9f551a9744b077246caed9"></a>A_PID_FUZZY_OR_ALGEBRA&#160;</td><td class="fielddoc"><p>l+r-l*r </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa2b97833ed0ef93fecc2b794f08bb7e8a" name="gga717bd50b8de6f6169bde4d7ac073ceefa2b97833ed0ef93fecc2b794f08bb7e8a"></a>A_PID_FUZZY_CUP_ALGEBRA&#160;</td><td class="fielddoc"><p>a+b-a*b </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa0c192da034650744463eb8ef5953ef1e" name="gga717bd50b8de6f6169bde4d7ac073ceefa0c192da034650744463eb8ef5953ef1e"></a>A_PID_FUZZY_OR_BOUNDED&#160;</td><td class="fielddoc"><p>min(l,r) </p>
+<tr><td class="fieldname"><a id="gga717bd50b8de6f6169bde4d7ac073ceefa7eb02b809362f9480244f5b228208ccf" name="gga717bd50b8de6f6169bde4d7ac073ceefa7eb02b809362f9480244f5b228208ccf"></a>A_PID_FUZZY_CUP_BOUNDED&#160;</td><td class="fielddoc"><p>min(a+b,1) </p>
 </td></tr>
 </table>
 

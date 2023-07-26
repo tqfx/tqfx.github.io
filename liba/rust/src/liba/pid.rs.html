@@ -722,20 +722,20 @@
 <span class="doccomment">/// fuzzy PID controller operator
 </span><span class="kw">pub mod </span>fuzzy {
     <span class="kw">use </span><span class="kw">crate</span>::uint;
-    <span class="doccomment">/// sqrt(l,r)*sqrt(1-(1-r)*(1-r))
+    <span class="doccomment">/// sqrt(a,b)*sqrt(1-(1-a)*(1-b))
     </span><span class="kw">pub const </span>EQU: uint = <span class="number">0</span>;
-    <span class="doccomment">/// min(l,r)
-    </span><span class="kw">pub const </span>AND: uint = <span class="number">1</span>;
-    <span class="doccomment">/// l*r
-    </span><span class="kw">pub const </span>AND_ALGEBRA: uint = <span class="number">2</span>;
-    <span class="doccomment">/// max(l,r)
-    </span><span class="kw">pub const </span>AND_BOUNDED: uint = <span class="number">3</span>;
-    <span class="doccomment">/// max(l,r)
-    </span><span class="kw">pub const </span>OR: uint = <span class="number">4</span>;
-    <span class="doccomment">/// l+r-l*r
-    </span><span class="kw">pub const </span>OR_ALGEBRA: uint = <span class="number">5</span>;
-    <span class="doccomment">/// min(l,r)
-    </span><span class="kw">pub const </span>OR_BOUNDED: uint = <span class="number">6</span>;
+    <span class="doccomment">/// min(a,b)
+    </span><span class="kw">pub const </span>CAP: uint = <span class="number">1</span>;
+    <span class="doccomment">/// a*b
+    </span><span class="kw">pub const </span>CAP_ALGEBRA: uint = <span class="number">2</span>;
+    <span class="doccomment">/// max(a+b-1,0)
+    </span><span class="kw">pub const </span>CAP_BOUNDED: uint = <span class="number">3</span>;
+    <span class="doccomment">/// max(a,b)
+    </span><span class="kw">pub const </span>CUP: uint = <span class="number">4</span>;
+    <span class="doccomment">/// a+b-a*b
+    </span><span class="kw">pub const </span>CUP_ALGEBRA: uint = <span class="number">5</span>;
+    <span class="doccomment">/// min(a+b,1)
+    </span><span class="kw">pub const </span>CUP_BOUNDED: uint = <span class="number">6</span>;
 }
 
 <span class="doccomment">/// fuzzy proportional integral derivative controller
