@@ -111,6 +111,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga9217b0e8d72ce84cb1fce326e476e715"><td class="memItemLeft" align="right" valign="top"><a id="ga9217b0e8d72ce84cb1fce326e476e715" name="ga9217b0e8d72ce84cb1fce326e476e715"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SLIST_INIT</b>(list)&#160;&#160;&#160;{{&amp;(list).head}, &amp;(list).head}</td></tr>
 <tr class="separator:ga9217b0e8d72ce84cb1fce326e476e715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66b814c0af71a327131d088cbd0925ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga66b814c0af71a327131d088cbd0925ef">a_slist_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> _, a_cast_s(void _, x))</td></tr>
+<tr class="memdesc:ga66b814c0af71a327131d088cbd0925ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
+<tr class="separator:ga66b814c0af71a327131d088cbd0925ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga597f1383a155441b46669d6864fda790"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga597f1383a155441b46669d6864fda790">a_slist_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</td></tr>
 <tr class="memdesc:ga597f1383a155441b46669d6864fda790"><td class="mdescLeft">&#160;</td><td class="mdescRight">access the struct for this entry  <br /></td></tr>
 <tr class="separator:ga597f1383a155441b46669d6864fda790"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +140,6 @@ typedef struct <a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac4b56d5dc4d254263e0b42c1877341fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#gac4b56d5dc4d254263e0b42c1877341fa">a_slist_from</a> (void *const obj)</td></tr>
-<tr class="memdesc:gac4b56d5dc4d254263e0b42c1877341fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
-<tr class="separator:gac4b56d5dc4d254263e0b42c1877341fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3b4b89c197b06c95acca7a1248435477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d91/group__A.html#ga7bff4518f2379d5f107494941cfe5386">a_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga3b4b89c197b06c95acca7a1248435477">a_slist_null</a> (<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> const *const ctx)</td></tr>
 <tr class="memdesc:ga3b4b89c197b06c95acca7a1248435477"><td class="mdescLeft">&#160;</td><td class="mdescRight">test whether a list node is null  <br /></td></tr>
 <tr class="separator:ga3b4b89c197b06c95acca7a1248435477"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +191,43 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga66b814c0af71a327131d088cbd0925ef" name="ga66b814c0af71a327131d088cbd0925ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66b814c0af71a327131d088cbd0925ef">&#9670;&#160;</a></span>a_slist_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_slist_c</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> _, a_cast_s(void _, x))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cast a list pointer from another type pointer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>points to circular singly linked list node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to circular singly linked list node </dd></dl>
+
+</div>
+</div>
 <a id="ga597f1383a155441b46669d6864fda790" name="ga597f1383a155441b46669d6864fda790"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga597f1383a155441b46669d6864fda790">&#9670;&#160;</a></span>a_slist_entry</h2>
 
@@ -550,33 +587,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="gac4b56d5dc4d254263e0b42c1877341fa" name="gac4b56d5dc4d254263e0b42c1877341fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac4b56d5dc4d254263e0b42c1877341fa">&#9670;&#160;</a></span>a_slist_from()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> * a_slist_from </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>cast a list pointer from another type pointer </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>points to circular singly linked list node </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to circular singly linked list node </dd></dl>
 
 </div>
 </div>

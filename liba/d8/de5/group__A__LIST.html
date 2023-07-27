@@ -105,6 +105,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaabf533320036ac278974828f4e140b1f"><td class="memItemLeft" align="right" valign="top"><a id="gaabf533320036ac278974828f4e140b1f" name="gaabf533320036ac278974828f4e140b1f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LIST_INIT</b>(node)&#160;&#160;&#160;{&amp;(node), &amp;(node)}</td></tr>
 <tr class="separator:gaabf533320036ac278974828f4e140b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga20ee317221f1af2c5ed2b2ea00cd3700">a_list_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> _, a_cast_s(void _, x))</td></tr>
+<tr class="memdesc:ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
+<tr class="separator:ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga40f748b5e7a227f814c46cac69ad2b0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga40f748b5e7a227f814c46cac69ad2b0e">a_list_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</td></tr>
 <tr class="memdesc:ga40f748b5e7a227f814c46cac69ad2b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access the struct for this entry  <br /></td></tr>
 <tr class="separator:ga40f748b5e7a227f814c46cac69ad2b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,9 +151,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga24258fdb1faec115a30dd7f4af1fdc07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d91/group__A.html#ga7bff4518f2379d5f107494941cfe5386">a_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga24258fdb1faec115a30dd7f4af1fdc07">a_list_used</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> const *const ctx)</td></tr>
 <tr class="memdesc:ga24258fdb1faec115a30dd7f4af1fdc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">test whether a list is used  <br /></td></tr>
 <tr class="separator:ga24258fdb1faec115a30dd7f4af1fdc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6616cb3f21bf9063232312701209cc53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga6616cb3f21bf9063232312701209cc53">a_list_from</a> (void *const obj)</td></tr>
-<tr class="memdesc:ga6616cb3f21bf9063232312701209cc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
-<tr class="separator:ga6616cb3f21bf9063232312701209cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga1b2a0f198a7b693245b8a69dddfc29d5">a_list_ctor</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
 <tr class="memdesc:ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for circular doubly linked list  <br /></td></tr>
 <tr class="separator:ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +217,43 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga20ee317221f1af2c5ed2b2ea00cd3700" name="ga20ee317221f1af2c5ed2b2ea00cd3700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20ee317221f1af2c5ed2b2ea00cd3700">&#9670;&#160;</a></span>a_list_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_list_c</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> _, a_cast_s(void _, x))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cast a list pointer from another type pointer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>points to circular doubly linked list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to circular doubly linked list </dd></dl>
+
+</div>
+</div>
 <a id="ga40f748b5e7a227f814c46cac69ad2b0e" name="ga40f748b5e7a227f814c46cac69ad2b0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga40f748b5e7a227f814c46cac69ad2b0e">&#9670;&#160;</a></span>a_list_entry</h2>
 
@@ -714,33 +751,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ga6616cb3f21bf9063232312701209cc53" name="ga6616cb3f21bf9063232312701209cc53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6616cb3f21bf9063232312701209cc53">&#9670;&#160;</a></span>a_list_from()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> * a_list_from </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>cast a list pointer from another type pointer </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>points to circular doubly linked list </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to circular doubly linked list </dd></dl>
 
 </div>
 </div>
