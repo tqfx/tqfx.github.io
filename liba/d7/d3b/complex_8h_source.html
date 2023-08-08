@@ -92,15 +92,15 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d6/dbb/group__A__COMPLEX.html#ga77a59750ebf330d5d0857748c521713b">   18</a></span><span class="preprocessor">#define A_COMPLEX_PRI(RF, RC, IF, IC) &quot;(&quot;</span> A_FLOAT_PRI(RF, RC) &quot;,&quot; A_FLOAT_PRI(IF, IC) &quot;)&quot;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#if !defined __cplusplus</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define a_complex_c(r, i)          \</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    (a_complex_s)                  \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    {                              \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">        a_float_c(r), a_float_c(i) \</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define a_complex_c(r, i)              \</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    (a_complex_s)                      \</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    {                                  \</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">        a_float_c(, r), a_float_c(, i) \</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    }</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#else </span><span class="comment">/* !__cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/dbb/group__A__COMPLEX.html#gaad0fcc4a2d565afb3d1cda634ed2be8d">   28</a></span><span class="preprocessor">#define a_complex_c(r, i)          \</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    {                              \</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">        a_float_c(r), a_float_c(i) \</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/dbb/group__A__COMPLEX.html#gaad0fcc4a2d565afb3d1cda634ed2be8d">   28</a></span><span class="preprocessor">#define a_complex_c(r, i)              \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    {                                  \</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">        a_float_c(, r), a_float_c(, i) \</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">    }</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>

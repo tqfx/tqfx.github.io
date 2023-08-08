@@ -101,19 +101,20 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>A_EXTERN <span class="keywordtype">void</span> *(*a_alloc)(<span class="keywordtype">void</span> *, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>A_EXTERN <span class="keywordtype">void</span> *a_alloc_(<span class="keywordtype">void</span> *addr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d0/d97/host_2a_8h.html#aec1c771c194a8490fb94df34c0a13cda">   25</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../d0/d97/host_2a_8h.html#aec1c771c194a8490fb94df34c0a13cda">a_alloc_</a>(<span class="keywordtype">void</span> *addr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define a_new(T, ptr, num) a_cast_s(T *, a_alloc(ptr, sizeof(T) * (num)))</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define a_die(ptr) a_alloc(ptr, 0)</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">/* a/host/a.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d0/d97/host_2a_8h.html#aaeaa06fd164bd2bf5e4f99bc333db404">   33</a></span>A_EXTERN <span class="keywordtype">void</span> *(*a_alloc)(<span class="keywordtype">void</span> *addr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define a_new(T, ptr, num) a_cast_s(T *, a_alloc(ptr, sizeof(T) * (num)))</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define a_die(ptr) a_alloc(ptr, 0)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">/* a/host/a.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agroup__A_html_ga2e2ed26b70fea686816ab45e6a8b86d2"><div class="ttname"><a href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a></div><div class="ttdeci">#define a_size_t</div><div class="ttdef"><b>Definition</b> a.h:605</div></div>
+<div class="ttc" id="ahost_2a_8h_html_aec1c771c194a8490fb94df34c0a13cda"><div class="ttname"><a href="../../d0/d97/host_2a_8h.html#aec1c771c194a8490fb94df34c0a13cda">a_alloc_</a></div><div class="ttdeci">void * a_alloc_(void *addr, a_size_t size)</div><div class="ttdoc">default allocation function</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
