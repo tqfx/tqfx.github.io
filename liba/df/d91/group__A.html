@@ -186,6 +186,13 @@ Macros</h2></td></tr>
 <tr class="memitem:ga4944644e353eab67418be2122c76bdd1"><td class="memItemLeft" align="right" valign="top"><a id="ga4944644e353eab67418be2122c76bdd1" name="ga4944644e353eab67418be2122c76bdd1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_NULL</b>&#160;&#160;&#160;NULL</td></tr>
 <tr class="separator:ga4944644e353eab67418be2122c76bdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09448c956d15a8c81fe3bb7929d8250f"><td class="memItemLeft" align="right" valign="top"><a id="ga09448c956d15a8c81fe3bb7929d8250f" name="ga09448c956d15a8c81fe3bb7929d8250f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VOID_T</b>&#160;&#160;&#160;void</td></tr>
+<tr class="separator:ga09448c956d15a8c81fe3bb7929d8250f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2af83a7f373f3f056520c67ecb567ca0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga2af83a7f373f3f056520c67ecb567ca0">a_void_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(A_VOID_T _, x)</td></tr>
+<tr class="separator:ga2af83a7f373f3f056520c67ecb567ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga203f1e07a0197f8359584f9c37349422"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a>&#160;&#160;&#160;A_VOID_T</td></tr>
+<tr class="separator:ga203f1e07a0197f8359584f9c37349422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabc62b036442c7044a27605846b8bc0a1"><td class="memItemLeft" align="right" valign="top"><a id="gabc62b036442c7044a27605846b8bc0a1" name="gabc62b036442c7044a27605846b8bc0a1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_TRUE</b>&#160;&#160;&#160;true</td></tr>
 <tr class="separator:gabc62b036442c7044a27605846b8bc0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2300,6 +2307,50 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>unsigned integer type is guaranteed to be at least 16 bits </p>
+
+</div>
+</div>
+<a id="ga2af83a7f373f3f056520c67ecb567ca0" name="ga2af83a7f373f3f056520c67ecb567ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2af83a7f373f3f056520c67ecb567ca0">&#9670;&#160;</a></span>a_void_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_void_c</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;a_cast_s(A_VOID_T _, x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>static cast to <a class="el" href="../../df/d91/group__A.html#ga203f1e07a0197f8359584f9c37349422">a_void_t</a> . </p>
+
+</div>
+</div>
+<a id="ga203f1e07a0197f8359584f9c37349422" name="ga203f1e07a0197f8359584f9c37349422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga203f1e07a0197f8359584f9c37349422">&#9670;&#160;</a></span>a_void_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_void_t&#160;&#160;&#160;A_VOID_T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>incomplete type or no parameter or no return value </p>
 
 </div>
 </div>
