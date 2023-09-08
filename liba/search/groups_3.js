@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['floating_2dpoint_20number_0',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
-  ['fuzzy_20operator_1',['fuzzy operator',['../d6/d0a/group__A__FUZZY.html',1,'']]],
-  ['fuzzy_20proportional_20integral_20derivative_20controller_2',['fuzzy proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'']]]
+  ['derivative_20controller_0',['derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../df/df3/group__A__PID__NEURON.html',1,'single neuron proportional integral derivative controller']]],
+  ['doubly_20linked_20list_1',['circular doubly linked list',['../d8/de5/group__A__LIST.html',1,'']]]
 ];

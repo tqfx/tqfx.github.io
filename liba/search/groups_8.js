@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['polynomial_0',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
-  ['polynomial_20trajectory_1',['polynomial trajectory',['../d1/d97/group__A__POLYTRACK.html',1,'']]],
-  ['proportional_20integral_20derivative_20controller_2',['proportional integral derivative controller',['../d8/da8/group__A__PID.html',1,'']]]
+  ['mathematical_20algorithm_20library_0',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
+  ['membership_20function_1',['membership function',['../dd/d37/group__A__MF.html',1,'']]]
 ];

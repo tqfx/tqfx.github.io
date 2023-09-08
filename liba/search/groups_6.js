@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mathematical_20algorithm_20library_0',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
-  ['membership_20function_1',['membership function',['../dd/d37/group__A__MF.html',1,'']]]
+  ['integral_20derivative_20controller_0',['integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../df/df3/group__A__PID__NEURON.html',1,'single neuron proportional integral derivative controller']]]
 ];

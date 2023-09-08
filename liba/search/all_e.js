@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['p_0',['p',['../d2/d53/uniona__float__u.html#ad9e6aef02de53f9a82d8a029085df542',1,'a_float_u']]],
-  ['patch_1',['patch',['../d5/d01/structa_1_1version.html#ae3dd8716fad3e47a839b0281c2661586',1,'a::version']]],
-  ['pid_2',['pid',['../d5/d1d/structa__pid__fuzzy__s.html#ac54774981e73c0ef46fbb64c35008d8a',1,'a_pid_fuzzy_s::pid'],['../d9/dfe/structa__pid__neuron__s.html#a7b839e0a6591c3b626a5dc2c7df5638e',1,'a_pid_neuron_s::pid']]],
-  ['pid_2eh_3',['pid.h',['../da/df0/pid_8h.html',1,'']]],
-  ['poly_2eh_4',['poly.h',['../db/d57/poly_8h.html',1,'']]],
-  ['polynomial_5',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
-  ['polynomial_20trajectory_6',['polynomial trajectory',['../d1/d97/group__A__POLYTRACK.html',1,'']]],
-  ['polytrack_2eh_7',['polytrack.h',['../dc/d23/polytrack_8h.html',1,'']]],
-  ['proportional_20integral_20derivative_20controller_8',['proportional integral derivative controller',['../d8/da8/group__A__PID.html',1,'']]]
+  ['op_0',['op',['../d5/d1d/structa__pid__fuzzy__s.html#ac55be9d6931087745b565ec446240e87',1,'a_pid_fuzzy_s']]],
+  ['operator_1',['fuzzy operator',['../d6/d0a/group__A__FUZZY.html',1,'']]],
+  ['operator_2eh_2',['operator.h',['../d7/de0/operator_8h.html',1,'']]],
+  ['operators_3',['algorithm library operators',['../dd/d76/group__A__OPERATOR.html',1,'']]],
+  ['optional_20tools_4',['optional tools',['../index.html#autotoc_md2',1,'']]],
+  ['out_5',['out',['../de/def/structa__pid__s.html#a754a32f480c69c58ffd2f04539819c03',1,'a_pid_s']]],
+  ['outmax_6',['outmax',['../de/def/structa__pid__s.html#a63cefa1a026da270c8ca1d063924581b',1,'a_pid_s']]],
+  ['outmin_7',['outmin',['../de/def/structa__pid__s.html#a1a66a13a2c2a36a361e4488d1b7b2956',1,'a_pid_s']]],
+  ['output_8',['output',['../d0/d16/structa__tf__s.html#af7ccca4ddc1ba1aa7510728c2cf0d943',1,'a_tf_s']]],
+  ['output_5fn_9',['output_n',['../d2/d2c/structa__rbf__s.html#af75d673697658a0849ad309edac517b3',1,'a_rbf_s']]],
+  ['output_5fp_10',['output_p',['../d2/d2c/structa__rbf__s.html#a34c713aa5dd199a8502bb351372dac11',1,'a_rbf_s']]]
 ];
