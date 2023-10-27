@@ -76,35 +76,38 @@ $(function() {
 <div class="line"><span class="preprocessor">#else </span><span class="comment">/* !_WIN32 */</span><span class="preprocessor"></span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *path = <span class="stringliteral">&quot;/bin/ls&quot;</span>;</div>
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">/* _WIN32 */</span><span class="preprocessor"></span></div>
-<div class="line">    <span class="keywordtype">char</span> *argV[] = {<span class="stringliteral">&quot;ls&quot;</span>, <span class="stringliteral">&quot;-Ahl&quot;</span>, <span class="stringliteral">&quot;--color&quot;</span>, NULL};</div>
+<div class="line">    <span class="keywordtype">char</span> *args[] = {<span class="stringliteral">&quot;ls&quot;</span>, <span class="stringliteral">&quot;-Ahl&quot;</span>, <span class="stringliteral">&quot;--color&quot;</span>, NULL};</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *cwd = argc &gt; 1 ? argv[argc - 1] : NULL;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="d1/d7e/structpipe__s.html">pipe_s</a> ctx[1];</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="da/d3e/pipe_8h.html#a8e29fd4a35bc7f7d5413c8c126b6bf50">pipe_open</a>(ctx, path, argV, NULL, cwd, PIPE_IO))</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="da/d3e/pipe_8h.html#aec19d8743e6d8b387fd63ede4d7eb565">pipe_open</a>(ctx, path, args, NULL, cwd, <a class="code" href="da/d3e/pipe_8h.html#a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d">PIPE_OUT</a>))</div>
 <div class="line">    {</div>
 <div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Initialization failure!\n&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="da/d3e/pipe_8h.html#a8db9624d9ca2d7efa9e098cf2f497928">pipe_mode</a>(ctx) &amp; <a class="code" href="da/d3e/pipe_8h.html#a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d">PIPE_OUT</a>)</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="da/d3e/pipe_8h.html#a121cb1b9615ff515d78b3acda9f4254c">pipe_mode</a>(ctx) &amp; <a class="code" href="da/d3e/pipe_8h.html#a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d">PIPE_OUT</a>)</div>
 <div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;stdout:\n&quot;</span>);</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = pipe_getc(ctx); c != EOF; c = pipe_getc(ctx))</div>
+<div class="line">        <span class="keywordtype">char</span> buffer[BUFSIZ];</div>
+<div class="line">        <span class="keywordtype">size_t</span> n = <a class="code" href="da/d3e/pipe_8h.html#a9e3ac62bf3042195d3b279142e4ef14b">pipe_read</a>(ctx, buffer, BUFSIZ);</div>
+<div class="line">        <span class="keywordflow">while</span> (n)</div>
 <div class="line">        {</div>
-<div class="line">            fputc(c, stdout);</div>
+<div class="line">            printf(<span class="stringliteral">&quot;%.*s&quot;</span>, (<span class="keywordtype">int</span>)n, buffer);</div>
+<div class="line">            n = <a class="code" href="da/d3e/pipe_8h.html#a9e3ac62bf3042195d3b279142e4ef14b">pipe_read</a>(ctx, buffer, BUFSIZ);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="da/d3e/pipe_8h.html#af5f7caa04755e632199b35ec549cccbd">pipe_wait</a>(ctx, 0);</div>
+<div class="line">    <a class="code" href="da/d3e/pipe_8h.html#a10d97947d6edb376bcd5f430bfbdd68b">pipe_wait</a>(ctx, 0);</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="da/d3e/pipe_8h.html#a389b9e5dddf8b808b86c8b7126cf50e2">pipe_close</a>(ctx);</div>
 <div class="line">}</div>
 <div class="ttc" id="apipe_8h_html"><div class="ttname"><a href="da/d3e/pipe_8h.html">pipe.h</a></div><div class="ttdoc">pipeline implementation</div></div>
+<div class="ttc" id="apipe_8h_html_a10d97947d6edb376bcd5f430bfbdd68b"><div class="ttname"><a href="da/d3e/pipe_8h.html#a10d97947d6edb376bcd5f430bfbdd68b">pipe_wait</a></div><div class="ttdeci">int pipe_wait(pipe_s const *ctx, unsigned long ms)</div><div class="ttdoc">pending within the timeout period specified synchronously</div></div>
+<div class="ttc" id="apipe_8h_html_a121cb1b9615ff515d78b3acda9f4254c"><div class="ttname"><a href="da/d3e/pipe_8h.html#a121cb1b9615ff515d78b3acda9f4254c">pipe_mode</a></div><div class="ttdeci">int pipe_mode(pipe_s const *ctx)</div><div class="ttdoc">access standard stream mode for pipeline</div></div>
 <div class="ttc" id="apipe_8h_html_a389b9e5dddf8b808b86c8b7126cf50e2"><div class="ttname"><a href="da/d3e/pipe_8h.html#a389b9e5dddf8b808b86c8b7126cf50e2">pipe_close</a></div><div class="ttdeci">int pipe_close(pipe_s *ctx)</div><div class="ttdoc">terminate an instance of pipeline structure</div></div>
-<div class="ttc" id="apipe_8h_html_a8db9624d9ca2d7efa9e098cf2f497928"><div class="ttname"><a href="da/d3e/pipe_8h.html#a8db9624d9ca2d7efa9e098cf2f497928">pipe_mode</a></div><div class="ttdeci">int pipe_mode(const pipe_s *ctx)</div><div class="ttdoc">access standard stream mode for pipeline</div></div>
-<div class="ttc" id="apipe_8h_html_a8e29fd4a35bc7f7d5413c8c126b6bf50"><div class="ttname"><a href="da/d3e/pipe_8h.html#a8e29fd4a35bc7f7d5413c8c126b6bf50">pipe_open</a></div><div class="ttdeci">int pipe_open(pipe_s *ctx, const char *path, char *const argv[], char *const envp[], const char *cwd, int std)</div><div class="ttdoc">initialize an instance of pipeline structure</div></div>
-<div class="ttc" id="apipe_8h_html_a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d"><div class="ttname"><a href="da/d3e/pipe_8h.html#a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d">PIPE_OUT</a></div><div class="ttdeci">@ PIPE_OUT</div><div class="ttdoc">stdout</div><div class="ttdef"><b>Definition:</b> pipe.h:63</div></div>
-<div class="ttc" id="apipe_8h_html_af5f7caa04755e632199b35ec549cccbd"><div class="ttname"><a href="da/d3e/pipe_8h.html#af5f7caa04755e632199b35ec549cccbd">pipe_wait</a></div><div class="ttdeci">int pipe_wait(const pipe_s *ctx, unsigned long ms)</div><div class="ttdoc">pending within the timeout period specified synchronously</div></div>
-<div class="ttc" id="astructpipe__s_html"><div class="ttname"><a href="d1/d7e/structpipe__s.html">pipe_s</a></div><div class="ttdoc">instance structure for pipeline</div><div class="ttdef"><b>Definition:</b> pipe.h:45</div></div>
+<div class="ttc" id="apipe_8h_html_a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d"><div class="ttname"><a href="da/d3e/pipe_8h.html#a8f8f37cecfb22e4b1837c2cc26b7c28fa103151f22470f9c6502a28b96a5a0c2d">PIPE_OUT</a></div><div class="ttdeci">@ PIPE_OUT</div><div class="ttdoc">stdout</div><div class="ttdef"><b>Definition:</b> pipe.h:60</div></div>
+<div class="ttc" id="apipe_8h_html_a9e3ac62bf3042195d3b279142e4ef14b"><div class="ttname"><a href="da/d3e/pipe_8h.html#a9e3ac62bf3042195d3b279142e4ef14b">pipe_read</a></div><div class="ttdeci">size_t pipe_read(pipe_s const *ctx, void *data, size_t byte)</div><div class="ttdoc">read a block of the standard output of the pipeline</div></div>
+<div class="ttc" id="apipe_8h_html_aec19d8743e6d8b387fd63ede4d7eb565"><div class="ttname"><a href="da/d3e/pipe_8h.html#aec19d8743e6d8b387fd63ede4d7eb565">pipe_open</a></div><div class="ttdeci">int pipe_open(pipe_s *ctx, char const *path, char *const argv[], char *const envp[], char const *cwd, int std)</div><div class="ttdoc">initialize an instance of pipeline structure</div></div>
+<div class="ttc" id="astructpipe__s_html"><div class="ttname"><a href="d1/d7e/structpipe__s.html">pipe_s</a></div><div class="ttdoc">instance structure for pipeline</div><div class="ttdef"><b>Definition:</b> pipe.h:40</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="copyright"></a>
 Copyright</h1>
 <p>Copyright (C) 2020-present tqfx, All rights reserved.</p>

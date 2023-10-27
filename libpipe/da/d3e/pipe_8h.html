@@ -119,15 +119,15 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8e29fd4a35bc7f7d5413c8c126b6bf50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a8e29fd4a35bc7f7d5413c8c126b6bf50">pipe_open</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const char *path, char *const argv[], char *const envp[], const char *cwd, int std)</td></tr>
-<tr class="memdesc:a8e29fd4a35bc7f7d5413c8c126b6bf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize an instance of pipeline structure  <a href="../../da/d3e/pipe_8h.html#a8e29fd4a35bc7f7d5413c8c126b6bf50">More...</a><br /></td></tr>
-<tr class="separator:a8e29fd4a35bc7f7d5413c8c126b6bf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec19d8743e6d8b387fd63ede4d7eb565"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#aec19d8743e6d8b387fd63ede4d7eb565">pipe_open</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, char const *path, char *const argv[], char *const envp[], char const *cwd, int std)</td></tr>
+<tr class="memdesc:aec19d8743e6d8b387fd63ede4d7eb565"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize an instance of pipeline structure  <a href="../../da/d3e/pipe_8h.html#aec19d8743e6d8b387fd63ede4d7eb565">More...</a><br /></td></tr>
+<tr class="separator:aec19d8743e6d8b387fd63ede4d7eb565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389b9e5dddf8b808b86c8b7126cf50e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a389b9e5dddf8b808b86c8b7126cf50e2">pipe_close</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
 <tr class="memdesc:a389b9e5dddf8b808b86c8b7126cf50e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">terminate an instance of pipeline structure  <a href="../../da/d3e/pipe_8h.html#a389b9e5dddf8b808b86c8b7126cf50e2">More...</a><br /></td></tr>
 <tr class="separator:a389b9e5dddf8b808b86c8b7126cf50e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5f7caa04755e632199b35ec549cccbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#af5f7caa04755e632199b35ec549cccbd">pipe_wait</a> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, unsigned long ms)</td></tr>
-<tr class="memdesc:af5f7caa04755e632199b35ec549cccbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">pending within the timeout period specified synchronously  <a href="../../da/d3e/pipe_8h.html#af5f7caa04755e632199b35ec549cccbd">More...</a><br /></td></tr>
-<tr class="separator:af5f7caa04755e632199b35ec549cccbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d97947d6edb376bcd5f430bfbdd68b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a10d97947d6edb376bcd5f430bfbdd68b">pipe_wait</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx, unsigned long ms)</td></tr>
+<tr class="memdesc:a10d97947d6edb376bcd5f430bfbdd68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">pending within the timeout period specified synchronously  <a href="../../da/d3e/pipe_8h.html#a10d97947d6edb376bcd5f430bfbdd68b">More...</a><br /></td></tr>
+<tr class="separator:a10d97947d6edb376bcd5f430bfbdd68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7b39c992e1003025fb292bfded71af"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#adf7b39c992e1003025fb292bfded71af">pipe_line_argv</a> (char *const argv[])</td></tr>
 <tr class="memdesc:adf7b39c992e1003025fb292bfded71af"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert argv to line, "argv1" "argv2" ... "argvn"  <a href="../../da/d3e/pipe_8h.html#adf7b39c992e1003025fb292bfded71af">More...</a><br /></td></tr>
 <tr class="separator:adf7b39c992e1003025fb292bfded71af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,45 +137,33 @@ Functions</h2></td></tr>
 <tr class="memitem:aabb3122c92f85158447d4b7e2b77a97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#aabb3122c92f85158447d4b7e2b77a97c">pipe_line_free</a> (void *line)</td></tr>
 <tr class="memdesc:aabb3122c92f85158447d4b7e2b77a97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">release memory for pipe line  <a href="../../da/d3e/pipe_8h.html#aabb3122c92f85158447d4b7e2b77a97c">More...</a><br /></td></tr>
 <tr class="separator:aabb3122c92f85158447d4b7e2b77a97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e2ac88e3b56df57cdbc065a24674990"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a8e2ac88e3b56df57cdbc065a24674990">pipe_valid</a> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
-<tr class="memdesc:a8e2ac88e3b56df57cdbc065a24674990"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if pipeline is valid  <a href="../../da/d3e/pipe_8h.html#a8e2ac88e3b56df57cdbc065a24674990">More...</a><br /></td></tr>
-<tr class="separator:a8e2ac88e3b56df57cdbc065a24674990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae57af4470525e454c867a846e76ef7ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#ae57af4470525e454c867a846e76ef7ad">pipe_flush</a> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
-<tr class="memdesc:ae57af4470525e454c867a846e76ef7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">flush standard stream for pipeline  <a href="../../da/d3e/pipe_8h.html#ae57af4470525e454c867a846e76ef7ad">More...</a><br /></td></tr>
-<tr class="separator:ae57af4470525e454c867a846e76ef7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db9624d9ca2d7efa9e098cf2f497928"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a8db9624d9ca2d7efa9e098cf2f497928">pipe_mode</a> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
-<tr class="memdesc:a8db9624d9ca2d7efa9e098cf2f497928"><td class="mdescLeft">&#160;</td><td class="mdescRight">access standard stream mode for pipeline  <a href="../../da/d3e/pipe_8h.html#a8db9624d9ca2d7efa9e098cf2f497928">More...</a><br /></td></tr>
-<tr class="separator:a8db9624d9ca2d7efa9e098cf2f497928"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0679f9431351263ff9d4faeb9a6aecd2"><td class="memItemLeft" align="right" valign="top"><a id="a0679f9431351263ff9d4faeb9a6aecd2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_getc</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
-<tr class="separator:a0679f9431351263ff9d4faeb9a6aecd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6763f22e95ca11e9fc90b8f97372b598"><td class="memItemLeft" align="right" valign="top"><a id="a6763f22e95ca11e9fc90b8f97372b598"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_gete</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
-<tr class="separator:a6763f22e95ca11e9fc90b8f97372b598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b4253caa5a263c1bbac1505f337d4e"><td class="memItemLeft" align="right" valign="top"><a id="a19b4253caa5a263c1bbac1505f337d4e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_putc</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, int c)</td></tr>
-<tr class="separator:a19b4253caa5a263c1bbac1505f337d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c0abf4298d2f16738114427a917a3d"><td class="memItemLeft" align="right" valign="top"><a id="a59c0abf4298d2f16738114427a917a3d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_puts</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const char *str)</td></tr>
-<tr class="separator:a59c0abf4298d2f16738114427a917a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16be2b47986c7e5b67069b539114d11"><td class="memItemLeft" align="right" valign="top"><a id="ac16be2b47986c7e5b67069b539114d11"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_scanf</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const char *fmt,...)</td></tr>
-<tr class="separator:ac16be2b47986c7e5b67069b539114d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabedf44e859c50335dea1085121d7b37"><td class="memItemLeft" align="right" valign="top"><a id="aabedf44e859c50335dea1085121d7b37"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_scanfe</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const char *fmt,...)</td></tr>
-<tr class="separator:aabedf44e859c50335dea1085121d7b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a325b806a1530453871a9a43ab18884cd"><td class="memItemLeft" align="right" valign="top"><a id="a325b806a1530453871a9a43ab18884cd"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_printf</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const char *fmt,...)</td></tr>
-<tr class="separator:a325b806a1530453871a9a43ab18884cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd849338399b9bf8af97f82b91a424a3"><td class="memItemLeft" align="right" valign="top"><a id="acd849338399b9bf8af97f82b91a424a3"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_read</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, void *data, size_t byte)</td></tr>
-<tr class="separator:acd849338399b9bf8af97f82b91a424a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7b9b87f4d3a1d099d53571583a080b"><td class="memItemLeft" align="right" valign="top"><a id="a6a7b9b87f4d3a1d099d53571583a080b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_reade</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, void *data, size_t byte)</td></tr>
-<tr class="separator:a6a7b9b87f4d3a1d099d53571583a080b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a562cd3cf5f593fc5a74915316c89a84e"><td class="memItemLeft" align="right" valign="top"><a id="a562cd3cf5f593fc5a74915316c89a84e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx, const void *data, size_t byte)</td></tr>
-<tr class="separator:a562cd3cf5f593fc5a74915316c89a84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121cb1b9615ff515d78b3acda9f4254c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a121cb1b9615ff515d78b3acda9f4254c">pipe_mode</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx)</td></tr>
+<tr class="memdesc:a121cb1b9615ff515d78b3acda9f4254c"><td class="mdescLeft">&#160;</td><td class="mdescRight">access standard stream mode for pipeline  <a href="../../da/d3e/pipe_8h.html#a121cb1b9615ff515d78b3acda9f4254c">More...</a><br /></td></tr>
+<tr class="separator:a121cb1b9615ff515d78b3acda9f4254c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591564a1cd9f2550545abc4edc00ed30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a591564a1cd9f2550545abc4edc00ed30">pipe_valid</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx)</td></tr>
+<tr class="memdesc:a591564a1cd9f2550545abc4edc00ed30"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if pipeline is valid  <a href="../../da/d3e/pipe_8h.html#a591564a1cd9f2550545abc4edc00ed30">More...</a><br /></td></tr>
+<tr class="separator:a591564a1cd9f2550545abc4edc00ed30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47c0de40653b5b9635ae2ece88a50e6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a47c0de40653b5b9635ae2ece88a50e6a">pipe_flush</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx)</td></tr>
+<tr class="memdesc:a47c0de40653b5b9635ae2ece88a50e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">flush standard stream for pipeline  <a href="../../da/d3e/pipe_8h.html#a47c0de40653b5b9635ae2ece88a50e6a">More...</a><br /></td></tr>
+<tr class="separator:a47c0de40653b5b9635ae2ece88a50e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3ac62bf3042195d3b279142e4ef14b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a9e3ac62bf3042195d3b279142e4ef14b">pipe_read</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx, void *data, size_t byte)</td></tr>
+<tr class="memdesc:a9e3ac62bf3042195d3b279142e4ef14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read a block of the standard output of the pipeline  <a href="../../da/d3e/pipe_8h.html#a9e3ac62bf3042195d3b279142e4ef14b">More...</a><br /></td></tr>
+<tr class="separator:a9e3ac62bf3042195d3b279142e4ef14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d8e15f36739ac7db7f7dc9ac794c86"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#af0d8e15f36739ac7db7f7dc9ac794c86">pipe_reade</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx, void *data, size_t byte)</td></tr>
+<tr class="memdesc:af0d8e15f36739ac7db7f7dc9ac794c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">read a block of the standard error output of the pipeline  <a href="../../da/d3e/pipe_8h.html#af0d8e15f36739ac7db7f7dc9ac794c86">More...</a><br /></td></tr>
+<tr class="separator:af0d8e15f36739ac7db7f7dc9ac794c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c95e8e92cc4276de8cfcb72f9496ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#ae0c95e8e92cc4276de8cfcb72f9496ce">pipe_write</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *ctx, void const *data, size_t byte)</td></tr>
+<tr class="memdesc:ae0c95e8e92cc4276de8cfcb72f9496ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a block of the standard input to the pipeline  <a href="../../da/d3e/pipe_8h.html#ae0c95e8e92cc4276de8cfcb72f9496ce">More...</a><br /></td></tr>
+<tr class="separator:ae0c95e8e92cc4276de8cfcb72f9496ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3a219a7f69fd7f33436bbc0e1d26d0"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a6e3a219a7f69fd7f33436bbc0e1d26d0">pipe_stdin</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
+<tr class="memdesc:a6e3a219a7f69fd7f33436bbc0e1d26d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">access a stream pointer to the standard input of the pipeline  <a href="../../da/d3e/pipe_8h.html#a6e3a219a7f69fd7f33436bbc0e1d26d0">More...</a><br /></td></tr>
+<tr class="separator:a6e3a219a7f69fd7f33436bbc0e1d26d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fea0256b57d798447ed7997bbc01b4"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a71fea0256b57d798447ed7997bbc01b4">pipe_stdout</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
+<tr class="memdesc:a71fea0256b57d798447ed7997bbc01b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access a stream pointer to the standard output of the pipeline  <a href="../../da/d3e/pipe_8h.html#a71fea0256b57d798447ed7997bbc01b4">More...</a><br /></td></tr>
+<tr class="separator:a71fea0256b57d798447ed7997bbc01b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c505d03054f770e65cc88a2834a3f3a"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/pipe_8h.html#a5c505d03054f770e65cc88a2834a3f3a">pipe_stderr</a> (<a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *ctx)</td></tr>
+<tr class="memdesc:a5c505d03054f770e65cc88a2834a3f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">access a stream pointer to the standard error output of the pipeline  <a href="../../da/d3e/pipe_8h.html#a5c505d03054f770e65cc88a2834a3f3a">More...</a><br /></td></tr>
+<tr class="separator:a5c505d03054f770e65cc88a2834a3f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>pipeline implementation </p>
@@ -237,8 +225,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 
 </div>
 </div>
-<a id="ae57af4470525e454c867a846e76ef7ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae57af4470525e454c867a846e76ef7ad">&#9670;&nbsp;</a></span>pipe_flush()</h2>
+<a id="a47c0de40653b5b9635ae2ece88a50e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47c0de40653b5b9635ae2ece88a50e6a">&#9670;&nbsp;</a></span>pipe_flush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +234,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="memname">int pipe_flush </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -341,8 +329,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 
 </div>
 </div>
-<a id="a8db9624d9ca2d7efa9e098cf2f497928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db9624d9ca2d7efa9e098cf2f497928">&#9670;&nbsp;</a></span>pipe_mode()</h2>
+<a id="a121cb1b9615ff515d78b3acda9f4254c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a121cb1b9615ff515d78b3acda9f4254c">&#9670;&nbsp;</a></span>pipe_mode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +338,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="memname">int pipe_mode </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -367,8 +355,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 
 </div>
 </div>
-<a id="a8e29fd4a35bc7f7d5413c8c126b6bf50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e29fd4a35bc7f7d5413c8c126b6bf50">&#9670;&nbsp;</a></span>pipe_open()</h2>
+<a id="aec19d8743e6d8b387fd63ede4d7eb565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec19d8743e6d8b387fd63ede4d7eb565">&#9670;&nbsp;</a></span>pipe_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +370,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
@@ -400,7 +388,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>cwd</em>, </td>
         </tr>
         <tr>
@@ -421,7 +409,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>the filename associated with the file being executed <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *path = <span class="stringliteral">&quot;/bin/ls&quot;</span>;</div>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>the filename associated with the file being executed <div class="fragment"><div class="line"><span class="keywordtype">char</span> <span class="keyword">const</span> *path = <span class="stringliteral">&quot;/bin/ls&quot;</span>;</div>
 </div><!-- fragment --> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>a pointer to the argument block terminated by a NULL pointer <div class="fragment"><div class="line"><span class="keywordtype">char</span> *argv[] = {<span class="stringliteral">&quot;ls&quot;</span>, <span class="stringliteral">&quot;-hlA&quot;</span>, NULL};</div>
 </div><!-- fragment --> </td></tr>
@@ -443,8 +431,176 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 
 </div>
 </div>
-<a id="a8e2ac88e3b56df57cdbc065a24674990"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e2ac88e3b56df57cdbc065a24674990">&#9670;&nbsp;</a></span>pipe_valid()</h2>
+<a id="a9e3ac62bf3042195d3b279142e4ef14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3ac62bf3042195d3b279142e4ef14b">&#9670;&nbsp;</a></span>pipe_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t pipe_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>read a block of the standard output of the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">data</td><td>address of a buffer </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">byte</td><td>length of a buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the read data </dd></dl>
+
+</div>
+</div>
+<a id="af0d8e15f36739ac7db7f7dc9ac794c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d8e15f36739ac7db7f7dc9ac794c86">&#9670;&nbsp;</a></span>pipe_reade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t pipe_reade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>read a block of the standard error output of the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">data</td><td>address of a buffer </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">byte</td><td>length of a buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the read data </dd></dl>
+
+</div>
+</div>
+<a id="a5c505d03054f770e65cc88a2834a3f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c505d03054f770e65cc88a2834a3f3a">&#9670;&nbsp;</a></span>pipe_stderr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* pipe_stderr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>access a stream pointer to the standard error output of the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6e3a219a7f69fd7f33436bbc0e1d26d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3a219a7f69fd7f33436bbc0e1d26d0">&#9670;&nbsp;</a></span>pipe_stdin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* pipe_stdin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>access a stream pointer to the standard input of the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a71fea0256b57d798447ed7997bbc01b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fea0256b57d798447ed7997bbc01b4">&#9670;&nbsp;</a></span>pipe_stdout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* pipe_stdout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>access a stream pointer to the standard output of the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a591564a1cd9f2550545abc4edc00ed30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591564a1cd9f2550545abc4edc00ed30">&#9670;&nbsp;</a></span>pipe_valid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +608,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="memname">int pipe_valid </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -476,8 +632,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
 
 </div>
 </div>
-<a id="af5f7caa04755e632199b35ec549cccbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5f7caa04755e632199b35ec549cccbd">&#9670;&nbsp;</a></span>pipe_wait()</h2>
+<a id="a10d97947d6edb376bcd5f430bfbdd68b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d97947d6edb376bcd5f430bfbdd68b">&#9670;&nbsp;</a></span>pipe_wait()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,7 +641,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
         <tr>
           <td class="memname">int pipe_wait </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>
@@ -518,6 +674,51 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_write</b> (con
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae0c95e8e92cc4276de8cfcb72f9496ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c95e8e92cc4276de8cfcb72f9496ce">&#9670;&nbsp;</a></span>pipe_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t pipe_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/structpipe__s.html">pipe_s</a> const *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>write a block of the standard input to the pipeline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of pipeline structure </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">data</td><td>address of a buffer to write to the pipeline </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">byte</td><td>length of a buffer to write to the pipeline </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size of the written data </dd></dl>
 
 </div>
 </div>
