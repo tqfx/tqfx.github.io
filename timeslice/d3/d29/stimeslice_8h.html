@@ -90,25 +90,19 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for circular singly linked list node.  <a href="../../d3/da3/unionslist__u.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0a/structslist__s.html">slist_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for circular singly linked list head.  <a href="../../d7/d0a/structslist__s.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd6/structstimeslice__s.html">stimeslice_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for timeslice.  <a href="../../dc/dd6/structstimeslice__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab7d6f2df35bcffe0e9d76b36fa3420ed"><td class="memItemLeft" align="right" valign="top"><a id="ab7d6f2df35bcffe0e9d76b36fa3420ed"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_NODE</b>(node)&#160;&#160;&#160;{&amp;(node)}</td></tr>
-<tr class="separator:ab7d6f2df35bcffe0e9d76b36fa3420ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49707721fde2adba8e88efcc5f1ee613"><td class="memItemLeft" align="right" valign="top"><a id="a49707721fde2adba8e88efcc5f1ee613"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_INIT</b>(list)&#160;&#160;&#160;{{&amp;(list).head}, &amp;(list).head}</td></tr>
-<tr class="separator:a49707721fde2adba8e88efcc5f1ee613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855c919d372350e554ff31a533b5a5ca"><td class="memItemLeft" align="right" valign="top"><a id="a855c919d372350e554ff31a533b5a5ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLIST_INIT</b>(node)&#160;&#160;&#160;{&amp;(node)}</td></tr>
+<tr class="separator:a855c919d372350e554ff31a533b5a5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea8856f39f597a427225dec1c02ba42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">slist_entry</a>(ptr,  type,  member)&#160;&#160;&#160;((type *)((char *)(ptr)-offsetof(type, member)))</td></tr>
 <tr class="memdesc:abea8856f39f597a427225dec1c02ba42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the struct for this entry.  <a href="../../d3/d29/stimeslice_8h.html#abea8856f39f597a427225dec1c02ba42">More...</a><br /></td></tr>
 <tr class="separator:abea8856f39f597a427225dec1c02ba42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4bf023975b31372b413fd0720cf063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a8d4bf023975b31372b413fd0720cf063">slist_foreach</a>(it,  ctx)&#160;&#160;&#160;    for (<a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a> *it = (ctx)-&gt;head.next; it != &amp;(ctx)-&gt;head; it = it-&gt;next)</td></tr>
+<tr class="memitem:a8d4bf023975b31372b413fd0720cf063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a8d4bf023975b31372b413fd0720cf063">slist_foreach</a>(it,  ctx)&#160;&#160;&#160;    for (<a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td></tr>
 <tr class="memdesc:a8d4bf023975b31372b413fd0720cf063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over a list.  <a href="../../d3/d29/stimeslice_8h.html#a8d4bf023975b31372b413fd0720cf063">More...</a><br /></td></tr>
 <tr class="separator:a8d4bf023975b31372b413fd0720cf063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f990a4a0c378843608693e26a50200"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a54f990a4a0c378843608693e26a50200">slist_forsafe</a>(it,  at,  ctx)</td></tr>
@@ -124,10 +118,6 @@ Typedefs</h2></td></tr>
 typedef union <a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a087492c49a6ffcc57be7406c442b7620">slist_u</a></td></tr>
 <tr class="memdesc:a087492c49a6ffcc57be7406c442b7620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for circular singly linked list node. <br /></td></tr>
 <tr class="separator:a087492c49a6ffcc57be7406c442b7620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a357e3a9d24ec8ab392edcf8ce56b9aa9"><td class="memItemLeft" align="right" valign="top"><a id="a357e3a9d24ec8ab392edcf8ce56b9aa9"></a>
-typedef struct <a class="el" href="../../d7/d0a/structslist__s.html">slist_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a357e3a9d24ec8ab392edcf8ce56b9aa9">slist_s</a></td></tr>
-<tr class="memdesc:a357e3a9d24ec8ab392edcf8ce56b9aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for circular singly linked list head. <br /></td></tr>
-<tr class="separator:a357e3a9d24ec8ab392edcf8ce56b9aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134c33ca4ff251655fc4fd6892151328"><td class="memItemLeft" align="right" valign="top"><a id="a134c33ca4ff251655fc4fd6892151328"></a>
 typedef struct <a class="el" href="../../dc/dd6/structstimeslice__s.html">stimeslice_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d29/stimeslice_8h.html#a134c33ca4ff251655fc4fd6892151328">stimeslice_s</a></td></tr>
 <tr class="memdesc:a134c33ca4ff251655fc4fd6892151328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance structure for timeslice. <br /></td></tr>
@@ -252,7 +242,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    for (<a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a> *it = (ctx)-&gt;head.next; it != &amp;(ctx)-&gt;head; it = it-&gt;next)</td>
+          <td></td><td>&#160;&#160;&#160;    for (<a class="el" href="../../d3/da3/unionslist__u.html">slist_u</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -299,10 +289,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (<a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *at = &amp;(ctx)-&gt;head, *it = at-&gt;next; \</div>
-<div class="line">         it != &amp;(ctx)-&gt;head &amp;&amp; it != it-&gt;next;       \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (<a class="code" href="../../d3/da3/unionslist__u.html">slist_u</a> *at = (ctx), *it = at-&gt;next; \</div>
+<div class="line">         it != (ctx) &amp;&amp; it != it-&gt;next;       \</div>
 <div class="line">         at = (at-&gt;next == it ? it : at), it = at-&gt;next)</div>
-<div class="ttc" id="aunionslist__u_html"><div class="ttname"><a href="../../d3/da3/unionslist__u.html">slist_u</a></div><div class="ttdoc">Instance structure for circular singly linked list node.</div><div class="ttdef"><b>Definition:</b> stimeslice.h:20</div></div>
+<div class="ttc" id="aunionslist__u_html"><div class="ttname"><a href="../../d3/da3/unionslist__u.html">slist_u</a></div><div class="ttdoc">Instance structure for circular singly linked list node.</div><div class="ttdef"><b>Definition:</b> stimeslice.h:19</div></div>
 </div><!-- fragment -->
 <p>Iterate over a list safe against removal of list entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
