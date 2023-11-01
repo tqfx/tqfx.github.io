@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>cooperative timeslice scheduler implementation.  
+<p>A simple cooperative timeslice scheduler implementation.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -96,6 +96,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:abc84fecd89c39481766f404d8a098d37"><td class="memItemLeft" align="right" valign="top"><a id="abc84fecd89c39481766f404d8a098d37"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIMESLICE_VERSION</b>&#160;&#160;&#160;0x20231101</td></tr>
+<tr class="separator:abc84fecd89c39481766f404d8a098d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78cb21e71ef21de5aafb59a3dbf9a5ee"><td class="memItemLeft" align="right" valign="top"><a id="a78cb21e71ef21de5aafb59a3dbf9a5ee"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LIST_INIT</b>(node)&#160;&#160;&#160;{&amp;(node), &amp;(node)}</td></tr>
 <tr class="separator:a78cb21e71ef21de5aafb59a3dbf9a5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,7 +178,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:a735ff829dbc59feff8a334902ee90015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>cooperative timeslice scheduler implementation. </p>
+<div class="textblock"><p>A simple cooperative timeslice scheduler implementation. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a26c976b7f654e70df318c1843e5094de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26c976b7f654e70df318c1843e5094de">&#9670;&nbsp;</a></span>list_entry</h2>
@@ -290,8 +293,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (<a class="code" href="../../d6/df5/structlist__s.html">list_s</a> *it = (ctx)-&gt;next, *at = it-&gt;next; \</div>
-<div class="line">         it != (ctx) &amp;&amp; it != it-&gt;next;            \</div>
-<div class="line">         it = at, at = it-&gt;next)</div>
+<div class="line">         it != (ctx) &amp;&amp; it != it-&gt;next; it = at, at = it-&gt;next)</div>
 <div class="ttc" id="astructlist__s_html"><div class="ttname"><a href="../../d6/df5/structlist__s.html">list_s</a></div><div class="ttdoc">Instance structure for circular doubly linked list.</div><div class="ttdef"><b>Definition:</b> timeslice.h:19</div></div>
 </div><!-- fragment -->
 <p>Iterate over a list safe against removal of list entry. </p>

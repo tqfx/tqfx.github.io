@@ -1,4 +1,4 @@
 <map id="timeslice.h" name="timeslice.h">
-<area shape="rect" id="node1" title="cooperative timeslice scheduler implementation." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node1" title="A simple cooperative timeslice scheduler implementation." alt="" coords="5,5,100,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="15,80,90,107"/>
 </map>
