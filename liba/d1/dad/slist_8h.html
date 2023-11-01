@@ -89,7 +89,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>circular singly linked list implementation  
+<p>singly linked list implementation  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d2/d62/a_8h_source.html">a.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -103,19 +103,19 @@ Include dependency graph for slist.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular singly linked list node  <a href="../../d2/dd0/uniona__slist__u.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for singly linked list node  <a href="../../d2/dd0/uniona__slist__u.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular singly linked list head  <a href="../../d2/d5c/structa__slist__s.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for singly linked list head  <a href="../../d2/d5c/structa__slist__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga4b703008a0fc80209062d7b9af507677" id="r_ga4b703008a0fc80209062d7b9af507677"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SLIST_NODE</b>(node)&#160;&#160;&#160;{&amp;(node)}</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SLIST_NODE</b>(node)&#160;&#160;&#160;{A_NULL}</td></tr>
 <tr class="separator:ga4b703008a0fc80209062d7b9af507677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9217b0e8d72ce84cb1fce326e476e715" id="r_ga9217b0e8d72ce84cb1fce326e476e715"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SLIST_INIT</b>(list)&#160;&#160;&#160;{{&amp;(list).head}, &amp;(list).head}</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SLIST_INIT</b>(list)&#160;&#160;&#160;{{A_NULL}, &amp;(list).head}</td></tr>
 <tr class="separator:ga9217b0e8d72ce84cb1fce326e476e715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66b814c0af71a327131d088cbd0925ef" id="r_ga66b814c0af71a327131d088cbd0925ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga66b814c0af71a327131d088cbd0925ef">a_slist_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> _, a_cast_s(void _, x))</td></tr>
 <tr class="memdesc:ga66b814c0af71a327131d088cbd0925ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
@@ -126,7 +126,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga05c5783f445590ab35b6784818b6e8c0" id="r_ga05c5783f445590ab35b6784818b6e8c0"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_slist_entry_next</b>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../d1/dfe/group__A__SLIST.html#ga597f1383a155441b46669d6864fda790">a_slist_entry</a>((ptr)-&gt;next, type, member)</td></tr>
 <tr class="separator:ga05c5783f445590ab35b6784818b6e8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c8622259bd161f3ac89d211c23539ba" id="r_ga6c8622259bd161f3ac89d211c23539ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga6c8622259bd161f3ac89d211c23539ba">a_slist_foreach</a>(it,  ctx)&#160;&#160;&#160;    for (<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *it = (ctx)-&gt;head.next; it != &amp;(ctx)-&gt;head; it = it-&gt;next)</td></tr>
+<tr class="memitem:ga6c8622259bd161f3ac89d211c23539ba" id="r_ga6c8622259bd161f3ac89d211c23539ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga6c8622259bd161f3ac89d211c23539ba">a_slist_foreach</a>(it,  ctx)&#160;&#160;&#160;    for (<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *it = (ctx)-&gt;head.next; it; it = it-&gt;next)</td></tr>
 <tr class="memdesc:ga6c8622259bd161f3ac89d211c23539ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list  <br /></td></tr>
 <tr class="separator:ga6c8622259bd161f3ac89d211c23539ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c6ec69ecd3bb0c90eb6d701f5da6480" id="r_ga4c6ec69ecd3bb0c90eb6d701f5da6480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga4c6ec69ecd3bb0c90eb6d701f5da6480">a_slist_forsafe</a>(it,  at,  ctx)</td></tr>
@@ -137,26 +137,26 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga8583f579017469302d04e159356eaba9" id="r_ga8583f579017469302d04e159356eaba9"><td class="memItemLeft" align="right" valign="top">
 typedef union <a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_slist_u</b></td></tr>
-<tr class="memdesc:ga8583f579017469302d04e159356eaba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular singly linked list node <br /></td></tr>
+<tr class="memdesc:ga8583f579017469302d04e159356eaba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for singly linked list node <br /></td></tr>
 <tr class="separator:ga8583f579017469302d04e159356eaba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga97cd10dd3ee7a7c0313520ffca7c5d5e" id="r_ga97cd10dd3ee7a7c0313520ffca7c5d5e"><td class="memItemLeft" align="right" valign="top">
 typedef struct <a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_slist_s</b></td></tr>
-<tr class="memdesc:ga97cd10dd3ee7a7c0313520ffca7c5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular singly linked list head <br /></td></tr>
+<tr class="memdesc:ga97cd10dd3ee7a7c0313520ffca7c5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for singly linked list head <br /></td></tr>
 <tr class="separator:ga97cd10dd3ee7a7c0313520ffca7c5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga8d5a2054b37e72f6131c685ba2e97ccc" id="r_ga8d5a2054b37e72f6131c685ba2e97ccc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga8d5a2054b37e72f6131c685ba2e97ccc">a_slist_node</a> (<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *const ctx)</td></tr>
-<tr class="memdesc:ga8d5a2054b37e72f6131c685ba2e97ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for circular singly linked list node  <br /></td></tr>
+<tr class="memdesc:ga8d5a2054b37e72f6131c685ba2e97ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for singly linked list node  <br /></td></tr>
 <tr class="separator:ga8d5a2054b37e72f6131c685ba2e97ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa779630a362c6de812b4791af085037" id="r_gafa779630a362c6de812b4791af085037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#gafa779630a362c6de812b4791af085037">a_slist_ctor</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx)</td></tr>
-<tr class="memdesc:gafa779630a362c6de812b4791af085037"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for circular singly linked list head  <br /></td></tr>
+<tr class="memdesc:gafa779630a362c6de812b4791af085037"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for singly linked list head  <br /></td></tr>
 <tr class="separator:gafa779630a362c6de812b4791af085037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf7754a5032c4e2bcd428bbf10aba9b77" id="r_gaf7754a5032c4e2bcd428bbf10aba9b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#gaf7754a5032c4e2bcd428bbf10aba9b77">a_slist_init</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx)</td></tr>
-<tr class="memdesc:gaf7754a5032c4e2bcd428bbf10aba9b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for circular singly linked list head  <br /></td></tr>
+<tr class="memdesc:gaf7754a5032c4e2bcd428bbf10aba9b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for singly linked list head  <br /></td></tr>
 <tr class="separator:gaf7754a5032c4e2bcd428bbf10aba9b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3bf39f4c5a85554682bfb4a4117dde02" id="r_ga3bf39f4c5a85554682bfb4a4117dde02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga3bf39f4c5a85554682bfb4a4117dde02">a_slist_dtor</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga3bf39f4c5a85554682bfb4a4117dde02"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for circular singly linked list head  <br /></td></tr>
+<tr class="memdesc:ga3bf39f4c5a85554682bfb4a4117dde02"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for singly linked list head  <br /></td></tr>
 <tr class="separator:ga3bf39f4c5a85554682bfb4a4117dde02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0a913e8272490bcb55be36b9faf8dbb4" id="r_ga0a913e8272490bcb55be36b9faf8dbb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga0a913e8272490bcb55be36b9faf8dbb4">a_slist_link</a> (<a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *const head, <a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *const tail)</td></tr>
 <tr class="memdesc:ga0a913e8272490bcb55be36b9faf8dbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">link head node and tail node  <br /></td></tr>
@@ -176,15 +176,15 @@ Functions</h2></td></tr>
 <tr class="memitem:gaefbe18d31a431cab7129cba90b00316a" id="r_gaefbe18d31a431cab7129cba90b00316a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#gaefbe18d31a431cab7129cba90b00316a">a_slist_del_head</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx)</td></tr>
 <tr class="memdesc:gaefbe18d31a431cab7129cba90b00316a"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete a node from a list head  <br /></td></tr>
 <tr class="separator:gaefbe18d31a431cab7129cba90b00316a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga17033b7397bbd15df1574832a32e9918" id="r_ga17033b7397bbd15df1574832a32e9918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga17033b7397bbd15df1574832a32e9918">a_slist_mov</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx, <a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *const at, <a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const src)</td></tr>
-<tr class="memdesc:ga17033b7397bbd15df1574832a32e9918"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list  <br /></td></tr>
-<tr class="separator:ga17033b7397bbd15df1574832a32e9918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b29a8d8ae093187d3039aa36201bd60" id="r_ga1b29a8d8ae093187d3039aa36201bd60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga1b29a8d8ae093187d3039aa36201bd60">a_slist_mov</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx, <a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const to, <a class="el" href="../../d2/dd0/uniona__slist__u.html">a_slist_u</a> *const at)</td></tr>
+<tr class="memdesc:ga1b29a8d8ae093187d3039aa36201bd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list  <br /></td></tr>
+<tr class="separator:ga1b29a8d8ae093187d3039aa36201bd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1526bf0ee3609e4ac04dfd9afa617513" id="r_ga1526bf0ee3609e4ac04dfd9afa617513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dfe/group__A__SLIST.html#ga1526bf0ee3609e4ac04dfd9afa617513">a_slist_rot</a> (<a class="el" href="../../d2/d5c/structa__slist__s.html">a_slist_s</a> *const ctx)</td></tr>
 <tr class="memdesc:ga1526bf0ee3609e4ac04dfd9afa617513"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list  <br /></td></tr>
 <tr class="separator:ga1526bf0ee3609e4ac04dfd9afa617513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>circular singly linked list implementation </p>
+<div class="textblock"><p>singly linked list implementation </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

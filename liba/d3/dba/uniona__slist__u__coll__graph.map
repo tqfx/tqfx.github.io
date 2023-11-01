@@ -1,4 +1,4 @@
 <map id="a_slist_u" name="a_slist_u">
-<area shape="rect" id="Node000001" title="instance structure for circular singly linked list node" alt="" coords="5,5,84,31"/>
+<area shape="rect" id="Node000001" title="instance structure for singly linked list node" alt="" coords="5,5,84,31"/>
 <area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="99,12,111,18,102,24,84,25,84,20,100,19,105,18,97,17"/>
 </map>

@@ -184,12 +184,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga708c11d0e099785632b99185ab0fb699" id="r_ga708c11d0e099785632b99185ab0fb699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga708c11d0e099785632b99185ab0fb699">a_list_del_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
 <tr class="memdesc:ga708c11d0e099785632b99185ab0fb699"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a node from a list backward  <br /></td></tr>
 <tr class="separator:ga708c11d0e099785632b99185ab0fb699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac7681cdca0efeab5c3732dc7543441a1" id="r_gac7681cdca0efeab5c3732dc7543441a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#gac7681cdca0efeab5c3732dc7543441a1">a_list_mov_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const obj)</td></tr>
-<tr class="memdesc:gac7681cdca0efeab5c3732dc7543441a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list forward  <br /></td></tr>
-<tr class="separator:gac7681cdca0efeab5c3732dc7543441a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga653a91db34e4db678b441455b2bff8eb" id="r_ga653a91db34e4db678b441455b2bff8eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga653a91db34e4db678b441455b2bff8eb">a_list_mov_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const obj)</td></tr>
-<tr class="memdesc:ga653a91db34e4db678b441455b2bff8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list backward  <br /></td></tr>
-<tr class="separator:ga653a91db34e4db678b441455b2bff8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bb044bd72f405adc7f3efcc38ddd333" id="r_ga5bb044bd72f405adc7f3efcc38ddd333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga5bb044bd72f405adc7f3efcc38ddd333">a_list_mov_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const out)</td></tr>
+<tr class="memdesc:ga5bb044bd72f405adc7f3efcc38ddd333"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list forward  <br /></td></tr>
+<tr class="separator:ga5bb044bd72f405adc7f3efcc38ddd333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62fa1c916aa9590f8739e6344dfa2e51" id="r_ga62fa1c916aa9590f8739e6344dfa2e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga62fa1c916aa9590f8739e6344dfa2e51">a_list_mov_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const out)</td></tr>
+<tr class="memdesc:ga62fa1c916aa9590f8739e6344dfa2e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list backward  <br /></td></tr>
+<tr class="separator:ga62fa1c916aa9590f8739e6344dfa2e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga307021904d6285255445024c8a327108" id="r_ga307021904d6285255445024c8a327108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/group__A__LIST.html#ga307021904d6285255445024c8a327108">a_list_rot_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
 <tr class="memdesc:ga307021904d6285255445024c8a327108"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list backward  <br /></td></tr>
 <tr class="separator:ga307021904d6285255445024c8a327108"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -481,7 +481,7 @@ Functions</h2></td></tr>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -527,7 +527,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">head</td><td>the head node of a list </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">tail</td><td>the tail node of a list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,7 +566,7 @@ Functions</h2></td></tr>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -659,7 +659,7 @@ Functions</h2></td></tr>
 <iframe scrolling="no" frameborder="0" src="../../dot_inline_dotgraph_6.svg" width="364" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -687,7 +687,7 @@ Functions</h2></td></tr>
 <iframe scrolling="no" frameborder="0" src="../../dot_inline_dotgraph_7.svg" width="306" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -715,7 +715,7 @@ Functions</h2></td></tr>
 <iframe scrolling="no" frameborder="0" src="../../dot_inline_dotgraph_8.svg" width="364" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a list node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>a circular doubly linked list node </td></tr>
   </table>
   </dd>
 </dl>
@@ -852,8 +852,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gac7681cdca0efeab5c3732dc7543441a1" name="gac7681cdca0efeab5c3732dc7543441a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7681cdca0efeab5c3732dc7543441a1">&#9670;&#160;</a></span>a_list_mov_next()</h2>
+<a id="ga5bb044bd72f405adc7f3efcc38ddd333" name="ga5bb044bd72f405adc7f3efcc38ddd333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bb044bd72f405adc7f3efcc38ddd333">&#9670;&#160;</a></span>a_list_mov_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -868,7 +868,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const&#160;</td>
-          <td class="paramname"><em>obj</em>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -884,15 +884,15 @@ Functions</h2></td></tr>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>source list </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">out</td><td>another circular doubly linked list </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ga653a91db34e4db678b441455b2bff8eb" name="ga653a91db34e4db678b441455b2bff8eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga653a91db34e4db678b441455b2bff8eb">&#9670;&#160;</a></span>a_list_mov_prev()</h2>
+<a id="ga62fa1c916aa9590f8739e6344dfa2e51" name="ga62fa1c916aa9590f8739e6344dfa2e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62fa1c916aa9590f8739e6344dfa2e51">&#9670;&#160;</a></span>a_list_mov_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -907,7 +907,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const&#160;</td>
-          <td class="paramname"><em>obj</em>&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -923,7 +923,7 @@ Functions</h2></td></tr>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>source list </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">out</td><td>another circular doubly linked list </td></tr>
   </table>
   </dd>
 </dl>
@@ -1158,8 +1158,8 @@ Functions</h2></td></tr>
 <p>swap the node lhs and the node rhs </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">lhs</td><td>a node on the left </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">rhs</td><td>a node on the right </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">lhs</td><td>the node on the left </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">rhs</td><td>the node on the right </td></tr>
   </table>
   </dd>
 </dl>
