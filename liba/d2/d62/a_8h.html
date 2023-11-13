@@ -585,6 +585,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SQ</b>(x)&#160;&#160;&#160;((x) * (x))</td></tr>
 <tr class="memdesc:ga7f27ee89f0f53168bc21f8e3944337d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">square of x, \( x^2 \) <br /></td></tr>
 <tr class="separator:ga7f27ee89f0f53168bc21f8e3944337d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84aacec7427e328d0a6b4c897cb02059" id="r_ga84aacec7427e328d0a6b4c897cb02059"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_ABS</b>(x)&#160;&#160;&#160;((x) &lt; 0 ? -(x) : (x))</td></tr>
+<tr class="memdesc:ga84aacec7427e328d0a6b4c897cb02059"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of x, \( |x| \) <br /></td></tr>
+<tr class="separator:ga84aacec7427e328d0a6b4c897cb02059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f85fcc489eeaed9a23932445c7dec1" id="r_ga16f85fcc489eeaed9a23932445c7dec1"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_MIN</b>(x,  y)&#160;&#160;&#160;(((x) &lt; (y)) ? (x) : (y))</td></tr>
 <tr class="memdesc:ga16f85fcc489eeaed9a23932445c7dec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum value between x and y <br /></td></tr>
@@ -593,10 +597,6 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_MAX</b>(x,  y)&#160;&#160;&#160;(((x) &gt; (y)) ? (x) : (y))</td></tr>
 <tr class="memdesc:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum value between x and y <br /></td></tr>
 <tr class="separator:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84aacec7427e328d0a6b4c897cb02059" id="r_ga84aacec7427e328d0a6b4c897cb02059"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_ABS</b>(x)&#160;&#160;&#160;((x) &lt; 0 ? -(x) : (x))</td></tr>
-<tr class="memdesc:ga84aacec7427e328d0a6b4c897cb02059"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of x, \( |x| \) <br /></td></tr>
-<tr class="separator:ga84aacec7427e328d0a6b4c897cb02059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6616a52c6eb69d1026c534ed1a54aebb" id="r_ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SGN</b>(x)&#160;&#160;&#160;((0 &lt; (x)) - ((x) &lt; 0))</td></tr>
 <tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}{x}=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \) <br /></td></tr>
@@ -605,9 +605,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_SAT</b>(x,  min,  max)&#160;&#160;&#160;((min) &lt; (x) ? (x) &lt; (max) ? (x) : (max) : (min))</td></tr>
 <tr class="memdesc:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">saturation value of x, \( \texttt{sat}(x,min,max)=\begin{cases}min&amp;min&gt;x\\max&amp;x&gt;max\\x&amp;else\end{cases} \) <br /></td></tr>
 <tr class="separator:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga76c2a217654aabcd1b8770f2e29627c7" id="r_ga76c2a217654aabcd1b8770f2e29627c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga76c2a217654aabcd1b8770f2e29627c7">a_array_n</a>(array)&#160;&#160;&#160;(sizeof(array) / sizeof(*(array)))</td></tr>
-<tr class="memdesc:ga76c2a217654aabcd1b8770f2e29627c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of elements in a visible array  <br /></td></tr>
-<tr class="separator:ga76c2a217654aabcd1b8770f2e29627c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga889a4126b02870e41e0012b5d42eaf5b" id="r_ga889a4126b02870e41e0012b5d42eaf5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga889a4126b02870e41e0012b5d42eaf5b">A_LEN</a>(a)&#160;&#160;&#160;(sizeof(a) / sizeof(*(a)))</td></tr>
+<tr class="memdesc:ga889a4126b02870e41e0012b5d42eaf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of elements in a visible array  <br /></td></tr>
+<tr class="separator:ga889a4126b02870e41e0012b5d42eaf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa2986e23be61c0e170c030974eef9dce" id="r_gaa2986e23be61c0e170c030974eef9dce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gaa2986e23be61c0e170c030974eef9dce">a_offsetof</a>(type,  member)&#160;&#160;&#160;a_cast_r(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, &amp;a_cast_r(type *, 0)-&gt;member)</td></tr>
 <tr class="memdesc:gaa2986e23be61c0e170c030974eef9dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">offset of a structure member  <br /></td></tr>
 <tr class="separator:gaa2986e23be61c0e170c030974eef9dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
