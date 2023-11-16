@@ -109,6 +109,23 @@
 <a href="#109" id="109">109</a>
 <a href="#110" id="110">110</a>
 <a href="#111" id="111">111</a>
+<a href="#112" id="112">112</a>
+<a href="#113" id="113">113</a>
+<a href="#114" id="114">114</a>
+<a href="#115" id="115">115</a>
+<a href="#116" id="116">116</a>
+<a href="#117" id="117">117</a>
+<a href="#118" id="118">118</a>
+<a href="#119" id="119">119</a>
+<a href="#120" id="120">120</a>
+<a href="#121" id="121">121</a>
+<a href="#122" id="122">122</a>
+<a href="#123" id="123">123</a>
+<a href="#124" id="124">124</a>
+<a href="#125" id="125">125</a>
+<a href="#126" id="126">126</a>
+<a href="#127" id="127">127</a>
+<a href="#128" id="128">128</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++ language
 
@@ -127,6 +144,8 @@ liba = &quot;0.1&quot;
 #![cfg_attr(not(features = <span class="string">&quot;std&quot;</span>), no_std)]
 
 </span><span class="kw">use </span>core::ffi::c_char;
+<span class="doccomment">/// Equivalent to C’s int type.
+</span><span class="kw">pub type </span>int = core::ffi::c_int;
 <span class="doccomment">/// Equivalent to C’s unsigned int type.
 </span><span class="kw">pub type </span>uint = core::ffi::c_uint;
 <span class="doccomment">/// floating-point number stored using `f64`
@@ -149,12 +168,15 @@ liba = &quot;0.1&quot;
 <span class="kw">pub mod </span>pid;
 <span class="kw">pub mod </span>polytrack;
 <span class="kw">pub mod </span>tf;
+<span class="kw">pub mod </span>version;
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_version() -&gt; <span class="kw-2">*const </span>c_char;
     <span class="kw">fn </span>a_version_major() -&gt; uint;
     <span class="kw">fn </span>a_version_minor() -&gt; uint;
     <span class="kw">fn </span>a_version_patch() -&gt; uint;
+    <span class="kw">fn </span>a_version_tweak() -&gt; u64;
+    <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
 }
 
 <span class="doccomment">/**
@@ -189,6 +211,16 @@ println!(&quot;version {}&quot;, liba::version());
     <span class="kw">unsafe </span>{ a_version_patch() }
 }
 
+<span class="doccomment">/// algorithm library version tweak
+</span><span class="kw">pub fn </span>version_tweak() -&gt; u64 {
+    <span class="kw">unsafe </span>{ a_version_tweak() }
+}
+
+<span class="doccomment">/// algorithm library version check
+</span><span class="kw">pub fn </span>version_check(major: uint, minor: uint, patch: uint) -&gt; int {
+    <span class="kw">unsafe </span>{ a_version_check(major, minor, patch) }
+}
+
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_f32_rsqrt(x: f32) -&gt; f32;
     <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
@@ -213,6 +245,8 @@ println!(&quot;version {}&quot;, liba::version());
         <span class="macro">std::println!</span>(<span class="string">&quot;major {}&quot;</span>, <span class="kw">crate</span>::version_major());
         <span class="macro">std::println!</span>(<span class="string">&quot;minor {}&quot;</span>, <span class="kw">crate</span>::version_minor());
         <span class="macro">std::println!</span>(<span class="string">&quot;patch {}&quot;</span>, <span class="kw">crate</span>::version_patch());
+        <span class="macro">std::println!</span>(<span class="string">&quot;tweak {}&quot;</span>, <span class="kw">crate</span>::version_tweak());
+        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::version_check(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));
     }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>rsqrt() {

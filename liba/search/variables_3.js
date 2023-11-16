@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['center_5fn_0',['center_n',['../d2/d2c/structa__rbf__s.html#a9d011a021ed9ace7387c7d5fa426a5ef',1,'a_rbf_s']]],
-  ['center_5fp_1',['center_p',['../d2/d2c/structa__rbf__s.html#a0b1e40c0d1e76a98d5348e367e86faa8',1,'a_rbf_s']]],
-  ['chan_2',['chan',['../de/def/structa__pid__s.html#a45b59a93be0baed2030d593eff7413c7',1,'a_pid_s']]],
-  ['col_3',['col',['../d5/d1d/structa__pid__fuzzy__s.html#a6ad741577fb983fecee6b97cc1a9ba1a',1,'a_pid_fuzzy_s']]],
-  ['ctor_4',['ctor',['../d0/d2d/structa__vector__s.html#a0ee48180c7cef4d42c547aea94fbed49',1,'a_vector_s']]]
+  ['deltaw_0',['deltaw',['../d2/d2c/structa__rbf__s.html#ac4d5a0435e4bbaa8e7d29a25e0f63dd2',1,'a_rbf_s']]],
+  ['den_5fn_1',['den_n',['../d0/d16/structa__tf__s.html#aa3447ceade10a872d4d15330d44ca837',1,'a_tf_s']]],
+  ['den_5fp_2',['den_p',['../d0/d16/structa__tf__s.html#ab3cc7e46447970162b108de317dcdb14',1,'a_tf_s']]],
+  ['dtor_3',['dtor',['../d0/d2d/structa__vector__s.html#a22cf25af16053292ab15e369b9c65b0d',1,'a_vector_s']]]
 ];

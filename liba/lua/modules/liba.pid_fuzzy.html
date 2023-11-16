@@ -89,20 +89,20 @@
 	<td class="summary">initialize function for fuzzy PID controller</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#op">op (ctx, op)</a></td>
+	<td class="summary">set fuzzy relational operator for fuzzy PID controller</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#rule">rule (ctx, me, mec, mkp, mki, mkd)</a></td>
 	<td class="summary">set rule base for fuzzy PID controller</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#joint">joint (ctx, num)</a></td>
+	<td class="summary">set joint buffer for fuzzy PID controller</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#kpid">kpid (ctx, kp, ki, kd)</a></td>
 	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#buff">buff (ctx, num)</a></td>
-	<td class="summary">set buffer for fuzzy PID controller</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#op">op (ctx, op)</a></td>
-	<td class="summary">set fuzzy relational operator for fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#iter">iter (ctx, set, fdb)</a></td>
@@ -254,6 +254,36 @@
 
 </dd>
     <dt>
+    <a name = "op"></a>
+    <strong>op (ctx, op)</strong>
+    </dt>
+    <dd>
+    set fuzzy relational operator for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+         fuzzy PID controller userdata
+        </li>
+        <li><span class="parameter">op</span>
+            <span class="types"><span class="type">int</span></span>
+         enumeration for fuzzy PID controller operator
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
     <a name = "rule"></a>
     <strong>rule (ctx, me, mec, mkp, mki, mkd)</strong>
     </dt>
@@ -276,15 +306,45 @@
         </li>
         <li><span class="parameter">mkp</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to Kp's rule base table, the rule base must be square
+         points to Kp's rule base table which must be a square matrix
         </li>
         <li><span class="parameter">mki</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to Ki's rule base table, the rule base must be square
+         points to Ki's rule base table which must be a square matrix
         </li>
         <li><span class="parameter">mkd</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
-         points to Kd's rule base table, the rule base must be square
+         points to Kd's rule base table which must be a square matrix
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "joint"></a>
+    <strong>joint (ctx, num)</strong>
+    </dt>
+    <dd>
+    set joint buffer for fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+         fuzzy PID controller userdata
+        </li>
+        <li><span class="parameter">num</span>
+            <span class="types"><span class="type">int</span></span>
+         maximum number triggered by the rule
         </li>
     </ul>
 
@@ -323,66 +383,6 @@
         <li><span class="parameter">kd</span>
             <span class="types"><span class="type">number</span></span>
          derivative constant
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
-        fuzzy PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "buff"></a>
-    <strong>buff (ctx, num)</strong>
-    </dt>
-    <dd>
-    set buffer for fuzzy PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         fuzzy PID controller userdata
-        </li>
-        <li><span class="parameter">num</span>
-            <span class="types"><span class="type">int</span></span>
-         maximum number triggered by the rule
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid_fuzzy</a></span>
-        fuzzy PID controller userdata
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "op"></a>
-    <strong>op (ctx, op)</strong>
-    </dt>
-    <dd>
-    set fuzzy relational operator for fuzzy PID controller
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ctx</span>
-         fuzzy PID controller userdata
-        </li>
-        <li><span class="parameter">op</span>
-            <span class="types"><span class="type">int</span></span>
-         enumeration for fuzzy PID controller operator
         </li>
     </ul>
 
@@ -506,7 +506,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-13 15:00:08 </i>
+<i style="float:right;">Last updated 2023-11-16 14:48:33 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

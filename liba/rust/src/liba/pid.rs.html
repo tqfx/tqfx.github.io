@@ -569,6 +569,13 @@
 <a href="#569" id="569">569</a>
 <a href="#570" id="570">570</a>
 <a href="#571" id="571">571</a>
+<a href="#572" id="572">572</a>
+<a href="#573" id="573">573</a>
+<a href="#574" id="574">574</a>
+<a href="#575" id="575">575</a>
+<a href="#576" id="576">576</a>
+<a href="#577" id="577">577</a>
+<a href="#578" id="578">578</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! proportional integral derivative controller
 
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
@@ -722,8 +729,6 @@
 <span class="doccomment">/// fuzzy PID controller operator
 </span><span class="kw">pub mod </span>fuzzy {
     <span class="kw">use </span><span class="kw">crate</span>::uint;
-    <span class="doccomment">/// sqrt(a,b)*sqrt(1-(1-a)*(1-b))
-    </span><span class="kw">pub const </span>EQU: uint = <span class="number">0</span>;
     <span class="doccomment">/// min(a,b)
     </span><span class="kw">pub const </span>CAP: uint = <span class="number">1</span>;
     <span class="doccomment">/// a*b
@@ -736,6 +741,16 @@
     </span><span class="kw">pub const </span>CUP_ALGEBRA: uint = <span class="number">5</span>;
     <span class="doccomment">/// min(a+b,1)
     </span><span class="kw">pub const </span>CUP_BOUNDED: uint = <span class="number">6</span>;
+    <span class="doccomment">/// sqrt(a,b)*sqrt(1-(1-a)*(1-b))
+    </span><span class="kw">pub const </span>EQU: uint = <span class="number">0</span>;
+}
+
+<span class="attr">#[macro_export]
+</span><span class="doccomment">/// compute size of joint buffer for fuzzy PID controller
+</span><span class="macro">macro_rules! </span>PID_FUZZY_JOINT {
+    (<span class="macro-nonterminal">$n</span>:expr) =&gt; {{
+        core::mem::size_of::&lt;uint&gt;() * <span class="macro-nonterminal">$n </span>* <span class="number">2 </span>+ core::mem::size_of::&lt;float&gt;() * <span class="macro-nonterminal">$n </span>* (<span class="number">2 </span>+ <span class="macro-nonterminal">$n</span>)
+    }};
 }
 
 <span class="doccomment">/// fuzzy proportional integral derivative controller
@@ -758,10 +773,10 @@
     </span><span class="kw">pub </span>ki: float,
     <span class="doccomment">/// base derivative constant
     </span><span class="kw">pub </span>kd: float,
-    <span class="doccomment">/// number of columns in the rule base
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) col: uint,
+    <span class="doccomment">/// number of order in the square matrix
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) order: uint,
     <span class="doccomment">/// maximum number triggered by the rule
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) buf: uint,
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) joint: uint,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
@@ -784,8 +799,8 @@
         mki: <span class="kw-2">*const </span>float,
         mkd: <span class="kw-2">*const </span>float,
     );
+    <span class="kw">fn </span>a_pid_fuzzy_joint(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
     <span class="kw">fn </span>a_pid_fuzzy_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_fuzzy_buff(ctx: <span class="kw-2">*mut </span>pid_fuzzy, idx: <span class="kw-2">*mut </span>uint, val: <span class="kw-2">*mut </span>float);
     <span class="kw">fn </span>a_pid_fuzzy_outf(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_outp(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: <span class="kw-2">*const </span>float, fdb: <span class="kw-2">*const </span>float) -&gt; <span class="kw-2">*const </span>float;
     <span class="kw">fn </span>a_pid_fuzzy_zero(ctx: <span class="kw-2">*mut </span>pid_fuzzy);
@@ -803,12 +818,12 @@
             mkd: core::ptr::null(),
             idx: core::ptr::null_mut(),
             val: core::ptr::null_mut(),
-            op: <span class="kw">unsafe </span>{ a_pid_fuzzy_op(fuzzy::EQU <span class="kw">as </span>uint) },
+            op: <span class="kw">unsafe </span>{ a_pid_fuzzy_op(fuzzy::EQU) },
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
-            col: <span class="number">0</span>,
-            buf: <span class="number">0</span>,
+            order: <span class="number">0</span>,
+            joint: <span class="number">0</span>,
         }
     }
 
@@ -863,9 +878,9 @@
         <span class="self">self
     </span>}
 
-    <span class="doccomment">/// set buffer for fuzzy PID controller
-    </span><span class="kw">pub fn </span>buff(<span class="kw-2">&amp;mut </span><span class="self">self</span>, idx: <span class="kw-2">&amp;mut </span>[u32], val: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_buff(<span class="self">self</span>, idx.as_mut_ptr(), val.as_mut_ptr()) };
+    <span class="doccomment">/// set joint buffer for fuzzy PID controller
+    </span><span class="kw">pub fn </span>joint(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ptr: <span class="kw-2">&amp;mut </span>[u8], num: usize) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_joint(<span class="self">self</span>, ptr.as_mut_ptr(), num) };
         <span class="self">self
     </span>}
 
@@ -973,10 +988,9 @@
         [NL, NS, NS, NS, NS, NS, NL],
         [NL, NM, NM, NM, NS, NS, NL],
     ];
+    <span class="kw">let </span><span class="kw-2">mut </span>joint = [<span class="number">0u8</span>; <span class="macro">crate::PID_FUZZY_JOINT!</span>(<span class="number">2</span>)];
     <span class="kw">let </span><span class="kw-2">mut </span>a = pid_fuzzy::new(-<span class="number">10.0</span>, <span class="number">10.0</span>, <span class="number">0.0</span>);
     <span class="macro">assert!</span>(a.pid.mode == <span class="kw">crate</span>::pid::INC);
-    <span class="kw">let </span><span class="kw-2">mut </span>idx = [<span class="number">0u32</span>; <span class="number">4</span>];
-    <span class="kw">let </span><span class="kw-2">mut </span>val = [<span class="number">0.0</span>; <span class="number">8</span>];
     a.rule(
         me.len(),
         <span class="kw-2">&amp;</span>me.concat(),
@@ -985,7 +999,7 @@
         <span class="kw-2">&amp;</span>mki.concat(),
         <span class="kw-2">&amp;</span>mkd.concat(),
     )
-    .buff(<span class="kw-2">&amp;mut </span>idx, <span class="kw-2">&amp;mut </span>val)
+    .joint(<span class="kw-2">&amp;mut </span>joint, <span class="number">2</span>)
     .kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>);
     <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, a.outf(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.op(<span class="kw">crate</span>::pid::fuzzy::EQU).zero();

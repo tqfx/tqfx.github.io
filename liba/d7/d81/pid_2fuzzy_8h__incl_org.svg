@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d6/dea/mf_8h.html" target="_top" xlink:title="membership function">
-<polygon fill="white" stroke="#666666" points="92.5,-129 45.5,-129 45.5,-110 92.5,-110 92.5,-129"/>
-<text text-anchor="middle" x="69" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">../mf.h</text>
+<g id="a_Node000002"><a xlink:href="../../da/df0/pid_8h.html" target="_top" xlink:title="proportional integral derivative controller">
+<polygon fill="white" stroke="#666666" points="161,-129 111,-129 111,-110 161,-110 161,-129"/>
+<text text-anchor="middle" x="136" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">../pid.h</text>
 </a>
 </g>
 </g>
@@ -30,44 +30,8 @@
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M125.24,-164.98C115.23,-157.07 100.11,-145.11 88.07,-135.58"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="89.97,-132.63 79.96,-129.17 85.63,-138.12 89.97,-132.63"/>
-</a>
-</g>
-</g>
-<!-- Node8 -->
-<g id="Node000008" class="node">
-<title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../da/df0/pid_8h.html" target="_top" xlink:title="proportional integral derivative controller">
-<polygon fill="white" stroke="#666666" points="161,-129 111,-129 111,-110 161,-110 161,-129"/>
-<text text-anchor="middle" x="136" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">../pid.h</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node8 -->
-<g id="edge7_Node000001_Node000008" class="edge">
-<title>Node1&#45;&gt;Node8</title>
-<g id="a_edge7_Node000001_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M136,-164.75C136,-157.8 136,-147.85 136,-139.13"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="139.5,-139.09 136,-129.09 132.5,-139.09 139.5,-139.09"/>
-</a>
-</g>
-</g>
-<!-- Node9 -->
-<g id="Node000009" class="node">
-<title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../df/d2a/fuzzy_8h.html" target="_top" xlink:title="fuzzy operator">
-<polygon fill="white" stroke="#666666" points="238.5,-129 179.5,-129 179.5,-110 238.5,-110 238.5,-129"/>
-<text text-anchor="middle" x="209" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">../fuzzy.h</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node9 -->
-<g id="edge9_Node000001_Node000009" class="edge">
-<title>Node1&#45;&gt;Node9</title>
-<g id="a_edge9_Node000001_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M147.73,-164.98C158.73,-157 175.42,-144.88 188.6,-135.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="191.02,-137.88 197.06,-129.17 186.91,-132.21 191.02,-137.88"/>
 </a>
 </g>
 </g>
@@ -84,8 +48,8 @@
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M79.76,-109.98C89.77,-102.07 104.89,-90.11 116.93,-80.58"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="119.37,-83.12 125.04,-74.17 115.03,-77.63 119.37,-83.12"/>
+<path fill="none" stroke="#63b8ff" d="M136,-109.75C136,-102.8 136,-92.85 136,-84.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="139.5,-84.09 136,-74.09 132.5,-84.09 139.5,-84.09"/>
 </a>
 </g>
 </g>
@@ -158,24 +122,6 @@
 <g id="a_edge6_Node000003_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M152.25,-55.22C168.84,-46.76 194.85,-33.51 214.25,-23.62"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="215.85,-26.73 223.18,-19.07 212.68,-20.5 215.85,-26.73"/>
-</a>
-</g>
-</g>
-<!-- Node8&#45;&gt;Node3 -->
-<g id="edge8_Node000008_Node000003" class="edge">
-<title>Node8&#45;&gt;Node3</title>
-<g id="a_edge8_Node000008_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M136,-109.75C136,-102.8 136,-92.85 136,-84.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="139.5,-84.09 136,-74.09 132.5,-84.09 139.5,-84.09"/>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node3 -->
-<g id="edge10_Node000009_Node000003" class="edge">
-<title>Node9&#45;&gt;Node3</title>
-<g id="a_edge10_Node000009_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M197.27,-109.98C186.27,-102 169.58,-89.88 156.4,-80.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="158.09,-77.21 147.94,-74.17 153.98,-82.88 158.09,-77.21"/>
 </a>
 </g>
 </g>

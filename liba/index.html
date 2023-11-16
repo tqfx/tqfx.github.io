@@ -161,12 +161,12 @@ conanfile.txt</h3>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md16"></a>
 Lua</h2>
 <div class="fragment"><div class="line">local liba = require(&quot;liba&quot;)</div>
-<div class="line">print(&quot;version&quot;, liba.version())</div>
+<div class="line">print(&quot;version&quot;, liba.VERSION)</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 Java</h2>
-<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>test {</div>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Main {</div>
 <div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main(String[] args) {</div>
-<div class="line">        System.out.println(<span class="stringliteral">&quot;version &quot;</span> + liba.version());</div>
+<div class="line">        System.out.println(<span class="stringliteral">&quot;version &quot;</span> + liba.VERSION);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
@@ -182,14 +182,14 @@ main.rs</h3>
 <div class="line">    println!(&quot;version {}&quot;, liba::version());</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
-NodeJS</h2>
-<div class="fragment"><div class="line">npm i @tqfx/liba</div>
-</div><!-- fragment --><div class="fragment"><div class="line">import liba from &quot;@tqfx/liba&quot;;</div>
-<div class="line">console.log(liba.version())</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
 Python</h2>
 <div class="fragment"><div class="line"><span class="keyword">import</span> liba</div>
-<div class="line">print(<span class="stringliteral">&quot;version&quot;</span>, liba.version())</div>
+<div class="line">print(<span class="stringliteral">&quot;version&quot;</span>, liba.VERSION)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
+JavaScript</h2>
+<div class="fragment"><div class="line">npm i @tqfx/liba</div>
+</div><!-- fragment --><div class="fragment"><div class="line">import liba from &quot;@tqfx/liba&quot;;</div>
+<div class="line">console.log(liba.VERSION)</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
 QuickJS</h2>
 <div class="fragment"><div class="line">import * as liba from &quot;liba.so&quot;;</div>
