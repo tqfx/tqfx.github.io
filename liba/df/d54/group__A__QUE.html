@@ -273,16 +273,16 @@ Functions</h2></td></tr>
 <div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_s(T *, <a class="code hl_define" href="../../df/d54/group__A__QUE.html#gac93244d189939b0f7b69332f44539207">a_que_node_c</a>(*, it)-&gt;_data)), 1) \</div>
 <div class="line">             : (0);                                                        \</div>
 <div class="line">         it = it##_, it##_ = a_cast_r(T *, <a class="code hl_define" href="../../d8/de5/group__A__LIST.html#ga20ee317221f1af2c5ed2b2ea00cd3700">a_list_c</a>(*, it)-&gt;next))</div>
-<div class="ttc" id="agroup__A__LIST_html_ga20ee317221f1af2c5ed2b2ea00cd3700"><div class="ttname"><a href="../../d8/de5/group__A__LIST.html#ga20ee317221f1af2c5ed2b2ea00cd3700">a_list_c</a></div><div class="ttdeci">#define a_list_c(_, x)</div><div class="ttdoc">cast a list pointer from another type pointer</div><div class="ttdef"><b>Definition</b> list.h:34</div></div>
-<div class="ttc" id="agroup__A__QUE_html_gac93244d189939b0f7b69332f44539207"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gac93244d189939b0f7b69332f44539207">a_que_node_c</a></div><div class="ttdeci">#define a_que_node_c(_, x)</div><div class="ttdoc">cast a list pointer from another type pointer</div><div class="ttdef"><b>Definition</b> que.h:32</div></div>
+<div class="ttc" id="agroup__A__LIST_html_ga20ee317221f1af2c5ed2b2ea00cd3700"><div class="ttname"><a href="../../d8/de5/group__A__LIST.html#ga20ee317221f1af2c5ed2b2ea00cd3700">a_list_c</a></div><div class="ttdeci">#define a_list_c(_, x)</div><div class="ttdoc">cast a list pointer from another type pointer</div><div class="ttdef"><b>Definition</b> list.h:35</div></div>
+<div class="ttc" id="agroup__A__QUE_html_gac93244d189939b0f7b69332f44539207"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gac93244d189939b0f7b69332f44539207">a_que_node_c</a></div><div class="ttdeci">#define a_que_node_c(_, x)</div><div class="ttdoc">cast a list pointer from another type pointer</div><div class="ttdef"><b>Definition</b> que.h:33</div></div>
 </div><!-- fragment -->
 <p>iterate over a queue </p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../df/d54/group__A__QUE.html#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a>(T, it, ctx)</div>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="../../df/d54/group__A__QUE.html#gad550439432822b34c3ba20016e312793">a_que_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__QUE_html_ga3986c7303ad6d032b575baca207b6db4"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:292</div></div>
-<div class="ttc" id="agroup__A__QUE_html_gad550439432822b34c3ba20016e312793"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gad550439432822b34c3ba20016e312793">a_que_siz</a></div><div class="ttdeci">a_size_t a_que_siz(a_que_s const *const ctx)</div><div class="ttdoc">access size of a element for a pointer to queue structure</div><div class="ttdef"><b>Definition</b> que.h:51</div></div>
+<div class="ttc" id="agroup__A__QUE_html_ga3986c7303ad6d032b575baca207b6db4"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:293</div></div>
+<div class="ttc" id="agroup__A__QUE_html_gad550439432822b34c3ba20016e312793"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gad550439432822b34c3ba20016e312793">a_que_siz</a></div><div class="ttdeci">a_size_t a_que_siz(a_que_s const *const ctx)</div><div class="ttdoc">access size of a element for a pointer to queue structure</div><div class="ttdef"><b>Definition</b> que.h:52</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the queue </td></tr>
@@ -337,7 +337,7 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="../../df/d54/group__A__QUE.html#gad550439432822b34c3ba20016e312793">a_que_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__QUE_html_gae0f9aa71683c4e8cff28e0e9110d9f80"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:312</div></div>
+<div class="ttc" id="agroup__A__QUE_html_gae0f9aa71683c4e8cff28e0e9110d9f80"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:313</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the queue </td></tr>
@@ -378,6 +378,7 @@ Functions</h2></td></tr>
 <p>cast a list pointer from another type pointer </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_</td><td>additional attributes of specified type </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>points to basic queue node </td></tr>
   </table>
   </dd>
