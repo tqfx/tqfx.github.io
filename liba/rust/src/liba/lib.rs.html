@@ -175,7 +175,7 @@ liba = &quot;0.1&quot;
     <span class="kw">fn </span>a_version_major() -&gt; uint;
     <span class="kw">fn </span>a_version_minor() -&gt; uint;
     <span class="kw">fn </span>a_version_patch() -&gt; uint;
-    <span class="kw">fn </span>a_version_tweak() -&gt; u64;
+    <span class="kw">fn </span>a_version_tweak() -&gt; u32;
     <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
 }
 
@@ -212,7 +212,7 @@ println!(&quot;version {}&quot;, liba::version());
 }
 
 <span class="doccomment">/// algorithm library version tweak
-</span><span class="kw">pub fn </span>version_tweak() -&gt; u64 {
+</span><span class="kw">pub fn </span>version_tweak() -&gt; u32 {
     <span class="kw">unsafe </span>{ a_version_tweak() }
 }
 

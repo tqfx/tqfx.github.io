@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"constant":["GAUSS","GBELL","NUL","SIG","TRAP","TRI","Z"],"fn":["gauss","gbell","sig","trap","tri","z"]};
+window.SIDEBAR_ITEMS = {"constant":["DSIG","GAUSS","GAUSS2","GBELL","LINS","LINZ","NUL","PI","PSIG","S","SIG","TRAP","TRI","Z"],"fn":["dsig","gauss","gauss2","gbell","lins","linz","pi","psig","s","sig","trap","tri","z"]};

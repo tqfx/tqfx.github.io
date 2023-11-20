@@ -44,8 +44,8 @@
   <li><a href="../modules/liba.complex.html">liba.complex</a></li>
   <li><a href="../modules/liba.mf.html">liba.mf</a></li>
   <li><a href="../modules/liba.pid.html">liba.pid</a></li>
-  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
-  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../modules/liba.pid.neuron.html">liba.pid.neuron</a></li>
   <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
   <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
   <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
@@ -54,15 +54,15 @@
 </ul>
 <h2>Classes</h2>
 <ul class="nowrap">
-  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
-  <li><a href="../classes/liba.pid.html">liba.pid</a></li>
-  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
-  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
-  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
-  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
-  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
-  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
-  <li><strong>liba.version</strong></li>
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid.fuzzy.html">a.pid.fuzzy</a></li>
+  <li><a href="../classes/a.pid.neuron.html">a.pid.neuron</a></li>
+  <li><a href="../classes/a.polytrack3.html">a.polytrack3</a></li>
+  <li><a href="../classes/a.polytrack5.html">a.polytrack5</a></li>
+  <li><a href="../classes/a.polytrack7.html">a.polytrack7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
 </ul>
 
 </div>
@@ -89,7 +89,7 @@
 	<td class="summary">algorithm library version parse</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cmp">cmp (version, version)</a></td>
+	<td class="name" nowrap><a href="#cmp">cmp (lhs, rhs)</a></td>
 	<td class="summary">compare the version lhs with the version rhs</td>
 	</tr>
 	<tr>
@@ -124,8 +124,8 @@
 <h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#version">version</a></td>
-	<td class="summary">algorithm library version string</td>
+	<td class="name" nowrap><a href="#liba.version">liba.version</a></td>
+	<td class="summary">algorithm library version number</td>
 	</tr>
 </table>
 
@@ -166,8 +166,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">algorithm</span></span>
-        library version userdata
+           <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+        algorithm library version userdata
     </ol>
 
 
@@ -185,6 +185,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
          algorithm library version userdata
         </li>
         <li><span class="parameter">major</span>
@@ -207,8 +208,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">algorithm</span></span>
-        library version userdata
+           <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+        algorithm library version userdata
     </ol>
 
 
@@ -226,6 +227,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
          algorithm library version userdata
         </li>
         <li><span class="parameter">version</span>
@@ -237,8 +239,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">algorithm</span></span>
-        library version userdata
+           <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+        algorithm library version userdata
     </ol>
 
 
@@ -247,7 +249,7 @@
 </dd>
     <dt>
     <a name = "cmp"></a>
-    <strong>cmp (version, version)</strong>
+    <strong>cmp (lhs, rhs)</strong>
     </dt>
     <dd>
     compare the version lhs with the version rhs
@@ -255,13 +257,13 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">version</span>
-            <span class="types"><span class="type">rhs</span></span>
-         structure to be compared
+        <li><span class="parameter">lhs</span>
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
-        <li><span class="parameter">version</span>
-            <span class="types"><span class="type">rhs</span></span>
-         structure to be compared
+        <li><span class="parameter">rhs</span>
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
@@ -269,10 +271,10 @@
     <ol>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        `<0` version lhs < version rhs</li>
+        <0 version lhs < version rhs</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        `>0` version lhs > version rhs</li>
+        >0 version lhs > version rhs</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
         0 version lhs == version rhs</li>
@@ -293,12 +295,15 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">major</span>
+            <span class="types"><span class="type">integer</span></span>
          required major number
         </li>
         <li><span class="parameter">minor</span>
+            <span class="types"><span class="type">integer</span></span>
          required minor number
         </li>
         <li><span class="parameter">patch</span>
+            <span class="types"><span class="type">integer</span></span>
          required patch number
         </li>
     </ul>
@@ -307,10 +312,10 @@
     <ol>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        `<0` library version is higher than required version</li>
+        <0 library version is higher than required version</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        `>0` library version is lower than required version</li>
+        >0 library version is lower than required version</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
         0 library version is equal to required version</li>
@@ -331,16 +336,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -359,16 +367,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -387,16 +398,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -415,16 +429,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -443,16 +460,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -471,16 +491,19 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">lhs</span>
-         operand on the left
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the left
         </li>
         <li><span class="parameter">rhs</span>
-         operand on the right
+            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
+         version userdata on the right
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
+           <span class="types"><span class="type">integer</span></span>
         result of comparison
     </ol>
 
@@ -493,23 +516,26 @@
 
     <dl class="function">
     <dt>
-    <a name = "version"></a>
-    <strong>version</strong>
+    <a name = "liba.version"></a>
+    <strong>liba.version</strong>
     </dt>
     <dd>
-    algorithm library version string
+    algorithm library version number
 
 
     <h3>Fields:</h3>
     <ul>
-        <li><span class="parameter">major</span>
+        <li><span class="parameter">MAJOR</span>
          algorithm library version major
         </li>
-        <li><span class="parameter">minor</span>
+        <li><span class="parameter">MINOR</span>
          algorithm library version minor
         </li>
-        <li><span class="parameter">patch</span>
+        <li><span class="parameter">PATCH</span>
          algorithm library version patch
+        </li>
+        <li><span class="parameter">TWEAK</span>
+         algorithm library version tweak
         </li>
     </ul>
 
@@ -525,7 +551,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-17 10:09:10 </i>
+<i style="float:right;">Last updated 2023-11-20 16:32:35 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

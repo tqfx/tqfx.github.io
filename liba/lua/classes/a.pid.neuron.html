@@ -40,24 +40,24 @@
 
 <h2>Classes</h2>
 <ul class="nowrap">
-  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
-  <li><strong>liba.pid</strong></li>
-  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
-  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
-  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
-  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
-  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
-  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
-  <li><a href="../classes/liba.version.html">liba.version</a></li>
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid.fuzzy.html">a.pid.fuzzy</a></li>
+  <li><strong>a.pid.neuron</strong></li>
+  <li><a href="../classes/a.polytrack3.html">a.polytrack3</a></li>
+  <li><a href="../classes/a.polytrack5.html">a.polytrack5</a></li>
+  <li><a href="../classes/a.polytrack7.html">a.polytrack7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
 </ul>
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/liba.html">liba</a></li>
   <li><a href="../modules/liba.complex.html">liba.complex</a></li>
   <li><a href="../modules/liba.mf.html">liba.mf</a></li>
-  <li><strong>liba.pid</strong></li>
-  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
-  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../modules/liba.pid.neuron.html">liba.pid.neuron</a></li>
   <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
   <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
   <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
@@ -69,39 +69,43 @@
 
 <div id="content">
 
-<h1>Class <code>liba.pid</code></h1>
-<p>proportional integral derivative controller</p>
+<h1>Class <code>a.pid.neuron</code></h1>
+<p>single neuron proportional integral derivative controller</p>
 <p></p>
 
 
 <h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid">liba.pid</a></td>
-	<td class="summary">proportional integral derivative controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron">a.pid.neuron</a></td>
+	<td class="summary">single neuron proportional integral derivative controller</td>
 	</tr>
 </table>
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid:new">liba.pid:new ([kp][, ki][, kd], min, max[, sum])</a></td>
-	<td class="summary">constructor for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:new">a.pid.neuron:new ([kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="summary">constructor for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid:init">liba.pid:init ([kp][, ki][, kd], min, max[, sum])</a></td>
-	<td class="summary">initialize function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:init">a.pid.neuron:init ([kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="summary">initialize function for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid:kpid">liba.pid:kpid (kp, ki, kd)</a></td>
-	<td class="summary">set proportional integral derivative constant for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:kpid">a.pid.neuron:kpid (k, kp, ki, kd)</a></td>
+	<td class="summary">set proportional integral derivative constant for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid:iter">liba.pid:iter (set, fdb)</a></td>
-	<td class="summary">calculate function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:wpid">a.pid.neuron:wpid (wp, wi, wd)</a></td>
+	<td class="summary">set proportional integral derivative weight for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#liba.pid:zero">liba.pid:zero ()</a></td>
-	<td class="summary">zero clear function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:iter">a.pid.neuron:iter (set, fdb)</a></td>
+	<td class="summary">calculate function for single neuron PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid.neuron:zero">a.pid.neuron:zero ()</a></td>
+	<td class="summary">zero clear function for single neuron PID controller</td>
 	</tr>
 </table>
 
@@ -113,23 +117,23 @@
 
     <dl class="function">
     <dt>
-    <a name = "liba.pid"></a>
-    <strong>liba.pid</strong>
+    <a name = "a.pid.neuron"></a>
+    <strong>a.pid.neuron</strong>
     </dt>
     <dd>
-    proportional integral derivative controller
+    single neuron proportional integral derivative controller
 
 
     <h3>Fields:</h3>
     <ul>
         <li><span class="parameter">kp</span>
-         proportional constant
+         proportional learning constant
         </li>
         <li><span class="parameter">ki</span>
-         integral constant
+         integral learning constant
         </li>
         <li><span class="parameter">kd</span>
-         derivative constant
+         derivative learning constant
         </li>
         <li><span class="parameter">summax</span>
          maximum integral output
@@ -152,6 +156,21 @@
         <li><span class="parameter">mode</span>
          controller mode
         </li>
+        <li><span class="parameter">ec</span>
+         error change
+        </li>
+        <li><span class="parameter">wp</span>
+         proportional weight
+        </li>
+        <li><span class="parameter">wi</span>
+         integral weight
+        </li>
+        <li><span class="parameter">wd</span>
+         derivative weight
+        </li>
+        <li><span class="parameter">k</span>
+         proportional output coefficient
+        </li>
     </ul>
 
 
@@ -164,28 +183,28 @@
 
     <dl class="function">
     <dt>
-    <a name = "liba.pid:new"></a>
-    <strong>liba.pid:new ([kp][, ki][, kd], min, max[, sum])</strong>
+    <a name = "a.pid.neuron:new"></a>
+    <strong>a.pid.neuron:new ([kp][, ki][, kd], min, max[, sum])</strong>
     </dt>
     <dd>
-    constructor for PID controller
+    constructor for single neuron PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
-         proportional constant
+         proportional learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">ki</span>
             <span class="types"><span class="type">number</span></span>
-         integral constant
+         integral learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">kd</span>
             <span class="types"><span class="type">number</span></span>
-         derivative constant
+         derivative learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">min</span>
@@ -206,8 +225,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
-        PID controller userdata
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
     </ol>
 
 
@@ -215,28 +234,28 @@
 
 </dd>
     <dt>
-    <a name = "liba.pid:init"></a>
-    <strong>liba.pid:init ([kp][, ki][, kd], min, max[, sum])</strong>
+    <a name = "a.pid.neuron:init"></a>
+    <strong>a.pid.neuron:init ([kp][, ki][, kd], min, max[, sum])</strong>
     </dt>
     <dd>
-    initialize function for PID controller
+    initialize function for single neuron PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
-         proportional constant
+         proportional learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">ki</span>
             <span class="types"><span class="type">number</span></span>
-         integral constant
+         integral learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">kd</span>
             <span class="types"><span class="type">number</span></span>
-         derivative constant
+         derivative learning constant
          (<em>optional</em>)
         </li>
         <li><span class="parameter">min</span>
@@ -257,8 +276,8 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
-        PID controller userdata
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
     </ol>
 
 
@@ -266,34 +285,38 @@
 
 </dd>
     <dt>
-    <a name = "liba.pid:kpid"></a>
-    <strong>liba.pid:kpid (kp, ki, kd)</strong>
+    <a name = "a.pid.neuron:kpid"></a>
+    <strong>a.pid.neuron:kpid (k, kp, ki, kd)</strong>
     </dt>
     <dd>
-    set proportional integral derivative constant for PID controller
+    set proportional integral derivative constant for single neuron PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">k</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional output coefficient
+        </li>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
-         proportional constant
+         proportional learning constant
         </li>
         <li><span class="parameter">ki</span>
             <span class="types"><span class="type">number</span></span>
-         integral constant
+         integral learning constant
         </li>
         <li><span class="parameter">kd</span>
             <span class="types"><span class="type">number</span></span>
-         derivative constant
+         derivative learning constant
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
-        PID controller userdata
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
     </ol>
 
 
@@ -301,11 +324,46 @@
 
 </dd>
     <dt>
-    <a name = "liba.pid:iter"></a>
-    <strong>liba.pid:iter (set, fdb)</strong>
+    <a name = "a.pid.neuron:wpid"></a>
+    <strong>a.pid.neuron:wpid (wp, wi, wd)</strong>
     </dt>
     <dd>
-    calculate function for PID controller
+    set proportional integral derivative weight for single neuron PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">wp</span>
+            <span class="types"><span class="type">number</span></span>
+         proportional weight
+        </li>
+        <li><span class="parameter">wi</span>
+            <span class="types"><span class="type">number</span></span>
+         integral weight
+        </li>
+        <li><span class="parameter">wd</span>
+            <span class="types"><span class="type">number</span></span>
+         derivative weight
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid.neuron:iter"></a>
+    <strong>a.pid.neuron:iter (set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate function for single neuron PID controller
 
 
     <h3>Parameters:</h3>
@@ -332,19 +390,19 @@
 
 </dd>
     <dt>
-    <a name = "liba.pid:zero"></a>
-    <strong>liba.pid:zero ()</strong>
+    <a name = "a.pid.neuron:zero"></a>
+    <strong>a.pid.neuron:zero ()</strong>
     </dt>
     <dd>
-    zero clear function for PID controller
+    zero clear function for single neuron PID controller
 
 
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/liba.pid.html">pid</a></span>
-        PID controller userdata
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
     </ol>
 
 
@@ -358,7 +416,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-17 10:09:10 </i>
+<i style="float:right;">Last updated 2023-11-20 16:32:35 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

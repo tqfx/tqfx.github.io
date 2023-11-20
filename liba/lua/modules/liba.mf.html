@@ -44,8 +44,8 @@
   <li><a href="../modules/liba.complex.html">liba.complex</a></li>
   <li><strong>liba.mf</strong></li>
   <li><a href="../modules/liba.pid.html">liba.pid</a></li>
-  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
-  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../modules/liba.pid.neuron.html">liba.pid.neuron</a></li>
   <li><a href="../modules/liba.polytrack3.html">liba.polytrack3</a></li>
   <li><a href="../modules/liba.polytrack5.html">liba.polytrack5</a></li>
   <li><a href="../modules/liba.polytrack7.html">liba.polytrack7</a></li>
@@ -54,15 +54,15 @@
 </ul>
 <h2>Classes</h2>
 <ul class="nowrap">
-  <li><a href="../classes/liba.complex.html">liba.complex</a></li>
-  <li><a href="../classes/liba.pid.html">liba.pid</a></li>
-  <li><a href="../classes/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
-  <li><a href="../classes/liba.pid.neuron.html">liba.pid.neuron</a></li>
-  <li><a href="../classes/liba.polytrack3.html">liba.polytrack3</a></li>
-  <li><a href="../classes/liba.polytrack5.html">liba.polytrack5</a></li>
-  <li><a href="../classes/liba.polytrack7.html">liba.polytrack7</a></li>
-  <li><a href="../classes/liba.tf.html">liba.tf</a></li>
-  <li><a href="../classes/liba.version.html">liba.version</a></li>
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid.fuzzy.html">a.pid.fuzzy</a></li>
+  <li><a href="../classes/a.pid.neuron.html">a.pid.neuron</a></li>
+  <li><a href="../classes/a.polytrack3.html">a.polytrack3</a></li>
+  <li><a href="../classes/a.polytrack5.html">a.polytrack5</a></li>
+  <li><a href="../classes/a.polytrack7.html">a.polytrack7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
 </ul>
 
 </div>
@@ -81,12 +81,24 @@
 	<td class="summary">gaussian membership function</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#gauss2">gauss2 (x, sigma1, c1, sigma2, c2)</a></td>
+	<td class="summary">product of two sigmoidal membership functions</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#gbell">gbell (x, a, b, c)</a></td>
 	<td class="summary">generalized bell-shaped membership function</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#sig">sig (x, a, c)</a></td>
 	<td class="summary">sigmoidal membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dsig">dsig (x, a1, c1, a2, c2)</a></td>
+	<td class="summary">difference between two sigmoidal membership functions</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#psig">psig (x, a1, c1, a2, c2)</a></td>
+	<td class="summary">product of two sigmoidal membership functions</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#trap">trap (x, a, b, c, d)</a></td>
@@ -97,7 +109,23 @@
 	<td class="summary">triangular membership function</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#lins">lins (x, a, b)</a></td>
+	<td class="summary">linear s-shaped saturation membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#linz">linz (x, a, b)</a></td>
+	<td class="summary">linear z-shaped saturation membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#s">s (x, a, b)</a></td>
+	<td class="summary">s-shaped membership function</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#z">z (x, a, b)</a></td>
+	<td class="summary">z-shaped membership function</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pi">pi (x, a, b, c, d)</a></td>
 	<td class="summary">z-shaped membership function</td>
 	</tr>
 	<tr>
@@ -109,7 +137,7 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#mf">mf</a></td>
-	<td class="summary">type for membership function</td>
+	<td class="summary">enumeration for membership function</td>
 	</tr>
 </table>
 
@@ -132,15 +160,15 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">sigma</span>
             <span class="types"><span class="type">number</span></span>
-         sigma
+         is the standard deviation.
         </li>
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">number</span></span>
-         c
+         is the mean.
         </li>
     </ul>
 
@@ -148,7 +176,50 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gauss2"></a>
+    <strong>gauss2 (x, sigma1, c1, sigma2, c2)</strong>
+    </dt>
+    <dd>
+    product of two sigmoidal membership functions
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">sigma1</span>
+            <span class="types"><span class="type">number</span></span>
+         is the standard deviation of the left gaussian function.
+        </li>
+        <li><span class="parameter">c1</span>
+            <span class="types"><span class="type">number</span></span>
+         is the mean of the left gaussian function.
+        </li>
+        <li><span class="parameter">sigma2</span>
+            <span class="types"><span class="type">number</span></span>
+         is the standard deviation of the right gaussian function.
+        </li>
+        <li><span class="parameter">c2</span>
+            <span class="types"><span class="type">number</span></span>
+         is the mean of the right gaussian function.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
     </ol>
 
 
@@ -167,19 +238,19 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">a</span>
             <span class="types"><span class="type">number</span></span>
-         a
+         defines the width of the membership function, where a larger value creates a wider membership function.
         </li>
         <li><span class="parameter">b</span>
             <span class="types"><span class="type">number</span></span>
-         b
+         defines the shape of the curve on either side of the central plateau, where a larger value creates a more steep transition.
         </li>
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">number</span></span>
-         c
+         defines the center of the membership function.
         </li>
     </ul>
 
@@ -187,7 +258,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
     </ol>
 
 
@@ -206,15 +277,15 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">a</span>
             <span class="types"><span class="type">number</span></span>
-         a
+         defines the width of the transition area.
         </li>
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">number</span></span>
-         c
+         defines the center of the transition area.
         </li>
     </ul>
 
@@ -222,7 +293,93 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dsig"></a>
+    <strong>dsig (x, a1, c1, a2, c2)</strong>
+    </dt>
+    <dd>
+    difference between two sigmoidal membership functions
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the width of the first transition area.
+        </li>
+        <li><span class="parameter">c1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the center of the first transition area.
+        </li>
+        <li><span class="parameter">a2</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the width of the second transition area.
+        </li>
+        <li><span class="parameter">c2</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the center of the second transition area.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "psig"></a>
+    <strong>psig (x, a1, c1, a2, c2)</strong>
+    </dt>
+    <dd>
+    product of two sigmoidal membership functions
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the width of the first transition area.
+        </li>
+        <li><span class="parameter">c1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the center of the first transition area.
+        </li>
+        <li><span class="parameter">a2</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the width of the second transition area.
+        </li>
+        <li><span class="parameter">c2</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the center of the second transition area.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
     </ol>
 
 
@@ -241,23 +398,23 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">a</span>
             <span class="types"><span class="type">number</span></span>
-         a
+         defines its left foot.
         </li>
         <li><span class="parameter">b</span>
             <span class="types"><span class="type">number</span></span>
-         b
+         defines its left shoulder.
         </li>
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">number</span></span>
-         c
+         defines its right shoulder.
         </li>
         <li><span class="parameter">d</span>
             <span class="types"><span class="type">number</span></span>
-         d
+         defines its right foot.
         </li>
     </ul>
 
@@ -265,7 +422,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
     </ol>
 
 
@@ -284,19 +441,19 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">a</span>
             <span class="types"><span class="type">number</span></span>
-         a
+         defines its left foot.
         </li>
         <li><span class="parameter">b</span>
             <span class="types"><span class="type">number</span></span>
-         b
+         defines its peak.
         </li>
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">number</span></span>
-         c
+         defines its right foot.
         </li>
     </ul>
 
@@ -304,7 +461,112 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lins"></a>
+    <strong>lins (x, a, b)</strong>
+    </dt>
+    <dd>
+    linear s-shaped saturation membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its foot.
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its shoulder.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "linz"></a>
+    <strong>linz (x, a, b)</strong>
+    </dt>
+    <dd>
+    linear z-shaped saturation membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its shoulder.
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its foot.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "s"></a>
+    <strong>s (x, a, b)</strong>
+    </dt>
+    <dd>
+    s-shaped membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its foot.
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its shoulder.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
     </ol>
 
 
@@ -323,15 +585,15 @@
     <ul>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">a</span>
             <span class="types"><span class="type">number</span></span>
-         a
+         defines its shoulder.
         </li>
         <li><span class="parameter">b</span>
             <span class="types"><span class="type">number</span></span>
-         b
+         defines its foot.
         </li>
     </ul>
 
@@ -339,7 +601,50 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pi"></a>
+    <strong>pi (x, a, b, c, d)</strong>
+    </dt>
+    <dd>
+    z-shaped membership function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value for which to compute membership value.
+        </li>
+        <li><span class="parameter">a</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its left foot.
+        </li>
+        <li><span class="parameter">b</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its left shoulder.
+        </li>
+        <li><span class="parameter">c</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its right shoulder.
+        </li>
+        <li><span class="parameter">d</span>
+            <span class="types"><span class="type">number</span></span>
+         defines its right foot.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        membership value.
     </ol>
 
 
@@ -362,11 +667,11 @@
         </li>
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
-         independent variable
+         input value for which to compute membership value.
         </li>
         <li><span class="parameter">...</span>
             <span class="types"><span class="type">number</span></span>
-         paramarrays
+         is an array that stores parameters.
         </li>
     </ul>
 
@@ -374,7 +679,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        membership
+        membership value.
     </ol>
 
 
@@ -390,7 +695,7 @@
     <strong>mf</strong>
     </dt>
     <dd>
-    type for membership function
+    enumeration for membership function
 
 
     <h3>Fields:</h3>
@@ -401,11 +706,20 @@
         <li><span class="parameter">GAUSS</span>
          gaussian membership function
         </li>
+        <li><span class="parameter">GAUSS2</span>
+         gaussian combination membership function
+        </li>
         <li><span class="parameter">GBELL</span>
          generalized bell-shaped membership function
         </li>
         <li><span class="parameter">SIG</span>
          sigmoidal membership function
+        </li>
+        <li><span class="parameter">DSIG</span>
+         difference between two sigmoidal membership functions
+        </li>
+        <li><span class="parameter">PSIG</span>
+         product of two sigmoidal membership functions
         </li>
         <li><span class="parameter">TRAP</span>
          trapezoidal membership function
@@ -413,8 +727,20 @@
         <li><span class="parameter">TRI</span>
          triangular membership function
         </li>
+        <li><span class="parameter">LINS</span>
+         linear s-shaped saturation membership function
+        </li>
+        <li><span class="parameter">LINZ</span>
+         linear z-shaped saturation membership function
+        </li>
+        <li><span class="parameter">S</span>
+         s-shaped membership function
+        </li>
         <li><span class="parameter">Z</span>
          z-shaped membership function
+        </li>
+        <li><span class="parameter">PI</span>
+         pi-shaped membership function
         </li>
     </ul>
 
@@ -430,7 +756,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-17 10:09:10 </i>
+<i style="float:right;">Last updated 2023-11-20 16:32:35 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
