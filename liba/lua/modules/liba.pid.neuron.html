@@ -76,12 +76,12 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#new">new (min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#new">new ()</a></td>
 	<td class="summary">constructor for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#init">init (ctx, min, max[, sum])</a></td>
-	<td class="summary">initialize function for single neuron PID controller</td>
+	<td class="name" nowrap><a href="#init">init (ctx)</a></td>
+	<td class="summary">initialize for single neuron PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#kpid">kpid (ctx, k, kp, ki, kd)</a></td>
@@ -92,12 +92,16 @@
 	<td class="summary">set proportional integral derivative weight for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#iter">iter (ctx, set, fdb)</a></td>
-	<td class="summary">calculate function for single neuron PID controller</td>
+	<td class="name" nowrap><a href="#off">off (ctx, set, fdb)</a></td>
+	<td class="summary">calculate for single neuron PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#inc">inc (ctx, set, fdb)</a></td>
+	<td class="summary">calculate for single neuron PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#zero">zero (ctx)</a></td>
-	<td class="summary">zero clear function for single neuron PID controller</td>
+	<td class="summary">zeroing for single neuron PID controller</td>
 	</tr>
 </table>
 
@@ -110,28 +114,12 @@
     <dl class="function">
     <dt>
     <a name = "new"></a>
-    <strong>new (min, max[, sum])</strong>
+    <strong>new ()</strong>
     </dt>
     <dd>
     constructor for single neuron PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
@@ -146,10 +134,10 @@
 </dd>
     <dt>
     <a name = "init"></a>
-    <strong>init (ctx, min, max[, sum])</strong>
+    <strong>init (ctx)</strong>
     </dt>
     <dd>
-    initialize function for single neuron PID controller
+    initialize for single neuron PID controller
 
 
     <h3>Parameters:</h3>
@@ -157,19 +145,6 @@
         <li><span class="parameter">ctx</span>
             <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
          single neuron PID controller userdata
-        </li>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
         </li>
     </ul>
 
@@ -267,11 +242,11 @@
 
 </dd>
     <dt>
-    <a name = "iter"></a>
-    <strong>iter (ctx, set, fdb)</strong>
+    <a name = "off"></a>
+    <strong>off (ctx, set, fdb)</strong>
     </dt>
     <dd>
-    calculate function for single neuron PID controller
+    calculate for single neuron PID controller
 
 
     <h3>Parameters:</h3>
@@ -282,11 +257,11 @@
         </li>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
-         setpoint
+         setpoint value
         </li>
         <li><span class="parameter">fdb</span>
             <span class="types"><span class="type">number</span></span>
-         feedback
+         feedback value
         </li>
     </ul>
 
@@ -294,7 +269,42 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        output
+        setpoint value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "inc"></a>
+    <strong>inc (ctx, set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate for single neuron PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+         single neuron PID controller userdata
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        setpoint value
     </ol>
 
 
@@ -306,7 +316,7 @@
     <strong>zero (ctx)</strong>
     </dt>
     <dd>
-    zero clear function for single neuron PID controller
+    zeroing for single neuron PID controller
 
 
     <h3>Parameters:</h3>
@@ -335,7 +345,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-21 04:01:29 </i>
+<i style="float:right;">Last updated 2023-11-24 16:32:21 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

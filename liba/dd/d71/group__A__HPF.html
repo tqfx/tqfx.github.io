@@ -119,16 +119,16 @@ typedef struct <a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga67d5a9ed82db11da1ce69d77cab00c45" id="r_ga67d5a9ed82db11da1ce69d77cab00c45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga67d5a9ed82db11da1ce69d77cab00c45">a_hpf_gen</a> (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const fc, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const dt)</td></tr>
-<tr class="memdesc:ga67d5a9ed82db11da1ce69d77cab00c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">generation function for High Pass Filter  <br /></td></tr>
+<tr class="memdesc:ga67d5a9ed82db11da1ce69d77cab00c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for High Pass Filter  <br /></td></tr>
 <tr class="separator:ga67d5a9ed82db11da1ce69d77cab00c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga291de23abc2d22226d89dcee391a931b" id="r_ga291de23abc2d22226d89dcee391a931b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga291de23abc2d22226d89dcee391a931b">a_hpf_init</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const alpha)</td></tr>
-<tr class="memdesc:ga291de23abc2d22226d89dcee391a931b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize function for High Pass Filter  <br /></td></tr>
+<tr class="memdesc:ga291de23abc2d22226d89dcee391a931b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for High Pass Filter  <br /></td></tr>
 <tr class="separator:ga291de23abc2d22226d89dcee391a931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f8813d8b9c008112f9ec4ffa386d85c" id="r_ga7f8813d8b9c008112f9ec4ffa386d85c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga7f8813d8b9c008112f9ec4ffa386d85c">a_hpf_iter</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> const x)</td></tr>
-<tr class="memdesc:ga7f8813d8b9c008112f9ec4ffa386d85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate function for High Pass Filter  <br /></td></tr>
+<tr class="memdesc:ga7f8813d8b9c008112f9ec4ffa386d85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for High Pass Filter  <br /></td></tr>
 <tr class="separator:ga7f8813d8b9c008112f9ec4ffa386d85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52725704b2260d80d9d52009ce445ee6" id="r_ga52725704b2260d80d9d52009ce445ee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga52725704b2260d80d9d52009ce445ee6">a_hpf_zero</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga52725704b2260d80d9d52009ce445ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero clear function for High Pass Filter  <br /></td></tr>
+<tr class="memdesc:ga52725704b2260d80d9d52009ce445ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for High Pass Filter  <br /></td></tr>
 <tr class="separator:ga52725704b2260d80d9d52009ce445ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>generation function for High Pass Filter </p>
+<p>generate for High Pass Filter </p>
 <p class="formulaDsp">
 \begin{cases}
  \alpha=\frac{RC}{RC+T_{s}},&amp;\alpha\in[0,1]\\
@@ -208,7 +208,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>initialize function for High Pass Filter </p>
+<p>initialize for High Pass Filter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of High Pass Filter </td></tr>
@@ -245,7 +245,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>calculate function for High Pass Filter </p>
+<p>calculate for High Pass Filter </p>
 <p class="formulaDsp">
 \[
  V_{out}(n)=\alpha(V_{out}(n-1)+V_{in}(n)-V_{in}(n-1))
@@ -278,7 +278,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>zero clear function for High Pass Filter </p>
+<p>zeroing for High Pass Filter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of High Pass Filter </td></tr>

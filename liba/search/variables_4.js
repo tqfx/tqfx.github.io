@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ec_0',['ec',['../d9/dfe/structa__pid__neuron__s.html#a33e7ae72e65993a333661f47c1ab102b',1,'a_pid_neuron_s']]],
-  ['err_1',['err',['../de/def/structa__pid__s.html#a7c1ad8cd4cd2319ffad23791b55f2f08',1,'a_pid_s']]]
+  ['ec_0',['ec',['../d9/dfe/structa__pid__neuron__s.html#a271ae1faf3cf10528241f0df674bb5f2',1,'a_pid_neuron_s']]],
+  ['err_1',['err',['../de/def/structa__pid__s.html#a5a2c311827a5dc91a3ada5bce4c7694f',1,'a_pid_s']]]
 ];

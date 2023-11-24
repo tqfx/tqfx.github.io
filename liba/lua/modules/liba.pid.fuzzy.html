@@ -81,12 +81,12 @@
 	<td class="summary">destructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#new">new ([kp][, ki][, kd], min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#new">new ()</a></td>
 	<td class="summary">constructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#init">init (ctx[, kp][, ki][, kd], min, max[, sum])</a></td>
-	<td class="summary">initialize function for fuzzy PID controller</td>
+	<td class="name" nowrap><a href="#init">init (ctx)</a></td>
+	<td class="summary">initialize for fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#op">op (ctx, op)</a></td>
@@ -97,7 +97,7 @@
 	<td class="summary">set rule base for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#joint">joint (ctx, num)</a></td>
+	<td class="name" nowrap><a href="#set_joint">set_joint (ctx, num)</a></td>
 	<td class="summary">set joint buffer for fuzzy PID controller</td>
 	</tr>
 	<tr>
@@ -105,12 +105,20 @@
 	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#iter">iter (ctx, set, fdb)</a></td>
-	<td class="summary">calculate function for fuzzy PID controller</td>
+	<td class="name" nowrap><a href="#off">off (ctx, set, fdb)</a></td>
+	<td class="summary">calculate for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pos">pos (ctx, set, fdb)</a></td>
+	<td class="summary">calculate for positional fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#inc">inc (ctx, set, fdb)</a></td>
+	<td class="summary">calculate for incremental fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#zero">zero (ctx)</a></td>
-	<td class="summary">zero clear function for fuzzy PID controller</td>
+	<td class="summary">zeroing for fuzzy PID controller</td>
 	</tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
@@ -151,43 +159,12 @@
 </dd>
     <dt>
     <a name = "new"></a>
-    <strong>new ([kp][, ki][, kd], min, max[, sum])</strong>
+    <strong>new ()</strong>
     </dt>
     <dd>
     constructor for fuzzy PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">kp</span>
-            <span class="types"><span class="type">number</span></span>
-         proportional constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">ki</span>
-            <span class="types"><span class="type">number</span></span>
-         integral constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">kd</span>
-            <span class="types"><span class="type">number</span></span>
-         derivative constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
@@ -202,10 +179,10 @@
 </dd>
     <dt>
     <a name = "init"></a>
-    <strong>init (ctx[, kp][, ki][, kd], min, max[, sum])</strong>
+    <strong>init (ctx)</strong>
     </dt>
     <dd>
-    initialize function for fuzzy PID controller
+    initialize for fuzzy PID controller
 
 
     <h3>Parameters:</h3>
@@ -213,34 +190,6 @@
         <li><span class="parameter">ctx</span>
             <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
          fuzzy PID controller userdata
-        </li>
-        <li><span class="parameter">kp</span>
-            <span class="types"><span class="type">number</span></span>
-         proportional constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">ki</span>
-            <span class="types"><span class="type">number</span></span>
-         integral constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">kd</span>
-            <span class="types"><span class="type">number</span></span>
-         derivative constant
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
         </li>
     </ul>
 
@@ -334,8 +283,8 @@
 
 </dd>
     <dt>
-    <a name = "joint"></a>
-    <strong>joint (ctx, num)</strong>
+    <a name = "set_joint"></a>
+    <strong>set_joint (ctx, num)</strong>
     </dt>
     <dd>
     set joint buffer for fuzzy PID controller
@@ -404,11 +353,11 @@
 
 </dd>
     <dt>
-    <a name = "iter"></a>
-    <strong>iter (ctx, set, fdb)</strong>
+    <a name = "off"></a>
+    <strong>off (ctx, set, fdb)</strong>
     </dt>
     <dd>
-    calculate function for fuzzy PID controller
+    calculate for fuzzy PID controller
 
 
     <h3>Parameters:</h3>
@@ -419,11 +368,11 @@
         </li>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
-         setpoint
+         setpoint value
         </li>
         <li><span class="parameter">fdb</span>
             <span class="types"><span class="type">number</span></span>
-         feedback
+         feedback value
         </li>
     </ul>
 
@@ -431,7 +380,77 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        output
+        setpoint value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pos"></a>
+    <strong>pos (ctx, set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate for positional fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "inc"></a>
+    <strong>inc (ctx, set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate for incremental fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output value
     </ol>
 
 
@@ -443,7 +462,7 @@
     <strong>zero (ctx)</strong>
     </dt>
     <dd>
-    zero clear function for fuzzy PID controller
+    zeroing for fuzzy PID controller
 
 
     <h3>Parameters:</h3>
@@ -514,7 +533,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-21 04:01:29 </i>
+<i style="float:right;">Last updated 2023-11-24 16:32:21 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

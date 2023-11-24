@@ -140,17 +140,17 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_version_cmp(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
+    <span class="kw">static </span>a_version_major: uint;
+    <span class="kw">static </span>a_version_minor: uint;
+    <span class="kw">static </span>a_version_patch: uint;
+    <span class="kw">static </span>a_version_tweak: u32;
+    <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
     <span class="kw">fn </span>a_version_lt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_gt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_le(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_ge(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_eq(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
-    <span class="kw">fn </span>a_version_major() -&gt; uint;
-    <span class="kw">fn </span>a_version_minor() -&gt; uint;
-    <span class="kw">fn </span>a_version_patch() -&gt; uint;
-    <span class="kw">fn </span>a_version_tweak() -&gt; u32;
+    <span class="kw">fn </span>a_version_cmp(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
 }
 
 <span class="kw">impl </span>PartialOrd <span class="kw">for </span>version {
@@ -185,7 +185,7 @@
 }
 
 <span class="kw">impl </span>version {
-    <span class="doccomment">/// initialize function for version
+    <span class="doccomment">/// initialize for version
     </span><span class="kw">pub fn </span>new(major: uint, minor: uint, patch: uint) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             major,
@@ -202,22 +202,22 @@
 
 <span class="doccomment">/// algorithm library version major
 </span><span class="kw">pub fn </span>major() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_major() }
+    <span class="kw">unsafe </span>{ a_version_major }
 }
 
 <span class="doccomment">/// algorithm library version minor
 </span><span class="kw">pub fn </span>minor() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_minor() }
+    <span class="kw">unsafe </span>{ a_version_minor }
 }
 
 <span class="doccomment">/// algorithm library version patch
 </span><span class="kw">pub fn </span>patch() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_patch() }
+    <span class="kw">unsafe </span>{ a_version_patch }
 }
 
 <span class="doccomment">/// algorithm library version tweak
 </span><span class="kw">pub fn </span>tweak() -&gt; u32 {
-    <span class="kw">unsafe </span>{ a_version_tweak() }
+    <span class="kw">unsafe </span>{ a_version_tweak }
 }
 
 <span class="attr">#[test]

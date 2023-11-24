@@ -322,14 +322,14 @@
 }
 
 <span class="kw">impl </span>polytrack3 {
-    <span class="doccomment">/// initialize function for cubic polynomial trajectory
+    <span class="doccomment">/// initialize for cubic polynomial trajectory
     </span><span class="kw">pub fn </span>new(t0: float, t1: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ k: [<span class="number">0.0</span>; <span class="number">4</span>] };
         <span class="kw">unsafe </span>{ a_polytrack3_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1) };
         ctx
     }
 
-    <span class="doccomment">/// generation function for cubic polynomial trajectory
+    <span class="doccomment">/// generate for cubic polynomial trajectory
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         t0: float,
@@ -343,24 +343,24 @@
         <span class="self">self
     </span>}
 
-    <span class="doccomment">/// calculate function for cubic polynomial trajectory
+    <span class="doccomment">/// calculate for cubic polynomial trajectory
     </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">3</span>] {
         <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
         <span class="kw">unsafe </span>{ a_polytrack3_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
-    <span class="doccomment">/// calculate function for cubic polynomial trajectory position
+    <span class="doccomment">/// calculate for cubic polynomial trajectory position
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_pos(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for cubic polynomial trajectory velocity
+    <span class="doccomment">/// calculate for cubic polynomial trajectory velocity
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_vel(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for cubic polynomial trajectory acceleration
+    <span class="doccomment">/// calculate for cubic polynomial trajectory acceleration
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack3_acc(<span class="self">self</span>, dt) }
     }
@@ -407,7 +407,7 @@
 }
 
 <span class="kw">impl </span>polytrack5 {
-    <span class="doccomment">/// initialize function for quintic polynomial trajectory
+    <span class="doccomment">/// initialize for quintic polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>new(
         t0: float,
@@ -424,7 +424,7 @@
         ctx
     }
 
-    <span class="doccomment">/// generation function for quintic polynomial trajectory
+    <span class="doccomment">/// generate for quintic polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
@@ -441,24 +441,24 @@
         <span class="self">self
     </span>}
 
-    <span class="doccomment">/// calculate function for quintic polynomial trajectory
+    <span class="doccomment">/// calculate for quintic polynomial trajectory
     </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">3</span>] {
         <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">3</span>] = [<span class="number">0.0</span>; <span class="number">3</span>];
         <span class="kw">unsafe </span>{ a_polytrack5_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
-    <span class="doccomment">/// calculate function for quintic polynomial trajectory position
+    <span class="doccomment">/// calculate for quintic polynomial trajectory position
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_pos(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for quintic polynomial trajectory velocity
+    <span class="doccomment">/// calculate for quintic polynomial trajectory velocity
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_vel(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for quintic polynomial trajectory acceleration
+    <span class="doccomment">/// calculate for quintic polynomial trajectory acceleration
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack5_acc(<span class="self">self</span>, dt) }
     }
@@ -508,7 +508,7 @@
 }
 
 <span class="kw">impl </span>polytrack7 {
-    <span class="doccomment">/// initialize function for hepta polynomial trajectory
+    <span class="doccomment">/// initialize for hepta polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>new(
         t0: float,
@@ -527,7 +527,7 @@
         ctx
     }
 
-    <span class="doccomment">/// generation function for hepta polynomial trajectory
+    <span class="doccomment">/// generate for hepta polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
@@ -546,29 +546,29 @@
         <span class="self">self
     </span>}
 
-    <span class="doccomment">/// calculate function for hepta polynomial trajectory
+    <span class="doccomment">/// calculate for hepta polynomial trajectory
     </span><span class="kw">pub fn </span>out(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; [float; <span class="number">4</span>] {
         <span class="kw">let </span><span class="kw-2">mut </span>out: [float; <span class="number">4</span>] = [<span class="number">0.0</span>; <span class="number">4</span>];
         <span class="kw">unsafe </span>{ a_polytrack7_out(<span class="self">self</span>, dt, <span class="kw-2">&amp;mut </span>out) };
         out
     }
 
-    <span class="doccomment">/// calculate function for hepta polynomial trajectory position
+    <span class="doccomment">/// calculate for hepta polynomial trajectory position
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_pos(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for hepta polynomial trajectory velocity
+    <span class="doccomment">/// calculate for hepta polynomial trajectory velocity
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_vel(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for hepta polynomial trajectory acceleration
+    <span class="doccomment">/// calculate for hepta polynomial trajectory acceleration
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_acc(<span class="self">self</span>, dt) }
     }
 
-    <span class="doccomment">/// calculate function for hepta polynomial trajectory jerk
+    <span class="doccomment">/// calculate for hepta polynomial trajectory jerk
     </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
         <span class="kw">unsafe </span>{ a_polytrack7_jer(<span class="self">self</span>, dt) }
     }

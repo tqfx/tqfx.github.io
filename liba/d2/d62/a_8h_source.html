@@ -794,219 +794,211 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">  812</a></span><span class="preprocessor">#define a_float_c(_, x) a_cast_s(A_FLOAT_T _, x)</span></div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno"><a class="line" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">  814</a></span><span class="preprocessor">#define a_float_t A_FLOAT_T</span></div>
 <div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
-<div class="foldopen" id="foldopen00816" data-start="{" data-end="};">
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno"><a class="line" href="../../d2/d53/uniona__float__u.html">  816</a></span><span class="keyword">typedef</span> <span class="keyword">union </span><a class="code hl_union" href="../../d2/d53/uniona__float__u.html">a_float_u</a></div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>{</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno"><a class="line" href="../../d2/d53/uniona__float__u.html#a0c62df0a670ad4e8486fc9e9e153aa8d">  818</a></span>    <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> <a class="code hl_variable" href="../../d2/d53/uniona__float__u.html#a0c62df0a670ad4e8486fc9e9e153aa8d">f</a>; </div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno"><a class="line" href="../../d2/d53/uniona__float__u.html#ad9e6aef02de53f9a82d8a029085df542">  819</a></span>    <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *<a class="code hl_variable" href="../../d2/d53/uniona__float__u.html#ad9e6aef02de53f9a82d8a029085df542">p</a>; </div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>} <a class="code hl_union" href="../../d2/d53/uniona__float__u.html">a_float_u</a>;</div>
+<div class="foldopen" id="foldopen00818" data-start="{" data-end="};">
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno"><a class="line" href="../../da/da0/uniona__cast__u.html">  818</a></span><span class="keyword">typedef</span> <span class="keyword">union </span><a class="code hl_union" href="../../da/da0/uniona__cast__u.html">a_cast_u</a></div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>{</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaddeaa52897ce3c9d619bb7cbe672533a">a_c8_t</a> c;</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga4eede463b3f3ea9f1ccc6afa6a44380b">a_int_t</a> i;</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga44f550a24e3ec7bd66700b00ff269fea">a_uint_t</a> u;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga581a123ba05a207dcd0c2ffbaca12b59">a_shrt_t</a> ih;</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga259ef4f523519ad39697ad0723c8b033">a_ushrt_t</a> uh;</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga16e8364dd56d657de5c4298c61343280">a_long_t</a> il;</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga1ed1bcc6de295a39d2b7c46d21847851">a_ulong_t</a> ul;</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="preprocessor">#if defined(A_HAVE_LONG_LONG_TYPE)</span></div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    a_llong_t ill;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    a_ullong_t ull;</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_LONG_LONG_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga9bd307545f0adad33442a5f4d2976e21">a_i8_t</a> i8;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga534b4f5d286d90e05830f11843494353">a_u8_t</a> u8;</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gab91684ff78945077c566502e1bdf72e7">a_i16_t</a> i16;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga5de19d621518d17d7da56b1cc924117d">a_u16_t</a> u16;</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaa82b3d511c83f259a7c34fa8b9931f8c">a_i32_t</a> i32;</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u32;</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga181611e7519001d01651db90536411d6">a_i64_t</a> i64;</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u64;</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> f32;</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> f64;</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga6c749eb4cf5f90cc40ced4c9c981f2b5">a_imax_t</a> imax;</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> umax;</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga04bfc669b92fa941426118317583f978">a_iptr_t</a> iptr;</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga5ae6fe33a35c06073ac45e01e9127afc">a_uptr_t</a> uptr;</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga6dd2d2e04a3fc55cb72a6bb3bbb145ee">a_diff_t</a> diff;</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size;</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <span class="keywordtype">void</span> <span class="keyword">const</span> *PTR;</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <span class="keywordtype">void</span> *ptr;</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <span class="keywordtype">char</span> <span class="keyword">const</span> *STR;</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    <span class="keywordtype">char</span> *str;</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span><span class="preprocessor">#if defined(A_FLOAT_TYPE) &amp;&amp; (A_FLOAT_TYPE + 0 &lt; A_FLOAT_EXTEND)</span></div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> f;</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>} <a class="code hl_union" href="../../da/da0/uniona__cast__u.html">a_cast_u</a>;</div>
 </div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
-<div class="foldopen" id="foldopen00824" data-start="{" data-end="};">
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno"><a class="line" href="../../da/da0/uniona__cast__u.html">  824</a></span><span class="keyword">typedef</span> <span class="keyword">union </span><a class="code hl_union" href="../../da/da0/uniona__cast__u.html">a_cast_u</a></div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>{</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaddeaa52897ce3c9d619bb7cbe672533a">a_c8_t</a> c;</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga4eede463b3f3ea9f1ccc6afa6a44380b">a_int_t</a> i;</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga44f550a24e3ec7bd66700b00ff269fea">a_uint_t</a> u;</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga581a123ba05a207dcd0c2ffbaca12b59">a_shrt_t</a> ih;</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga259ef4f523519ad39697ad0723c8b033">a_ushrt_t</a> uh;</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga16e8364dd56d657de5c4298c61343280">a_long_t</a> il;</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga1ed1bcc6de295a39d2b7c46d21847851">a_ulong_t</a> ul;</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span><span class="preprocessor">#if defined(A_HAVE_LONG_LONG_TYPE)</span></div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    a_llong_t ill;</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    a_ullong_t ull;</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_LONG_LONG_TYPE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga9bd307545f0adad33442a5f4d2976e21">a_i8_t</a> i8;</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga534b4f5d286d90e05830f11843494353">a_u8_t</a> u8;</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gab91684ff78945077c566502e1bdf72e7">a_i16_t</a> i16;</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga5de19d621518d17d7da56b1cc924117d">a_u16_t</a> u16;</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaa82b3d511c83f259a7c34fa8b9931f8c">a_i32_t</a> i32;</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u32;</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga181611e7519001d01651db90536411d6">a_i64_t</a> i64;</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u64;</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> f32;</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> f64;</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga6c749eb4cf5f90cc40ced4c9c981f2b5">a_imax_t</a> imax;</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> umax;</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga04bfc669b92fa941426118317583f978">a_iptr_t</a> iptr;</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga5ae6fe33a35c06073ac45e01e9127afc">a_uptr_t</a> uptr;</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga6dd2d2e04a3fc55cb72a6bb3bbb145ee">a_diff_t</a> diff;</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size;</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>    <span class="keywordtype">void</span> <span class="keyword">const</span> *PTR;</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    <span class="keywordtype">void</span> *ptr;</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    <span class="keywordtype">char</span> <span class="keyword">const</span> *STR;</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <span class="keywordtype">char</span> *str;</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span><span class="preprocessor">#if defined(A_FLOAT_TYPE) &amp;&amp; (A_FLOAT_TYPE + 0 &lt; A_FLOAT_EXTEND)</span></div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> f;</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>} <a class="code hl_union" href="../../da/da0/uniona__cast__u.html">a_cast_u</a>;</div>
-</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span> </div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga7f27ee89f0f53168bc21f8e3944337d3">  865</a></span><span class="preprocessor">#define A_SQ(x) ((x) * (x))</span></div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga84aacec7427e328d0a6b4c897cb02059">  870</a></span><span class="preprocessor">#define A_ABS(x) ((x) &lt; 0 ? -(x) : (x))</span></div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span> </div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga16f85fcc489eeaed9a23932445c7dec1">  875</a></span><span class="preprocessor">#define A_MIN(x, y) (((x) &lt; (y)) ? (x) : (y))</span></div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span> </div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga717954d5cadeae21d7bfc73db3dad6c6">  880</a></span><span class="preprocessor">#define A_MAX(x, y) (((x) &gt; (y)) ? (x) : (y))</span></div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span> </div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga6616a52c6eb69d1026c534ed1a54aebb">  885</a></span><span class="preprocessor">#define A_SGN(x) ((0 &lt; (x)) - ((x) &lt; 0))</span></div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span> </div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga0f84bc53cc98d629c23ce6448bd96fed">  890</a></span><span class="preprocessor">#define A_SAT(x, min, max) ((min) &lt; (x) ? (x) &lt; (max) ? (x) : (max) : (min))</span></div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga7f27ee89f0f53168bc21f8e3944337d3">  859</a></span><span class="preprocessor">#define A_SQ(x) ((x) * (x))</span></div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span> </div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga84aacec7427e328d0a6b4c897cb02059">  864</a></span><span class="preprocessor">#define A_ABS(x) ((x) &lt; 0 ? -(x) : (x))</span></div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga16f85fcc489eeaed9a23932445c7dec1">  869</a></span><span class="preprocessor">#define A_MIN(x, y) (((x) &lt; (y)) ? (x) : (y))</span></div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span> </div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga717954d5cadeae21d7bfc73db3dad6c6">  874</a></span><span class="preprocessor">#define A_MAX(x, y) (((x) &gt; (y)) ? (x) : (y))</span></div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span> </div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga6616a52c6eb69d1026c534ed1a54aebb">  879</a></span><span class="preprocessor">#define A_SGN(x) ((0 &lt; (x)) - ((x) &lt; 0))</span></div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span> </div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga0f84bc53cc98d629c23ce6448bd96fed">  884</a></span><span class="preprocessor">#define A_SAT(x, min, max) ((min) &lt; (x) ? (x) &lt; (max) ? (x) : (max) : (min))</span></div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span> </div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga889a4126b02870e41e0012b5d42eaf5b">  890</a></span><span class="preprocessor">#define A_LEN(a) (sizeof(a) / sizeof(*(a)))</span></div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span> </div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga889a4126b02870e41e0012b5d42eaf5b">  896</a></span><span class="preprocessor">#define A_LEN(a) (sizeof(a) / sizeof(*(a)))</span></div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span><span class="preprocessor">#if defined(offsetof)</span></div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span><span class="preprocessor">#define a_offsetof(type, member) offsetof(type, member)</span></div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span><span class="preprocessor">#else </span><span class="comment">/* !offsetof */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gaa2986e23be61c0e170c030974eef9dce">  906</a></span><span class="preprocessor">#define a_offsetof(type, member) a_cast_r(a_size_t, &amp;a_cast_r(type *, 0)-&gt;member)</span></div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span><span class="preprocessor">#endif </span><span class="comment">/* offsetof */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">  915</a></span><span class="preprocessor">#define a_container_of(ptr, type, member) a_cast_r(type *, a_cast_r(a_uptr_t, ptr) - a_offsetof(type, member))</span></div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span> </div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga418d8d8fd6e551ad2f985070d8d5d2b9">  920</a></span><span class="preprocessor">#define a_size_down(a, n) (a_cast_s(a_size_t, n) &amp; ~a_cast_s(a_size_t, (a)-1))</span></div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span> </div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga582593abef80d36338aad1a166a55e99">  925</a></span><span class="preprocessor">#define a_size_up(a, n) ((a_cast_s(a_size_t, n) + (a)-1) &amp; ~a_cast_s(a_size_t, (a)-1))</span></div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span> </div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga607fb874455db0895d0d55c98a8bc6f9">  930</a></span><span class="preprocessor">#define a_align_down(a, p) a_cast_r(void *, a_cast_r(a_uptr_t, p) &amp; ~a_cast_s(a_uptr_t, (a)-1))</span></div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span> </div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga04d49c82c0a6c4d5177892178f95f847">  935</a></span><span class="preprocessor">#define a_align_up(a, p) a_cast_r(void *, (a_cast_r(a_uptr_t, p) + (a)-1) &amp; ~a_cast_s(a_uptr_t, (a)-1))</span></div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span> </div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">  943</a></span><span class="preprocessor">#define a_forenum(I, i, n) for (I i = 0; i &lt; (n); ++i)</span></div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span> </div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">  951</a></span><span class="preprocessor">#define a_forenum_reverse(I, i, n) for (I i = (n); i-- &gt; 0;)</span></div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
-<div class="foldopen" id="foldopen00960" data-start="" data-end="">
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga68fe2094fd31346808ff2c5f54f509fc">  960</a></span><span class="preprocessor">#define a_foreach(T, it, ptr, num)                      \</span></div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span><span class="preprocessor">    for (T *it = a_cast_s(T *, ptr),                    \</span></div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span><span class="preprocessor">           *it##_ = a_likely(it) ? it + (num) : A_NULL; \</span></div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="preprocessor">         it &lt; it##_; ++it)</span></div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span><span class="preprocessor">#if defined(offsetof)</span></div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span><span class="preprocessor">#define a_offsetof(type, member) offsetof(type, member)</span></div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span><span class="preprocessor">#else </span><span class="comment">/* !offsetof */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gaa2986e23be61c0e170c030974eef9dce">  900</a></span><span class="preprocessor">#define a_offsetof(type, member) a_cast_r(a_size_t, &amp;a_cast_r(type *, 0)-&gt;member)</span></div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span><span class="preprocessor">#endif </span><span class="comment">/* offsetof */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">  909</a></span><span class="preprocessor">#define a_container_of(ptr, type, member) a_cast_r(type *, a_cast_r(a_uptr_t, ptr) - a_offsetof(type, member))</span></div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga418d8d8fd6e551ad2f985070d8d5d2b9">  914</a></span><span class="preprocessor">#define a_size_down(a, n) (a_cast_s(a_size_t, n) &amp; ~a_cast_s(a_size_t, (a)-1))</span></div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga582593abef80d36338aad1a166a55e99">  919</a></span><span class="preprocessor">#define a_size_up(a, n) ((a_cast_s(a_size_t, n) + (a)-1) &amp; ~a_cast_s(a_size_t, (a)-1))</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga607fb874455db0895d0d55c98a8bc6f9">  924</a></span><span class="preprocessor">#define a_align_down(a, p) a_cast_r(void *, a_cast_r(a_uptr_t, p) &amp; ~a_cast_s(a_uptr_t, (a)-1))</span></div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span> </div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga04d49c82c0a6c4d5177892178f95f847">  929</a></span><span class="preprocessor">#define a_align_up(a, p) a_cast_r(void *, (a_cast_r(a_uptr_t, p) + (a)-1) &amp; ~a_cast_s(a_uptr_t, (a)-1))</span></div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">  937</a></span><span class="preprocessor">#define a_forenum(I, i, n) for (I i = 0; i &lt; (n); ++i)</span></div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span> </div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">  945</a></span><span class="preprocessor">#define a_forenum_reverse(I, i, n) for (I i = (n); i-- &gt; 0;)</span></div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span> </div>
+<div class="foldopen" id="foldopen00954" data-start="" data-end="">
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga68fe2094fd31346808ff2c5f54f509fc">  954</a></span><span class="preprocessor">#define a_foreach(T, it, ptr, num)                      \</span></div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span><span class="preprocessor">    for (T *it = a_cast_s(T *, ptr),                    \</span></div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span><span class="preprocessor">           *it##_ = a_likely(it) ? it + (num) : A_NULL; \</span></div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span><span class="preprocessor">         it &lt; it##_; ++it)</span></div>
 </div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span> </div>
-<div class="foldopen" id="foldopen00972" data-start="" data-end="">
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gac7d625eaabb55fb2799f666a9323042b">  972</a></span><span class="preprocessor">#define a_foreach_reverse(T, it, ptr, num)                           \</span></div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span><span class="preprocessor">    for (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</span></div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span><span class="preprocessor">           *it = a_likely(ptr) ? it##_ + (num) : A_NULL;             \</span></div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span><span class="preprocessor">         it &gt; it##_; --it)</span></div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span> </div>
+<div class="foldopen" id="foldopen00966" data-start="" data-end="">
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gac7d625eaabb55fb2799f666a9323042b">  966</a></span><span class="preprocessor">#define a_foreach_reverse(T, it, ptr, num)                           \</span></div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span><span class="preprocessor">    for (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</span></div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span><span class="preprocessor">           *it = a_likely(ptr) ? it##_ + (num) : A_NULL;             \</span></div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span><span class="preprocessor">         it &gt; it##_; --it)</span></div>
 </div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span> </div>
-<div class="foldopen" id="foldopen00984" data-start="" data-end="">
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga632ba1b10e16aa2e046c98d5a684a9db">  984</a></span><span class="preprocessor">#define a_iterate(T, it, ptr, end) \</span></div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span><span class="preprocessor">    for (T *it = a_cast_s(T *, ptr), *it##_ = a_cast_s(T *, end); it &lt; it##_; ++it)</span></div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="foldopen" id="foldopen00978" data-start="" data-end="">
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga632ba1b10e16aa2e046c98d5a684a9db">  978</a></span><span class="preprocessor">#define a_iterate(T, it, ptr, end) \</span></div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span><span class="preprocessor">    for (T *it = a_cast_s(T *, ptr), *it##_ = a_cast_s(T *, end); it &lt; it##_; ++it)</span></div>
 </div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span> </div>
-<div class="foldopen" id="foldopen00994" data-start="" data-end="">
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gac4dfb31cd7a8c8e0f9db828f17b81c1a">  994</a></span><span class="preprocessor">#define a_iterate_reverse(T, it, ptr, end)                           \</span></div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span><span class="preprocessor">    for (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</span></div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span><span class="preprocessor">           *it = a_likely(end) ? a_cast_s(T *, end) - 1 : A_NULL;    \</span></div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span><span class="preprocessor">         it &gt; it##_; --it)</span></div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
+<div class="foldopen" id="foldopen00988" data-start="" data-end="">
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gac4dfb31cd7a8c8e0f9db828f17b81c1a">  988</a></span><span class="preprocessor">#define a_iterate_reverse(T, it, ptr, end)                           \</span></div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span><span class="preprocessor">    for (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</span></div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span><span class="preprocessor">           *it = a_likely(end) ? a_cast_s(T *, end) - 1 : A_NULL;    \</span></div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span><span class="preprocessor">         it &gt; it##_; --it)</span></div>
 </div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span> </div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span><span class="keyword">enum</span></div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>{</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224"> 1004</a></span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224">A_SUCCESS</a> ,</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc"> 1005</a></span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc">A_FAILURE</a> ,</div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d">A_INVALID</a> </div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d"> 1007</a></span>};</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span><span class="preprocessor">#if defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span><span class="preprocessor">#undef A_INTERN</span></div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span><span class="preprocessor">#define A_INTERN A_INLINE</span></div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span><span class="preprocessor">#endif </span><span class="comment">/* LIBA_A_C */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span> </div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> a_f32_from(<a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> x);</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> a_f32_from(<a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> <span class="keyword">const</span> x)</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>{</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keyword">union</span></div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    {</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u;</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x;</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>    } u;</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>    u.u = x;</div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>    <span class="keywordflow">return</span> u.x;</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>}</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> a_f32_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x);</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> a_f32_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> <span class="keyword">const</span> x)</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>{</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <span class="keyword">union</span></div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    {</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x;</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u;</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    } u;</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    u.x = x;</div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    <span class="keywordflow">return</span> u.u;</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>}</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> a_f64_from(<a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> x);</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> a_f64_from(<a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> <span class="keyword">const</span> x)</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>{</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    <span class="keyword">union</span></div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    {</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u;</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x;</div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>    } u;</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>    u.u = x;</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>    <span class="keywordflow">return</span> u.x;</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>}</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> a_f64_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x);</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> a_f64_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> <span class="keyword">const</span> x)</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>{</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keyword">union</span></div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    {</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x;</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u;</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    } u;</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    u.x = x;</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>    <span class="keywordflow">return</span> u.u;</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>}</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span> </div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga3480be7e330b2d4123107b87c4a5eb0b"> 1085</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga3480be7e330b2d4123107b87c4a5eb0b">a_copy</a>(<span class="keywordtype">void</span> *A_RESTRICT dst, <span class="keywordtype">void</span> <span class="keyword">const</span> *A_RESTRICT src, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga9a9c76aa521d1216c17c7a8dfc1fe27e"> 1094</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga9a9c76aa521d1216c17c7a8dfc1fe27e">a_move</a>(<span class="keywordtype">void</span> *dst, <span class="keywordtype">void</span> <span class="keyword">const</span> *src, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span> </div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc"> 1103</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc">a_fill</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <span class="keywordtype">int</span> val);</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span> </div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga70d61823629443f3555c86191672134a"> 1111</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga70d61823629443f3555c86191672134a">a_zero</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span> </div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c"> 1119</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c">a_swap</a>(<span class="keywordtype">void</span> *lhs, <span class="keywordtype">void</span> *rhs, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span> </div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga0707786f2aa95b2b25c77fc992ccbeed"> 1127</a></span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> <a class="code hl_function" href="../../df/d91/group__A.html#ga0707786f2aa95b2b25c77fc992ccbeed">a_hash_bkdr</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *str, <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val);</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span> </div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga6e9d173812542f2ca94c584de9265d6e"> 1136</a></span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> <a class="code hl_function" href="../../df/d91/group__A.html#ga6e9d173812542f2ca94c584de9265d6e">a_hash_bkdrn</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val);</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span> </div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga2b6dda381741196cb05e6f295a35d965"> 1145</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga2b6dda381741196cb05e6f295a35d965">a_float_save</a>(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n,</div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>                           <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> <span class="keyword">const</span> *cache_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> cache_n);</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span> </div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946"> 1155</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946">a_float_roll</a>(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n,</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>                           <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *shift_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> shift_n);</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span> </div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span><span class="preprocessor">#if defined(LIBA_A_C)</span></div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span><span class="preprocessor">#undef A_INTERN</span></div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span><span class="preprocessor">#define A_INTERN static A_INLINE</span></div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span><span class="preprocessor">#endif </span><span class="comment">/* LIBA_A_C */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span><span class="preprocessor">#endif </span><span class="comment">/* a/a.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span> </div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span><span class="keyword">enum</span></div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>{</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224">  998</a></span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224">A_SUCCESS</a> ,</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc">  999</a></span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc">A_FAILURE</a> ,</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <a class="code hl_enumvalue" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d">A_INVALID</a> </div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d"> 1001</a></span>};</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span><span class="preprocessor">#if defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span><span class="preprocessor">#undef A_INTERN</span></div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span><span class="preprocessor">#define A_INTERN A_INLINE</span></div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span><span class="preprocessor">#endif </span><span class="comment">/* LIBA_A_C */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span> </div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> a_f32_from(<a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> x);</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> a_f32_from(<a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> <span class="keyword">const</span> x)</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>{</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    {</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>        <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u;</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x;</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    } u;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    u.u = x;</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keywordflow">return</span> u.x;</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>}</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> a_f32_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x);</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> a_f32_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> <span class="keyword">const</span> x)</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>{</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    {</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga8d50f180ce7dbe5682ab90e01dd9fdf4">a_f32_t</a> x;</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        <a class="code hl_define" href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a> u;</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    } u;</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    u.x = x;</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <span class="keywordflow">return</span> u.u;</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>}</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> a_f64_from(<a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> x);</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> a_f64_from(<a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> <span class="keyword">const</span> x)</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>{</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    {</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u;</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x;</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    } u;</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    u.u = x;</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    <span class="keywordflow">return</span> u.x;</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>}</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span><span class="preprocessor">#if !defined A_HAVE_INLINE || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> a_f64_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x);</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span><span class="preprocessor">#if defined(A_HAVE_INLINE) || defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>A_INTERN <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> a_f64_into(<a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> <span class="keyword">const</span> x)</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>{</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>    {</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga29352a189b9c745014ad0b0dfc79c0cb">a_f64_t</a> x;</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        <a class="code hl_define" href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a> u;</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    } u;</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    u.x = x;</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keywordflow">return</span> u.u;</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>}</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_INLINE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span> </div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga3480be7e330b2d4123107b87c4a5eb0b"> 1079</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga3480be7e330b2d4123107b87c4a5eb0b">a_copy</a>(<span class="keywordtype">void</span> *A_RESTRICT dst, <span class="keywordtype">void</span> <span class="keyword">const</span> *A_RESTRICT src, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span> </div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga9a9c76aa521d1216c17c7a8dfc1fe27e"> 1088</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga9a9c76aa521d1216c17c7a8dfc1fe27e">a_move</a>(<span class="keywordtype">void</span> *dst, <span class="keywordtype">void</span> <span class="keyword">const</span> *src, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span> </div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc"> 1097</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc">a_fill</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <span class="keywordtype">int</span> val);</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span> </div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga70d61823629443f3555c86191672134a"> 1105</a></span>A_EXTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../df/d91/group__A.html#ga70d61823629443f3555c86191672134a">a_zero</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span> </div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c"> 1113</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c">a_swap</a>(<span class="keywordtype">void</span> *lhs, <span class="keywordtype">void</span> *rhs, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz);</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span> </div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga0707786f2aa95b2b25c77fc992ccbeed"> 1121</a></span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> <a class="code hl_function" href="../../df/d91/group__A.html#ga0707786f2aa95b2b25c77fc992ccbeed">a_hash_bkdr</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *str, <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val);</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga6e9d173812542f2ca94c584de9265d6e"> 1130</a></span>A_EXTERN <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> <a class="code hl_function" href="../../df/d91/group__A.html#ga6e9d173812542f2ca94c584de9265d6e">a_hash_bkdrn</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *ptr, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> siz, <a class="code hl_define" href="../../df/d91/group__A.html#gab0ad1b51105db4bfc22a55d824c9b440">a_umax_t</a> val);</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga2b6dda381741196cb05e6f295a35d965"> 1139</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga2b6dda381741196cb05e6f295a35d965">a_float_save</a>(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n,</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>                           <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> <span class="keyword">const</span> *cache_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> cache_n);</div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span> </div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"><a class="line" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946"> 1149</a></span>A_EXTERN <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946">a_float_roll</a>(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n,</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>                           <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *shift_p, <a class="code hl_define" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> shift_n);</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span><span class="preprocessor">#if defined(LIBA_A_C)</span></div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span><span class="preprocessor">#undef A_INTERN</span></div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span><span class="preprocessor">#define A_INTERN static A_INLINE</span></div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span><span class="preprocessor">#endif </span><span class="comment">/* LIBA_A_C */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span> </div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span><span class="preprocessor">#endif </span><span class="comment">/* a/a.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agroup__A__FLOAT_html_ga153ee92531fb33699248c4cabffb4219"><div class="ttname"><a href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a></div><div class="ttdeci">#define a_float_t</div><div class="ttdef"><b>Definition</b> a.h:814</div></div>
 <div class="ttc" id="agroup__A_html_ga01331a677ef4be4e91c129e93a80b64c"><div class="ttname"><a href="../../df/d91/group__A.html#ga01331a677ef4be4e91c129e93a80b64c">a_swap</a></div><div class="ttdeci">void a_swap(void *lhs, void *rhs, a_size_t siz)</div><div class="ttdoc">swap two different memory blocks of the same size</div></div>
 <div class="ttc" id="agroup__A_html_ga04136a06392b5cf66f3a8b678b3ce350"><div class="ttname"><a href="../../df/d91/group__A.html#ga04136a06392b5cf66f3a8b678b3ce350">a_u64_t</a></div><div class="ttdeci">#define a_u64_t</div><div class="ttdef"><b>Definition</b> a.h:531</div></div>
@@ -1040,13 +1032,10 @@ $(document).ready(function() { init_codefold(1); });
 <div class="ttc" id="agroup__A_html_gaddeaa52897ce3c9d619bb7cbe672533a"><div class="ttname"><a href="../../df/d91/group__A.html#gaddeaa52897ce3c9d619bb7cbe672533a">a_c8_t</a></div><div class="ttdeci">#define a_c8_t</div><div class="ttdef"><b>Definition</b> a.h:407</div></div>
 <div class="ttc" id="agroup__A_html_gaf1750ccfa763fcb254c1337d6b7e95b8"><div class="ttname"><a href="../../df/d91/group__A.html#gaf1750ccfa763fcb254c1337d6b7e95b8">a_u32_t</a></div><div class="ttdeci">#define a_u32_t</div><div class="ttdef"><b>Definition</b> a.h:500</div></div>
 <div class="ttc" id="agroup__A_html_gafad11ec93b93addfa6ac7e19f82dacbc"><div class="ttname"><a href="../../df/d91/group__A.html#gafad11ec93b93addfa6ac7e19f82dacbc">a_fill</a></div><div class="ttdeci">void * a_fill(void *ptr, a_size_t siz, int val)</div><div class="ttdoc">fill a buffer with a character</div></div>
-<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224">A_SUCCESS</a></div><div class="ttdeci">@ A_SUCCESS</div><div class="ttdef"><b>Definition</b> a.h:1004</div></div>
-<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc">A_FAILURE</a></div><div class="ttdeci">@ A_FAILURE</div><div class="ttdef"><b>Definition</b> a.h:1005</div></div>
-<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d">A_INVALID</a></div><div class="ttdeci">@ A_INVALID</div><div class="ttdef"><b>Definition</b> a.h:1006</div></div>
-<div class="ttc" id="auniona__cast__u_html"><div class="ttname"><a href="../../da/da0/uniona__cast__u.html">a_cast_u</a></div><div class="ttdef"><b>Definition</b> a.h:825</div></div>
-<div class="ttc" id="auniona__float__u_html"><div class="ttname"><a href="../../d2/d53/uniona__float__u.html">a_float_u</a></div><div class="ttdef"><b>Definition</b> a.h:817</div></div>
-<div class="ttc" id="auniona__float__u_html_a0c62df0a670ad4e8486fc9e9e153aa8d"><div class="ttname"><a href="../../d2/d53/uniona__float__u.html#a0c62df0a670ad4e8486fc9e9e153aa8d">a_float_u::f</a></div><div class="ttdeci">a_float_t f</div><div class="ttdoc">as a floating-point number</div><div class="ttdef"><b>Definition</b> a.h:818</div></div>
-<div class="ttc" id="auniona__float__u_html_ad9e6aef02de53f9a82d8a029085df542"><div class="ttname"><a href="../../d2/d53/uniona__float__u.html#ad9e6aef02de53f9a82d8a029085df542">a_float_u::p</a></div><div class="ttdeci">a_float_t * p</div><div class="ttdoc">as a floating-point array</div><div class="ttdef"><b>Definition</b> a.h:819</div></div>
+<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba1145c4b993224f2f585bd7e961b93224">A_SUCCESS</a></div><div class="ttdeci">@ A_SUCCESS</div><div class="ttdef"><b>Definition</b> a.h:998</div></div>
+<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55ba7948d60f66afa7f38066acc9a0d55bcc">A_FAILURE</a></div><div class="ttdeci">@ A_FAILURE</div><div class="ttdef"><b>Definition</b> a.h:999</div></div>
+<div class="ttc" id="agroup__A_html_gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d"><div class="ttname"><a href="../../df/d91/group__A.html#gga06fc87d81c62e9abb8790b6e5713c55bacad2cd6e154573909af61bb502e9b91d">A_INVALID</a></div><div class="ttdeci">@ A_INVALID</div><div class="ttdef"><b>Definition</b> a.h:1000</div></div>
+<div class="ttc" id="auniona__cast__u_html"><div class="ttname"><a href="../../da/da0/uniona__cast__u.html">a_cast_u</a></div><div class="ttdef"><b>Definition</b> a.h:819</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

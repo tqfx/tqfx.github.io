@@ -84,24 +84,32 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#a.pid:new">a.pid:new (min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#a.pid:new">a.pid:new ()</a></td>
 	<td class="summary">constructor for PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid:init">a.pid:init (min, max[, sum])</a></td>
-	<td class="summary">initialize function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid:init">a.pid:init ()</a></td>
+	<td class="summary">initialize for PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid:zero">a.pid:zero ()</a></td>
+	<td class="summary">zeroing for PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#a.pid:kpid">a.pid:kpid (kp, ki, kd)</a></td>
 	<td class="summary">set proportional integral derivative constant for PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid:iter">a.pid:iter (set, fdb)</a></td>
-	<td class="summary">calculate function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid:off">a.pid:off (set, fdb)</a></td>
+	<td class="summary">calculate for PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid:zero">a.pid:zero ()</a></td>
-	<td class="summary">zero clear function for PID controller</td>
+	<td class="name" nowrap><a href="#a.pid:pos">a.pid:pos (set, fdb)</a></td>
+	<td class="summary">calculate for positional PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid:inc">a.pid:inc (set, fdb)</a></td>
+	<td class="summary">calculate for incremental PID controller</td>
 	</tr>
 </table>
 
@@ -134,6 +142,9 @@
         <li><span class="parameter">summax</span>
          maximum integral output
         </li>
+        <li><span class="parameter">summin</span>
+         minimum integral output
+        </li>
         <li><span class="parameter">outmax</span>
          maximum final output
         </li>
@@ -149,9 +160,6 @@
         <li><span class="parameter">err</span>
          cache error
         </li>
-        <li><span class="parameter">mode</span>
-         controller mode
-        </li>
     </ul>
 
 
@@ -165,28 +173,12 @@
     <dl class="function">
     <dt>
     <a name = "a.pid:new"></a>
-    <strong>a.pid:new (min, max[, sum])</strong>
+    <strong>a.pid:new ()</strong>
     </dt>
     <dd>
     constructor for PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
@@ -201,28 +193,32 @@
 </dd>
     <dt>
     <a name = "a.pid:init"></a>
-    <strong>a.pid:init (min, max[, sum])</strong>
+    <strong>a.pid:init ()</strong>
     </dt>
     <dd>
-    initialize function for PID controller
+    initialize for PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid</a></span>
+        PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid:zero"></a>
+    <strong>a.pid:zero ()</strong>
+    </dt>
+    <dd>
+    zeroing for PID controller
+
+
 
     <h3>Returns:</h3>
     <ol>
@@ -271,22 +267,22 @@
 
 </dd>
     <dt>
-    <a name = "a.pid:iter"></a>
-    <strong>a.pid:iter (set, fdb)</strong>
+    <a name = "a.pid:off"></a>
+    <strong>a.pid:off (set, fdb)</strong>
     </dt>
     <dd>
-    calculate function for PID controller
+    calculate for PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
-         setpoint
+         setpoint value
         </li>
         <li><span class="parameter">fdb</span>
             <span class="types"><span class="type">number</span></span>
-         feedback
+         feedback value
         </li>
     </ul>
 
@@ -294,7 +290,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        output
+        setpoint value
     </ol>
 
 
@@ -302,19 +298,61 @@
 
 </dd>
     <dt>
-    <a name = "a.pid:zero"></a>
-    <strong>a.pid:zero ()</strong>
+    <a name = "a.pid:pos"></a>
+    <strong>a.pid:pos (set, fdb)</strong>
     </dt>
     <dd>
-    zero clear function for PID controller
+    calculate for positional PID controller
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid</a></span>
-        PID controller userdata
+           <span class="types"><span class="type">number</span></span>
+        output value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid:inc"></a>
+    <strong>a.pid:inc (set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate for incremental PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output value
     </ol>
 
 
@@ -328,7 +366,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-21 04:01:29 </i>
+<i style="float:right;">Last updated 2023-11-24 16:32:21 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

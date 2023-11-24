@@ -88,12 +88,16 @@
 	<td class="summary">destructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:new">a.pid.fuzzy:new (min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:new">a.pid.fuzzy:new ()</a></td>
 	<td class="summary">constructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:init">a.pid.fuzzy:init (min, max[, sum])</a></td>
-	<td class="summary">initialize function for fuzzy PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:init">a.pid.fuzzy:init ()</a></td>
+	<td class="summary">initialize for fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:zero">a.pid.fuzzy:zero ()</a></td>
+	<td class="summary">zeroing for fuzzy PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#a.pid.fuzzy:op">a.pid.fuzzy:op (op)</a></td>
@@ -104,7 +108,7 @@
 	<td class="summary">set rule base for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:joint">a.pid.fuzzy:joint (num)</a></td>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:set_joint">a.pid.fuzzy:set_joint (num)</a></td>
 	<td class="summary">set joint buffer for fuzzy PID controller</td>
 	</tr>
 	<tr>
@@ -112,12 +116,16 @@
 	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:iter">a.pid.fuzzy:iter (set, fdb)</a></td>
-	<td class="summary">calculate function for fuzzy PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:off">a.pid.fuzzy:off (set, fdb)</a></td>
+	<td class="summary">calculate for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:zero">a.pid.fuzzy:zero ()</a></td>
-	<td class="summary">zero clear function for fuzzy PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:pos">a.pid.fuzzy:pos (set, fdb)</a></td>
+	<td class="summary">calculate for positional fuzzy PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid.fuzzy:inc">a.pid.fuzzy:inc (set, fdb)</a></td>
+	<td class="summary">calculate for incremental fuzzy PID controller</td>
 	</tr>
 </table>
 
@@ -150,6 +158,9 @@
         <li><span class="parameter">summax</span>
          maximum integral output
         </li>
+        <li><span class="parameter">summin</span>
+         minimum integral output
+        </li>
         <li><span class="parameter">outmax</span>
          maximum final output
         </li>
@@ -164,9 +175,6 @@
         </li>
         <li><span class="parameter">err</span>
          cache error
-        </li>
-        <li><span class="parameter">mode</span>
-         controller mode
         </li>
         <li><span class="parameter">order</span>
          number of order in the square matrix
@@ -201,28 +209,12 @@
 </dd>
     <dt>
     <a name = "a.pid.fuzzy:new"></a>
-    <strong>a.pid.fuzzy:new (min, max[, sum])</strong>
+    <strong>a.pid.fuzzy:new ()</strong>
     </dt>
     <dd>
     constructor for fuzzy PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
@@ -237,28 +229,32 @@
 </dd>
     <dt>
     <a name = "a.pid.fuzzy:init"></a>
-    <strong>a.pid.fuzzy:init (min, max[, sum])</strong>
+    <strong>a.pid.fuzzy:init ()</strong>
     </dt>
     <dd>
-    initialize function for fuzzy PID controller
+    initialize for fuzzy PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+        fuzzy PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid.fuzzy:zero"></a>
+    <strong>a.pid.fuzzy:zero ()</strong>
+    </dt>
+    <dd>
+    zeroing for fuzzy PID controller
+
+
 
     <h3>Returns:</h3>
     <ol>
@@ -342,8 +338,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:joint"></a>
-    <strong>a.pid.fuzzy:joint (num)</strong>
+    <a name = "a.pid.fuzzy:set_joint"></a>
+    <strong>a.pid.fuzzy:set_joint (num)</strong>
     </dt>
     <dd>
     set joint buffer for fuzzy PID controller
@@ -404,22 +400,22 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:iter"></a>
-    <strong>a.pid.fuzzy:iter (set, fdb)</strong>
+    <a name = "a.pid.fuzzy:off"></a>
+    <strong>a.pid.fuzzy:off (set, fdb)</strong>
     </dt>
     <dd>
-    calculate function for fuzzy PID controller
+    calculate for fuzzy PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
-         setpoint
+         setpoint value
         </li>
         <li><span class="parameter">fdb</span>
             <span class="types"><span class="type">number</span></span>
-         feedback
+         feedback value
         </li>
     </ul>
 
@@ -427,7 +423,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        output
+        setpoint value
     </ol>
 
 
@@ -435,19 +431,61 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:zero"></a>
-    <strong>a.pid.fuzzy:zero ()</strong>
+    <a name = "a.pid.fuzzy:pos"></a>
+    <strong>a.pid.fuzzy:pos (set, fdb)</strong>
     </dt>
     <dd>
-    zero clear function for fuzzy PID controller
+    calculate for positional fuzzy PID controller
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
-        fuzzy PID controller userdata
+           <span class="types"><span class="type">number</span></span>
+        output value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid.fuzzy:inc"></a>
+    <strong>a.pid.fuzzy:inc (set, fdb)</strong>
+    </dt>
+    <dd>
+    calculate for incremental fuzzy PID controller
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output value
     </ol>
 
 
@@ -461,7 +499,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-21 04:01:29 </i>
+<i style="float:right;">Last updated 2023-11-24 16:32:21 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

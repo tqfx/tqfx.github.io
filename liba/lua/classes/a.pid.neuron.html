@@ -84,12 +84,16 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.neuron:new">a.pid.neuron:new (min, max[, sum])</a></td>
+	<td class="name" nowrap><a href="#a.pid.neuron:new">a.pid.neuron:new ()</a></td>
 	<td class="summary">constructor for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.neuron:init">a.pid.neuron:init (min, max[, sum])</a></td>
-	<td class="summary">initialize function for single neuron PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:init">a.pid.neuron:init ()</a></td>
+	<td class="summary">initialize for single neuron PID controller</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.pid.neuron:zero">a.pid.neuron:zero ()</a></td>
+	<td class="summary">zeroing for single neuron PID controller</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#a.pid.neuron:kpid">a.pid.neuron:kpid (k, kp, ki, kd)</a></td>
@@ -100,12 +104,12 @@
 	<td class="summary">set proportional integral derivative weight for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.neuron:iter">a.pid.neuron:iter (set, fdb)</a></td>
-	<td class="summary">calculate function for single neuron PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:off">a.pid.neuron:off (set, fdb)</a></td>
+	<td class="summary">calculate for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.neuron:zero">a.pid.neuron:zero ()</a></td>
-	<td class="summary">zero clear function for single neuron PID controller</td>
+	<td class="name" nowrap><a href="#a.pid.neuron:inc">a.pid.neuron:inc (set, fdb)</a></td>
+	<td class="summary">calculate for incremental single neuron PID controller</td>
 	</tr>
 </table>
 
@@ -126,6 +130,9 @@
 
     <h3>Fields:</h3>
     <ul>
+        <li><span class="parameter">k</span>
+         proportional output coefficient
+        </li>
         <li><span class="parameter">kp</span>
          proportional learning constant
         </li>
@@ -135,8 +142,14 @@
         <li><span class="parameter">kd</span>
          derivative learning constant
         </li>
-        <li><span class="parameter">summax</span>
-         maximum integral output
+        <li><span class="parameter">wp</span>
+         proportional weight
+        </li>
+        <li><span class="parameter">wi</span>
+         integral weight
+        </li>
+        <li><span class="parameter">wd</span>
+         derivative weight
         </li>
         <li><span class="parameter">outmax</span>
          maximum final output
@@ -153,23 +166,8 @@
         <li><span class="parameter">err</span>
          cache error
         </li>
-        <li><span class="parameter">mode</span>
-         controller mode
-        </li>
         <li><span class="parameter">ec</span>
          error change
-        </li>
-        <li><span class="parameter">wp</span>
-         proportional weight
-        </li>
-        <li><span class="parameter">wi</span>
-         integral weight
-        </li>
-        <li><span class="parameter">wd</span>
-         derivative weight
-        </li>
-        <li><span class="parameter">k</span>
-         proportional output coefficient
         </li>
     </ul>
 
@@ -184,28 +182,12 @@
     <dl class="function">
     <dt>
     <a name = "a.pid.neuron:new"></a>
-    <strong>a.pid.neuron:new (min, max[, sum])</strong>
+    <strong>a.pid.neuron:new ()</strong>
     </dt>
     <dd>
     constructor for single neuron PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
@@ -220,28 +202,32 @@
 </dd>
     <dt>
     <a name = "a.pid.neuron:init"></a>
-    <strong>a.pid.neuron:init (min, max[, sum])</strong>
+    <strong>a.pid.neuron:init ()</strong>
     </dt>
     <dd>
-    initialize function for single neuron PID controller
+    initialize for single neuron PID controller
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">min</span>
-            <span class="types"><span class="type">number</span></span>
-         minimum output
-        </li>
-        <li><span class="parameter">max</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum output
-        </li>
-        <li><span class="parameter">sum</span>
-            <span class="types"><span class="type">number</span></span>
-         maximum intergral output
-         (<em>optional</em>)
-        </li>
-    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
+        single neuron PID controller userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.pid.neuron:zero"></a>
+    <strong>a.pid.neuron:zero ()</strong>
+    </dt>
+    <dd>
+    zeroing for single neuron PID controller
+
+
 
     <h3>Returns:</h3>
     <ol>
@@ -329,22 +315,22 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.neuron:iter"></a>
-    <strong>a.pid.neuron:iter (set, fdb)</strong>
+    <a name = "a.pid.neuron:off"></a>
+    <strong>a.pid.neuron:off (set, fdb)</strong>
     </dt>
     <dd>
-    calculate function for single neuron PID controller
+    calculate for single neuron PID controller
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
-         setpoint
+         setpoint value
         </li>
         <li><span class="parameter">fdb</span>
             <span class="types"><span class="type">number</span></span>
-         feedback
+         feedback value
         </li>
     </ul>
 
@@ -352,7 +338,7 @@
     <ol>
 
            <span class="types"><span class="type">number</span></span>
-        output
+        setpoint value
     </ol>
 
 
@@ -360,19 +346,30 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.neuron:zero"></a>
-    <strong>a.pid.neuron:zero ()</strong>
+    <a name = "a.pid.neuron:inc"></a>
+    <strong>a.pid.neuron:inc (set, fdb)</strong>
     </dt>
     <dd>
-    zero clear function for single neuron PID controller
+    calculate for incremental single neuron PID controller
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">set</span>
+            <span class="types"><span class="type">number</span></span>
+         setpoint value
+        </li>
+        <li><span class="parameter">fdb</span>
+            <span class="types"><span class="type">number</span></span>
+         feedback value
+        </li>
+    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.neuron.html#">a.pid.neuron</a></span>
-        single neuron PID controller userdata
+           <span class="types"><span class="type">number</span></span>
+        output value
     </ol>
 
 
@@ -386,7 +383,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-21 04:01:29 </i>
+<i style="float:right;">Last updated 2023-11-24 16:32:21 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

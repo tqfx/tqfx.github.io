@@ -236,33 +236,33 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc8l_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
-    <span class="kw">fn </span>a_crc8h_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
+    <span class="kw">fn </span>a_crc8le_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
+    <span class="kw">fn </span>a_crc8be_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
     <span class="kw">fn </span>a_crc8(table: <span class="kw-2">*const </span>u8, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u8) -&gt; u8;
 }
 
 <span class="kw">impl </span>crc8 {
-    <span class="doccomment">/// initialize function for low 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_low(poly: u8) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for little-endian 8 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_le(poly: u8) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc8l_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc8le_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for low 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>low(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
+    <span class="doccomment">/// calculate for little-endian 8 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
         <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 
-    <span class="doccomment">/// initialize function for high 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_high(poly: u8) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for big-endian 8 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_be(poly: u8) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc8h_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc8be_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for high 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>high(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
+    <span class="doccomment">/// calculate for big-endian 8 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
         <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 }
@@ -270,12 +270,12 @@
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc8() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_low(POLY8);
-        ctx.low(<span class="string">b&quot;&quot;</span>, INIT8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_le(POLY8);
+        ctx.le(<span class="string">b&quot;&quot;</span>, INIT8);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_high(POLY8);
-        ctx.high(<span class="string">b&quot;&quot;</span>, INIT8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_be(POLY8);
+        ctx.be(<span class="string">b&quot;&quot;</span>, INIT8);
     }
 }
 
@@ -291,47 +291,47 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc16l_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
-    <span class="kw">fn </span>a_crc16h_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
-    <span class="kw">fn </span>a_crc16l(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
-    <span class="kw">fn </span>a_crc16h(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
+    <span class="kw">fn </span>a_crc16le_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
+    <span class="kw">fn </span>a_crc16be_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
+    <span class="kw">fn </span>a_crc16le(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
+    <span class="kw">fn </span>a_crc16be(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
 }
 
 <span class="kw">impl </span>crc16 {
-    <span class="doccomment">/// initialize function for low 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_low(poly: u16) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for little-endian 16 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_le(poly: u16) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc16l_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc16le_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for low 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>low(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
-        <span class="kw">unsafe </span>{ a_crc16l(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for little-endian 16 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
+        <span class="kw">unsafe </span>{ a_crc16le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 
-    <span class="doccomment">/// initialize function for high 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_high(poly: u16) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for big-endian 16 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_be(poly: u16) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc16h_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc16be_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for high 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>high(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
-        <span class="kw">unsafe </span>{ a_crc16h(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for big-endian 16 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
+        <span class="kw">unsafe </span>{ a_crc16be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc16() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_low(POLY16);
-        ctx.low(<span class="string">b&quot;&quot;</span>, INIT16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_le(POLY16);
+        ctx.le(<span class="string">b&quot;&quot;</span>, INIT16);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_high(POLY16);
-        ctx.high(<span class="string">b&quot;&quot;</span>, INIT16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_be(POLY16);
+        ctx.be(<span class="string">b&quot;&quot;</span>, INIT16);
     }
 }
 
@@ -347,47 +347,47 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc32l_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
-    <span class="kw">fn </span>a_crc32h_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
-    <span class="kw">fn </span>a_crc32l(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
-    <span class="kw">fn </span>a_crc32h(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+    <span class="kw">fn </span>a_crc32le_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
+    <span class="kw">fn </span>a_crc32be_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
+    <span class="kw">fn </span>a_crc32le(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+    <span class="kw">fn </span>a_crc32be(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
 }
 
 <span class="kw">impl </span>crc32 {
-    <span class="doccomment">/// initialize function for low 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_low(poly: u32) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for little-endian 32 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_le(poly: u32) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc32l_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc32le_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for low 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>low(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
-        <span class="kw">unsafe </span>{ a_crc32l(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for little-endian 32 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
+        <span class="kw">unsafe </span>{ a_crc32le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 
-    <span class="doccomment">/// initialize function for high 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_high(poly: u32) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for big-endian 32 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_be(poly: u32) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc32h_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc32be_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for high 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>high(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
-        <span class="kw">unsafe </span>{ a_crc32h(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for big-endian 32 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
+        <span class="kw">unsafe </span>{ a_crc32be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc32() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_low(POLY32);
-        ctx.low(<span class="string">b&quot;&quot;</span>, INIT32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_le(POLY32);
+        ctx.le(<span class="string">b&quot;&quot;</span>, INIT32);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_high(POLY32);
-        ctx.high(<span class="string">b&quot;&quot;</span>, INIT32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_be(POLY32);
+        ctx.be(<span class="string">b&quot;&quot;</span>, INIT32);
     }
 }
 
@@ -403,47 +403,47 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc64l_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
-    <span class="kw">fn </span>a_crc64h_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
-    <span class="kw">fn </span>a_crc64l(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
-    <span class="kw">fn </span>a_crc64h(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
+    <span class="kw">fn </span>a_crc64le_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
+    <span class="kw">fn </span>a_crc64be_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
+    <span class="kw">fn </span>a_crc64le(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
+    <span class="kw">fn </span>a_crc64be(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
 }
 
 <span class="kw">impl </span>crc64 {
-    <span class="doccomment">/// initialize function for low 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_low(poly: u64) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for little-endian 64 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_le(poly: u64) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc64l_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc64le_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for low 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>low(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
-        <span class="kw">unsafe </span>{ a_crc64l(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for little-endian 64 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
+        <span class="kw">unsafe </span>{ a_crc64le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 
-    <span class="doccomment">/// initialize function for high 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_high(poly: u64) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for big-endian 64 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>new_be(poly: u64) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc64h_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc64be_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
 
-    <span class="doccomment">/// calculation function for high 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>high(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
-        <span class="kw">unsafe </span>{ a_crc64h(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// calculate for big-endian 64 bits Cyclic Redundancy Check
+    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
+        <span class="kw">unsafe </span>{ a_crc64be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc64() {
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_low(POLY64);
-        ctx.low(<span class="string">b&quot;&quot;</span>, INIT64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_le(POLY64);
+        ctx.le(<span class="string">b&quot;&quot;</span>, INIT64);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_high(POLY64);
-        ctx.high(<span class="string">b&quot;&quot;</span>, INIT64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_be(POLY64);
+        ctx.be(<span class="string">b&quot;&quot;</span>, INIT64);
     }
 }
 </code></pre></div></section></main></body></html>

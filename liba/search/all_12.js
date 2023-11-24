@@ -6,5 +6,7 @@ var searchData=
   ['slist_2eh_3',['slist.h',['../d1/dad/slist_8h.html',1,'']]],
   ['str_2eh_4',['str.h',['../d1/d93/str_8h.html',1,'']]],
   ['string_20library_5',['basic string library',['../db/d6c/group__A__STR.html',1,'']]],
-  ['summax_6',['summax',['../de/def/structa__pid__s.html#a95c60908839d85b23786e984f454321e',1,'a_pid_s']]]
+  ['sum_6',['sum',['../de/def/structa__pid__s.html#acacbabda172c8cb2fc05c450a4b3567f',1,'a_pid_s']]],
+  ['summax_7',['summax',['../de/def/structa__pid__s.html#a95c60908839d85b23786e984f454321e',1,'a_pid_s']]],
+  ['summin_8',['summin',['../de/def/structa__pid__s.html#aa72815529c975205c2bfc9a9522abc1a',1,'a_pid_s']]]
 ];
