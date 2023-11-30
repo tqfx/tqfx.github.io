@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["polytraj3","polytraj5","polytraj7"]};

@@ -7,8 +7,8 @@ var searchData=
   ['point_20number_4',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
   ['poly_2eh_5',['poly.h',['../db/d57/poly_8h.html',1,'']]],
   ['polynomial_6',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
-  ['polynomial_20trajectory_7',['polynomial trajectory',['../d1/d97/group__A__POLYTRACK.html',1,'']]],
-  ['polytrack_2eh_8',['polytrack.h',['../dc/d23/polytrack_8h.html',1,'']]],
+  ['polynomial_20trajectory_7',['polynomial trajectory',['../d7/d17/group__A__POLYTRAJ.html',1,'']]],
+  ['polytraj_2eh_8',['polytraj.h',['../df/d0b/polytraj_8h.html',1,'']]],
   ['proportional_20integral_20derivative_20controller_9',['proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../df/df3/group__A__PID__NEURON.html',1,'single neuron proportional integral derivative controller']]],
   ['python_10',['Python',['../index.html#autotoc_md21',1,'']]]
 ];

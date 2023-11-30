@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid.fuzzy.html">a.pid.fuzzy</a></li>
+  <li><a href="../classes/a.pid.neuron.html">a.pid.neuron</a></li>
+  <li><strong>a.polytraj3</strong></li>
+  <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
+  <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
+  <li><a href="../modules/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><a href="../modules/liba.polytraj3.html">liba.polytraj3</a></li>
+  <li><a href="../modules/liba.polytraj5.html">liba.polytraj5</a></li>
+  <li><a href="../modules/liba.polytraj7.html">liba.polytraj7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>a.polytraj3</code></h1>
+<p>cubic polynomial trajectory</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3">a.polytraj3</a></td>
+	<td class="summary">cubic polynomial trajectory</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3:new">a.polytraj3:new (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
+	<td class="summary">constructor for cubic polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3:gen">a.polytraj3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</a></td>
+	<td class="summary">generate for cubic polynomial trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3:pos">a.polytraj3:pos (dt)</a></td>
+	<td class="summary">calculate for cubic polynomial trajectory position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3:vel">a.polytraj3:vel (dt)</a></td>
+	<td class="summary">calculate for cubic polynomial trajectory velocity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.polytraj3:acc">a.polytraj3:acc (dt)</a></td>
+	<td class="summary">calculate for cubic polynomial trajectory acceleration</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.polytraj3"></a>
+    <strong>a.polytraj3</strong>
+    </dt>
+    <dd>
+    cubic polynomial trajectory
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">q</span>
+         coefficients of position
+        </li>
+        <li><span class="parameter">v</span>
+         coefficients of velocity
+        </li>
+        <li><span class="parameter">a</span>
+         coefficients of acceleration
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.polytraj3:new"></a>
+    <strong>a.polytraj3:new (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
+    </dt>
+    <dd>
+    constructor for cubic polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.polytraj3.html#">a.polytraj3</a></span>
+        cubic polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.polytraj3:gen"></a>
+    <strong>a.polytraj3:gen (t0, t1, q0, q1[, v0[, v1[, source[, target]]]])</strong>
+    </dt>
+    <dd>
+    generate for cubic polynomial trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t0</span>
+            <span class="types"><span class="type">number</span></span>
+         time for source
+        </li>
+        <li><span class="parameter">t1</span>
+            <span class="types"><span class="type">number</span></span>
+         time for target
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         position for source
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         position for target
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for source
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         velocity for target
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         source for trajectory
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         target for trajectory
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.polytraj3.html#">a.polytraj3</a></span>
+        cubic polynomial trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.polytraj3:pos"></a>
+    <strong>a.polytraj3:pos (dt)</strong>
+    </dt>
+    <dd>
+    calculate for cubic polynomial trajectory position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        position output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.polytraj3:vel"></a>
+    <strong>a.polytraj3:vel (dt)</strong>
+    </dt>
+    <dd>
+    calculate for cubic polynomial trajectory velocity
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        velocity output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.polytraj3:acc"></a>
+    <strong>a.polytraj3:acc (dt)</strong>
+    </dt>
+    <dd>
+    calculate for cubic polynomial trajectory acceleration
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        acceleration output
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2023-11-30 14:21:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
