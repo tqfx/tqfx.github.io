@@ -1,17 +1,19 @@
 <map id="lpf.h" name="lpf.h">
-<area shape="rect" id="Node000001" title="Low Pass Filter." alt="" coords="161,5,212,31"/>
-<area shape="rect" id="Node000002" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,152,208,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,31,180,79,180,110,184,138,179,139,175,110,175,78,182,31"/>
-<area shape="rect" id="Node000007" href="$df/db1/math_8h.html" title="mathematical algorithm library" alt="" coords="189,79,257,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="195,30,213,65,208,68,190,32"/>
+<area shape="rect" id="Node000001" title="Low Pass Filter." alt="" coords="209,5,260,31"/>
+<area shape="rect" id="Node000002" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="213,152,256,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,31,228,79,228,110,232,138,227,139,223,110,223,78,230,31"/>
+<area shape="rect" id="Node000008" href="$df/db1/math_8h.html" title="mathematical algorithm library" alt="" coords="237,79,305,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="243,30,261,65,256,68,238,32"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,225,80,251"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,179,79,222,77,217,164,174"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,176,87,223,86,218,212,171"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="105,225,175,251"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="181,179,157,215,153,212,177,176"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="221,179,168,219,165,215,218,175"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="199,225,270,251"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="197,176,222,213,217,216,192,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="237,178,237,212,232,212,232,178"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="294,225,357,251"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="210,175,292,217,290,222,207,179"/>
-<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="219,106,201,141,196,138,214,103"/>
-<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="250,76,272,77,280,83,283,92,278,103,264,107,263,102,274,98,278,91,276,86,270,82,250,81"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="251,175,301,214,298,219,248,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="381,225,451,251"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="257,172,375,218,373,223,255,177"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="267,106,249,141,244,138,262,103"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="298,76,320,77,328,83,331,92,326,103,312,107,311,102,322,98,326,91,324,86,318,82,298,81"/>
 </map>

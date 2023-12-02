@@ -85,7 +85,8 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">a.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -96,10 +97,11 @@ $(function() {
 <code>#include &lt;limits.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for a.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/dac/a_8h__incl.svg" width="363" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/dac/a_8h__incl.svg" width="458" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -646,6 +648,16 @@ Macros</h2></td></tr>
 <tr class="memitem:gac4dfb31cd7a8c8e0f9db828f17b81c1a" id="r_gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gac4dfb31cd7a8c8e0f9db828f17b81c1a">a_iterate_reverse</a>(T,  it,  ptr,  end)</td></tr>
 <tr class="memdesc:gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array in reverse  <br /></td></tr>
 <tr class="separator:gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4cfe6756c22fc1c05a321e5d677221bb" id="r_ga4cfe6756c22fc1c05a321e5d677221bb"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_ALLOC</b>(alloc,  addr,  size)&#160;&#160;&#160;void *alloc(void *addr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size)</td></tr>
+<tr class="memdesc:ga4cfe6756c22fc1c05a321e5d677221bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">declare allocation function <br /></td></tr>
+<tr class="separator:ga4cfe6756c22fc1c05a321e5d677221bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeafc9a0aa993eeb2cedf5f10a5f835eb" id="r_gaeafc9a0aa993eeb2cedf5f10a5f835eb"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_new</b>(T,  ptr,  num)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../df/d91/group__A.html#gaaeaa06fd164bd2bf5e4f99bc333db404">a_alloc</a>(ptr, sizeof(T) * (num)))</td></tr>
+<tr class="separator:gaeafc9a0aa993eeb2cedf5f10a5f835eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae78f4da02e1b8bb1510e2290f02e8ac1" id="r_gae78f4da02e1b8bb1510e2290f02e8ac1"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_die</b>(ptr)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaaeaa06fd164bd2bf5e4f99bc333db404">a_alloc</a>(ptr, 0)</td></tr>
+<tr class="separator:gae78f4da02e1b8bb1510e2290f02e8ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -703,6 +715,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga75b6ec9089219da696045a2195737946" id="r_ga75b6ec9089219da696045a2195737946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#ga75b6ec9089219da696045a2195737946">a_float_roll</a> (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *array_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> array_n, <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> *shift_p, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> shift_n)</td></tr>
 <tr class="memdesc:ga75b6ec9089219da696045a2195737946"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array circularly, array&gt;&gt;shift  <br /></td></tr>
 <tr class="separator:ga75b6ec9089219da696045a2195737946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec1c771c194a8490fb94df34c0a13cda" id="r_gaec1c771c194a8490fb94df34c0a13cda"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gaec1c771c194a8490fb94df34c0a13cda">a_alloc_</a> (void *addr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size)</td></tr>
+<tr class="memdesc:gaec1c771c194a8490fb94df34c0a13cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">default allocation function  <br /></td></tr>
+<tr class="separator:gaec1c771c194a8490fb94df34c0a13cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gaaeaa06fd164bd2bf5e4f99bc333db404" id="r_gaaeaa06fd164bd2bf5e4f99bc333db404"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d91/group__A.html#gaaeaa06fd164bd2bf5e4f99bc333db404">a_alloc</a> )(void *addr, <a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a> size)</td></tr>
+<tr class="memdesc:gaaeaa06fd164bd2bf5e4f99bc333db404"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocation function pointer  <br /></td></tr>
+<tr class="separator:gaaeaa06fd164bd2bf5e4f99bc333db404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>algorithm library </p>

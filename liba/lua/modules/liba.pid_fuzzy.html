@@ -33,99 +33,99 @@
 
 <h2>Contents</h2>
 <ul>
+<li><a href="#Functions">Functions</a></li>
 <li><a href="#Tables">Tables</a></li>
-<li><a href="#Methods">Methods</a></li>
 </ul>
 
 
-<h2>Classes</h2>
-<ul class="nowrap">
-  <li><a href="../classes/a.complex.html">a.complex</a></li>
-  <li><a href="../classes/a.pid.html">a.pid</a></li>
-  <li><strong>a.pid.fuzzy</strong></li>
-  <li><a href="../classes/a.pid.neuron.html">a.pid.neuron</a></li>
-  <li><a href="../classes/a.polytraj3.html">a.polytraj3</a></li>
-  <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
-  <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
-  <li><a href="../classes/a.tf.html">a.tf</a></li>
-  <li><a href="../classes/a.version.html">a.version</a></li>
-</ul>
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/liba.html">liba</a></li>
   <li><a href="../modules/liba.complex.html">liba.complex</a></li>
   <li><a href="../modules/liba.mf.html">liba.mf</a></li>
   <li><a href="../modules/liba.pid.html">liba.pid</a></li>
-  <li><a href="../modules/liba.pid.fuzzy.html">liba.pid.fuzzy</a></li>
-  <li><a href="../modules/liba.pid.neuron.html">liba.pid.neuron</a></li>
+  <li><strong>liba.pid_fuzzy</strong></li>
+  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
   <li><a href="../modules/liba.polytraj3.html">liba.polytraj3</a></li>
   <li><a href="../modules/liba.polytraj5.html">liba.polytraj5</a></li>
   <li><a href="../modules/liba.polytraj7.html">liba.polytraj7</a></li>
   <li><a href="../modules/liba.tf.html">liba.tf</a></li>
   <li><a href="../modules/liba.version.html">liba.version</a></li>
 </ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuron.html">a.pid_neuron</a></li>
+  <li><a href="../classes/a.polytraj3.html">a.polytraj3</a></li>
+  <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
+  <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
 
 </div>
 
 <div id="content">
 
-<h1>Class <code>a.pid.fuzzy</code></h1>
+<h1>Module <code>liba.pid_fuzzy</code></h1>
 <p>fuzzy proportional integral derivative controller</p>
 <p></p>
 
 
-<h2><a href="#Tables">Tables</a></h2>
+<h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy">a.pid.fuzzy</a></td>
-	<td class="summary">fuzzy proportional integral derivative controller</td>
-	</tr>
-</table>
-<h2><a href="#Methods">Methods</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:die">a.pid.fuzzy:die ()</a></td>
+	<td class="name" nowrap><a href="#die">die (ctx)</a></td>
 	<td class="summary">destructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:new">a.pid.fuzzy:new ()</a></td>
+	<td class="name" nowrap><a href="#new">new ()</a></td>
 	<td class="summary">constructor for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:init">a.pid.fuzzy:init ()</a></td>
+	<td class="name" nowrap><a href="#init">init (ctx)</a></td>
 	<td class="summary">initialize for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:zero">a.pid.fuzzy:zero ()</a></td>
+	<td class="name" nowrap><a href="#zero">zero (ctx)</a></td>
 	<td class="summary">zeroing for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:op">a.pid.fuzzy:op (op)</a></td>
+	<td class="name" nowrap><a href="#op">op (ctx, op)</a></td>
 	<td class="summary">set fuzzy relational operator for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:rule">a.pid.fuzzy:rule (me, mec, mkp, mki, mkd)</a></td>
+	<td class="name" nowrap><a href="#rule">rule (ctx, me, mec, mkp, mki, mkd)</a></td>
 	<td class="summary">set rule base for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:set_joint">a.pid.fuzzy:set_joint (num)</a></td>
+	<td class="name" nowrap><a href="#set_joint">set_joint (ctx, num)</a></td>
 	<td class="summary">set joint buffer for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:kpid">a.pid.fuzzy:kpid (kp, ki, kd)</a></td>
+	<td class="name" nowrap><a href="#kpid">kpid (ctx, kp, ki, kd)</a></td>
 	<td class="summary">set proportional integral derivative constant for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:off">a.pid.fuzzy:off (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#off">off (ctx, set, fdb)</a></td>
 	<td class="summary">calculate for fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:pos">a.pid.fuzzy:pos (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#pos">pos (ctx, set, fdb)</a></td>
 	<td class="summary">calculate for positional fuzzy PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid.fuzzy:inc">a.pid.fuzzy:inc (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#inc">inc (ctx, set, fdb)</a></td>
 	<td class="summary">calculate for incremental fuzzy PID controller</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#op">op</a></td>
+	<td class="summary">enumeration for fuzzy relational operator</td>
 	</tr>
 </table>
 
@@ -133,54 +133,22 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
     <dt>
-    <a name = "a.pid.fuzzy"></a>
-    <strong>a.pid.fuzzy</strong>
+    <a name = "die"></a>
+    <strong>die (ctx)</strong>
     </dt>
     <dd>
-    fuzzy proportional integral derivative controller
+    destructor for fuzzy PID controller
 
 
-    <h3>Fields:</h3>
+    <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">kp</span>
-         proportional constant
-        </li>
-        <li><span class="parameter">ki</span>
-         integral constant
-        </li>
-        <li><span class="parameter">kd</span>
-         derivative constant
-        </li>
-        <li><span class="parameter">summax</span>
-         maximum integral output
-        </li>
-        <li><span class="parameter">summin</span>
-         minimum integral output
-        </li>
-        <li><span class="parameter">outmax</span>
-         maximum final output
-        </li>
-        <li><span class="parameter">outmin</span>
-         minimum final output
-        </li>
-        <li><span class="parameter">out</span>
-         controller output
-        </li>
-        <li><span class="parameter">fdb</span>
-         cache feedback
-        </li>
-        <li><span class="parameter">err</span>
-         cache error
-        </li>
-        <li><span class="parameter">order</span>
-         number of order in the square matrix
-        </li>
-        <li><span class="parameter">joint</span>
-         maximum number triggered by the rule
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
         </li>
     </ul>
 
@@ -189,27 +157,9 @@
 
 
 </dd>
-</dl>
-    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
-
-    <dl class="function">
     <dt>
-    <a name = "a.pid.fuzzy:die"></a>
-    <strong>a.pid.fuzzy:die ()</strong>
-    </dt>
-    <dd>
-    destructor for fuzzy PID controller
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "a.pid.fuzzy:new"></a>
-    <strong>a.pid.fuzzy:new ()</strong>
+    <a name = "new"></a>
+    <strong>new ()</strong>
     </dt>
     <dd>
     constructor for fuzzy PID controller
@@ -219,7 +169,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -228,18 +178,25 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:init"></a>
-    <strong>a.pid.fuzzy:init ()</strong>
+    <a name = "init"></a>
+    <strong>init (ctx)</strong>
     </dt>
     <dd>
     initialize for fuzzy PID controller
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
+    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -248,18 +205,25 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:zero"></a>
-    <strong>a.pid.fuzzy:zero ()</strong>
+    <a name = "zero"></a>
+    <strong>zero (ctx)</strong>
     </dt>
     <dd>
     zeroing for fuzzy PID controller
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
+    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -268,8 +232,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:op"></a>
-    <strong>a.pid.fuzzy:op (op)</strong>
+    <a name = "op"></a>
+    <strong>op (ctx, op)</strong>
     </dt>
     <dd>
     set fuzzy relational operator for fuzzy PID controller
@@ -277,6 +241,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">op</span>
             <span class="types"><span class="type">int</span></span>
          enumeration for fuzzy PID controller operator
@@ -286,7 +254,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -295,8 +263,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:rule"></a>
-    <strong>a.pid.fuzzy:rule (me, mec, mkp, mki, mkd)</strong>
+    <a name = "rule"></a>
+    <strong>rule (ctx, me, mec, mkp, mki, mkd)</strong>
     </dt>
     <dd>
     set rule base for fuzzy PID controller
@@ -304,6 +272,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">me</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          points to membership function parameter table, terminated by 0
@@ -329,7 +301,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -338,8 +310,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:set_joint"></a>
-    <strong>a.pid.fuzzy:set_joint (num)</strong>
+    <a name = "set_joint"></a>
+    <strong>set_joint (ctx, num)</strong>
     </dt>
     <dd>
     set joint buffer for fuzzy PID controller
@@ -347,6 +319,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">num</span>
             <span class="types"><span class="type">int</span></span>
          maximum number triggered by the rule
@@ -356,7 +332,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -365,8 +341,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:kpid"></a>
-    <strong>a.pid.fuzzy:kpid (kp, ki, kd)</strong>
+    <a name = "kpid"></a>
+    <strong>kpid (ctx, kp, ki, kd)</strong>
     </dt>
     <dd>
     set proportional integral derivative constant for fuzzy PID controller
@@ -374,6 +350,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">kp</span>
             <span class="types"><span class="type">number</span></span>
          proportional constant
@@ -391,7 +371,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.fuzzy.html#">a.pid.fuzzy</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
         fuzzy PID controller userdata
     </ol>
 
@@ -400,8 +380,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:off"></a>
-    <strong>a.pid.fuzzy:off (set, fdb)</strong>
+    <a name = "off"></a>
+    <strong>off (ctx, set, fdb)</strong>
     </dt>
     <dd>
     calculate for fuzzy PID controller
@@ -409,6 +389,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
          setpoint value
@@ -431,8 +415,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:pos"></a>
-    <strong>a.pid.fuzzy:pos (set, fdb)</strong>
+    <a name = "pos"></a>
+    <strong>pos (ctx, set, fdb)</strong>
     </dt>
     <dd>
     calculate for positional fuzzy PID controller
@@ -440,6 +424,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
          setpoint value
@@ -462,8 +450,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid.fuzzy:inc"></a>
-    <strong>a.pid.fuzzy:inc (set, fdb)</strong>
+    <a name = "inc"></a>
+    <strong>inc (ctx, set, fdb)</strong>
     </dt>
     <dd>
     calculate for incremental fuzzy PID controller
@@ -471,6 +459,10 @@
 
     <h3>Parameters:</h3>
     <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_fuzzy</a></span>
+         fuzzy PID controller userdata
+        </li>
         <li><span class="parameter">set</span>
             <span class="types"><span class="type">number</span></span>
          setpoint value
@@ -493,13 +485,55 @@
 
 </dd>
 </dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "op"></a>
+    <strong>op</strong>
+    </dt>
+    <dd>
+    enumeration for fuzzy relational operator
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">CAP</span>
+                 min(a,b)
+        </li>
+        <li><span class="parameter">CAP_ALGEBRA</span>
+         a*b
+        </li>
+        <li><span class="parameter">CAP_BOUNDED</span>
+         max(a+b-1,0)
+        </li>
+        <li><span class="parameter">CUP</span>
+                 max(a,b)
+        </li>
+        <li><span class="parameter">CUP_ALGEBRA</span>
+         a+b-a*b
+        </li>
+        <li><span class="parameter">CUP_BOUNDED</span>
+         min(a+b,1)
+        </li>
+        <li><span class="parameter">EQU</span>
+                 sqrt(a,b)*sqrt(1-(1-a)*(1-b))
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-11-30 15:07:57 </i>
+<i style="float:right;">Last updated 2023-12-02 13:29:51 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

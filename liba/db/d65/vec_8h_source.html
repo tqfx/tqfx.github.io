@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>liba: host/vec.h Source File</title>
+<title>liba: vec.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -62,6 +62,7 @@ $(function() {
 $(document).ready(function() { init_codefold(1); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,20 +84,15 @@ $(document).ready(function() { init_codefold(1); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_4f7e4242e27b8c8b476722507617a881.html">host</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">vec.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="../../db/d65/vec_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LIBA_HOST_VEC_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LIBA_HOST_VEC_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LIBA_VEC_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LIBA_VEC_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d97/host_2a_8h.html">a.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d62/a_8h.html">a.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d0/d10/structa__vec__s.html">   20</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d10/structa__vec__s.html">a_vec_s</a></div>
@@ -244,7 +240,8 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="preprocessor">#define a_vec_push(T, ctx) a_cast_s(T *, a_vec_push(ctx))</span></div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span><span class="preprocessor">#define a_vec_pull(T, ctx) a_cast_s(T *, a_vec_pull(ctx))</span></div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="preprocessor">#endif </span><span class="comment">/* a/host/vec.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="preprocessor">#endif </span><span class="comment">/* a/vec.h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aa_8h_html"><div class="ttname"><a href="../../d2/d62/a_8h.html">a.h</a></div><div class="ttdoc">algorithm library</div></div>
 <div class="ttc" id="agroup__A__VEC_html_ga0aeec48c89150051a02b346ee04c15b8"><div class="ttname"><a href="../../da/d05/group__A__VEC.html#ga0aeec48c89150051a02b346ee04c15b8">a_vec_sort_fore</a></div><div class="ttdeci">void a_vec_sort_fore(a_vec_s const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to vector structure</div></div>
 <div class="ttc" id="agroup__A__VEC_html_ga0f7156e09bd36522b43ad3e09371a4ef"><div class="ttname"><a href="../../da/d05/group__A__VEC.html#ga0f7156e09bd36522b43ad3e09371a4ef">a_vec_move</a></div><div class="ttdeci">void a_vec_move(a_vec_s *ctx, a_vec_s *obj)</div><div class="ttdoc">initialize a pointer to vector structure by moving</div></div>
 <div class="ttc" id="agroup__A__VEC_html_ga107d092b5ce06b03055ac622caccaf45"><div class="ttname"><a href="../../da/d05/group__A__VEC.html#ga107d092b5ce06b03055ac622caccaf45">a_vec_new</a></div><div class="ttdeci">a_vec_s * a_vec_new(a_size_t size)</div><div class="ttdoc">allocate a pointer to vector structure from memory</div></div>
@@ -265,7 +262,6 @@ $(document).ready(function() { init_codefold(1); });
 <div class="ttc" id="agroup__A_html_ga2e2ed26b70fea686816ab45e6a8b86d2"><div class="ttname"><a href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a></div><div class="ttdeci">#define a_size_t</div><div class="ttdef"><b>Definition</b> a.h:612</div></div>
 <div class="ttc" id="agroup__A_html_ga6dd2d2e04a3fc55cb72a6bb3bbb145ee"><div class="ttname"><a href="../../df/d91/group__A.html#ga6dd2d2e04a3fc55cb72a6bb3bbb145ee">a_diff_t</a></div><div class="ttdeci">#define a_diff_t</div><div class="ttdef"><b>Definition</b> a.h:601</div></div>
 <div class="ttc" id="agroup__A_html_ga8687569d510fb6d4fe15912021571eac"><div class="ttname"><a href="../../df/d91/group__A.html#ga8687569d510fb6d4fe15912021571eac">a_byte_c</a></div><div class="ttdeci">#define a_byte_c(_, x)</div><div class="ttdef"><b>Definition</b> a.h:397</div></div>
-<div class="ttc" id="ahost_2a_8h_html"><div class="ttname"><a href="../../d0/d97/host_2a_8h.html">a.h</a></div><div class="ttdoc">algorithm library on host</div></div>
 <div class="ttc" id="astructa__vec__s_html"><div class="ttname"><a href="../../d0/d10/structa__vec__s.html">a_vec_s</a></div><div class="ttdoc">instance structure for basic vector</div><div class="ttdef"><b>Definition</b> vec.h:21</div></div>
 <div class="ttc" id="astructa__vec__s_html_a2be753b4333b2bb354f78eddc3fed016"><div class="ttname"><a href="../../d0/d10/structa__vec__s.html#a2be753b4333b2bb354f78eddc3fed016">a_vec_s::_ptr</a></div><div class="ttdeci">void * _ptr</div><div class="ttdef"><b>Definition</b> vec.h:22</div></div>
 <div class="ttc" id="astructa__vec__s_html_a38fc72b2e219fb244443134fa0907e99"><div class="ttname"><a href="../../d0/d10/structa__vec__s.html#a38fc72b2e219fb244443134fa0907e99">a_vec_s::_num</a></div><div class="ttdeci">a_size_t _num</div><div class="ttdef"><b>Definition</b> vec.h:23</div></div>

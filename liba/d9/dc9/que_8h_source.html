@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>liba: host/que.h Source File</title>
+<title>liba: que.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -62,6 +62,7 @@ $(function() {
 $(document).ready(function() { init_codefold(1); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,21 +84,16 @@ $(document).ready(function() { init_codefold(1); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_4f7e4242e27b8c8b476722507617a881.html">host</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">que.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="../../d9/dc9/que_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LIBA_HOST_QUE_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LIBA_HOST_QUE_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LIBA_QUE_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LIBA_QUE_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d97/host_2a_8h.html">a.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../list.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d62/a_8h.html">a.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/d23/list_8h.html">list.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d0/d01/structa__que__node__s.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d01/structa__que__node__s.html">a_que_node_s</a></div>
@@ -229,7 +225,8 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">#define a_que_insert(T, ctx, idx) a_cast_s(T *, a_que_insert(ctx, idx))</span></div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#define a_que_remove(T, ctx, idx) a_cast_s(T *, a_que_remove(ctx, idx))</span></div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#endif </span><span class="comment">/* a/host/que.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#endif </span><span class="comment">/* a/que.h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aa_8h_html"><div class="ttname"><a href="../../d2/d62/a_8h.html">a.h</a></div><div class="ttdoc">algorithm library</div></div>
 <div class="ttc" id="agroup__A__QUE_html_ga0092b71a69cd6611587808c6dd311740"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#ga0092b71a69cd6611587808c6dd311740">a_que_edit</a></div><div class="ttdeci">void a_que_edit(a_que_s *ctx, a_size_t size, void(*dtor)(void *))</div><div class="ttdoc">edit size of a element for a pointer to queue structure</div></div>
 <div class="ttc" id="agroup__A__QUE_html_ga02827d46ecba21177f4d388b4aa10642"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#ga02827d46ecba21177f4d388b4aa10642">a_que_num</a></div><div class="ttdeci">a_size_t a_que_num(a_que_s const *const ctx)</div><div class="ttdoc">access number of element for a pointer to queue structure</div><div class="ttdef"><b>Definition</b> que.h:58</div></div>
 <div class="ttc" id="agroup__A__QUE_html_ga05c1197aa446a47d80630655965fc529"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#ga05c1197aa446a47d80630655965fc529">a_que_drop</a></div><div class="ttdeci">void a_que_drop(a_que_s *ctx, void(*dtor)(void *))</div><div class="ttdoc">drop all the elements for a pointer to queue structure</div></div>
@@ -246,7 +243,7 @@ $(document).ready(function() { init_codefold(1); });
 <div class="ttc" id="agroup__A__QUE_html_gaff0a148cd495acf207a174a0138e96ff"><div class="ttname"><a href="../../df/d54/group__A__QUE.html#gaff0a148cd495acf207a174a0138e96ff">a_que_die</a></div><div class="ttdeci">void a_que_die(a_que_s *ctx, void(*dtor)(void *))</div><div class="ttdoc">deallocate a pointer to queue structure</div></div>
 <div class="ttc" id="agroup__A_html_ga2e2ed26b70fea686816ab45e6a8b86d2"><div class="ttname"><a href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a></div><div class="ttdeci">#define a_size_t</div><div class="ttdef"><b>Definition</b> a.h:612</div></div>
 <div class="ttc" id="agroup__A_html_ga6c749eb4cf5f90cc40ced4c9c981f2b5"><div class="ttname"><a href="../../df/d91/group__A.html#ga6c749eb4cf5f90cc40ced4c9c981f2b5">a_imax_t</a></div><div class="ttdeci">#define a_imax_t</div><div class="ttdef"><b>Definition</b> a.h:548</div></div>
-<div class="ttc" id="ahost_2a_8h_html"><div class="ttname"><a href="../../d0/d97/host_2a_8h.html">a.h</a></div><div class="ttdoc">algorithm library on host</div></div>
+<div class="ttc" id="alist_8h_html"><div class="ttname"><a href="../../da/d23/list_8h.html">list.h</a></div><div class="ttdoc">circular doubly linked list implementation</div></div>
 <div class="ttc" id="astructa__list__s_html"><div class="ttname"><a href="../../d7/d8e/structa__list__s.html">a_list_s</a></div><div class="ttdoc">instance structure for circular doubly linked list</div><div class="ttdef"><b>Definition</b> list.h:25</div></div>
 <div class="ttc" id="astructa__que__node__s_html"><div class="ttname"><a href="../../d0/d01/structa__que__node__s.html">a_que_node_s</a></div><div class="ttdoc">instance structure for basic queue node</div><div class="ttdef"><b>Definition</b> que.h:22</div></div>
 <div class="ttc" id="astructa__que__node__s_html_adee8405c01d17f475ffb5debec5f3604"><div class="ttname"><a href="../../d0/d01/structa__que__node__s.html#adee8405c01d17f475ffb5debec5f3604">a_que_node_s::_node</a></div><div class="ttdeci">a_list_s _node</div><div class="ttdef"><b>Definition</b> que.h:23</div></div>
