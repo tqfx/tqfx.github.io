@@ -9,7 +9,7 @@ var searchData=
   ['a_5flist_5fs_6',['a_list_s',['../d7/d8e/structa__list__s.html',1,'']]],
   ['a_5flpf_5fs_7',['a_lpf_s',['../db/d63/structa__lpf__s.html',1,'']]],
   ['a_5fpid_5ffuzzy_5fs_8',['a_pid_fuzzy_s',['../d5/d1d/structa__pid__fuzzy__s.html',1,'']]],
-  ['a_5fpid_5fneuron_5fs_9',['a_pid_neuron_s',['../d9/dfe/structa__pid__neuron__s.html',1,'']]],
+  ['a_5fpid_5fneuro_5fs_9',['a_pid_neuro_s',['../d5/de9/structa__pid__neuro__s.html',1,'']]],
   ['a_5fpid_5fs_10',['a_pid_s',['../de/def/structa__pid__s.html',1,'']]],
   ['a_5fpolytraj3_5fs_11',['a_polytraj3_s',['../d1/d82/structa__polytraj3__s.html',1,'']]],
   ['a_5fpolytraj5_5fs_12',['a_polytraj5_s',['../da/dfc/structa__polytraj5__s.html',1,'']]],

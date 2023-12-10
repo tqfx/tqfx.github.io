@@ -43,7 +43,7 @@
   <li><a href="../classes/a.complex.html">a.complex</a></li>
   <li><a href="../classes/a.pid.html">a.pid</a></li>
   <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
-  <li><strong>a.pid_neuron</strong></li>
+  <li><strong>a.pid_neuro</strong></li>
   <li><a href="../classes/a.polytraj3.html">a.polytraj3</a></li>
   <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
   <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
@@ -57,7 +57,7 @@
   <li><a href="../modules/liba.mf.html">liba.mf</a></li>
   <li><a href="../modules/liba.pid.html">liba.pid</a></li>
   <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
-  <li><a href="../modules/liba.pid_neuron.html">liba.pid_neuron</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
   <li><a href="../modules/liba.polytraj3.html">liba.polytraj3</a></li>
   <li><a href="../modules/liba.polytraj5.html">liba.polytraj5</a></li>
   <li><a href="../modules/liba.polytraj7.html">liba.polytraj7</a></li>
@@ -69,7 +69,7 @@
 
 <div id="content">
 
-<h1>Class <code>a.pid_neuron</code></h1>
+<h1>Class <code>a.pid_neuro</code></h1>
 <p>single neuron proportional integral derivative controller</p>
 <p></p>
 
@@ -77,38 +77,38 @@
 <h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron">a.pid_neuron</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro">a.pid_neuro</a></td>
 	<td class="summary">single neuron proportional integral derivative controller</td>
 	</tr>
 </table>
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:new">a.pid_neuron:new ()</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:new">a.pid_neuro:new ()</a></td>
 	<td class="summary">constructor for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:init">a.pid_neuron:init ()</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:init">a.pid_neuro:init ()</a></td>
 	<td class="summary">initialize for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:zero">a.pid_neuron:zero ()</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:zero">a.pid_neuro:zero ()</a></td>
 	<td class="summary">zeroing for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:kpid">a.pid_neuron:kpid (k, kp, ki, kd)</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:kpid">a.pid_neuro:kpid (k, kp, ki, kd)</a></td>
 	<td class="summary">set proportional integral derivative constant for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:wpid">a.pid_neuron:wpid (wp, wi, wd)</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:wpid">a.pid_neuro:wpid (wp, wi, wd)</a></td>
 	<td class="summary">set proportional integral derivative weight for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:off">a.pid_neuron:off (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:run">a.pid_neuro:run (set, fdb)</a></td>
 	<td class="summary">calculate for single neuron PID controller</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.pid_neuron:inc">a.pid_neuron:inc (set, fdb)</a></td>
+	<td class="name" nowrap><a href="#a.pid_neuro:inc">a.pid_neuro:inc (set, fdb)</a></td>
 	<td class="summary">calculate for incremental single neuron PID controller</td>
 	</tr>
 </table>
@@ -121,8 +121,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "a.pid_neuron"></a>
-    <strong>a.pid_neuron</strong>
+    <a name = "a.pid_neuro"></a>
+    <strong>a.pid_neuro</strong>
     </dt>
     <dd>
     single neuron proportional integral derivative controller
@@ -181,8 +181,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "a.pid_neuron:new"></a>
-    <strong>a.pid_neuron:new ()</strong>
+    <a name = "a.pid_neuro:new"></a>
+    <strong>a.pid_neuro:new ()</strong>
     </dt>
     <dd>
     constructor for single neuron PID controller
@@ -192,7 +192,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuron</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuro</a></span>
         single neuron PID controller userdata
     </ol>
 
@@ -201,8 +201,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:init"></a>
-    <strong>a.pid_neuron:init ()</strong>
+    <a name = "a.pid_neuro:init"></a>
+    <strong>a.pid_neuro:init ()</strong>
     </dt>
     <dd>
     initialize for single neuron PID controller
@@ -212,7 +212,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuron</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuro</a></span>
         single neuron PID controller userdata
     </ol>
 
@@ -221,8 +221,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:zero"></a>
-    <strong>a.pid_neuron:zero ()</strong>
+    <a name = "a.pid_neuro:zero"></a>
+    <strong>a.pid_neuro:zero ()</strong>
     </dt>
     <dd>
     zeroing for single neuron PID controller
@@ -232,7 +232,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuron</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuro</a></span>
         single neuron PID controller userdata
     </ol>
 
@@ -241,8 +241,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:kpid"></a>
-    <strong>a.pid_neuron:kpid (k, kp, ki, kd)</strong>
+    <a name = "a.pid_neuro:kpid"></a>
+    <strong>a.pid_neuro:kpid (k, kp, ki, kd)</strong>
     </dt>
     <dd>
     set proportional integral derivative constant for single neuron PID controller
@@ -271,7 +271,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuron</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuro</a></span>
         single neuron PID controller userdata
     </ol>
 
@@ -280,8 +280,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:wpid"></a>
-    <strong>a.pid_neuron:wpid (wp, wi, wd)</strong>
+    <a name = "a.pid_neuro:wpid"></a>
+    <strong>a.pid_neuro:wpid (wp, wi, wd)</strong>
     </dt>
     <dd>
     set proportional integral derivative weight for single neuron PID controller
@@ -306,7 +306,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuron</a></span>
+           <span class="types"><a class="type" href="../classes/a.pid.html#">a.pid_neuro</a></span>
         single neuron PID controller userdata
     </ol>
 
@@ -315,8 +315,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:off"></a>
-    <strong>a.pid_neuron:off (set, fdb)</strong>
+    <a name = "a.pid_neuro:run"></a>
+    <strong>a.pid_neuro:run (set, fdb)</strong>
     </dt>
     <dd>
     calculate for single neuron PID controller
@@ -346,8 +346,8 @@
 
 </dd>
     <dt>
-    <a name = "a.pid_neuron:inc"></a>
-    <strong>a.pid_neuron:inc (set, fdb)</strong>
+    <a name = "a.pid_neuro:inc"></a>
+    <strong>a.pid_neuro:inc (set, fdb)</strong>
     </dt>
     <dd>
     calculate for incremental single neuron PID controller
@@ -383,7 +383,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2023-12-10 01:24:30 </i>
+<i style="float:right;">Last updated 2023-12-10 13:38:27 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

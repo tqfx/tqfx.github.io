@@ -113,7 +113,7 @@ typedef struct <a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga37fb84f61d1cda75b2e618b527c38a7b" id="r_ga37fb84f61d1cda75b2e618b527c38a7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga37fb84f61d1cda75b2e618b527c38a7b">a_pid_e</a> { <a class="el" href="../../d8/da8/group__A__PID.html#gga37fb84f61d1cda75b2e618b527c38a7ba9daccebdccffa55062e0bff722d40c60">A_PID_OFF</a>
+<tr class="memitem:ga37fb84f61d1cda75b2e618b527c38a7b" id="r_ga37fb84f61d1cda75b2e618b527c38a7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga37fb84f61d1cda75b2e618b527c38a7b">a_pid_e</a> { <a class="el" href="../../d8/da8/group__A__PID.html#gga37fb84f61d1cda75b2e618b527c38a7baa60058e3b81dd2757a5634f1a9d0c424">A_PID_RUN</a>
 , <a class="el" href="../../d8/da8/group__A__PID.html#gga37fb84f61d1cda75b2e618b527c38a7bae1ed88399dc91f8eb9289c3937743bb9">A_PID_POS</a>
 , <a class="el" href="../../d8/da8/group__A__PID.html#gga37fb84f61d1cda75b2e618b527c38a7bae19640be20c97ea5456fce7041e518fc">A_PID_INC</a>
  }</td></tr>
@@ -131,9 +131,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4b992b9ad1d6762132996b8654d5060a" id="r_ga4b992b9ad1d6762132996b8654d5060a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga4b992b9ad1d6762132996b8654d5060a">a_pid_kpid</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, double kp, double ki, double kd)</td></tr>
 <tr class="memdesc:ga4b992b9ad1d6762132996b8654d5060a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <br /></td></tr>
 <tr class="separator:ga4b992b9ad1d6762132996b8654d5060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf0ce9acdbcb1ea8a3131cefe38df64b1" id="r_gaf0ce9acdbcb1ea8a3131cefe38df64b1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gaf0ce9acdbcb1ea8a3131cefe38df64b1">a_pid_off</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, double set, double fdb)</td></tr>
-<tr class="memdesc:gaf0ce9acdbcb1ea8a3131cefe38df64b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for PID controller  <br /></td></tr>
-<tr class="separator:gaf0ce9acdbcb1ea8a3131cefe38df64b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97dab4580c34b53d3b591e1dbf404b34" id="r_ga97dab4580c34b53d3b591e1dbf404b34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#ga97dab4580c34b53d3b591e1dbf404b34">a_pid_run</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, double set, double fdb)</td></tr>
+<tr class="memdesc:ga97dab4580c34b53d3b591e1dbf404b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for PID controller  <br /></td></tr>
+<tr class="separator:ga97dab4580c34b53d3b591e1dbf404b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab64cbd8346c4f0ce4148b97e49fa5ee4" id="r_gab64cbd8346c4f0ce4148b97e49fa5ee4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/group__A__PID.html#gab64cbd8346c4f0ce4148b97e49fa5ee4">a_pid_pos</a> (<a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *ctx, double set, double fdb)</td></tr>
 <tr class="memdesc:gab64cbd8346c4f0ce4148b97e49fa5ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for positional PID controller  <br /></td></tr>
 <tr class="separator:gab64cbd8346c4f0ce4148b97e49fa5ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +157,7 @@ Functions</h2></td></tr>
 
 <p>enumeration for PID controller </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga37fb84f61d1cda75b2e618b527c38a7ba9daccebdccffa55062e0bff722d40c60" name="gga37fb84f61d1cda75b2e618b527c38a7ba9daccebdccffa55062e0bff722d40c60"></a>A_PID_OFF&#160;</td><td class="fielddoc"><p>turn off PID controller </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga37fb84f61d1cda75b2e618b527c38a7baa60058e3b81dd2757a5634f1a9d0c424" name="gga37fb84f61d1cda75b2e618b527c38a7baa60058e3b81dd2757a5634f1a9d0c424"></a>A_PID_RUN&#160;</td><td class="fielddoc"><p>run and output setpoint </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga37fb84f61d1cda75b2e618b527c38a7bae1ed88399dc91f8eb9289c3937743bb9" name="gga37fb84f61d1cda75b2e618b527c38a7bae1ed88399dc91f8eb9289c3937743bb9"></a>A_PID_POS&#160;</td><td class="fielddoc"><p>positional PID controller </p>
 </td></tr>
@@ -290,51 +290,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf0ce9acdbcb1ea8a3131cefe38df64b1" name="gaf0ce9acdbcb1ea8a3131cefe38df64b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf0ce9acdbcb1ea8a3131cefe38df64b1">&#9670;&#160;</a></span>a_pid_off()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double a_pid_off </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>set</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>fdb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>calculate for PID controller </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">set</td><td>setpoint value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fdb</td><td>feedback value </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>setpoint value </dd></dl>
-
-</div>
-</div>
 <a id="gab64cbd8346c4f0ce4148b97e49fa5ee4" name="gab64cbd8346c4f0ce4148b97e49fa5ee4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab64cbd8346c4f0ce4148b97e49fa5ee4">&#9670;&#160;</a></span>a_pid_pos()</h2>
 
@@ -377,6 +332,51 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>output value </dd></dl>
+
+</div>
+</div>
+<a id="ga97dab4580c34b53d3b591e1dbf404b34" name="ga97dab4580c34b53d3b591e1dbf404b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97dab4580c34b53d3b591e1dbf404b34">&#9670;&#160;</a></span>a_pid_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double a_pid_run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/def/structa__pid__s.html">a_pid_s</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fdb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate for PID controller </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">set</td><td>setpoint value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fdb</td><td>feedback value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>setpoint value </dd></dl>
 
 </div>
 </div>

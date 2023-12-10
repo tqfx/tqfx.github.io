@@ -11,7 +11,7 @@ var searchData=
   ['a_5fpid_5fe_8',['a_pid_e',['../d8/da8/group__A__PID.html#ga3552713db4e5e0db621e46f3288457e9',1,'pid.h']]],
   ['a_5fpid_5ffuzzy_5fe_9',['a_pid_fuzzy_e',['../dc/db1/group__A__PID__FUZZY.html#gae45b906519f72babaf23cb2039848061',1,'pid_fuzzy.h']]],
   ['a_5fpid_5ffuzzy_5fs_10',['a_pid_fuzzy_s',['../dc/db1/group__A__PID__FUZZY.html#gaf260011ff0c9dd6962377a79f8acf3bf',1,'pid_fuzzy.h']]],
-  ['a_5fpid_5fneuron_5fs_11',['a_pid_neuron_s',['../df/df3/group__A__PID__NEURON.html#gaf8e90c2d4558059b3162e3fb251e2cad',1,'pid_neuron.h']]],
+  ['a_5fpid_5fneuro_5fs_11',['a_pid_neuro_s',['../df/df3/group__A__PID__NEURON.html#ga06b90e7a17d263ac069f45008032fff7',1,'pid_neuro.h']]],
   ['a_5fpid_5fs_12',['a_pid_s',['../d8/da8/group__A__PID.html#ga7bf6403bbba03a7b5430bc4baa94b29f',1,'pid.h']]],
   ['a_5fpolytraj3_5fs_13',['a_polytraj3_s',['../d4/d5e/group__A__POLYTRAJ3.html#gaa149f3a5a8ad4fa43ba5ae15bcf84b9b',1,'polytraj3.h']]],
   ['a_5fpolytraj5_5fs_14',['a_polytraj5_s',['../d5/d8e/group__A__POLYTRAJ5.html#gabf2491cedf6524ca25e923ab090f17b2',1,'polytraj5.h']]],

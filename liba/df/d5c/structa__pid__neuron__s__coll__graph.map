@@ -1,5 +1,0 @@
-<map id="a_pid_neuron_s" name="a_pid_neuron_s">
-<area shape="rect" id="Node000001" title="instance structure for single neuron PID controller" alt="" coords="5,93,128,119"/>
-<area shape="rect" id="Node000002" href="$de/def/structa__pid__s.html" title="instance structure for PID controller" alt="" coords="31,5,102,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,45,69,93,64,93,64,45"/>
-</map>

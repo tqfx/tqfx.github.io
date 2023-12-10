@@ -446,8 +446,8 @@
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
 <span class="kw">use </span><span class="kw">crate</span>::uint;
 
-<span class="doccomment">/// turn off PID controller
-</span><span class="kw">pub const </span>OFF: uint = <span class="number">0</span>;
+<span class="doccomment">/// run and output setpoint
+</span><span class="kw">pub const </span>RUN: uint = <span class="number">0</span>;
 <span class="doccomment">/// positional PID controller
 </span><span class="kw">pub const </span>POS: uint = <span class="number">1</span>;
 <span class="doccomment">/// incremental PID controller
@@ -503,7 +503,7 @@
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_off(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_run(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_zero(ctx: <span class="kw-2">*mut </span>pid);
@@ -520,8 +520,8 @@
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for PID controller
-    </span><span class="kw">pub fn </span>off(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_pid_off(<span class="self">self</span>, set, fdb) }
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_pid_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for positional PID controller
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
@@ -636,7 +636,7 @@
     <span class="kw">fn </span>a_pid_fuzzy_joint(ctx: <span class="kw-2">*mut </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
     <span class="kw">fn </span>a_pid_fuzzy_set_joint(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
     <span class="kw">fn </span>a_pid_fuzzy_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_fuzzy_off(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_fuzzy_run(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_pos(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_inc(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_zero(ctx: <span class="kw-2">*mut </span>pid_fuzzy);
@@ -695,8 +695,8 @@
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for fuzzy PID controller
-    </span><span class="kw">pub fn </span>off(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_off(<span class="self">self</span>, set, fdb) }
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for positional fuzzy PID controller
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
@@ -810,7 +810,7 @@
 
 <span class="doccomment">/// single neuron proportional integral derivative controller
 </span><span class="attr">#[repr(C)]
-</span><span class="kw">pub struct </span>pid_neuron {
+</span><span class="kw">pub struct </span>pid_neuro {
     <span class="doccomment">/// proportional integral derivative controller
     </span><span class="kw">pub </span>pid: <span class="kw">crate</span>::pid::pid,
     <span class="doccomment">/// proportional coefficient
@@ -825,7 +825,7 @@
     </span><span class="kw">pub </span>ec: float,
 }
 
-<span class="kw">impl </span>Default <span class="kw">for </span>pid_neuron {
+<span class="kw">impl </span>Default <span class="kw">for </span>pid_neuro {
     <span class="kw">fn </span>default() -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             pid: pid::default(),
@@ -839,47 +839,47 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_pid_neuron_kpid(ctx: <span class="kw-2">*mut </span>pid_neuron, k: float, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_neuron_wpid(ctx: <span class="kw-2">*mut </span>pid_neuron, wp: float, wi: float, wd: float);
-    <span class="kw">fn </span>a_pid_neuron_off(ctx: <span class="kw-2">*mut </span>pid_neuron, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_neuron_inc(ctx: <span class="kw-2">*mut </span>pid_neuron, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_neuron_zero(ctx: <span class="kw-2">*mut </span>pid_neuron);
+    <span class="kw">fn </span>a_pid_neuro_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: float, kp: float, ki: float, kd: float);
+    <span class="kw">fn </span>a_pid_neuro_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: float, wi: float, wd: float);
+    <span class="kw">fn </span>a_pid_neuro_run(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_neuro_inc(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_neuro_zero(ctx: <span class="kw-2">*mut </span>pid_neuro);
 }
 
-<span class="kw">impl </span>pid_neuron {
+<span class="kw">impl </span>pid_neuro {
     <span class="doccomment">/// initialize for single neuron PID controller
     </span><span class="kw">pub fn </span>new() -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{ ..<span class="self">Self</span>::default() }
     }
     <span class="doccomment">/// set proportional integral derivative constant for single neuron PID controller
     </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, k: float, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_neuron_kpid(<span class="self">self</span>, k, kp, ki, kd) };
+        <span class="kw">unsafe </span>{ a_pid_neuro_kpid(<span class="self">self</span>, k, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// set proportional integral derivative weight for single neuron PID controller
     </span><span class="kw">pub fn </span>wpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, wp: float, wi: float, wd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_neuron_wpid(<span class="self">self</span>, wp, wi, wd) };
+        <span class="kw">unsafe </span>{ a_pid_neuro_wpid(<span class="self">self</span>, wp, wi, wd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for single neuron PID controller
-    </span><span class="kw">pub fn </span>off(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_pid_neuron_off(<span class="self">self</span>, set, fdb) }
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_pid_neuro_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for incremental single neuron PID controller
     </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_pid_neuron_inc(<span class="self">self</span>, set, fdb) }
+        <span class="kw">unsafe </span>{ a_pid_neuro_inc(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// zeroing for single neuron PID controller
     </span><span class="kw">pub fn </span>zero(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_neuron_zero(<span class="self">self</span>) };
+        <span class="kw">unsafe </span>{ a_pid_neuro_zero(<span class="self">self</span>) };
         <span class="self">self
     </span>}
 }
 
 <span class="attr">#[test]
-</span><span class="kw">fn </span>pid_neuron() {
+</span><span class="kw">fn </span>pid_neuro() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::pid::pid_neuron::new();
+    <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::pid::pid_neuro::new();
     a.kpid(<span class="number">10.0</span>, <span class="number">1.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>).wpid(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);
     <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.zero();

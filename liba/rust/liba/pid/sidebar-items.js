@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"constant":["INC","OFF","POS"],"mod":["fuzzy"],"struct":["pid","pid_fuzzy","pid_neuron"]};
+window.SIDEBAR_ITEMS = {"constant":["INC","POS","RUN"],"mod":["fuzzy"],"struct":["pid","pid_fuzzy","pid_neuro"]};
