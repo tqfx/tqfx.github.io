@@ -1,4 +1,4 @@
 <map id="a_rbt_s" name="a_rbt_s">
-<area shape="rect" id="Node000001" title="instance structure for red–black binary search tree node" alt="" coords="5,15,75,40"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="90,21,101,27,92,33,75,34,75,29,91,28,96,27,88,26"/>
+<area shape="rect" id="Node000001" title="instance structure for red–black binary search tree node" alt="" coords="5,7,75,33"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="90,14,101,20,92,26,75,27,75,22,91,21,96,20,88,19"/>
 </map>

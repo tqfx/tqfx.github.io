@@ -83,6 +83,23 @@
 <a href="#83" id="83">83</a>
 <a href="#84" id="84">84</a>
 <a href="#85" id="85">85</a>
+<a href="#86" id="86">86</a>
+<a href="#87" id="87">87</a>
+<a href="#88" id="88">88</a>
+<a href="#89" id="89">89</a>
+<a href="#90" id="90">90</a>
+<a href="#91" id="91">91</a>
+<a href="#92" id="92">92</a>
+<a href="#93" id="93">93</a>
+<a href="#94" id="94">94</a>
+<a href="#95" id="95">95</a>
+<a href="#96" id="96">96</a>
+<a href="#97" id="97">97</a>
+<a href="#98" id="98">98</a>
+<a href="#99" id="99">99</a>
+<a href="#100" id="100">100</a>
+<a href="#101" id="101">101</a>
+<a href="#102" id="102">102</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++ language
 
@@ -141,16 +158,28 @@ println!(&quot;version {}&quot;, liba::version());
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+    <span class="kw">fn </span>a_u32_sqrt(x: u32) -&gt; u16;
+    <span class="kw">fn </span>a_u64_sqrt(x: u64) -&gt; u32;
     <span class="kw">fn </span>a_f32_rsqrt(x: f32) -&gt; f32;
     <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
 }
 
-<span class="doccomment">/// fast inverse square-root, $ \frac{1}{\sqrt{x}} $
+<span class="doccomment">/// square root of an unsigned integer
+</span><span class="kw">pub fn </span>u32_sqrt(x: u32) -&gt; u16 {
+    <span class="kw">unsafe </span>{ a_u32_sqrt(x) }
+}
+
+<span class="doccomment">/// square root of an unsigned integer
+</span><span class="kw">pub fn </span>u64_sqrt(x: u64) -&gt; u32 {
+    <span class="kw">unsafe </span>{ a_u64_sqrt(x) }
+}
+
+<span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
 </span><span class="kw">pub fn </span>f32_rsqrt(x: f32) -&gt; f32 {
     <span class="kw">unsafe </span>{ a_f32_rsqrt(x) }
 }
 
-<span class="doccomment">/// fast inverse square-root, $ \frac{1}{\sqrt{x}} $
+<span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
 </span><span class="kw">pub fn </span>f64_rsqrt(x: f64) -&gt; f64 {
     <span class="kw">unsafe </span>{ a_f64_rsqrt(x) }
 }
@@ -161,6 +190,11 @@ println!(&quot;version {}&quot;, liba::version());
     <span class="attr">#[test]
     </span><span class="kw">fn </span>version() {
         <span class="macro">std::println!</span>(<span class="string">&quot;version {}&quot;</span>, <span class="kw">crate</span>::version());
+    }
+    <span class="attr">#[test]
+    </span><span class="kw">fn </span>isqrt() {
+        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::u32_sqrt(u32::MAX));
+        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::u64_sqrt(u64::MAX));
     }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>rsqrt() {

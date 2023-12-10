@@ -13,9 +13,9 @@ var searchData=
   ['a_5fpid_5ffuzzy_5fs_10',['a_pid_fuzzy_s',['../dc/db1/group__A__PID__FUZZY.html#gaf260011ff0c9dd6962377a79f8acf3bf',1,'pid_fuzzy.h']]],
   ['a_5fpid_5fneuron_5fs_11',['a_pid_neuron_s',['../df/df3/group__A__PID__NEURON.html#gaf8e90c2d4558059b3162e3fb251e2cad',1,'pid_neuron.h']]],
   ['a_5fpid_5fs_12',['a_pid_s',['../d8/da8/group__A__PID.html#ga7bf6403bbba03a7b5430bc4baa94b29f',1,'pid.h']]],
-  ['a_5fpolytraj3_5fs_13',['a_polytraj3_s',['../d7/d17/group__A__POLYTRAJ.html#gaa149f3a5a8ad4fa43ba5ae15bcf84b9b',1,'polytraj.h']]],
-  ['a_5fpolytraj5_5fs_14',['a_polytraj5_s',['../d7/d17/group__A__POLYTRAJ.html#gabf2491cedf6524ca25e923ab090f17b2',1,'polytraj.h']]],
-  ['a_5fpolytraj7_5fs_15',['a_polytraj7_s',['../d7/d17/group__A__POLYTRAJ.html#ga7e956e54dbb7d72ea95aefa7098f4d92',1,'polytraj.h']]],
+  ['a_5fpolytraj3_5fs_13',['a_polytraj3_s',['../d4/d5e/group__A__POLYTRAJ3.html#gaa149f3a5a8ad4fa43ba5ae15bcf84b9b',1,'polytraj3.h']]],
+  ['a_5fpolytraj5_5fs_14',['a_polytraj5_s',['../d5/d8e/group__A__POLYTRAJ5.html#gabf2491cedf6524ca25e923ab090f17b2',1,'polytraj5.h']]],
+  ['a_5fpolytraj7_5fs_15',['a_polytraj7_s',['../de/d6e/group__A__POLYTRAJ7.html#ga7e956e54dbb7d72ea95aefa7098f4d92',1,'polytraj7.h']]],
   ['a_5fque_5fnode_5fs_16',['a_que_node_s',['../df/d54/group__A__QUE.html#ga1d6efb0aea4093695ce848a0025bc311',1,'que.h']]],
   ['a_5fque_5fs_17',['a_que_s',['../df/d54/group__A__QUE.html#ga5ba5e8819063063f85798567be84fe2f',1,'que.h']]],
   ['a_5frbf_5fs_18',['a_rbf_s',['../dd/dd8/group__A__RBF.html#gaccde20bd2a21bedf1ca5f7b6369487b3',1,'rbf.h']]],
@@ -25,6 +25,5 @@ var searchData=
   ['a_5fslist_5fu_22',['a_slist_u',['../d1/dfe/group__A__SLIST.html#ga8583f579017469302d04e159356eaba9',1,'slist.h']]],
   ['a_5fstr_5fs_23',['a_str_s',['../db/d6c/group__A__STR.html#ga0e2a15102c36e567ca08bf84ed21a511',1,'str.h']]],
   ['a_5ftf_5fs_24',['a_tf_s',['../d0/ddd/group__A__TF.html#ga23c35a1cabf241e9284589033f8d301f',1,'tf.h']]],
-  ['a_5fvec_5fs_25',['a_vec_s',['../da/d05/group__A__VEC.html#ga0d769cc4547a468806f2d390663a216b',1,'vec.h']]],
-  ['a_5fvector_5fs_26',['a_vector_s',['../da/df8/group__A__VECTOR.html#ga3990a522b93f68a4391544bbabe20ba4',1,'vector.h']]]
+  ['a_5fvec_5fs_25',['a_vec_s',['../da/d05/group__A__VEC.html#ga0d769cc4547a468806f2d390663a216b',1,'vec.h']]]
 ];

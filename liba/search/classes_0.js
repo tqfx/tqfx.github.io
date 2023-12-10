@@ -23,6 +23,5 @@ var searchData=
   ['a_5fslist_5fu_20',['a_slist_u',['../d2/dd0/uniona__slist__u.html',1,'']]],
   ['a_5fstr_5fs_21',['a_str_s',['../d3/df5/structa__str__s.html',1,'']]],
   ['a_5ftf_5fs_22',['a_tf_s',['../d0/d16/structa__tf__s.html',1,'']]],
-  ['a_5fvec_5fs_23',['a_vec_s',['../d0/d10/structa__vec__s.html',1,'']]],
-  ['a_5fvector_5fs_24',['a_vector_s',['../d0/d2d/structa__vector__s.html',1,'']]]
+  ['a_5fvec_5fs_23',['a_vec_s',['../d0/d10/structa__vec__s.html',1,'']]]
 ];
