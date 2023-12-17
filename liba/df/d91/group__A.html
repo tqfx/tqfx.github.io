@@ -1224,7 +1224,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</div>
-<div class="line">           *it = a_likely(ptr) ? it##_ + (num) : A_NULL;             \</div>
+<div class="line">           *it = a_likely(it##_) ? it##_ + (num) : A_NULL;           \</div>
 <div class="line">         it &gt; it##_; --it)</div>
 </div><!-- fragment -->
 <p>iterate over an array in reverse </p>
@@ -1724,8 +1724,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</div>
-<div class="line">           *it = a_likely(end) ? a_cast_s(T *, end) - 1 : A_NULL;    \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_likely(end) ? a_cast_s(T *, end) - 1 : A_NULL,   \</div>
+<div class="line">           *it##_ = a_likely(it) ? a_cast_s(T *, ptr) - 1 : A_NULL; \</div>
 <div class="line">         it &gt; it##_; --it)</div>
 </div><!-- fragment -->
 <p>iterate over an array in reverse </p>
