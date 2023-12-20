@@ -3,7 +3,7 @@ var searchData=
   ['main_20js_0',['main.js',['../index.html#autotoc_md26',1,'']]],
   ['main_20py_1',['main.py',['../index.html#autotoc_md22',1,'']]],
   ['main_20rs_2',['main.rs',['../index.html#autotoc_md20',1,'']]],
-  ['major_3',['major',['../d5/d01/structa_1_1version.html#a7d3e22adf982c68b35a5ca2f520f4d3e',1,'a::version::MAJOR'],['../d5/d01/structa_1_1version.html#a708411fbb0a8d700a8ba51c6347896fe',1,'a::version::major']]],
+  ['major_3',['major',['../d5/d01/structa_1_1version.html#a708411fbb0a8d700a8ba51c6347896fe',1,'a::version::major'],['../d5/d01/structa_1_1version.html#a7d3e22adf982c68b35a5ca2f520f4d3e',1,'a::version::MAJOR']]],
   ['math_2eh_4',['math.h',['../df/db1/math_8h.html',1,'']]],
   ['mathematical_20algorithm_20library_5',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
   ['me_6',['me',['../d5/d1d/structa__pid__fuzzy__s.html#aa2cd96947c62ee484add68a819007dd0',1,'a_pid_fuzzy_s']]],

@@ -123,6 +123,10 @@
 <a href="#123" id="123">123</a>
 <a href="#124" id="124">124</a>
 <a href="#125" id="125">125</a>
+<a href="#126" id="126">126</a>
+<a href="#127" id="127">127</a>
+<a href="#128" id="128">128</a>
+<a href="#129" id="129">129</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! version
 
 </span><span class="kw">use </span><span class="kw">crate</span>::int;
@@ -137,6 +141,8 @@
     </span><span class="kw">pub </span>minor: uint,
     <span class="doccomment">/// patch number
     </span><span class="kw">pub </span>patch: uint,
+    <span class="doccomment">/// extra number
+    </span><span class="kw">pub </span>extra: uint,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
@@ -145,12 +151,12 @@
     <span class="kw">static </span>a_version_patch: uint;
     <span class="kw">static </span>a_version_tweak: u32;
     <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
+    <span class="kw">fn </span>a_version_cmp(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
     <span class="kw">fn </span>a_version_lt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_gt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_le(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_ge(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_eq(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_cmp(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
 }
 
 <span class="kw">impl </span>PartialOrd <span class="kw">for </span>version {
@@ -191,6 +197,7 @@
             major,
             minor,
             patch,
+            extra: <span class="number">0</span>,
         }
     }
 }
@@ -230,6 +237,7 @@
                 .field(<span class="string">&quot;major&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.major)
                 .field(<span class="string">&quot;minor&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.minor)
                 .field(<span class="string">&quot;patch&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.patch)
+                .field(<span class="string">&quot;extra&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.extra)
                 .finish()
         }
     }
