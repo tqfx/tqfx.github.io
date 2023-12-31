@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pass_20filter_0',['pass filter',['../dd/d71/group__A__HPF.html',1,'High Pass Filter'],['../df/d27/group__A__LPF.html',1,'Low Pass Filter']]],
+  ['pass_20filter_0',['Pass Filter',['../dd/d71/group__A__HPF.html',1,'High Pass Filter'],['../df/d27/group__A__LPF.html',1,'Low Pass Filter']]],
   ['point_20number_1',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
   ['polynomial_2',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
   ['polynomial_20trajectory_3',['polynomial trajectory',['../d4/d5e/group__A__POLYTRAJ3.html',1,'cubic polynomial trajectory'],['../de/d6e/group__A__POLYTRAJ7.html',1,'hepta polynomial trajectory'],['../d5/d8e/group__A__POLYTRAJ5.html',1,'quintic polynomial trajectory']]],

@@ -6,6 +6,7 @@ var searchData=
   ['vcpkg_3',['vcpkg',['../index.html#autotoc_md7',1,'']]],
   ['vec_2eh_4',['vec.h',['../db/d65/vec_8h.html',1,'']]],
   ['vector_20library_5',['basic vector library',['../da/d05/group__A__VEC.html',1,'']]],
-  ['version_6',['version',['../d2/d1b/group__A__VERSION.html',1,'algorithm library version'],['../d5/d01/structa_1_1version.html',1,'a::version'],['../df/dfc/version_8h.html#a315b73a2ac507da42177e5abf555ae58',1,'a::VERSION']]],
-  ['version_2eh_7',['version.h',['../df/dfc/version_8h.html',1,'']]]
+  ['version_6',['version',['../d2/d1b/group__A__VERSION.html',1,'algorithm library version'],['../d5/d01/structa_1_1version.html',1,'a::version']]],
+  ['version_7',['VERSION',['../df/dfc/version_8h.html#a315b73a2ac507da42177e5abf555ae58',1,'a']]],
+  ['version_2eh_8',['version.h',['../df/dfc/version_8h.html',1,'']]]
 ];

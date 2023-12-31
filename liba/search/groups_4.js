@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['filter_0',['filter',['../dd/d71/group__A__HPF.html',1,'High Pass Filter'],['../df/d27/group__A__LPF.html',1,'Low Pass Filter']]],
+  ['filter_0',['Filter',['../dd/d71/group__A__HPF.html',1,'High Pass Filter'],['../df/d27/group__A__LPF.html',1,'Low Pass Filter']]],
   ['floating_20point_20number_1',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
   ['format_2',['Unicode Transformation Format',['../d9/da8/group__A__UTF.html',1,'']]],
   ['frequency_20table_3',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]],

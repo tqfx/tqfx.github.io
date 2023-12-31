@@ -10,5 +10,5 @@ var searchData=
   ['list_2eh_7',['list.h',['../da/d23/list_8h.html',1,'']]],
   ['low_20pass_20filter_8',['Low Pass Filter',['../df/d27/group__A__LPF.html',1,'']]],
   ['lpf_2eh_9',['lpf.h',['../db/d80/lpf_8h.html',1,'']]],
-  ['lua_10',['lua',['../index.html#autotoc_md16',1,'Lua'],['../index.html#autotoc_md13',1,'xmake.lua']]]
+  ['lua_10',['Lua',['../index.html#autotoc_md16',1,'Lua'],['../index.html#autotoc_md13',1,'xmake.lua']]]
 ];
