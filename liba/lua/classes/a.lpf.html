@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.hpf.html">a.hpf</a></li>
+  <li><strong>a.lpf</strong></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><a href="../classes/a.polytraj3.html">a.polytraj3</a></li>
+  <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
+  <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.hpf.html">liba.hpf</a></li>
+  <li><a href="../modules/liba.lpf.html">liba.lpf</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><a href="../modules/liba.polytraj3.html">liba.polytraj3</a></li>
+  <li><a href="../modules/liba.polytraj5.html">liba.polytraj5</a></li>
+  <li><a href="../modules/liba.polytraj7.html">liba.polytraj7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>a.lpf</code></h1>
+<p>Low Pass Filter</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.lpf">a.lpf</a></td>
+	<td class="summary">Low Pass Filter</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.lpf:new">a.lpf:new (fc, ts)</a></td>
+	<td class="summary">constructor for Low Pass Filter</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.lpf:gen">a.lpf:gen (fc, ts)</a></td>
+	<td class="summary">generate for Low Pass Filter</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.lpf:iter">a.lpf:iter (x)</a></td>
+	<td class="summary">calculate for Low Pass Filter</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.lpf:zero">a.lpf:zero ()</a></td>
+	<td class="summary">zeroing for Low Pass Filter</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.lpf"></a>
+    <strong>a.lpf</strong>
+    </dt>
+    <dd>
+    Low Pass Filter
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">alpha</span>
+         filter coefficient [0,1]
+        </li>
+        <li><span class="parameter">output</span>
+         filter output
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.lpf:new"></a>
+    <strong>a.lpf:new (fc, ts)</strong>
+    </dt>
+    <dd>
+    constructor for Low Pass Filter
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fc</span>
+            <span class="types"><span class="type">number</span></span>
+         cut-off frequency unit(hz)
+        </li>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         sampling time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.lpf.html#">a.lpf</a></span>
+        Low Pass Filter userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.lpf:gen"></a>
+    <strong>a.lpf:gen (fc, ts)</strong>
+    </dt>
+    <dd>
+    generate for Low Pass Filter
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fc</span>
+            <span class="types"><span class="type">number</span></span>
+         cut-off frequency unit(hz)
+        </li>
+        <li><span class="parameter">ts</span>
+            <span class="types"><span class="type">number</span></span>
+         sampling time unit(s)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.lpf.html#">a.lpf</a></span>
+        Low Pass Filter userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.lpf:iter"></a>
+    <strong>a.lpf:iter (x)</strong>
+    </dt>
+    <dd>
+    calculate for Low Pass Filter
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         input value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        output value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.lpf:zero"></a>
+    <strong>a.lpf:zero ()</strong>
+    </dt>
+    <dd>
+    zeroing for Low Pass Filter
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.lpf.html#">a.lpf</a></span>
+        Low Pass Filter userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-01-08 11:12:02 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -113,9 +113,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaaa827f7518800c89751d84fd048f02a8" id="r_gaaa827f7518800c89751d84fd048f02a8"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_INIT</b>(alpha)&#160;&#160;&#160;{<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, alpha), 0, 0}</td></tr>
 <tr class="separator:gaaa827f7518800c89751d84fd048f02a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3987207103d788485b5c13508d39cfef" id="r_ga3987207103d788485b5c13508d39cfef"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_GEN</b>(fc,  dt)&#160;&#160;&#160;(1 / (2 * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga21d946db17605a064660abb8f1f23d69">A_FLOAT_PI</a> * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, fc) * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, dt) + 1))</td></tr>
-<tr class="separator:ga3987207103d788485b5c13508d39cfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0721a9cfac45114d547052d4198d79c3" id="r_ga0721a9cfac45114d547052d4198d79c3"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_GEN</b>(fc,  ts)&#160;&#160;&#160;(1 / (2 * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga21d946db17605a064660abb8f1f23d69">A_FLOAT_PI</a> * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, fc) * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, ts) + 1))</td></tr>
+<tr class="separator:ga0721a9cfac45114d547052d4198d79c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -126,9 +126,9 @@ typedef struct a_hpf_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_h
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabc8f1276382f4ca6cf83037cc50822c4" id="r_gabc8f1276382f4ca6cf83037cc50822c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#gabc8f1276382f4ca6cf83037cc50822c4">a_hpf_gen</a> (double const fc, double const dt)</td></tr>
-<tr class="memdesc:gabc8f1276382f4ca6cf83037cc50822c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for High Pass Filter  <br /></td></tr>
-<tr class="separator:gabc8f1276382f4ca6cf83037cc50822c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94b7e71465c87fa8ed47cf8f03953eea" id="r_ga94b7e71465c87fa8ed47cf8f03953eea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga94b7e71465c87fa8ed47cf8f03953eea">a_hpf_gen</a> (double const fc, double const ts)</td></tr>
+<tr class="memdesc:ga94b7e71465c87fa8ed47cf8f03953eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for High Pass Filter  <br /></td></tr>
+<tr class="separator:ga94b7e71465c87fa8ed47cf8f03953eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaccef0a7623aa150f72c5532665e641bd" id="r_gaccef0a7623aa150f72c5532665e641bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#gaccef0a7623aa150f72c5532665e641bd">a_hpf_init</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx, double const alpha)</td></tr>
 <tr class="memdesc:gaccef0a7623aa150f72c5532665e641bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for High Pass Filter  <br /></td></tr>
 <tr class="separator:gaccef0a7623aa150f72c5532665e641bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +143,27 @@ Functions</h2></td></tr>
 <div class="textblock"><p>High Pass Filter. </p>
 <p>high frequencies are passed, low frequencies are attenuated.  </p><p class="formulaDsp">
 \[
- V_{out}(n)=\alpha(V_{out}(n-1)+V_{in}(n)-V_{in}(n-1))
+ RC\frac{\text{d}(V_{\mathrm i}-V_{\mathrm o})}{\text{dt}}=V_{\mathrm o}
+\]
+</p>
+  <p class="formulaDsp">
+\[
+ RC\frac{[V_{\mathrm i}(n)-V_{\mathrm i}(n-1)]-[V_{\mathrm o}(n)-V_{\mathrm o}(n-1)]}{T_s}=V_{\mathrm o}(n)
+\]
+</p>
+  <p class="formulaDsp">
+\[
+ V_{\mathrm o}(n)=\frac{RC}{RC+T_s}[V_{\mathrm o}(n-1)+V_{\mathrm i}(n)-V_{\mathrm i}(n-1)]
+\]
+</p>
+  <p class="formulaDsp">
+\[
+ \alpha=\frac{RC}{RC+T_s}=\frac{1}{2\pi f_c T_s + 1}
+\]
+</p>
+  <p class="formulaDsp">
+\[
+ V_{\mathrm o}(n)=\alpha[V_{\mathrm o}(n-1)+V_{\mathrm i}(n)-V_{\mathrm i}(n-1)]
 \]
 </p>
 <p> <a href="https://en.wikipedia.org/wiki/High-pass_filter">https://en.wikipedia.org/wiki/High-pass_filter</a> </p>
