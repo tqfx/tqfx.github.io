@@ -100,32 +100,32 @@
 	<td class="summary">algorithm library version parse</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:cmp">a.version:cmp (lhs, rhs)</a></td>
-	<td class="summary">compare the version lhs with the version rhs</td>
+	<td class="name" nowrap><a href="#a.version:cmp">a.version:cmp (other)</a></td>
+	<td class="summary">compare the version self with the version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:lt">a.version:lt (lhs, rhs)</a></td>
-	<td class="summary">version lhs is less than version rhs</td>
+	<td class="name" nowrap><a href="#a.version:lt">a.version:lt (other)</a></td>
+	<td class="summary">version self is less than version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:gt">a.version:gt (lhs, rhs)</a></td>
-	<td class="summary">version lhs is greater than version rhs</td>
+	<td class="name" nowrap><a href="#a.version:gt">a.version:gt (other)</a></td>
+	<td class="summary">version self is greater than version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:le">a.version:le (lhs, rhs)</a></td>
-	<td class="summary">version lhs is less than or equal to version rhs</td>
+	<td class="name" nowrap><a href="#a.version:le">a.version:le (other)</a></td>
+	<td class="summary">version self is less than or equal to version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:ge">a.version:ge (lhs, rhs)</a></td>
-	<td class="summary">version lhs is greater than or equal to version rhs</td>
+	<td class="name" nowrap><a href="#a.version:ge">a.version:ge (other)</a></td>
+	<td class="summary">version self is greater than or equal to version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:eq">a.version:eq (lhs, rhs)</a></td>
-	<td class="summary">version lhs is equal to version rhs</td>
+	<td class="name" nowrap><a href="#a.version:eq">a.version:eq (other)</a></td>
+	<td class="summary">version self is equal to version other</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.version:ne">a.version:ne (lhs, rhs)</a></td>
-	<td class="summary">version lhs is not equal to version rhs</td>
+	<td class="name" nowrap><a href="#a.version:ne">a.version:ne (other)</a></td>
+	<td class="summary">version self is not equal to version other</td>
 	</tr>
 </table>
 
@@ -284,21 +284,17 @@
 </dd>
     <dt>
     <a name = "a.version:cmp"></a>
-    <strong>a.version:cmp (lhs, rhs)</strong>
+    <strong>a.version:cmp (other)</strong>
     </dt>
     <dd>
-    compare the version lhs with the version rhs
+    compare the version self with the version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
@@ -306,13 +302,13 @@
     <ol>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        <0 version lhs < version rhs</li>
+        <0 version self < version other</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        >0 version lhs > version rhs</li>
+        >0 version self > version other</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
-        0 version lhs == version rhs</li>
+        0 version self == version other</li>
     </ol>
 
 
@@ -321,28 +317,24 @@
 </dd>
     <dt>
     <a name = "a.version:lt"></a>
-    <strong>a.version:lt (lhs, rhs)</strong>
+    <strong>a.version:lt (other)</strong>
     </dt>
     <dd>
-    version lhs is less than version rhs
+    version self is less than version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -352,28 +344,24 @@
 </dd>
     <dt>
     <a name = "a.version:gt"></a>
-    <strong>a.version:gt (lhs, rhs)</strong>
+    <strong>a.version:gt (other)</strong>
     </dt>
     <dd>
-    version lhs is greater than version rhs
+    version self is greater than version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -383,28 +371,24 @@
 </dd>
     <dt>
     <a name = "a.version:le"></a>
-    <strong>a.version:le (lhs, rhs)</strong>
+    <strong>a.version:le (other)</strong>
     </dt>
     <dd>
-    version lhs is less than or equal to version rhs
+    version self is less than or equal to version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -414,28 +398,24 @@
 </dd>
     <dt>
     <a name = "a.version:ge"></a>
-    <strong>a.version:ge (lhs, rhs)</strong>
+    <strong>a.version:ge (other)</strong>
     </dt>
     <dd>
-    version lhs is greater than or equal to version rhs
+    version self is greater than or equal to version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -445,28 +425,24 @@
 </dd>
     <dt>
     <a name = "a.version:eq"></a>
-    <strong>a.version:eq (lhs, rhs)</strong>
+    <strong>a.version:eq (other)</strong>
     </dt>
     <dd>
-    version lhs is equal to version rhs
+    version self is equal to version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -476,28 +452,24 @@
 </dd>
     <dt>
     <a name = "a.version:ne"></a>
-    <strong>a.version:ne (lhs, rhs)</strong>
+    <strong>a.version:ne (other)</strong>
     </dt>
     <dd>
-    version lhs is not equal to version rhs
+    version self is not equal to version other
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">lhs</span>
+        <li><span class="parameter">other</span>
             <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the left
-        </li>
-        <li><span class="parameter">rhs</span>
-            <span class="types"><a class="type" href="../classes/a.version.html#">a.version</a></span>
-         version userdata on the right
+         other version userdata
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">integer</span></span>
+           <span class="types"><span class="type">bool</span></span>
         result of comparison
     </ol>
 
@@ -512,7 +484,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2024-01-08 11:12:02 </i>
+<i style="float:right;">Last updated 2024-01-12 02:31:30 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

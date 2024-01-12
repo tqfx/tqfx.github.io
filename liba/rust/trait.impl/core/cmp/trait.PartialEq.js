@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"liba":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.75.0/core/cmp/trait.PartialEq.html\" title=\"trait core::cmp::PartialEq\">PartialEq</a> for <a class=\"struct\" href=\"liba/version/struct.version.html\" title=\"struct liba::version::version\">version</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
