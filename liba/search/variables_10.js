@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['real_0',['real',['../d7/db9/structa__complex__s.html#ad78d6c3b0e603bc8b8cb302fc74cbb0f',1,'a_complex_s']]],
-  ['right_1',['right',['../d3/d18/structa__avl__s.html#a8825835163176ffd6d0fb24caba5448d',1,'a_avl_s::right'],['../dc/dad/structa__rbt__s.html#a34aaeba7ff422386fd6cb47f51e99704',1,'a_rbt_s::right']]]
+  ['real_0',['real',['../d5/d8b/structa__complex.html#aa62504aa6b83e8877da8986c6c9e816b',1,'a_complex']]],
+  ['right_1',['right',['../d1/d0e/structa__avl__node.html#a8bffbb4fbe19ed7bf377e35333489839',1,'a_avl_node::right'],['../db/d47/structa__rbt__node.html#a2398949bd512da628621e1f24df8ff05',1,'a_rbt_node::right']]]
 ];

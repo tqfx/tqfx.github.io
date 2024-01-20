@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['deltaw_0',['deltaw',['../d2/d2c/structa__rbf__s.html#a6ed48fc3097140baac50aaa3d40787a1',1,'a_rbf_s']]],
-  ['den_5fn_1',['den_n',['../d0/d16/structa__tf__s.html#aa3447ceade10a872d4d15330d44ca837',1,'a_tf_s']]],
-  ['den_5fp_2',['den_p',['../d0/d16/structa__tf__s.html#aef6e608642b493d75e6ed6863de69901',1,'a_tf_s']]]
+  ['deltaw_0',['deltaw',['../d6/d7f/structa__rbf.html#a91439fd6d274822b3be139b7b8031bf1',1,'a_rbf']]],
+  ['den_5fn_1',['den_n',['../de/ddd/structa__tf.html#a4bf0a3c22834db0d79faf4728f556942',1,'a_tf']]],
+  ['den_5fp_2',['den_p',['../de/ddd/structa__tf.html#acee8108ebd2a4579b6624e6f2e38f8c3',1,'a_tf']]]
 ];

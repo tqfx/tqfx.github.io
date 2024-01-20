@@ -106,8 +106,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ga2090618fc658b8d9bb3b700caea5d533" id="r_ga2090618fc658b8d9bb3b700caea5d533"><td class="memItemLeft" align="right" valign="top"><a id="ga2090618fc658b8d9bb3b700caea5d533" name="ga2090618fc658b8d9bb3b700caea5d533"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_FLOAT_EXTEND</b>&#160;&#160;&#160;0x10</td></tr>
 <tr class="separator:ga2090618fc658b8d9bb3b700caea5d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaedfb850cc28da52073e4c3cab27253b9" id="r_gaedfb850cc28da52073e4c3cab27253b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a>&#160;&#160;&#160;double</td></tr>
-<tr class="separator:gaedfb850cc28da52073e4c3cab27253b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91692b1aad25649a053ac2de98cb63d7" id="r_ga91692b1aad25649a053ac2de98cb63d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a>&#160;&#160;&#160;double</td></tr>
+<tr class="separator:ga91692b1aad25649a053ac2de98cb63d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6506dd60e9eef56ddfe314850521a0eb" id="r_ga6506dd60e9eef56ddfe314850521a0eb"><td class="memItemLeft" align="right" valign="top"><a id="ga6506dd60e9eef56ddfe314850521a0eb" name="ga6506dd60e9eef56ddfe314850521a0eb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_FLOAT_DIG</b>&#160;&#160;&#160;DBL_DIG</td></tr>
 <tr class="separator:ga6506dd60e9eef56ddfe314850521a0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,15 +153,18 @@ Macros</h2></td></tr>
 <tr class="memitem:ga0fcff410c9b033af666c2ab45b5facaa" id="r_ga0fcff410c9b033af666c2ab45b5facaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0fcff410c9b033af666c2ab45b5facaa">A_FLOAT_SCN</a>(F,  C)&#160;&#160;&#160;&quot;%&quot; F &quot;l&quot; C</td></tr>
 <tr class="separator:ga0fcff410c9b033af666c2ab45b5facaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab7747a4455eaa387795f70706b12c14e" id="r_gab7747a4455eaa387795f70706b12c14e"><td class="memItemLeft" align="right" valign="top"><a id="gab7747a4455eaa387795f70706b12c14e" name="gab7747a4455eaa387795f70706b12c14e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_FLOAT_INF</b>&#160;&#160;&#160;a_cast_s(<a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a>, A_F64_INF)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_FLOAT_INF</b>&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a>, A_F64_INF)</td></tr>
 <tr class="separator:gab7747a4455eaa387795f70706b12c14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5d614c247be83a946f0926218f4b0369" id="r_ga5d614c247be83a946f0926218f4b0369"><td class="memItemLeft" align="right" valign="top"><a id="ga5d614c247be83a946f0926218f4b0369" name="ga5d614c247be83a946f0926218f4b0369"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_FLOAT_NAN</b>&#160;&#160;&#160;(<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(0.0) * A_FLOAT_INF)</td></tr>
 <tr class="separator:ga5d614c247be83a946f0926218f4b0369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9e4e016206a53cd8274fa9ca1a813b20" id="r_ga9e4e016206a53cd8274fa9ca1a813b20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a> _, x)</td></tr>
-<tr class="separator:ga9e4e016206a53cd8274fa9ca1a813b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga153ee92531fb33699248c4cabffb4219" id="r_ga153ee92531fb33699248c4cabffb4219"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga153ee92531fb33699248c4cabffb4219">a_float_t</a>&#160;&#160;&#160;<a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a></td></tr>
-<tr class="separator:ga153ee92531fb33699248c4cabffb4219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8eb5b40b6679ff3b2e5e615f269b761d" id="r_ga8eb5b40b6679ff3b2e5e615f269b761d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(x)&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a>, x)</td></tr>
+<tr class="separator:ga8eb5b40b6679ff3b2e5e615f269b761d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5b18de9ad43a23a828df57eccaf35f4" id="r_gab5b18de9ad43a23a828df57eccaf35f4"><td class="memItemLeft" align="right" valign="top"><a id="gab5b18de9ad43a23a828df57eccaf35f4" name="gab5b18de9ad43a23a828df57eccaf35f4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_</b>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a> _, x)</td></tr>
+<tr class="separator:gab5b18de9ad43a23a828df57eccaf35f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee76129f3a4c2155c8c2bc38a4049d22" id="r_gaee76129f3a4c2155c8c2bc38a4049d22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a>&#160;&#160;&#160;<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a></td></tr>
+<tr class="separator:gaee76129f3a4c2155c8c2bc38a4049d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga767a9ebfacc9c7540aa8684605d52d3e" id="r_ga767a9ebfacc9c7540aa8684605d52d3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga767a9ebfacc9c7540aa8684605d52d3e">A_FLOAT_E</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga272d60cdeecd44bda349a9a8deb783ab">A_E</a>)</td></tr>
 <tr class="separator:ga767a9ebfacc9c7540aa8684605d52d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f7efad331bcef557b07c8a289b58332" id="r_ga7f7efad331bcef557b07c8a289b58332"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7f7efad331bcef557b07c8a289b58332">A_FLOAT_LOG2E</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga50d5be900e0a9167bbb2ede4a23979aa">A_LOG2E</a>)</td></tr>
@@ -170,8 +173,12 @@ Macros</h2></td></tr>
 <tr class="separator:gadedaca651b165bbd5e5369909bb43766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab46466debada98beebb3b16a4c88d941" id="r_gab46466debada98beebb3b16a4c88d941"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab46466debada98beebb3b16a4c88d941">A_FLOAT_LN2</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga653b4266538597c861adc55cf2cd5259">A_LN2</a>)</td></tr>
 <tr class="separator:gab46466debada98beebb3b16a4c88d941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57f7f20cad85a73772013ab60366766d" id="r_ga57f7f20cad85a73772013ab60366766d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga57f7f20cad85a73772013ab60366766d">A_FLOAT_LN1_2</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga89303c7f3d24d25520d1940d08899e0a">A_LN1_2</a>)</td></tr>
+<tr class="separator:ga57f7f20cad85a73772013ab60366766d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac6680c04037cde863ed563aafdfd5ca8" id="r_gac6680c04037cde863ed563aafdfd5ca8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac6680c04037cde863ed563aafdfd5ca8">A_FLOAT_LN10</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga64654c115e779cfeda469ddc531a6936">A_LN10</a>)</td></tr>
 <tr class="separator:gac6680c04037cde863ed563aafdfd5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf200bb8046a67970bd0e1cbc2eae86a9" id="r_gaf200bb8046a67970bd0e1cbc2eae86a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf200bb8046a67970bd0e1cbc2eae86a9">A_FLOAT_LN1_10</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#gac49174e9fdf9b644eeb284c107792dd5">A_LN1_10</a>)</td></tr>
+<tr class="separator:gaf200bb8046a67970bd0e1cbc2eae86a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga21d946db17605a064660abb8f1f23d69" id="r_ga21d946db17605a064660abb8f1f23d69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21d946db17605a064660abb8f1f23d69">A_FLOAT_PI</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#gad37649758ce967343cee82772583fd9c">A_PI</a>)</td></tr>
 <tr class="separator:ga21d946db17605a064660abb8f1f23d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6cb0fb15221f7c4a0b1c98ec03aa2b75" id="r_ga6cb0fb15221f7c4a0b1c98ec03aa2b75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6cb0fb15221f7c4a0b1c98ec03aa2b75">A_FLOAT_PI_2</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga9d01f1becda5c5819bdac0568e61a762">A_PI_2</a>)</td></tr>
@@ -188,6 +195,10 @@ Macros</h2></td></tr>
 <tr class="separator:ga6ce52c750445c2c199ab111d0741229a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa1dbb00170ac43d94dfd2616d2f0062f" id="r_gaa1dbb00170ac43d94dfd2616d2f0062f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa1dbb00170ac43d94dfd2616d2f0062f">A_FLOAT_SQRT1_2</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#gae29c69e74a53f4a1a260f3fda0ccfbe2">A_SQRT1_2</a>)</td></tr>
 <tr class="separator:gaa1dbb00170ac43d94dfd2616d2f0062f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37a42ca47b5b3d4a206a964e91fef763" id="r_ga37a42ca47b5b3d4a206a964e91fef763"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga37a42ca47b5b3d4a206a964e91fef763">A_FLOAT_SQRT3</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga3b45523be1ffff826a58361a7a41fba6">A_SQRT3</a>)</td></tr>
+<tr class="separator:ga37a42ca47b5b3d4a206a964e91fef763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87b199eee996cef0dc34c1f54c854d44" id="r_ga87b199eee996cef0dc34c1f54c854d44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga87b199eee996cef0dc34c1f54c854d44">A_FLOAT_SQRT1_3</a>&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga940ea1a6518d79bd0f706a239bac6e43">A_SQRT1_3</a>)</td></tr>
+<tr class="separator:ga87b199eee996cef0dc34c1f54c854d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga06a18d12ce1cdd6d1474e2f8e528f468" id="r_ga06a18d12ce1cdd6d1474e2f8e528f468"><td class="memItemLeft" align="right" valign="top"><a id="ga06a18d12ce1cdd6d1474e2f8e528f468" name="ga06a18d12ce1cdd6d1474e2f8e528f468"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_modf</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(modf)</td></tr>
 <tr class="separator:ga06a18d12ce1cdd6d1474e2f8e528f468"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,45 +214,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga696475547264687f2ce220042f51d240" id="r_ga696475547264687f2ce220042f51d240"><td class="memItemLeft" align="right" valign="top"><a id="ga696475547264687f2ce220042f51d240" name="ga696475547264687f2ce220042f51d240"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_scalbln</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(scalbln)</td></tr>
 <tr class="separator:ga696475547264687f2ce220042f51d240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8ea0ddd39d03e4322f5221098c4fbd12" id="r_ga8ea0ddd39d03e4322f5221098c4fbd12"><td class="memItemLeft" align="right" valign="top"><a id="ga8ea0ddd39d03e4322f5221098c4fbd12" name="ga8ea0ddd39d03e4322f5221098c4fbd12"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_fpclassify</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(fpclassify)</td></tr>
-<tr class="separator:ga8ea0ddd39d03e4322f5221098c4fbd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa73c00e6e599c0554b76c7bf2d10346e" id="r_gaa73c00e6e599c0554b76c7bf2d10346e"><td class="memItemLeft" align="right" valign="top"><a id="gaa73c00e6e599c0554b76c7bf2d10346e" name="gaa73c00e6e599c0554b76c7bf2d10346e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_nextafter</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(nextafter)</td></tr>
+<tr class="separator:gaa73c00e6e599c0554b76c7bf2d10346e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78e85ef5b5c114c0b128069ddd3ce462" id="r_ga78e85ef5b5c114c0b128069ddd3ce462"><td class="memItemLeft" align="right" valign="top"><a id="ga78e85ef5b5c114c0b128069ddd3ce462" name="ga78e85ef5b5c114c0b128069ddd3ce462"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_nexttoward</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(nexttoward)</td></tr>
+<tr class="separator:ga78e85ef5b5c114c0b128069ddd3ce462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0b837f2fead604f25bf58e2025370708" id="r_ga0b837f2fead604f25bf58e2025370708"><td class="memItemLeft" align="right" valign="top"><a id="ga0b837f2fead604f25bf58e2025370708" name="ga0b837f2fead604f25bf58e2025370708"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_copysign</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(copysign)</td></tr>
 <tr class="separator:ga0b837f2fead604f25bf58e2025370708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad73012e8ef3e6bd05d64db8c05671550" id="r_gad73012e8ef3e6bd05d64db8c05671550"><td class="memItemLeft" align="right" valign="top"><a id="gad73012e8ef3e6bd05d64db8c05671550" name="gad73012e8ef3e6bd05d64db8c05671550"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isfinite</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isfinite)</td></tr>
-<tr class="separator:gad73012e8ef3e6bd05d64db8c05671550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga573f761567c179c2d266c79e86cebdd7" id="r_ga573f761567c179c2d266c79e86cebdd7"><td class="memItemLeft" align="right" valign="top"><a id="ga573f761567c179c2d266c79e86cebdd7" name="ga573f761567c179c2d266c79e86cebdd7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isnormal</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isnormal)</td></tr>
-<tr class="separator:ga573f761567c179c2d266c79e86cebdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga137f08e7dbef4e6a2004ff7c3e997c23" id="r_ga137f08e7dbef4e6a2004ff7c3e997c23"><td class="memItemLeft" align="right" valign="top"><a id="ga137f08e7dbef4e6a2004ff7c3e997c23" name="ga137f08e7dbef4e6a2004ff7c3e997c23"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_signbit</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(signbit)</td></tr>
-<tr class="separator:ga137f08e7dbef4e6a2004ff7c3e997c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0043b84fcfe0169f403e8ef8aaa8b371" id="r_ga0043b84fcfe0169f403e8ef8aaa8b371"><td class="memItemLeft" align="right" valign="top"><a id="ga0043b84fcfe0169f403e8ef8aaa8b371" name="ga0043b84fcfe0169f403e8ef8aaa8b371"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isinf</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isinf)</td></tr>
-<tr class="separator:ga0043b84fcfe0169f403e8ef8aaa8b371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacc04268d2a7a13be0639a4c7fe734069" id="r_gacc04268d2a7a13be0639a4c7fe734069"><td class="memItemLeft" align="right" valign="top"><a id="gacc04268d2a7a13be0639a4c7fe734069" name="gacc04268d2a7a13be0639a4c7fe734069"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isnan</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isnan)</td></tr>
-<tr class="separator:gacc04268d2a7a13be0639a4c7fe734069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaef685528a9c110244e5fad2b6870217e" id="r_gaef685528a9c110244e5fad2b6870217e"><td class="memItemLeft" align="right" valign="top"><a id="gaef685528a9c110244e5fad2b6870217e" name="gaef685528a9c110244e5fad2b6870217e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_islt</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isless)</td></tr>
-<tr class="separator:gaef685528a9c110244e5fad2b6870217e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacbbf2bfa730cabbafea2233da272963d" id="r_gacbbf2bfa730cabbafea2233da272963d"><td class="memItemLeft" align="right" valign="top"><a id="gacbbf2bfa730cabbafea2233da272963d" name="gacbbf2bfa730cabbafea2233da272963d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isle</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(islessequal)</td></tr>
-<tr class="separator:gacbbf2bfa730cabbafea2233da272963d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42b3f73e64ff5e2a918e6677aafe2c81" id="r_ga42b3f73e64ff5e2a918e6677aafe2c81"><td class="memItemLeft" align="right" valign="top"><a id="ga42b3f73e64ff5e2a918e6677aafe2c81" name="ga42b3f73e64ff5e2a918e6677aafe2c81"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isgt</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isgreater)</td></tr>
-<tr class="separator:ga42b3f73e64ff5e2a918e6677aafe2c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga87e408babd0edefba2327200a9731b60" id="r_ga87e408babd0edefba2327200a9731b60"><td class="memItemLeft" align="right" valign="top"><a id="ga87e408babd0edefba2327200a9731b60" name="ga87e408babd0edefba2327200a9731b60"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isge</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isgreaterequal)</td></tr>
-<tr class="separator:ga87e408babd0edefba2327200a9731b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7ddb945f0a4893aa622c49f06db00e03" id="r_ga7ddb945f0a4893aa622c49f06db00e03"><td class="memItemLeft" align="right" valign="top"><a id="ga7ddb945f0a4893aa622c49f06db00e03" name="ga7ddb945f0a4893aa622c49f06db00e03"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_islg</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(islessgreater)</td></tr>
-<tr class="separator:ga7ddb945f0a4893aa622c49f06db00e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga677ee67919cb75a82732e7f1784abb82" id="r_ga677ee67919cb75a82732e7f1784abb82"><td class="memItemLeft" align="right" valign="top"><a id="ga677ee67919cb75a82732e7f1784abb82" name="ga677ee67919cb75a82732e7f1784abb82"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_isun</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(isunordered)</td></tr>
-<tr class="separator:ga677ee67919cb75a82732e7f1784abb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabcced1d1c03e5d204d0c9750dbc4e9ac" id="r_gabcced1d1c03e5d204d0c9750dbc4e9ac"><td class="memItemLeft" align="right" valign="top"><a id="gabcced1d1c03e5d204d0c9750dbc4e9ac" name="gabcced1d1c03e5d204d0c9750dbc4e9ac"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_ma</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(fma)</td></tr>
 <tr class="separator:gabcced1d1c03e5d204d0c9750dbc4e9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +244,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga29796a2c537943fc9a939ad82652cb7d" id="r_ga29796a2c537943fc9a939ad82652cb7d"><td class="memItemLeft" align="right" valign="top"><a id="ga29796a2c537943fc9a939ad82652cb7d" name="ga29796a2c537943fc9a939ad82652cb7d"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_dim</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(fdim)</td></tr>
 <tr class="separator:ga29796a2c537943fc9a939ad82652cb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dec4530d72c2bdb37b59d897088c50f" id="r_ga3dec4530d72c2bdb37b59d897088c50f"><td class="memItemLeft" align="right" valign="top"><a id="ga3dec4530d72c2bdb37b59d897088c50f" name="ga3dec4530d72c2bdb37b59d897088c50f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_remquo</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(remquo)</td></tr>
+<tr class="separator:ga3dec4530d72c2bdb37b59d897088c50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae00c18480b5ec9fad2684f64ff940d0f" id="r_gae00c18480b5ec9fad2684f64ff940d0f"><td class="memItemLeft" align="right" valign="top"><a id="gae00c18480b5ec9fad2684f64ff940d0f" name="gae00c18480b5ec9fad2684f64ff940d0f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_remainder</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(remainder)</td></tr>
+<tr class="separator:gae00c18480b5ec9fad2684f64ff940d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga20adfd0009be6cc724e89c9ac47f1cb9" id="r_ga20adfd0009be6cc724e89c9ac47f1cb9"><td class="memItemLeft" align="right" valign="top"><a id="ga20adfd0009be6cc724e89c9ac47f1cb9" name="ga20adfd0009be6cc724e89c9ac47f1cb9"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_exp</b>&#160;&#160;&#160;<a class="el" href="#ga8418faf154b879db947f8bb96970e971">A_FLOAT_F</a>(exp)</td></tr>
 <tr class="separator:ga20adfd0009be6cc724e89c9ac47f1cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,15 +376,48 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1be92eacb35396afdb86b8c93ab15945" id="r_ga1be92eacb35396afdb86b8c93ab15945"><td class="memItemLeft" align="right" valign="top"><a id="ga1be92eacb35396afdb86b8c93ab15945" name="ga1be92eacb35396afdb86b8c93ab15945"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_log1p</b> (double x)</td></tr>
 <tr class="separator:ga1be92eacb35396afdb86b8c93ab15945"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f32be667a895bc9cf3ec8142259034a" id="r_ga6f32be667a895bc9cf3ec8142259034a"><td class="memItemLeft" align="right" valign="top"><a id="ga6f32be667a895bc9cf3ec8142259034a" name="ga6f32be667a895bc9cf3ec8142259034a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_hypot</b> (double x, double y)</td></tr>
-<tr class="separator:ga6f32be667a895bc9cf3ec8142259034a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16d3de5fb8b7fa45a582ecafd67133f8" id="r_ga16d3de5fb8b7fa45a582ecafd67133f8"><td class="memItemLeft" align="right" valign="top"><a id="ga16d3de5fb8b7fa45a582ecafd67133f8" name="ga16d3de5fb8b7fa45a582ecafd67133f8"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (double x, double y)</td></tr>
 <tr class="separator:ga16d3de5fb8b7fa45a582ecafd67133f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f32be667a895bc9cf3ec8142259034a" id="r_ga6f32be667a895bc9cf3ec8142259034a"><td class="memItemLeft" align="right" valign="top"><a id="ga6f32be667a895bc9cf3ec8142259034a" name="ga6f32be667a895bc9cf3ec8142259034a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_hypot</b> (double x, double y)</td></tr>
+<tr class="separator:ga6f32be667a895bc9cf3ec8142259034a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga806809213f88666aaacf35835ae97026" id="r_ga806809213f88666aaacf35835ae97026"><td class="memItemLeft" align="right" valign="top"><a id="ga806809213f88666aaacf35835ae97026" name="ga806809213f88666aaacf35835ae97026"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_hypot3</b> (double x, double y, double z)</td></tr>
+<tr class="separator:ga806809213f88666aaacf35835ae97026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga91692b1aad25649a053ac2de98cb63d7" name="ga91692b1aad25649a053ac2de98cb63d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91692b1aad25649a053ac2de98cb63d7">&#9670;&#160;</a></span>A_FLOAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_FLOAT&#160;&#160;&#160;double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>floating-point number stored using <code>double</code> </p>
+
+</div>
+</div>
+<a id="gaee76129f3a4c2155c8c2bc38a4049d22" name="gaee76129f3a4c2155c8c2bc38a4049d22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee76129f3a4c2155c8c2bc38a4049d22">&#9670;&#160;</a></span>a_float</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_float&#160;&#160;&#160;<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compiler built-in floating-point number type </p>
+
+</div>
+</div>
 <a id="ga07cf621e7e90745b6d50cc338a766964" name="ga07cf621e7e90745b6d50cc338a766964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga07cf621e7e90745b6d50cc338a766964">&#9670;&#160;</a></span>A_FLOAT_1_PI</h2>
 
@@ -443,28 +463,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
 
 </div>
 </div>
-<a id="ga9e4e016206a53cd8274fa9ca1a813b20" name="ga9e4e016206a53cd8274fa9ca1a813b20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9e4e016206a53cd8274fa9ca1a813b20">&#9670;&#160;</a></span>a_float_c</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define a_float_c</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span>&#160;)&#160;&#160;&#160;a_cast_s(<a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a> _, x)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>static cast to <a class="el" href="#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> . </p>
-
-</div>
-</div>
 <a id="gaf78ed809b087065f4ff92b771d69a185" name="gaf78ed809b087065f4ff92b771d69a185"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf78ed809b087065f4ff92b771d69a185">&#9670;&#160;</a></span>A_FLOAT_C</h2>
 
@@ -479,7 +477,25 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
         </tr>
       </table>
 </div><div class="memdoc">
-<p>expands to a floating-point constant expression having the value specified by its argument and the type <a class="el" href="#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> </p>
+<p>expands to a floating-point constant expression having the value specified by its argument and the type <a class="el" href="#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> </p>
+
+</div>
+</div>
+<a id="ga8eb5b40b6679ff3b2e5e615f269b761d" name="ga8eb5b40b6679ff3b2e5e615f269b761d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8eb5b40b6679ff3b2e5e615f269b761d">&#9670;&#160;</a></span>a_float_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_float_c</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span></td><td>)</td>
+          <td>&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a>, x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>static cast to <a class="el" href="#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> </p>
 
 </div>
 </div>
@@ -512,7 +528,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
         </tr>
       </table>
 </div><div class="memdoc">
-<p>expands to a floating-point function expression having the value specified by its argument and the type <a class="el" href="#ga153ee92531fb33699248c4cabffb4219">a_float_t</a> </p>
+<p>expands to a floating-point function expression having the value specified by its argument and the type <a class="el" href="#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> </p>
 
 </div>
 </div>
@@ -528,6 +544,36 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
       </table>
 </div><div class="memdoc">
 <p>\( \ln{10} \) </p>
+
+</div>
+</div>
+<a id="gaf200bb8046a67970bd0e1cbc2eae86a9" name="gaf200bb8046a67970bd0e1cbc2eae86a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf200bb8046a67970bd0e1cbc2eae86a9">&#9670;&#160;</a></span>A_FLOAT_LN1_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_FLOAT_LN1_10&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#gac49174e9fdf9b644eeb284c107792dd5">A_LN1_10</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>\( \frac{1}{\ln{10}} \) </p>
+
+</div>
+</div>
+<a id="ga57f7f20cad85a73772013ab60366766d" name="ga57f7f20cad85a73772013ab60366766d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57f7f20cad85a73772013ab60366766d">&#9670;&#160;</a></span>A_FLOAT_LN1_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_FLOAT_LN1_2&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga89303c7f3d24d25520d1940d08899e0a">A_LN1_2</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>\( \frac{1}{\ln{2}} \) </p>
 
 </div>
 </div>
@@ -680,6 +726,21 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
 
 </div>
 </div>
+<a id="ga87b199eee996cef0dc34c1f54c854d44" name="ga87b199eee996cef0dc34c1f54c854d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87b199eee996cef0dc34c1f54c854d44">&#9670;&#160;</a></span>A_FLOAT_SQRT1_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_FLOAT_SQRT1_3&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga940ea1a6518d79bd0f706a239bac6e43">A_SQRT1_3</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>\( \frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3} \) </p>
+
+</div>
+</div>
 <a id="ga6ce52c750445c2c199ab111d0741229a" name="ga6ce52c750445c2c199ab111d0741229a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6ce52c750445c2c199ab111d0741229a">&#9670;&#160;</a></span>A_FLOAT_SQRT2</h2>
 
@@ -695,33 +756,18 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>a_float_atan2</b> (
 
 </div>
 </div>
-<a id="gaedfb850cc28da52073e4c3cab27253b9" name="gaedfb850cc28da52073e4c3cab27253b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaedfb850cc28da52073e4c3cab27253b9">&#9670;&#160;</a></span>A_FLOAT_T</h2>
+<a id="ga37a42ca47b5b3d4a206a964e91fef763" name="ga37a42ca47b5b3d4a206a964e91fef763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37a42ca47b5b3d4a206a964e91fef763">&#9670;&#160;</a></span>A_FLOAT_SQRT3</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define A_FLOAT_T&#160;&#160;&#160;double</td>
+          <td class="memname">#define A_FLOAT_SQRT3&#160;&#160;&#160;<a class="el" href="#gaf78ed809b087065f4ff92b771d69a185">A_FLOAT_C</a>(<a class="el" href="../../d1/d82/group__A__MATH.html#ga3b45523be1ffff826a58361a7a41fba6">A_SQRT3</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>floating-point number stored using <code>double</code> </p>
-
-</div>
-</div>
-<a id="ga153ee92531fb33699248c4cabffb4219" name="ga153ee92531fb33699248c4cabffb4219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga153ee92531fb33699248c4cabffb4219">&#9670;&#160;</a></span>a_float_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define a_float_t&#160;&#160;&#160;<a class="el" href="#gaedfb850cc28da52073e4c3cab27253b9">A_FLOAT_T</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>compiler built-in floating-point number type </p>
+<p>\( \sqrt{3} \) </p>
 
 </div>
 </div>

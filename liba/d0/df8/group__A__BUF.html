@@ -97,16 +97,16 @@ Collaboration diagram for basic buffer library:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic buffer  <a href="../../d4/d7b/structa__buf__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic buffer  <a href="../../de/d98/structa__buf.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gabe395246327ebc64342eb69d427f6a9a" id="r_gabe395246327ebc64342eb69d427f6a9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe395246327ebc64342eb69d427f6a9a">a_buf_forenum</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td></tr>
+<tr class="memitem:gabe395246327ebc64342eb69d427f6a9a" id="r_gabe395246327ebc64342eb69d427f6a9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe395246327ebc64342eb69d427f6a9a">a_buf_forenum</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td></tr>
 <tr class="memdesc:gabe395246327ebc64342eb69d427f6a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a buffer  <br /></td></tr>
 <tr class="separator:gabe395246327ebc64342eb69d427f6a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga12ef05268ae81feb405d4478f78bc211" id="r_ga12ef05268ae81feb405d4478f78bc211"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga12ef05268ae81feb405d4478f78bc211">a_buf_forenum_reverse</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td></tr>
+<tr class="memitem:ga12ef05268ae81feb405d4478f78bc211" id="r_ga12ef05268ae81feb405d4478f78bc211"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga12ef05268ae81feb405d4478f78bc211">a_buf_forenum_reverse</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td></tr>
 <tr class="memdesc:ga12ef05268ae81feb405d4478f78bc211"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a buffer in reverse  <br /></td></tr>
 <tr class="separator:ga12ef05268ae81feb405d4478f78bc211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga83bbea482be1b23cdfdea81704ea9202" id="r_ga83bbea482be1b23cdfdea81704ea9202"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga83bbea482be1b23cdfdea81704ea9202">a_buf_foreach</a>(T,  it,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga68fe2094fd31346808ff2c5f54f509fc">a_foreach</a>(T, it, (ctx)-&gt;_ptr, (ctx)-&gt;_num)</td></tr>
@@ -166,94 +166,94 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gab6f5a63e6bdd7699f6abcd14577a8ea8" id="r_gab6f5a63e6bdd7699f6abcd14577a8ea8"><td class="memItemLeft" align="right" valign="top"><a id="gab6f5a63e6bdd7699f6abcd14577a8ea8" name="gab6f5a63e6bdd7699f6abcd14577a8ea8"></a>
-typedef struct a_buf_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_buf_s</b></td></tr>
-<tr class="memdesc:gab6f5a63e6bdd7699f6abcd14577a8ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic buffer <br /></td></tr>
-<tr class="separator:gab6f5a63e6bdd7699f6abcd14577a8ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd67dcfb680fd626663e6a2377ecdb96" id="r_gafd67dcfb680fd626663e6a2377ecdb96"><td class="memItemLeft" align="right" valign="top"><a id="gafd67dcfb680fd626663e6a2377ecdb96" name="gafd67dcfb680fd626663e6a2377ecdb96"></a>
+typedef struct a_buf&#160;</td><td class="memItemRight" valign="bottom"><b>a_buf</b></td></tr>
+<tr class="memdesc:gafd67dcfb680fd626663e6a2377ecdb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic buffer <br /></td></tr>
+<tr class="separator:gafd67dcfb680fd626663e6a2377ecdb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaf3db58ba0928b93bcc59c8f09df1a8ad" id="r_gaf3db58ba0928b93bcc59c8f09df1a8ad"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf3db58ba0928b93bcc59c8f09df1a8ad">a_buf_ptr</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:gaf3db58ba0928b93bcc59c8f09df1a8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">access address of buffer for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:gaf3db58ba0928b93bcc59c8f09df1a8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa26e29bd0935e3be6831c269299e2c9a" id="r_gaa26e29bd0935e3be6831c269299e2c9a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa26e29bd0935e3be6831c269299e2c9a">a_buf_num</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:gaa26e29bd0935e3be6831c269299e2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">access number of element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:gaa26e29bd0935e3be6831c269299e2c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43ee91879a6841130012a8a03d1ca819" id="r_ga43ee91879a6841130012a8a03d1ca819"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga43ee91879a6841130012a8a03d1ca819">a_buf_mem</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga43ee91879a6841130012a8a03d1ca819"><td class="mdescLeft">&#160;</td><td class="mdescRight">access memory of element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga43ee91879a6841130012a8a03d1ca819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52601633b0e2db232e2eb8c1a5d2968f" id="r_ga52601633b0e2db232e2eb8c1a5d2968f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga52601633b0e2db232e2eb8c1a5d2968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access size of a element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga52601633b0e2db232e2eb8c1a5d2968f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e1326a0c9fdb98b27b540cde622a1dc" id="r_ga6e1326a0c9fdb98b27b540cde622a1dc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6e1326a0c9fdb98b27b540cde622a1dc">a_buf_at_</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx, size_t const idx)</td></tr>
-<tr class="memdesc:ga6e1326a0c9fdb98b27b540cde622a1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga6e1326a0c9fdb98b27b540cde622a1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6a3501e206692c35cbf5c9aebb7bc32d" id="r_ga6a3501e206692c35cbf5c9aebb7bc32d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a3501e206692c35cbf5c9aebb7bc32d">a_buf_at</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx, size_t const idx)</td></tr>
-<tr class="memdesc:ga6a3501e206692c35cbf5c9aebb7bc32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga6a3501e206692c35cbf5c9aebb7bc32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5c3f61cc71a2634291866fc6ac03c378" id="r_ga5c3f61cc71a2634291866fc6ac03c378"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5c3f61cc71a2634291866fc6ac03c378">a_buf_idx</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx, ptrdiff_t const idx)</td></tr>
-<tr class="memdesc:ga5c3f61cc71a2634291866fc6ac03c378"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga5c3f61cc71a2634291866fc6ac03c378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd9d2a7fa53a7fd22786a2af6a78cbf6" id="r_gafd9d2a7fa53a7fd22786a2af6a78cbf6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafd9d2a7fa53a7fd22786a2af6a78cbf6">a_buf_top_</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:gafd9d2a7fa53a7fd22786a2af6a78cbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:gafd9d2a7fa53a7fd22786a2af6a78cbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga92b115c1a4e9c281001ac72c500d8f5f" id="r_ga92b115c1a4e9c281001ac72c500d8f5f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga92b115c1a4e9c281001ac72c500d8f5f">a_buf_top</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga92b115c1a4e9c281001ac72c500d8f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga92b115c1a4e9c281001ac72c500d8f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga23dd51eb5d07c37fe698fc6047d45f39" id="r_ga23dd51eb5d07c37fe698fc6047d45f39"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga23dd51eb5d07c37fe698fc6047d45f39">a_buf_end</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga23dd51eb5d07c37fe698fc6047d45f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga23dd51eb5d07c37fe698fc6047d45f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67d780bb30947fd26edef1c61695df4f" id="r_ga67d780bb30947fd26edef1c61695df4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67d780bb30947fd26edef1c61695df4f">a_buf_ctor</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, void *ptr, size_t siz, size_t num)</td></tr>
-<tr class="memdesc:ga67d780bb30947fd26edef1c61695df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for buffer structure  <br /></td></tr>
-<tr class="separator:ga67d780bb30947fd26edef1c61695df4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc1baac8bcf5c24160fe97eba13ca7e1" id="r_gafc1baac8bcf5c24160fe97eba13ca7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafc1baac8bcf5c24160fe97eba13ca7e1">a_buf_dtor</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:gafc1baac8bcf5c24160fe97eba13ca7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for buffer structure  <br /></td></tr>
-<tr class="separator:gafc1baac8bcf5c24160fe97eba13ca7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf1f7fd118e6064d56cc50c64405a03f1" id="r_gaf1f7fd118e6064d56cc50c64405a03f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1f7fd118e6064d56cc50c64405a03f1">a_buf_move</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, <a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *obj)</td></tr>
-<tr class="memdesc:gaf1f7fd118e6064d56cc50c64405a03f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to buffer structure by moving  <br /></td></tr>
-<tr class="separator:gaf1f7fd118e6064d56cc50c64405a03f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4b869207ab8e7ada1b252a823db88c09" id="r_ga4b869207ab8e7ada1b252a823db88c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4b869207ab8e7ada1b252a823db88c09">a_buf_drop</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:ga4b869207ab8e7ada1b252a823db88c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all the elements for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga4b869207ab8e7ada1b252a823db88c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga698f56db71e1736a6a7b2020e5b141da" id="r_ga698f56db71e1736a6a7b2020e5b141da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga698f56db71e1736a6a7b2020e5b141da">a_buf_swap</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *ctx, size_t lhs, size_t rhs)</td></tr>
-<tr class="memdesc:ga698f56db71e1736a6a7b2020e5b141da"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap elements lhs and rhs for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga698f56db71e1736a6a7b2020e5b141da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga18c345f5897f31757a8c60e36ba6413a" id="r_ga18c345f5897f31757a8c60e36ba6413a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga18c345f5897f31757a8c60e36ba6413a">a_buf_sort</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga18c345f5897f31757a8c60e36ba6413a"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort all elements for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga18c345f5897f31757a8c60e36ba6413a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84c0b95dcb98347571ffc86b330884f3" id="r_ga84c0b95dcb98347571ffc86b330884f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84c0b95dcb98347571ffc86b330884f3">a_buf_sort_fore</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga84c0b95dcb98347571ffc86b330884f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort foremost element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga84c0b95dcb98347571ffc86b330884f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga974da190cb132dc4270fd3054d0d1c95" id="r_ga974da190cb132dc4270fd3054d0d1c95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga974da190cb132dc4270fd3054d0d1c95">a_buf_sort_back</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga974da190cb132dc4270fd3054d0d1c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to buffer structure  <br /></td></tr>
-<tr class="separator:ga974da190cb132dc4270fd3054d0d1c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa1f47c6a231a22c0f75df6c5977e18ed" id="r_gaa1f47c6a231a22c0f75df6c5977e18ed"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa1f47c6a231a22c0f75df6c5977e18ed">a_buf_search</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:gaa1f47c6a231a22c0f75df6c5977e18ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this buffer  <br /></td></tr>
-<tr class="separator:gaa1f47c6a231a22c0f75df6c5977e18ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa9cc37b1fb56f14f19e18b95f93a1e4e" id="r_gaa9cc37b1fb56f14f19e18b95f93a1e4e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa9cc37b1fb56f14f19e18b95f93a1e4e">a_buf_insert</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, size_t idx)</td></tr>
-<tr class="memdesc:gaa9cc37b1fb56f14f19e18b95f93a1e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert an element into the buffer  <br /></td></tr>
-<tr class="separator:gaa9cc37b1fb56f14f19e18b95f93a1e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacfef69bef5c9294342c081357f3ba333" id="r_gacfef69bef5c9294342c081357f3ba333"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacfef69bef5c9294342c081357f3ba333">a_buf_remove</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx, size_t idx)</td></tr>
-<tr class="memdesc:gacfef69bef5c9294342c081357f3ba333"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove an element from the buffer  <br /></td></tr>
-<tr class="separator:gacfef69bef5c9294342c081357f3ba333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10b6e566b35eafcd5627be934b9c842e" id="r_ga10b6e566b35eafcd5627be934b9c842e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga10b6e566b35eafcd5627be934b9c842e">a_buf_push_fore</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga10b6e566b35eafcd5627be934b9c842e"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer forward  <br /></td></tr>
-<tr class="separator:ga10b6e566b35eafcd5627be934b9c842e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab0f8d7e67e84f14c163eb25d5ad00795" id="r_gab0f8d7e67e84f14c163eb25d5ad00795"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab0f8d7e67e84f14c163eb25d5ad00795">a_buf_push_back</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:gab0f8d7e67e84f14c163eb25d5ad00795"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer backward  <br /></td></tr>
-<tr class="separator:gab0f8d7e67e84f14c163eb25d5ad00795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f1c811d7bb4257589d4971b71ac1d66" id="r_ga5f1c811d7bb4257589d4971b71ac1d66"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5f1c811d7bb4257589d4971b71ac1d66">a_buf_pull_fore</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga5f1c811d7bb4257589d4971b71ac1d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer forward  <br /></td></tr>
-<tr class="separator:ga5f1c811d7bb4257589d4971b71ac1d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3549b7f2dda968c5394df564817895c2" id="r_ga3549b7f2dda968c5394df564817895c2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3549b7f2dda968c5394df564817895c2">a_buf_pull_back</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga3549b7f2dda968c5394df564817895c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer backward  <br /></td></tr>
-<tr class="separator:ga3549b7f2dda968c5394df564817895c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8abbf634ab39de70d2be1272e707fdd1" id="r_ga8abbf634ab39de70d2be1272e707fdd1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8abbf634ab39de70d2be1272e707fdd1">a_buf_push</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga8abbf634ab39de70d2be1272e707fdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer  <br /></td></tr>
-<tr class="separator:ga8abbf634ab39de70d2be1272e707fdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade85c1a115946a04b4ce4b6bdbd79e48" id="r_gade85c1a115946a04b4ce4b6bdbd79e48"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gade85c1a115946a04b4ce4b6bdbd79e48">a_buf_pull</a> (<a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *ctx)</td></tr>
-<tr class="memdesc:gade85c1a115946a04b4ce4b6bdbd79e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer  <br /></td></tr>
-<tr class="separator:gade85c1a115946a04b4ce4b6bdbd79e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5157c73a6b488aea0350612bb63ad99e" id="r_ga5157c73a6b488aea0350612bb63ad99e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5157c73a6b488aea0350612bb63ad99e">a_buf_ptr</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:ga5157c73a6b488aea0350612bb63ad99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access address of buffer for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga5157c73a6b488aea0350612bb63ad99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81ddd5ede873d0baded6e184c7c75a34" id="r_ga81ddd5ede873d0baded6e184c7c75a34"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga81ddd5ede873d0baded6e184c7c75a34">a_buf_num</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:ga81ddd5ede873d0baded6e184c7c75a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">access number of element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga81ddd5ede873d0baded6e184c7c75a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49e2a7497833b255c4109f8c8ac703a4" id="r_ga49e2a7497833b255c4109f8c8ac703a4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga49e2a7497833b255c4109f8c8ac703a4">a_buf_mem</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:ga49e2a7497833b255c4109f8c8ac703a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access memory of element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga49e2a7497833b255c4109f8c8ac703a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa49cf3c2b32cc5788752ec6e3f82487b" id="r_gaa49cf3c2b32cc5788752ec6e3f82487b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:gaa49cf3c2b32cc5788752ec6e3f82487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">access size of a element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:gaa49cf3c2b32cc5788752ec6e3f82487b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16485d62a8f40944c407a47d36876bf0" id="r_ga16485d62a8f40944c407a47d36876bf0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga16485d62a8f40944c407a47d36876bf0">a_buf_at_</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga16485d62a8f40944c407a47d36876bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga16485d62a8f40944c407a47d36876bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga304d942c08f7ab2b11c2daaccd18511e" id="r_ga304d942c08f7ab2b11c2daaccd18511e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga304d942c08f7ab2b11c2daaccd18511e">a_buf_at</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga304d942c08f7ab2b11c2daaccd18511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga304d942c08f7ab2b11c2daaccd18511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa216e67cdea7155bda7fede44f1b8e22" id="r_gaa216e67cdea7155bda7fede44f1b8e22"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa216e67cdea7155bda7fede44f1b8e22">a_buf_idx</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, ptrdiff_t idx)</td></tr>
+<tr class="memdesc:gaa216e67cdea7155bda7fede44f1b8e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:gaa216e67cdea7155bda7fede44f1b8e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5ef43b93a6359260ff756f6f3d01965" id="r_gab5ef43b93a6359260ff756f6f3d01965"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab5ef43b93a6359260ff756f6f3d01965">a_buf_top_</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:gab5ef43b93a6359260ff756f6f3d01965"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:gab5ef43b93a6359260ff756f6f3d01965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99efb01444084432f248ffc2beb62a36" id="r_ga99efb01444084432f248ffc2beb62a36"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99efb01444084432f248ffc2beb62a36">a_buf_top</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:ga99efb01444084432f248ffc2beb62a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga99efb01444084432f248ffc2beb62a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51ecbef46aac88a52f633e78a44159d5" id="r_ga51ecbef46aac88a52f633e78a44159d5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga51ecbef46aac88a52f633e78a44159d5">a_buf_end</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx)</td></tr>
+<tr class="memdesc:ga51ecbef46aac88a52f633e78a44159d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga51ecbef46aac88a52f633e78a44159d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67cca7d31444c4932a1bd7090b847305" id="r_ga67cca7d31444c4932a1bd7090b847305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67cca7d31444c4932a1bd7090b847305">a_buf_ctor</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, void *ptr, size_t siz, size_t num)</td></tr>
+<tr class="memdesc:ga67cca7d31444c4932a1bd7090b847305"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for buffer structure  <br /></td></tr>
+<tr class="separator:ga67cca7d31444c4932a1bd7090b847305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63af5cfa17e56a3b54fa1d90a4cdbc7a" id="r_ga63af5cfa17e56a3b54fa1d90a4cdbc7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63af5cfa17e56a3b54fa1d90a4cdbc7a">a_buf_dtor</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga63af5cfa17e56a3b54fa1d90a4cdbc7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for buffer structure  <br /></td></tr>
+<tr class="separator:ga63af5cfa17e56a3b54fa1d90a4cdbc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga206e152a87a95cad0440929fc26cc574" id="r_ga206e152a87a95cad0440929fc26cc574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga206e152a87a95cad0440929fc26cc574">a_buf_move</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, <a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *obj)</td></tr>
+<tr class="memdesc:ga206e152a87a95cad0440929fc26cc574"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to buffer structure by moving  <br /></td></tr>
+<tr class="separator:ga206e152a87a95cad0440929fc26cc574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3de0f9ecacd31ea9bee7e599c50267fd" id="r_ga3de0f9ecacd31ea9bee7e599c50267fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3de0f9ecacd31ea9bee7e599c50267fd">a_buf_drop</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga3de0f9ecacd31ea9bee7e599c50267fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all the elements for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga3de0f9ecacd31ea9bee7e599c50267fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga773a8d7cafa3283feba5c91be9c011f9" id="r_ga773a8d7cafa3283feba5c91be9c011f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga773a8d7cafa3283feba5c91be9c011f9">a_buf_swap</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, size_t lhs, size_t rhs)</td></tr>
+<tr class="memdesc:ga773a8d7cafa3283feba5c91be9c011f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap elements lhs and rhs for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga773a8d7cafa3283feba5c91be9c011f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26e7573f87d2d8321398f3194cb87e09" id="r_ga26e7573f87d2d8321398f3194cb87e09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26e7573f87d2d8321398f3194cb87e09">a_buf_sort</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga26e7573f87d2d8321398f3194cb87e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort all elements for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga26e7573f87d2d8321398f3194cb87e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22b8a39ef14d90271c60bd4186c98f2b" id="r_ga22b8a39ef14d90271c60bd4186c98f2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga22b8a39ef14d90271c60bd4186c98f2b">a_buf_sort_fore</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga22b8a39ef14d90271c60bd4186c98f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort foremost element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga22b8a39ef14d90271c60bd4186c98f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga497c756ec5e0b0ecf0baa6ee1580e4bd" id="r_ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga497c756ec5e0b0ecf0baa6ee1580e4bd">a_buf_sort_back</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to buffer structure  <br /></td></tr>
+<tr class="separator:ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2f9f7ca9a0b6ace50e17e966536a9c0" id="r_gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac2f9f7ca9a0b6ace50e17e966536a9c0">a_buf_search</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this buffer  <br /></td></tr>
+<tr class="separator:gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e7991bbe427b41ac1d17881d91a299b" id="r_ga2e7991bbe427b41ac1d17881d91a299b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2e7991bbe427b41ac1d17881d91a299b">a_buf_insert</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga2e7991bbe427b41ac1d17881d91a299b"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert an element into the buffer  <br /></td></tr>
+<tr class="separator:ga2e7991bbe427b41ac1d17881d91a299b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fd152f5280653b265e7f67a09508bd4" id="r_ga8fd152f5280653b265e7f67a09508bd4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8fd152f5280653b265e7f67a09508bd4">a_buf_remove</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga8fd152f5280653b265e7f67a09508bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove an element from the buffer  <br /></td></tr>
+<tr class="separator:ga8fd152f5280653b265e7f67a09508bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2ec535b29ae776d1a4523a49e2b208c" id="r_gaf2ec535b29ae776d1a4523a49e2b208c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf2ec535b29ae776d1a4523a49e2b208c">a_buf_push_fore</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:gaf2ec535b29ae776d1a4523a49e2b208c"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer forward  <br /></td></tr>
+<tr class="separator:gaf2ec535b29ae776d1a4523a49e2b208c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac14f2d12dd307be06943202cde2980d2" id="r_gac14f2d12dd307be06943202cde2980d2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac14f2d12dd307be06943202cde2980d2">a_buf_push_back</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:gac14f2d12dd307be06943202cde2980d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer backward  <br /></td></tr>
+<tr class="separator:gac14f2d12dd307be06943202cde2980d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d2a48463dd010f6fc9f6f1c020ddded" id="r_ga7d2a48463dd010f6fc9f6f1c020ddded"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7d2a48463dd010f6fc9f6f1c020ddded">a_buf_pull_fore</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:ga7d2a48463dd010f6fc9f6f1c020ddded"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer forward  <br /></td></tr>
+<tr class="separator:ga7d2a48463dd010f6fc9f6f1c020ddded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cecdb5a7789e6ae43fa67232fae534a" id="r_ga1cecdb5a7789e6ae43fa67232fae534a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1cecdb5a7789e6ae43fa67232fae534a">a_buf_pull_back</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:ga1cecdb5a7789e6ae43fa67232fae534a"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer backward  <br /></td></tr>
+<tr class="separator:ga1cecdb5a7789e6ae43fa67232fae534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6dff9cadd1e8ea4035049c3acf86d1f9" id="r_ga6dff9cadd1e8ea4035049c3acf86d1f9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6dff9cadd1e8ea4035049c3acf86d1f9">a_buf_push</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:ga6dff9cadd1e8ea4035049c3acf86d1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer  <br /></td></tr>
+<tr class="separator:ga6dff9cadd1e8ea4035049c3acf86d1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5f79823f6179c89803fa7ccf2da8c8e" id="r_gaa5f79823f6179c89803fa7ccf2da8c8e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa5f79823f6179c89803fa7ccf2da8c8e">a_buf_pull</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx)</td></tr>
+<tr class="memdesc:gaa5f79823f6179c89803fa7ccf2da8c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the buffer  <br /></td></tr>
+<tr class="separator:gaa5f79823f6179c89803fa7ccf2da8c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -284,14 +284,14 @@ Functions</h2></td></tr>
 <p>iterate over a buffer </p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga83bbea482be1b23cdfdea81704ea9202">a_buf_foreach</a>(T, it, ctx)</div>
 <div class="line">{</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__BUF_html_ga52601633b0e2db232e2eb8c1a5d2968f"><div class="ttname"><a href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a></div><div class="ttdeci">size_t a_buf_siz(a_buf_s const *const ctx)</div><div class="ttdoc">access size of a element for a pointer to buffer structure</div><div class="ttdef"><b>Definition</b> buf.h:50</div></div>
 <div class="ttc" id="agroup__A__BUF_html_ga83bbea482be1b23cdfdea81704ea9202"><div class="ttname"><a href="#ga83bbea482be1b23cdfdea81704ea9202">a_buf_foreach</a></div><div class="ttdeci">#define a_buf_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a buffer</div><div class="ttdef"><b>Definition</b> buf.h:338</div></div>
+<div class="ttc" id="agroup__A__BUF_html_gaa49cf3c2b32cc5788752ec6e3f82487b"><div class="ttname"><a href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a></div><div class="ttdeci">size_t a_buf_siz(a_buf const *ctx)</div><div class="ttdoc">access size of a element for a pointer to buffer structure</div><div class="ttdef"><b>Definition</b> buf.h:50</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the buffer </td></tr>
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d4/d7b/structa__buf__s.html" title="instance structure for basic buffer">a_buf_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../de/d98/structa__buf.html" title="instance structure for basic buffer">a_buf</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of buffer structure </td></tr>
   </table>
   </dd>
@@ -326,13 +326,13 @@ Functions</h2></td></tr>
 <p>iterate over a buffer in reverse </p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga729151d6d7009bed1de08af0824b1f4c">a_buf_foreach_reverse</a>(T, it, ctx)</div>
 <div class="line">{</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__BUF_html_ga729151d6d7009bed1de08af0824b1f4c"><div class="ttname"><a href="#ga729151d6d7009bed1de08af0824b1f4c">a_buf_foreach_reverse</a></div><div class="ttdeci">#define a_buf_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a buffer in reverse</div><div class="ttdef"><b>Definition</b> buf.h:352</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the buffer </td></tr>
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d4/d7b/structa__buf__s.html" title="instance structure for basic buffer">a_buf_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../de/d98/structa__buf.html" title="instance structure for basic buffer">a_buf</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of buffer structure </td></tr>
   </table>
   </dd>
@@ -354,7 +354,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -363,7 +363,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#gabe395246327ebc64342eb69d427f6a9a">a_buf_forenum</a>(i, ctx)</div>
 <div class="line">{</div>
 <div class="line">    T *it = (T *)a_buf_at(ctx, i);</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__BUF_html_gabe395246327ebc64342eb69d427f6a9a"><div class="ttname"><a href="#gabe395246327ebc64342eb69d427f6a9a">a_buf_forenum</a></div><div class="ttdeci">#define a_buf_forenum(i, ctx)</div><div class="ttdoc">iterate over a buffer</div><div class="ttdef"><b>Definition</b> buf.h:310</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
@@ -390,7 +390,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -399,7 +399,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga12ef05268ae81feb405d4478f78bc211">a_buf_forenum_reverse</a>(i, ctx)</div>
 <div class="line">{</div>
 <div class="line">    T *it = (T *)a_buf_at(ctx, i);</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga52601633b0e2db232e2eb8c1a5d2968f">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa49cf3c2b32cc5788752ec6e3f82487b">a_buf_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__BUF_html_ga12ef05268ae81feb405d4478f78bc211"><div class="ttname"><a href="#ga12ef05268ae81feb405d4478f78bc211">a_buf_forenum_reverse</a></div><div class="ttdeci">#define a_buf_forenum_reverse(i, ctx)</div><div class="ttdoc">iterate over a buffer in reverse</div><div class="ttdef"><b>Definition</b> buf.h:324</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
@@ -413,8 +413,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga6a3501e206692c35cbf5c9aebb7bc32d" name="ga6a3501e206692c35cbf5c9aebb7bc32d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6a3501e206692c35cbf5c9aebb7bc32d">&#9670;&#160;</a></span>a_buf_at()</h2>
+<a id="ga304d942c08f7ab2b11c2daaccd18511e" name="ga304d942c08f7ab2b11c2daaccd18511e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga304d942c08f7ab2b11c2daaccd18511e">&#9670;&#160;</a></span>a_buf_at()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,12 +422,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_at </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -450,8 +450,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6e1326a0c9fdb98b27b540cde622a1dc" name="ga6e1326a0c9fdb98b27b540cde622a1dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6e1326a0c9fdb98b27b540cde622a1dc">&#9670;&#160;</a></span>a_buf_at_()</h2>
+<a id="ga16485d62a8f40944c407a47d36876bf0" name="ga16485d62a8f40944c407a47d36876bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16485d62a8f40944c407a47d36876bf0">&#9670;&#160;</a></span>a_buf_at_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,12 +459,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_at_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -482,8 +482,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga67d780bb30947fd26edef1c61695df4f" name="ga67d780bb30947fd26edef1c61695df4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga67d780bb30947fd26edef1c61695df4f">&#9670;&#160;</a></span>a_buf_ctor()</h2>
+<a id="ga67cca7d31444c4932a1bd7090b847305" name="ga67cca7d31444c4932a1bd7090b847305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67cca7d31444c4932a1bd7090b847305">&#9670;&#160;</a></span>a_buf_ctor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,7 +491,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_ctor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -524,8 +524,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4b869207ab8e7ada1b252a823db88c09" name="ga4b869207ab8e7ada1b252a823db88c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4b869207ab8e7ada1b252a823db88c09">&#9670;&#160;</a></span>a_buf_drop()</h2>
+<a id="ga3de0f9ecacd31ea9bee7e599c50267fd" name="ga3de0f9ecacd31ea9bee7e599c50267fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3de0f9ecacd31ea9bee7e599c50267fd">&#9670;&#160;</a></span>a_buf_drop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,7 +533,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_drop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -554,8 +554,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafc1baac8bcf5c24160fe97eba13ca7e1" name="gafc1baac8bcf5c24160fe97eba13ca7e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafc1baac8bcf5c24160fe97eba13ca7e1">&#9670;&#160;</a></span>a_buf_dtor()</h2>
+<a id="ga63af5cfa17e56a3b54fa1d90a4cdbc7a" name="ga63af5cfa17e56a3b54fa1d90a4cdbc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63af5cfa17e56a3b54fa1d90a4cdbc7a">&#9670;&#160;</a></span>a_buf_dtor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -563,7 +563,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_dtor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -584,8 +584,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga23dd51eb5d07c37fe698fc6047d45f39" name="ga23dd51eb5d07c37fe698fc6047d45f39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23dd51eb5d07c37fe698fc6047d45f39">&#9670;&#160;</a></span>a_buf_end()</h2>
+<a id="ga51ecbef46aac88a52f633e78a44159d5" name="ga51ecbef46aac88a52f633e78a44159d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51ecbef46aac88a52f633e78a44159d5">&#9670;&#160;</a></span>a_buf_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -593,7 +593,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_end </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -610,8 +610,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5c3f61cc71a2634291866fc6ac03c378" name="ga5c3f61cc71a2634291866fc6ac03c378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5c3f61cc71a2634291866fc6ac03c378">&#9670;&#160;</a></span>a_buf_idx()</h2>
+<a id="gaa216e67cdea7155bda7fede44f1b8e22" name="gaa216e67cdea7155bda7fede44f1b8e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa216e67cdea7155bda7fede44f1b8e22">&#9670;&#160;</a></span>a_buf_idx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,12 +619,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_idx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ptrdiff_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">ptrdiff_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -647,8 +647,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa9cc37b1fb56f14f19e18b95f93a1e4e" name="gaa9cc37b1fb56f14f19e18b95f93a1e4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa9cc37b1fb56f14f19e18b95f93a1e4e">&#9670;&#160;</a></span>a_buf_insert()</h2>
+<a id="ga2e7991bbe427b41ac1d17881d91a299b" name="ga2e7991bbe427b41ac1d17881d91a299b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e7991bbe427b41ac1d17881d91a299b">&#9670;&#160;</a></span>a_buf_insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,7 +656,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -688,8 +688,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga43ee91879a6841130012a8a03d1ca819" name="ga43ee91879a6841130012a8a03d1ca819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43ee91879a6841130012a8a03d1ca819">&#9670;&#160;</a></span>a_buf_mem()</h2>
+<a id="ga49e2a7497833b255c4109f8c8ac703a4" name="ga49e2a7497833b255c4109f8c8ac703a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49e2a7497833b255c4109f8c8ac703a4">&#9670;&#160;</a></span>a_buf_mem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -697,7 +697,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_buf_mem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -713,8 +713,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf1f7fd118e6064d56cc50c64405a03f1" name="gaf1f7fd118e6064d56cc50c64405a03f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf1f7fd118e6064d56cc50c64405a03f1">&#9670;&#160;</a></span>a_buf_move()</h2>
+<a id="ga206e152a87a95cad0440929fc26cc574" name="ga206e152a87a95cad0440929fc26cc574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga206e152a87a95cad0440929fc26cc574">&#9670;&#160;</a></span>a_buf_move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -722,12 +722,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_move </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -743,8 +743,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa26e29bd0935e3be6831c269299e2c9a" name="gaa26e29bd0935e3be6831c269299e2c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa26e29bd0935e3be6831c269299e2c9a">&#9670;&#160;</a></span>a_buf_num()</h2>
+<a id="ga81ddd5ede873d0baded6e184c7c75a34" name="ga81ddd5ede873d0baded6e184c7c75a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81ddd5ede873d0baded6e184c7c75a34">&#9670;&#160;</a></span>a_buf_num()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -752,7 +752,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_buf_num </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -768,8 +768,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf3db58ba0928b93bcc59c8f09df1a8ad" name="gaf3db58ba0928b93bcc59c8f09df1a8ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3db58ba0928b93bcc59c8f09df1a8ad">&#9670;&#160;</a></span>a_buf_ptr()</h2>
+<a id="ga5157c73a6b488aea0350612bb63ad99e" name="ga5157c73a6b488aea0350612bb63ad99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5157c73a6b488aea0350612bb63ad99e">&#9670;&#160;</a></span>a_buf_ptr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -777,7 +777,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_ptr </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -793,8 +793,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gade85c1a115946a04b4ce4b6bdbd79e48" name="gade85c1a115946a04b4ce4b6bdbd79e48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade85c1a115946a04b4ce4b6bdbd79e48">&#9670;&#160;</a></span>a_buf_pull()</h2>
+<a id="gaa5f79823f6179c89803fa7ccf2da8c8e" name="gaa5f79823f6179c89803fa7ccf2da8c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5f79823f6179c89803fa7ccf2da8c8e">&#9670;&#160;</a></span>a_buf_pull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,7 +802,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_pull </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -825,8 +825,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3549b7f2dda968c5394df564817895c2" name="ga3549b7f2dda968c5394df564817895c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3549b7f2dda968c5394df564817895c2">&#9670;&#160;</a></span>a_buf_pull_back()</h2>
+<a id="ga1cecdb5a7789e6ae43fa67232fae534a" name="ga1cecdb5a7789e6ae43fa67232fae534a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cecdb5a7789e6ae43fa67232fae534a">&#9670;&#160;</a></span>a_buf_pull_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -834,7 +834,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_pull_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -857,8 +857,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5f1c811d7bb4257589d4971b71ac1d66" name="ga5f1c811d7bb4257589d4971b71ac1d66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f1c811d7bb4257589d4971b71ac1d66">&#9670;&#160;</a></span>a_buf_pull_fore()</h2>
+<a id="ga7d2a48463dd010f6fc9f6f1c020ddded" name="ga7d2a48463dd010f6fc9f6f1c020ddded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d2a48463dd010f6fc9f6f1c020ddded">&#9670;&#160;</a></span>a_buf_pull_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -866,7 +866,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_pull_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -889,8 +889,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8abbf634ab39de70d2be1272e707fdd1" name="ga8abbf634ab39de70d2be1272e707fdd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8abbf634ab39de70d2be1272e707fdd1">&#9670;&#160;</a></span>a_buf_push()</h2>
+<a id="ga6dff9cadd1e8ea4035049c3acf86d1f9" name="ga6dff9cadd1e8ea4035049c3acf86d1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6dff9cadd1e8ea4035049c3acf86d1f9">&#9670;&#160;</a></span>a_buf_push()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -898,7 +898,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -921,8 +921,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab0f8d7e67e84f14c163eb25d5ad00795" name="gab0f8d7e67e84f14c163eb25d5ad00795"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab0f8d7e67e84f14c163eb25d5ad00795">&#9670;&#160;</a></span>a_buf_push_back()</h2>
+<a id="gac14f2d12dd307be06943202cde2980d2" name="gac14f2d12dd307be06943202cde2980d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac14f2d12dd307be06943202cde2980d2">&#9670;&#160;</a></span>a_buf_push_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -930,7 +930,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_push_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -953,8 +953,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga10b6e566b35eafcd5627be934b9c842e" name="ga10b6e566b35eafcd5627be934b9c842e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10b6e566b35eafcd5627be934b9c842e">&#9670;&#160;</a></span>a_buf_push_fore()</h2>
+<a id="gaf2ec535b29ae776d1a4523a49e2b208c" name="gaf2ec535b29ae776d1a4523a49e2b208c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2ec535b29ae776d1a4523a49e2b208c">&#9670;&#160;</a></span>a_buf_push_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -962,7 +962,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_push_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -985,8 +985,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gacfef69bef5c9294342c081357f3ba333" name="gacfef69bef5c9294342c081357f3ba333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacfef69bef5c9294342c081357f3ba333">&#9670;&#160;</a></span>a_buf_remove()</h2>
+<a id="ga8fd152f5280653b265e7f67a09508bd4" name="ga8fd152f5280653b265e7f67a09508bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fd152f5280653b265e7f67a09508bd4">&#9670;&#160;</a></span>a_buf_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -994,7 +994,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1026,8 +1026,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa1f47c6a231a22c0f75df6c5977e18ed" name="gaa1f47c6a231a22c0f75df6c5977e18ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa1f47c6a231a22c0f75df6c5977e18ed">&#9670;&#160;</a></span>a_buf_search()</h2>
+<a id="gac2f9f7ca9a0b6ace50e17e966536a9c0" name="gac2f9f7ca9a0b6ace50e17e966536a9c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2f9f7ca9a0b6ace50e17e966536a9c0">&#9670;&#160;</a></span>a_buf_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1035,7 +1035,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_search </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1074,8 +1074,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga52601633b0e2db232e2eb8c1a5d2968f" name="ga52601633b0e2db232e2eb8c1a5d2968f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga52601633b0e2db232e2eb8c1a5d2968f">&#9670;&#160;</a></span>a_buf_siz()</h2>
+<a id="gaa49cf3c2b32cc5788752ec6e3f82487b" name="gaa49cf3c2b32cc5788752ec6e3f82487b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa49cf3c2b32cc5788752ec6e3f82487b">&#9670;&#160;</a></span>a_buf_siz()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1083,7 +1083,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_buf_siz </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1099,8 +1099,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga18c345f5897f31757a8c60e36ba6413a" name="ga18c345f5897f31757a8c60e36ba6413a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga18c345f5897f31757a8c60e36ba6413a">&#9670;&#160;</a></span>a_buf_sort()</h2>
+<a id="ga26e7573f87d2d8321398f3194cb87e09" name="ga26e7573f87d2d8321398f3194cb87e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26e7573f87d2d8321398f3194cb87e09">&#9670;&#160;</a></span>a_buf_sort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1108,7 +1108,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_sort </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1134,8 +1134,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga974da190cb132dc4270fd3054d0d1c95" name="ga974da190cb132dc4270fd3054d0d1c95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga974da190cb132dc4270fd3054d0d1c95">&#9670;&#160;</a></span>a_buf_sort_back()</h2>
+<a id="ga497c756ec5e0b0ecf0baa6ee1580e4bd" name="ga497c756ec5e0b0ecf0baa6ee1580e4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga497c756ec5e0b0ecf0baa6ee1580e4bd">&#9670;&#160;</a></span>a_buf_sort_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1143,7 +1143,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_sort_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1159,9 +1159,9 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
 <div class="line">    INIT(obj);</div>
-<div class="line">    <a class="code hl_function" href="#ga974da190cb132dc4270fd3054d0d1c95">a_buf_sort_back</a>(ctx, cmp);</div>
+<div class="line">    <a class="code hl_function" href="#ga497c756ec5e0b0ecf0baa6ee1580e4bd">a_buf_sort_back</a>(ctx, cmp);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__BUF_html_ga974da190cb132dc4270fd3054d0d1c95"><div class="ttname"><a href="#ga974da190cb132dc4270fd3054d0d1c95">a_buf_sort_back</a></div><div class="ttdeci">void a_buf_sort_back(a_buf_s const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort backmost element for a pointer to buffer structure</div></div>
+<div class="ttc" id="agroup__A__BUF_html_ga497c756ec5e0b0ecf0baa6ee1580e4bd"><div class="ttname"><a href="#ga497c756ec5e0b0ecf0baa6ee1580e4bd">a_buf_sort_back</a></div><div class="ttdeci">void a_buf_sort_back(a_buf const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort backmost element for a pointer to buffer structure</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of buffer structure </td></tr>
@@ -1177,8 +1177,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga84c0b95dcb98347571ffc86b330884f3" name="ga84c0b95dcb98347571ffc86b330884f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga84c0b95dcb98347571ffc86b330884f3">&#9670;&#160;</a></span>a_buf_sort_fore()</h2>
+<a id="ga22b8a39ef14d90271c60bd4186c98f2b" name="ga22b8a39ef14d90271c60bd4186c98f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22b8a39ef14d90271c60bd4186c98f2b">&#9670;&#160;</a></span>a_buf_sort_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1186,7 +1186,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_sort_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1202,9 +1202,9 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
 <div class="line">    INIT(obj);</div>
-<div class="line">    <a class="code hl_function" href="#ga84c0b95dcb98347571ffc86b330884f3">a_buf_sort_fore</a>(ctx, cmp);</div>
+<div class="line">    <a class="code hl_function" href="#ga22b8a39ef14d90271c60bd4186c98f2b">a_buf_sort_fore</a>(ctx, cmp);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__BUF_html_ga84c0b95dcb98347571ffc86b330884f3"><div class="ttname"><a href="#ga84c0b95dcb98347571ffc86b330884f3">a_buf_sort_fore</a></div><div class="ttdeci">void a_buf_sort_fore(a_buf_s const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to buffer structure</div></div>
+<div class="ttc" id="agroup__A__BUF_html_ga22b8a39ef14d90271c60bd4186c98f2b"><div class="ttname"><a href="#ga22b8a39ef14d90271c60bd4186c98f2b">a_buf_sort_fore</a></div><div class="ttdeci">void a_buf_sort_fore(a_buf const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to buffer structure</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of buffer structure </td></tr>
@@ -1220,8 +1220,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga698f56db71e1736a6a7b2020e5b141da" name="ga698f56db71e1736a6a7b2020e5b141da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga698f56db71e1736a6a7b2020e5b141da">&#9670;&#160;</a></span>a_buf_swap()</h2>
+<a id="ga773a8d7cafa3283feba5c91be9c011f9" name="ga773a8d7cafa3283feba5c91be9c011f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga773a8d7cafa3283feba5c91be9c011f9">&#9670;&#160;</a></span>a_buf_swap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1229,7 +1229,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_buf_swap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1256,8 +1256,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga92b115c1a4e9c281001ac72c500d8f5f" name="ga92b115c1a4e9c281001ac72c500d8f5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga92b115c1a4e9c281001ac72c500d8f5f">&#9670;&#160;</a></span>a_buf_top()</h2>
+<a id="ga99efb01444084432f248ffc2beb62a36" name="ga99efb01444084432f248ffc2beb62a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99efb01444084432f248ffc2beb62a36">&#9670;&#160;</a></span>a_buf_top()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1265,7 +1265,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_top </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1288,8 +1288,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafd9d2a7fa53a7fd22786a2af6a78cbf6" name="gafd9d2a7fa53a7fd22786a2af6a78cbf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafd9d2a7fa53a7fd22786a2af6a78cbf6">&#9670;&#160;</a></span>a_buf_top_()</h2>
+<a id="gab5ef43b93a6359260ff756f6f3d01965" name="gab5ef43b93a6359260ff756f6f3d01965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5ef43b93a6359260ff756f6f3d01965">&#9670;&#160;</a></span>a_buf_top_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1297,7 +1297,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_buf_top_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d7b/structa__buf__s.html">a_buf_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

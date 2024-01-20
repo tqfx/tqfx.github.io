@@ -97,16 +97,16 @@ Collaboration diagram for basic vector library:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic vector  <a href="../../d0/d10/structa__vec__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic vector  <a href="../../d7/d3b/structa__vec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga0289e3fd1941361bb158ec043d5502fa" id="r_ga0289e3fd1941361bb158ec043d5502fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td></tr>
+<tr class="memitem:ga0289e3fd1941361bb158ec043d5502fa" id="r_ga0289e3fd1941361bb158ec043d5502fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td></tr>
 <tr class="memdesc:ga0289e3fd1941361bb158ec043d5502fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a vector  <br /></td></tr>
 <tr class="separator:ga0289e3fd1941361bb158ec043d5502fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeae695755c11f37396704bd280d28895" id="r_gaeae695755c11f37396704bd280d28895"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td></tr>
+<tr class="memitem:gaeae695755c11f37396704bd280d28895" id="r_gaeae695755c11f37396704bd280d28895"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a>(i,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td></tr>
 <tr class="memdesc:gaeae695755c11f37396704bd280d28895"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a vector in reverse  <br /></td></tr>
 <tr class="separator:gaeae695755c11f37396704bd280d28895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae8f1a7228f58ba98953ef8da3dd61be9" id="r_gae8f1a7228f58ba98953ef8da3dd61be9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae8f1a7228f58ba98953ef8da3dd61be9">a_vec_foreach</a>(T,  it,  ctx)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga68fe2094fd31346808ff2c5f54f509fc">a_foreach</a>(T, it, (ctx)-&gt;_ptr, (ctx)-&gt;_num)</td></tr>
@@ -169,112 +169,112 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga0d769cc4547a468806f2d390663a216b" id="r_ga0d769cc4547a468806f2d390663a216b"><td class="memItemLeft" align="right" valign="top"><a id="ga0d769cc4547a468806f2d390663a216b" name="ga0d769cc4547a468806f2d390663a216b"></a>
-typedef struct a_vec_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_vec_s</b></td></tr>
-<tr class="memdesc:ga0d769cc4547a468806f2d390663a216b"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic vector <br /></td></tr>
-<tr class="separator:ga0d769cc4547a468806f2d390663a216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f9ffa52a032f0edb367545bace8e843" id="r_ga0f9ffa52a032f0edb367545bace8e843"><td class="memItemLeft" align="right" valign="top"><a id="ga0f9ffa52a032f0edb367545bace8e843" name="ga0f9ffa52a032f0edb367545bace8e843"></a>
+typedef struct a_vec&#160;</td><td class="memItemRight" valign="bottom"><b>a_vec</b></td></tr>
+<tr class="memdesc:ga0f9ffa52a032f0edb367545bace8e843"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for basic vector <br /></td></tr>
+<tr class="separator:ga0f9ffa52a032f0edb367545bace8e843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga9f675daa5a29bbb8d88bb7325ba790ef" id="r_ga9f675daa5a29bbb8d88bb7325ba790ef"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f675daa5a29bbb8d88bb7325ba790ef">a_vec_ptr</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga9f675daa5a29bbb8d88bb7325ba790ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">access address of vector for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga9f675daa5a29bbb8d88bb7325ba790ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59ce807cc59c98227875aca6c57d2fe4" id="r_ga59ce807cc59c98227875aca6c57d2fe4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga59ce807cc59c98227875aca6c57d2fe4">a_vec_num</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga59ce807cc59c98227875aca6c57d2fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access number of element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga59ce807cc59c98227875aca6c57d2fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f29131d6fa00bde21062d054e20ad0f" id="r_ga2f29131d6fa00bde21062d054e20ad0f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2f29131d6fa00bde21062d054e20ad0f">a_vec_mem</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga2f29131d6fa00bde21062d054e20ad0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access memory of element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga2f29131d6fa00bde21062d054e20ad0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga708f633c5c1af4ef2f0433293c555462" id="r_ga708f633c5c1af4ef2f0433293c555462"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga708f633c5c1af4ef2f0433293c555462"><td class="mdescLeft">&#160;</td><td class="mdescRight">access size of a element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga708f633c5c1af4ef2f0433293c555462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5711e152abde44452843c85e64570aa7" id="r_ga5711e152abde44452843c85e64570aa7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5711e152abde44452843c85e64570aa7">a_vec_at_</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx, size_t const idx)</td></tr>
-<tr class="memdesc:ga5711e152abde44452843c85e64570aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga5711e152abde44452843c85e64570aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga992e605fb8f4a41d9eba7c5b13d479e1" id="r_ga992e605fb8f4a41d9eba7c5b13d479e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga992e605fb8f4a41d9eba7c5b13d479e1">a_vec_at</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx, size_t const idx)</td></tr>
-<tr class="memdesc:ga992e605fb8f4a41d9eba7c5b13d479e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga992e605fb8f4a41d9eba7c5b13d479e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2c8de9c2a14202aafe736e7be43887f" id="r_gaa2c8de9c2a14202aafe736e7be43887f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa2c8de9c2a14202aafe736e7be43887f">a_vec_idx</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx, ptrdiff_t const idx)</td></tr>
-<tr class="memdesc:gaa2c8de9c2a14202aafe736e7be43887f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:gaa2c8de9c2a14202aafe736e7be43887f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga949ec929f313827e8986f2ef84995e4f" id="r_ga949ec929f313827e8986f2ef84995e4f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga949ec929f313827e8986f2ef84995e4f">a_vec_top_</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga949ec929f313827e8986f2ef84995e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga949ec929f313827e8986f2ef84995e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga04bc9ff4caba129d8718e0b22a4f57e0" id="r_ga04bc9ff4caba129d8718e0b22a4f57e0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga04bc9ff4caba129d8718e0b22a4f57e0">a_vec_top</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga04bc9ff4caba129d8718e0b22a4f57e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga04bc9ff4caba129d8718e0b22a4f57e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga635258702baaccf24a5816791c0de628" id="r_ga635258702baaccf24a5816791c0de628"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga635258702baaccf24a5816791c0de628">a_vec_end_</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga635258702baaccf24a5816791c0de628"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga635258702baaccf24a5816791c0de628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9e3534e8f80db42bac23f4b7e4caacf9" id="r_ga9e3534e8f80db42bac23f4b7e4caacf9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9e3534e8f80db42bac23f4b7e4caacf9">a_vec_end</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const ctx)</td></tr>
-<tr class="memdesc:ga9e3534e8f80db42bac23f4b7e4caacf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga9e3534e8f80db42bac23f4b7e4caacf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga15f1970ed5adb1f27bd8b06ae0a7160c" id="r_ga15f1970ed5adb1f27bd8b06ae0a7160c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga15f1970ed5adb1f27bd8b06ae0a7160c">a_vec_new</a> (size_t size)</td></tr>
-<tr class="memdesc:ga15f1970ed5adb1f27bd8b06ae0a7160c"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate a pointer to vector structure from memory  <br /></td></tr>
-<tr class="separator:ga15f1970ed5adb1f27bd8b06ae0a7160c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8af8def266ca3b7a336f5e982e0f9551" id="r_ga8af8def266ca3b7a336f5e982e0f9551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8af8def266ca3b7a336f5e982e0f9551">a_vec_die</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:ga8af8def266ca3b7a336f5e982e0f9551"><td class="mdescLeft">&#160;</td><td class="mdescRight">deallocate a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga8af8def266ca3b7a336f5e982e0f9551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2c5957e7ea23247890afeb790235b939" id="r_ga2c5957e7ea23247890afeb790235b939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c5957e7ea23247890afeb790235b939">a_vec_ctor</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, size_t size)</td></tr>
-<tr class="memdesc:ga2c5957e7ea23247890afeb790235b939"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for vector structure  <br /></td></tr>
-<tr class="separator:ga2c5957e7ea23247890afeb790235b939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae4d670fa811b69dbb946207c86a69843" id="r_gae4d670fa811b69dbb946207c86a69843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae4d670fa811b69dbb946207c86a69843">a_vec_dtor</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:gae4d670fa811b69dbb946207c86a69843"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for vector structure  <br /></td></tr>
-<tr class="separator:gae4d670fa811b69dbb946207c86a69843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7263e849beaa74258eca2c8c1425b1ac" id="r_ga7263e849beaa74258eca2c8c1425b1ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7263e849beaa74258eca2c8c1425b1ac">a_vec_copy</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, <a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *obj, int(*dup)(void *, void const *))</td></tr>
-<tr class="memdesc:ga7263e849beaa74258eca2c8c1425b1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to vector structure by copying  <br /></td></tr>
-<tr class="separator:ga7263e849beaa74258eca2c8c1425b1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0f7156e09bd36522b43ad3e09371a4ef" id="r_ga0f7156e09bd36522b43ad3e09371a4ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0f7156e09bd36522b43ad3e09371a4ef">a_vec_move</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, <a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *obj)</td></tr>
-<tr class="memdesc:ga0f7156e09bd36522b43ad3e09371a4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to vector structure by moving  <br /></td></tr>
-<tr class="separator:ga0f7156e09bd36522b43ad3e09371a4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5bdf1eb53a385f228734ea9d0c545096" id="r_ga5bdf1eb53a385f228734ea9d0c545096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5bdf1eb53a385f228734ea9d0c545096">a_vec_edit</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, size_t size, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:ga5bdf1eb53a385f228734ea9d0c545096"><td class="mdescLeft">&#160;</td><td class="mdescRight">edit size of a element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga5bdf1eb53a385f228734ea9d0c545096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad34d7a4444f61bc3d51da4e039920038" id="r_gad34d7a4444f61bc3d51da4e039920038"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad34d7a4444f61bc3d51da4e039920038">a_vec_make</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, size_t num, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:gad34d7a4444f61bc3d51da4e039920038"><td class="mdescLeft">&#160;</td><td class="mdescRight">modify element number for a pointer to string structure  <br /></td></tr>
-<tr class="separator:gad34d7a4444f61bc3d51da4e039920038"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga31b479a641df0feebff3595f45c4a686" id="r_ga31b479a641df0feebff3595f45c4a686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga31b479a641df0feebff3595f45c4a686">a_vec_drop</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, void(*dtor)(void *))</td></tr>
-<tr class="memdesc:ga31b479a641df0feebff3595f45c4a686"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all the elements for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga31b479a641df0feebff3595f45c4a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5be954dc1b963d4bb20876e25f8bed1d" id="r_ga5be954dc1b963d4bb20876e25f8bed1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5be954dc1b963d4bb20876e25f8bed1d">a_vec_swap</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *ctx, size_t lhs, size_t rhs)</td></tr>
-<tr class="memdesc:ga5be954dc1b963d4bb20876e25f8bed1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap elements lhs and rhs for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga5be954dc1b963d4bb20876e25f8bed1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa5f3bcaaf9d733e1ae5aa55d561d66a9" id="r_gaa5f3bcaaf9d733e1ae5aa55d561d66a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa5f3bcaaf9d733e1ae5aa55d561d66a9">a_vec_sort</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:gaa5f3bcaaf9d733e1ae5aa55d561d66a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort all elements for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:gaa5f3bcaaf9d733e1ae5aa55d561d66a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0aeec48c89150051a02b346ee04c15b8" id="r_ga0aeec48c89150051a02b346ee04c15b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0aeec48c89150051a02b346ee04c15b8">a_vec_sort_fore</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga0aeec48c89150051a02b346ee04c15b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort foremost element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:ga0aeec48c89150051a02b346ee04c15b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff59e14663604ef27dcbcb447aa2973b" id="r_gaff59e14663604ef27dcbcb447aa2973b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaff59e14663604ef27dcbcb447aa2973b">a_vec_sort_back</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:gaff59e14663604ef27dcbcb447aa2973b"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to vector structure  <br /></td></tr>
-<tr class="separator:gaff59e14663604ef27dcbcb447aa2973b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf62b8037826d7fdd9a6b44ce055e2781" id="r_gaf62b8037826d7fdd9a6b44ce055e2781"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf62b8037826d7fdd9a6b44ce055e2781">a_vec_search</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:gaf62b8037826d7fdd9a6b44ce055e2781"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this vector  <br /></td></tr>
-<tr class="separator:gaf62b8037826d7fdd9a6b44ce055e2781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf6dcc3832d20c57de4f47c9d60d09e5" id="r_gacf6dcc3832d20c57de4f47c9d60d09e5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacf6dcc3832d20c57de4f47c9d60d09e5">a_vec_insert</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, size_t idx)</td></tr>
-<tr class="memdesc:gacf6dcc3832d20c57de4f47c9d60d09e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert an element into the vector  <br /></td></tr>
-<tr class="separator:gacf6dcc3832d20c57de4f47c9d60d09e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga880a415fd4e2640113101b0dbe087592" id="r_ga880a415fd4e2640113101b0dbe087592"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga880a415fd4e2640113101b0dbe087592">a_vec_remove</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx, size_t idx)</td></tr>
-<tr class="memdesc:ga880a415fd4e2640113101b0dbe087592"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove an element from the vector  <br /></td></tr>
-<tr class="separator:ga880a415fd4e2640113101b0dbe087592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01bd92c34b2e6afe60d6b4707ddf1f91" id="r_ga01bd92c34b2e6afe60d6b4707ddf1f91"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga01bd92c34b2e6afe60d6b4707ddf1f91">a_vec_push_fore</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga01bd92c34b2e6afe60d6b4707ddf1f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector forward  <br /></td></tr>
-<tr class="separator:ga01bd92c34b2e6afe60d6b4707ddf1f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0134265b1fc9e90e60e25d319f3864c3" id="r_ga0134265b1fc9e90e60e25d319f3864c3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0134265b1fc9e90e60e25d319f3864c3">a_vec_push_back</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga0134265b1fc9e90e60e25d319f3864c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector backward  <br /></td></tr>
-<tr class="separator:ga0134265b1fc9e90e60e25d319f3864c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad2d3e932ceb074ce0f73cddcd18c84f3" id="r_gad2d3e932ceb074ce0f73cddcd18c84f3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad2d3e932ceb074ce0f73cddcd18c84f3">a_vec_pull_fore</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:gad2d3e932ceb074ce0f73cddcd18c84f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector forward  <br /></td></tr>
-<tr class="separator:gad2d3e932ceb074ce0f73cddcd18c84f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaae8774436ae5c103c0aadcc9a09425d4" id="r_gaae8774436ae5c103c0aadcc9a09425d4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaae8774436ae5c103c0aadcc9a09425d4">a_vec_pull_back</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:gaae8774436ae5c103c0aadcc9a09425d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector backward  <br /></td></tr>
-<tr class="separator:gaae8774436ae5c103c0aadcc9a09425d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5bcb3c9f1d844b87b6090ed1e13763f9" id="r_ga5bcb3c9f1d844b87b6090ed1e13763f9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5bcb3c9f1d844b87b6090ed1e13763f9">a_vec_push</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga5bcb3c9f1d844b87b6090ed1e13763f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector  <br /></td></tr>
-<tr class="separator:ga5bcb3c9f1d844b87b6090ed1e13763f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6bcaa550118db1ddc521941717bf71f2" id="r_ga6bcaa550118db1ddc521941717bf71f2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6bcaa550118db1ddc521941717bf71f2">a_vec_pull</a> (<a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *ctx)</td></tr>
-<tr class="memdesc:ga6bcaa550118db1ddc521941717bf71f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector  <br /></td></tr>
-<tr class="separator:ga6bcaa550118db1ddc521941717bf71f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac478c00dc7b5e3562cf48eae8a032509" id="r_gac478c00dc7b5e3562cf48eae8a032509"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac478c00dc7b5e3562cf48eae8a032509">a_vec_ptr</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:gac478c00dc7b5e3562cf48eae8a032509"><td class="mdescLeft">&#160;</td><td class="mdescRight">access address of vector for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gac478c00dc7b5e3562cf48eae8a032509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadeb168d9e24516bd119758b3c8475a7b" id="r_gadeb168d9e24516bd119758b3c8475a7b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadeb168d9e24516bd119758b3c8475a7b">a_vec_num</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:gadeb168d9e24516bd119758b3c8475a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">access number of element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gadeb168d9e24516bd119758b3c8475a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc179b8201d1705e3f64cc979d4a6027" id="r_gabc179b8201d1705e3f64cc979d4a6027"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabc179b8201d1705e3f64cc979d4a6027">a_vec_mem</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:gabc179b8201d1705e3f64cc979d4a6027"><td class="mdescLeft">&#160;</td><td class="mdescRight">access memory of element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gabc179b8201d1705e3f64cc979d4a6027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa666ce5bb7481c9284c07b9bdfa56d35" id="r_gaa666ce5bb7481c9284c07b9bdfa56d35"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:gaa666ce5bb7481c9284c07b9bdfa56d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">access size of a element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gaa666ce5bb7481c9284c07b9bdfa56d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabcbc1b7ea68b007c48bd7b97c8a085a6" id="r_gabcbc1b7ea68b007c48bd7b97c8a085a6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabcbc1b7ea68b007c48bd7b97c8a085a6">a_vec_at_</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, size_t idx)</td></tr>
+<tr class="memdesc:gabcbc1b7ea68b007c48bd7b97c8a085a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gabcbc1b7ea68b007c48bd7b97c8a085a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99b11fe5bffc9acf34eeac3ce68455ad" id="r_ga99b11fe5bffc9acf34eeac3ce68455ad"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99b11fe5bffc9acf34eeac3ce68455ad">a_vec_at</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga99b11fe5bffc9acf34eeac3ce68455ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga99b11fe5bffc9acf34eeac3ce68455ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1703c1ae0fde40434ea6c4b6de6373de" id="r_ga1703c1ae0fde40434ea6c4b6de6373de"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1703c1ae0fde40434ea6c4b6de6373de">a_vec_idx</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, ptrdiff_t idx)</td></tr>
+<tr class="memdesc:ga1703c1ae0fde40434ea6c4b6de6373de"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga1703c1ae0fde40434ea6c4b6de6373de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8791e7f6e9848dd279d85e6428529194" id="r_ga8791e7f6e9848dd279d85e6428529194"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8791e7f6e9848dd279d85e6428529194">a_vec_top_</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:ga8791e7f6e9848dd279d85e6428529194"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga8791e7f6e9848dd279d85e6428529194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9cfda016a18909336036bf6d6443aab0" id="r_ga9cfda016a18909336036bf6d6443aab0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9cfda016a18909336036bf6d6443aab0">a_vec_top</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:ga9cfda016a18909336036bf6d6443aab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">access top element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga9cfda016a18909336036bf6d6443aab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga143f7ba010c777908189a7f10413e73b" id="r_ga143f7ba010c777908189a7f10413e73b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga143f7ba010c777908189a7f10413e73b">a_vec_end_</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:ga143f7ba010c777908189a7f10413e73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga143f7ba010c777908189a7f10413e73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf147696edc5790338f88e49091b81fe4" id="r_gaf147696edc5790338f88e49091b81fe4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf147696edc5790338f88e49091b81fe4">a_vec_end</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx)</td></tr>
+<tr class="memdesc:gaf147696edc5790338f88e49091b81fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access end pointer for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gaf147696edc5790338f88e49091b81fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d2b402c156d6c46856a1011f965433f" id="r_ga8d2b402c156d6c46856a1011f965433f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8d2b402c156d6c46856a1011f965433f">a_vec_new</a> (size_t size)</td></tr>
+<tr class="memdesc:ga8d2b402c156d6c46856a1011f965433f"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate a pointer to vector structure from memory  <br /></td></tr>
+<tr class="separator:ga8d2b402c156d6c46856a1011f965433f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b3fdef000763a490804b299da1cea7d" id="r_ga1b3fdef000763a490804b299da1cea7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b3fdef000763a490804b299da1cea7d">a_vec_die</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga1b3fdef000763a490804b299da1cea7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">deallocate a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga1b3fdef000763a490804b299da1cea7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga204662bff6f7b6b7d2cf2365c584d399" id="r_ga204662bff6f7b6b7d2cf2365c584d399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga204662bff6f7b6b7d2cf2365c584d399">a_vec_ctor</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, size_t size)</td></tr>
+<tr class="memdesc:ga204662bff6f7b6b7d2cf2365c584d399"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for vector structure  <br /></td></tr>
+<tr class="separator:ga204662bff6f7b6b7d2cf2365c584d399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb57a764e4a170c34872dc3c2ee6fb5a" id="r_gacb57a764e4a170c34872dc3c2ee6fb5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacb57a764e4a170c34872dc3c2ee6fb5a">a_vec_dtor</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:gacb57a764e4a170c34872dc3c2ee6fb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for vector structure  <br /></td></tr>
+<tr class="separator:gacb57a764e4a170c34872dc3c2ee6fb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c01720c0f4fcfb50c86e2539a8489cc" id="r_ga3c01720c0f4fcfb50c86e2539a8489cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3c01720c0f4fcfb50c86e2539a8489cc">a_vec_copy</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, <a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *obj, int(*dup)(void *, void const *))</td></tr>
+<tr class="memdesc:ga3c01720c0f4fcfb50c86e2539a8489cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to vector structure by copying  <br /></td></tr>
+<tr class="separator:ga3c01720c0f4fcfb50c86e2539a8489cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga310f24dd3093219af1ba773950d1a83b" id="r_ga310f24dd3093219af1ba773950d1a83b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga310f24dd3093219af1ba773950d1a83b">a_vec_move</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, <a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *obj)</td></tr>
+<tr class="memdesc:ga310f24dd3093219af1ba773950d1a83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to vector structure by moving  <br /></td></tr>
+<tr class="separator:ga310f24dd3093219af1ba773950d1a83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20e4abaccc00b330395791ef6a078ffc" id="r_ga20e4abaccc00b330395791ef6a078ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga20e4abaccc00b330395791ef6a078ffc">a_vec_edit</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, size_t size, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga20e4abaccc00b330395791ef6a078ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">edit size of a element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga20e4abaccc00b330395791ef6a078ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41489f695abdf8c1c498b37a6d3fcbaf" id="r_ga41489f695abdf8c1c498b37a6d3fcbaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga41489f695abdf8c1c498b37a6d3fcbaf">a_vec_make</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, size_t num, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga41489f695abdf8c1c498b37a6d3fcbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">modify element number for a pointer to string structure  <br /></td></tr>
+<tr class="separator:ga41489f695abdf8c1c498b37a6d3fcbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga514babf8fe114fc0a7f0928a84fa4672" id="r_ga514babf8fe114fc0a7f0928a84fa4672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga514babf8fe114fc0a7f0928a84fa4672">a_vec_drop</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, void(*dtor)(void *))</td></tr>
+<tr class="memdesc:ga514babf8fe114fc0a7f0928a84fa4672"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all the elements for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga514babf8fe114fc0a7f0928a84fa4672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9f2be5b9ead2f02490b2ea4631f1b34" id="r_gac9f2be5b9ead2f02490b2ea4631f1b34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9f2be5b9ead2f02490b2ea4631f1b34">a_vec_swap</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, size_t lhs, size_t rhs)</td></tr>
+<tr class="memdesc:gac9f2be5b9ead2f02490b2ea4631f1b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap elements lhs and rhs for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gac9f2be5b9ead2f02490b2ea4631f1b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9409714f31faf764f3a9cc6a0370756" id="r_gaf9409714f31faf764f3a9cc6a0370756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf9409714f31faf764f3a9cc6a0370756">a_vec_sort</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:gaf9409714f31faf764f3a9cc6a0370756"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort all elements for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:gaf9409714f31faf764f3a9cc6a0370756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga971acd5263a2e18ae2ec79223554c258" id="r_ga971acd5263a2e18ae2ec79223554c258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga971acd5263a2e18ae2ec79223554c258">a_vec_sort_fore</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga971acd5263a2e18ae2ec79223554c258"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort foremost element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga971acd5263a2e18ae2ec79223554c258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga878c37d234a78084d8be617742c985dd" id="r_ga878c37d234a78084d8be617742c985dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga878c37d234a78084d8be617742c985dd">a_vec_sort_back</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga878c37d234a78084d8be617742c985dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to vector structure  <br /></td></tr>
+<tr class="separator:ga878c37d234a78084d8be617742c985dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53e1c2448a0fec0193501c6cce5ccdf3" id="r_ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga53e1c2448a0fec0193501c6cce5ccdf3">a_vec_search</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this vector  <br /></td></tr>
+<tr class="separator:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aac39dd3ecfef9ed73131c63c989670" id="r_ga9aac39dd3ecfef9ed73131c63c989670"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9aac39dd3ecfef9ed73131c63c989670">a_vec_insert</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga9aac39dd3ecfef9ed73131c63c989670"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert an element into the vector  <br /></td></tr>
+<tr class="separator:ga9aac39dd3ecfef9ed73131c63c989670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b5f886613bf4bede0302b386739daab" id="r_ga7b5f886613bf4bede0302b386739daab"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7b5f886613bf4bede0302b386739daab">a_vec_remove</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, size_t idx)</td></tr>
+<tr class="memdesc:ga7b5f886613bf4bede0302b386739daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove an element from the vector  <br /></td></tr>
+<tr class="separator:ga7b5f886613bf4bede0302b386739daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga063c6ff91cdce8de2f82f43146c48492" id="r_ga063c6ff91cdce8de2f82f43146c48492"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga063c6ff91cdce8de2f82f43146c48492">a_vec_push_fore</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:ga063c6ff91cdce8de2f82f43146c48492"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector forward  <br /></td></tr>
+<tr class="separator:ga063c6ff91cdce8de2f82f43146c48492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f35e7a6384419614a893854e1b316a6" id="r_ga4f35e7a6384419614a893854e1b316a6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4f35e7a6384419614a893854e1b316a6">a_vec_push_back</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:ga4f35e7a6384419614a893854e1b316a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector backward  <br /></td></tr>
+<tr class="separator:ga4f35e7a6384419614a893854e1b316a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae97319b1f3bf3fc2d18997d9dd94fad6" id="r_gae97319b1f3bf3fc2d18997d9dd94fad6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae97319b1f3bf3fc2d18997d9dd94fad6">a_vec_pull_fore</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:gae97319b1f3bf3fc2d18997d9dd94fad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector forward  <br /></td></tr>
+<tr class="separator:gae97319b1f3bf3fc2d18997d9dd94fad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae270b6c244f079452ec09bd7a4333b83" id="r_gae270b6c244f079452ec09bd7a4333b83"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae270b6c244f079452ec09bd7a4333b83">a_vec_pull_back</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:gae270b6c244f079452ec09bd7a4333b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector backward  <br /></td></tr>
+<tr class="separator:gae270b6c244f079452ec09bd7a4333b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42480a3a503e35412efcbf21b0f033e5" id="r_ga42480a3a503e35412efcbf21b0f033e5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga42480a3a503e35412efcbf21b0f033e5">a_vec_push</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:ga42480a3a503e35412efcbf21b0f033e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector  <br /></td></tr>
+<tr class="separator:ga42480a3a503e35412efcbf21b0f033e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1987526027a7ff68e58ad02187712d76" id="r_ga1987526027a7ff68e58ad02187712d76"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1987526027a7ff68e58ad02187712d76">a_vec_pull</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx)</td></tr>
+<tr class="memdesc:ga1987526027a7ff68e58ad02187712d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">pull an element from the vector  <br /></td></tr>
+<tr class="separator:ga1987526027a7ff68e58ad02187712d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -305,14 +305,14 @@ Functions</h2></td></tr>
 <p>iterate over a vector </p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#gae8f1a7228f58ba98953ef8da3dd61be9">a_vec_foreach</a>(T, it, ctx)</div>
 <div class="line">{</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__VEC_html_ga708f633c5c1af4ef2f0433293c555462"><div class="ttname"><a href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a></div><div class="ttdeci">size_t a_vec_siz(a_vec_s const *const ctx)</div><div class="ttdoc">access size of a element for a pointer to vector structure</div><div class="ttdef"><b>Definition</b> vec.h:50</div></div>
+<div class="ttc" id="agroup__A__VEC_html_gaa666ce5bb7481c9284c07b9bdfa56d35"><div class="ttname"><a href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a></div><div class="ttdeci">size_t a_vec_siz(a_vec const *ctx)</div><div class="ttdoc">access size of a element for a pointer to vector structure</div><div class="ttdef"><b>Definition</b> vec.h:50</div></div>
 <div class="ttc" id="agroup__A__VEC_html_gae8f1a7228f58ba98953ef8da3dd61be9"><div class="ttname"><a href="#gae8f1a7228f58ba98953ef8da3dd61be9">a_vec_foreach</a></div><div class="ttdeci">#define a_vec_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:391</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the vector </td></tr>
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d0/d10/structa__vec__s.html" title="instance structure for basic vector">a_vec_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d7/d3b/structa__vec.html" title="instance structure for basic vector">a_vec</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
   </table>
   </dd>
@@ -347,13 +347,13 @@ Functions</h2></td></tr>
 <p>iterate over a vector in reverse </p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga415b333b1ac50769c1a5e92f598fdd6a">a_vec_foreach_reverse</a>(T, it, ctx)</div>
 <div class="line">{</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__VEC_html_ga415b333b1ac50769c1a5e92f598fdd6a"><div class="ttname"><a href="#ga415b333b1ac50769c1a5e92f598fdd6a">a_vec_foreach_reverse</a></div><div class="ttdeci">#define a_vec_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:405</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the vector </td></tr>
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d0/d10/structa__vec__s.html" title="instance structure for basic vector">a_vec_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d7/d3b/structa__vec.html" title="instance structure for basic vector">a_vec</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
   </table>
   </dd>
@@ -375,7 +375,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga2c65ce3b7c3f96db44e64302c0b41e23">a_forenum</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -384,7 +384,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a>(i, ctx)</div>
 <div class="line">{</div>
 <div class="line">    T *it = (T *)a_vec_at(ctx, i);</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__VEC_html_ga0289e3fd1941361bb158ec043d5502fa"><div class="ttname"><a href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a></div><div class="ttdeci">#define a_vec_forenum(i, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:363</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
@@ -411,7 +411,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga2e2ed26b70fea686816ab45e6a8b86d2">a_size_t</a>, i, (ctx)-&gt;_num)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span>&#160;)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(<a class="el" href="../../df/d91/group__A.html#ga0cd00c55eff37f4767a1d4e60684b112">a_size</a>, i, (ctx)-&gt;_num)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -420,7 +420,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a>(i, ctx)</div>
 <div class="line">{</div>
 <div class="line">    T *it = (T *)a_vec_at(ctx, i);</div>
-<div class="line">    assert(<a class="code hl_function" href="#ga708f633c5c1af4ef2f0433293c555462">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
+<div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__VEC_html_gaeae695755c11f37396704bd280d28895"><div class="ttname"><a href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a></div><div class="ttdeci">#define a_vec_forenum_reverse(i, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:377</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
@@ -434,8 +434,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga992e605fb8f4a41d9eba7c5b13d479e1" name="ga992e605fb8f4a41d9eba7c5b13d479e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga992e605fb8f4a41d9eba7c5b13d479e1">&#9670;&#160;</a></span>a_vec_at()</h2>
+<a id="ga99b11fe5bffc9acf34eeac3ce68455ad" name="ga99b11fe5bffc9acf34eeac3ce68455ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99b11fe5bffc9acf34eeac3ce68455ad">&#9670;&#160;</a></span>a_vec_at()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,12 +443,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_at </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -471,8 +471,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5711e152abde44452843c85e64570aa7" name="ga5711e152abde44452843c85e64570aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5711e152abde44452843c85e64570aa7">&#9670;&#160;</a></span>a_vec_at_()</h2>
+<a id="gabcbc1b7ea68b007c48bd7b97c8a085a6" name="gabcbc1b7ea68b007c48bd7b97c8a085a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabcbc1b7ea68b007c48bd7b97c8a085a6">&#9670;&#160;</a></span>a_vec_at_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,12 +480,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_at_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -503,8 +503,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga7263e849beaa74258eca2c8c1425b1ac" name="ga7263e849beaa74258eca2c8c1425b1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7263e849beaa74258eca2c8c1425b1ac">&#9670;&#160;</a></span>a_vec_copy()</h2>
+<a id="ga3c01720c0f4fcfb50c86e2539a8489cc" name="ga3c01720c0f4fcfb50c86e2539a8489cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c01720c0f4fcfb50c86e2539a8489cc">&#9670;&#160;</a></span>a_vec_copy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,12 +512,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int a_vec_copy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>obj</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>obj</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -550,8 +550,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2c5957e7ea23247890afeb790235b939" name="ga2c5957e7ea23247890afeb790235b939"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2c5957e7ea23247890afeb790235b939">&#9670;&#160;</a></span>a_vec_ctor()</h2>
+<a id="ga204662bff6f7b6b7d2cf2365c584d399" name="ga204662bff6f7b6b7d2cf2365c584d399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga204662bff6f7b6b7d2cf2365c584d399">&#9670;&#160;</a></span>a_vec_ctor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,7 +559,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_ctor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -580,8 +580,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8af8def266ca3b7a336f5e982e0f9551" name="ga8af8def266ca3b7a336f5e982e0f9551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8af8def266ca3b7a336f5e982e0f9551">&#9670;&#160;</a></span>a_vec_die()</h2>
+<a id="ga1b3fdef000763a490804b299da1cea7d" name="ga1b3fdef000763a490804b299da1cea7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b3fdef000763a490804b299da1cea7d">&#9670;&#160;</a></span>a_vec_die()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -589,7 +589,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_die </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -610,8 +610,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga31b479a641df0feebff3595f45c4a686" name="ga31b479a641df0feebff3595f45c4a686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga31b479a641df0feebff3595f45c4a686">&#9670;&#160;</a></span>a_vec_drop()</h2>
+<a id="ga514babf8fe114fc0a7f0928a84fa4672" name="ga514babf8fe114fc0a7f0928a84fa4672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga514babf8fe114fc0a7f0928a84fa4672">&#9670;&#160;</a></span>a_vec_drop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,7 +619,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_drop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -640,8 +640,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae4d670fa811b69dbb946207c86a69843" name="gae4d670fa811b69dbb946207c86a69843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae4d670fa811b69dbb946207c86a69843">&#9670;&#160;</a></span>a_vec_dtor()</h2>
+<a id="gacb57a764e4a170c34872dc3c2ee6fb5a" name="gacb57a764e4a170c34872dc3c2ee6fb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb57a764e4a170c34872dc3c2ee6fb5a">&#9670;&#160;</a></span>a_vec_dtor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,7 +649,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_dtor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -670,8 +670,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5bdf1eb53a385f228734ea9d0c545096" name="ga5bdf1eb53a385f228734ea9d0c545096"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bdf1eb53a385f228734ea9d0c545096">&#9670;&#160;</a></span>a_vec_edit()</h2>
+<a id="ga20e4abaccc00b330395791ef6a078ffc" name="ga20e4abaccc00b330395791ef6a078ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20e4abaccc00b330395791ef6a078ffc">&#9670;&#160;</a></span>a_vec_edit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -679,7 +679,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_edit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -706,8 +706,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga9e3534e8f80db42bac23f4b7e4caacf9" name="ga9e3534e8f80db42bac23f4b7e4caacf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9e3534e8f80db42bac23f4b7e4caacf9">&#9670;&#160;</a></span>a_vec_end()</h2>
+<a id="gaf147696edc5790338f88e49091b81fe4" name="gaf147696edc5790338f88e49091b81fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf147696edc5790338f88e49091b81fe4">&#9670;&#160;</a></span>a_vec_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -715,7 +715,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_end </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -738,8 +738,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga635258702baaccf24a5816791c0de628" name="ga635258702baaccf24a5816791c0de628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga635258702baaccf24a5816791c0de628">&#9670;&#160;</a></span>a_vec_end_()</h2>
+<a id="ga143f7ba010c777908189a7f10413e73b" name="ga143f7ba010c777908189a7f10413e73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga143f7ba010c777908189a7f10413e73b">&#9670;&#160;</a></span>a_vec_end_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -747,7 +747,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_end_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -764,8 +764,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa2c8de9c2a14202aafe736e7be43887f" name="gaa2c8de9c2a14202aafe736e7be43887f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa2c8de9c2a14202aafe736e7be43887f">&#9670;&#160;</a></span>a_vec_idx()</h2>
+<a id="ga1703c1ae0fde40434ea6c4b6de6373de" name="ga1703c1ae0fde40434ea6c4b6de6373de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1703c1ae0fde40434ea6c4b6de6373de">&#9670;&#160;</a></span>a_vec_idx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,12 +773,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_idx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ptrdiff_t const</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">ptrdiff_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -801,8 +801,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gacf6dcc3832d20c57de4f47c9d60d09e5" name="gacf6dcc3832d20c57de4f47c9d60d09e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacf6dcc3832d20c57de4f47c9d60d09e5">&#9670;&#160;</a></span>a_vec_insert()</h2>
+<a id="ga9aac39dd3ecfef9ed73131c63c989670" name="ga9aac39dd3ecfef9ed73131c63c989670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aac39dd3ecfef9ed73131c63c989670">&#9670;&#160;</a></span>a_vec_insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -810,7 +810,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -842,8 +842,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gad34d7a4444f61bc3d51da4e039920038" name="gad34d7a4444f61bc3d51da4e039920038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad34d7a4444f61bc3d51da4e039920038">&#9670;&#160;</a></span>a_vec_make()</h2>
+<a id="ga41489f695abdf8c1c498b37a6d3fcbaf" name="ga41489f695abdf8c1c498b37a6d3fcbaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41489f695abdf8c1c498b37a6d3fcbaf">&#9670;&#160;</a></span>a_vec_make()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -851,7 +851,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int a_vec_make </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -886,8 +886,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2f29131d6fa00bde21062d054e20ad0f" name="ga2f29131d6fa00bde21062d054e20ad0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2f29131d6fa00bde21062d054e20ad0f">&#9670;&#160;</a></span>a_vec_mem()</h2>
+<a id="gabc179b8201d1705e3f64cc979d4a6027" name="gabc179b8201d1705e3f64cc979d4a6027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc179b8201d1705e3f64cc979d4a6027">&#9670;&#160;</a></span>a_vec_mem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -895,7 +895,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_vec_mem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -911,8 +911,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0f7156e09bd36522b43ad3e09371a4ef" name="ga0f7156e09bd36522b43ad3e09371a4ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f7156e09bd36522b43ad3e09371a4ef">&#9670;&#160;</a></span>a_vec_move()</h2>
+<a id="ga310f24dd3093219af1ba773950d1a83b" name="ga310f24dd3093219af1ba773950d1a83b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga310f24dd3093219af1ba773950d1a83b">&#9670;&#160;</a></span>a_vec_move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -920,12 +920,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_move </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -941,14 +941,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga15f1970ed5adb1f27bd8b06ae0a7160c" name="ga15f1970ed5adb1f27bd8b06ae0a7160c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga15f1970ed5adb1f27bd8b06ae0a7160c">&#9670;&#160;</a></span>a_vec_new()</h2>
+<a id="ga8d2b402c156d6c46856a1011f965433f" name="ga8d2b402c156d6c46856a1011f965433f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8d2b402c156d6c46856a1011f965433f">&#9670;&#160;</a></span>a_vec_new()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> * a_vec_new </td>
+          <td class="memname"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> * a_vec_new </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td></td>
@@ -966,8 +966,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga59ce807cc59c98227875aca6c57d2fe4" name="ga59ce807cc59c98227875aca6c57d2fe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga59ce807cc59c98227875aca6c57d2fe4">&#9670;&#160;</a></span>a_vec_num()</h2>
+<a id="gadeb168d9e24516bd119758b3c8475a7b" name="gadeb168d9e24516bd119758b3c8475a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadeb168d9e24516bd119758b3c8475a7b">&#9670;&#160;</a></span>a_vec_num()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -975,7 +975,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_vec_num </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -991,8 +991,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga9f675daa5a29bbb8d88bb7325ba790ef" name="ga9f675daa5a29bbb8d88bb7325ba790ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9f675daa5a29bbb8d88bb7325ba790ef">&#9670;&#160;</a></span>a_vec_ptr()</h2>
+<a id="gac478c00dc7b5e3562cf48eae8a032509" name="gac478c00dc7b5e3562cf48eae8a032509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac478c00dc7b5e3562cf48eae8a032509">&#9670;&#160;</a></span>a_vec_ptr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1000,7 +1000,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_ptr </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1016,8 +1016,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6bcaa550118db1ddc521941717bf71f2" name="ga6bcaa550118db1ddc521941717bf71f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6bcaa550118db1ddc521941717bf71f2">&#9670;&#160;</a></span>a_vec_pull()</h2>
+<a id="ga1987526027a7ff68e58ad02187712d76" name="ga1987526027a7ff68e58ad02187712d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1987526027a7ff68e58ad02187712d76">&#9670;&#160;</a></span>a_vec_pull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1025,7 +1025,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_pull </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1048,8 +1048,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaae8774436ae5c103c0aadcc9a09425d4" name="gaae8774436ae5c103c0aadcc9a09425d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaae8774436ae5c103c0aadcc9a09425d4">&#9670;&#160;</a></span>a_vec_pull_back()</h2>
+<a id="gae270b6c244f079452ec09bd7a4333b83" name="gae270b6c244f079452ec09bd7a4333b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae270b6c244f079452ec09bd7a4333b83">&#9670;&#160;</a></span>a_vec_pull_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1057,7 +1057,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_pull_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1080,8 +1080,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gad2d3e932ceb074ce0f73cddcd18c84f3" name="gad2d3e932ceb074ce0f73cddcd18c84f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2d3e932ceb074ce0f73cddcd18c84f3">&#9670;&#160;</a></span>a_vec_pull_fore()</h2>
+<a id="gae97319b1f3bf3fc2d18997d9dd94fad6" name="gae97319b1f3bf3fc2d18997d9dd94fad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae97319b1f3bf3fc2d18997d9dd94fad6">&#9670;&#160;</a></span>a_vec_pull_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1089,7 +1089,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_pull_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1112,8 +1112,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5bcb3c9f1d844b87b6090ed1e13763f9" name="ga5bcb3c9f1d844b87b6090ed1e13763f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bcb3c9f1d844b87b6090ed1e13763f9">&#9670;&#160;</a></span>a_vec_push()</h2>
+<a id="ga42480a3a503e35412efcbf21b0f033e5" name="ga42480a3a503e35412efcbf21b0f033e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga42480a3a503e35412efcbf21b0f033e5">&#9670;&#160;</a></span>a_vec_push()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1121,7 +1121,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1144,8 +1144,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0134265b1fc9e90e60e25d319f3864c3" name="ga0134265b1fc9e90e60e25d319f3864c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0134265b1fc9e90e60e25d319f3864c3">&#9670;&#160;</a></span>a_vec_push_back()</h2>
+<a id="ga4f35e7a6384419614a893854e1b316a6" name="ga4f35e7a6384419614a893854e1b316a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f35e7a6384419614a893854e1b316a6">&#9670;&#160;</a></span>a_vec_push_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1153,7 +1153,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_push_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1176,8 +1176,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga01bd92c34b2e6afe60d6b4707ddf1f91" name="ga01bd92c34b2e6afe60d6b4707ddf1f91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga01bd92c34b2e6afe60d6b4707ddf1f91">&#9670;&#160;</a></span>a_vec_push_fore()</h2>
+<a id="ga063c6ff91cdce8de2f82f43146c48492" name="ga063c6ff91cdce8de2f82f43146c48492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga063c6ff91cdce8de2f82f43146c48492">&#9670;&#160;</a></span>a_vec_push_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1185,7 +1185,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_push_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1208,8 +1208,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga880a415fd4e2640113101b0dbe087592" name="ga880a415fd4e2640113101b0dbe087592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga880a415fd4e2640113101b0dbe087592">&#9670;&#160;</a></span>a_vec_remove()</h2>
+<a id="ga7b5f886613bf4bede0302b386739daab" name="ga7b5f886613bf4bede0302b386739daab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b5f886613bf4bede0302b386739daab">&#9670;&#160;</a></span>a_vec_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1217,7 +1217,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1249,8 +1249,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf62b8037826d7fdd9a6b44ce055e2781" name="gaf62b8037826d7fdd9a6b44ce055e2781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf62b8037826d7fdd9a6b44ce055e2781">&#9670;&#160;</a></span>a_vec_search()</h2>
+<a id="ga53e1c2448a0fec0193501c6cce5ccdf3" name="ga53e1c2448a0fec0193501c6cce5ccdf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53e1c2448a0fec0193501c6cce5ccdf3">&#9670;&#160;</a></span>a_vec_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1258,7 +1258,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_search </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1297,8 +1297,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga708f633c5c1af4ef2f0433293c555462" name="ga708f633c5c1af4ef2f0433293c555462"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga708f633c5c1af4ef2f0433293c555462">&#9670;&#160;</a></span>a_vec_siz()</h2>
+<a id="gaa666ce5bb7481c9284c07b9bdfa56d35" name="gaa666ce5bb7481c9284c07b9bdfa56d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa666ce5bb7481c9284c07b9bdfa56d35">&#9670;&#160;</a></span>a_vec_siz()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1306,7 +1306,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t a_vec_siz </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1322,8 +1322,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa5f3bcaaf9d733e1ae5aa55d561d66a9" name="gaa5f3bcaaf9d733e1ae5aa55d561d66a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa5f3bcaaf9d733e1ae5aa55d561d66a9">&#9670;&#160;</a></span>a_vec_sort()</h2>
+<a id="gaf9409714f31faf764f3a9cc6a0370756" name="gaf9409714f31faf764f3a9cc6a0370756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9409714f31faf764f3a9cc6a0370756">&#9670;&#160;</a></span>a_vec_sort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1331,7 +1331,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_sort </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1357,8 +1357,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaff59e14663604ef27dcbcb447aa2973b" name="gaff59e14663604ef27dcbcb447aa2973b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaff59e14663604ef27dcbcb447aa2973b">&#9670;&#160;</a></span>a_vec_sort_back()</h2>
+<a id="ga878c37d234a78084d8be617742c985dd" name="ga878c37d234a78084d8be617742c985dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga878c37d234a78084d8be617742c985dd">&#9670;&#160;</a></span>a_vec_sort_back()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1366,7 +1366,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_sort_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1382,9 +1382,9 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
 <div class="line">    INIT(obj);</div>
-<div class="line">    <a class="code hl_function" href="#gaff59e14663604ef27dcbcb447aa2973b">a_vec_sort_back</a>(ctx, cmp);</div>
+<div class="line">    <a class="code hl_function" href="#ga878c37d234a78084d8be617742c985dd">a_vec_sort_back</a>(ctx, cmp);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__VEC_html_gaff59e14663604ef27dcbcb447aa2973b"><div class="ttname"><a href="#gaff59e14663604ef27dcbcb447aa2973b">a_vec_sort_back</a></div><div class="ttdeci">void a_vec_sort_back(a_vec_s const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort backmost element for a pointer to vector structure</div></div>
+<div class="ttc" id="agroup__A__VEC_html_ga878c37d234a78084d8be617742c985dd"><div class="ttname"><a href="#ga878c37d234a78084d8be617742c985dd">a_vec_sort_back</a></div><div class="ttdeci">void a_vec_sort_back(a_vec const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort backmost element for a pointer to vector structure</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
@@ -1400,8 +1400,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0aeec48c89150051a02b346ee04c15b8" name="ga0aeec48c89150051a02b346ee04c15b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0aeec48c89150051a02b346ee04c15b8">&#9670;&#160;</a></span>a_vec_sort_fore()</h2>
+<a id="ga971acd5263a2e18ae2ec79223554c258" name="ga971acd5263a2e18ae2ec79223554c258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga971acd5263a2e18ae2ec79223554c258">&#9670;&#160;</a></span>a_vec_sort_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1409,7 +1409,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_sort_fore </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1425,9 +1425,9 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
 <div class="line">    INIT(obj);</div>
-<div class="line">    <a class="code hl_function" href="#ga0aeec48c89150051a02b346ee04c15b8">a_vec_sort_fore</a>(ctx, cmp);</div>
+<div class="line">    <a class="code hl_function" href="#ga971acd5263a2e18ae2ec79223554c258">a_vec_sort_fore</a>(ctx, cmp);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__VEC_html_ga0aeec48c89150051a02b346ee04c15b8"><div class="ttname"><a href="#ga0aeec48c89150051a02b346ee04c15b8">a_vec_sort_fore</a></div><div class="ttdeci">void a_vec_sort_fore(a_vec_s const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to vector structure</div></div>
+<div class="ttc" id="agroup__A__VEC_html_ga971acd5263a2e18ae2ec79223554c258"><div class="ttname"><a href="#ga971acd5263a2e18ae2ec79223554c258">a_vec_sort_fore</a></div><div class="ttdeci">void a_vec_sort_fore(a_vec const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to vector structure</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
@@ -1443,8 +1443,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5be954dc1b963d4bb20876e25f8bed1d" name="ga5be954dc1b963d4bb20876e25f8bed1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5be954dc1b963d4bb20876e25f8bed1d">&#9670;&#160;</a></span>a_vec_swap()</h2>
+<a id="gac9f2be5b9ead2f02490b2ea4631f1b34" name="gac9f2be5b9ead2f02490b2ea4631f1b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9f2be5b9ead2f02490b2ea4631f1b34">&#9670;&#160;</a></span>a_vec_swap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1452,7 +1452,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_vec_swap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1479,8 +1479,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga04bc9ff4caba129d8718e0b22a4f57e0" name="ga04bc9ff4caba129d8718e0b22a4f57e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga04bc9ff4caba129d8718e0b22a4f57e0">&#9670;&#160;</a></span>a_vec_top()</h2>
+<a id="ga9cfda016a18909336036bf6d6443aab0" name="ga9cfda016a18909336036bf6d6443aab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9cfda016a18909336036bf6d6443aab0">&#9670;&#160;</a></span>a_vec_top()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1488,7 +1488,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_top </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1511,8 +1511,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga949ec929f313827e8986f2ef84995e4f" name="ga949ec929f313827e8986f2ef84995e4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga949ec929f313827e8986f2ef84995e4f">&#9670;&#160;</a></span>a_vec_top_()</h2>
+<a id="ga8791e7f6e9848dd279d85e6428529194" name="ga8791e7f6e9848dd279d85e6428529194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8791e7f6e9848dd279d85e6428529194">&#9670;&#160;</a></span>a_vec_top_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1520,7 +1520,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void * a_vec_top_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d10/structa__vec__s.html">a_vec_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

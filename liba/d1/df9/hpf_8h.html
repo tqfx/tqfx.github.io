@@ -104,40 +104,46 @@ Include dependency graph for hpf.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for High Pass Filter  <a href="../../d1/d9e/structa__hpf__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db1/structa__hpf.html">a_hpf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for High Pass Filter  <a href="../../d8/db1/structa__hpf.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gaaa827f7518800c89751d84fd048f02a8" id="r_gaaa827f7518800c89751d84fd048f02a8"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_INIT</b>(alpha)&#160;&#160;&#160;{<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, alpha), 0, 0}</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_INIT</b>(alpha)&#160;&#160;&#160;{<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(alpha), 0, 0}</td></tr>
 <tr class="separator:gaaa827f7518800c89751d84fd048f02a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65c44f43dff1b3c19718210a5aadfa1e" id="r_ga65c44f43dff1b3c19718210a5aadfa1e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_INIT2</b>(fc,  ts)&#160;&#160;&#160;{A_HPF_GEN(fc, ts), 0, 0}</td></tr>
+<tr class="separator:ga65c44f43dff1b3c19718210a5aadfa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0721a9cfac45114d547052d4198d79c3" id="r_ga0721a9cfac45114d547052d4198d79c3"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_GEN</b>(fc,  ts)&#160;&#160;&#160;(1 / (2 * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga21d946db17605a064660abb8f1f23d69">A_FLOAT_PI</a> * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, fc) * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, ts) + 1))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_HPF_GEN</b>(fc,  ts)&#160;&#160;&#160;(1 / (2 * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga21d946db17605a064660abb8f1f23d69">A_FLOAT_PI</a> * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(fc) * <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(ts) + 1))</td></tr>
 <tr class="separator:ga0721a9cfac45114d547052d4198d79c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga1316ee5f902acdaeef2ced313e954a58" id="r_ga1316ee5f902acdaeef2ced313e954a58"><td class="memItemLeft" align="right" valign="top">
-typedef struct a_hpf_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_hpf_s</b></td></tr>
-<tr class="memdesc:ga1316ee5f902acdaeef2ced313e954a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for High Pass Filter <br /></td></tr>
-<tr class="separator:ga1316ee5f902acdaeef2ced313e954a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab274fbc5efbce5e901b58240ff2266fb" id="r_gab274fbc5efbce5e901b58240ff2266fb"><td class="memItemLeft" align="right" valign="top">
+typedef struct a_hpf&#160;</td><td class="memItemRight" valign="bottom"><b>a_hpf</b></td></tr>
+<tr class="memdesc:gab274fbc5efbce5e901b58240ff2266fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for High Pass Filter <br /></td></tr>
+<tr class="separator:gab274fbc5efbce5e901b58240ff2266fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e23622b3363cf1bc395a4b91c485c2" id="r_a58e23622b3363cf1bc395a4b91c485c2"><td class="memItemLeft" align="right" valign="top"><a id="a58e23622b3363cf1bc395a4b91c485c2" name="a58e23622b3363cf1bc395a4b91c485c2"></a>
+typedef struct <a class="el" href="../../d8/db1/structa__hpf.html">a_hpf</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a::hpf</b></td></tr>
+<tr class="separator:a58e23622b3363cf1bc395a4b91c485c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga94b7e71465c87fa8ed47cf8f03953eea" id="r_ga94b7e71465c87fa8ed47cf8f03953eea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga94b7e71465c87fa8ed47cf8f03953eea">a_hpf_gen</a> (double const fc, double const ts)</td></tr>
-<tr class="memdesc:ga94b7e71465c87fa8ed47cf8f03953eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for High Pass Filter  <br /></td></tr>
-<tr class="separator:ga94b7e71465c87fa8ed47cf8f03953eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaccef0a7623aa150f72c5532665e641bd" id="r_gaccef0a7623aa150f72c5532665e641bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#gaccef0a7623aa150f72c5532665e641bd">a_hpf_init</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx, double const alpha)</td></tr>
-<tr class="memdesc:gaccef0a7623aa150f72c5532665e641bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for High Pass Filter  <br /></td></tr>
-<tr class="separator:gaccef0a7623aa150f72c5532665e641bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga250b4c828f7f3ccf00c199b13dbe8f6e" id="r_ga250b4c828f7f3ccf00c199b13dbe8f6e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga250b4c828f7f3ccf00c199b13dbe8f6e">a_hpf_iter</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx, double const x)</td></tr>
-<tr class="memdesc:ga250b4c828f7f3ccf00c199b13dbe8f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for High Pass Filter  <br /></td></tr>
-<tr class="separator:ga250b4c828f7f3ccf00c199b13dbe8f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52725704b2260d80d9d52009ce445ee6" id="r_ga52725704b2260d80d9d52009ce445ee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga52725704b2260d80d9d52009ce445ee6">a_hpf_zero</a> (<a class="el" href="../../d1/d9e/structa__hpf__s.html">a_hpf_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga52725704b2260d80d9d52009ce445ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for High Pass Filter  <br /></td></tr>
-<tr class="separator:ga52725704b2260d80d9d52009ce445ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga219ae9f9cc6b62ee97d4f471578b91f2" id="r_ga219ae9f9cc6b62ee97d4f471578b91f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga219ae9f9cc6b62ee97d4f471578b91f2">a_hpf_gen</a> (double fc, double ts)</td></tr>
+<tr class="memdesc:ga219ae9f9cc6b62ee97d4f471578b91f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for High Pass Filter  <br /></td></tr>
+<tr class="separator:ga219ae9f9cc6b62ee97d4f471578b91f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga417c6bdb69af21140541bb852bc82638" id="r_ga417c6bdb69af21140541bb852bc82638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga417c6bdb69af21140541bb852bc82638">a_hpf_init</a> (<a class="el" href="../../d8/db1/structa__hpf.html">a_hpf</a> *ctx, double alpha)</td></tr>
+<tr class="memdesc:ga417c6bdb69af21140541bb852bc82638"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for High Pass Filter  <br /></td></tr>
+<tr class="separator:ga417c6bdb69af21140541bb852bc82638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ba34c4d171816d033e06c552ad7bda0" id="r_ga5ba34c4d171816d033e06c552ad7bda0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#ga5ba34c4d171816d033e06c552ad7bda0">a_hpf_iter</a> (<a class="el" href="../../d8/db1/structa__hpf.html">a_hpf</a> *ctx, double x)</td></tr>
+<tr class="memdesc:ga5ba34c4d171816d033e06c552ad7bda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for High Pass Filter  <br /></td></tr>
+<tr class="separator:ga5ba34c4d171816d033e06c552ad7bda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada6142f8d6a329a18bf14c0fef66439e" id="r_gada6142f8d6a329a18bf14c0fef66439e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/group__A__HPF.html#gada6142f8d6a329a18bf14c0fef66439e">a_hpf_zero</a> (<a class="el" href="../../d8/db1/structa__hpf.html">a_hpf</a> *ctx)</td></tr>
+<tr class="memdesc:gada6142f8d6a329a18bf14c0fef66439e"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for High Pass Filter  <br /></td></tr>
+<tr class="separator:gada6142f8d6a329a18bf14c0fef66439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>High Pass Filter. </p>

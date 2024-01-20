@@ -97,11 +97,11 @@ Collaboration diagram for red–black binary search tree:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree node  <a href="../../dc/dad/structa__rbt__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree node  <a href="../../db/d47/structa__rbt__node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree root  <a href="../../df/dfa/uniona__rbt__u.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree root  <a href="../../d0/d4d/uniona__rbt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -120,95 +120,95 @@ Macros</h2></td></tr>
 <tr class="memitem:ga0706f74ac645ff54aa33d2bd7467cc24" id="r_ga0706f74ac645ff54aa33d2bd7467cc24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</td></tr>
 <tr class="memdesc:ga0706f74ac645ff54aa33d2bd7467cc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">access the struct for this entry  <br /></td></tr>
 <tr class="separator:ga0706f74ac645ff54aa33d2bd7467cc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga87038afcbdd03340a7570f337a799b86" id="r_ga87038afcbdd03340a7570f337a799b86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga87038afcbdd03340a7570f337a799b86">a_rbt_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#ga9b4a870c9960bd6b7a5fc1472c57043e">a_rbt_head</a>(root); cur; cur = <a class="el" href="#gadc2eb3565aaea599a33730baea88ad33">a_rbt_next</a>(cur))</td></tr>
+<tr class="memitem:ga87038afcbdd03340a7570f337a799b86" id="r_ga87038afcbdd03340a7570f337a799b86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga87038afcbdd03340a7570f337a799b86">a_rbt_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#ga02d2a6f1b6a83ac0a750dfef72ffeda4">a_rbt_head</a>(root); cur; cur = <a class="el" href="#ga0fc88ab059ec21420ff82dbbffcac0a2">a_rbt_next</a>(cur))</td></tr>
 <tr class="memdesc:ga87038afcbdd03340a7570f337a799b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree in-order  <br /></td></tr>
 <tr class="separator:ga87038afcbdd03340a7570f337a799b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a03b36d2793c815feae6c20ec493826" id="r_ga9a03b36d2793c815feae6c20ec493826"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9a03b36d2793c815feae6c20ec493826">a_rbt_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#gac4835080f4a708acbe9f0258924d6663">a_rbt_tail</a>(root); cur; cur = <a class="el" href="#ga9fa45c84256a25b85c419d40ebc4cf50">a_rbt_prev</a>(cur))</td></tr>
+<tr class="memitem:ga9a03b36d2793c815feae6c20ec493826" id="r_ga9a03b36d2793c815feae6c20ec493826"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9a03b36d2793c815feae6c20ec493826">a_rbt_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#gae1f9f2aad7b208a40651e2bae386247f">a_rbt_tail</a>(root); cur; cur = <a class="el" href="#ga5848594f9db2f2441edfe5c5500c3d44">a_rbt_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga9a03b36d2793c815feae6c20ec493826"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree in-order reverse  <br /></td></tr>
 <tr class="separator:ga9a03b36d2793c815feae6c20ec493826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6d7d0a2322858f1211db49b8114cbf8" id="r_gaf6d7d0a2322858f1211db49b8114cbf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf6d7d0a2322858f1211db49b8114cbf8">a_rbt_pre_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga3cb6843826fcfc63f9e1bf6d1f26f951">a_rbt_pre_next</a>(cur))</td></tr>
+<tr class="memitem:gaf6d7d0a2322858f1211db49b8114cbf8" id="r_gaf6d7d0a2322858f1211db49b8114cbf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf6d7d0a2322858f1211db49b8114cbf8">a_rbt_pre_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga0141445079342f7dbd7ce63321cf4271">a_rbt_pre_next</a>(cur))</td></tr>
 <tr class="memdesc:gaf6d7d0a2322858f1211db49b8114cbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree preorder  <br /></td></tr>
 <tr class="separator:gaf6d7d0a2322858f1211db49b8114cbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf5b8fc53a36ddcc69036b04172de976" id="r_gacf5b8fc53a36ddcc69036b04172de976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacf5b8fc53a36ddcc69036b04172de976">a_rbt_pre_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#gab52b9e85f7bab2907f52185fd134e00f">a_rbt_pre_prev</a>(cur))</td></tr>
+<tr class="memitem:gacf5b8fc53a36ddcc69036b04172de976" id="r_gacf5b8fc53a36ddcc69036b04172de976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacf5b8fc53a36ddcc69036b04172de976">a_rbt_pre_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga81787629713312109f6f7b233c6a9e77">a_rbt_pre_prev</a>(cur))</td></tr>
 <tr class="memdesc:gacf5b8fc53a36ddcc69036b04172de976"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree preorder reverse  <br /></td></tr>
 <tr class="separator:gacf5b8fc53a36ddcc69036b04172de976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22fc9cb6bca5efa8b54102d13e206aed" id="r_ga22fc9cb6bca5efa8b54102d13e206aed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga22fc9cb6bca5efa8b54102d13e206aed">a_rbt_post_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#gaf68f9ce844831bb4b62917b20c4739d2">a_rbt_post_head</a>(root); cur; cur = <a class="el" href="#gaba82663b8fae822f5607b9a619d20288">a_rbt_post_next</a>(cur))</td></tr>
+<tr class="memitem:ga22fc9cb6bca5efa8b54102d13e206aed" id="r_ga22fc9cb6bca5efa8b54102d13e206aed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga22fc9cb6bca5efa8b54102d13e206aed">a_rbt_post_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#ga3b31f85ab6e6a0c5b5dba6dc797a322f">a_rbt_post_head</a>(root); cur; cur = <a class="el" href="#gad6bb2ad88f8e91dd8c79a0875ddfbc94">a_rbt_post_next</a>(cur))</td></tr>
 <tr class="memdesc:ga22fc9cb6bca5efa8b54102d13e206aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree postorder  <br /></td></tr>
 <tr class="separator:ga22fc9cb6bca5efa8b54102d13e206aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga523ec97a16f4af03765499018640d519" id="r_ga523ec97a16f4af03765499018640d519"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#ga811f93547dffe9ba8aa2ed213690f0c3">a_rbt_post_tail</a>(root); cur; cur = <a class="el" href="#ga554fe66c3031dd58a9f12e603c89c28b">a_rbt_post_prev</a>(cur))</td></tr>
+<tr class="memitem:ga523ec97a16f4af03765499018640d519" id="r_ga523ec97a16f4af03765499018640d519"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#gad93e95668a3e3ccc5902624e12d504f3">a_rbt_post_tail</a>(root); cur; cur = <a class="el" href="#ga3212dcf892495cc9e9e93f1d60c5b029">a_rbt_post_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga523ec97a16f4af03765499018640d519"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a red–black binary search tree postorder reverse  <br /></td></tr>
 <tr class="separator:ga523ec97a16f4af03765499018640d519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga02459a57098710b5438cea2bce6e1522" id="r_ga02459a57098710b5438cea2bce6e1522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *next = A_NULL, *cur = <a class="el" href="#ga6d4a707e57c86e07171714166e3db3b5">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga6d4a707e57c86e07171714166e3db3b5">a_rbt_tear</a>(root, &amp;next))</td></tr>
+<tr class="memitem:ga02459a57098710b5438cea2bce6e1522" id="r_ga02459a57098710b5438cea2bce6e1522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *next = A_NULL, *cur = <a class="el" href="#gac0de11429de48f7c341076571376c2af">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#gac0de11429de48f7c341076571376c2af">a_rbt_tear</a>(root, &amp;next))</td></tr>
 <tr class="memdesc:ga02459a57098710b5438cea2bce6e1522"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a red–black binary search tree using postorder traversal  <br /></td></tr>
 <tr class="separator:ga02459a57098710b5438cea2bce6e1522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gab2c5f1ab5b8777e714f185528ae49d2a" id="r_gab2c5f1ab5b8777e714f185528ae49d2a"><td class="memItemLeft" align="right" valign="top"><a id="gab2c5f1ab5b8777e714f185528ae49d2a" name="gab2c5f1ab5b8777e714f185528ae49d2a"></a>
-typedef struct a_rbt_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_rbt_s</b></td></tr>
-<tr class="memdesc:gab2c5f1ab5b8777e714f185528ae49d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree node <br /></td></tr>
-<tr class="separator:gab2c5f1ab5b8777e714f185528ae49d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab0119637ade061e61be2e2a2a6dea6df" id="r_gab0119637ade061e61be2e2a2a6dea6df"><td class="memItemLeft" align="right" valign="top"><a id="gab0119637ade061e61be2e2a2a6dea6df" name="gab0119637ade061e61be2e2a2a6dea6df"></a>
-typedef union a_rbt_u&#160;</td><td class="memItemRight" valign="bottom"><b>a_rbt_u</b></td></tr>
-<tr class="memdesc:gab0119637ade061e61be2e2a2a6dea6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree root <br /></td></tr>
-<tr class="separator:gab0119637ade061e61be2e2a2a6dea6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ebfd655fb24cde9f2cf0203c5787410" id="r_ga1ebfd655fb24cde9f2cf0203c5787410"><td class="memItemLeft" align="right" valign="top"><a id="ga1ebfd655fb24cde9f2cf0203c5787410" name="ga1ebfd655fb24cde9f2cf0203c5787410"></a>
+typedef struct a_rbt_node&#160;</td><td class="memItemRight" valign="bottom"><b>a_rbt_node</b></td></tr>
+<tr class="memdesc:ga1ebfd655fb24cde9f2cf0203c5787410"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree node <br /></td></tr>
+<tr class="separator:ga1ebfd655fb24cde9f2cf0203c5787410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ce1367a000d26572e7735cf06f46f2e" id="r_ga4ce1367a000d26572e7735cf06f46f2e"><td class="memItemLeft" align="right" valign="top"><a id="ga4ce1367a000d26572e7735cf06f46f2e" name="ga4ce1367a000d26572e7735cf06f46f2e"></a>
+typedef union a_rbt&#160;</td><td class="memItemRight" valign="bottom"><b>a_rbt</b></td></tr>
+<tr class="memdesc:ga4ce1367a000d26572e7735cf06f46f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for red–black binary search tree root <br /></td></tr>
+<tr class="separator:ga4ce1367a000d26572e7735cf06f46f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1099bf51bd07bddc7b7c0eddeaefc4d7" id="r_ga1099bf51bd07bddc7b7c0eddeaefc4d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1099bf51bd07bddc7b7c0eddeaefc4d7">a_rbt_parent</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> const *const node)</td></tr>
-<tr class="memdesc:ga1099bf51bd07bddc7b7c0eddeaefc4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">access parent of red–black binary search tree node  <br /></td></tr>
-<tr class="separator:ga1099bf51bd07bddc7b7c0eddeaefc4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae57bbf969c673795aa27e15489a94011" id="r_gae57bbf969c673795aa27e15489a94011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae57bbf969c673795aa27e15489a94011">a_rbt_init</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *const node, <a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *const parent)</td></tr>
-<tr class="memdesc:gae57bbf969c673795aa27e15489a94011"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for red–black binary search tree node  <br /></td></tr>
-<tr class="separator:gae57bbf969c673795aa27e15489a94011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6835bb5cacda92b6ad11f751a3f63476" id="r_ga6835bb5cacda92b6ad11f751a3f63476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6835bb5cacda92b6ad11f751a3f63476">a_rbt_root</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *const root)</td></tr>
-<tr class="memdesc:ga6835bb5cacda92b6ad11f751a3f63476"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for red–black binary search tree root  <br /></td></tr>
-<tr class="separator:ga6835bb5cacda92b6ad11f751a3f63476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9b4a870c9960bd6b7a5fc1472c57043e" id="r_ga9b4a870c9960bd6b7a5fc1472c57043e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9b4a870c9960bd6b7a5fc1472c57043e">a_rbt_head</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *root)</td></tr>
-<tr class="memdesc:ga9b4a870c9960bd6b7a5fc1472c57043e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of red–black binary search tree in-order  <br /></td></tr>
-<tr class="separator:ga9b4a870c9960bd6b7a5fc1472c57043e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4835080f4a708acbe9f0258924d6663" id="r_gac4835080f4a708acbe9f0258924d6663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4835080f4a708acbe9f0258924d6663">a_rbt_tail</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *root)</td></tr>
-<tr class="memdesc:gac4835080f4a708acbe9f0258924d6663"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of red–black binary search tree in-order  <br /></td></tr>
-<tr class="separator:gac4835080f4a708acbe9f0258924d6663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadc2eb3565aaea599a33730baea88ad33" id="r_gadc2eb3565aaea599a33730baea88ad33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadc2eb3565aaea599a33730baea88ad33">a_rbt_next</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:gadc2eb3565aaea599a33730baea88ad33"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node in-order  <br /></td></tr>
-<tr class="separator:gadc2eb3565aaea599a33730baea88ad33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9fa45c84256a25b85c419d40ebc4cf50" id="r_ga9fa45c84256a25b85c419d40ebc4cf50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9fa45c84256a25b85c419d40ebc4cf50">a_rbt_prev</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:ga9fa45c84256a25b85c419d40ebc4cf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node in-order  <br /></td></tr>
-<tr class="separator:ga9fa45c84256a25b85c419d40ebc4cf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3cb6843826fcfc63f9e1bf6d1f26f951" id="r_ga3cb6843826fcfc63f9e1bf6d1f26f951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3cb6843826fcfc63f9e1bf6d1f26f951">a_rbt_pre_next</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:ga3cb6843826fcfc63f9e1bf6d1f26f951"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node preorder  <br /></td></tr>
-<tr class="separator:ga3cb6843826fcfc63f9e1bf6d1f26f951"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab52b9e85f7bab2907f52185fd134e00f" id="r_gab52b9e85f7bab2907f52185fd134e00f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab52b9e85f7bab2907f52185fd134e00f">a_rbt_pre_prev</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:gab52b9e85f7bab2907f52185fd134e00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node preorder  <br /></td></tr>
-<tr class="separator:gab52b9e85f7bab2907f52185fd134e00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf68f9ce844831bb4b62917b20c4739d2" id="r_gaf68f9ce844831bb4b62917b20c4739d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf68f9ce844831bb4b62917b20c4739d2">a_rbt_post_head</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *root)</td></tr>
-<tr class="memdesc:gaf68f9ce844831bb4b62917b20c4739d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of red–black binary search tree postorder  <br /></td></tr>
-<tr class="separator:gaf68f9ce844831bb4b62917b20c4739d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga811f93547dffe9ba8aa2ed213690f0c3" id="r_ga811f93547dffe9ba8aa2ed213690f0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga811f93547dffe9ba8aa2ed213690f0c3">a_rbt_post_tail</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *root)</td></tr>
-<tr class="memdesc:ga811f93547dffe9ba8aa2ed213690f0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of red–black binary search tree postorder  <br /></td></tr>
-<tr class="separator:ga811f93547dffe9ba8aa2ed213690f0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaba82663b8fae822f5607b9a619d20288" id="r_gaba82663b8fae822f5607b9a619d20288"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaba82663b8fae822f5607b9a619d20288">a_rbt_post_next</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:gaba82663b8fae822f5607b9a619d20288"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node postorder  <br /></td></tr>
-<tr class="separator:gaba82663b8fae822f5607b9a619d20288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga554fe66c3031dd58a9f12e603c89c28b" id="r_ga554fe66c3031dd58a9f12e603c89c28b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga554fe66c3031dd58a9f12e603c89c28b">a_rbt_post_prev</a> (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:ga554fe66c3031dd58a9f12e603c89c28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node postorder  <br /></td></tr>
-<tr class="separator:ga554fe66c3031dd58a9f12e603c89c28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6d4a707e57c86e07171714166e3db3b5" id="r_ga6d4a707e57c86e07171714166e3db3b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6d4a707e57c86e07171714166e3db3b5">a_rbt_tear</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *root, <a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> **next)</td></tr>
-<tr class="memdesc:ga6d4a707e57c86e07171714166e3db3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a node from red–black binary search tree  <br /></td></tr>
-<tr class="separator:ga6d4a707e57c86e07171714166e3db3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10360e0780b0f50af416c22ed92a9dd5" id="r_ga10360e0780b0f50af416c22ed92a9dd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga10360e0780b0f50af416c22ed92a9dd5">a_rbt_search</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *root, void const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga10360e0780b0f50af416c22ed92a9dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">search specified content from red–black binary search tree  <br /></td></tr>
-<tr class="separator:ga10360e0780b0f50af416c22ed92a9dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a5270722952738d2795a7db5426fa30" id="r_ga1a5270722952738d2795a7db5426fa30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1a5270722952738d2795a7db5426fa30">a_rbt_insert</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *root, <a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga1a5270722952738d2795a7db5426fa30"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert specified node into red–black binary search tree  <br /></td></tr>
-<tr class="separator:ga1a5270722952738d2795a7db5426fa30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadf28d912f1226d251bfef94145176b17" id="r_gadf28d912f1226d251bfef94145176b17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadf28d912f1226d251bfef94145176b17">a_rbt_insert_adjust</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *root, <a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:gadf28d912f1226d251bfef94145176b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">rebalance the tree after insertion of the specified node  <br /></td></tr>
-<tr class="separator:gadf28d912f1226d251bfef94145176b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3b40b1cdb606b8b102b618bc60dc2f84" id="r_ga3b40b1cdb606b8b102b618bc60dc2f84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3b40b1cdb606b8b102b618bc60dc2f84">a_rbt_remove</a> (<a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *root, <a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *node)</td></tr>
-<tr class="memdesc:ga3b40b1cdb606b8b102b618bc60dc2f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove specified node from red–black binary search tree  <br /></td></tr>
-<tr class="separator:ga3b40b1cdb606b8b102b618bc60dc2f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga556d9e38671366390be61220e86faf38" id="r_ga556d9e38671366390be61220e86faf38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga556d9e38671366390be61220e86faf38">a_rbt_parent</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> const *node)</td></tr>
+<tr class="memdesc:ga556d9e38671366390be61220e86faf38"><td class="mdescLeft">&#160;</td><td class="mdescRight">access parent of red–black binary search tree node  <br /></td></tr>
+<tr class="separator:ga556d9e38671366390be61220e86faf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac09f3bb2cf7d4e45df4501b66180f9dd" id="r_gac09f3bb2cf7d4e45df4501b66180f9dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac09f3bb2cf7d4e45df4501b66180f9dd">a_rbt_init</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node, <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *parent)</td></tr>
+<tr class="memdesc:gac09f3bb2cf7d4e45df4501b66180f9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for red–black binary search tree node  <br /></td></tr>
+<tr class="separator:gac09f3bb2cf7d4e45df4501b66180f9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9c346f9489801f34fcec39aebc276e2" id="r_gad9c346f9489801f34fcec39aebc276e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad9c346f9489801f34fcec39aebc276e2">a_rbt_root</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *root)</td></tr>
+<tr class="memdesc:gad9c346f9489801f34fcec39aebc276e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for red–black binary search tree root  <br /></td></tr>
+<tr class="separator:gad9c346f9489801f34fcec39aebc276e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02d2a6f1b6a83ac0a750dfef72ffeda4" id="r_ga02d2a6f1b6a83ac0a750dfef72ffeda4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga02d2a6f1b6a83ac0a750dfef72ffeda4">a_rbt_head</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *root)</td></tr>
+<tr class="memdesc:ga02d2a6f1b6a83ac0a750dfef72ffeda4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of red–black binary search tree in-order  <br /></td></tr>
+<tr class="separator:ga02d2a6f1b6a83ac0a750dfef72ffeda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1f9f2aad7b208a40651e2bae386247f" id="r_gae1f9f2aad7b208a40651e2bae386247f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae1f9f2aad7b208a40651e2bae386247f">a_rbt_tail</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *root)</td></tr>
+<tr class="memdesc:gae1f9f2aad7b208a40651e2bae386247f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of red–black binary search tree in-order  <br /></td></tr>
+<tr class="separator:gae1f9f2aad7b208a40651e2bae386247f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fc88ab059ec21420ff82dbbffcac0a2" id="r_ga0fc88ab059ec21420ff82dbbffcac0a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0fc88ab059ec21420ff82dbbffcac0a2">a_rbt_next</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga0fc88ab059ec21420ff82dbbffcac0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node in-order  <br /></td></tr>
+<tr class="separator:ga0fc88ab059ec21420ff82dbbffcac0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5848594f9db2f2441edfe5c5500c3d44" id="r_ga5848594f9db2f2441edfe5c5500c3d44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5848594f9db2f2441edfe5c5500c3d44">a_rbt_prev</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga5848594f9db2f2441edfe5c5500c3d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node in-order  <br /></td></tr>
+<tr class="separator:ga5848594f9db2f2441edfe5c5500c3d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0141445079342f7dbd7ce63321cf4271" id="r_ga0141445079342f7dbd7ce63321cf4271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0141445079342f7dbd7ce63321cf4271">a_rbt_pre_next</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga0141445079342f7dbd7ce63321cf4271"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node preorder  <br /></td></tr>
+<tr class="separator:ga0141445079342f7dbd7ce63321cf4271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81787629713312109f6f7b233c6a9e77" id="r_ga81787629713312109f6f7b233c6a9e77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga81787629713312109f6f7b233c6a9e77">a_rbt_pre_prev</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga81787629713312109f6f7b233c6a9e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node preorder  <br /></td></tr>
+<tr class="separator:ga81787629713312109f6f7b233c6a9e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b31f85ab6e6a0c5b5dba6dc797a322f" id="r_ga3b31f85ab6e6a0c5b5dba6dc797a322f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3b31f85ab6e6a0c5b5dba6dc797a322f">a_rbt_post_head</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *root)</td></tr>
+<tr class="memdesc:ga3b31f85ab6e6a0c5b5dba6dc797a322f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of red–black binary search tree postorder  <br /></td></tr>
+<tr class="separator:ga3b31f85ab6e6a0c5b5dba6dc797a322f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad93e95668a3e3ccc5902624e12d504f3" id="r_gad93e95668a3e3ccc5902624e12d504f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad93e95668a3e3ccc5902624e12d504f3">a_rbt_post_tail</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *root)</td></tr>
+<tr class="memdesc:gad93e95668a3e3ccc5902624e12d504f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of red–black binary search tree postorder  <br /></td></tr>
+<tr class="separator:gad93e95668a3e3ccc5902624e12d504f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6bb2ad88f8e91dd8c79a0875ddfbc94" id="r_gad6bb2ad88f8e91dd8c79a0875ddfbc94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad6bb2ad88f8e91dd8c79a0875ddfbc94">a_rbt_post_next</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:gad6bb2ad88f8e91dd8c79a0875ddfbc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of red–black binary search tree node postorder  <br /></td></tr>
+<tr class="separator:gad6bb2ad88f8e91dd8c79a0875ddfbc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3212dcf892495cc9e9e93f1d60c5b029" id="r_ga3212dcf892495cc9e9e93f1d60c5b029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3212dcf892495cc9e9e93f1d60c5b029">a_rbt_post_prev</a> (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga3212dcf892495cc9e9e93f1d60c5b029"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of red–black binary search tree node postorder  <br /></td></tr>
+<tr class="separator:ga3212dcf892495cc9e9e93f1d60c5b029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0de11429de48f7c341076571376c2af" id="r_gac0de11429de48f7c341076571376c2af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac0de11429de48f7c341076571376c2af">a_rbt_tear</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *root, <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> **next)</td></tr>
+<tr class="memdesc:gac0de11429de48f7c341076571376c2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a node from red–black binary search tree  <br /></td></tr>
+<tr class="separator:gac0de11429de48f7c341076571376c2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf245d9095230c22e5da521689cea3a5e" id="r_gaf245d9095230c22e5da521689cea3a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf245d9095230c22e5da521689cea3a5e">a_rbt_search</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *root, void const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:gaf245d9095230c22e5da521689cea3a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">search specified content from red–black binary search tree  <br /></td></tr>
+<tr class="separator:gaf245d9095230c22e5da521689cea3a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c827ef9a60ac65af5961025d4cdd27c" id="r_ga7c827ef9a60ac65af5961025d4cdd27c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7c827ef9a60ac65af5961025d4cdd27c">a_rbt_insert</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *root, <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga7c827ef9a60ac65af5961025d4cdd27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert specified node into red–black binary search tree  <br /></td></tr>
+<tr class="separator:ga7c827ef9a60ac65af5961025d4cdd27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga648c10a4ebb76ae7577f404722a6e6a2" id="r_ga648c10a4ebb76ae7577f404722a6e6a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga648c10a4ebb76ae7577f404722a6e6a2">a_rbt_insert_adjust</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *root, <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga648c10a4ebb76ae7577f404722a6e6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">rebalance the tree after insertion of the specified node  <br /></td></tr>
+<tr class="separator:ga648c10a4ebb76ae7577f404722a6e6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e6cb5d7c989434f64face3f5934356f" id="r_ga2e6cb5d7c989434f64face3f5934356f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2e6cb5d7c989434f64face3f5934356f">a_rbt_remove</a> (<a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *root, <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node)</td></tr>
+<tr class="memdesc:ga2e6cb5d7c989434f64face3f5934356f"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove specified node from red–black binary search tree  <br /></td></tr>
+<tr class="separator:ga2e6cb5d7c989434f64face3f5934356f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -239,9 +239,9 @@ Functions</h2></td></tr>
 <p>access the struct for this entry </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> pointer </td></tr>
+    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> pointer </td></tr>
     <tr><td class="paramname">type</td><td>the type of the struct this is embedded in </td></tr>
-    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> within the struct </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> within the struct </td></tr>
   </table>
   </dd>
 </dl>
@@ -262,24 +262,28 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#ga9b4a870c9960bd6b7a5fc1472c57043e">a_rbt_head</a>(root); cur; cur = <a class="el" href="#gadc2eb3565aaea599a33730baea88ad33">a_rbt_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#ga02d2a6f1b6a83ac0a750dfef72ffeda4">a_rbt_head</a>(root); cur; cur = <a class="el" href="#ga0fc88ab059ec21420ff82dbbffcac0a2">a_rbt_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree in-order </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga87038afcbdd03340a7570f337a799b86">a_rbt_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__RBT_html_ga0706f74ac645ff54aa33d2bd7467cc24"><div class="ttname"><a href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a></div><div class="ttdeci">#define a_rbt_entry(ptr, type, member)</div><div class="ttdoc">access the struct for this entry</div><div class="ttdef"><b>Definition</b> rbt.h:222</div></div>
-<div class="ttc" id="agroup__A__RBT_html_ga87038afcbdd03340a7570f337a799b86"><div class="ttname"><a href="#ga87038afcbdd03340a7570f337a799b86">a_rbt_foreach</a></div><div class="ttdeci">#define a_rbt_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree in-order</div><div class="ttdef"><b>Definition</b> rbt.h:237</div></div>
-<div class="ttc" id="auniona__rbt__u_html"><div class="ttname"><a href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a></div><div class="ttdoc">instance structure for red–black binary search tree root</div><div class="ttdef"><b>Definition</b> rbt.h:81</div></div>
+<div class="ttc" id="agroup__A__RBT_html_ga87038afcbdd03340a7570f337a799b86"><div class="ttname"><a href="#ga87038afcbdd03340a7570f337a799b86">a_rbt_foreach</a></div><div class="ttdeci">#define a_rbt_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree in-order</div><div class="ttdef"><b>Definition</b> rbt.h:240</div></div>
+<div class="ttc" id="astructa__rbt__node_html"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html">a_rbt_node</a></div><div class="ttdoc">instance structure for red–black binary search tree node</div><div class="ttdef"><b>Definition</b> rbt.h:28</div></div>
+<div class="ttc" id="auniona__rbt_html"><div class="ttname"><a href="../../d0/d4d/uniona__rbt.html">a_rbt</a></div><div class="ttdoc">instance structure for red–black binary search tree root</div><div class="ttdef"><b>Definition</b> rbt.h:81</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -301,22 +305,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#gac4835080f4a708acbe9f0258924d6663">a_rbt_tail</a>(root); cur; cur = <a class="el" href="#ga9fa45c84256a25b85c419d40ebc4cf50">a_rbt_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#gae1f9f2aad7b208a40651e2bae386247f">a_rbt_tail</a>(root); cur; cur = <a class="el" href="#ga5848594f9db2f2441edfe5c5500c3d44">a_rbt_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree in-order reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga9a03b36d2793c815feae6c20ec493826">a_rbt_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_ga9a03b36d2793c815feae6c20ec493826"><div class="ttname"><a href="#ga9a03b36d2793c815feae6c20ec493826">a_rbt_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree in-order reverse</div><div class="ttdef"><b>Definition</b> rbt.h:253</div></div>
+<div class="ttc" id="agroup__A__RBT_html_ga9a03b36d2793c815feae6c20ec493826"><div class="ttname"><a href="#ga9a03b36d2793c815feae6c20ec493826">a_rbt_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree in-order reverse</div><div class="ttdef"><b>Definition</b> rbt.h:259</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -343,23 +350,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *next = A_NULL, *cur = <a class="el" href="#ga6d4a707e57c86e07171714166e3db3b5">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga6d4a707e57c86e07171714166e3db3b5">a_rbt_tear</a>(root, &amp;next))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *next = A_NULL, *cur = <a class="el" href="#gac0de11429de48f7c341076571376c2af">a_rbt_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#gac0de11429de48f7c341076571376c2af">a_rbt_tear</a>(root, &amp;next))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>tear a red–black binary search tree using postorder traversal </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a>(cur, next, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_ga02459a57098710b5438cea2bce6e1522"><div class="ttname"><a href="#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a></div><div class="ttdeci">#define a_rbt_fortear(cur, next, root)</div><div class="ttdoc">tear a red–black binary search tree using postorder traversal</div><div class="ttdef"><b>Definition</b> rbt.h:334</div></div>
+<div class="ttc" id="agroup__A__RBT_html_ga02459a57098710b5438cea2bce6e1522"><div class="ttname"><a href="#ga02459a57098710b5438cea2bce6e1522">a_rbt_fortear</a></div><div class="ttdeci">#define a_rbt_fortear(cur, next, root)</div><div class="ttdoc">tear a red–black binary search tree using postorder traversal</div><div class="ttdef"><b>Definition</b> rbt.h:355</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
-    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as next node </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as next node </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -381,22 +391,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#gaf68f9ce844831bb4b62917b20c4739d2">a_rbt_post_head</a>(root); cur; cur = <a class="el" href="#gaba82663b8fae822f5607b9a619d20288">a_rbt_post_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#ga3b31f85ab6e6a0c5b5dba6dc797a322f">a_rbt_post_head</a>(root); cur; cur = <a class="el" href="#gad6bb2ad88f8e91dd8c79a0875ddfbc94">a_rbt_post_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree postorder </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga22fc9cb6bca5efa8b54102d13e206aed">a_rbt_post_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_ga22fc9cb6bca5efa8b54102d13e206aed"><div class="ttname"><a href="#ga22fc9cb6bca5efa8b54102d13e206aed">a_rbt_post_foreach</a></div><div class="ttdeci">#define a_rbt_post_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree postorder</div><div class="ttdef"><b>Definition</b> rbt.h:301</div></div>
+<div class="ttc" id="agroup__A__RBT_html_ga22fc9cb6bca5efa8b54102d13e206aed"><div class="ttname"><a href="#ga22fc9cb6bca5efa8b54102d13e206aed">a_rbt_post_foreach</a></div><div class="ttdeci">#define a_rbt_post_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree postorder</div><div class="ttdef"><b>Definition</b> rbt.h:316</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -418,22 +431,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = <a class="el" href="#ga811f93547dffe9ba8aa2ed213690f0c3">a_rbt_post_tail</a>(root); cur; cur = <a class="el" href="#ga554fe66c3031dd58a9f12e603c89c28b">a_rbt_post_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = <a class="el" href="#gad93e95668a3e3ccc5902624e12d504f3">a_rbt_post_tail</a>(root); cur; cur = <a class="el" href="#ga3212dcf892495cc9e9e93f1d60c5b029">a_rbt_post_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree postorder reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_ga523ec97a16f4af03765499018640d519"><div class="ttname"><a href="#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_post_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree postorder reverse</div><div class="ttdef"><b>Definition</b> rbt.h:317</div></div>
+<div class="ttc" id="agroup__A__RBT_html_ga523ec97a16f4af03765499018640d519"><div class="ttname"><a href="#ga523ec97a16f4af03765499018640d519">a_rbt_post_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_post_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree postorder reverse</div><div class="ttdef"><b>Definition</b> rbt.h:335</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -455,22 +471,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga3cb6843826fcfc63f9e1bf6d1f26f951">a_rbt_pre_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga0141445079342f7dbd7ce63321cf4271">a_rbt_pre_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree preorder </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#gaf6d7d0a2322858f1211db49b8114cbf8">a_rbt_pre_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_gaf6d7d0a2322858f1211db49b8114cbf8"><div class="ttname"><a href="#gaf6d7d0a2322858f1211db49b8114cbf8">a_rbt_pre_foreach</a></div><div class="ttdeci">#define a_rbt_pre_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree preorder</div><div class="ttdef"><b>Definition</b> rbt.h:269</div></div>
+<div class="ttc" id="agroup__A__RBT_html_gaf6d7d0a2322858f1211db49b8114cbf8"><div class="ttname"><a href="#gaf6d7d0a2322858f1211db49b8114cbf8">a_rbt_pre_foreach</a></div><div class="ttdeci">#define a_rbt_pre_foreach(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree preorder</div><div class="ttdef"><b>Definition</b> rbt.h:278</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -492,22 +511,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#gab52b9e85f7bab2907f52185fd134e00f">a_rbt_pre_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga81787629713312109f6f7b233c6a9e77">a_rbt_pre_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a red–black binary search tree preorder reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> root = A_RBT_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> root = A_RBT_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#gacf5b8fc53a36ddcc69036b04172de976">a_rbt_pre_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga0706f74ac645ff54aa33d2bd7467cc24">a_rbt_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__RBT_html_gacf5b8fc53a36ddcc69036b04172de976"><div class="ttname"><a href="#gacf5b8fc53a36ddcc69036b04172de976">a_rbt_pre_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_pre_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree preorder reverse</div><div class="ttdef"><b>Definition</b> rbt.h:285</div></div>
+<div class="ttc" id="agroup__A__RBT_html_gacf5b8fc53a36ddcc69036b04172de976"><div class="ttname"><a href="#gacf5b8fc53a36ddcc69036b04172de976">a_rbt_pre_foreach_reverse</a></div><div class="ttdeci">#define a_rbt_pre_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a red–black binary search tree preorder reverse</div><div class="ttdef"><b>Definition</b> rbt.h:297</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../dc/dad/structa__rbt__s.html" title="instance structure for red–black binary search tree node">a_rbt_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../db/d47/structa__rbt__node.html" title="instance structure for red–black binary search tree node">a_rbt_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>red–black binary search tree root </td></tr>
   </table>
   </dd>
@@ -516,16 +538,16 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga9b4a870c9960bd6b7a5fc1472c57043e" name="ga9b4a870c9960bd6b7a5fc1472c57043e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9b4a870c9960bd6b7a5fc1472c57043e">&#9670;&#160;</a></span>a_rbt_head()</h2>
+<a id="ga02d2a6f1b6a83ac0a750dfef72ffeda4" name="ga02d2a6f1b6a83ac0a750dfef72ffeda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02d2a6f1b6a83ac0a750dfef72ffeda4">&#9670;&#160;</a></span>a_rbt_head()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_head </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -542,21 +564,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae57bbf969c673795aa27e15489a94011" name="gae57bbf969c673795aa27e15489a94011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae57bbf969c673795aa27e15489a94011">&#9670;&#160;</a></span>a_rbt_init()</h2>
+<a id="gac09f3bb2cf7d4e45df4501b66180f9dd" name="gac09f3bb2cf7d4e45df4501b66180f9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac09f3bb2cf7d4e45df4501b66180f9dd">&#9670;&#160;</a></span>a_rbt_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_init </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -573,21 +595,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga1a5270722952738d2795a7db5426fa30" name="ga1a5270722952738d2795a7db5426fa30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1a5270722952738d2795a7db5426fa30">&#9670;&#160;</a></span>a_rbt_insert()</h2>
+<a id="ga7c827ef9a60ac65af5961025d4cdd27c" name="ga7c827ef9a60ac65af5961025d4cdd27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c827ef9a60ac65af5961025d4cdd27c">&#9670;&#160;</a></span>a_rbt_insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_insert </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -615,8 +637,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadf28d912f1226d251bfef94145176b17" name="gadf28d912f1226d251bfef94145176b17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadf28d912f1226d251bfef94145176b17">&#9670;&#160;</a></span>a_rbt_insert_adjust()</h2>
+<a id="ga648c10a4ebb76ae7577f404722a6e6a2" name="ga648c10a4ebb76ae7577f404722a6e6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga648c10a4ebb76ae7577f404722a6e6a2">&#9670;&#160;</a></span>a_rbt_insert_adjust()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,12 +646,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_rbt_insert_adjust </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -645,16 +667,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadc2eb3565aaea599a33730baea88ad33" name="gadc2eb3565aaea599a33730baea88ad33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadc2eb3565aaea599a33730baea88ad33">&#9670;&#160;</a></span>a_rbt_next()</h2>
+<a id="ga0fc88ab059ec21420ff82dbbffcac0a2" name="ga0fc88ab059ec21420ff82dbbffcac0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fc88ab059ec21420ff82dbbffcac0a2">&#9670;&#160;</a></span>a_rbt_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_next </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -671,16 +693,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga1099bf51bd07bddc7b7c0eddeaefc4d7" name="ga1099bf51bd07bddc7b7c0eddeaefc4d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1099bf51bd07bddc7b7c0eddeaefc4d7">&#9670;&#160;</a></span>a_rbt_parent()</h2>
+<a id="ga556d9e38671366390be61220e86faf38" name="ga556d9e38671366390be61220e86faf38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga556d9e38671366390be61220e86faf38">&#9670;&#160;</a></span>a_rbt_parent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_parent </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_parent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> const *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -697,16 +719,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf68f9ce844831bb4b62917b20c4739d2" name="gaf68f9ce844831bb4b62917b20c4739d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf68f9ce844831bb4b62917b20c4739d2">&#9670;&#160;</a></span>a_rbt_post_head()</h2>
+<a id="ga3b31f85ab6e6a0c5b5dba6dc797a322f" name="ga3b31f85ab6e6a0c5b5dba6dc797a322f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b31f85ab6e6a0c5b5dba6dc797a322f">&#9670;&#160;</a></span>a_rbt_post_head()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_post_head </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_post_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -723,16 +745,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaba82663b8fae822f5607b9a619d20288" name="gaba82663b8fae822f5607b9a619d20288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaba82663b8fae822f5607b9a619d20288">&#9670;&#160;</a></span>a_rbt_post_next()</h2>
+<a id="gad6bb2ad88f8e91dd8c79a0875ddfbc94" name="gad6bb2ad88f8e91dd8c79a0875ddfbc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6bb2ad88f8e91dd8c79a0875ddfbc94">&#9670;&#160;</a></span>a_rbt_post_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_post_next </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_post_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -749,16 +771,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga554fe66c3031dd58a9f12e603c89c28b" name="ga554fe66c3031dd58a9f12e603c89c28b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga554fe66c3031dd58a9f12e603c89c28b">&#9670;&#160;</a></span>a_rbt_post_prev()</h2>
+<a id="ga3212dcf892495cc9e9e93f1d60c5b029" name="ga3212dcf892495cc9e9e93f1d60c5b029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3212dcf892495cc9e9e93f1d60c5b029">&#9670;&#160;</a></span>a_rbt_post_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_post_prev </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_post_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -775,16 +797,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga811f93547dffe9ba8aa2ed213690f0c3" name="ga811f93547dffe9ba8aa2ed213690f0c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga811f93547dffe9ba8aa2ed213690f0c3">&#9670;&#160;</a></span>a_rbt_post_tail()</h2>
+<a id="gad93e95668a3e3ccc5902624e12d504f3" name="gad93e95668a3e3ccc5902624e12d504f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad93e95668a3e3ccc5902624e12d504f3">&#9670;&#160;</a></span>a_rbt_post_tail()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_post_tail </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_post_tail </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -801,16 +823,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3cb6843826fcfc63f9e1bf6d1f26f951" name="ga3cb6843826fcfc63f9e1bf6d1f26f951"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3cb6843826fcfc63f9e1bf6d1f26f951">&#9670;&#160;</a></span>a_rbt_pre_next()</h2>
+<a id="ga0141445079342f7dbd7ce63321cf4271" name="ga0141445079342f7dbd7ce63321cf4271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0141445079342f7dbd7ce63321cf4271">&#9670;&#160;</a></span>a_rbt_pre_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_pre_next </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_pre_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -827,16 +849,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab52b9e85f7bab2907f52185fd134e00f" name="gab52b9e85f7bab2907f52185fd134e00f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab52b9e85f7bab2907f52185fd134e00f">&#9670;&#160;</a></span>a_rbt_pre_prev()</h2>
+<a id="ga81787629713312109f6f7b233c6a9e77" name="ga81787629713312109f6f7b233c6a9e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81787629713312109f6f7b233c6a9e77">&#9670;&#160;</a></span>a_rbt_pre_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_pre_prev </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_pre_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -853,16 +875,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga9fa45c84256a25b85c419d40ebc4cf50" name="ga9fa45c84256a25b85c419d40ebc4cf50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9fa45c84256a25b85c419d40ebc4cf50">&#9670;&#160;</a></span>a_rbt_prev()</h2>
+<a id="ga5848594f9db2f2441edfe5c5500c3d44" name="ga5848594f9db2f2441edfe5c5500c3d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5848594f9db2f2441edfe5c5500c3d44">&#9670;&#160;</a></span>a_rbt_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_prev </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -879,8 +901,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3b40b1cdb606b8b102b618bc60dc2f84" name="ga3b40b1cdb606b8b102b618bc60dc2f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3b40b1cdb606b8b102b618bc60dc2f84">&#9670;&#160;</a></span>a_rbt_remove()</h2>
+<a id="ga2e6cb5d7c989434f64face3f5934356f" name="ga2e6cb5d7c989434f64face3f5934356f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e6cb5d7c989434f64face3f5934356f">&#9670;&#160;</a></span>a_rbt_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -888,12 +910,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_rbt_remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -909,8 +931,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6835bb5cacda92b6ad11f751a3f63476" name="ga6835bb5cacda92b6ad11f751a3f63476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6835bb5cacda92b6ad11f751a3f63476">&#9670;&#160;</a></span>a_rbt_root()</h2>
+<a id="gad9c346f9489801f34fcec39aebc276e2" name="gad9c346f9489801f34fcec39aebc276e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad9c346f9489801f34fcec39aebc276e2">&#9670;&#160;</a></span>a_rbt_root()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -918,7 +940,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_rbt_root </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *const</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -934,16 +956,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga10360e0780b0f50af416c22ed92a9dd5" name="ga10360e0780b0f50af416c22ed92a9dd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10360e0780b0f50af416c22ed92a9dd5">&#9670;&#160;</a></span>a_rbt_search()</h2>
+<a id="gaf245d9095230c22e5da521689cea3a5e" name="gaf245d9095230c22e5da521689cea3a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf245d9095230c22e5da521689cea3a5e">&#9670;&#160;</a></span>a_rbt_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_search </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_search </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -976,16 +998,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gac4835080f4a708acbe9f0258924d6663" name="gac4835080f4a708acbe9f0258924d6663"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac4835080f4a708acbe9f0258924d6663">&#9670;&#160;</a></span>a_rbt_tail()</h2>
+<a id="gae1f9f2aad7b208a40651e2bae386247f" name="gae1f9f2aad7b208a40651e2bae386247f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1f9f2aad7b208a40651e2bae386247f">&#9670;&#160;</a></span>a_rbt_tail()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_tail </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_tail </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1002,21 +1024,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6d4a707e57c86e07171714166e3db3b5" name="ga6d4a707e57c86e07171714166e3db3b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6d4a707e57c86e07171714166e3db3b5">&#9670;&#160;</a></span>a_rbt_tear()</h2>
+<a id="gac0de11429de48f7c341076571376c2af" name="gac0de11429de48f7c341076571376c2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0de11429de48f7c341076571376c2af">&#9670;&#160;</a></span>a_rbt_tear()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> * a_rbt_tear </td>
+          <td class="memname"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> * a_rbt_tear </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dfa/uniona__rbt__u.html">a_rbt_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d0/d4d/uniona__rbt.html">a_rbt</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dad/structa__rbt__s.html">a_rbt_s</a> **</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> **</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

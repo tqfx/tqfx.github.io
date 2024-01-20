@@ -104,40 +104,46 @@ Include dependency graph for lpf.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d63/structa__lpf__s.html">a_lpf_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for Low Pass Filter  <a href="../../db/d63/structa__lpf__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for Low Pass Filter  <a href="../../d8/d6c/structa__lpf.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gab58866f993d39ecf8c8f467dfc15d1d4" id="r_gab58866f993d39ecf8c8f467dfc15d1d4"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LPF_INIT</b>(alpha)&#160;&#160;&#160;{<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, alpha), 0}</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LPF_INIT</b>(alpha)&#160;&#160;&#160;{<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(alpha), 0}</td></tr>
 <tr class="separator:gab58866f993d39ecf8c8f467dfc15d1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0262a77c4e8e7a312c18b3a9865cc6a" id="r_gad0262a77c4e8e7a312c18b3a9865cc6a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LPF_INIT2</b>(fc,  ts)&#160;&#160;&#160;{A_LPF_GEN(fc, ts), 0}</td></tr>
+<tr class="separator:gad0262a77c4e8e7a312c18b3a9865cc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab6cc05fd143ecfba7616b51f68cd1c41" id="r_gab6cc05fd143ecfba7616b51f68cd1c41"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LPF_GEN</b>(fc,  ts)&#160;&#160;&#160;(<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, ts) / (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga07cf621e7e90745b6d50cc338a766964">A_FLOAT_1_PI</a> / 2 / <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, fc) + <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga9e4e016206a53cd8274fa9ca1a813b20">a_float_c</a>(, ts)))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LPF_GEN</b>(fc,  ts)&#160;&#160;&#160;(<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(ts) / (<a class="el" href="../../d5/da3/group__A__FLOAT.html#ga07cf621e7e90745b6d50cc338a766964">A_FLOAT_1_PI</a> / 2 / <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(fc) + <a class="el" href="../../d5/da3/group__A__FLOAT.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(ts)))</td></tr>
 <tr class="separator:gab6cc05fd143ecfba7616b51f68cd1c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaf7c558acfb256c7cdae3d4ee3525d7e5" id="r_gaf7c558acfb256c7cdae3d4ee3525d7e5"><td class="memItemLeft" align="right" valign="top">
-typedef struct a_lpf_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_lpf_s</b></td></tr>
-<tr class="memdesc:gaf7c558acfb256c7cdae3d4ee3525d7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for Low Pass Filter <br /></td></tr>
-<tr class="separator:gaf7c558acfb256c7cdae3d4ee3525d7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c8971b216a3767d8a1c5ffcfe90e874" id="r_ga0c8971b216a3767d8a1c5ffcfe90e874"><td class="memItemLeft" align="right" valign="top">
+typedef struct a_lpf&#160;</td><td class="memItemRight" valign="bottom"><b>a_lpf</b></td></tr>
+<tr class="memdesc:ga0c8971b216a3767d8a1c5ffcfe90e874"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for Low Pass Filter <br /></td></tr>
+<tr class="separator:ga0c8971b216a3767d8a1c5ffcfe90e874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e596dd4da2da5f941da25138dcad63" id="r_a88e596dd4da2da5f941da25138dcad63"><td class="memItemLeft" align="right" valign="top"><a id="a88e596dd4da2da5f941da25138dcad63" name="a88e596dd4da2da5f941da25138dcad63"></a>
+typedef struct <a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a::lpf</b></td></tr>
+<tr class="separator:a88e596dd4da2da5f941da25138dcad63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac7aa15fb7b8eb2e2e7f4602aa5a258f6" id="r_gac7aa15fb7b8eb2e2e7f4602aa5a258f6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#gac7aa15fb7b8eb2e2e7f4602aa5a258f6">a_lpf_gen</a> (double const fc, double const ts)</td></tr>
-<tr class="memdesc:gac7aa15fb7b8eb2e2e7f4602aa5a258f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for Low Pass Filter  <br /></td></tr>
-<tr class="separator:gac7aa15fb7b8eb2e2e7f4602aa5a258f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb36ec73f36ee7599b51162440ddd412" id="r_gafb36ec73f36ee7599b51162440ddd412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#gafb36ec73f36ee7599b51162440ddd412">a_lpf_init</a> (<a class="el" href="../../db/d63/structa__lpf__s.html">a_lpf_s</a> *const ctx, double const alpha)</td></tr>
-<tr class="memdesc:gafb36ec73f36ee7599b51162440ddd412"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for Low Pass Filter  <br /></td></tr>
-<tr class="separator:gafb36ec73f36ee7599b51162440ddd412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga575083626b870eacd0b1915daf38d1a1" id="r_ga575083626b870eacd0b1915daf38d1a1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#ga575083626b870eacd0b1915daf38d1a1">a_lpf_iter</a> (<a class="el" href="../../db/d63/structa__lpf__s.html">a_lpf_s</a> *const ctx, double const x)</td></tr>
-<tr class="memdesc:ga575083626b870eacd0b1915daf38d1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for Low Pass Filter  <br /></td></tr>
-<tr class="separator:ga575083626b870eacd0b1915daf38d1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabd66817e3298d31cb7e0d0e91dcc7c85" id="r_gabd66817e3298d31cb7e0d0e91dcc7c85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#gabd66817e3298d31cb7e0d0e91dcc7c85">a_lpf_zero</a> (<a class="el" href="../../db/d63/structa__lpf__s.html">a_lpf_s</a> *const ctx)</td></tr>
-<tr class="memdesc:gabd66817e3298d31cb7e0d0e91dcc7c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for Low Pass Filter  <br /></td></tr>
-<tr class="separator:gabd66817e3298d31cb7e0d0e91dcc7c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad917c95fc9f85d72e7056e9edbe9afda" id="r_gad917c95fc9f85d72e7056e9edbe9afda"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#gad917c95fc9f85d72e7056e9edbe9afda">a_lpf_gen</a> (double fc, double ts)</td></tr>
+<tr class="memdesc:gad917c95fc9f85d72e7056e9edbe9afda"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for Low Pass Filter  <br /></td></tr>
+<tr class="separator:gad917c95fc9f85d72e7056e9edbe9afda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4bf5ac257d6fef42c9b29292f460976a" id="r_ga4bf5ac257d6fef42c9b29292f460976a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#ga4bf5ac257d6fef42c9b29292f460976a">a_lpf_init</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, double alpha)</td></tr>
+<tr class="memdesc:ga4bf5ac257d6fef42c9b29292f460976a"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for Low Pass Filter  <br /></td></tr>
+<tr class="separator:ga4bf5ac257d6fef42c9b29292f460976a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37d5a69038fd70a3e288905381b98c26" id="r_ga37d5a69038fd70a3e288905381b98c26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#ga37d5a69038fd70a3e288905381b98c26">a_lpf_iter</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, double x)</td></tr>
+<tr class="memdesc:ga37d5a69038fd70a3e288905381b98c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for Low Pass Filter  <br /></td></tr>
+<tr class="separator:ga37d5a69038fd70a3e288905381b98c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f351dd4806aae266a5b6a927425e757" id="r_ga8f351dd4806aae266a5b6a927425e757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d27/group__A__LPF.html#ga8f351dd4806aae266a5b6a927425e757">a_lpf_zero</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx)</td></tr>
+<tr class="memdesc:ga8f351dd4806aae266a5b6a927425e757"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for Low Pass Filter  <br /></td></tr>
+<tr class="separator:ga8f351dd4806aae266a5b6a927425e757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low Pass Filter. </p>

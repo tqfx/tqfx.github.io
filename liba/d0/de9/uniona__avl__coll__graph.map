@@ -1,0 +1,6 @@
+<map id="a_avl" name="a_avl">
+<area shape="rect" id="Node000001" title="instance structure for AVL binary search tree root" alt="" coords="25,97,82,123"/>
+<area shape="rect" id="Node000002" href="$d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node" alt="" coords="5,7,101,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,46,56,97,51,97,51,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="116,10,124,14,128,20,120,28,102,31,101,26,117,24,123,20,121,18,114,15"/>
+</map>

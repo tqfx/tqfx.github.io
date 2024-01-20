@@ -1,4 +1,14 @@
 <map id="transfer function" name="transfer function">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,5,136,31"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="184,5,315,31"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,285,136,311"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,285,316,311"/>
+<area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="418,5,541,31"/>
+<area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="420,55,539,80"/>
+<area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="400,105,559,145"/>
+<area shape="rect" id="Node000006" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="406,169,553,224"/>
+<area shape="rect" id="Node000007" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="373,249,585,289"/>
+<area shape="rect" id="Node000008" href="$d4/d5e/group__A__POLYTRAJ3.html" title=" " alt="" coords="379,313,579,339"/>
+<area shape="rect" id="Node000009" href="$d5/d8e/group__A__POLYTRAJ5.html" title=" " alt="" coords="408,363,551,403"/>
+<area shape="rect" id="Node000010" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="378,428,581,453"/>
+<area shape="rect" id="Node000011" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="402,477,557,503"/>
+<area shape="rect" id="Node000012" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="388,527,571,552"/>
 </map>

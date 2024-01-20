@@ -97,8 +97,8 @@ Collaboration diagram for circular doubly linked list:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular doubly linked list  <a href="../../d7/d8e/structa__list__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular doubly linked list  <a href="../../d1/d8c/structa__list.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -106,9 +106,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaabf533320036ac278974828f4e140b1f" id="r_gaabf533320036ac278974828f4e140b1f"><td class="memItemLeft" align="right" valign="top"><a id="gaabf533320036ac278974828f4e140b1f" name="gaabf533320036ac278974828f4e140b1f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_LIST_INIT</b>(node)&#160;&#160;&#160;{&amp;(node), &amp;(node)}</td></tr>
 <tr class="separator:gaabf533320036ac278974828f4e140b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga20ee317221f1af2c5ed2b2ea00cd3700" id="r_ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga20ee317221f1af2c5ed2b2ea00cd3700">a_list_c</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> _, a_cast_s(void _, x))</td></tr>
-<tr class="memdesc:ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
-<tr class="separator:ga20ee317221f1af2c5ed2b2ea00cd3700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2809c539fa729c0714f7820646165ccc" id="r_ga2809c539fa729c0714f7820646165ccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(_,  x)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> _, a_cast_s(void _, x))</td></tr>
+<tr class="memdesc:ga2809c539fa729c0714f7820646165ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">cast a list pointer from another type pointer  <br /></td></tr>
+<tr class="separator:ga2809c539fa729c0714f7820646165ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga40f748b5e7a227f814c46cac69ad2b0e" id="r_ga40f748b5e7a227f814c46cac69ad2b0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga40f748b5e7a227f814c46cac69ad2b0e">a_list_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</td></tr>
 <tr class="memdesc:ga40f748b5e7a227f814c46cac69ad2b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access the struct for this entry  <br /></td></tr>
 <tr class="separator:ga40f748b5e7a227f814c46cac69ad2b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +118,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga9e66ee132edc488fb0d15debc732e8e5" id="r_ga9e66ee132edc488fb0d15debc732e8e5"><td class="memItemLeft" align="right" valign="top"><a id="ga9e66ee132edc488fb0d15debc732e8e5" name="ga9e66ee132edc488fb0d15debc732e8e5"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_list_entry_prev</b>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="#ga40f748b5e7a227f814c46cac69ad2b0e">a_list_entry</a>((ptr)-&gt;prev, type, member)</td></tr>
 <tr class="separator:ga9e66ee132edc488fb0d15debc732e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga314a0d14763d25a8e20d869fb20a61aa" id="r_ga314a0d14763d25a8e20d869fb20a61aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga314a0d14763d25a8e20d869fb20a61aa">a_list_foreach_</a>(it,  ctx,  next)&#160;&#160;&#160;    for (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td></tr>
+<tr class="memitem:ga314a0d14763d25a8e20d869fb20a61aa" id="r_ga314a0d14763d25a8e20d869fb20a61aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga314a0d14763d25a8e20d869fb20a61aa">a_list_foreach_</a>(it,  ctx,  next)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td></tr>
 <tr class="memdesc:ga314a0d14763d25a8e20d869fb20a61aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list  <br /></td></tr>
 <tr class="separator:ga314a0d14763d25a8e20d869fb20a61aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga18d8d244734eacf2b19303bfceb8dc47" id="r_ga18d8d244734eacf2b19303bfceb8dc47"><td class="memItemLeft" align="right" valign="top"><a id="ga18d8d244734eacf2b19303bfceb8dc47" name="ga18d8d244734eacf2b19303bfceb8dc47"></a>
@@ -127,7 +127,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga6b78d84af663711484861efe9250c207" id="r_ga6b78d84af663711484861efe9250c207"><td class="memItemLeft" align="right" valign="top"><a id="ga6b78d84af663711484861efe9250c207" name="ga6b78d84af663711484861efe9250c207"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_list_foreach_prev</b>(it,  ctx)&#160;&#160;&#160;<a class="el" href="#ga314a0d14763d25a8e20d869fb20a61aa">a_list_foreach_</a>(it, ctx, prev)</td></tr>
 <tr class="separator:ga6b78d84af663711484861efe9250c207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga21ba4d797f277f1ce0fa7e2320016aeb" id="r_ga21ba4d797f277f1ce0fa7e2320016aeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21ba4d797f277f1ce0fa7e2320016aeb">a_list_forsafe_</a>(it,  at,  ctx,  next)&#160;&#160;&#160;    for (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *it = (ctx)-&gt;next, *at = it-&gt;next; it != (ctx); it = at, at = it-&gt;next)</td></tr>
+<tr class="memitem:ga21ba4d797f277f1ce0fa7e2320016aeb" id="r_ga21ba4d797f277f1ce0fa7e2320016aeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga21ba4d797f277f1ce0fa7e2320016aeb">a_list_forsafe_</a>(it,  at,  ctx,  next)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *it = (ctx)-&gt;next, *at = it-&gt;next; it != (ctx); it = at, at = it-&gt;next)</td></tr>
 <tr class="memdesc:ga21ba4d797f277f1ce0fa7e2320016aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list safe against removal of list entry  <br /></td></tr>
 <tr class="separator:ga21ba4d797f277f1ce0fa7e2320016aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad44f85781901f63d39d77bb0f2ee6094" id="r_gad44f85781901f63d39d77bb0f2ee6094"><td class="memItemLeft" align="right" valign="top"><a id="gad44f85781901f63d39d77bb0f2ee6094" name="gad44f85781901f63d39d77bb0f2ee6094"></a>
@@ -139,94 +139,94 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaaffe562b1dcd5e78d88c0508324022f0" id="r_gaaffe562b1dcd5e78d88c0508324022f0"><td class="memItemLeft" align="right" valign="top"><a id="gaaffe562b1dcd5e78d88c0508324022f0" name="gaaffe562b1dcd5e78d88c0508324022f0"></a>
-typedef struct a_list_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_list_s</b></td></tr>
-<tr class="memdesc:gaaffe562b1dcd5e78d88c0508324022f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular doubly linked list <br /></td></tr>
-<tr class="separator:gaaffe562b1dcd5e78d88c0508324022f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6efce544b628a19127210369fb17a069" id="r_ga6efce544b628a19127210369fb17a069"><td class="memItemLeft" align="right" valign="top"><a id="ga6efce544b628a19127210369fb17a069" name="ga6efce544b628a19127210369fb17a069"></a>
+typedef struct a_list&#160;</td><td class="memItemRight" valign="bottom"><b>a_list</b></td></tr>
+<tr class="memdesc:ga6efce544b628a19127210369fb17a069"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for circular doubly linked list <br /></td></tr>
+<tr class="separator:ga6efce544b628a19127210369fb17a069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1b2a0f198a7b693245b8a69dddfc29d5" id="r_ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b2a0f198a7b693245b8a69dddfc29d5">a_list_ctor</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for circular doubly linked list  <br /></td></tr>
-<tr class="separator:ga1b2a0f198a7b693245b8a69dddfc29d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99ceafc8a97cc62aab0187d2650f99f1" id="r_ga99ceafc8a97cc62aab0187d2650f99f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99ceafc8a97cc62aab0187d2650f99f1">a_list_init</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga99ceafc8a97cc62aab0187d2650f99f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for circular doubly linked list  <br /></td></tr>
-<tr class="separator:ga99ceafc8a97cc62aab0187d2650f99f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga30dbd96211999ad30a185d505b0a0a28" id="r_ga30dbd96211999ad30a185d505b0a0a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga30dbd96211999ad30a185d505b0a0a28">a_list_dtor</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga30dbd96211999ad30a185d505b0a0a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for circular doubly linked list  <br /></td></tr>
-<tr class="separator:ga30dbd96211999ad30a185d505b0a0a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb83741ac9be3d7950ad0e70b09645b9" id="r_gafb83741ac9be3d7950ad0e70b09645b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafb83741ac9be3d7950ad0e70b09645b9">a_list_link</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail)</td></tr>
-<tr class="memdesc:gafb83741ac9be3d7950ad0e70b09645b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">link head node and tail node  <br /></td></tr>
-<tr class="separator:gafb83741ac9be3d7950ad0e70b09645b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga334432949fc2920c13246dc426d4a48e" id="r_ga334432949fc2920c13246dc426d4a48e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga334432949fc2920c13246dc426d4a48e">a_list_loop</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail)</td></tr>
-<tr class="memdesc:ga334432949fc2920c13246dc426d4a48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop head node to tail node  <br /></td></tr>
-<tr class="separator:ga334432949fc2920c13246dc426d4a48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10a89c1a5680042a375f062dd58139f9" id="r_ga10a89c1a5680042a375f062dd58139f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga10a89c1a5680042a375f062dd58139f9">a_list_add_</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head2, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail2)</td></tr>
-<tr class="memdesc:ga10a89c1a5680042a375f062dd58139f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect list1 and list2  <br /></td></tr>
-<tr class="separator:ga10a89c1a5680042a375f062dd58139f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabaa404ea9e07f72586713d12c6bcd648" id="r_gabaa404ea9e07f72586713d12c6bcd648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabaa404ea9e07f72586713d12c6bcd648">a_list_add_node</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:gabaa404ea9e07f72586713d12c6bcd648"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a node to a list  <br /></td></tr>
-<tr class="separator:gabaa404ea9e07f72586713d12c6bcd648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66d0e4d74ec78b168280eb6f5996ea0e" id="r_ga66d0e4d74ec78b168280eb6f5996ea0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga66d0e4d74ec78b168280eb6f5996ea0e">a_list_add_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:ga66d0e4d74ec78b168280eb6f5996ea0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">append a node to a list forward  <br /></td></tr>
-<tr class="separator:ga66d0e4d74ec78b168280eb6f5996ea0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71cb73ee75ac2320d0e024bcf45eabee" id="r_ga71cb73ee75ac2320d0e024bcf45eabee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga71cb73ee75ac2320d0e024bcf45eabee">a_list_add_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:ga71cb73ee75ac2320d0e024bcf45eabee"><td class="mdescLeft">&#160;</td><td class="mdescRight">append a node to a list backward  <br /></td></tr>
-<tr class="separator:ga71cb73ee75ac2320d0e024bcf45eabee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee20100808b1c8319fd400497677b741" id="r_gaee20100808b1c8319fd400497677b741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaee20100808b1c8319fd400497677b741">a_list_del_</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail)</td></tr>
-<tr class="memdesc:gaee20100808b1c8319fd400497677b741"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete a section of a list  <br /></td></tr>
-<tr class="separator:gaee20100808b1c8319fd400497677b741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82a35802cf28b8a4a4bbe8c253519916" id="r_ga82a35802cf28b8a4a4bbe8c253519916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga82a35802cf28b8a4a4bbe8c253519916">a_list_del_node</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:ga82a35802cf28b8a4a4bbe8c253519916"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete a node from a list  <br /></td></tr>
-<tr class="separator:ga82a35802cf28b8a4a4bbe8c253519916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadecc13cf46ff54dc4af677cb1c9b8d4e" id="r_gadecc13cf46ff54dc4af677cb1c9b8d4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadecc13cf46ff54dc4af677cb1c9b8d4e">a_list_del_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:gadecc13cf46ff54dc4af677cb1c9b8d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a node from a list forward  <br /></td></tr>
-<tr class="separator:gadecc13cf46ff54dc4af677cb1c9b8d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga708c11d0e099785632b99185ab0fb699" id="r_ga708c11d0e099785632b99185ab0fb699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga708c11d0e099785632b99185ab0fb699">a_list_del_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const node)</td></tr>
-<tr class="memdesc:ga708c11d0e099785632b99185ab0fb699"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a node from a list backward  <br /></td></tr>
-<tr class="separator:ga708c11d0e099785632b99185ab0fb699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5bb044bd72f405adc7f3efcc38ddd333" id="r_ga5bb044bd72f405adc7f3efcc38ddd333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5bb044bd72f405adc7f3efcc38ddd333">a_list_mov_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const out)</td></tr>
-<tr class="memdesc:ga5bb044bd72f405adc7f3efcc38ddd333"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list forward  <br /></td></tr>
-<tr class="separator:ga5bb044bd72f405adc7f3efcc38ddd333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga62fa1c916aa9590f8739e6344dfa2e51" id="r_ga62fa1c916aa9590f8739e6344dfa2e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga62fa1c916aa9590f8739e6344dfa2e51">a_list_mov_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const out)</td></tr>
-<tr class="memdesc:ga62fa1c916aa9590f8739e6344dfa2e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list backward  <br /></td></tr>
-<tr class="separator:ga62fa1c916aa9590f8739e6344dfa2e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga307021904d6285255445024c8a327108" id="r_ga307021904d6285255445024c8a327108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga307021904d6285255445024c8a327108">a_list_rot_next</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
-<tr class="memdesc:ga307021904d6285255445024c8a327108"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list backward  <br /></td></tr>
-<tr class="separator:ga307021904d6285255445024c8a327108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac680d83759e2437335f8aad81bbd08a" id="r_gaac680d83759e2437335f8aad81bbd08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac680d83759e2437335f8aad81bbd08a">a_list_rot_prev</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const ctx)</td></tr>
-<tr class="memdesc:gaac680d83759e2437335f8aad81bbd08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list forward  <br /></td></tr>
-<tr class="separator:gaac680d83759e2437335f8aad81bbd08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa524507f5e260ceefd4624c415e55997" id="r_gaa524507f5e260ceefd4624c415e55997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa524507f5e260ceefd4624c415e55997">a_list_shift_</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head2, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail2)</td></tr>
-<tr class="memdesc:gaa524507f5e260ceefd4624c415e55997"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift a section of one list to a section of another list  <br /></td></tr>
-<tr class="separator:gaa524507f5e260ceefd4624c415e55997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd855ea658e936406512d90e1037e9fb" id="r_gadd855ea658e936406512d90e1037e9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd855ea658e936406512d90e1037e9fb">a_list_shift_node</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const lhs, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const rhs)</td></tr>
-<tr class="memdesc:gadd855ea658e936406512d90e1037e9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift the node rhs to the node lhs  <br /></td></tr>
-<tr class="separator:gadd855ea658e936406512d90e1037e9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2cc3a7dc1d1db967aa0be1ebef93fa24" id="r_ga2cc3a7dc1d1db967aa0be1ebef93fa24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cc3a7dc1d1db967aa0be1ebef93fa24">a_list_swap_</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail1, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const head2, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const tail2)</td></tr>
-<tr class="memdesc:ga2cc3a7dc1d1db967aa0be1ebef93fa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap a section of one list and a section of another list  <br /></td></tr>
-<tr class="separator:ga2cc3a7dc1d1db967aa0be1ebef93fa24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga81d2f78758b016f7e5f449842b09401e" id="r_ga81d2f78758b016f7e5f449842b09401e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga81d2f78758b016f7e5f449842b09401e">a_list_swap_node</a> (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const lhs, <a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const rhs)</td></tr>
-<tr class="memdesc:ga81d2f78758b016f7e5f449842b09401e"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap the node lhs and the node rhs  <br /></td></tr>
-<tr class="separator:ga81d2f78758b016f7e5f449842b09401e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga332604967d408dc5da7ae162e828395b" id="r_ga332604967d408dc5da7ae162e828395b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga332604967d408dc5da7ae162e828395b">a_list_ctor</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx)</td></tr>
+<tr class="memdesc:ga332604967d408dc5da7ae162e828395b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor for circular doubly linked list  <br /></td></tr>
+<tr class="separator:ga332604967d408dc5da7ae162e828395b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5561da39ff3aaf4fe6ce954219c0e333" id="r_ga5561da39ff3aaf4fe6ce954219c0e333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5561da39ff3aaf4fe6ce954219c0e333">a_list_init</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx)</td></tr>
+<tr class="memdesc:ga5561da39ff3aaf4fe6ce954219c0e333"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for circular doubly linked list  <br /></td></tr>
+<tr class="separator:ga5561da39ff3aaf4fe6ce954219c0e333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga111397c62a63f34aecd77a52de7f2693" id="r_ga111397c62a63f34aecd77a52de7f2693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga111397c62a63f34aecd77a52de7f2693">a_list_dtor</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx)</td></tr>
+<tr class="memdesc:ga111397c62a63f34aecd77a52de7f2693"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor for circular doubly linked list  <br /></td></tr>
+<tr class="separator:ga111397c62a63f34aecd77a52de7f2693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65ef9ad875827eed8df52ebbb5f4edee" id="r_ga65ef9ad875827eed8df52ebbb5f4edee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga65ef9ad875827eed8df52ebbb5f4edee">a_list_link</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail)</td></tr>
+<tr class="memdesc:ga65ef9ad875827eed8df52ebbb5f4edee"><td class="mdescLeft">&#160;</td><td class="mdescRight">link head node and tail node  <br /></td></tr>
+<tr class="separator:ga65ef9ad875827eed8df52ebbb5f4edee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4427e75e8490649bffb1c906dad9bc7" id="r_gad4427e75e8490649bffb1c906dad9bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4427e75e8490649bffb1c906dad9bc7">a_list_loop</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail)</td></tr>
+<tr class="memdesc:gad4427e75e8490649bffb1c906dad9bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop head node to tail node  <br /></td></tr>
+<tr class="separator:gad4427e75e8490649bffb1c906dad9bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade045ba44c2499d8f99b11968a025267" id="r_gade045ba44c2499d8f99b11968a025267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gade045ba44c2499d8f99b11968a025267">a_list_add_</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head2, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail2)</td></tr>
+<tr class="memdesc:gade045ba44c2499d8f99b11968a025267"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect list1 and list2  <br /></td></tr>
+<tr class="separator:gade045ba44c2499d8f99b11968a025267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36099a37c5f103dee41629e48dd57ad3" id="r_ga36099a37c5f103dee41629e48dd57ad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga36099a37c5f103dee41629e48dd57ad3">a_list_add_node</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:ga36099a37c5f103dee41629e48dd57ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a node to a list  <br /></td></tr>
+<tr class="separator:ga36099a37c5f103dee41629e48dd57ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb7e4ede0ab821db3d0bbf0dee315542" id="r_gaeb7e4ede0ab821db3d0bbf0dee315542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeb7e4ede0ab821db3d0bbf0dee315542">a_list_add_next</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:gaeb7e4ede0ab821db3d0bbf0dee315542"><td class="mdescLeft">&#160;</td><td class="mdescRight">append a node to a list forward  <br /></td></tr>
+<tr class="separator:gaeb7e4ede0ab821db3d0bbf0dee315542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9f941d3d109f8c9135dcc098c25c830" id="r_gac9f941d3d109f8c9135dcc098c25c830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9f941d3d109f8c9135dcc098c25c830">a_list_add_prev</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:gac9f941d3d109f8c9135dcc098c25c830"><td class="mdescLeft">&#160;</td><td class="mdescRight">append a node to a list backward  <br /></td></tr>
+<tr class="separator:gac9f941d3d109f8c9135dcc098c25c830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a57e4db2ab80cdab23be91cf94f37f1" id="r_ga4a57e4db2ab80cdab23be91cf94f37f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4a57e4db2ab80cdab23be91cf94f37f1">a_list_del_</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail)</td></tr>
+<tr class="memdesc:ga4a57e4db2ab80cdab23be91cf94f37f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete a section of a list  <br /></td></tr>
+<tr class="separator:ga4a57e4db2ab80cdab23be91cf94f37f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf54e9835201d53d4860358ec31472d5e" id="r_gaf54e9835201d53d4860358ec31472d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf54e9835201d53d4860358ec31472d5e">a_list_del_node</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:gaf54e9835201d53d4860358ec31472d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete a node from a list  <br /></td></tr>
+<tr class="separator:gaf54e9835201d53d4860358ec31472d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e1235b50a9a372b01c3f408c37f6e73" id="r_ga4e1235b50a9a372b01c3f408c37f6e73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4e1235b50a9a372b01c3f408c37f6e73">a_list_del_next</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:ga4e1235b50a9a372b01c3f408c37f6e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a node from a list forward  <br /></td></tr>
+<tr class="separator:ga4e1235b50a9a372b01c3f408c37f6e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga744dee9b9c76d637c99366a8c05798f7" id="r_ga744dee9b9c76d637c99366a8c05798f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga744dee9b9c76d637c99366a8c05798f7">a_list_del_prev</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *node)</td></tr>
+<tr class="memdesc:ga744dee9b9c76d637c99366a8c05798f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a node from a list backward  <br /></td></tr>
+<tr class="separator:ga744dee9b9c76d637c99366a8c05798f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24df666e8483c6f994b061762b7f2f5f" id="r_ga24df666e8483c6f994b061762b7f2f5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga24df666e8483c6f994b061762b7f2f5f">a_list_mov_next</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *out)</td></tr>
+<tr class="memdesc:ga24df666e8483c6f994b061762b7f2f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list forward  <br /></td></tr>
+<tr class="separator:ga24df666e8483c6f994b061762b7f2f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae79903105fa44088f49177cfb50429bc" id="r_gae79903105fa44088f49177cfb50429bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae79903105fa44088f49177cfb50429bc">a_list_mov_prev</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *out)</td></tr>
+<tr class="memdesc:gae79903105fa44088f49177cfb50429bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving a list to another list backward  <br /></td></tr>
+<tr class="separator:gae79903105fa44088f49177cfb50429bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61e2003492abb7e59c980fc277b7b025" id="r_ga61e2003492abb7e59c980fc277b7b025"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga61e2003492abb7e59c980fc277b7b025">a_list_rot_next</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx)</td></tr>
+<tr class="memdesc:ga61e2003492abb7e59c980fc277b7b025"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list backward  <br /></td></tr>
+<tr class="separator:ga61e2003492abb7e59c980fc277b7b025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab29de7e5396d2cdb9b089c991c553b2b" id="r_gab29de7e5396d2cdb9b089c991c553b2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab29de7e5396d2cdb9b089c991c553b2b">a_list_rot_prev</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *ctx)</td></tr>
+<tr class="memdesc:gab29de7e5396d2cdb9b089c991c553b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a node in the list forward  <br /></td></tr>
+<tr class="separator:gab29de7e5396d2cdb9b089c991c553b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad725ffef7bd62cf1e67346a628324978" id="r_gad725ffef7bd62cf1e67346a628324978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad725ffef7bd62cf1e67346a628324978">a_list_shift_</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head2, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail2)</td></tr>
+<tr class="memdesc:gad725ffef7bd62cf1e67346a628324978"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift a section of one list to a section of another list  <br /></td></tr>
+<tr class="separator:gad725ffef7bd62cf1e67346a628324978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e132429a4d520fc664bb9a4ab999911" id="r_ga1e132429a4d520fc664bb9a4ab999911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1e132429a4d520fc664bb9a4ab999911">a_list_shift_node</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *lhs, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *rhs)</td></tr>
+<tr class="memdesc:ga1e132429a4d520fc664bb9a4ab999911"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift the node rhs to the node lhs  <br /></td></tr>
+<tr class="separator:ga1e132429a4d520fc664bb9a4ab999911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga129f41a7b88e76911028c52dc629ad72" id="r_ga129f41a7b88e76911028c52dc629ad72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga129f41a7b88e76911028c52dc629ad72">a_list_swap_</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail1, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *head2, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *tail2)</td></tr>
+<tr class="memdesc:ga129f41a7b88e76911028c52dc629ad72"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap a section of one list and a section of another list  <br /></td></tr>
+<tr class="separator:ga129f41a7b88e76911028c52dc629ad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8478cf129bb307d0e1f3bb516a06c75e" id="r_ga8478cf129bb307d0e1f3bb516a06c75e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8478cf129bb307d0e1f3bb516a06c75e">a_list_swap_node</a> (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *lhs, <a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *rhs)</td></tr>
+<tr class="memdesc:ga8478cf129bb307d0e1f3bb516a06c75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap the node lhs and the node rhs  <br /></td></tr>
+<tr class="separator:ga8478cf129bb307d0e1f3bb516a06c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga20ee317221f1af2c5ed2b2ea00cd3700" name="ga20ee317221f1af2c5ed2b2ea00cd3700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga20ee317221f1af2c5ed2b2ea00cd3700">&#9670;&#160;</a></span>a_list_c</h2>
+<a id="ga2809c539fa729c0714f7820646165ccc" name="ga2809c539fa729c0714f7820646165ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2809c539fa729c0714f7820646165ccc">&#9670;&#160;</a></span>a_list_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define a_list_c</td>
+          <td class="memname">#define a_list_</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span>&#160;)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> _, a_cast_s(void _, x))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span>&#160;)&#160;&#160;&#160;a_cast_s(<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> _, a_cast_s(void _, x))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -270,9 +270,9 @@ Functions</h2></td></tr>
 <p>access the struct for this entry </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d7/d8e/structa__list__s.html" title="instance structure for circular doubly linked list">a_list_s</a> pointer </td></tr>
+    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d1/d8c/structa__list.html" title="instance structure for circular doubly linked list">a_list</a> pointer </td></tr>
     <tr><td class="paramname">type</td><td>the type of the struct this is embedded in </td></tr>
-    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d7/d8e/structa__list__s.html" title="instance structure for circular doubly linked list">a_list_s</a> within the struct </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d1/d8c/structa__list.html" title="instance structure for circular doubly linked list">a_list</a> within the struct </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,7 +298,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">next</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">next</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *it = (ctx)-&gt;next; it != (ctx); it = it-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -306,7 +306,7 @@ Functions</h2></td></tr>
 <p>iterate over a list </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d7/d8e/structa__list__s.html" title="instance structure for circular doubly linked list">a_list_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d1/d8c/structa__list.html" title="instance structure for circular doubly linked list">a_list</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
     <tr><td class="paramname">next</td><td>the direction of loop iteration <ul>
 <li>next the backward iteration </li>
@@ -343,7 +343,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">next</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *it = (ctx)-&gt;next, *at = it-&gt;next; it != (ctx); it = at, at = it-&gt;next)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">next</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *it = (ctx)-&gt;next, *at = it-&gt;next; it != (ctx); it = at, at = it-&gt;next)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -351,8 +351,8 @@ Functions</h2></td></tr>
 <p>iterate over a list safe against removal of list entry </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d7/d8e/structa__list__s.html" title="instance structure for circular doubly linked list">a_list_s</a> to use as a loop counter </td></tr>
-    <tr><td class="paramname">at</td><td>another &amp;<a class="el" href="../../d7/d8e/structa__list__s.html" title="instance structure for circular doubly linked list">a_list_s</a> to use as temporary storage </td></tr>
+    <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../d1/d8c/structa__list.html" title="instance structure for circular doubly linked list">a_list</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">at</td><td>another &amp;<a class="el" href="../../d1/d8c/structa__list.html" title="instance structure for circular doubly linked list">a_list</a> to use as temporary storage </td></tr>
     <tr><td class="paramname">ctx</td><td>points to circular doubly linked list </td></tr>
     <tr><td class="paramname">next</td><td>the direction of loop iteration <ul>
 <li>next the backward iteration </li>
@@ -366,8 +366,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga10a89c1a5680042a375f062dd58139f9" name="ga10a89c1a5680042a375f062dd58139f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10a89c1a5680042a375f062dd58139f9">&#9670;&#160;</a></span>a_list_add_()</h2>
+<a id="gade045ba44c2499d8f99b11968a025267" name="gade045ba44c2499d8f99b11968a025267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade045ba44c2499d8f99b11968a025267">&#9670;&#160;</a></span>a_list_add_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,22 +375,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_add_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -410,8 +410,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga66d0e4d74ec78b168280eb6f5996ea0e" name="ga66d0e4d74ec78b168280eb6f5996ea0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga66d0e4d74ec78b168280eb6f5996ea0e">&#9670;&#160;</a></span>a_list_add_next()</h2>
+<a id="gaeb7e4ede0ab821db3d0bbf0dee315542" name="gaeb7e4ede0ab821db3d0bbf0dee315542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb7e4ede0ab821db3d0bbf0dee315542">&#9670;&#160;</a></span>a_list_add_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,12 +419,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_add_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -442,8 +442,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gabaa404ea9e07f72586713d12c6bcd648" name="gabaa404ea9e07f72586713d12c6bcd648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabaa404ea9e07f72586713d12c6bcd648">&#9670;&#160;</a></span>a_list_add_node()</h2>
+<a id="ga36099a37c5f103dee41629e48dd57ad3" name="ga36099a37c5f103dee41629e48dd57ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36099a37c5f103dee41629e48dd57ad3">&#9670;&#160;</a></span>a_list_add_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,17 +451,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_add_node </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -480,8 +480,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga71cb73ee75ac2320d0e024bcf45eabee" name="ga71cb73ee75ac2320d0e024bcf45eabee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga71cb73ee75ac2320d0e024bcf45eabee">&#9670;&#160;</a></span>a_list_add_prev()</h2>
+<a id="gac9f941d3d109f8c9135dcc098c25c830" name="gac9f941d3d109f8c9135dcc098c25c830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9f941d3d109f8c9135dcc098c25c830">&#9670;&#160;</a></span>a_list_add_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,12 +489,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_add_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -512,8 +512,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga1b2a0f198a7b693245b8a69dddfc29d5" name="ga1b2a0f198a7b693245b8a69dddfc29d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1b2a0f198a7b693245b8a69dddfc29d5">&#9670;&#160;</a></span>a_list_ctor()</h2>
+<a id="ga332604967d408dc5da7ae162e828395b" name="ga332604967d408dc5da7ae162e828395b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga332604967d408dc5da7ae162e828395b">&#9670;&#160;</a></span>a_list_ctor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,7 +521,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_ctor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -537,8 +537,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaee20100808b1c8319fd400497677b741" name="gaee20100808b1c8319fd400497677b741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaee20100808b1c8319fd400497677b741">&#9670;&#160;</a></span>a_list_del_()</h2>
+<a id="ga4a57e4db2ab80cdab23be91cf94f37f1" name="ga4a57e4db2ab80cdab23be91cf94f37f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a57e4db2ab80cdab23be91cf94f37f1">&#9670;&#160;</a></span>a_list_del_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,12 +546,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_del_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -569,8 +569,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadecc13cf46ff54dc4af677cb1c9b8d4e" name="gadecc13cf46ff54dc4af677cb1c9b8d4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadecc13cf46ff54dc4af677cb1c9b8d4e">&#9670;&#160;</a></span>a_list_del_next()</h2>
+<a id="ga4e1235b50a9a372b01c3f408c37f6e73" name="ga4e1235b50a9a372b01c3f408c37f6e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e1235b50a9a372b01c3f408c37f6e73">&#9670;&#160;</a></span>a_list_del_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -578,7 +578,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_del_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -596,8 +596,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga82a35802cf28b8a4a4bbe8c253519916" name="ga82a35802cf28b8a4a4bbe8c253519916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga82a35802cf28b8a4a4bbe8c253519916">&#9670;&#160;</a></span>a_list_del_node()</h2>
+<a id="gaf54e9835201d53d4860358ec31472d5e" name="gaf54e9835201d53d4860358ec31472d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf54e9835201d53d4860358ec31472d5e">&#9670;&#160;</a></span>a_list_del_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,7 +605,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_del_node </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -623,8 +623,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga708c11d0e099785632b99185ab0fb699" name="ga708c11d0e099785632b99185ab0fb699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga708c11d0e099785632b99185ab0fb699">&#9670;&#160;</a></span>a_list_del_prev()</h2>
+<a id="ga744dee9b9c76d637c99366a8c05798f7" name="ga744dee9b9c76d637c99366a8c05798f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga744dee9b9c76d637c99366a8c05798f7">&#9670;&#160;</a></span>a_list_del_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -632,7 +632,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_del_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -650,8 +650,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga30dbd96211999ad30a185d505b0a0a28" name="ga30dbd96211999ad30a185d505b0a0a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga30dbd96211999ad30a185d505b0a0a28">&#9670;&#160;</a></span>a_list_dtor()</h2>
+<a id="ga111397c62a63f34aecd77a52de7f2693" name="ga111397c62a63f34aecd77a52de7f2693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga111397c62a63f34aecd77a52de7f2693">&#9670;&#160;</a></span>a_list_dtor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -659,7 +659,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_dtor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -675,8 +675,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga99ceafc8a97cc62aab0187d2650f99f1" name="ga99ceafc8a97cc62aab0187d2650f99f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99ceafc8a97cc62aab0187d2650f99f1">&#9670;&#160;</a></span>a_list_init()</h2>
+<a id="ga5561da39ff3aaf4fe6ce954219c0e333" name="ga5561da39ff3aaf4fe6ce954219c0e333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5561da39ff3aaf4fe6ce954219c0e333">&#9670;&#160;</a></span>a_list_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -684,7 +684,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -700,8 +700,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafb83741ac9be3d7950ad0e70b09645b9" name="gafb83741ac9be3d7950ad0e70b09645b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafb83741ac9be3d7950ad0e70b09645b9">&#9670;&#160;</a></span>a_list_link()</h2>
+<a id="ga65ef9ad875827eed8df52ebbb5f4edee" name="ga65ef9ad875827eed8df52ebbb5f4edee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65ef9ad875827eed8df52ebbb5f4edee">&#9670;&#160;</a></span>a_list_link()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,12 +709,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_link </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -732,8 +732,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga334432949fc2920c13246dc426d4a48e" name="ga334432949fc2920c13246dc426d4a48e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga334432949fc2920c13246dc426d4a48e">&#9670;&#160;</a></span>a_list_loop()</h2>
+<a id="gad4427e75e8490649bffb1c906dad9bc7" name="gad4427e75e8490649bffb1c906dad9bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4427e75e8490649bffb1c906dad9bc7">&#9670;&#160;</a></span>a_list_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,12 +741,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_loop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -764,8 +764,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5bb044bd72f405adc7f3efcc38ddd333" name="ga5bb044bd72f405adc7f3efcc38ddd333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bb044bd72f405adc7f3efcc38ddd333">&#9670;&#160;</a></span>a_list_mov_next()</h2>
+<a id="ga24df666e8483c6f994b061762b7f2f5f" name="ga24df666e8483c6f994b061762b7f2f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24df666e8483c6f994b061762b7f2f5f">&#9670;&#160;</a></span>a_list_mov_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,12 +773,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_mov_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -796,8 +796,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga62fa1c916aa9590f8739e6344dfa2e51" name="ga62fa1c916aa9590f8739e6344dfa2e51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga62fa1c916aa9590f8739e6344dfa2e51">&#9670;&#160;</a></span>a_list_mov_prev()</h2>
+<a id="gae79903105fa44088f49177cfb50429bc" name="gae79903105fa44088f49177cfb50429bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae79903105fa44088f49177cfb50429bc">&#9670;&#160;</a></span>a_list_mov_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,12 +805,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_mov_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -828,8 +828,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga307021904d6285255445024c8a327108" name="ga307021904d6285255445024c8a327108"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga307021904d6285255445024c8a327108">&#9670;&#160;</a></span>a_list_rot_next()</h2>
+<a id="ga61e2003492abb7e59c980fc277b7b025" name="ga61e2003492abb7e59c980fc277b7b025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61e2003492abb7e59c980fc277b7b025">&#9670;&#160;</a></span>a_list_rot_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -837,7 +837,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_rot_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -855,8 +855,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaac680d83759e2437335f8aad81bbd08a" name="gaac680d83759e2437335f8aad81bbd08a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaac680d83759e2437335f8aad81bbd08a">&#9670;&#160;</a></span>a_list_rot_prev()</h2>
+<a id="gab29de7e5396d2cdb9b089c991c553b2b" name="gab29de7e5396d2cdb9b089c991c553b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab29de7e5396d2cdb9b089c991c553b2b">&#9670;&#160;</a></span>a_list_rot_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -864,7 +864,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_rot_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -882,8 +882,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa524507f5e260ceefd4624c415e55997" name="gaa524507f5e260ceefd4624c415e55997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa524507f5e260ceefd4624c415e55997">&#9670;&#160;</a></span>a_list_shift_()</h2>
+<a id="gad725ffef7bd62cf1e67346a628324978" name="gad725ffef7bd62cf1e67346a628324978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad725ffef7bd62cf1e67346a628324978">&#9670;&#160;</a></span>a_list_shift_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -891,22 +891,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_shift_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -926,8 +926,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadd855ea658e936406512d90e1037e9fb" name="gadd855ea658e936406512d90e1037e9fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd855ea658e936406512d90e1037e9fb">&#9670;&#160;</a></span>a_list_shift_node()</h2>
+<a id="ga1e132429a4d520fc664bb9a4ab999911" name="ga1e132429a4d520fc664bb9a4ab999911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e132429a4d520fc664bb9a4ab999911">&#9670;&#160;</a></span>a_list_shift_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -935,12 +935,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_shift_node </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -956,8 +956,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2cc3a7dc1d1db967aa0be1ebef93fa24" name="ga2cc3a7dc1d1db967aa0be1ebef93fa24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2cc3a7dc1d1db967aa0be1ebef93fa24">&#9670;&#160;</a></span>a_list_swap_()</h2>
+<a id="ga129f41a7b88e76911028c52dc629ad72" name="ga129f41a7b88e76911028c52dc629ad72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga129f41a7b88e76911028c52dc629ad72">&#9670;&#160;</a></span>a_list_swap_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -965,22 +965,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_swap_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>head2</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>tail2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1000,8 +1000,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga81d2f78758b016f7e5f449842b09401e" name="ga81d2f78758b016f7e5f449842b09401e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga81d2f78758b016f7e5f449842b09401e">&#9670;&#160;</a></span>a_list_swap_node()</h2>
+<a id="ga8478cf129bb307d0e1f3bb516a06c75e" name="ga8478cf129bb307d0e1f3bb516a06c75e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8478cf129bb307d0e1f3bb516a06c75e">&#9670;&#160;</a></span>a_list_swap_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1009,12 +1009,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_list_swap_node </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d8e/structa__list__s.html">a_list_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d8c/structa__list.html">a_list</a> *</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

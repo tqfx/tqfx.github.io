@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['height_5fn_0',['height_n',['../d2/d2c/structa__rbf__s.html#ae51f877e11b89c25d2d116aeafc380f8',1,'a_rbf_s']]],
-  ['height_5fp_1',['height_p',['../d2/d2c/structa__rbf__s.html#a515ee2f4d12149c604a6c47c31096045',1,'a_rbf_s']]],
+  ['height_5fn_0',['height_n',['../d6/d7f/structa__rbf.html#a2da50a069e1d8ebface88550fb323281',1,'a_rbf']]],
+  ['height_5fp_1',['height_p',['../d6/d7f/structa__rbf.html#a1613ec6131d50e2b8f4c52c0c940eb13',1,'a_rbf']]],
   ['hepta_20polynomial_20trajectory_2',['hepta polynomial trajectory',['../de/d6e/group__A__POLYTRAJ7.html',1,'']]],
-  ['hidden_5fn_3',['hidden_n',['../d2/d2c/structa__rbf__s.html#a31fdd6a6c19fa5a28ad750190fa9f6e6',1,'a_rbf_s']]],
-  ['hidden_5fp_4',['hidden_p',['../d2/d2c/structa__rbf__s.html#a2df937e5b597e40561673c7ba810280c',1,'a_rbf_s']]],
+  ['hidden_5fn_3',['hidden_n',['../d6/d7f/structa__rbf.html#a5a15e2fcbd2a53d0f31428bf9c93431c',1,'a_rbf']]],
+  ['hidden_5fp_4',['hidden_p',['../d6/d7f/structa__rbf.html#a7a18f4cb9e22272e815fc2b5ef7935bb',1,'a_rbf']]],
   ['high_20pass_20filter_5',['High Pass Filter',['../dd/d71/group__A__HPF.html',1,'']]],
   ['hpf_2eh_6',['hpf.h',['../d1/df9/hpf_8h.html',1,'']]]
 ];

@@ -1,4 +1,14 @@
 <map id="algorithm library version" name="algorithm library version">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,5,136,31"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="184,5,367,31"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,285,136,311"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,285,368,311"/>
+<area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="470,5,593,31"/>
+<area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="472,55,591,80"/>
+<area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="452,105,611,145"/>
+<area shape="rect" id="Node000006" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="458,169,605,224"/>
+<area shape="rect" id="Node000007" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="425,249,637,289"/>
+<area shape="rect" id="Node000008" href="$d4/d5e/group__A__POLYTRAJ3.html" title=" " alt="" coords="431,313,631,339"/>
+<area shape="rect" id="Node000009" href="$d5/d8e/group__A__POLYTRAJ5.html" title=" " alt="" coords="460,363,603,403"/>
+<area shape="rect" id="Node000010" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="430,428,633,453"/>
+<area shape="rect" id="Node000011" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="454,477,609,503"/>
+<area shape="rect" id="Node000012" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="466,527,597,552"/>
 </map>

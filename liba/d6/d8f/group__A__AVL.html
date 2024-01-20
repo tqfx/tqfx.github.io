@@ -97,11 +97,11 @@ Collaboration diagram for AVL binary search tree:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree node  <a href="../../d3/d18/structa__avl__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree node  <a href="../../d1/d0e/structa__avl__node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree root  <a href="../../d4/dc0/uniona__avl__u.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree root  <a href="../../d5/d1c/uniona__avl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -112,95 +112,95 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3f746ebecdef2332ce519c5ad93e183c" id="r_ga3f746ebecdef2332ce519c5ad93e183c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(ptr,  type,  member)&#160;&#160;&#160;<a class="el" href="../../df/d91/group__A.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</td></tr>
 <tr class="memdesc:ga3f746ebecdef2332ce519c5ad93e183c"><td class="mdescLeft">&#160;</td><td class="mdescRight">access the struct for this entry  <br /></td></tr>
 <tr class="separator:ga3f746ebecdef2332ce519c5ad93e183c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga80cc78fa4531366b6cbe907f2e015523" id="r_ga80cc78fa4531366b6cbe907f2e015523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80cc78fa4531366b6cbe907f2e015523">a_avl_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#gad365b3d0070104fb45cf2d1be53a2300">a_avl_head</a>(root); cur; cur = <a class="el" href="#ga375658847e6d948ee7a725eb25a81bd3">a_avl_next</a>(cur))</td></tr>
+<tr class="memitem:ga80cc78fa4531366b6cbe907f2e015523" id="r_ga80cc78fa4531366b6cbe907f2e015523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80cc78fa4531366b6cbe907f2e015523">a_avl_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#ga64f2bf733385df94b8e07bcd1c5901e3">a_avl_head</a>(root); cur; cur = <a class="el" href="#gafd4a9d9bb0c0068e91f01f9eb04c822c">a_avl_next</a>(cur))</td></tr>
 <tr class="memdesc:ga80cc78fa4531366b6cbe907f2e015523"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree in-order  <br /></td></tr>
 <tr class="separator:ga80cc78fa4531366b6cbe907f2e015523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga63c45f49b02d5f75579e3a785cf8cf55" id="r_ga63c45f49b02d5f75579e3a785cf8cf55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63c45f49b02d5f75579e3a785cf8cf55">a_avl_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#ga240c8346a19d88f5791cc8af6fafd319">a_avl_tail</a>(root); cur; cur = <a class="el" href="#ga91d174c6a25240c36bf65bacce50dcc7">a_avl_prev</a>(cur))</td></tr>
+<tr class="memitem:ga63c45f49b02d5f75579e3a785cf8cf55" id="r_ga63c45f49b02d5f75579e3a785cf8cf55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63c45f49b02d5f75579e3a785cf8cf55">a_avl_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#ga80c861755d4d0f96c0c9ff9eb4e4b044">a_avl_tail</a>(root); cur; cur = <a class="el" href="#ga5e0008245374058f988a6f0e17a2d2e2">a_avl_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga63c45f49b02d5f75579e3a785cf8cf55"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree in-order reverse  <br /></td></tr>
 <tr class="separator:ga63c45f49b02d5f75579e3a785cf8cf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga17420f425f4bb707561029995cc62e1e" id="r_ga17420f425f4bb707561029995cc62e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17420f425f4bb707561029995cc62e1e">a_avl_pre_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga2adf66599fe763cf8ffc2d2fb7770edb">a_avl_pre_next</a>(cur))</td></tr>
+<tr class="memitem:ga17420f425f4bb707561029995cc62e1e" id="r_ga17420f425f4bb707561029995cc62e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17420f425f4bb707561029995cc62e1e">a_avl_pre_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga659b6d6adc020e785e577b4f69518434">a_avl_pre_next</a>(cur))</td></tr>
 <tr class="memdesc:ga17420f425f4bb707561029995cc62e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree preorder  <br /></td></tr>
 <tr class="separator:ga17420f425f4bb707561029995cc62e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5b27c8ab5a306507b3f7377620db4190" id="r_ga5b27c8ab5a306507b3f7377620db4190"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5b27c8ab5a306507b3f7377620db4190">a_avl_pre_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#gaf59c4285584f596e0889724ceaef37b6">a_avl_pre_prev</a>(cur))</td></tr>
+<tr class="memitem:ga5b27c8ab5a306507b3f7377620db4190" id="r_ga5b27c8ab5a306507b3f7377620db4190"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5b27c8ab5a306507b3f7377620db4190">a_avl_pre_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga7489cd395ac3dbdd70bf82df6c78875d">a_avl_pre_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga5b27c8ab5a306507b3f7377620db4190"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree preorder reverse  <br /></td></tr>
 <tr class="separator:ga5b27c8ab5a306507b3f7377620db4190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac3bec15da5ad836ea4bca31de00ed7ce" id="r_gac3bec15da5ad836ea4bca31de00ed7ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac3bec15da5ad836ea4bca31de00ed7ce">a_avl_post_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#ga4ba7ea564ac4905a45eb9682b9cc5480">a_avl_post_head</a>(root); cur; cur = <a class="el" href="#ga8c73c91efc905a9fb19483489beff130">a_avl_post_next</a>(cur))</td></tr>
+<tr class="memitem:gac3bec15da5ad836ea4bca31de00ed7ce" id="r_gac3bec15da5ad836ea4bca31de00ed7ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac3bec15da5ad836ea4bca31de00ed7ce">a_avl_post_foreach</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#gacaf501f3712c31c07a829e462b6815ab">a_avl_post_head</a>(root); cur; cur = <a class="el" href="#ga44223839d171caabd63ec0a63ebb16a4">a_avl_post_next</a>(cur))</td></tr>
 <tr class="memdesc:gac3bec15da5ad836ea4bca31de00ed7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree postorder  <br /></td></tr>
 <tr class="separator:gac3bec15da5ad836ea4bca31de00ed7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga70e621151ad6124d39cb7da2239a65d7" id="r_ga70e621151ad6124d39cb7da2239a65d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#gabce8a00b2573489711ae950da28773ed">a_avl_post_tail</a>(root); cur; cur = <a class="el" href="#gab5ce9052186f068bf38f1e34004dd7f8">a_avl_post_prev</a>(cur))</td></tr>
+<tr class="memitem:ga70e621151ad6124d39cb7da2239a65d7" id="r_ga70e621151ad6124d39cb7da2239a65d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a>(cur,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#gad4f5cac56fa7add3cd284de7f16d163c">a_avl_post_tail</a>(root); cur; cur = <a class="el" href="#ga26cfe5a13140db027f9e2ffece1e7d1e">a_avl_post_prev</a>(cur))</td></tr>
 <tr class="memdesc:ga70e621151ad6124d39cb7da2239a65d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a AVL binary search tree postorder reverse  <br /></td></tr>
 <tr class="separator:ga70e621151ad6124d39cb7da2239a65d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga854f43a862872615c76a393b566838dc" id="r_ga854f43a862872615c76a393b566838dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *next = A_NULL, *cur = <a class="el" href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">a_avl_tear</a>(root, &amp;next))</td></tr>
+<tr class="memitem:ga854f43a862872615c76a393b566838dc" id="r_ga854f43a862872615c76a393b566838dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a>(cur,  next,  root)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *next = A_NULL, *cur = <a class="el" href="#ga117644fb959b7242274882fb4a149d95">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga117644fb959b7242274882fb4a149d95">a_avl_tear</a>(root, &amp;next))</td></tr>
 <tr class="memdesc:ga854f43a862872615c76a393b566838dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a AVL binary search tree using postorder traversal  <br /></td></tr>
 <tr class="separator:ga854f43a862872615c76a393b566838dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gac91c80dd1696b51e3715c980c13ed930" id="r_gac91c80dd1696b51e3715c980c13ed930"><td class="memItemLeft" align="right" valign="top"><a id="gac91c80dd1696b51e3715c980c13ed930" name="gac91c80dd1696b51e3715c980c13ed930"></a>
-typedef struct a_avl_s&#160;</td><td class="memItemRight" valign="bottom"><b>a_avl_s</b></td></tr>
-<tr class="memdesc:gac91c80dd1696b51e3715c980c13ed930"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree node <br /></td></tr>
-<tr class="separator:gac91c80dd1696b51e3715c980c13ed930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad70594a907f844a05a9fbb6ec0504c81" id="r_gad70594a907f844a05a9fbb6ec0504c81"><td class="memItemLeft" align="right" valign="top"><a id="gad70594a907f844a05a9fbb6ec0504c81" name="gad70594a907f844a05a9fbb6ec0504c81"></a>
-typedef union a_avl_u&#160;</td><td class="memItemRight" valign="bottom"><b>a_avl_u</b></td></tr>
-<tr class="memdesc:gad70594a907f844a05a9fbb6ec0504c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree root <br /></td></tr>
-<tr class="separator:gad70594a907f844a05a9fbb6ec0504c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02a56ea576c23ccb8986645505f17b69" id="r_ga02a56ea576c23ccb8986645505f17b69"><td class="memItemLeft" align="right" valign="top"><a id="ga02a56ea576c23ccb8986645505f17b69" name="ga02a56ea576c23ccb8986645505f17b69"></a>
+typedef struct a_avl_node&#160;</td><td class="memItemRight" valign="bottom"><b>a_avl_node</b></td></tr>
+<tr class="memdesc:ga02a56ea576c23ccb8986645505f17b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree node <br /></td></tr>
+<tr class="separator:ga02a56ea576c23ccb8986645505f17b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e1cc7a24c298169b4a3750e7a0bc1d3" id="r_ga5e1cc7a24c298169b4a3750e7a0bc1d3"><td class="memItemLeft" align="right" valign="top"><a id="ga5e1cc7a24c298169b4a3750e7a0bc1d3" name="ga5e1cc7a24c298169b4a3750e7a0bc1d3"></a>
+typedef union a_avl&#160;</td><td class="memItemRight" valign="bottom"><b>a_avl</b></td></tr>
+<tr class="memdesc:ga5e1cc7a24c298169b4a3750e7a0bc1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for AVL binary search tree root <br /></td></tr>
+<tr class="separator:ga5e1cc7a24c298169b4a3750e7a0bc1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga452e24b2c7fd41094f2cc363fb71c95f" id="r_ga452e24b2c7fd41094f2cc363fb71c95f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga452e24b2c7fd41094f2cc363fb71c95f">a_avl_parent</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> const *const node)</td></tr>
-<tr class="memdesc:ga452e24b2c7fd41094f2cc363fb71c95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">access parent of AVL binary search tree node  <br /></td></tr>
-<tr class="separator:ga452e24b2c7fd41094f2cc363fb71c95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga408b989a776427d288d2571dc2f3fda0" id="r_ga408b989a776427d288d2571dc2f3fda0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga408b989a776427d288d2571dc2f3fda0">a_avl_init</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *const node, <a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *const parent)</td></tr>
-<tr class="memdesc:ga408b989a776427d288d2571dc2f3fda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for AVL binary search tree node  <br /></td></tr>
-<tr class="separator:ga408b989a776427d288d2571dc2f3fda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b0c63a0ebae0334706bc3dea12f11d1" id="r_ga7b0c63a0ebae0334706bc3dea12f11d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7b0c63a0ebae0334706bc3dea12f11d1">a_avl_root</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *const root)</td></tr>
-<tr class="memdesc:ga7b0c63a0ebae0334706bc3dea12f11d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for AVL binary search tree root  <br /></td></tr>
-<tr class="separator:ga7b0c63a0ebae0334706bc3dea12f11d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad365b3d0070104fb45cf2d1be53a2300" id="r_gad365b3d0070104fb45cf2d1be53a2300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad365b3d0070104fb45cf2d1be53a2300">a_avl_head</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *root)</td></tr>
-<tr class="memdesc:gad365b3d0070104fb45cf2d1be53a2300"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of AVL binary search tree in-order  <br /></td></tr>
-<tr class="separator:gad365b3d0070104fb45cf2d1be53a2300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga240c8346a19d88f5791cc8af6fafd319" id="r_ga240c8346a19d88f5791cc8af6fafd319"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga240c8346a19d88f5791cc8af6fafd319">a_avl_tail</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *root)</td></tr>
-<tr class="memdesc:ga240c8346a19d88f5791cc8af6fafd319"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of AVL binary search tree in-order  <br /></td></tr>
-<tr class="separator:ga240c8346a19d88f5791cc8af6fafd319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga375658847e6d948ee7a725eb25a81bd3" id="r_ga375658847e6d948ee7a725eb25a81bd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga375658847e6d948ee7a725eb25a81bd3">a_avl_next</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:ga375658847e6d948ee7a725eb25a81bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node in-order  <br /></td></tr>
-<tr class="separator:ga375658847e6d948ee7a725eb25a81bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga91d174c6a25240c36bf65bacce50dcc7" id="r_ga91d174c6a25240c36bf65bacce50dcc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga91d174c6a25240c36bf65bacce50dcc7">a_avl_prev</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:ga91d174c6a25240c36bf65bacce50dcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node in-order  <br /></td></tr>
-<tr class="separator:ga91d174c6a25240c36bf65bacce50dcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2adf66599fe763cf8ffc2d2fb7770edb" id="r_ga2adf66599fe763cf8ffc2d2fb7770edb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2adf66599fe763cf8ffc2d2fb7770edb">a_avl_pre_next</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:ga2adf66599fe763cf8ffc2d2fb7770edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node preorder  <br /></td></tr>
-<tr class="separator:ga2adf66599fe763cf8ffc2d2fb7770edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf59c4285584f596e0889724ceaef37b6" id="r_gaf59c4285584f596e0889724ceaef37b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf59c4285584f596e0889724ceaef37b6">a_avl_pre_prev</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:gaf59c4285584f596e0889724ceaef37b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node preorder  <br /></td></tr>
-<tr class="separator:gaf59c4285584f596e0889724ceaef37b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4ba7ea564ac4905a45eb9682b9cc5480" id="r_ga4ba7ea564ac4905a45eb9682b9cc5480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4ba7ea564ac4905a45eb9682b9cc5480">a_avl_post_head</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *root)</td></tr>
-<tr class="memdesc:ga4ba7ea564ac4905a45eb9682b9cc5480"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of AVL binary search tree postorder  <br /></td></tr>
-<tr class="separator:ga4ba7ea564ac4905a45eb9682b9cc5480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabce8a00b2573489711ae950da28773ed" id="r_gabce8a00b2573489711ae950da28773ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabce8a00b2573489711ae950da28773ed">a_avl_post_tail</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *root)</td></tr>
-<tr class="memdesc:gabce8a00b2573489711ae950da28773ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of AVL binary search tree postorder  <br /></td></tr>
-<tr class="separator:gabce8a00b2573489711ae950da28773ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c73c91efc905a9fb19483489beff130" id="r_ga8c73c91efc905a9fb19483489beff130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8c73c91efc905a9fb19483489beff130">a_avl_post_next</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:ga8c73c91efc905a9fb19483489beff130"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node postorder  <br /></td></tr>
-<tr class="separator:ga8c73c91efc905a9fb19483489beff130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5ce9052186f068bf38f1e34004dd7f8" id="r_gab5ce9052186f068bf38f1e34004dd7f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab5ce9052186f068bf38f1e34004dd7f8">a_avl_post_prev</a> (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:gab5ce9052186f068bf38f1e34004dd7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node postorder  <br /></td></tr>
-<tr class="separator:gab5ce9052186f068bf38f1e34004dd7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga39e43c659df2eb7b3dd6ede0ce91ac73" id="r_ga39e43c659df2eb7b3dd6ede0ce91ac73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">a_avl_tear</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *root, <a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> **next)</td></tr>
-<tr class="memdesc:ga39e43c659df2eb7b3dd6ede0ce91ac73"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a node from AVL binary search tree  <br /></td></tr>
-<tr class="separator:ga39e43c659df2eb7b3dd6ede0ce91ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2c22cb31225cbf3ef21e665e0a066b98" id="r_ga2c22cb31225cbf3ef21e665e0a066b98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c22cb31225cbf3ef21e665e0a066b98">a_avl_search</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *root, void const *ctx, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga2c22cb31225cbf3ef21e665e0a066b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">search specified content from AVL binary search tree  <br /></td></tr>
-<tr class="separator:ga2c22cb31225cbf3ef21e665e0a066b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga518f1cd06737de96bf89e218dee97d14" id="r_ga518f1cd06737de96bf89e218dee97d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga518f1cd06737de96bf89e218dee97d14">a_avl_insert</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *root, <a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node, int(*cmp)(void const *, void const *))</td></tr>
-<tr class="memdesc:ga518f1cd06737de96bf89e218dee97d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert specified node into AVL binary search tree  <br /></td></tr>
-<tr class="separator:ga518f1cd06737de96bf89e218dee97d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8553e72712625f3de911b9092f5a5e9b" id="r_ga8553e72712625f3de911b9092f5a5e9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8553e72712625f3de911b9092f5a5e9b">a_avl_insert_adjust</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *root, <a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:ga8553e72712625f3de911b9092f5a5e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">rebalance the tree after insertion of the specified node  <br /></td></tr>
-<tr class="separator:ga8553e72712625f3de911b9092f5a5e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab682055d3a0dd2be8aae4c50548b7f0a" id="r_gab682055d3a0dd2be8aae4c50548b7f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab682055d3a0dd2be8aae4c50548b7f0a">a_avl_remove</a> (<a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *root, <a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *node)</td></tr>
-<tr class="memdesc:gab682055d3a0dd2be8aae4c50548b7f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove specified node from AVL binary search tree  <br /></td></tr>
-<tr class="separator:gab682055d3a0dd2be8aae4c50548b7f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb45d64f22a5869556fad134f3b82fa3" id="r_gaeb45d64f22a5869556fad134f3b82fa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeb45d64f22a5869556fad134f3b82fa3">a_avl_parent</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> const *node)</td></tr>
+<tr class="memdesc:gaeb45d64f22a5869556fad134f3b82fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">access parent of AVL binary search tree node  <br /></td></tr>
+<tr class="separator:gaeb45d64f22a5869556fad134f3b82fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60fe8651df0ce9c2deae075d0cf720f0" id="r_ga60fe8651df0ce9c2deae075d0cf720f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga60fe8651df0ce9c2deae075d0cf720f0">a_avl_init</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node, <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *parent)</td></tr>
+<tr class="memdesc:ga60fe8651df0ce9c2deae075d0cf720f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for AVL binary search tree node  <br /></td></tr>
+<tr class="separator:ga60fe8651df0ce9c2deae075d0cf720f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaced93548cf9cedbbccf6d78d0e2eefb4" id="r_gaced93548cf9cedbbccf6d78d0e2eefb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaced93548cf9cedbbccf6d78d0e2eefb4">a_avl_root</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *root)</td></tr>
+<tr class="memdesc:gaced93548cf9cedbbccf6d78d0e2eefb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for AVL binary search tree root  <br /></td></tr>
+<tr class="separator:gaced93548cf9cedbbccf6d78d0e2eefb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64f2bf733385df94b8e07bcd1c5901e3" id="r_ga64f2bf733385df94b8e07bcd1c5901e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga64f2bf733385df94b8e07bcd1c5901e3">a_avl_head</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *root)</td></tr>
+<tr class="memdesc:ga64f2bf733385df94b8e07bcd1c5901e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of AVL binary search tree in-order  <br /></td></tr>
+<tr class="separator:ga64f2bf733385df94b8e07bcd1c5901e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80c861755d4d0f96c0c9ff9eb4e4b044" id="r_ga80c861755d4d0f96c0c9ff9eb4e4b044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80c861755d4d0f96c0c9ff9eb4e4b044">a_avl_tail</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *root)</td></tr>
+<tr class="memdesc:ga80c861755d4d0f96c0c9ff9eb4e4b044"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of AVL binary search tree in-order  <br /></td></tr>
+<tr class="separator:ga80c861755d4d0f96c0c9ff9eb4e4b044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd4a9d9bb0c0068e91f01f9eb04c822c" id="r_gafd4a9d9bb0c0068e91f01f9eb04c822c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafd4a9d9bb0c0068e91f01f9eb04c822c">a_avl_next</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:gafd4a9d9bb0c0068e91f01f9eb04c822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node in-order  <br /></td></tr>
+<tr class="separator:gafd4a9d9bb0c0068e91f01f9eb04c822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e0008245374058f988a6f0e17a2d2e2" id="r_ga5e0008245374058f988a6f0e17a2d2e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5e0008245374058f988a6f0e17a2d2e2">a_avl_prev</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:ga5e0008245374058f988a6f0e17a2d2e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node in-order  <br /></td></tr>
+<tr class="separator:ga5e0008245374058f988a6f0e17a2d2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga659b6d6adc020e785e577b4f69518434" id="r_ga659b6d6adc020e785e577b4f69518434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga659b6d6adc020e785e577b4f69518434">a_avl_pre_next</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:ga659b6d6adc020e785e577b4f69518434"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node preorder  <br /></td></tr>
+<tr class="separator:ga659b6d6adc020e785e577b4f69518434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7489cd395ac3dbdd70bf82df6c78875d" id="r_ga7489cd395ac3dbdd70bf82df6c78875d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7489cd395ac3dbdd70bf82df6c78875d">a_avl_pre_prev</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:ga7489cd395ac3dbdd70bf82df6c78875d"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node preorder  <br /></td></tr>
+<tr class="separator:ga7489cd395ac3dbdd70bf82df6c78875d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacaf501f3712c31c07a829e462b6815ab" id="r_gacaf501f3712c31c07a829e462b6815ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacaf501f3712c31c07a829e462b6815ab">a_avl_post_head</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *root)</td></tr>
+<tr class="memdesc:gacaf501f3712c31c07a829e462b6815ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">access head node of AVL binary search tree postorder  <br /></td></tr>
+<tr class="separator:gacaf501f3712c31c07a829e462b6815ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f5cac56fa7add3cd284de7f16d163c" id="r_gad4f5cac56fa7add3cd284de7f16d163c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4f5cac56fa7add3cd284de7f16d163c">a_avl_post_tail</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *root)</td></tr>
+<tr class="memdesc:gad4f5cac56fa7add3cd284de7f16d163c"><td class="mdescLeft">&#160;</td><td class="mdescRight">access tail node of AVL binary search tree postorder  <br /></td></tr>
+<tr class="separator:gad4f5cac56fa7add3cd284de7f16d163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44223839d171caabd63ec0a63ebb16a4" id="r_ga44223839d171caabd63ec0a63ebb16a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga44223839d171caabd63ec0a63ebb16a4">a_avl_post_next</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:ga44223839d171caabd63ec0a63ebb16a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">access next node of AVL binary search tree node postorder  <br /></td></tr>
+<tr class="separator:ga44223839d171caabd63ec0a63ebb16a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26cfe5a13140db027f9e2ffece1e7d1e" id="r_ga26cfe5a13140db027f9e2ffece1e7d1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26cfe5a13140db027f9e2ffece1e7d1e">a_avl_post_prev</a> (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:ga26cfe5a13140db027f9e2ffece1e7d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access prev node of AVL binary search tree node postorder  <br /></td></tr>
+<tr class="separator:ga26cfe5a13140db027f9e2ffece1e7d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga117644fb959b7242274882fb4a149d95" id="r_ga117644fb959b7242274882fb4a149d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga117644fb959b7242274882fb4a149d95">a_avl_tear</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *root, <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> **next)</td></tr>
+<tr class="memdesc:ga117644fb959b7242274882fb4a149d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">tear a node from AVL binary search tree  <br /></td></tr>
+<tr class="separator:ga117644fb959b7242274882fb4a149d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9274060c01c0e75c2f3a029cb902b5c5" id="r_ga9274060c01c0e75c2f3a029cb902b5c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9274060c01c0e75c2f3a029cb902b5c5">a_avl_search</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *root, void const *ctx, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga9274060c01c0e75c2f3a029cb902b5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">search specified content from AVL binary search tree  <br /></td></tr>
+<tr class="separator:ga9274060c01c0e75c2f3a029cb902b5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07debd89686c436887dc36fb9f4d5809" id="r_ga07debd89686c436887dc36fb9f4d5809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga07debd89686c436887dc36fb9f4d5809">a_avl_insert</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *root, <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga07debd89686c436887dc36fb9f4d5809"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert specified node into AVL binary search tree  <br /></td></tr>
+<tr class="separator:ga07debd89686c436887dc36fb9f4d5809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaae401d5094fc221dfa97b0f1c5bb9c3" id="r_gaaae401d5094fc221dfa97b0f1c5bb9c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaaae401d5094fc221dfa97b0f1c5bb9c3">a_avl_insert_adjust</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *root, <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:gaaae401d5094fc221dfa97b0f1c5bb9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">rebalance the tree after insertion of the specified node  <br /></td></tr>
+<tr class="separator:gaaae401d5094fc221dfa97b0f1c5bb9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef001ee6968d03e862234b51ae88ea57" id="r_gaef001ee6968d03e862234b51ae88ea57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaef001ee6968d03e862234b51ae88ea57">a_avl_remove</a> (<a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *root, <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *node)</td></tr>
+<tr class="memdesc:gaef001ee6968d03e862234b51ae88ea57"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove specified node from AVL binary search tree  <br /></td></tr>
+<tr class="separator:gaef001ee6968d03e862234b51ae88ea57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -231,9 +231,9 @@ Functions</h2></td></tr>
 <p>access the struct for this entry </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> pointer </td></tr>
+    <tr><td class="paramname">ptr</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> pointer </td></tr>
     <tr><td class="paramname">type</td><td>the type of the struct this is embedded in </td></tr>
-    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> within the struct </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the <a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> within the struct </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,24 +254,28 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#gad365b3d0070104fb45cf2d1be53a2300">a_avl_head</a>(root); cur; cur = <a class="el" href="#ga375658847e6d948ee7a725eb25a81bd3">a_avl_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#ga64f2bf733385df94b8e07bcd1c5901e3">a_avl_head</a>(root); cur; cur = <a class="el" href="#gafd4a9d9bb0c0068e91f01f9eb04c822c">a_avl_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree in-order </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga80cc78fa4531366b6cbe907f2e015523">a_avl_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__A__AVL_html_ga3f746ebecdef2332ce519c5ad93e183c"><div class="ttname"><a href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a></div><div class="ttdeci">#define a_avl_entry(ptr, type, member)</div><div class="ttdoc">access the struct for this entry</div><div class="ttdef"><b>Definition</b> avl.h:225</div></div>
-<div class="ttc" id="agroup__A__AVL_html_ga80cc78fa4531366b6cbe907f2e015523"><div class="ttname"><a href="#ga80cc78fa4531366b6cbe907f2e015523">a_avl_foreach</a></div><div class="ttdeci">#define a_avl_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree in-order</div><div class="ttdef"><b>Definition</b> avl.h:240</div></div>
-<div class="ttc" id="auniona__avl__u_html"><div class="ttname"><a href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a></div><div class="ttdoc">instance structure for AVL binary search tree root</div><div class="ttdef"><b>Definition</b> avl.h:84</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga80cc78fa4531366b6cbe907f2e015523"><div class="ttname"><a href="#ga80cc78fa4531366b6cbe907f2e015523">a_avl_foreach</a></div><div class="ttdeci">#define a_avl_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree in-order</div><div class="ttdef"><b>Definition</b> avl.h:243</div></div>
+<div class="ttc" id="astructa__avl__node_html"><div class="ttname"><a href="../../d1/d0e/structa__avl__node.html">a_avl_node</a></div><div class="ttdoc">instance structure for AVL binary search tree node</div><div class="ttdef"><b>Definition</b> avl.h:25</div></div>
+<div class="ttc" id="auniona__avl_html"><div class="ttname"><a href="../../d5/d1c/uniona__avl.html">a_avl</a></div><div class="ttdoc">instance structure for AVL binary search tree root</div><div class="ttdef"><b>Definition</b> avl.h:84</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -293,22 +297,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#ga240c8346a19d88f5791cc8af6fafd319">a_avl_tail</a>(root); cur; cur = <a class="el" href="#ga91d174c6a25240c36bf65bacce50dcc7">a_avl_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#ga80c861755d4d0f96c0c9ff9eb4e4b044">a_avl_tail</a>(root); cur; cur = <a class="el" href="#ga5e0008245374058f988a6f0e17a2d2e2">a_avl_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree in-order reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga63c45f49b02d5f75579e3a785cf8cf55">a_avl_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_ga63c45f49b02d5f75579e3a785cf8cf55"><div class="ttname"><a href="#ga63c45f49b02d5f75579e3a785cf8cf55">a_avl_foreach_reverse</a></div><div class="ttdeci">#define a_avl_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree in-order reverse</div><div class="ttdef"><b>Definition</b> avl.h:256</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga63c45f49b02d5f75579e3a785cf8cf55"><div class="ttname"><a href="#ga63c45f49b02d5f75579e3a785cf8cf55">a_avl_foreach_reverse</a></div><div class="ttdeci">#define a_avl_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree in-order reverse</div><div class="ttdef"><b>Definition</b> avl.h:262</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -335,23 +342,26 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *next = A_NULL, *cur = <a class="el" href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">a_avl_tear</a>(root, &amp;next))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *next = A_NULL, *cur = <a class="el" href="#ga117644fb959b7242274882fb4a149d95">a_avl_tear</a>(root, &amp;next); cur; cur = <a class="el" href="#ga117644fb959b7242274882fb4a149d95">a_avl_tear</a>(root, &amp;next))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>tear a AVL binary search tree using postorder traversal </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a>(cur, next, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_ga854f43a862872615c76a393b566838dc"><div class="ttname"><a href="#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a></div><div class="ttdeci">#define a_avl_fortear(cur, next, root)</div><div class="ttdoc">tear a AVL binary search tree using postorder traversal</div><div class="ttdef"><b>Definition</b> avl.h:337</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga854f43a862872615c76a393b566838dc"><div class="ttname"><a href="#ga854f43a862872615c76a393b566838dc">a_avl_fortear</a></div><div class="ttdeci">#define a_avl_fortear(cur, next, root)</div><div class="ttdoc">tear a AVL binary search tree using postorder traversal</div><div class="ttdef"><b>Definition</b> avl.h:358</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
-    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as next node </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">next</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as next node </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -373,22 +383,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#ga4ba7ea564ac4905a45eb9682b9cc5480">a_avl_post_head</a>(root); cur; cur = <a class="el" href="#ga8c73c91efc905a9fb19483489beff130">a_avl_post_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#gacaf501f3712c31c07a829e462b6815ab">a_avl_post_head</a>(root); cur; cur = <a class="el" href="#ga44223839d171caabd63ec0a63ebb16a4">a_avl_post_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree postorder </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#gac3bec15da5ad836ea4bca31de00ed7ce">a_avl_post_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_gac3bec15da5ad836ea4bca31de00ed7ce"><div class="ttname"><a href="#gac3bec15da5ad836ea4bca31de00ed7ce">a_avl_post_foreach</a></div><div class="ttdeci">#define a_avl_post_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree postorder</div><div class="ttdef"><b>Definition</b> avl.h:304</div></div>
+<div class="ttc" id="agroup__A__AVL_html_gac3bec15da5ad836ea4bca31de00ed7ce"><div class="ttname"><a href="#gac3bec15da5ad836ea4bca31de00ed7ce">a_avl_post_foreach</a></div><div class="ttdeci">#define a_avl_post_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree postorder</div><div class="ttdef"><b>Definition</b> avl.h:319</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -410,22 +423,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = <a class="el" href="#gabce8a00b2573489711ae950da28773ed">a_avl_post_tail</a>(root); cur; cur = <a class="el" href="#gab5ce9052186f068bf38f1e34004dd7f8">a_avl_post_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = <a class="el" href="#gad4f5cac56fa7add3cd284de7f16d163c">a_avl_post_tail</a>(root); cur; cur = <a class="el" href="#ga26cfe5a13140db027f9e2ffece1e7d1e">a_avl_post_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree postorder reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_ga70e621151ad6124d39cb7da2239a65d7"><div class="ttname"><a href="#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a></div><div class="ttdeci">#define a_avl_post_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree postorder reverse</div><div class="ttdef"><b>Definition</b> avl.h:320</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga70e621151ad6124d39cb7da2239a65d7"><div class="ttname"><a href="#ga70e621151ad6124d39cb7da2239a65d7">a_avl_post_foreach_reverse</a></div><div class="ttdeci">#define a_avl_post_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree postorder reverse</div><div class="ttdef"><b>Definition</b> avl.h:338</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -447,22 +463,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga2adf66599fe763cf8ffc2d2fb7770edb">a_avl_pre_next</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga659b6d6adc020e785e577b4f69518434">a_avl_pre_next</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree preorder </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga17420f425f4bb707561029995cc62e1e">a_avl_pre_foreach</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_ga17420f425f4bb707561029995cc62e1e"><div class="ttname"><a href="#ga17420f425f4bb707561029995cc62e1e">a_avl_pre_foreach</a></div><div class="ttdeci">#define a_avl_pre_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree preorder</div><div class="ttdef"><b>Definition</b> avl.h:272</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga17420f425f4bb707561029995cc62e1e"><div class="ttname"><a href="#ga17420f425f4bb707561029995cc62e1e">a_avl_pre_foreach</a></div><div class="ttdeci">#define a_avl_pre_foreach(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree preorder</div><div class="ttdef"><b>Definition</b> avl.h:281</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -484,22 +503,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#gaf59c4285584f596e0889724ceaef37b6">a_avl_pre_prev</a>(cur))</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">root</span>&#160;)&#160;&#160;&#160;    for (<a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *cur = (root)-&gt;node; cur; cur = <a class="el" href="#ga7489cd395ac3dbdd70bf82df6c78875d">a_avl_pre_prev</a>(cur))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>iterate over a AVL binary search tree preorder reverse </p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> node; } T;</div>
-<div class="line"><a class="code hl_union" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> root = A_AVL_ROOT;</div>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> node;</div>
+<div class="line">} T;</div>
+<div class="line"><a class="code hl_union" href="../../d5/d1c/uniona__avl.html">a_avl</a> root = A_AVL_ROOT;</div>
 <div class="line"><a class="code hl_define" href="#ga5b27c8ab5a306507b3f7377620db4190">a_avl_pre_foreach_reverse</a>(cur, &amp;root)</div>
 <div class="line">{</div>
 <div class="line">    T *it = <a class="code hl_define" href="#ga3f746ebecdef2332ce519c5ad93e183c">a_avl_entry</a>(cur, T, node);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__A__AVL_html_ga5b27c8ab5a306507b3f7377620db4190"><div class="ttname"><a href="#ga5b27c8ab5a306507b3f7377620db4190">a_avl_pre_foreach_reverse</a></div><div class="ttdeci">#define a_avl_pre_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree preorder reverse</div><div class="ttdef"><b>Definition</b> avl.h:288</div></div>
+<div class="ttc" id="agroup__A__AVL_html_ga5b27c8ab5a306507b3f7377620db4190"><div class="ttname"><a href="#ga5b27c8ab5a306507b3f7377620db4190">a_avl_pre_foreach_reverse</a></div><div class="ttdeci">#define a_avl_pre_foreach_reverse(cur, root)</div><div class="ttdoc">iterate over a AVL binary search tree preorder reverse</div><div class="ttdef"><b>Definition</b> avl.h:300</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d3/d18/structa__avl__s.html" title="instance structure for AVL binary search tree node">a_avl_s</a> to use as a loop counter </td></tr>
+    <tr><td class="paramname">cur</td><td>the &amp;<a class="el" href="../../d1/d0e/structa__avl__node.html" title="instance structure for AVL binary search tree node">a_avl_node</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">root</td><td>AVL binary search tree root </td></tr>
   </table>
   </dd>
@@ -508,16 +530,16 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad365b3d0070104fb45cf2d1be53a2300" name="gad365b3d0070104fb45cf2d1be53a2300"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad365b3d0070104fb45cf2d1be53a2300">&#9670;&#160;</a></span>a_avl_head()</h2>
+<a id="ga64f2bf733385df94b8e07bcd1c5901e3" name="ga64f2bf733385df94b8e07bcd1c5901e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64f2bf733385df94b8e07bcd1c5901e3">&#9670;&#160;</a></span>a_avl_head()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_head </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -534,21 +556,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga408b989a776427d288d2571dc2f3fda0" name="ga408b989a776427d288d2571dc2f3fda0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga408b989a776427d288d2571dc2f3fda0">&#9670;&#160;</a></span>a_avl_init()</h2>
+<a id="ga60fe8651df0ce9c2deae075d0cf720f0" name="ga60fe8651df0ce9c2deae075d0cf720f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60fe8651df0ce9c2deae075d0cf720f0">&#9670;&#160;</a></span>a_avl_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_init </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *const</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -565,21 +587,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga518f1cd06737de96bf89e218dee97d14" name="ga518f1cd06737de96bf89e218dee97d14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga518f1cd06737de96bf89e218dee97d14">&#9670;&#160;</a></span>a_avl_insert()</h2>
+<a id="ga07debd89686c436887dc36fb9f4d5809" name="ga07debd89686c436887dc36fb9f4d5809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07debd89686c436887dc36fb9f4d5809">&#9670;&#160;</a></span>a_avl_insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_insert </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -607,8 +629,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8553e72712625f3de911b9092f5a5e9b" name="ga8553e72712625f3de911b9092f5a5e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8553e72712625f3de911b9092f5a5e9b">&#9670;&#160;</a></span>a_avl_insert_adjust()</h2>
+<a id="gaaae401d5094fc221dfa97b0f1c5bb9c3" name="gaaae401d5094fc221dfa97b0f1c5bb9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaae401d5094fc221dfa97b0f1c5bb9c3">&#9670;&#160;</a></span>a_avl_insert_adjust()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,12 +638,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_avl_insert_adjust </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -637,16 +659,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga375658847e6d948ee7a725eb25a81bd3" name="ga375658847e6d948ee7a725eb25a81bd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga375658847e6d948ee7a725eb25a81bd3">&#9670;&#160;</a></span>a_avl_next()</h2>
+<a id="gafd4a9d9bb0c0068e91f01f9eb04c822c" name="gafd4a9d9bb0c0068e91f01f9eb04c822c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd4a9d9bb0c0068e91f01f9eb04c822c">&#9670;&#160;</a></span>a_avl_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_next </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -663,16 +685,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga452e24b2c7fd41094f2cc363fb71c95f" name="ga452e24b2c7fd41094f2cc363fb71c95f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga452e24b2c7fd41094f2cc363fb71c95f">&#9670;&#160;</a></span>a_avl_parent()</h2>
+<a id="gaeb45d64f22a5869556fad134f3b82fa3" name="gaeb45d64f22a5869556fad134f3b82fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb45d64f22a5869556fad134f3b82fa3">&#9670;&#160;</a></span>a_avl_parent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_parent </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_parent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> const *const</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> const *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -689,16 +711,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4ba7ea564ac4905a45eb9682b9cc5480" name="ga4ba7ea564ac4905a45eb9682b9cc5480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4ba7ea564ac4905a45eb9682b9cc5480">&#9670;&#160;</a></span>a_avl_post_head()</h2>
+<a id="gacaf501f3712c31c07a829e462b6815ab" name="gacaf501f3712c31c07a829e462b6815ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacaf501f3712c31c07a829e462b6815ab">&#9670;&#160;</a></span>a_avl_post_head()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_post_head </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_post_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -715,16 +737,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8c73c91efc905a9fb19483489beff130" name="ga8c73c91efc905a9fb19483489beff130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8c73c91efc905a9fb19483489beff130">&#9670;&#160;</a></span>a_avl_post_next()</h2>
+<a id="ga44223839d171caabd63ec0a63ebb16a4" name="ga44223839d171caabd63ec0a63ebb16a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44223839d171caabd63ec0a63ebb16a4">&#9670;&#160;</a></span>a_avl_post_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_post_next </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_post_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -741,16 +763,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab5ce9052186f068bf38f1e34004dd7f8" name="gab5ce9052186f068bf38f1e34004dd7f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab5ce9052186f068bf38f1e34004dd7f8">&#9670;&#160;</a></span>a_avl_post_prev()</h2>
+<a id="ga26cfe5a13140db027f9e2ffece1e7d1e" name="ga26cfe5a13140db027f9e2ffece1e7d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26cfe5a13140db027f9e2ffece1e7d1e">&#9670;&#160;</a></span>a_avl_post_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_post_prev </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_post_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -767,16 +789,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gabce8a00b2573489711ae950da28773ed" name="gabce8a00b2573489711ae950da28773ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabce8a00b2573489711ae950da28773ed">&#9670;&#160;</a></span>a_avl_post_tail()</h2>
+<a id="gad4f5cac56fa7add3cd284de7f16d163c" name="gad4f5cac56fa7add3cd284de7f16d163c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4f5cac56fa7add3cd284de7f16d163c">&#9670;&#160;</a></span>a_avl_post_tail()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_post_tail </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_post_tail </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -793,16 +815,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2adf66599fe763cf8ffc2d2fb7770edb" name="ga2adf66599fe763cf8ffc2d2fb7770edb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2adf66599fe763cf8ffc2d2fb7770edb">&#9670;&#160;</a></span>a_avl_pre_next()</h2>
+<a id="ga659b6d6adc020e785e577b4f69518434" name="ga659b6d6adc020e785e577b4f69518434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga659b6d6adc020e785e577b4f69518434">&#9670;&#160;</a></span>a_avl_pre_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_pre_next </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_pre_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -819,16 +841,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf59c4285584f596e0889724ceaef37b6" name="gaf59c4285584f596e0889724ceaef37b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf59c4285584f596e0889724ceaef37b6">&#9670;&#160;</a></span>a_avl_pre_prev()</h2>
+<a id="ga7489cd395ac3dbdd70bf82df6c78875d" name="ga7489cd395ac3dbdd70bf82df6c78875d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7489cd395ac3dbdd70bf82df6c78875d">&#9670;&#160;</a></span>a_avl_pre_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_pre_prev </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_pre_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -845,16 +867,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga91d174c6a25240c36bf65bacce50dcc7" name="ga91d174c6a25240c36bf65bacce50dcc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga91d174c6a25240c36bf65bacce50dcc7">&#9670;&#160;</a></span>a_avl_prev()</h2>
+<a id="ga5e0008245374058f988a6f0e17a2d2e2" name="ga5e0008245374058f988a6f0e17a2d2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e0008245374058f988a6f0e17a2d2e2">&#9670;&#160;</a></span>a_avl_prev()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_prev </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -871,8 +893,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab682055d3a0dd2be8aae4c50548b7f0a" name="gab682055d3a0dd2be8aae4c50548b7f0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab682055d3a0dd2be8aae4c50548b7f0a">&#9670;&#160;</a></span>a_avl_remove()</h2>
+<a id="gaef001ee6968d03e862234b51ae88ea57" name="gaef001ee6968d03e862234b51ae88ea57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef001ee6968d03e862234b51ae88ea57">&#9670;&#160;</a></span>a_avl_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -880,12 +902,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_avl_remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -901,8 +923,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga7b0c63a0ebae0334706bc3dea12f11d1" name="ga7b0c63a0ebae0334706bc3dea12f11d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7b0c63a0ebae0334706bc3dea12f11d1">&#9670;&#160;</a></span>a_avl_root()</h2>
+<a id="gaced93548cf9cedbbccf6d78d0e2eefb4" name="gaced93548cf9cedbbccf6d78d0e2eefb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaced93548cf9cedbbccf6d78d0e2eefb4">&#9670;&#160;</a></span>a_avl_root()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -910,7 +932,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_avl_root </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *const</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -926,16 +948,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2c22cb31225cbf3ef21e665e0a066b98" name="ga2c22cb31225cbf3ef21e665e0a066b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2c22cb31225cbf3ef21e665e0a066b98">&#9670;&#160;</a></span>a_avl_search()</h2>
+<a id="ga9274060c01c0e75c2f3a029cb902b5c5" name="ga9274060c01c0e75c2f3a029cb902b5c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9274060c01c0e75c2f3a029cb902b5c5">&#9670;&#160;</a></span>a_avl_search()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_search </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_search </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -968,16 +990,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga240c8346a19d88f5791cc8af6fafd319" name="ga240c8346a19d88f5791cc8af6fafd319"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga240c8346a19d88f5791cc8af6fafd319">&#9670;&#160;</a></span>a_avl_tail()</h2>
+<a id="ga80c861755d4d0f96c0c9ff9eb4e4b044" name="ga80c861755d4d0f96c0c9ff9eb4e4b044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80c861755d4d0f96c0c9ff9eb4e4b044">&#9670;&#160;</a></span>a_avl_tail()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_tail </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_tail </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> const *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -994,21 +1016,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga39e43c659df2eb7b3dd6ede0ce91ac73" name="ga39e43c659df2eb7b3dd6ede0ce91ac73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga39e43c659df2eb7b3dd6ede0ce91ac73">&#9670;&#160;</a></span>a_avl_tear()</h2>
+<a id="ga117644fb959b7242274882fb4a149d95" name="ga117644fb959b7242274882fb4a149d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga117644fb959b7242274882fb4a149d95">&#9670;&#160;</a></span>a_avl_tear()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> * a_avl_tear </td>
+          <td class="memname"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> * a_avl_tear </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dc0/uniona__avl__u.html">a_avl_u</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d5/d1c/uniona__avl.html">a_avl</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d18/structa__avl__s.html">a_avl_s</a> **</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> **</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
