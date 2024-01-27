@@ -1,17 +1,15 @@
 <map id="pid_fuzzy.h" name="pid_fuzzy.h">
-<area shape="rect" id="Node000001" title="fuzzy proportional integral derivative controller" alt="" coords="187,5,282,31"/>
-<area shape="rect" id="Node000002" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="207,79,262,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,31,237,65,232,65,232,31"/>
-<area shape="rect" id="Node000003" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="213,152,256,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,104,237,138,232,138,232,104"/>
+<area shape="rect" id="Node000001" title="fuzzy proportional integral derivative controller" alt="" coords="139,5,234,31"/>
+<area shape="rect" id="Node000002" href="$da/df0/pid_8h.html" title="proportional integral derivative controller" alt="" coords="159,79,214,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,31,189,65,184,65,184,31"/>
+<area shape="rect" id="Node000003" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="165,152,208,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="189,104,189,138,184,138,184,104"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="5,225,80,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="214,176,87,223,86,218,212,171"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,179,79,222,77,217,164,174"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="105,225,175,251"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="221,179,168,219,165,215,218,175"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="181,179,157,215,153,212,177,176"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="199,225,270,251"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="237,178,237,212,232,212,232,178"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="197,176,222,213,217,216,192,179"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="294,225,357,251"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="251,175,301,214,298,219,248,179"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="381,225,451,251"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="257,172,375,218,373,223,255,177"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="210,175,292,217,290,222,207,179"/>
 </map>

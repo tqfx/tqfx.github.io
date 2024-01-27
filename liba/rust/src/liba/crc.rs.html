@@ -222,228 +222,282 @@
 <a href="#222" id="222">222</a>
 <a href="#223" id="223">223</a>
 <a href="#224" id="224">224</a>
+<a href="#225" id="225">225</a>
+<a href="#226" id="226">226</a>
+<a href="#227" id="227">227</a>
+<a href="#228" id="228">228</a>
+<a href="#229" id="229">229</a>
+<a href="#230" id="230">230</a>
+<a href="#231" id="231">231</a>
+<a href="#232" id="232">232</a>
+<a href="#233" id="233">233</a>
+<a href="#234" id="234">234</a>
+<a href="#235" id="235">235</a>
+<a href="#236" id="236">236</a>
+<a href="#237" id="237">237</a>
+<a href="#238" id="238">238</a>
+<a href="#239" id="239">239</a>
+<a href="#240" id="240">240</a>
+<a href="#241" id="241">241</a>
+<a href="#242" id="242">242</a>
+<a href="#243" id="243">243</a>
+<a href="#244" id="244">244</a>
+<a href="#245" id="245">245</a>
+<a href="#246" id="246">246</a>
+<a href="#247" id="247">247</a>
+<a href="#248" id="248">248</a>
+<a href="#249" id="249">249</a>
+<a href="#250" id="250">250</a>
+<a href="#251" id="251">251</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! Cyclic Redundancy Check
 
-/// polynomial value for 8 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>POLY8: u8 = <span class="number">0x31</span>;
-<span class="doccomment">/// initialize value for 8 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>INIT8: u8 = <span class="number">0x00</span>;
-<span class="doccomment">/// Cyclic Redundancy Check for 8 bits
+/// Cyclic Redundancy Check for 8 bits
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>crc8 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
-    </span>table: [u8; <span class="number">0x100</span>],
+    </span><span class="kw">pub </span>table: [u8; <span class="number">0x100</span>],
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc8le_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
-    <span class="kw">fn </span>a_crc8be_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
+    <span class="kw">fn </span>a_crc8m_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
+    <span class="kw">fn </span>a_crc8l_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
     <span class="kw">fn </span>a_crc8(table: <span class="kw-2">*const </span>u8, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u8) -&gt; u8;
 }
 
 <span class="kw">impl </span>crc8 {
-    <span class="doccomment">/// initialize for little-endian 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_le(poly: u8) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for MSB CRC-8
+    </span><span class="kw">pub fn </span>new_msb(poly: u8) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc8le_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc8m_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for little-endian 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
-        <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
-    }
-
-    <span class="doccomment">/// initialize for big-endian 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_be(poly: u8) -&gt; <span class="self">Self </span>{
+    <span class="doccomment">/// initialize for LSB CRC-8
+    </span><span class="kw">pub fn </span>new_lsb(poly: u8) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc8be_init(ctx.table.as_mut_ptr(), poly) };
+        <span class="kw">unsafe </span>{ a_crc8l_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for big-endian 8 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
-        <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// generate for MSB CRC-8
+    </span><span class="kw">pub fn </span>gen_msb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u8) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc8m_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// generate for LSB CRC-8
+    </span><span class="kw">pub fn </span>gen_lsb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u8) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc8l_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// calculate for CRC-8
+    </span><span class="kw">pub fn </span>eval(<span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
+        <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc8() {
+    <span class="kw">extern crate </span>std;
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_le(POLY8);
-        ctx.le(<span class="string">b&quot;&quot;</span>, INIT8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_msb(<span class="number">0x07</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x45</span>);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_be(POLY8);
-        ctx.be(<span class="string">b&quot;&quot;</span>, INIT8);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc8::new_lsb(<span class="number">0x31</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x75</span>);
     }
 }
 
-<span class="doccomment">/// polynomial value for 16 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>POLY16: u16 = <span class="number">0xA001</span>;
-<span class="doccomment">/// initialize value for 16 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>INIT16: u16 = <span class="number">0x0000</span>;
 <span class="doccomment">/// Cyclic Redundancy Check for 16 bits
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>crc16 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
-    </span>table: [u16; <span class="number">0x100</span>],
+    </span><span class="kw">pub </span>table: [u16; <span class="number">0x100</span>],
+    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u16, <span class="kw-2">*const </span>u8, usize, u16) -&gt; u16,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc16le_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
-    <span class="kw">fn </span>a_crc16be_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
-    <span class="kw">fn </span>a_crc16le(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
-    <span class="kw">fn </span>a_crc16be(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
+    <span class="kw">fn </span>a_crc16m_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
+    <span class="kw">fn </span>a_crc16l_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
+    <span class="kw">fn </span>a_crc16m(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
+    <span class="kw">fn </span>a_crc16l(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
 }
 
 <span class="kw">impl </span>crc16 {
-    <span class="doccomment">/// initialize for little-endian 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_le(poly: u16) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc16le_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for MSB CRC-16
+    </span><span class="kw">pub fn </span>new_msb(poly: u16) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc16m,
+        };
+        <span class="kw">unsafe </span>{ a_crc16m_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for little-endian 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
-        <span class="kw">unsafe </span>{ a_crc16le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
-    }
-
-    <span class="doccomment">/// initialize for big-endian 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_be(poly: u16) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc16be_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for LSB CRC-16
+    </span><span class="kw">pub fn </span>new_lsb(poly: u16) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc16l,
+        };
+        <span class="kw">unsafe </span>{ a_crc16l_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for big-endian 16 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
-        <span class="kw">unsafe </span>{ a_crc16be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// generate for MSB CRC-16
+    </span><span class="kw">pub fn </span>gen_msb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u16) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc16m_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc16m;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// generate for LSB CRC-16
+    </span><span class="kw">pub fn </span>gen_lsb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u16) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc16l_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc16l;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// calculate for CRC-16
+    </span><span class="kw">pub fn </span>eval(<span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
+        <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc16() {
+    <span class="kw">extern crate </span>std;
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_le(POLY16);
-        ctx.le(<span class="string">b&quot;&quot;</span>, INIT16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_msb(<span class="number">0x1021</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x9C58</span>);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_be(POLY16);
-        ctx.be(<span class="string">b&quot;&quot;</span>, INIT16);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc16::new_lsb(<span class="number">0x8005</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x443D</span>);
     }
 }
 
-<span class="doccomment">/// polynomial value for 32 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>POLY32: u32 = <span class="number">0xEDB88320</span>;
-<span class="doccomment">/// initialize value for 32 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>INIT32: u32 = <span class="number">0xFFFFFFFF</span>;
 <span class="doccomment">/// Cyclic Redundancy Check for 32 bits
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>crc32 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
-    </span>table: [u32; <span class="number">0x100</span>],
+    </span><span class="kw">pub </span>table: [u32; <span class="number">0x100</span>],
+    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u32, <span class="kw-2">*const </span>u8, usize, u32) -&gt; u32,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc32le_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
-    <span class="kw">fn </span>a_crc32be_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
-    <span class="kw">fn </span>a_crc32le(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
-    <span class="kw">fn </span>a_crc32be(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+    <span class="kw">fn </span>a_crc32m_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
+    <span class="kw">fn </span>a_crc32l_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
+    <span class="kw">fn </span>a_crc32m(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+    <span class="kw">fn </span>a_crc32l(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
 }
 
 <span class="kw">impl </span>crc32 {
-    <span class="doccomment">/// initialize for little-endian 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_le(poly: u32) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc32le_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for MSB CRC-32
+    </span><span class="kw">pub fn </span>new_msb(poly: u32) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc32m,
+        };
+        <span class="kw">unsafe </span>{ a_crc32m_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for little-endian 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
-        <span class="kw">unsafe </span>{ a_crc32le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
-    }
-
-    <span class="doccomment">/// initialize for big-endian 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_be(poly: u32) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc32be_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for LSB CRC-32
+    </span><span class="kw">pub fn </span>new_lsb(poly: u32) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc32l,
+        };
+        <span class="kw">unsafe </span>{ a_crc32l_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for big-endian 32 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
-        <span class="kw">unsafe </span>{ a_crc32be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// generate for MSB CRC-32
+    </span><span class="kw">pub fn </span>gen_msb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u32) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc32m_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc32m;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// generate for LSB CRC-32
+    </span><span class="kw">pub fn </span>gen_lsb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u32) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc32l_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc32l;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// calculate for CRC-32
+    </span><span class="kw">pub fn </span>eval(<span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
+        <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc32() {
+    <span class="kw">extern crate </span>std;
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_le(POLY32);
-        ctx.le(<span class="string">b&quot;&quot;</span>, INIT32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_msb(<span class="number">0x1EDC6F41</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x512B456E</span>);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_be(POLY32);
-        ctx.be(<span class="string">b&quot;&quot;</span>, INIT32);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc32::new_lsb(<span class="number">0x04C11DB7</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x450EAFB0</span>);
     }
 }
 
-<span class="doccomment">/// polynomial value for 64 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>POLY64: u64 = <span class="number">0x42F0E1EBA9EA3693</span>;
-<span class="doccomment">/// initialize value for 64 bits Cyclic Redundancy Check
-</span><span class="kw">pub const </span>INIT64: u64 = <span class="number">0xFFFFFFFFFFFFFFFF</span>;
 <span class="doccomment">/// Cyclic Redundancy Check for 64 bits
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>crc64 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
-    </span>table: [u64; <span class="number">0x100</span>],
+    </span><span class="kw">pub </span>table: [u64; <span class="number">0x100</span>],
+    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u64, <span class="kw-2">*const </span>u8, usize, u64) -&gt; u64,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_crc64le_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
-    <span class="kw">fn </span>a_crc64be_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
-    <span class="kw">fn </span>a_crc64le(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
-    <span class="kw">fn </span>a_crc64be(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
+    <span class="kw">fn </span>a_crc64m_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
+    <span class="kw">fn </span>a_crc64l_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
+    <span class="kw">fn </span>a_crc64m(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
+    <span class="kw">fn </span>a_crc64l(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
 }
 
 <span class="kw">impl </span>crc64 {
-    <span class="doccomment">/// initialize for little-endian 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_le(poly: u64) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc64le_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for MSB CRC-64
+    </span><span class="kw">pub fn </span>new_msb(poly: u64) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc64m,
+        };
+        <span class="kw">unsafe </span>{ a_crc64m_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for little-endian 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>le(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
-        <span class="kw">unsafe </span>{ a_crc64le(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
-    }
-
-    <span class="doccomment">/// initialize for big-endian 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>new_be(poly: u64) -&gt; <span class="self">Self </span>{
-        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{ table: [<span class="number">0</span>; <span class="number">0x100</span>] };
-        <span class="kw">unsafe </span>{ a_crc64be_init(ctx.table.as_mut_ptr(), poly) };
+    <span class="doccomment">/// initialize for LSB CRC-64
+    </span><span class="kw">pub fn </span>new_lsb(poly: u64) -&gt; <span class="self">Self </span>{
+        <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
+            table: [<span class="number">0</span>; <span class="number">0x100</span>],
+            eval: a_crc64l,
+        };
+        <span class="kw">unsafe </span>{ a_crc64l_init(ctx.table.as_mut_ptr(), poly) };
         ctx
     }
-
-    <span class="doccomment">/// calculate for big-endian 64 bits Cyclic Redundancy Check
-    </span><span class="kw">pub fn </span>be(<span class="self">self</span>, data: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
-        <span class="kw">unsafe </span>{ a_crc64be(<span class="self">self</span>.table.as_ptr(), data.as_ptr(), data.len(), value) }
+    <span class="doccomment">/// generate for MSB CRC-64
+    </span><span class="kw">pub fn </span>gen_msb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u64) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc64m_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc64m;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// generate for LSB CRC-64
+    </span><span class="kw">pub fn </span>gen_lsb(<span class="kw-2">&amp;mut </span><span class="self">self</span>, poly: u64) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_crc64l_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
+        <span class="self">self</span>.eval = a_crc64l;
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// calculate for CRC-64
+    </span><span class="kw">pub fn </span>eval(<span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
+        <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>crc64() {
+    <span class="kw">extern crate </span>std;
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_le(POLY64);
-        ctx.le(<span class="string">b&quot;&quot;</span>, INIT64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_msb(<span class="number">0x000000000000001B</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0xE4FFBEA588AFC790</span>);
     }
     {
-        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_be(POLY64);
-        ctx.be(<span class="string">b&quot;&quot;</span>, INIT64);
+        <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc::crc64::new_lsb(<span class="number">0x42F0E1EBA9EA3693</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0xDA60676A5CDE0008</span>);
     }
 }
 </code></pre></div></section></main></body></html>

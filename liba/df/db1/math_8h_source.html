@@ -282,88 +282,91 @@ $(function() { codefold.init(1); });
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_log1p(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_atan2(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_hypot(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_hypot3(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> z);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#define a_float_modf A_FLOAT_F(modf)</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">#define a_float_frexp A_FLOAT_F(frexp)</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#define a_float_ldexp A_FLOAT_F(ldexp)</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#define a_float_scalbn A_FLOAT_F(scalbn)</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#define a_float_scalbln A_FLOAT_F(scalbln)</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">#define a_float_nextafter A_FLOAT_F(nextafter)</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#define a_float_nexttoward A_FLOAT_F(nexttoward)</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#define a_float_copysign A_FLOAT_F(copysign)</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">#define a_float_ma A_FLOAT_F(fma)</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#define a_float_nan A_FLOAT_F(nan)</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">#define a_float_abs A_FLOAT_F(fabs)</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#define a_float_mod A_FLOAT_F(fmod)</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#define a_float_max A_FLOAT_F(fmax)</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#define a_float_min A_FLOAT_F(fmin)</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#define a_float_dim A_FLOAT_F(fdim)</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">#define a_float_remquo A_FLOAT_F(remquo)</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">#define a_float_remainder A_FLOAT_F(remainder)</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">#define a_float_exp A_FLOAT_F(exp)</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">#define a_float_exp2 A_FLOAT_F(exp2)</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">#define a_float_expm1 A_FLOAT_F(expm1)</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#define a_float_log A_FLOAT_F(log)</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#define a_float_logb A_FLOAT_F(logb)</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">#define a_float_log2 A_FLOAT_F(log2)</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">#define a_float_log10 A_FLOAT_F(log10)</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">#if defined(A_HAVE_LOG1P) &amp;&amp; (A_HAVE_LOG1P + 0 &gt; 0)</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#define a_float_log1p A_FLOAT_F(log1p)</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_LOG1P */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">#define a_float_ilogb A_FLOAT_F(ilogb)</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#define a_float_pow A_FLOAT_F(pow)</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="preprocessor">#define a_float_sqrt A_FLOAT_F(sqrt)</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#define a_float_cbrt A_FLOAT_F(cbrt)</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#if defined(A_HAVE_HYPOT) &amp;&amp; (A_HAVE_HYPOT + 0 &gt; 0)</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#define a_float_hypot A_FLOAT_F(hypot)</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_HYPOT */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#define a_float_sin A_FLOAT_F(sin)</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">#define a_float_cos A_FLOAT_F(cos)</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">#define a_float_tan A_FLOAT_F(tan)</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">#define a_float_asin A_FLOAT_F(asin)</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#define a_float_acos A_FLOAT_F(acos)</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="preprocessor">#define a_float_atan A_FLOAT_F(atan)</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="preprocessor">#if defined(A_HAVE_ATAN2) &amp;&amp; (A_HAVE_ATAN2 + 0 &gt; 0)</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">#define a_float_atan2 A_FLOAT_F(atan2)</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_ATAN2 */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#define a_float_sinh A_FLOAT_F(sinh)</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#define a_float_cosh A_FLOAT_F(cosh)</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">#define a_float_tanh A_FLOAT_F(tanh)</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#define a_float_asinh A_FLOAT_F(asinh)</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">#define a_float_acosh A_FLOAT_F(acosh)</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#define a_float_atanh A_FLOAT_F(atanh)</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">#define a_float_erf A_FLOAT_F(erf)</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define a_float_erfc A_FLOAT_F(erfc)</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#define a_float_tgamma A_FLOAT_F(tgamma)</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#define a_float_lgamma A_FLOAT_F(lgamma)</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#define a_float_ceil A_FLOAT_F(ceil)</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">#define a_float_floor A_FLOAT_F(floor)</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="preprocessor">#define a_float_trunc A_FLOAT_F(trunc)</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">#define a_float_round A_FLOAT_F(round)</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#define a_float_lround A_FLOAT_F(lround)</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="preprocessor">#define a_float_llround A_FLOAT_F(llround)</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#define a_float_nearbyint A_FLOAT_F(nearbyint)</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">#define a_float_rint A_FLOAT_F(rint)</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#define a_float_lrintt A_FLOAT_F(lrint)</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">#define a_float_llrintt A_FLOAT_F(llrint)</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">#endif </span><span class="comment">/* a/math.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_expm1(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_log1p(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_atan2(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_hypot(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>A_EXTERN <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> a_float_hypot3(<a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> x, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> y, <a class="code hl_define" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a> z);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>} <span class="comment">/* extern &quot;C&quot; */</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">#define a_float_modf A_FLOAT_F(modf)</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#define a_float_frexp A_FLOAT_F(frexp)</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#define a_float_ldexp A_FLOAT_F(ldexp)</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#define a_float_scalbn A_FLOAT_F(scalbn)</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">#define a_float_scalbln A_FLOAT_F(scalbln)</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#define a_float_nextafter A_FLOAT_F(nextafter)</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#define a_float_nexttoward A_FLOAT_F(nexttoward)</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">#define a_float_copysign A_FLOAT_F(copysign)</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#define a_float_ma A_FLOAT_F(fma)</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">#define a_float_nan A_FLOAT_F(nan)</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#define a_float_abs A_FLOAT_F(fabs)</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#define a_float_mod A_FLOAT_F(fmod)</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#define a_float_max A_FLOAT_F(fmax)</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#define a_float_min A_FLOAT_F(fmin)</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">#define a_float_dim A_FLOAT_F(fdim)</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">#define a_float_remquo A_FLOAT_F(remquo)</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">#define a_float_remainder A_FLOAT_F(remainder)</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">#define a_float_exp A_FLOAT_F(exp)</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">#define a_float_exp2 A_FLOAT_F(exp2)</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">#if defined(A_HAVE_EXPM1) &amp;&amp; (A_HAVE_EXPM1 + 0 &gt; 0)</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#define a_float_expm1 A_FLOAT_F(expm1)</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_EXPM1 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">#define a_float_log A_FLOAT_F(log)</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">#define a_float_logb A_FLOAT_F(logb)</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#define a_float_log2 A_FLOAT_F(log2)</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#define a_float_log10 A_FLOAT_F(log10)</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">#if defined(A_HAVE_LOG1P) &amp;&amp; (A_HAVE_LOG1P + 0 &gt; 0)</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="preprocessor">#define a_float_log1p A_FLOAT_F(log1p)</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_LOG1P */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="preprocessor">#define a_float_ilogb A_FLOAT_F(ilogb)</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#define a_float_pow A_FLOAT_F(pow)</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#define a_float_sqrt A_FLOAT_F(sqrt)</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">#define a_float_cbrt A_FLOAT_F(cbrt)</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">#if defined(A_HAVE_HYPOT) &amp;&amp; (A_HAVE_HYPOT + 0 &gt; 0)</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#define a_float_hypot A_FLOAT_F(hypot)</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_HYPOT */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">#define a_float_sin A_FLOAT_F(sin)</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#define a_float_cos A_FLOAT_F(cos)</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="preprocessor">#define a_float_tan A_FLOAT_F(tan)</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="preprocessor">#define a_float_asin A_FLOAT_F(asin)</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">#define a_float_acos A_FLOAT_F(acos)</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="preprocessor">#define a_float_atan A_FLOAT_F(atan)</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="preprocessor">#if defined(A_HAVE_ATAN2) &amp;&amp; (A_HAVE_ATAN2 + 0 &gt; 0)</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#define a_float_atan2 A_FLOAT_F(atan2)</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#endif </span><span class="comment">/* A_HAVE_ATAN2 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#define a_float_sinh A_FLOAT_F(sinh)</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">#define a_float_cosh A_FLOAT_F(cosh)</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#define a_float_tanh A_FLOAT_F(tanh)</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">#define a_float_asinh A_FLOAT_F(asinh)</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">#define a_float_acosh A_FLOAT_F(acosh)</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define a_float_atanh A_FLOAT_F(atanh)</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#define a_float_erf A_FLOAT_F(erf)</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#define a_float_erfc A_FLOAT_F(erfc)</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#define a_float_tgamma A_FLOAT_F(tgamma)</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">#define a_float_lgamma A_FLOAT_F(lgamma)</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">#define a_float_ceil A_FLOAT_F(ceil)</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#define a_float_floor A_FLOAT_F(floor)</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="preprocessor">#define a_float_trunc A_FLOAT_F(trunc)</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#define a_float_round A_FLOAT_F(round)</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">#define a_float_lround A_FLOAT_F(lround)</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#define a_float_llround A_FLOAT_F(llround)</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">#define a_float_nearbyint A_FLOAT_F(nearbyint)</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#define a_float_rint A_FLOAT_F(rint)</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">#define a_float_lrintt A_FLOAT_F(lrint)</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">#define a_float_llrintt A_FLOAT_F(llrint)</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">#endif </span><span class="comment">/* a/math.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aa_8h_html"><div class="ttname"><a href="../../d2/d62/a_8h.html">a.h</a></div><div class="ttdoc">algorithm library</div></div>
 <div class="ttc" id="agroup__A__FLOAT_html_gaee76129f3a4c2155c8c2bc38a4049d22"><div class="ttname"><a href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a></div><div class="ttdeci">#define a_float</div><div class="ttdef"><b>Definition</b> a.h:824</div></div>
 <div class="ttc" id="agroup__A__MATH_html_ga6668c6ba0586eb31f222b6d6508b8d15"><div class="ttname"><a href="../../d1/d82/group__A__MATH.html#ga6668c6ba0586eb31f222b6d6508b8d15">a_f32_rsqrt</a></div><div class="ttdeci">float a_f32_rsqrt(float x)</div><div class="ttdoc">reciprocal of square-root,</div></div>

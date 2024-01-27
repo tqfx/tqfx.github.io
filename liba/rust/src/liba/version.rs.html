@@ -127,23 +127,34 @@
 <a href="#127" id="127">127</a>
 <a href="#128" id="128">128</a>
 <a href="#129" id="129">129</a>
+<a href="#130" id="130">130</a>
+<a href="#131" id="131">131</a>
+<a href="#132" id="132">132</a>
+<a href="#133" id="133">133</a>
+<a href="#134" id="134">134</a>
+<a href="#135" id="135">135</a>
+<a href="#136" id="136">136</a>
+<a href="#137" id="137">137</a>
+<a href="#138" id="138">138</a>
+<a href="#139" id="139">139</a>
+<a href="#140" id="140">140</a>
+<a href="#141" id="141">141</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! version
+//!
+//! ## Examples
+//!
+//! ```
+//! println!(
+//!     &quot;version {}.{}.{}+{}&quot;,
+//!     liba::version::major(),
+//!     liba::version::minor(),
+//!     liba::version::patch(),
+//!     liba::version::tweak()
+//! );
+//! ```
 
 </span><span class="kw">use </span><span class="kw">crate</span>::int;
 <span class="kw">use </span><span class="kw">crate</span>::uint;
-
-<span class="doccomment">/// version
-</span><span class="attr">#[repr(C)]
-</span><span class="kw">pub struct </span>version {
-    <span class="doccomment">/// major number
-    </span><span class="kw">pub </span>major: uint,
-    <span class="doccomment">/// minor number
-    </span><span class="kw">pub </span>minor: uint,
-    <span class="doccomment">/// patch number
-    </span><span class="kw">pub </span>patch: uint,
-    <span class="doccomment">/// extra number
-    </span><span class="kw">pub </span>extra: uint,
-}
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">static </span>a_version_major: uint;
@@ -157,6 +168,56 @@
     <span class="kw">fn </span>a_version_le(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_ge(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_eq(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
+}
+
+<span class="doccomment">/// algorithm library version check
+</span><span class="kw">pub fn </span>check(major: uint, minor: uint, patch: uint) -&gt; int {
+    <span class="kw">unsafe </span>{ a_version_check(major, minor, patch) }
+}
+
+<span class="doccomment">/// algorithm library version major
+</span><span class="kw">pub fn </span>major() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_major }
+}
+
+<span class="doccomment">/// algorithm library version minor
+</span><span class="kw">pub fn </span>minor() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_minor }
+}
+
+<span class="doccomment">/// algorithm library version patch
+</span><span class="kw">pub fn </span>patch() -&gt; uint {
+    <span class="kw">unsafe </span>{ a_version_patch }
+}
+
+<span class="doccomment">/// algorithm library version tweak
+</span><span class="kw">pub fn </span>tweak() -&gt; u32 {
+    <span class="kw">unsafe </span>{ a_version_tweak }
+}
+
+<span class="doccomment">/// version
+</span><span class="attr">#[repr(C)]
+</span><span class="kw">pub struct </span>version {
+    <span class="doccomment">/// major number
+    </span><span class="kw">pub </span>major: uint,
+    <span class="doccomment">/// minor number
+    </span><span class="kw">pub </span>minor: uint,
+    <span class="doccomment">/// third number
+    </span><span class="kw">pub </span>third: uint,
+    <span class="doccomment">/// extra number
+    </span><span class="kw">pub </span>extra: uint,
+}
+
+<span class="kw">impl </span>version {
+    <span class="doccomment">/// initialize for version
+    </span><span class="kw">pub fn </span>new(major: uint, minor: uint, third: uint) -&gt; <span class="self">Self </span>{
+        <span class="self">Self </span>{
+            major,
+            minor,
+            third,
+            extra: <span class="number">0</span>,
+        }
+    }
 }
 
 <span class="kw">impl </span>PartialOrd <span class="kw">for </span>version {
@@ -190,53 +251,16 @@
     }
 }
 
-<span class="kw">impl </span>version {
-    <span class="doccomment">/// initialize for version
-    </span><span class="kw">pub fn </span>new(major: uint, minor: uint, patch: uint) -&gt; <span class="self">Self </span>{
-        <span class="self">Self </span>{
-            major,
-            minor,
-            patch,
-            extra: <span class="number">0</span>,
-        }
-    }
-}
-
-<span class="doccomment">/// algorithm library version check
-</span><span class="kw">pub fn </span>check(major: uint, minor: uint, patch: uint) -&gt; int {
-    <span class="kw">unsafe </span>{ a_version_check(major, minor, patch) }
-}
-
-<span class="doccomment">/// algorithm library version major
-</span><span class="kw">pub fn </span>major() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_major }
-}
-
-<span class="doccomment">/// algorithm library version minor
-</span><span class="kw">pub fn </span>minor() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_minor }
-}
-
-<span class="doccomment">/// algorithm library version patch
-</span><span class="kw">pub fn </span>patch() -&gt; uint {
-    <span class="kw">unsafe </span>{ a_version_patch }
-}
-
-<span class="doccomment">/// algorithm library version tweak
-</span><span class="kw">pub fn </span>tweak() -&gt; u32 {
-    <span class="kw">unsafe </span>{ a_version_tweak }
-}
-
 <span class="attr">#[test]
 </span><span class="kw">fn </span>version() {
     <span class="kw">extern crate </span>std;
     <span class="kw">use </span><span class="kw">crate</span>::version::version;
-    <span class="kw">impl </span>std::fmt::Debug <span class="kw">for </span>version {
-        <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>std::fmt::Formatter&lt;<span class="lifetime">&#39;_</span>&gt;) -&gt; std::fmt::Result {
+    <span class="kw">impl </span>core::fmt::Debug <span class="kw">for </span>version {
+        <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>core::fmt::Formatter&lt;<span class="lifetime">&#39;_</span>&gt;) -&gt; core::fmt::Result {
             f.debug_struct(<span class="string">&quot;version&quot;</span>)
                 .field(<span class="string">&quot;major&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.major)
                 .field(<span class="string">&quot;minor&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.minor)
-                .field(<span class="string">&quot;patch&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.patch)
+                .field(<span class="string">&quot;third&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.third)
                 .field(<span class="string">&quot;extra&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.extra)
                 .finish()
         }

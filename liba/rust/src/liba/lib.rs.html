@@ -94,14 +94,6 @@
 <a href="#94" id="94">94</a>
 <a href="#95" id="95">95</a>
 <a href="#96" id="96">96</a>
-<a href="#97" id="97">97</a>
-<a href="#98" id="98">98</a>
-<a href="#99" id="99">99</a>
-<a href="#100" id="100">100</a>
-<a href="#101" id="101">101</a>
-<a href="#102" id="102">102</a>
-<a href="#103" id="103">103</a>
-<a href="#104" id="104">104</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++ language
 
@@ -119,8 +111,7 @@ liba = &quot;0.1&quot;
 #![allow(non_camel_case_types)]
 #![cfg_attr(not(features = <span class="string">&quot;std&quot;</span>), no_std)]
 
-</span><span class="kw">use </span>core::ffi::c_char;
-<span class="doccomment">/// Equivalent to C’s int type.
+</span><span class="doccomment">/// Equivalent to C’s int type.
 </span><span class="kw">pub type </span>int = core::ffi::c_int;
 <span class="doccomment">/// Equivalent to C’s unsigned int type.
 </span><span class="kw">pub type </span>uint = core::ffi::c_uint;
@@ -141,60 +132,47 @@ liba = &quot;0.1&quot;
 <span class="kw">pub mod </span>version;
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">static </span>a_version: <span class="kw-2">*const </span>c_char;
-}
-
-<span class="doccomment">/**
-algorithm library version
-
-## Examples
-
-```
-println!(&quot;version {}&quot;, liba::version());
-```
-*/
-</span><span class="kw">pub fn </span>version() -&gt; <span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span>str {
-    <span class="kw">unsafe </span>{
-        core::ffi::CStr::from_ptr(a_version)
-            .to_str()
-            .unwrap_unchecked()
-    }
-}
-
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_u32_sqrt(x: u32) -&gt; u16;
     <span class="kw">fn </span>a_u64_sqrt(x: u64) -&gt; u32;
-    <span class="kw">fn </span>a_f32_rsqrt(x: f32) -&gt; f32;
-    <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
 }
-
 <span class="doccomment">/// square root of an unsigned integer
 </span><span class="kw">pub fn </span>u32_sqrt(x: u32) -&gt; u16 {
     <span class="kw">unsafe </span>{ a_u32_sqrt(x) }
 }
-
 <span class="doccomment">/// square root of an unsigned integer
 </span><span class="kw">pub fn </span>u64_sqrt(x: u64) -&gt; u32 {
     <span class="kw">unsafe </span>{ a_u64_sqrt(x) }
 }
 
+<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+    <span class="kw">fn </span>a_f32_rsqrt(x: f32) -&gt; f32;
+    <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
+}
 <span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
 </span><span class="kw">pub fn </span>f32_rsqrt(x: f32) -&gt; f32 {
     <span class="kw">unsafe </span>{ a_f32_rsqrt(x) }
 }
-
 <span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
 </span><span class="kw">pub fn </span>f64_rsqrt(x: f64) -&gt; f64 {
     <span class="kw">unsafe </span>{ a_f64_rsqrt(x) }
 }
 
+<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+    <span class="kw">fn </span>a_hash_bkdr_(pdata: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+    <span class="kw">fn </span>a_hash_sdbm_(pdata: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
+}
+<span class="doccomment">/// a hash function whose prime number is 131
+</span><span class="kw">pub fn </span>hash_bkdr(block: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
+    <span class="kw">unsafe </span>{ a_hash_bkdr_(block.as_ptr(), block.len(), value) }
+}
+<span class="doccomment">/// a hash function whose prime number is 65599
+</span><span class="kw">pub fn </span>hash_sdbm(block: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
+    <span class="kw">unsafe </span>{ a_hash_sdbm_(block.as_ptr(), block.len(), value) }
+}
+
 <span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>test {
     <span class="kw">extern crate </span>std;
-    <span class="attr">#[test]
-    </span><span class="kw">fn </span>version() {
-        <span class="macro">std::println!</span>(<span class="string">&quot;version {}&quot;</span>, <span class="kw">crate</span>::version());
-    }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>isqrt() {
         <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::u32_sqrt(u32::MAX));
@@ -204,6 +182,12 @@ println!(&quot;version {}&quot;, liba::version());
     </span><span class="kw">fn </span>rsqrt() {
         <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f32_rsqrt(<span class="number">4.0</span>));
         <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f64_rsqrt(<span class="number">4.0</span>));
+    }
+    <span class="attr">#[test]
+    </span><span class="kw">fn </span>hash() {
+        <span class="kw">let </span>text: [u8; <span class="number">10</span>] = <span class="kw-2">*</span><span class="string">b&quot;0123456789&quot;</span>;
+        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::hash_bkdr(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
+        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::hash_sdbm(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
     }
 }
 </code></pre></div></section></main></body></html>

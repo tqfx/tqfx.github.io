@@ -183,7 +183,13 @@ Cargo.toml</h3>
 main.rs</h3>
 <div class="fragment"><div class="line">use liba;</div>
 <div class="line">fn main() {</div>
-<div class="line">    println!(&quot;version {}&quot;, liba::version());</div>
+<div class="line">    println!(</div>
+<div class="line">        &quot;version {}.{}.{}+{}&quot;,</div>
+<div class="line">        liba::version::major(),</div>
+<div class="line">        liba::version::minor(),</div>
+<div class="line">        liba::version::patch(),</div>
+<div class="line">        liba::version::tweak()</div>
+<div class="line">    );</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
 Python</h2>

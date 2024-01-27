@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["f32_rsqrt","f64_rsqrt","u32_sqrt","u64_sqrt","version"],"macro":["PID_FUZZY_JOINT"],"mod":["crc","hpf","lpf","mf","pid","polytraj","tf","version"],"type":["float","int","uint"]};
+window.SIDEBAR_ITEMS = {"fn":["f32_rsqrt","f64_rsqrt","hash_bkdr","hash_sdbm","u32_sqrt","u64_sqrt"],"macro":["PID_FUZZY_JOINT"],"mod":["crc","hpf","lpf","mf","pid","polytraj","tf","version"],"type":["float","int","uint"]};
