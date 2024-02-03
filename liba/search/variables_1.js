@@ -7,5 +7,6 @@ var searchData=
   ['a_5fversion_5fminor_4',['a_version_minor',['../d2/d1b/group__A__VERSION.html#ga47b1f74c798e5f240ecb623b884c0dbe',1,'version.h']]],
   ['a_5fversion_5fpatch_5',['a_version_patch',['../d2/d1b/group__A__VERSION.html#gace81b0792d6ff3100609027239af5e10',1,'version.h']]],
   ['a_5fversion_5ftweak_6',['a_version_tweak',['../d2/d1b/group__A__VERSION.html#gad13603647a702192778943d7984e492b',1,'version.h']]],
-  ['alpha_7',['alpha',['../d8/db1/structa__hpf.html#a0630252815039e98e7dfbac49a155085',1,'a_hpf::alpha'],['../d8/d6c/structa__lpf.html#a03dfd5e3f870a650f28bfe376d966674',1,'a_lpf::alpha'],['../d6/d7f/structa__rbf.html#a1d3ff7a5928ee004555a451789860300',1,'a_rbf::alpha']]]
+  ['ac_7',['ac',['../d2/d91/structa__traptraj.html#a2d53fcebb5c5d449a99ef154a1ff6c5e',1,'a_traptraj']]],
+  ['alpha_8',['alpha',['../d8/db1/structa__hpf.html#a0630252815039e98e7dfbac49a155085',1,'a_hpf::alpha'],['../d8/d6c/structa__lpf.html#a03dfd5e3f870a650f28bfe376d966674',1,'a_lpf::alpha'],['../d6/d7f/structa__rbf.html#a1d3ff7a5928ee004555a451789860300',1,'a_rbf::alpha']]]
 ];

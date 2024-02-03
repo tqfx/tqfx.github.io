@@ -268,29 +268,6 @@
 <a href="#268" id="268">268</a>
 <a href="#269" id="269">269</a>
 <a href="#270" id="270">270</a>
-<a href="#271" id="271">271</a>
-<a href="#272" id="272">272</a>
-<a href="#273" id="273">273</a>
-<a href="#274" id="274">274</a>
-<a href="#275" id="275">275</a>
-<a href="#276" id="276">276</a>
-<a href="#277" id="277">277</a>
-<a href="#278" id="278">278</a>
-<a href="#279" id="279">279</a>
-<a href="#280" id="280">280</a>
-<a href="#281" id="281">281</a>
-<a href="#282" id="282">282</a>
-<a href="#283" id="283">283</a>
-<a href="#284" id="284">284</a>
-<a href="#285" id="285">285</a>
-<a href="#286" id="286">286</a>
-<a href="#287" id="287">287</a>
-<a href="#288" id="288">288</a>
-<a href="#289" id="289">289</a>
-<a href="#290" id="290">290</a>
-<a href="#291" id="291">291</a>
-<a href="#292" id="292">292</a>
-<a href="#293" id="293">293</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! polynomial trajectory
 
 </span><span class="kw">use </span><span class="kw">crate</span>::float;
@@ -307,15 +284,7 @@
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_polytraj3_gen(
-        ctx: <span class="kw-2">*mut </span>polytraj3,
-        t0: float,
-        t1: float,
-        q0: float,
-        q1: float,
-        v0: float,
-        v1: float,
-    );
+    <span class="kw">fn </span>a_polytraj3_gen(ctx: <span class="kw-2">*mut </span>polytraj3, ts: float, q0: float, q1: float, v0: float, v1: float);
     <span class="kw">fn </span>a_polytraj3_pos(ctx: <span class="kw-2">*const </span>polytraj3, dt: float) -&gt; float;
     <span class="kw">fn </span>a_polytraj3_vel(ctx: <span class="kw-2">*const </span>polytraj3, dt: float) -&gt; float;
     <span class="kw">fn </span>a_polytraj3_acc(ctx: <span class="kw-2">*const </span>polytraj3, dt: float) -&gt; float;
@@ -323,27 +292,19 @@
 
 <span class="kw">impl </span>polytraj3 {
     <span class="doccomment">/// initialize for cubic polynomial trajectory
-    </span><span class="kw">pub fn </span>new(t0: float, t1: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(ts: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             q: [<span class="number">0.0</span>; <span class="number">4</span>],
             v: [<span class="number">0.0</span>; <span class="number">3</span>],
             a: [<span class="number">0.0</span>; <span class="number">2</span>],
         };
-        <span class="kw">unsafe </span>{ a_polytraj3_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1) };
+        <span class="kw">unsafe </span>{ a_polytraj3_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1) };
         ctx
     }
 
     <span class="doccomment">/// generate for cubic polynomial trajectory
-    </span><span class="kw">pub fn </span>gen(
-        <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        t0: float,
-        t1: float,
-        q0: float,
-        q1: float,
-        v0: float,
-        v1: float,
-    ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_polytraj3_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1) };
+    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ts: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_polytraj3_gen(<span class="self">self</span>, ts, q0, q1, v0, v1) };
         <span class="self">self
     </span>}
 
@@ -368,7 +329,7 @@
     <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytraj::polytraj3::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytraj::polytraj3::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
         <span class="kw">let </span>pos = a.pos(dt);
         <span class="kw">let </span>vel = a.vel(dt);
         <span class="kw">let </span>acc = a.acc(dt);
@@ -390,8 +351,7 @@
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_polytraj5_gen(
         ctx: <span class="kw-2">*mut </span>polytraj5,
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -408,8 +368,7 @@
     <span class="doccomment">/// initialize for quintic polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>new(
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -422,7 +381,7 @@
             v: [<span class="number">0.0</span>; <span class="number">5</span>],
             a: [<span class="number">0.0</span>; <span class="number">4</span>],
         };
-        <span class="kw">unsafe </span>{ a_polytraj5_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1, a0, a1) };
+        <span class="kw">unsafe </span>{ a_polytraj5_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1, a0, a1) };
         ctx
     }
 
@@ -430,8 +389,7 @@
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -439,7 +397,7 @@
         a0: float,
         a1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_polytraj5_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1, a0, a1) };
+        <span class="kw">unsafe </span>{ a_polytraj5_gen(<span class="self">self</span>, ts, q0, q1, v0, v1, a0, a1) };
         <span class="self">self
     </span>}
 
@@ -464,7 +422,7 @@
     <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytraj::polytraj5::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytraj::polytraj5::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
         <span class="kw">let </span>pos = a.pos(dt);
         <span class="kw">let </span>vel = a.vel(dt);
         <span class="kw">let </span>acc = a.acc(dt);
@@ -488,8 +446,7 @@
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
     <span class="kw">fn </span>a_polytraj7_gen(
         ctx: <span class="kw-2">*mut </span>polytraj7,
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -509,8 +466,7 @@
     <span class="doccomment">/// initialize for hepta polynomial trajectory
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>new(
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -526,7 +482,7 @@
             a: [<span class="number">0.0</span>; <span class="number">6</span>],
             j: [<span class="number">0.0</span>; <span class="number">5</span>],
         };
-        <span class="kw">unsafe </span>{ a_polytraj7_gen(<span class="kw-2">&amp;mut </span>ctx, t0, t1, q0, q1, v0, v1, a0, a1, j0, j1) };
+        <span class="kw">unsafe </span>{ a_polytraj7_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1, a0, a1, j0, j1) };
         ctx
     }
 
@@ -534,8 +490,7 @@
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        t0: float,
-        t1: float,
+        ts: float,
         q0: float,
         q1: float,
         v0: float,
@@ -545,7 +500,7 @@
         j0: float,
         j1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_polytraj7_gen(<span class="self">self</span>, t0, t1, q0, q1, v0, v1, a0, a1, j0, j1) };
+        <span class="kw">unsafe </span>{ a_polytraj7_gen(<span class="self">self</span>, ts, q0, q1, v0, v1, a0, a1, j0, j1) };
         <span class="self">self
     </span>}
 
@@ -575,8 +530,7 @@
     <span class="kw">extern crate </span>std;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
-        <span class="kw">let </span><span class="kw-2">mut </span>a =
-            <span class="kw">crate</span>::polytraj::polytraj7::new(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
+        <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::polytraj::polytraj7::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
         <span class="kw">let </span>pos = a.pos(dt);
         <span class="kw">let </span>vel = a.vel(dt);
         <span class="kw">let </span>acc = a.acc(dt);

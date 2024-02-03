@@ -1,5 +1,5 @@
 <map id="algorithm library" name="algorithm library">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,729,136,755"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,765,136,791"/>
 <area shape="rect" id="Node000003" href="$d6/d8f/group__A__AVL.html" title=" " alt="" coords="206,5,374,31"/>
 <area shape="rect" id="Node000004" href="$d0/df8/group__A__BUF.html" title=" " alt="" coords="218,55,362,80"/>
 <area shape="rect" id="Node000005" href="$d6/dbb/group__A__COMPLEX.html" title=" " alt="" coords="224,104,356,129"/>
@@ -25,7 +25,8 @@
 <area shape="rect" id="Node000024" href="$d1/dfe/group__A__SLIST.html" title=" " alt="" coords="226,1200,354,1225"/>
 <area shape="rect" id="Node000025" href="$db/d6c/group__A__STR.html" title=" " alt="" coords="219,1249,361,1275"/>
 <area shape="rect" id="Node000026" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="225,1299,355,1324"/>
-<area shape="rect" id="Node000027" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1349,379,1389"/>
-<area shape="rect" id="Node000028" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1413,363,1439"/>
-<area shape="rect" id="Node000029" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1463,381,1488"/>
+<area shape="rect" id="Node000027" href="$db/d75/group__A__TRAPTRAJ.html" title=" " alt="" coords="215,1349,365,1389"/>
+<area shape="rect" id="Node000028" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1413,379,1453"/>
+<area shape="rect" id="Node000029" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1477,363,1503"/>
+<area shape="rect" id="Node000030" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1527,381,1552"/>
 </map>

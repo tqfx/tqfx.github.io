@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.crc16.html">liba.crc16</a></li>
+  <li><a href="../modules/liba.crc32.html">liba.crc32</a></li>
+  <li><a href="../modules/liba.crc64.html">liba.crc64</a></li>
+  <li><a href="../modules/liba.crc8.html">liba.crc8</a></li>
+  <li><a href="../modules/liba.hpf.html">liba.hpf</a></li>
+  <li><a href="../modules/liba.lpf.html">liba.lpf</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><a href="../modules/liba.polytraj3.html">liba.polytraj3</a></li>
+  <li><a href="../modules/liba.polytraj5.html">liba.polytraj5</a></li>
+  <li><a href="../modules/liba.polytraj7.html">liba.polytraj7</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><strong>liba.traptraj</strong></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.crc16.html">a.crc16</a></li>
+  <li><a href="../classes/a.crc32.html">a.crc32</a></li>
+  <li><a href="../classes/a.crc64.html">a.crc64</a></li>
+  <li><a href="../classes/a.crc8.html">a.crc8</a></li>
+  <li><a href="../classes/a.hpf.html">a.hpf</a></li>
+  <li><a href="../classes/a.lpf.html">a.lpf</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><a href="../classes/a.polytraj3.html">a.polytraj3</a></li>
+  <li><a href="../classes/a.polytraj5.html">a.polytraj5</a></li>
+  <li><a href="../classes/a.polytraj7.html">a.polytraj7</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.traptraj.html">a.traptraj</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>liba.traptraj</code></h1>
+<p>trapezoidal velocity profile trajectory</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#new">new (qm, vm, ac, de[, vs[, ve]])</a></td>
+	<td class="summary">constructor for trapezoidal velocity profile trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gen">gen (ctx, qm, vm, ac, de[, vs[, ve]])</a></td>
+	<td class="summary">generate for trapezoidal velocity profile trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pos">pos (ctx, dt)</a></td>
+	<td class="summary">calculate for trapezoidal velocity profile trajectory position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#vel">vel (ctx, dt)</a></td>
+	<td class="summary">calculate for trapezoidal velocity profile trajectory velocity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#acc">acc (ctx, dt)</a></td>
+	<td class="summary">calculate for trapezoidal velocity profile trajectory acceleration</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new (qm, vm, ac, de[, vs[, ve]])</strong>
+    </dt>
+    <dd>
+    constructor for trapezoidal velocity profile trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">qm</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the distance from the start point to the end point
+        </li>
+        <li><span class="parameter">vm</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the maximum velocity at which the system can work
+        </li>
+        <li><span class="parameter">ac</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration before constant velocity
+        </li>
+        <li><span class="parameter">de</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration after constant velocity
+        </li>
+        <li><span class="parameter">vs</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the starting velocity
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">ve</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the ending velocity
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.traptraj.html#">a.traptraj</a></span>
+        trapezoidal velocity profile trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gen"></a>
+    <strong>gen (ctx, qm, vm, ac, de[, vs[, ve]])</strong>
+    </dt>
+    <dd>
+    generate for trapezoidal velocity profile trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.traptraj.html#">a.traptraj</a></span>
+         trapezoidal velocity profile trajectory userdata
+        </li>
+        <li><span class="parameter">qm</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the distance from the start point to the end point
+        </li>
+        <li><span class="parameter">vm</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the maximum velocity at which the system can work
+        </li>
+        <li><span class="parameter">ac</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration before constant velocity
+        </li>
+        <li><span class="parameter">de</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration after constant velocity
+        </li>
+        <li><span class="parameter">vs</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the starting velocity
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">ve</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the ending velocity
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        total time
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pos"></a>
+    <strong>pos (ctx, dt)</strong>
+    </dt>
+    <dd>
+    calculate for trapezoidal velocity profile trajectory position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.traptraj.html#">a.traptraj</a></span>
+         trapezoidal velocity profile trajectory userdata
+        </li>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        position output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "vel"></a>
+    <strong>vel (ctx, dt)</strong>
+    </dt>
+    <dd>
+    calculate for trapezoidal velocity profile trajectory velocity
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.traptraj.html#">a.traptraj</a></span>
+         trapezoidal velocity profile trajectory userdata
+        </li>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        velocity output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "acc"></a>
+    <strong>acc (ctx, dt)</strong>
+    </dt>
+    <dd>
+    calculate for trapezoidal velocity profile trajectory acceleration
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><a class="type" href="../classes/a.traptraj.html#">a.traptraj</a></span>
+         trapezoidal velocity profile trajectory userdata
+        </li>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        acceleration output
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-02-03 07:33:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,6 +1,6 @@
 <map id="radial basis function" name="radial basis function">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,285,136,311"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,285,340,311"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,313,136,339"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,313,340,339"/>
 <area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="442,5,565,31"/>
 <area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="444,55,563,80"/>
 <area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="424,105,583,145"/>
@@ -10,5 +10,6 @@
 <area shape="rect" id="Node000009" href="$d5/d8e/group__A__POLYTRAJ5.html" title=" " alt="" coords="432,363,575,403"/>
 <area shape="rect" id="Node000010" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="402,428,605,453"/>
 <area shape="rect" id="Node000011" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="438,477,569,503"/>
-<area shape="rect" id="Node000012" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="412,527,595,552"/>
+<area shape="rect" id="Node000012" href="$db/d75/group__A__TRAPTRAJ.html" title=" " alt="" coords="428,527,579,567"/>
+<area shape="rect" id="Node000013" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="412,592,595,617"/>
 </map>

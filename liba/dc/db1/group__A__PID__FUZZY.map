@@ -1,6 +1,6 @@
 <map id="fuzzy proportional integral derivative controller" name="fuzzy proportional integral derivative controller">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,263,136,288"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,248,332,303"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,291,136,316"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,276,332,331"/>
 <area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="434,5,557,31"/>
 <area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="436,55,555,80"/>
 <area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="416,105,575,145"/>
@@ -10,5 +10,6 @@
 <area shape="rect" id="Node000009" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="394,348,597,373"/>
 <area shape="rect" id="Node000010" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="418,397,573,423"/>
 <area shape="rect" id="Node000011" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="430,447,561,472"/>
-<area shape="rect" id="Node000012" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="404,496,587,521"/>
+<area shape="rect" id="Node000012" href="$db/d75/group__A__TRAPTRAJ.html" title=" " alt="" coords="420,497,571,537"/>
+<area shape="rect" id="Node000013" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="404,561,587,587"/>
 </map>

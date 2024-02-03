@@ -13,7 +13,8 @@ var searchData=
   ['polytraj3_2eh_10',['polytraj3.h',['../dd/d56/polytraj3_8h.html',1,'']]],
   ['polytraj5_2eh_11',['polytraj5.h',['../dd/d93/polytraj5_8h.html',1,'']]],
   ['polytraj7_2eh_12',['polytraj7.h',['../df/d16/polytraj7_8h.html',1,'']]],
-  ['proportional_20integral_20derivative_20controller_13',['proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
-  ['py_14',['main.py',['../index.html#autotoc_md22',1,'']]],
-  ['python_15',['Python',['../index.html#autotoc_md21',1,'']]]
+  ['profile_20trajectory_13',['trapezoidal velocity profile trajectory',['../db/d75/group__A__TRAPTRAJ.html',1,'']]],
+  ['proportional_20integral_20derivative_20controller_14',['proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
+  ['py_15',['main.py',['../index.html#autotoc_md22',1,'']]],
+  ['python_16',['Python',['../index.html#autotoc_md21',1,'']]]
 ];

@@ -23,6 +23,7 @@ var searchData=
   ['a_5fslist_5fnode_20',['a_slist_node',['../de/dcd/structa__slist__node.html',1,'']]],
   ['a_5fstr_21',['a_str',['../d8/d79/structa__str.html',1,'']]],
   ['a_5ftf_22',['a_tf',['../de/ddd/structa__tf.html',1,'']]],
-  ['a_5fvec_23',['a_vec',['../d7/d3b/structa__vec.html',1,'']]],
-  ['a_5fversion_24',['a_version',['../d2/d04/structa__version.html',1,'']]]
+  ['a_5ftraptraj_23',['a_traptraj',['../d2/d91/structa__traptraj.html',1,'']]],
+  ['a_5fvec_24',['a_vec',['../d7/d3b/structa__vec.html',1,'']]],
+  ['a_5fversion_25',['a_version',['../d2/d04/structa__version.html',1,'']]]
 ];
