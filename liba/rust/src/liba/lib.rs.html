@@ -3288,24 +3288,24 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub </span>ac: float,
     <span class="doccomment">/// acceleration after constant velocity
     </span><span class="kw">pub </span>de: float,
-    <span class="doccomment">/// time period of increased velocity
-    </span><span class="kw">pub </span>ta: float,
-    <span class="doccomment">/// displacement as velocity increases
-    </span><span class="kw">pub </span>qa: float,
-    <span class="doccomment">/// time period of constant velocity
-    </span><span class="kw">pub </span>tc: float,
-    <span class="doccomment">/// displacement at constant velocity
-    </span><span class="kw">pub </span>qc: float,
-    <span class="doccomment">/// time period of decreased velocity
-    </span><span class="kw">pub </span>td: float,
-    <span class="doccomment">/// displacement as velocity decreases
-    </span><span class="kw">pub </span>qd: float,
+    <span class="doccomment">/// position before constant velocity
+    </span><span class="kw">pub </span>q1: float,
+    <span class="doccomment">/// position after constant velocity
+    </span><span class="kw">pub </span>q2: float,
+    <span class="doccomment">/// time before constant velocity
+    </span><span class="kw">pub </span>t1: float,
+    <span class="doccomment">/// time after constant velocity
+    </span><span class="kw">pub </span>t2: float,
     <span class="doccomment">/// initial velocity
     </span><span class="kw">pub </span>vs: float,
     <span class="doccomment">/// constant velocity
     </span><span class="kw">pub </span>vc: float,
     <span class="doccomment">/// final velocity
     </span><span class="kw">pub </span>ve: float,
+    <span class="doccomment">/// final position
+    </span><span class="kw">pub </span>q: float,
+    <span class="doccomment">/// total time
+    </span><span class="kw">pub </span>t: float,
 }
 
 <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
@@ -3330,15 +3330,15 @@ liba = &quot;0.1&quot;
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             ac: <span class="number">0.0</span>,
             de: <span class="number">0.0</span>,
-            ta: <span class="number">0.0</span>,
-            qa: <span class="number">0.0</span>,
-            tc: <span class="number">0.0</span>,
-            qc: <span class="number">0.0</span>,
-            td: <span class="number">0.0</span>,
-            qd: <span class="number">0.0</span>,
+            q1: <span class="number">0.0</span>,
+            q2: <span class="number">0.0</span>,
+            t1: <span class="number">0.0</span>,
+            t2: <span class="number">0.0</span>,
             vs: <span class="number">0.0</span>,
             vc: <span class="number">0.0</span>,
             ve: <span class="number">0.0</span>,
+            q: <span class="number">0.0</span>,
+            t: <span class="number">0.0</span>,
         };
         <span class="kw">unsafe </span>{ a_traptraj_gen(<span class="kw-2">&amp;mut </span>ctx, qm, vm, ac, de, vs, ve) };
         ctx
