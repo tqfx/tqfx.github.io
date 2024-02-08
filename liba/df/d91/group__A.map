@@ -1,5 +1,5 @@
 <map id="algorithm library" name="algorithm library">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,765,136,791"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,795,136,820"/>
 <area shape="rect" id="Node000003" href="$d6/d8f/group__A__AVL.html" title=" " alt="" coords="206,5,374,31"/>
 <area shape="rect" id="Node000004" href="$d0/df8/group__A__BUF.html" title=" " alt="" coords="218,55,362,80"/>
 <area shape="rect" id="Node000005" href="$d6/dbb/group__A__COMPLEX.html" title=" " alt="" coords="224,104,356,129"/>
@@ -16,17 +16,18 @@
 <area shape="rect" id="Node000015" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="217,679,363,733"/>
 <area shape="rect" id="Node000016" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="184,758,396,798"/>
 <area shape="rect" id="Node000017" href="$d6/de7/group__A__POLY.html" title=" " alt="" coords="243,823,337,848"/>
-<area shape="rect" id="Node000018" href="$d4/d5e/group__A__POLYTRAJ3.html" title=" " alt="" coords="190,872,390,897"/>
-<area shape="rect" id="Node000019" href="$d5/d8e/group__A__POLYTRAJ5.html" title=" " alt="" coords="219,922,361,962"/>
-<area shape="rect" id="Node000020" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="189,987,391,1012"/>
-<area shape="rect" id="Node000021" href="$df/d54/group__A__QUE.html" title=" " alt="" coords="217,1036,363,1061"/>
-<area shape="rect" id="Node000022" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="213,1085,367,1111"/>
-<area shape="rect" id="Node000023" href="$d7/d06/group__A__RBT.html" title=" " alt="" coords="225,1135,355,1175"/>
-<area shape="rect" id="Node000024" href="$d1/dfe/group__A__SLIST.html" title=" " alt="" coords="226,1200,354,1225"/>
-<area shape="rect" id="Node000025" href="$db/d6c/group__A__STR.html" title=" " alt="" coords="219,1249,361,1275"/>
-<area shape="rect" id="Node000026" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="225,1299,355,1324"/>
-<area shape="rect" id="Node000027" href="$db/d75/group__A__TRAPTRAJ.html" title=" " alt="" coords="215,1349,365,1389"/>
-<area shape="rect" id="Node000028" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1413,379,1453"/>
-<area shape="rect" id="Node000029" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1477,363,1503"/>
-<area shape="rect" id="Node000030" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1527,381,1552"/>
+<area shape="rect" id="Node000018" href="$df/d54/group__A__QUE.html" title=" " alt="" coords="217,872,363,897"/>
+<area shape="rect" id="Node000019" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="213,921,367,947"/>
+<area shape="rect" id="Node000020" href="$d7/d06/group__A__RBT.html" title=" " alt="" coords="225,971,355,1011"/>
+<area shape="rect" id="Node000021" href="$d1/dfe/group__A__SLIST.html" title=" " alt="" coords="226,1036,354,1061"/>
+<area shape="rect" id="Node000022" href="$db/d6c/group__A__STR.html" title=" " alt="" coords="219,1085,361,1111"/>
+<area shape="rect" id="Node000023" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="225,1135,355,1160"/>
+<area shape="rect" id="Node000024" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="213,1185,367,1225"/>
+<area shape="rect" id="Node000025" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="190,1249,390,1275"/>
+<area shape="rect" id="Node000026" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="219,1299,361,1339"/>
+<area shape="rect" id="Node000027" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="189,1364,391,1389"/>
+<area shape="rect" id="Node000028" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="215,1414,365,1454"/>
+<area shape="rect" id="Node000029" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1478,379,1518"/>
+<area shape="rect" id="Node000030" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1543,363,1568"/>
+<area shape="rect" id="Node000031" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1592,381,1617"/>
 </map>

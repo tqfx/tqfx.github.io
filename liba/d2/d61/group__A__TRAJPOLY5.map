@@ -1,0 +1,16 @@
+<map id="quintic polynomial trajectory" name="quintic polynomial trajectory">
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,339,136,364"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,331,328,371"/>
+<area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="430,5,553,31"/>
+<area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="432,55,551,80"/>
+<area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="412,105,571,145"/>
+<area shape="rect" id="Node000006" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="418,169,565,224"/>
+<area shape="rect" id="Node000007" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="385,249,597,289"/>
+<area shape="rect" id="Node000008" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="414,313,569,339"/>
+<area shape="rect" id="Node000009" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="426,363,557,388"/>
+<area shape="rect" id="Node000010" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="414,413,569,453"/>
+<area shape="rect" id="Node000011" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="391,477,591,503"/>
+<area shape="rect" id="Node000012" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="390,527,593,552"/>
+<area shape="rect" id="Node000013" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="416,577,567,617"/>
+<area shape="rect" id="Node000014" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="400,641,583,667"/>
+</map>

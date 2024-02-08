@@ -1,15 +1,16 @@
 <map id="High Pass Filter" name="High Pass Filter">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,321,136,347"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,321,308,347"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,343,136,368"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,343,308,368"/>
 <area shape="rect" id="Node000003" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="412,5,531,31"/>
 <area shape="rect" id="Node000004" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="392,55,551,95"/>
 <area shape="rect" id="Node000005" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="398,120,545,175"/>
 <area shape="rect" id="Node000006" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="365,199,577,239"/>
-<area shape="rect" id="Node000007" href="$d4/d5e/group__A__POLYTRAJ3.html" title=" " alt="" coords="371,264,571,289"/>
-<area shape="rect" id="Node000008" href="$d5/d8e/group__A__POLYTRAJ5.html" title=" " alt="" coords="400,314,543,354"/>
-<area shape="rect" id="Node000009" href="$de/d6e/group__A__POLYTRAJ7.html" title=" " alt="" coords="370,379,573,404"/>
-<area shape="rect" id="Node000010" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="394,428,549,453"/>
-<area shape="rect" id="Node000011" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="406,477,537,503"/>
-<area shape="rect" id="Node000012" href="$db/d75/group__A__TRAPTRAJ.html" title=" " alt="" coords="396,527,547,567"/>
-<area shape="rect" id="Node000013" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="380,592,563,617"/>
+<area shape="rect" id="Node000007" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="394,264,549,289"/>
+<area shape="rect" id="Node000008" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="406,313,537,339"/>
+<area shape="rect" id="Node000009" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="394,363,549,403"/>
+<area shape="rect" id="Node000010" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="371,428,571,453"/>
+<area shape="rect" id="Node000011" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="400,478,543,518"/>
+<area shape="rect" id="Node000012" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="370,543,573,568"/>
+<area shape="rect" id="Node000013" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="396,593,547,633"/>
+<area shape="rect" id="Node000014" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="380,657,563,683"/>
 </map>

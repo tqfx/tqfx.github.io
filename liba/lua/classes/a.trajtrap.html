@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.crc16.html">a.crc16</a></li>
+  <li><a href="../classes/a.crc32.html">a.crc32</a></li>
+  <li><a href="../classes/a.crc64.html">a.crc64</a></li>
+  <li><a href="../classes/a.crc8.html">a.crc8</a></li>
+  <li><a href="../classes/a.hpf.html">a.hpf</a></li>
+  <li><a href="../classes/a.lpf.html">a.lpf</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.trajbell.html">a.trajbell</a></li>
+  <li><a href="../classes/a.trajpoly3.html">a.trajpoly3</a></li>
+  <li><a href="../classes/a.trajpoly5.html">a.trajpoly5</a></li>
+  <li><a href="../classes/a.trajpoly7.html">a.trajpoly7</a></li>
+  <li><strong>a.trajtrap</strong></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.crc16.html">liba.crc16</a></li>
+  <li><a href="../modules/liba.crc32.html">liba.crc32</a></li>
+  <li><a href="../modules/liba.crc64.html">liba.crc64</a></li>
+  <li><a href="../modules/liba.crc8.html">liba.crc8</a></li>
+  <li><a href="../modules/liba.hpf.html">liba.hpf</a></li>
+  <li><a href="../modules/liba.lpf.html">liba.lpf</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.trajbell.html">liba.trajbell</a></li>
+  <li><a href="../modules/liba.trajpoly3.html">liba.trajpoly3</a></li>
+  <li><a href="../modules/liba.trajpoly5.html">liba.trajpoly5</a></li>
+  <li><a href="../modules/liba.trajpoly7.html">liba.trajpoly7</a></li>
+  <li><a href="../modules/liba.trajtrap.html">liba.trajtrap</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>a.trajtrap</code></h1>
+<p>trapezoidal velocity trajectory</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap">a.trajtrap</a></td>
+	<td class="summary">trapezoidal velocity trajectory</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap:new">a.trajtrap:new ()</a></td>
+	<td class="summary">constructor for trapezoidal velocity trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap:gen">a.trajtrap:gen (vm, ac, de, q0, q1[, v0[, v1]])</a></td>
+	<td class="summary">generate for trapezoidal velocity trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap:pos">a.trajtrap:pos (dt)</a></td>
+	<td class="summary">calculate position for trapezoidal velocity trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap:vel">a.trajtrap:vel (dt)</a></td>
+	<td class="summary">calculate velocity for trapezoidal velocity trajectory</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.trajtrap:acc">a.trajtrap:acc (dt)</a></td>
+	<td class="summary">calculate acceleration for trapezoidal velocity trajectory</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.trajtrap"></a>
+    <strong>a.trajtrap</strong>
+    </dt>
+    <dd>
+    trapezoidal velocity trajectory
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         total time
+        </li>
+        <li><span class="parameter">q0</span>
+         initial position
+        </li>
+        <li><span class="parameter">q1</span>
+         final position
+        </li>
+        <li><span class="parameter">v0</span>
+         initial velocity
+        </li>
+        <li><span class="parameter">v1</span>
+         final velocity
+        </li>
+        <li><span class="parameter">vc</span>
+         constant velocity
+        </li>
+        <li><span class="parameter">ta</span>
+         time before constant velocity
+        </li>
+        <li><span class="parameter">td</span>
+         time after constant velocity
+        </li>
+        <li><span class="parameter">qa</span>
+         position before constant velocity
+        </li>
+        <li><span class="parameter">qd</span>
+         position after constant velocity
+        </li>
+        <li><span class="parameter">ac</span>
+         acceleration before constant velocity
+        </li>
+        <li><span class="parameter">de</span>
+         acceleration after constant velocity
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.trajtrap:new"></a>
+    <strong>a.trajtrap:new ()</strong>
+    </dt>
+    <dd>
+    constructor for trapezoidal velocity trajectory
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../classes/a.trajtrap.html#">a.trajtrap</a></span>
+        trapezoidal velocity trajectory userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.trajtrap:gen"></a>
+    <strong>a.trajtrap:gen (vm, ac, de, q0, q1[, v0[, v1]])</strong>
+    </dt>
+    <dd>
+    generate for trapezoidal velocity trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">vm</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the maximum velocity at which the system can work
+        </li>
+        <li><span class="parameter">ac</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration before constant velocity
+        </li>
+        <li><span class="parameter">de</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the acceleration after constant velocity
+        </li>
+        <li><span class="parameter">q0</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the initial position
+        </li>
+        <li><span class="parameter">q1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the final position
+        </li>
+        <li><span class="parameter">v0</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the initial velocity
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">v1</span>
+            <span class="types"><span class="type">number</span></span>
+         defines the final velocity
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        total time
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.trajtrap:pos"></a>
+    <strong>a.trajtrap:pos (dt)</strong>
+    </dt>
+    <dd>
+    calculate position for trapezoidal velocity trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        position output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.trajtrap:vel"></a>
+    <strong>a.trajtrap:vel (dt)</strong>
+    </dt>
+    <dd>
+    calculate velocity for trapezoidal velocity trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        velocity output
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.trajtrap:acc"></a>
+    <strong>a.trajtrap:acc (dt)</strong>
+    </dt>
+    <dd>
+    calculate acceleration for trapezoidal velocity trajectory
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dt</span>
+            <span class="types"><span class="type">number</span></span>
+         difference between current time and initial time
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        acceleration output
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-02-08 07:43:48 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

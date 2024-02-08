@@ -1,15 +1,16 @@
 var searchData=
 [
-  ['v_0',['v',['../df/d3a/structa__polytraj3.html#aa6e4233942e5c998ef3f07fb7adf5c35',1,'a_polytraj3::v'],['../d8/dfc/structa__polytraj5.html#abcec3d96c55bbe1d75513edc288de511',1,'a_polytraj5::v'],['../d2/db5/structa__polytraj7.html#adfdb78901de2ce102d5cf23c959138c1',1,'a_polytraj7::v']]],
-  ['val_1',['val',['../d0/d27/structa__pid__fuzzy.html#a05607ae27d9f0ae3ce877fee5ae90af2',1,'a_pid_fuzzy']]],
-  ['var_2',['var',['../db/d89/structa__pid.html#ad573d9cd4a3b2f4e7e05d58e1997de33',1,'a_pid']]],
-  ['vc_3',['vc',['../d2/d91/structa__traptraj.html#ad7c472a6cd193f87c3bbe5dea22b4c26',1,'a_traptraj']]],
-  ['vcpkg_4',['vcpkg',['../index.html#autotoc_md7',1,'']]],
-  ['ve_5',['ve',['../d2/d91/structa__traptraj.html#a2a195ba760e0efcaf508b5705955a08c',1,'a_traptraj']]],
-  ['vec_2eh_6',['vec.h',['../db/d65/vec_8h.html',1,'']]],
-  ['vector_20library_7',['basic vector library',['../da/d05/group__A__VEC.html',1,'']]],
-  ['velocity_20profile_20trajectory_8',['trapezoidal velocity profile trajectory',['../db/d75/group__A__TRAPTRAJ.html',1,'']]],
-  ['version_9',['algorithm library version',['../d2/d1b/group__A__VERSION.html',1,'']]],
-  ['version_2eh_10',['version.h',['../df/dfc/version_8h.html',1,'']]],
-  ['vs_11',['vs',['../d2/d91/structa__traptraj.html#a6bfddae87a6018f2983b04fe9d8b37b1',1,'a_traptraj']]]
+  ['v_0',['v',['../d2/d69/structa__trajpoly3.html#a0ebe49c587da20fd7ab252a03be81163',1,'a_trajpoly3::v'],['../d0/dae/structa__trajpoly5.html#a2279a4bef8798e1e8e5e0d299dd204cb',1,'a_trajpoly5::v'],['../d5/d1c/structa__trajpoly7.html#aca4fc060c9019860e0979d2e0507067a',1,'a_trajpoly7::v']]],
+  ['v0_1',['v0',['../d1/dcc/structa__trajbell.html#a2c0621247305558da8ec28b5cbcc5aac',1,'a_trajbell::v0'],['../d3/dfe/structa__trajtrap.html#a4748a4bf6bd76b521fef43c9b30e4a9b',1,'a_trajtrap::v0']]],
+  ['v1_2',['v1',['../d1/dcc/structa__trajbell.html#ae0f0fb7837084f74ade615fdf2081ed5',1,'a_trajbell::v1'],['../d3/dfe/structa__trajtrap.html#a5c3d2e9a5e3e8c9145c3276883dd9307',1,'a_trajtrap::v1']]],
+  ['val_3',['val',['../d0/d27/structa__pid__fuzzy.html#a05607ae27d9f0ae3ce877fee5ae90af2',1,'a_pid_fuzzy']]],
+  ['var_4',['var',['../db/d89/structa__pid.html#ad573d9cd4a3b2f4e7e05d58e1997de33',1,'a_pid']]],
+  ['vc_5',['vc',['../d3/dfe/structa__trajtrap.html#addfa9cfbcb0b01137374cdab9d6bc19b',1,'a_trajtrap']]],
+  ['vcpkg_6',['vcpkg',['../index.html#autotoc_md7',1,'']]],
+  ['vec_2eh_7',['vec.h',['../db/d65/vec_8h.html',1,'']]],
+  ['vector_20library_8',['basic vector library',['../da/d05/group__A__VEC.html',1,'']]],
+  ['velocity_20trajectory_9',['velocity trajectory',['../d6/d1e/group__A__TRAJBELL.html',1,'bell-shaped velocity trajectory'],['../d7/d57/group__A__TRAJTRAP.html',1,'trapezoidal velocity trajectory']]],
+  ['version_10',['algorithm library version',['../d2/d1b/group__A__VERSION.html',1,'']]],
+  ['version_2eh_11',['version.h',['../df/dfc/version_8h.html',1,'']]],
+  ['vm_12',['vm',['../d1/dcc/structa__trajbell.html#a03337f12bd7bca41372e0c13eada55ce',1,'a_trajbell']]]
 ];

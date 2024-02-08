@@ -9,12 +9,8 @@ var searchData=
   ['point_20number_6',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
   ['poly_2eh_7',['poly.h',['../db/d57/poly_8h.html',1,'']]],
   ['polynomial_8',['polynomial',['../d6/de7/group__A__POLY.html',1,'']]],
-  ['polynomial_20trajectory_9',['polynomial trajectory',['../d4/d5e/group__A__POLYTRAJ3.html',1,'cubic polynomial trajectory'],['../de/d6e/group__A__POLYTRAJ7.html',1,'hepta polynomial trajectory'],['../d5/d8e/group__A__POLYTRAJ5.html',1,'quintic polynomial trajectory']]],
-  ['polytraj3_2eh_10',['polytraj3.h',['../dd/d56/polytraj3_8h.html',1,'']]],
-  ['polytraj5_2eh_11',['polytraj5.h',['../dd/d93/polytraj5_8h.html',1,'']]],
-  ['polytraj7_2eh_12',['polytraj7.h',['../df/d16/polytraj7_8h.html',1,'']]],
-  ['profile_20trajectory_13',['trapezoidal velocity profile trajectory',['../db/d75/group__A__TRAPTRAJ.html',1,'']]],
-  ['proportional_20integral_20derivative_20controller_14',['proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
-  ['py_15',['main.py',['../index.html#autotoc_md22',1,'']]],
-  ['python_16',['Python',['../index.html#autotoc_md21',1,'']]]
+  ['polynomial_20trajectory_9',['polynomial trajectory',['../d3/d9f/group__A__TRAJPOLY3.html',1,'cubic polynomial trajectory'],['../d9/dab/group__A__TRAJPOLY7.html',1,'hepta polynomial trajectory'],['../d2/d61/group__A__TRAJPOLY5.html',1,'quintic polynomial trajectory']]],
+  ['proportional_20integral_20derivative_20controller_10',['proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
+  ['py_11',['main.py',['../index.html#autotoc_md22',1,'']]],
+  ['python_12',['Python',['../index.html#autotoc_md21',1,'']]]
 ];

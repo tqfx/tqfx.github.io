@@ -15,6 +15,6 @@ var searchData=
   ['controller_12',['controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
   ['copyright_13',['Copyright',['../index.html#copyright',1,'']]],
   ['crc_2eh_14',['crc.h',['../dc/de6/crc_8h.html',1,'']]],
-  ['cubic_20polynomial_20trajectory_15',['cubic polynomial trajectory',['../d4/d5e/group__A__POLYTRAJ3.html',1,'']]],
+  ['cubic_20polynomial_20trajectory_15',['cubic polynomial trajectory',['../d3/d9f/group__A__TRAJPOLY3.html',1,'']]],
   ['cython_16',['cython',['../index.html#autotoc_md10',1,'']]]
 ];
