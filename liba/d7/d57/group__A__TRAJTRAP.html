@@ -145,7 +145,7 @@ Functions</h2></td></tr>
 <p>calculate acceleration for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- a(t)=\begin{cases}a,&amp;0\le t&lt;t_a\\0,&amp;t_a\le t&lt;t_d\\d,&amp;t_d\le t&lt;t_1\end{cases}
+ a(t)=\begin{cases}a,&amp;t\in[0,t_a)\\0,&amp;t\in[t_a,t_d)\\d,&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
@@ -223,24 +223,24 @@ Functions</h2></td></tr>
 \[a_d=q_1-v_cT_d-\frac{1}{2}dT_d^2\]
 </p>
  <p class="formulaDsp">
-\[\begin{cases}T_a=\cfrac{v_m-v_0}{a}\\T_c=\cfrac{q_d-q_a}{v_c}\\T_d=\cfrac{v_1-v_m}{d}\\\end{cases}\]
+\begin{cases}T_a=\cfrac{v_m-v_0}{a}\\T_c=\cfrac{q_d-q_a}{v_c}\\T_d=\cfrac{v_1-v_m}{d}\end{cases}
 </p>
 </li>
-<li>Otherwise there is no constant velocity phase. <br  />
+<li>Otherwise there is no constant velocity phase.<br  />
  a. If \(|v_0|&lt;|v|\le|v_1|\), there is only an acceleration phase. <p class="formulaDsp">
 \[|v_1|=\sqrt{v_0^2+2a(q_1-q_0)}\]
 </p>
  <p class="formulaDsp">
-\[\begin{cases}T_a=\cfrac{v_1-v_0}{a}\\T_c=0\\T_d=0\\\end{cases}\]
+\begin{cases}T_a=\cfrac{v_1-v_0}{a}\\T_c=0\\T_d=0\end{cases}
 </p>
  b. If \(|v_0|\ge|v|&gt;|v_1|\), there is only a deceleration phase. <p class="formulaDsp">
 \[|v_1|=\sqrt{v_0^2+2d(q_1-q_0)}\]
 </p>
  <p class="formulaDsp">
-\[\begin{cases}T_a=0\\T_c=0\\T_d=\cfrac{v_1-v_0}{d}\end{cases}\\\]
+\begin{cases}T_a=0\\T_c=0\\T_d=\cfrac{v_1-v_0}{d}\end{cases}
 </p>
  c. If \(|v|&gt;|v_0|\), \(|v|&gt;|v_1|\), then there are acceleration and deceleration phases. <p class="formulaDsp">
-\[\begin{cases}T_a=\cfrac{v-v_0}{a}\\T_c=0\\T_d=\cfrac{v_1-v}{d}\\\end{cases}\]
+\begin{cases}T_a=\cfrac{v-v_0}{a}\\T_c=0\\T_d=\cfrac{v_1-v}{d}\end{cases}
 </p>
 </li>
 <li>Finally, the position and velocity are calculated using the formula. <dl class="params"><dt>Parameters</dt><dd>
@@ -284,8 +284,8 @@ Functions</h2></td></tr>
 <p>calculate position for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- q(t)=\begin{cases}v_0+\frac{1}{2}at^2,&amp;0\le t&lt;t_a\\q_a+v_c(t-t_a),&amp;t_a\le t&lt;t_d\\
- q_d+v_c(t-t_d)+\frac{1}{2}d(t-t_d)^2,&amp;t_d\le t&lt;t_1\end{cases}
+ q(t)=\begin{cases}v_0+\frac{1}{2}at^2,&amp;t\in[0,t_a)\\q_a+v_c(t-t_a),&amp;t\in[t_a,t_d)\\
+ q_d+v_c(t-t_d)+\frac{1}{2}d(t-t_d)^2,&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
@@ -321,7 +321,7 @@ Functions</h2></td></tr>
 <p>calculate velocity for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- v(t)=\begin{cases}v_0+at,&amp;0\le t&lt;t_a\\v_c,&amp;t_a\le t&lt;t_d\\v_c+d(t-t_d),&amp;t_d\le t&lt;t_1\end{cases}
+ v(t)=\begin{cases}v_0+at,&amp;t\in[0,t_a)\\v_c,&amp;t\in[t_a,t_d)\\v_c+d(t-t_d),&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>

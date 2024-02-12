@@ -146,7 +146,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>calculate acceleration for bell-shaped velocity trajectory </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p class="formulaDsp">
+\[
+ a(t)=\begin{cases}
+ j_mt,&amp;t\in[0,T_{aj}]\\
+ j_mT_{aj}=a_m,&amp;t\in[T_{aj},T_a-T_{aj}]\\
+ j_m(T_a-t),&amp;t\in[T_a-T_{aj},T_a]\\
+ 0,&amp;t\in[T_a,T_a+T_v]\\
+ -j_m(t-T+T_d),&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
+ -j_mT_{dj}=d_m,&amp;t\in[T-T_d+T_{dj},T-T_{dj}]\\
+ -j_m(T-t),&amp;t\in[T-T_{dj},T]
+ \end{cases}
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of bell-shaped velocity trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>difference between current time and initial time </td></tr>
@@ -207,7 +220,48 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>generate for bell-shaped velocity trajectory </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>If \(q_0&gt;q_1\), then </p><p class="formulaDsp">
+\begin{aligned}q_0=-q_0\\q_1=-q_1\\v_0=-v_0\\v_1=-v_1\end{aligned}
+</p>
+<ol type="1">
+<li>If \((v_m-v_0)j_m&lt;a_m^2\), the maximum acceleration is not reached, then <p class="formulaDsp">
+\begin{aligned}T_{aj}&amp;=\sqrt{\frac{v_m-v_0}{j_m}}\\T_a&amp;=2T_{aj}\\a_m&amp;=+j_mT_{aj}\end{aligned}
+</p>
+ else <p class="formulaDsp">
+\begin{aligned}T_{aj}&amp;=\frac{a_m}{j_m}\\T_a&amp;=T_{aj}+\frac{v_m-v_0}{a_m}\\a_m&amp;=+a_m\end{aligned}
+</p>
+</li>
+<li>If \((v_m-v_1)j_m&lt;a_m^2\), the maximum deceleration is not reached, then <p class="formulaDsp">
+\begin{aligned}T_{dj}&amp;=\sqrt{\frac{v_m-v_1}{j_m}}\\T_d&amp;=2T_{dj}\\d_m&amp;=-j_mT_{dj}\end{aligned}
+</p>
+ else <p class="formulaDsp">
+\begin{aligned}T_{dj}&amp;=\frac{a_m}{j_m}\\T_d&amp;=T_{dj}+\frac{v_m-v_1}{a_m}\\d_m&amp;=-a_m\end{aligned}
+</p>
+</li>
+<li>Calculate the constant velocity phase <p class="formulaDsp">
+\[T_v=\frac{q_1-q_0}{v_m}
+-\frac{T_a}{2}\left(1+\frac{v_0}{v_m}\right)-\frac{T_d}{2}\left(1+\frac{v_1}{v_m}\right)\]
+</p>
+ If \(T_v&gt;0\), then there is a constant velocity phase and the phase calculation ends.</li>
+<li>If \(T_v&lt;=0\), then \(T_v=0\), <p class="formulaDsp">
+\begin{aligned}T_{aj}&amp;=T_{dj}=T_{j}=\frac{a_m}{j_m}\\
+T_a&amp;=\cfrac{\frac{a_m^2}{j_m}+\sqrt\Delta-2v_0}{2a_m}\\T_d&amp;=\cfrac{\frac{a_m^2}{j_m}+\sqrt\Delta-2v_1}{2a_m}\\
+\Delta&amp;=\frac{a_m^4}{j_m^2}+2(v_0^2+v_1^2)+a_m\left(4(q_1-q_0)-2(v_0+v_1)\frac{a_m}{ j_m}\right)\end{aligned}
+</p>
+<br  />
+ a. If \(T_a&lt;0\), there is only deceleration phase, then \(T_a=0\), \(T_{aj}=0\),  <p class="formulaDsp">
+\begin{aligned}T_d&amp;=2\cfrac{q_1-q_0}{v_1+v_0}\\
+T_{dj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_1-v_0)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
+</p>
+ b. If \(T_a&lt;0\), there is only acceleration phase, then \(T_d=0\), \(T_{dj}=0\),  <p class="formulaDsp">
+\begin{aligned}T_a&amp;=2\cfrac{q_1-q_0}{v_1+v_0}\\
+T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
+</p>
+ c. If \(T_a\ge2T_j\), \(T_d\ge2T_j\), then <p class="formulaDsp">
+\begin{aligned}a_m&amp;=+j_mT_{aj}\\d_m&amp;=-j_mT_{dj}\\v_m&amp;=v_0+(T_a-T_{aj})a_m=v_1-(T_d-T_{dj})d_m\end{aligned}
+</p>
+ d. If none of the above conditions are met, let \(a_m=\alpha a_m, 0&lt;\alpha&lt;1\), and then repeat step 4.</li>
+<li>Finally, use formulas to calculate position, velocity and acceleration. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of bell-shaped velocity trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">jm</td><td>defines the maximum jerk during system operation </td></tr>
@@ -221,6 +275,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>total duration </dd></dl>
+</li>
+</ol>
 
 </div>
 </div>
@@ -244,7 +300,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>calculate jerk for bell-shaped velocity trajectory </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p class="formulaDsp">
+\[
+ j(t)=\begin{cases}
+ j_m,&amp;t\in[0,T_{aj}]\\
+ 0,&amp;t\in[T_{aj},T_a-T_{aj}]\\
+ -j_m,&amp;t\in[T_a-T_{aj},T_a]\\
+ 0,&amp;t\in[T_a,T_a+T_v]\\
+ -j_m,&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
+ 0,&amp;t\in[T-T_d+T_{dj},T-T_{dj}]\\
+ j_m,&amp;t\in[T-T_{dj},T]
+ \end{cases}
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of bell-shaped velocity trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>difference between current time and initial time </td></tr>
@@ -275,7 +344,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>calculate position for bell-shaped velocity trajectory </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p class="formulaDsp">
+\[
+ q(t)=\begin{cases}
+ q_0+v_0t+j_m\cfrac{t^3}{6},&amp;t\in[0,T_{aj}]\\
+ q_0+v_0t+\cfrac{a_m}{6}(3t^3-3tT_{aj}+T_{aj}^2),&amp;t\in[T_{aj},T_a-T_{aj}]\\
+ q_0+(v_m+v_0)\cfrac{T_a}{2}-v_m(T_a-t)+j_m\cfrac{(T_a-t)^3}{6},&amp;t\in[T_a-T_{aj},T_a]\\
+ q_0+(v_m+v_0)\cfrac{T_a}{2}+v_m(t-T_a),&amp;t\in[T_a,T_a+T_v]\\
+ q_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)-j_m\cfrac{(t-T+T_d)^3}{6},&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
+ q_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)\\
+ \quad+\cfrac{d_m}{6}\left(3(t-T+T_d)^2-3(t-T+T_d)T_{dj}+T_{dj}^2\right),&amp;t\in[T-T_d+T_{dj},T-T_{dj}]\\
+ q_1-v_1(T-t)-j_m\cfrac{(T-t)^3}{6},&amp;t\in[T-T_{dj},T]
+ \end{cases}
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of bell-shaped velocity trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>difference between current time and initial time </td></tr>
@@ -306,7 +389,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>calculate velocity for bell-shaped velocity trajectory </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p class="formulaDsp">
+\[
+ v(t)=\begin{cases}
+ v_0+j_m\frac{t^2}{2},&amp;t\in[0,T_{aj}]\\
+ v_0+a_m(t-\cfrac{T_{aj}}{2}),&amp;t\in[T_{aj},T_a-T_{aj}]\\
+ v_m-j_m\cfrac{(T_a-t)^2}{2},&amp;t\in[T_a-T_{aj},T_a]\\
+ v_m,&amp;t\in[T_a,T_a+T_v]\\
+ v_m-j_m\cfrac{(t-T+T_d)^2}{2},&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
+ v_m+d_m(t-T+T_d-\cfrac{T_{dj}}{2}),&amp;t\in[T-T_d+T_{dj},T-T_{dj}]\\
+ v_1+j_m\cfrac{(T-t)^2}{2},&amp;t\in[T-T_{dj},T]
+ \end{cases}
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of bell-shaped velocity trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>difference between current time and initial time </td></tr>
