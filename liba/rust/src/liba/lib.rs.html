@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-9ee3a5e31a2afa3e.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="liba" data-themes="" data-resource-suffix="" data-rustdoc-version="1.75.0 (82e1608df 2023-12-21)" data-channel="1.75.0" data-search-js="search-8fbf244ebcf71464.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-9dd44ab47b99a0fb.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/lib.rs`."><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-ac92e1bbe349e143.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="liba" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><div class="sidebar-resizer"></div>
+    <main><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -1909,26 +1910,26 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-liba = &quot;0.1&quot;
+liba = "0.1"
 ```
 */
 
 </span><span class="attr">#![warn(missing_docs)]
 #![allow(non_camel_case_types)]
-#![cfg_attr(not(features = <span class="string">&quot;std&quot;</span>), no_std)]
+#![cfg_attr(not(features = <span class="string">"std"</span>), no_std)]
 
 </span><span class="doccomment">/// Equivalent to C’s int type.
 </span><span class="kw">pub type </span>int = core::ffi::c_int;
 <span class="doccomment">/// Equivalent to C’s unsigned int type.
 </span><span class="kw">pub type </span>uint = core::ffi::c_uint;
 <span class="doccomment">/// floating-point number stored using `f64`
-</span><span class="attr">#[cfg(not(feature = <span class="string">&quot;float&quot;</span>))]
+</span><span class="attr">#[cfg(not(feature = <span class="string">"float"</span>))]
 </span><span class="kw">pub type </span>float = f64;
 <span class="doccomment">/// floating-point number stored using `f32`
-</span><span class="attr">#[cfg(feature = <span class="string">&quot;float&quot;</span>)]
+</span><span class="attr">#[cfg(feature = <span class="string">"float"</span>)]
 </span><span class="kw">pub type </span>float = f32;
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_u32_sqrt(x: u32) -&gt; u16;
     <span class="kw">fn </span>a_u64_sqrt(x: u64) -&gt; u32;
 }
@@ -1944,7 +1945,7 @@ liba = &quot;0.1&quot;
     <span class="kw">unsafe </span>{ a_u64_sqrt(x) }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_f32_rsqrt(x: f32) -&gt; f32;
     <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
 }
@@ -1960,7 +1961,7 @@ liba = &quot;0.1&quot;
     <span class="kw">unsafe </span>{ a_f64_rsqrt(x) }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_hash_bkdr_(pdata: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
     <span class="kw">fn </span>a_hash_sdbm_(pdata: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
 }
@@ -1980,19 +1981,19 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     <span class="attr">#[test]
     </span><span class="kw">fn </span>usqrt() {
-        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::u32_sqrt(u32::MAX));
-        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::u64_sqrt(u64::MAX));
+        <span class="macro">std::println!</span>(<span class="string">"{}"</span>, <span class="kw">crate</span>::u32_sqrt(u32::MAX));
+        <span class="macro">std::println!</span>(<span class="string">"{}"</span>, <span class="kw">crate</span>::u64_sqrt(u64::MAX));
     }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>rsqrt() {
-        <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f32_rsqrt(<span class="number">4.0</span>));
-        <span class="macro">std::println!</span>(<span class="string">&quot;1/sqrt({})={}&quot;</span>, <span class="number">4</span>, <span class="kw">crate</span>::f64_rsqrt(<span class="number">4.0</span>));
+        <span class="macro">std::println!</span>(<span class="string">"1/sqrt({})={}"</span>, <span class="number">4</span>, <span class="kw">crate</span>::f32_rsqrt(<span class="number">4.0</span>));
+        <span class="macro">std::println!</span>(<span class="string">"1/sqrt({})={}"</span>, <span class="number">4</span>, <span class="kw">crate</span>::f64_rsqrt(<span class="number">4.0</span>));
     }
     <span class="attr">#[test]
     </span><span class="kw">fn </span>hash() {
-        <span class="kw">let </span>text: [u8; <span class="number">10</span>] = <span class="kw-2">*</span><span class="string">b&quot;0123456789&quot;</span>;
-        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::hash_bkdr(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
-        <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::hash_sdbm(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
+        <span class="kw">let </span>text: [u8; <span class="number">10</span>] = <span class="kw-2">*</span><span class="string">b"0123456789"</span>;
+        <span class="macro">std::println!</span>(<span class="string">"{}"</span>, <span class="kw">crate</span>::hash_bkdr(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
+        <span class="macro">std::println!</span>(<span class="string">"{}"</span>, <span class="kw">crate</span>::hash_sdbm(<span class="kw-2">&amp;</span>text, <span class="number">0</span>));
     }
 }
 
@@ -2003,7 +2004,7 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub </span>table: [u8; <span class="number">0x100</span>],
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_crc8m_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
     <span class="kw">fn </span>a_crc8l_init(table: <span class="kw-2">*mut </span>u8, poly: u8);
     <span class="kw">fn </span>a_crc8(table: <span class="kw-2">*const </span>u8, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u8) -&gt; u8;
@@ -2048,11 +2049,11 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc8::new_msb(<span class="number">0x07</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x45</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x45</span>);
     }
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc8::new_lsb(<span class="number">0x31</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x75</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x75</span>);
     }
 }
 
@@ -2061,10 +2062,10 @@ liba = &quot;0.1&quot;
 </span><span class="kw">pub struct </span>crc16 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
     </span><span class="kw">pub </span>table: [u16; <span class="number">0x100</span>],
-    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u16, <span class="kw-2">*const </span>u8, usize, u16) -&gt; u16,
+    eval: <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u16, <span class="kw-2">*const </span>u8, usize, u16) -&gt; u16,
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_crc16m_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
     <span class="kw">fn </span>a_crc16l_init(table: <span class="kw-2">*mut </span>u16, poly: u16);
     <span class="kw">fn </span>a_crc16m(table: <span class="kw-2">*const </span>u16, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u16) -&gt; u16;
@@ -2118,11 +2119,11 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc16::new_msb(<span class="number">0x1021</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x9C58</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x9C58</span>);
     }
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc16::new_lsb(<span class="number">0x8005</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x443D</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x443D</span>);
     }
 }
 
@@ -2131,10 +2132,10 @@ liba = &quot;0.1&quot;
 </span><span class="kw">pub struct </span>crc32 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
     </span><span class="kw">pub </span>table: [u32; <span class="number">0x100</span>],
-    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u32, <span class="kw-2">*const </span>u8, usize, u32) -&gt; u32,
+    eval: <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u32, <span class="kw-2">*const </span>u8, usize, u32) -&gt; u32,
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_crc32m_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
     <span class="kw">fn </span>a_crc32l_init(table: <span class="kw-2">*mut </span>u32, poly: u32);
     <span class="kw">fn </span>a_crc32m(table: <span class="kw-2">*const </span>u32, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u32) -&gt; u32;
@@ -2188,11 +2189,11 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc32::new_msb(<span class="number">0x1EDC6F41</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x512B456E</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x512B456E</span>);
     }
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc32::new_lsb(<span class="number">0x04C11DB7</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0x450EAFB0</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0x450EAFB0</span>);
     }
 }
 
@@ -2201,10 +2202,10 @@ liba = &quot;0.1&quot;
 </span><span class="kw">pub struct </span>crc64 {
     <span class="doccomment">/// Cyclic Redundancy Check comparison table
     </span><span class="kw">pub </span>table: [u64; <span class="number">0x100</span>],
-    eval: <span class="kw">unsafe extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u64, <span class="kw-2">*const </span>u8, usize, u64) -&gt; u64,
+    eval: <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>(<span class="kw-2">*const </span>u64, <span class="kw-2">*const </span>u8, usize, u64) -&gt; u64,
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_crc64m_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
     <span class="kw">fn </span>a_crc64l_init(table: <span class="kw-2">*mut </span>u64, poly: u64);
     <span class="kw">fn </span>a_crc64m(table: <span class="kw-2">*const </span>u64, pdate: <span class="kw-2">*const </span>u8, nbyte: usize, value: u64) -&gt; u64;
@@ -2258,11 +2259,11 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc64::new_msb(<span class="number">0x000000000000001B</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0xE4FFBEA588AFC790</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0xE4FFBEA588AFC790</span>);
     }
     {
         <span class="kw">let </span>ctx = <span class="kw">crate</span>::crc64::new_lsb(<span class="number">0x42F0E1EBA9EA3693</span>);
-        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b&quot;0123456789&quot;</span>, <span class="number">0</span>), <span class="number">0xDA60676A5CDE0008</span>);
+        <span class="macro">assert_eq!</span>(ctx.eval(<span class="string">b"0123456789"</span>, <span class="number">0</span>), <span class="number">0xDA60676A5CDE0008</span>);
     }
 }
 
@@ -2401,7 +2402,7 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub const </span>PI: int = <span class="number">13</span>;
 
     <span class="kw">use </span><span class="kw">crate</span>::float;
-    <span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+    <span class="kw">extern </span><span class="string">"C" </span>{
         <span class="kw">fn </span>a_mf_gauss(x: float, sigma: float, c: float) -&gt; float;
         <span class="kw">fn </span>a_mf_gauss2(x: float, sigma1: float, c1: float, sigma2: float, c2: float) -&gt; float;
         <span class="kw">fn </span>a_mf_gbell(x: float, a: float, b: float, c: float) -&gt; float;
@@ -2490,84 +2491,84 @@ liba = &quot;0.1&quot;
         </span><span class="kw">fn </span>gauss2() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">4</span>..=<span class="number">4 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::gauss2(x, <span class="number">1.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::gauss2(x, <span class="number">1.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>gbell() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">4</span>..=<span class="number">4 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::gbell(x, <span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">0.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::gbell(x, <span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">0.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>sig() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">4</span>..=<span class="number">4 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::sig(x, <span class="number">2.0</span>, <span class="number">0.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::sig(x, <span class="number">2.0</span>, <span class="number">0.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>dsig() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">4</span>..=<span class="number">4 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::dsig(x, <span class="number">5.0</span>, -<span class="number">2.0</span>, <span class="number">5.0</span>, <span class="number">2.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::dsig(x, <span class="number">5.0</span>, -<span class="number">2.0</span>, <span class="number">5.0</span>, <span class="number">2.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>psig() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">4</span>..=<span class="number">4 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::psig(x, <span class="number">5.0</span>, -<span class="number">2.0</span>, -<span class="number">5.0</span>, <span class="number">2.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::psig(x, <span class="number">5.0</span>, -<span class="number">2.0</span>, -<span class="number">5.0</span>, <span class="number">2.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>trap() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">3</span>..=<span class="number">3 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::trap(x, -<span class="number">2.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::trap(x, -<span class="number">2.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>tri() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">2</span>..=<span class="number">2 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::tri(x, -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::tri(x, -<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>lins() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">2</span>..=<span class="number">2 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::lins(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::lins(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>linz() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">2</span>..=<span class="number">2 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::linz(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::linz(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>s() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">2</span>..=<span class="number">2 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::s(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::s(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>z() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">2</span>..=<span class="number">2 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::z(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::z(x, -<span class="number">1.0</span>, <span class="number">1.0</span>));
             }
         }
         <span class="attr">#[test]
         </span><span class="kw">fn </span>pi() {
             <span class="kw">for </span>i <span class="kw">in </span>-<span class="number">3</span>..=<span class="number">3 </span>{
                 <span class="kw">let </span>x = i <span class="kw">as </span><span class="kw">crate</span>::float;
-                <span class="macro">std::println!</span>(<span class="string">&quot;{:+} {}&quot;</span>, x, <span class="kw">crate</span>::mf::pi(x, -<span class="number">2.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>));
+                <span class="macro">std::println!</span>(<span class="string">"{:+} {}"</span>, x, <span class="kw">crate</span>::mf::pi(x, -<span class="number">2.0</span>, -<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">2.0</span>));
             }
         }
     }
@@ -2622,7 +2623,7 @@ liba = &quot;0.1&quot;
     }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: float, ki: float, kd: float);
     <span class="kw">fn </span>a_pid_run(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
@@ -2670,8 +2671,8 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::pid::new();
     a.kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>);
-    <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, a.zero().pos(<span class="number">1.0</span>, <span class="number">0.0</span>));
-    <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, a.zero().inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{}"</span>, a.zero().pos(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{}"</span>, a.zero().inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
 }
 
 <span class="doccomment">/// fuzzy PID controller operator
@@ -2714,7 +2715,7 @@ liba = &quot;0.1&quot;
     <span class="kw">pub</span>(<span class="kw">crate</span>) idx: <span class="kw-2">*mut </span>uint,
     <span class="kw">pub</span>(<span class="kw">crate</span>) val: <span class="kw-2">*mut </span>float,
     <span class="doccomment">/// fuzzy relational operator
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) op: <span class="kw">extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(float, float) -&gt; float,
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) op: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
     <span class="doccomment">/// base proportional constant
     </span><span class="kw">pub </span>kp: float,
     <span class="doccomment">/// base integral constant
@@ -2749,8 +2750,8 @@ liba = &quot;0.1&quot;
     }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_pid_fuzzy_op(op: uint) -&gt; <span class="kw">extern </span><span class="string">&quot;C&quot; </span><span class="kw">fn</span>(float, float) -&gt; float;
+<span class="kw">extern </span><span class="string">"C" </span>{
+    <span class="kw">fn </span>a_pid_fuzzy_op(op: uint) -&gt; <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_set_op(ctx: <span class="kw-2">*mut </span>pid_fuzzy, op: uint);
     <span class="kw">fn </span>a_pid_fuzzy_rule(
         ctx: <span class="kw-2">*mut </span>pid_fuzzy,
@@ -2941,9 +2942,9 @@ liba = &quot;0.1&quot;
     .kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>)
     .set_joint(<span class="kw-2">&amp;mut </span>joint, <span class="number">2</span>);
     a.op(<span class="kw">crate</span>::fuzzy::EQU).zero();
-    <span class="macro">std::println!</span>(<span class="string">&quot;{} {}&quot;</span>, a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>), a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{} {}"</span>, a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>), a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.op(<span class="kw">crate</span>::fuzzy::EQU).zero();
-    <span class="macro">std::println!</span>(<span class="string">&quot;{} {}&quot;</span>, a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>), a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{} {}"</span>, a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>), a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
 }
 
 <span class="doccomment">/// single neuron proportional integral derivative controller
@@ -2977,7 +2978,7 @@ liba = &quot;0.1&quot;
     }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_pid_neuro_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: float, kp: float, ki: float, kd: float);
     <span class="kw">fn </span>a_pid_neuro_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: float, wi: float, wd: float);
     <span class="kw">fn </span>a_pid_neuro_run(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
@@ -3026,7 +3027,7 @@ liba = &quot;0.1&quot;
     <span class="kw">extern crate </span>std;
     <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::pid_neuro::new();
     a.kpid(<span class="number">10.0</span>, <span class="number">1.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>).wpid(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>);
-    <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{}"</span>, a.inc(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.zero();
 }
 
@@ -3047,7 +3048,7 @@ liba = &quot;0.1&quot;
     </span>den_n: uint,
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_tf_set_num(ctx: <span class="kw-2">*mut </span>tf, num_n: uint, num_p: <span class="kw-2">*const </span>float, input: <span class="kw-2">*mut </span>float);
     <span class="kw">fn </span>a_tf_set_den(ctx: <span class="kw-2">*mut </span>tf, den_n: uint, den_p: <span class="kw-2">*const </span>float, output: <span class="kw-2">*mut </span>float);
     <span class="kw">fn </span>a_tf_init(
@@ -3142,9 +3143,9 @@ liba = &quot;0.1&quot;
     <span class="kw">let </span><span class="kw-2">mut </span>output = [<span class="number">0.0</span>; <span class="number">2</span>];
     <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::tf::new(<span class="kw-2">&amp;</span>num, <span class="kw-2">&amp;mut </span>input, <span class="kw-2">&amp;</span>den, <span class="kw-2">&amp;mut </span>output);
     a.set_num(<span class="kw-2">&amp;</span>num, <span class="kw-2">&amp;mut </span>input).set_den(<span class="kw-2">&amp;</span>den, <span class="kw-2">&amp;mut </span>output);
-    <span class="macro">std::println!</span>(<span class="string">&quot;{} {}&quot;</span>, a.iter(<span class="number">10.0</span>), a.iter(<span class="number">10.0</span>));
-    <span class="macro">std::println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.num(), a.input());
-    <span class="macro">std::println!</span>(<span class="string">&quot;{:?} {:?}&quot;</span>, a.den(), a.output());
+    <span class="macro">std::println!</span>(<span class="string">"{} {}"</span>, a.iter(<span class="number">10.0</span>), a.iter(<span class="number">10.0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"{:?} {:?}"</span>, a.num(), a.input());
+    <span class="macro">std::println!</span>(<span class="string">"{:?} {:?}"</span>, a.den(), a.output());
     a.zero();
 }
 
@@ -3164,9 +3165,9 @@ liba = &quot;0.1&quot;
     <span class="doccomment">/// time-interval in which the jerk is constant (j max or j min ) during the deceleration phase
     </span><span class="kw">pub </span>tdj: float,
     <span class="doccomment">/// initial position
-    </span><span class="kw">pub </span>q0: float,
+    </span><span class="kw">pub </span>p0: float,
     <span class="doccomment">/// final position
-    </span><span class="kw">pub </span>q1: float,
+    </span><span class="kw">pub </span>p1: float,
     <span class="doccomment">/// initial velocity
     </span><span class="kw">pub </span>v0: float,
     <span class="doccomment">/// final velocity
@@ -3191,8 +3192,8 @@ liba = &quot;0.1&quot;
             td: <span class="number">0.0</span>,
             taj: <span class="number">0.0</span>,
             tdj: <span class="number">0.0</span>,
-            q0: <span class="number">0.0</span>,
-            q1: <span class="number">0.0</span>,
+            p0: <span class="number">0.0</span>,
+            p1: <span class="number">0.0</span>,
             v0: <span class="number">0.0</span>,
             v1: <span class="number">0.0</span>,
             vm: <span class="number">0.0</span>,
@@ -3203,14 +3204,14 @@ liba = &quot;0.1&quot;
     }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajbell_gen(
         ctx: <span class="kw-2">*mut </span>trajbell,
         jm: float,
         am: float,
         vm: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
     ) -&gt; float;
@@ -3234,12 +3235,12 @@ liba = &quot;0.1&quot;
         jm: float,
         am: float,
         vm: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
     ) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajbell_gen(<span class="self">self</span>, jm, am, vm, q0, q1, v0, v1) }
+        <span class="kw">unsafe </span>{ a_trajbell_gen(<span class="self">self</span>, jm, am, vm, p0, p1, v0, v1) }
     }
     <span class="doccomment">/// calculate position for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
@@ -3269,9 +3270,9 @@ liba = &quot;0.1&quot;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajbell::new();
-        <span class="macro">std::print!</span>(<span class="string">&quot;{} &quot;</span>, a.gen(<span class="number">3.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">0.0</span>, <span class="number">10.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
+        <span class="macro">std::print!</span>(<span class="string">"{} "</span>, a.gen(<span class="number">3.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">0.0</span>, <span class="number">10.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
         <span class="macro">std::println!</span>(
-            <span class="string">&quot;[{}, {}, {}, {}]&quot;</span>,
+            <span class="string">"[{}, {}, {}, {}]"</span>,
             a.pos(dt),
             a.vel(dt),
             a.acc(dt),
@@ -3284,15 +3285,15 @@ liba = &quot;0.1&quot;
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly3 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>q: [float; <span class="number">4</span>],
+    </span><span class="kw">pub </span>p: [float; <span class="number">4</span>],
     <span class="doccomment">/// coefficients of velocity
     </span><span class="kw">pub </span>v: [float; <span class="number">3</span>],
     <span class="doccomment">/// coefficients of acceleration
     </span><span class="kw">pub </span>a: [float; <span class="number">2</span>],
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
-    <span class="kw">fn </span>a_trajpoly3_gen(ctx: <span class="kw-2">*mut </span>trajpoly3, ts: float, q0: float, q1: float, v0: float, v1: float);
+<span class="kw">extern </span><span class="string">"C" </span>{
+    <span class="kw">fn </span>a_trajpoly3_gen(ctx: <span class="kw-2">*mut </span>trajpoly3, ts: float, p0: float, p1: float, v0: float, v1: float);
     <span class="kw">fn </span>a_trajpoly3_pos(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
     <span class="kw">fn </span>a_trajpoly3_vel(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
     <span class="kw">fn </span>a_trajpoly3_acc(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
@@ -3301,19 +3302,19 @@ liba = &quot;0.1&quot;
 <span class="kw">impl </span>trajpoly3 {
     <span class="doccomment">/// initialize for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(ts: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(ts: float, p0: float, p1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
-            q: [<span class="number">0.0</span>; <span class="number">4</span>],
+            p: [<span class="number">0.0</span>; <span class="number">4</span>],
             v: [<span class="number">0.0</span>; <span class="number">3</span>],
             a: [<span class="number">0.0</span>; <span class="number">2</span>],
         };
-        <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1) };
+        <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="kw-2">&amp;mut </span>ctx, ts, p0, p1, v0, v1) };
         ctx
     }
     <span class="doccomment">/// generate for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ts: float, q0: float, q1: float, v0: float, v1: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="self">self</span>, ts, q0, q1, v0, v1) };
+    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ts: float, p0: float, p1: float, v0: float, v1: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="self">self</span>, ts, p0, p1, v0, v1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for cubic polynomial trajectory
@@ -3339,7 +3340,7 @@ liba = &quot;0.1&quot;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly3::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
     }
 }
 
@@ -3347,19 +3348,19 @@ liba = &quot;0.1&quot;
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly5 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>q: [float; <span class="number">6</span>],
+    </span><span class="kw">pub </span>p: [float; <span class="number">6</span>],
     <span class="doccomment">/// coefficients of velocity
     </span><span class="kw">pub </span>v: [float; <span class="number">5</span>],
     <span class="doccomment">/// coefficients of acceleration
     </span><span class="kw">pub </span>a: [float; <span class="number">4</span>],
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajpoly5_gen(
         ctx: <span class="kw-2">*mut </span>trajpoly5,
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
@@ -3376,19 +3377,19 @@ liba = &quot;0.1&quot;
     #[inline(always)]
     </span><span class="kw">pub fn </span>new(
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
         a1: float,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
-            q: [<span class="number">0.0</span>; <span class="number">6</span>],
+            p: [<span class="number">0.0</span>; <span class="number">6</span>],
             v: [<span class="number">0.0</span>; <span class="number">5</span>],
             a: [<span class="number">0.0</span>; <span class="number">4</span>],
         };
-        <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1, a0, a1) };
+        <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="kw-2">&amp;mut </span>ctx, ts, p0, p1, v0, v1, a0, a1) };
         ctx
     }
     <span class="doccomment">/// generate for quintic polynomial trajectory
@@ -3397,14 +3398,14 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
         a1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="self">self</span>, ts, q0, q1, v0, v1, a0, a1) };
+        <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for quintic polynomial trajectory
@@ -3430,7 +3431,7 @@ liba = &quot;0.1&quot;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly5::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
     }
 }
 
@@ -3438,7 +3439,7 @@ liba = &quot;0.1&quot;
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly7 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>q: [float; <span class="number">8</span>],
+    </span><span class="kw">pub </span>p: [float; <span class="number">8</span>],
     <span class="doccomment">/// coefficients of velocity
     </span><span class="kw">pub </span>v: [float; <span class="number">7</span>],
     <span class="doccomment">/// coefficients of acceleration
@@ -3447,12 +3448,12 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub </span>j: [float; <span class="number">5</span>],
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajpoly7_gen(
         ctx: <span class="kw-2">*mut </span>trajpoly7,
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
@@ -3472,8 +3473,8 @@ liba = &quot;0.1&quot;
     #[inline(always)]
     </span><span class="kw">pub fn </span>new(
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
@@ -3482,12 +3483,12 @@ liba = &quot;0.1&quot;
         j1: float,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
-            q: [<span class="number">0.0</span>; <span class="number">8</span>],
+            p: [<span class="number">0.0</span>; <span class="number">8</span>],
             v: [<span class="number">0.0</span>; <span class="number">7</span>],
             a: [<span class="number">0.0</span>; <span class="number">6</span>],
             j: [<span class="number">0.0</span>; <span class="number">5</span>],
         };
-        <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="kw-2">&amp;mut </span>ctx, ts, q0, q1, v0, v1, a0, a1, j0, j1) };
+        <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="kw-2">&amp;mut </span>ctx, ts, p0, p1, v0, v1, a0, a1, j0, j1) };
         ctx
     }
     <span class="doccomment">/// generate for hepta polynomial trajectory
@@ -3496,8 +3497,8 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         ts: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
         a0: float,
@@ -3505,7 +3506,7 @@ liba = &quot;0.1&quot;
         j0: float,
         j1: float,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="self">self</span>, ts, q0, q1, v0, v1, a0, a1, j0, j1) };
+        <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1, j0, j1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for hepta polynomial trajectory
@@ -3537,7 +3538,7 @@ liba = &quot;0.1&quot;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly7::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
         <span class="macro">std::println!</span>(
-            <span class="string">&quot;[{}, {}, {}, {}]&quot;</span>,
+            <span class="string">"[{}, {}, {}, {}]"</span>,
             a.pos(dt),
             a.vel(dt),
             a.acc(dt),
@@ -3552,9 +3553,9 @@ liba = &quot;0.1&quot;
     <span class="doccomment">/// total duration
     </span><span class="kw">pub </span>t: float,
     <span class="doccomment">/// initial position
-    </span><span class="kw">pub </span>q0: float,
+    </span><span class="kw">pub </span>p0: float,
     <span class="doccomment">/// final position
-    </span><span class="kw">pub </span>q1: float,
+    </span><span class="kw">pub </span>p1: float,
     <span class="doccomment">/// initial velocity
     </span><span class="kw">pub </span>v0: float,
     <span class="doccomment">/// final velocity
@@ -3566,9 +3567,9 @@ liba = &quot;0.1&quot;
     <span class="doccomment">/// time after constant velocity
     </span><span class="kw">pub </span>td: float,
     <span class="doccomment">/// position before constant velocity
-    </span><span class="kw">pub </span>qa: float,
+    </span><span class="kw">pub </span>pa: float,
     <span class="doccomment">/// position after constant velocity
-    </span><span class="kw">pub </span>qd: float,
+    </span><span class="kw">pub </span>pd: float,
     <span class="doccomment">/// acceleration before constant velocity
     </span><span class="kw">pub </span>ac: float,
     <span class="doccomment">/// acceleration after constant velocity
@@ -3580,29 +3581,29 @@ liba = &quot;0.1&quot;
     </span><span class="kw">fn </span>default() -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             t: <span class="number">0.0</span>,
-            q0: <span class="number">0.0</span>,
-            q1: <span class="number">0.0</span>,
+            p0: <span class="number">0.0</span>,
+            p1: <span class="number">0.0</span>,
             v0: <span class="number">0.0</span>,
             v1: <span class="number">0.0</span>,
             vc: <span class="number">0.0</span>,
             ta: <span class="number">0.0</span>,
             td: <span class="number">0.0</span>,
-            qa: <span class="number">0.0</span>,
-            qd: <span class="number">0.0</span>,
+            pa: <span class="number">0.0</span>,
+            pd: <span class="number">0.0</span>,
             ac: <span class="number">0.0</span>,
             de: <span class="number">0.0</span>,
         }
     }
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajtrap_gen(
         ctx: <span class="kw-2">*mut </span>trajtrap,
         vm: float,
         ac: float,
         de: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
     ) -&gt; float;
@@ -3625,12 +3626,12 @@ liba = &quot;0.1&quot;
         vm: float,
         ac: float,
         de: float,
-        q0: float,
-        q1: float,
+        p0: float,
+        p1: float,
         v0: float,
         v1: float,
     ) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajtrap_gen(<span class="self">self</span>, vm, ac, de, q0, q1, v0, v1) }
+        <span class="kw">unsafe </span>{ a_trajtrap_gen(<span class="self">self</span>, vm, ac, de, p0, p1, v0, v1) }
     }
     <span class="doccomment">/// calculate position for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
@@ -3655,8 +3656,8 @@ liba = &quot;0.1&quot;
     <span class="kw">let </span>dt = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajtrap::new();
-        <span class="macro">std::print!</span>(<span class="string">&quot;{} &quot;</span>, a.gen(<span class="number">2.0</span>, <span class="number">2.0</span>, -<span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
-        <span class="macro">std::println!</span>(<span class="string">&quot;[{}, {}, {}]&quot;</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::print!</span>(<span class="string">"{} "</span>, a.gen(<span class="number">2.0</span>, <span class="number">2.0</span>, -<span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
     }
 }
 
@@ -3666,7 +3667,7 @@ liba = &quot;0.1&quot;
 ///
 /// ```
 /// println!(
-///     &quot;version {}.{}.{}+{}&quot;,
+///     "version {}.{}.{}+{}",
 ///     liba::version::major(),
 ///     liba::version::minor(),
 ///     liba::version::patch(),
@@ -3685,7 +3686,7 @@ liba = &quot;0.1&quot;
     </span><span class="kw">pub </span>extra: uint,
 }
 
-<span class="kw">extern </span><span class="string">&quot;C&quot; </span>{
+<span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">static </span>a_version_major: uint;
     <span class="kw">static </span>a_version_minor: uint;
     <span class="kw">static </span>a_version_patch: uint;
@@ -3778,23 +3779,23 @@ liba = &quot;0.1&quot;
 </span><span class="kw">fn </span>version() {
     <span class="kw">extern crate </span>std;
     <span class="kw">impl </span>core::fmt::Debug <span class="kw">for </span>version {
-        <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>core::fmt::Formatter&lt;<span class="lifetime">&#39;_</span>&gt;) -&gt; core::fmt::Result {
-            f.debug_struct(<span class="string">&quot;version&quot;</span>)
-                .field(<span class="string">&quot;major&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.major)
-                .field(<span class="string">&quot;minor&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.minor)
-                .field(<span class="string">&quot;third&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.third)
-                .field(<span class="string">&quot;extra&quot;</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.extra)
+        <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>core::fmt::Formatter&lt;<span class="lifetime">'_</span>&gt;) -&gt; core::fmt::Result {
+            f.debug_struct(<span class="string">"version"</span>)
+                .field(<span class="string">"major"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.major)
+                .field(<span class="string">"minor"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.minor)
+                .field(<span class="string">"third"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.third)
+                .field(<span class="string">"extra"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.extra)
                 .finish()
         }
     }
-    <span class="macro">std::println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="kw">crate</span>::version::check(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));
-    <span class="macro">std::println!</span>(<span class="string">&quot;major {}&quot;</span>, <span class="kw">crate</span>::version::major());
-    <span class="macro">std::println!</span>(<span class="string">&quot;minor {}&quot;</span>, <span class="kw">crate</span>::version::minor());
-    <span class="macro">std::println!</span>(<span class="string">&quot;patch {}&quot;</span>, <span class="kw">crate</span>::version::patch());
-    <span class="macro">std::println!</span>(<span class="string">&quot;tweak {}&quot;</span>, <span class="kw">crate</span>::version::tweak());
+    <span class="macro">std::println!</span>(<span class="string">"{}"</span>, <span class="kw">crate</span>::version::check(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));
+    <span class="macro">std::println!</span>(<span class="string">"major {}"</span>, <span class="kw">crate</span>::version::major());
+    <span class="macro">std::println!</span>(<span class="string">"minor {}"</span>, <span class="kw">crate</span>::version::minor());
+    <span class="macro">std::println!</span>(<span class="string">"patch {}"</span>, <span class="kw">crate</span>::version::patch());
+    <span class="macro">std::println!</span>(<span class="string">"tweak {}"</span>, <span class="kw">crate</span>::version::tweak());
     <span class="kw">let </span>v000 = version::new(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);
     <span class="kw">let </span>v001 = version::new(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);
-    <span class="macro">std::println!</span>(<span class="string">&quot;{:?}&quot;</span>, v001);
+    <span class="macro">std::println!</span>(<span class="string">"{:?}"</span>, v001);
     <span class="macro">assert!</span>(v001 &gt; v000);
     <span class="macro">assert!</span>(v000 &lt; v001);
     <span class="macro">assert!</span>(v000 &gt;= v000);

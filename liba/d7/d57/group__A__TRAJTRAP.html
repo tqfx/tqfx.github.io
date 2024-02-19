@@ -108,9 +108,9 @@ typedef struct a_trajtrap&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab895b2345f5c7ee95af260e78968ddd6" id="r_gab895b2345f5c7ee95af260e78968ddd6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab895b2345f5c7ee95af260e78968ddd6">a_trajtrap_gen</a> (<a class="el" href="../../d3/dfe/structa__trajtrap.html">a_trajtrap</a> *ctx, double vm, double ac, double de, double q0, double q1, double v0, double v1)</td></tr>
-<tr class="memdesc:gab895b2345f5c7ee95af260e78968ddd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for trapezoidal velocity trajectory  <br /></td></tr>
-<tr class="separator:gab895b2345f5c7ee95af260e78968ddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d28e902803cbc5d6f68736f40401e67" id="r_ga2d28e902803cbc5d6f68736f40401e67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2d28e902803cbc5d6f68736f40401e67">a_trajtrap_gen</a> (<a class="el" href="../../d3/dfe/structa__trajtrap.html">a_trajtrap</a> *ctx, double vm, double ac, double de, double p0, double p1, double v0, double v1)</td></tr>
+<tr class="memdesc:ga2d28e902803cbc5d6f68736f40401e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for trapezoidal velocity trajectory  <br /></td></tr>
+<tr class="separator:ga2d28e902803cbc5d6f68736f40401e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1b11b480172b6643434f5e11efb82b3a" id="r_ga1b11b480172b6643434f5e11efb82b3a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b11b480172b6643434f5e11efb82b3a">a_trajtrap_pos</a> (<a class="el" href="../../d3/dfe/structa__trajtrap.html">a_trajtrap</a> const *ctx, double dt)</td></tr>
 <tr class="memdesc:ga1b11b480172b6643434f5e11efb82b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate position for trapezoidal velocity trajectory  <br /></td></tr>
 <tr class="separator:ga1b11b480172b6643434f5e11efb82b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +145,7 @@ Functions</h2></td></tr>
 <p>calculate acceleration for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- a(t)=\begin{cases}a,&amp;t\in[0,t_a)\\0,&amp;t\in[t_a,t_d)\\d,&amp;t\in[t_d,T]\end{cases}
+ \ddot{p}(t)=\begin{cases}a,&amp;t\in[0,t_a)\\0,&amp;t\in[t_a,t_d)\\d,&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
@@ -159,8 +159,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab895b2345f5c7ee95af260e78968ddd6" name="gab895b2345f5c7ee95af260e78968ddd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab895b2345f5c7ee95af260e78968ddd6">&#9670;&#160;</a></span>a_trajtrap_gen()</h2>
+<a id="ga2d28e902803cbc5d6f68736f40401e67" name="ga2d28e902803cbc5d6f68736f40401e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d28e902803cbc5d6f68736f40401e67">&#9670;&#160;</a></span>a_trajtrap_gen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,12 +188,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q0</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p0</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q1</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -210,31 +210,31 @@ Functions</h2></td></tr>
 
 <p>generate for trapezoidal velocity trajectory </p>
 <p>Assuming that there is no constant velocity phase, but only acceleration and deceleration phases, the maximum velocity in the motion is \(v\), then we have </p><p class="formulaDsp">
-\[\frac{v^2-v_0^2}{2a}+\frac{v_1^2-v^2}{2d}=q_1-q_0\]
+\[\frac{v^2-v_0^2}{2a}+\frac{v_1^2-v^2}{2d}=p_1-p_0\]
 </p>
 <p> Solving for the maximum velocity is </p><p class="formulaDsp">
-\[|v|=\sqrt{\frac{av_1^2-dv_0^2-2ad(q_1-q_0)}{a-d}}\]
+\[|v|=\sqrt{\frac{av_1^2-dv_0^2-2ad(p_1-p_0)}{a-d}}\]
 </p>
 <ol type="1">
 <li>If \(|v|&gt;|v_m|\), then there is a constant velocity phase. <p class="formulaDsp">
-\[q_a=q_0+v_0T_a+\frac{1}{2}aT_a^2\]
+\[p_a=p_0+v_0T_a+\frac{1}{2}aT_a^2\]
 </p>
  <p class="formulaDsp">
-\[a_d=q_1-v_cT_d-\frac{1}{2}dT_d^2\]
+\[a_d=p_1-v_cT_d-\frac{1}{2}dT_d^2\]
 </p>
  <p class="formulaDsp">
-\begin{cases}T_a=\cfrac{v_m-v_0}{a}\\T_c=\cfrac{q_d-q_a}{v_c}\\T_d=\cfrac{v_1-v_m}{d}\end{cases}
+\begin{cases}T_a=\cfrac{v_m-v_0}{a}\\T_c=\cfrac{p_d-p_a}{v_c}\\T_d=\cfrac{v_1-v_m}{d}\end{cases}
 </p>
 </li>
 <li>Otherwise there is no constant velocity phase.<br  />
  a. If \(|v_0|&lt;|v|\le|v_1|\), there is only an acceleration phase. <p class="formulaDsp">
-\[|v_1|=\sqrt{v_0^2+2a(q_1-q_0)}\]
+\[|v_1|=\sqrt{v_0^2+2a(p_1-p_0)}\]
 </p>
  <p class="formulaDsp">
 \begin{cases}T_a=\cfrac{v_1-v_0}{a}\\T_c=0\\T_d=0\end{cases}
 </p>
  b. If \(|v_0|\ge|v|&gt;|v_1|\), there is only a deceleration phase. <p class="formulaDsp">
-\[|v_1|=\sqrt{v_0^2+2d(q_1-q_0)}\]
+\[|v_1|=\sqrt{v_0^2+2d(p_1-p_0)}\]
 </p>
  <p class="formulaDsp">
 \begin{cases}T_a=0\\T_c=0\\T_d=\cfrac{v_1-v_0}{d}\end{cases}
@@ -249,8 +249,8 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">vm</td><td>defines the maximum velocity during system operation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ac</td><td>defines the acceleration before constant velocity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">de</td><td>defines the acceleration after constant velocity </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q0</td><td>defines the initial position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q1</td><td>defines the final position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>defines the initial position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>defines the final position </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v0</td><td>defines the initial velocity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v1</td><td>defines the final velocity </td></tr>
   </table>
@@ -284,8 +284,8 @@ Functions</h2></td></tr>
 <p>calculate position for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- q(t)=\begin{cases}v_0+\frac{1}{2}at^2,&amp;t\in[0,t_a)\\q_a+v_c(t-t_a),&amp;t\in[t_a,t_d)\\
- q_d+v_c(t-t_d)+\frac{1}{2}d(t-t_d)^2,&amp;t\in[t_d,T]\end{cases}
+ p(t)=\begin{cases}v_0+\frac{1}{2}at^2,&amp;t\in[0,t_a)\\p_a+v_c(t-t_a),&amp;t\in[t_a,t_d)\\
+ p_d+v_c(t-t_d)+\frac{1}{2}d(t-t_d)^2,&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
@@ -321,7 +321,7 @@ Functions</h2></td></tr>
 <p>calculate velocity for trapezoidal velocity trajectory </p>
 <p class="formulaDsp">
 \[
- v(t)=\begin{cases}v_0+at,&amp;t\in[0,t_a)\\v_c,&amp;t\in[t_a,t_d)\\v_c+d(t-t_d),&amp;t\in[t_d,T]\end{cases}
+ \dot{p}(t)=\begin{cases}v_0+at,&amp;t\in[0,t_a)\\v_c,&amp;t\in[t_a,t_d)\\v_c+d(t-t_d),&amp;t\in[t_d,T]\end{cases}
 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>

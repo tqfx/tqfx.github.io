@@ -115,12 +115,12 @@ typedef struct a_trajpoly3&#160;</td><td class="memItemRight" valign="bottom"><b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga969c1aae0d48dce944a3c95cabf9efbb" id="r_ga969c1aae0d48dce944a3c95cabf9efbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga969c1aae0d48dce944a3c95cabf9efbb">a_trajpoly3_gen</a> (<a class="el" href="../../d2/d69/structa__trajpoly3.html">a_trajpoly3</a> *ctx, double ts, double q0, double q1, double v0, double v1)</td></tr>
-<tr class="memdesc:ga969c1aae0d48dce944a3c95cabf9efbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for cubic polynomial trajectory  <br /></td></tr>
-<tr class="separator:ga969c1aae0d48dce944a3c95cabf9efbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga962db2e1ba9b398cfaa6ff529a57fefc" id="r_ga962db2e1ba9b398cfaa6ff529a57fefc"><td class="memItemLeft" align="right" valign="top"><a id="ga962db2e1ba9b398cfaa6ff529a57fefc" name="ga962db2e1ba9b398cfaa6ff529a57fefc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen0</b> (<a class="el" href="../../d2/d69/structa__trajpoly3.html">a_trajpoly3</a> *ctx, double ts, double q0, double q1, double v0, double v1)</td></tr>
-<tr class="separator:ga962db2e1ba9b398cfaa6ff529a57fefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff49136c9572efa9875e2195f8374623" id="r_gaff49136c9572efa9875e2195f8374623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaff49136c9572efa9875e2195f8374623">a_trajpoly3_gen</a> (<a class="el" href="../../d2/d69/structa__trajpoly3.html">a_trajpoly3</a> *ctx, double ts, double p0, double p1, double v0, double v1)</td></tr>
+<tr class="memdesc:gaff49136c9572efa9875e2195f8374623"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for cubic polynomial trajectory  <br /></td></tr>
+<tr class="separator:gaff49136c9572efa9875e2195f8374623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43c584d04d51f1bf53dfe49bd151b2bb" id="r_ga43c584d04d51f1bf53dfe49bd151b2bb"><td class="memItemLeft" align="right" valign="top"><a id="ga43c584d04d51f1bf53dfe49bd151b2bb" name="ga43c584d04d51f1bf53dfe49bd151b2bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen0</b> (<a class="el" href="../../d2/d69/structa__trajpoly3.html">a_trajpoly3</a> *ctx, double ts, double p0, double p1, double v0, double v1)</td></tr>
+<tr class="separator:ga43c584d04d51f1bf53dfe49bd151b2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga20c99b58fd821589449f6f7be1f90b2d" id="r_ga20c99b58fd821589449f6f7be1f90b2d"><td class="memItemLeft" align="right" valign="top"><a id="ga20c99b58fd821589449f6f7be1f90b2d" name="ga20c99b58fd821589449f6f7be1f90b2d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen1</b> (<a class="el" href="../../d2/d69/structa__trajpoly3.html">a_trajpoly3</a> *ctx)</td></tr>
 <tr class="separator:ga20c99b58fd821589449f6f7be1f90b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,7 +162,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
 <p class="formulaDsp">
 \begin{aligned}
  \begin{array}{l}
- \ddot{q}(t)=2 k_{2}+6 k_{3}\left(t-t_{0}\right)
+ \ddot{p}(t)=2 c_{2}+6 c_{3}\left(t-t_{0}\right)
  \end{array}
 \end{aligned}
 </p>
@@ -177,8 +177,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
 
 </div>
 </div>
-<a id="ga969c1aae0d48dce944a3c95cabf9efbb" name="ga969c1aae0d48dce944a3c95cabf9efbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga969c1aae0d48dce944a3c95cabf9efbb">&#9670;&#160;</a></span>a_trajpoly3_gen()</h2>
+<a id="gaff49136c9572efa9875e2195f8374623" name="gaff49136c9572efa9875e2195f8374623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff49136c9572efa9875e2195f8374623">&#9670;&#160;</a></span>a_trajpoly3_gen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,12 +196,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q0</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p0</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q1</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -221,11 +221,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
 \begin{aligned}
  \left\{\begin{array}{l}
  t=t_{1}-t_{0}\\
- q=q_{1}-q_{0}\\
- k_{0}=q_{0}\\
- k_{1}=v_{0}\\
- k_{2}=\cfrac{\left(-2\,v_{0}-v_{1}\right)\,t+3\,q}{t^2}\\
- k_{3}=\cfrac{\left(v_{0}+v_{1}\right)\,t-2\,q}{t^3}
+ p=p_{1}-p_{0}\\
+ c_{0}=p_{0}\\
+ c_{1}=v_{0}\\
+ c_{2}=\cfrac{\left(-2\,v_{0}-v_{1}\right)\,t+3\,p}{t^2}\\
+ c_{3}=\cfrac{\left(v_{0}+v_{1}\right)\,t-2\,p}{t^3}
  \end{array}\right.
 \end{aligned}
 </p>
@@ -233,8 +233,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of cubic polynomial trajectory </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>difference between final time and initial time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q0</td><td>initial position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q1</td><td>final position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>initial position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>final position </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v0</td><td>initial velocity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v1</td><td>final velocity </td></tr>
   </table>
@@ -266,7 +266,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
 <p class="formulaDsp">
 \begin{aligned}
  \begin{array}{l}
- q(t)=k_{0}+k_{1}\left(t-t_{0}\right)+k_{2}\left(t-t_{0}\right)^{2}+k_{3}\left(t-t_{0}\right)^{3} \\
+ p(t)=c_{0}+c_{1}\left(t-t_{0}\right)+c_{2}\left(t-t_{0}\right)^{2}+c_{3}\left(t-t_{0}\right)^{3} \\
  \end{array}
 \end{aligned}
 </p>
@@ -304,7 +304,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_trajpoly3_gen2</b> 
 <p class="formulaDsp">
 \begin{aligned}
  \begin{array}{l}
- \dot{q}(t)=k_{1}+2 k_{2}\left(t-t_{0}\right)+3 k_{3}\left(t-t_{0}\right)^{2} \\
+ \dot{p}(t)=c_{1}+2 c_{2}\left(t-t_{0}\right)+3 c_{3}\left(t-t_{0}\right)^{2} \\
  \end{array}
 \end{aligned}
 </p>

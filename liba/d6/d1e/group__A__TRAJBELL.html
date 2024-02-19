@@ -108,9 +108,9 @@ typedef struct a_trajbell&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gadd8ccf80541d4e7ce29ad0ef19f39c33" id="r_gadd8ccf80541d4e7ce29ad0ef19f39c33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd8ccf80541d4e7ce29ad0ef19f39c33">a_trajbell_gen</a> (<a class="el" href="../../d1/dcc/structa__trajbell.html">a_trajbell</a> *ctx, double jm, double am, double vm, double q0, double q1, double v0, double v1)</td></tr>
-<tr class="memdesc:gadd8ccf80541d4e7ce29ad0ef19f39c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for bell-shaped velocity trajectory  <br /></td></tr>
-<tr class="separator:gadd8ccf80541d4e7ce29ad0ef19f39c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60b2f1748567a3ce8ad1d8d7fb70dd5a" id="r_ga60b2f1748567a3ce8ad1d8d7fb70dd5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga60b2f1748567a3ce8ad1d8d7fb70dd5a">a_trajbell_gen</a> (<a class="el" href="../../d1/dcc/structa__trajbell.html">a_trajbell</a> *ctx, double jm, double am, double vm, double p0, double p1, double v0, double v1)</td></tr>
+<tr class="memdesc:ga60b2f1748567a3ce8ad1d8d7fb70dd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for bell-shaped velocity trajectory  <br /></td></tr>
+<tr class="separator:ga60b2f1748567a3ce8ad1d8d7fb70dd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73e4983bd164e272769bf7cdbfa50f23" id="r_ga73e4983bd164e272769bf7cdbfa50f23"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga73e4983bd164e272769bf7cdbfa50f23">a_trajbell_pos</a> (<a class="el" href="../../d1/dcc/structa__trajbell.html">a_trajbell</a> const *ctx, double dt)</td></tr>
 <tr class="memdesc:ga73e4983bd164e272769bf7cdbfa50f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate position for bell-shaped velocity trajectory  <br /></td></tr>
 <tr class="separator:ga73e4983bd164e272769bf7cdbfa50f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +148,7 @@ Functions</h2></td></tr>
 <p>calculate acceleration for bell-shaped velocity trajectory </p>
 <p class="formulaDsp">
 \[
- a(t)=\begin{cases}
+ \ddot{p}(t)=\begin{cases}
  j_mt,&amp;t\in[0,T_{aj}]\\
  j_mT_{aj}=a_m,&amp;t\in[T_{aj},T_a-T_{aj}]\\
  j_m(T_a-t),&amp;t\in[T_a-T_{aj},T_a]\\
@@ -170,8 +170,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadd8ccf80541d4e7ce29ad0ef19f39c33" name="gadd8ccf80541d4e7ce29ad0ef19f39c33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd8ccf80541d4e7ce29ad0ef19f39c33">&#9670;&#160;</a></span>a_trajbell_gen()</h2>
+<a id="ga60b2f1748567a3ce8ad1d8d7fb70dd5a" name="ga60b2f1748567a3ce8ad1d8d7fb70dd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60b2f1748567a3ce8ad1d8d7fb70dd5a">&#9670;&#160;</a></span>a_trajbell_gen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,12 +199,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q0</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p0</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>q1</em>, </span></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p1</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -220,8 +220,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>generate for bell-shaped velocity trajectory </p>
-<p>If \(q_0&gt;q_1\), then </p><p class="formulaDsp">
-\begin{aligned}q_0=-q_0\\q_1=-q_1\\v_0=-v_0\\v_1=-v_1\end{aligned}
+<p>If \(p_0&gt;p_1\), then </p><p class="formulaDsp">
+\begin{aligned}p_0=-p_0\\p_1=-p_1\\v_0=-v_0\\v_1=-v_1\end{aligned}
 </p>
 <ol type="1">
 <li>If \((v_m-v_0)j_m&lt;a_m^2\), the maximum acceleration is not reached, then <p class="formulaDsp">
@@ -239,23 +239,23 @@ Functions</h2></td></tr>
 </p>
 </li>
 <li>Calculate the constant velocity phase <p class="formulaDsp">
-\[T_v=\frac{q_1-q_0}{v_m}
+\[T_v=\frac{p_1-p_0}{v_m}
 -\frac{T_a}{2}\left(1+\frac{v_0}{v_m}\right)-\frac{T_d}{2}\left(1+\frac{v_1}{v_m}\right)\]
 </p>
  If \(T_v&gt;0\), then there is a constant velocity phase and the phase calculation ends.</li>
 <li>If \(T_v&lt;=0\), then \(T_v=0\), <p class="formulaDsp">
 \begin{aligned}T_{aj}&amp;=T_{dj}=T_{j}=\frac{a_m}{j_m}\\
 T_a&amp;=\cfrac{\frac{a_m^2}{j_m}+\sqrt\Delta-2v_0}{2a_m}\\T_d&amp;=\cfrac{\frac{a_m^2}{j_m}+\sqrt\Delta-2v_1}{2a_m}\\
-\Delta&amp;=\frac{a_m^4}{j_m^2}+2(v_0^2+v_1^2)+a_m\left(4(q_1-q_0)-2(v_0+v_1)\frac{a_m}{ j_m}\right)\end{aligned}
+\Delta&amp;=\frac{a_m^4}{j_m^2}+2(v_0^2+v_1^2)+a_m\left(4(p_1-p_0)-2\frac{a_m}{j_m}(v_0+v_1)\right)\end{aligned}
 </p>
 <br  />
  a. If \(T_a&lt;0\), there is only deceleration phase, then \(T_a=0\), \(T_{aj}=0\),  <p class="formulaDsp">
-\begin{aligned}T_d&amp;=2\cfrac{q_1-q_0}{v_1+v_0}\\
-T_{dj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_1-v_0)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
+\begin{aligned}T_d&amp;=2\cfrac{p_1-p_0}{v_1+v_0}\\
+T_{dj}&amp;=\frac{j_m(p_1-p_0)-\sqrt{j_m(j_m(p_1-p_0)^2+(v_1-v_0)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
 </p>
- b. If \(T_a&lt;0\), there is only acceleration phase, then \(T_d=0\), \(T_{dj}=0\),  <p class="formulaDsp">
-\begin{aligned}T_a&amp;=2\cfrac{q_1-q_0}{v_1+v_0}\\
-T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
+ b. If \(T_d&lt;0\), there is only acceleration phase, then \(T_d=0\), \(T_{dj}=0\),  <p class="formulaDsp">
+\begin{aligned}T_a&amp;=2\cfrac{p_1-p_0}{v_1+v_0}\\
+T_{aj}&amp;=\frac{j_m(p_1-p_0)-\sqrt{j_m(j_m(p_1-p_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{j_m(v_1+v_0 )}\end{aligned}
 </p>
  c. If \(T_a\ge2T_j\), \(T_d\ge2T_j\), then <p class="formulaDsp">
 \begin{aligned}a_m&amp;=+j_mT_{aj}\\d_m&amp;=-j_mT_{dj}\\v_m&amp;=v_0+(T_a-T_{aj})a_m=v_1-(T_d-T_{dj})d_m\end{aligned}
@@ -267,8 +267,8 @@ T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{
     <tr><td class="paramdir">[in]</td><td class="paramname">jm</td><td>defines the maximum jerk during system operation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">am</td><td>defines the maximum acceleration during system operation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">vm</td><td>defines the maximum velocity during system operation </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q0</td><td>defines the initial position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">q1</td><td>defines the final position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>defines the initial position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>defines the final position </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v0</td><td>defines the initial velocity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v1</td><td>defines the final velocity </td></tr>
   </table>
@@ -302,7 +302,7 @@ T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{
 <p>calculate jerk for bell-shaped velocity trajectory </p>
 <p class="formulaDsp">
 \[
- j(t)=\begin{cases}
+ p^{(3)}(t)=\begin{cases}
  j_m,&amp;t\in[0,T_{aj}]\\
  0,&amp;t\in[T_{aj},T_a-T_{aj}]\\
  -j_m,&amp;t\in[T_a-T_{aj},T_a]\\
@@ -346,15 +346,15 @@ T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{
 <p>calculate position for bell-shaped velocity trajectory </p>
 <p class="formulaDsp">
 \[
- q(t)=\begin{cases}
- q_0+v_0t+j_m\cfrac{t^3}{6},&amp;t\in[0,T_{aj}]\\
- q_0+v_0t+\cfrac{a_m}{6}(3t^3-3tT_{aj}+T_{aj}^2),&amp;t\in[T_{aj},T_a-T_{aj}]\\
- q_0+(v_m+v_0)\cfrac{T_a}{2}-v_m(T_a-t)+j_m\cfrac{(T_a-t)^3}{6},&amp;t\in[T_a-T_{aj},T_a]\\
- q_0+(v_m+v_0)\cfrac{T_a}{2}+v_m(t-T_a),&amp;t\in[T_a,T_a+T_v]\\
- q_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)-j_m\cfrac{(t-T+T_d)^3}{6},&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
- q_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)\\
+ p(t)=\begin{cases}
+ p_0+v_0t+j_m\cfrac{t^3}{6},&amp;t\in[0,T_{aj}]\\
+ p_0+v_0t+\cfrac{a_m}{6}(3t^3-3tT_{aj}+T_{aj}^2),&amp;t\in[T_{aj},T_a-T_{aj}]\\
+ p_0+(v_m+v_0)\cfrac{T_a}{2}-v_m(T_a-t)+j_m\cfrac{(T_a-t)^3}{6},&amp;t\in[T_a-T_{aj},T_a]\\
+ p_0+(v_m+v_0)\cfrac{T_a}{2}+v_m(t-T_a),&amp;t\in[T_a,T_a+T_v]\\
+ p_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)-j_m\cfrac{(t-T+T_d)^3}{6},&amp;t\in[T-T_d,T-T_d+T_{dj}]\\
+ p_1-(v_m+v_1)\cfrac{T_d}{2}+v_m(t-T+T_d)\\
  \quad+\cfrac{d_m}{6}\left(3(t-T+T_d)^2-3(t-T+T_d)T_{dj}+T_{dj}^2\right),&amp;t\in[T-T_d+T_{dj},T-T_{dj}]\\
- q_1-v_1(T-t)-j_m\cfrac{(T-t)^3}{6},&amp;t\in[T-T_{dj},T]
+ p_1-v_1(T-t)-j_m\cfrac{(T-t)^3}{6},&amp;t\in[T-T_{dj},T]
  \end{cases}
 \]
 </p>
@@ -391,7 +391,7 @@ T_{aj}&amp;=\frac{j_m(q_1-q_0)-\sqrt{j_m(j_m(q_1-q_0)^2+(v_0-v_1)(v_1+v_0)^2)}}{
 <p>calculate velocity for bell-shaped velocity trajectory </p>
 <p class="formulaDsp">
 \[
- v(t)=\begin{cases}
+ \dot{p}(t)=\begin{cases}
  v_0+j_m\frac{t^2}{2},&amp;t\in[0,T_{aj}]\\
  v_0+a_m(t-\cfrac{T_{aj}}{2}),&amp;t\in[T_{aj},T_a-T_{aj}]\\
  v_m-j_m\cfrac{(T_a-t)^2}{2},&amp;t\in[T_a-T_{aj},T_a]\\
