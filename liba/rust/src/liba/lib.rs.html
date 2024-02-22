@@ -1950,12 +1950,12 @@ liba = "0.1"
     <span class="kw">fn </span>a_f64_rsqrt(x: f64) -&gt; f64;
 }
 
-<span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
+<span class="doccomment">/// reciprocal of square-root, `\frac{1}{\sqrt{x}}`
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>f32_rsqrt(x: f32) -&gt; f32 {
     <span class="kw">unsafe </span>{ a_f32_rsqrt(x) }
 }
-<span class="doccomment">/// reciprocal of square-root, $ \frac{1}{\sqrt{x}} $
+<span class="doccomment">/// reciprocal of square-root, `\frac{1}{\sqrt{x}}`
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>f64_rsqrt(x: f64) -&gt; f64 {
     <span class="kw">unsafe </span>{ a_f64_rsqrt(x) }
