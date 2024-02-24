@@ -111,9 +111,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga67fee1d30ff967b4f1cc482b4e86cd2e" id="r_ga67fee1d30ff967b4f1cc482b4e86cd2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga67fee1d30ff967b4f1cc482b4e86cd2e">A_PID_FUZZY_JOINT</a>(n)&#160;&#160;&#160;(sizeof(unsigned int) * (n) * 2 + sizeof(<a class="el" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a>) * (n) * (2 + (n)))</td></tr>
-<tr class="memdesc:ga67fee1d30ff967b4f1cc482b4e86cd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute size of joint buffer for fuzzy PID controller  <br /></td></tr>
-<tr class="separator:ga67fee1d30ff967b4f1cc482b4e86cd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga509e5d69354265c05e8a9e4a583ae411" id="r_ga509e5d69354265c05e8a9e4a583ae411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga509e5d69354265c05e8a9e4a583ae411">A_PID_FUZZY_BLOCK</a>(n)&#160;&#160;&#160;(sizeof(unsigned int) * (n) * 2 + sizeof(<a class="el" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a>) * (n) * (2 + (n)))</td></tr>
+<tr class="memdesc:ga509e5d69354265c05e8a9e4a583ae411"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute size of memory block for fuzzy PID controller  <br /></td></tr>
+<tr class="separator:ga509e5d69354265c05e8a9e4a583ae411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -126,19 +126,19 @@ typedef struct <a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gabc6126af1d45847bc59afa0aa3216b04" id="r_gabc6126af1d45847bc59afa0aa3216b04"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04abf0c4a73b243ab94d15e52dfa79ecdf6">A_PID_FUZZY_EQU</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04a0eedd0967ae258997a93483246e7d02d">A_PID_FUZZY_CAP</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04af4cb1140bac298cb0ab78c42533b54ec">A_PID_FUZZY_CAP_ALGEBRA</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04a27893fc7f7f2ceb9b63b1e1fe875d0ba">A_PID_FUZZY_CAP_BOUNDED</a>
+<tr class="memitem:ga99fb83031ce9923c84392b4e92f956b5" id="r_ga99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5abf0c4a73b243ab94d15e52dfa79ecdf6">A_PID_FUZZY_EQU</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5a0eedd0967ae258997a93483246e7d02d">A_PID_FUZZY_CAP</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5af4cb1140bac298cb0ab78c42533b54ec">A_PID_FUZZY_CAP_ALGEBRA</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5a27893fc7f7f2ceb9b63b1e1fe875d0ba">A_PID_FUZZY_CAP_BOUNDED</a>
 , <br />
-&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04a528655813bbbfd40eee65d6e35537301">A_PID_FUZZY_CUP</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04a2b97833ed0ef93fecc2b794f08bb7e8a">A_PID_FUZZY_CUP_ALGEBRA</a>
-, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ggabc6126af1d45847bc59afa0aa3216b04a7eb02b809362f9480244f5b228208ccf">A_PID_FUZZY_CUP_BOUNDED</a>
+&#160;&#160;<a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5a528655813bbbfd40eee65d6e35537301">A_PID_FUZZY_CUP</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5a2b97833ed0ef93fecc2b794f08bb7e8a">A_PID_FUZZY_CUP_ALGEBRA</a>
+, <a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gga99fb83031ce9923c84392b4e92f956b5a7eb02b809362f9480244f5b228208ccf">A_PID_FUZZY_CUP_BOUNDED</a>
 <br />
  }</td></tr>
-<tr class="memdesc:gabc6126af1d45847bc59afa0aa3216b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumeration for fuzzy PID controller operator  <a href="../../dc/db1/group__A__PID__FUZZY.html#gabc6126af1d45847bc59afa0aa3216b04">More...</a><br /></td></tr>
-<tr class="separator:gabc6126af1d45847bc59afa0aa3216b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga99fb83031ce9923c84392b4e92f956b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumeration for fuzzy PID controller operator  <a href="../../dc/db1/group__A__PID__FUZZY.html#ga99fb83031ce9923c84392b4e92f956b5">More...</a><br /></td></tr>
+<tr class="separator:ga99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -154,12 +154,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe22316cb8a7f01b4521a9ccc228421e" id="r_gabe22316cb8a7f01b4521a9ccc228421e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gabe22316cb8a7f01b4521a9ccc228421e">a_pid_fuzzy_rule</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, unsigned int order, double const *me, double const *mec, double const *mkp, double const *mki, double const *mkd)</td></tr>
 <tr class="memdesc:gabe22316cb8a7f01b4521a9ccc228421e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set rule base for fuzzy PID controller  <br /></td></tr>
 <tr class="separator:gabe22316cb8a7f01b4521a9ccc228421e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5e299daccbeb9dd96b4e85f1032e8279" id="r_ga5e299daccbeb9dd96b4e85f1032e8279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga5e299daccbeb9dd96b4e85f1032e8279">a_pid_fuzzy_set_joint</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, void *ptr, size_t num)</td></tr>
-<tr class="memdesc:ga5e299daccbeb9dd96b4e85f1032e8279"><td class="mdescLeft">&#160;</td><td class="mdescRight">set joint buffer for fuzzy PID controller  <br /></td></tr>
-<tr class="separator:ga5e299daccbeb9dd96b4e85f1032e8279"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebc4fc2d056d9b1a98163ca3a9708183" id="r_gaebc4fc2d056d9b1a98163ca3a9708183"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#gaebc4fc2d056d9b1a98163ca3a9708183">a_pid_fuzzy_joint</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx)</td></tr>
-<tr class="memdesc:gaebc4fc2d056d9b1a98163ca3a9708183"><td class="mdescLeft">&#160;</td><td class="mdescRight">get joint buffer for fuzzy PID controller  <br /></td></tr>
-<tr class="separator:gaebc4fc2d056d9b1a98163ca3a9708183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f22dbbeeb6f62c760e21b6a442564f7" id="r_ga8f22dbbeeb6f62c760e21b6a442564f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga8f22dbbeeb6f62c760e21b6a442564f7">a_pid_fuzzy_set_block</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, void *ptr, size_t num)</td></tr>
+<tr class="memdesc:ga8f22dbbeeb6f62c760e21b6a442564f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set memory block for fuzzy PID controller  <br /></td></tr>
+<tr class="separator:ga8f22dbbeeb6f62c760e21b6a442564f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18f2e58c75a692864f5013d7841cb014" id="r_ga18f2e58c75a692864f5013d7841cb014"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga18f2e58c75a692864f5013d7841cb014">a_pid_fuzzy_block</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx)</td></tr>
+<tr class="memdesc:ga18f2e58c75a692864f5013d7841cb014"><td class="mdescLeft">&#160;</td><td class="mdescRight">get memory block for fuzzy PID controller  <br /></td></tr>
+<tr class="separator:ga18f2e58c75a692864f5013d7841cb014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93c5937ad42152b7db97a76ccd380557" id="r_ga93c5937ad42152b7db97a76ccd380557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db1/group__A__PID__FUZZY.html#ga93c5937ad42152b7db97a76ccd380557">a_pid_fuzzy_kpid</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, double kp, double ki, double kd)</td></tr>
 <tr class="memdesc:ga93c5937ad42152b7db97a76ccd380557"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for fuzzy PID controller  <br /></td></tr>
 <tr class="separator:ga93c5937ad42152b7db97a76ccd380557"><td class="memSeparator" colspan="2">&#160;</td></tr>

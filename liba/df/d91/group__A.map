@@ -1,5 +1,5 @@
 <map id="algorithm library" name="algorithm library">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,795,136,820"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,765,136,791"/>
 <area shape="rect" id="Node000003" href="$d6/d8f/group__A__AVL.html" title=" " alt="" coords="206,5,374,31"/>
 <area shape="rect" id="Node000004" href="$d0/df8/group__A__BUF.html" title=" " alt="" coords="218,55,362,80"/>
 <area shape="rect" id="Node000005" href="$d6/dbb/group__A__COMPLEX.html" title=" " alt="" coords="224,104,356,129"/>
@@ -17,17 +17,16 @@
 <area shape="rect" id="Node000016" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="184,758,396,798"/>
 <area shape="rect" id="Node000017" href="$d6/de7/group__A__POLY.html" title=" " alt="" coords="243,823,337,848"/>
 <area shape="rect" id="Node000018" href="$df/d54/group__A__QUE.html" title=" " alt="" coords="217,872,363,897"/>
-<area shape="rect" id="Node000019" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="213,921,367,947"/>
-<area shape="rect" id="Node000020" href="$d7/d06/group__A__RBT.html" title=" " alt="" coords="225,971,355,1011"/>
-<area shape="rect" id="Node000021" href="$d1/dfe/group__A__SLIST.html" title=" " alt="" coords="226,1036,354,1061"/>
-<area shape="rect" id="Node000022" href="$db/d6c/group__A__STR.html" title=" " alt="" coords="219,1085,361,1111"/>
-<area shape="rect" id="Node000023" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="225,1135,355,1160"/>
-<area shape="rect" id="Node000024" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="213,1185,367,1225"/>
-<area shape="rect" id="Node000025" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="190,1249,390,1275"/>
-<area shape="rect" id="Node000026" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="219,1299,361,1339"/>
-<area shape="rect" id="Node000027" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="189,1364,391,1389"/>
-<area shape="rect" id="Node000028" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="215,1414,365,1454"/>
-<area shape="rect" id="Node000029" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1478,379,1518"/>
-<area shape="rect" id="Node000030" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1543,363,1568"/>
-<area shape="rect" id="Node000031" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1592,381,1617"/>
+<area shape="rect" id="Node000019" href="$d7/d06/group__A__RBT.html" title=" " alt="" coords="225,922,355,962"/>
+<area shape="rect" id="Node000020" href="$d1/dfe/group__A__SLIST.html" title=" " alt="" coords="226,987,354,1012"/>
+<area shape="rect" id="Node000021" href="$db/d6c/group__A__STR.html" title=" " alt="" coords="219,1036,361,1061"/>
+<area shape="rect" id="Node000022" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="225,1085,355,1111"/>
+<area shape="rect" id="Node000023" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="213,1135,367,1175"/>
+<area shape="rect" id="Node000024" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="190,1200,390,1225"/>
+<area shape="rect" id="Node000025" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="219,1250,361,1290"/>
+<area shape="rect" id="Node000026" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="189,1315,391,1340"/>
+<area shape="rect" id="Node000027" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="215,1365,365,1405"/>
+<area shape="rect" id="Node000028" href="$d9/da8/group__A__UTF.html" title=" " alt="" coords="201,1429,379,1469"/>
+<area shape="rect" id="Node000029" href="$da/d05/group__A__VEC.html" title=" " alt="" coords="217,1493,363,1519"/>
+<area shape="rect" id="Node000030" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="199,1543,381,1568"/>
 </map>

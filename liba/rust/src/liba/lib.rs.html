@@ -2695,8 +2695,8 @@ liba = "0.1"
 }
 
 <span class="attr">#[macro_export]
-</span><span class="doccomment">/// compute size of joint buffer for fuzzy PID controller
-</span><span class="macro">macro_rules! </span>PID_FUZZY_JOINT {
+</span><span class="doccomment">/// compute size of memory block for fuzzy PID controller
+</span><span class="macro">macro_rules! </span>PID_FUZZY_BLOCK {
     (<span class="macro-nonterminal">$n</span>:expr) =&gt; {{
         core::mem::size_of::&lt;uint&gt;() * <span class="macro-nonterminal">$n </span>* <span class="number">2 </span>+ core::mem::size_of::&lt;float&gt;() * <span class="macro-nonterminal">$n </span>* (<span class="number">2 </span>+ <span class="macro-nonterminal">$n</span>)
     }};
@@ -2725,7 +2725,7 @@ liba = "0.1"
     <span class="doccomment">/// number of order in the square matrix
     </span><span class="kw">pub</span>(<span class="kw">crate</span>) order: uint,
     <span class="doccomment">/// maximum number triggered by the rule
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) joint: uint,
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) block: uint,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>pid_fuzzy {
@@ -2745,7 +2745,7 @@ liba = "0.1"
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
             order: <span class="number">0</span>,
-            joint: <span class="number">0</span>,
+            block: <span class="number">0</span>,
         }
     }
 }
@@ -2762,8 +2762,8 @@ liba = "0.1"
         mki: <span class="kw-2">*const </span>float,
         mkd: <span class="kw-2">*const </span>float,
     );
-    <span class="kw">fn </span>a_pid_fuzzy_joint(ctx: <span class="kw-2">*mut </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
-    <span class="kw">fn </span>a_pid_fuzzy_set_joint(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
+    <span class="kw">fn </span>a_pid_fuzzy_block(ctx: <span class="kw-2">*mut </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
+    <span class="kw">fn </span>a_pid_fuzzy_set_block(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
     <span class="kw">fn </span>a_pid_fuzzy_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
     <span class="kw">fn </span>a_pid_fuzzy_run(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_pos(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
@@ -2807,19 +2807,19 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_pid_fuzzy_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// set joint buffer for fuzzy PID controller
+    <span class="doccomment">/// set memory block for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_joint(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ptr: <span class="kw-2">&amp;mut </span>[u8], num: usize) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_joint(<span class="self">self</span>, ptr.as_mut_ptr(), num) };
+    </span><span class="kw">pub fn </span>set_block(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ptr: <span class="kw-2">&amp;mut </span>[u8], num: usize) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_block(<span class="self">self</span>, ptr.as_mut_ptr(), num) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// get joint buffer for fuzzy PID controller
+    <span class="doccomment">/// get memory block for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>joint(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[u8] {
+    </span><span class="kw">pub fn </span>block(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[u8] {
         <span class="kw">unsafe </span>{
             core::slice::from_raw_parts_mut(
-                a_pid_fuzzy_joint(<span class="self">self</span>),
-                <span class="macro">PID_FUZZY_JOINT!</span>(<span class="self">self</span>.joint <span class="kw">as </span>usize),
+                a_pid_fuzzy_block(<span class="self">self</span>),
+                <span class="macro">PID_FUZZY_BLOCK!</span>(<span class="self">self</span>.block <span class="kw">as </span>usize),
             )
         }
     }
@@ -2929,7 +2929,7 @@ liba = "0.1"
         [NL, NS, NS, NS, NS, NS, NL],
         [NL, NM, NM, NM, NS, NS, NL],
     ];
-    <span class="kw">let </span><span class="kw-2">mut </span>joint = [<span class="number">0u8</span>; <span class="macro">crate::PID_FUZZY_JOINT!</span>(<span class="number">2</span>)];
+    <span class="kw">let </span><span class="kw-2">mut </span>block = [<span class="number">0u8</span>; <span class="macro">crate::PID_FUZZY_BLOCK!</span>(<span class="number">2</span>)];
     <span class="kw">let </span><span class="kw-2">mut </span>a = pid_fuzzy::new();
     a.rule(
         me.len(),
@@ -2940,7 +2940,7 @@ liba = "0.1"
         <span class="kw-2">&amp;</span>mkd.concat(),
     )
     .kpid(<span class="number">10.0</span>, <span class="number">0.1</span>, <span class="number">1.0</span>)
-    .set_joint(<span class="kw-2">&amp;mut </span>joint, <span class="number">2</span>);
+    .set_block(<span class="kw-2">&amp;mut </span>block, <span class="number">2</span>);
     a.op(<span class="kw">crate</span>::fuzzy::EQU).zero();
     <span class="macro">std::println!</span>(<span class="string">"{} {}"</span>, a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>), a.pos(<span class="number">1.0</span>, <span class="number">0.0</span>));
     a.op(<span class="kw">crate</span>::fuzzy::EQU).zero();

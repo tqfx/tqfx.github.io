@@ -1,16 +1,15 @@
 <map id="trapezoidal velocity trajectory" name="trapezoidal velocity trajectory">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,339,136,364"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,331,336,371"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,313,136,339"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,306,336,346"/>
 <area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="438,5,561,31"/>
 <area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="440,55,559,80"/>
 <area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="420,105,579,145"/>
 <area shape="rect" id="Node000006" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="426,169,573,224"/>
 <area shape="rect" id="Node000007" href="$db/d33/group__A__PID__NEURO.html" title=" " alt="" coords="393,249,605,289"/>
-<area shape="rect" id="Node000008" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="422,313,577,339"/>
-<area shape="rect" id="Node000009" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="434,363,565,388"/>
-<area shape="rect" id="Node000010" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="422,413,577,453"/>
-<area shape="rect" id="Node000011" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="399,477,599,503"/>
-<area shape="rect" id="Node000012" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="428,527,571,567"/>
-<area shape="rect" id="Node000013" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="398,592,601,617"/>
-<area shape="rect" id="Node000014" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="408,641,591,667"/>
+<area shape="rect" id="Node000008" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="434,313,565,339"/>
+<area shape="rect" id="Node000009" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="422,363,577,403"/>
+<area shape="rect" id="Node000010" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="399,428,599,453"/>
+<area shape="rect" id="Node000011" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="428,478,571,518"/>
+<area shape="rect" id="Node000012" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="398,543,601,568"/>
+<area shape="rect" id="Node000013" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="408,592,591,617"/>
 </map>

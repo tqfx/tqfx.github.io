@@ -1,16 +1,15 @@
 <map id="single neuron proportional integral derivative controller" name="single neuron proportional integral derivative controller">
-<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,327,136,352"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,319,397,359"/>
+<area shape="rect" id="Node000002" href="$df/d91/group__A.html" title=" " alt="" coords="5,305,136,331"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,298,397,338"/>
 <area shape="rect" id="Node000003" href="$dd/d71/group__A__HPF.html" title=" " alt="" coords="495,5,617,31"/>
 <area shape="rect" id="Node000004" href="$df/d27/group__A__LPF.html" title=" " alt="" coords="497,55,615,80"/>
 <area shape="rect" id="Node000005" href="$d8/da8/group__A__PID.html" title=" " alt="" coords="477,105,635,145"/>
 <area shape="rect" id="Node000006" href="$dc/db1/group__A__PID__FUZZY.html" title=" " alt="" coords="483,169,629,224"/>
-<area shape="rect" id="Node000007" href="$dd/dd8/group__A__RBF.html" title=" " alt="" coords="479,248,633,273"/>
-<area shape="rect" id="Node000008" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="491,297,621,323"/>
-<area shape="rect" id="Node000009" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="479,347,633,387"/>
-<area shape="rect" id="Node000010" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="456,412,656,437"/>
-<area shape="rect" id="Node000011" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="485,462,627,502"/>
-<area shape="rect" id="Node000012" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="455,527,657,552"/>
-<area shape="rect" id="Node000013" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="481,577,631,617"/>
-<area shape="rect" id="Node000014" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="465,641,647,667"/>
+<area shape="rect" id="Node000007" href="$d0/ddd/group__A__TF.html" title=" " alt="" coords="491,248,621,273"/>
+<area shape="rect" id="Node000008" href="$d6/d1e/group__A__TRAJBELL.html" title=" " alt="" coords="479,298,633,338"/>
+<area shape="rect" id="Node000009" href="$d3/d9f/group__A__TRAJPOLY3.html" title=" " alt="" coords="456,363,656,388"/>
+<area shape="rect" id="Node000010" href="$d2/d61/group__A__TRAJPOLY5.html" title=" " alt="" coords="485,413,627,453"/>
+<area shape="rect" id="Node000011" href="$d9/dab/group__A__TRAJPOLY7.html" title=" " alt="" coords="455,477,657,503"/>
+<area shape="rect" id="Node000012" href="$d7/d57/group__A__TRAJTRAP.html" title=" " alt="" coords="481,527,631,567"/>
+<area shape="rect" id="Node000013" href="$d2/d1b/group__A__VERSION.html" title=" " alt="" coords="465,592,647,617"/>
 </map>
