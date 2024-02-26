@@ -83,6 +83,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">pid_neuro.h File Reference</div></div>
@@ -106,6 +107,12 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for single neuron PID controller  <a href="../../d1/dab/structa__pid__neuro.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga1738ba69c9218f1dcd27abd573ceb0d6" id="r_ga1738ba69c9218f1dcd27abd573ceb0d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#ga1738ba69c9218f1dcd27abd573ceb0d6">a_pid_neuro_init</a>(ctx)&#160;&#160;&#160;<a class="el" href="../../db/d33/group__A__PID__NEURO.html#gaa51d3b917ac05484a6f6df14ca87c7a4">a_pid_neuro_zero</a>(ctx)</td></tr>
+<tr class="memdesc:ga1738ba69c9218f1dcd27abd573ceb0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for single neuron PID controller  <br /></td></tr>
+<tr class="separator:ga1738ba69c9218f1dcd27abd573ceb0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gac25b2ae816575f71a4eb8744f5202c88" id="r_gac25b2ae816575f71a4eb8744f5202c88"><td class="memItemLeft" align="right" valign="top">
@@ -117,12 +124,6 @@ typedef struct <a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae5b161b026e74f7a0815a8c8b0ecbbdb" id="r_gae5b161b026e74f7a0815a8c8b0ecbbdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#gae5b161b026e74f7a0815a8c8b0ecbbdb">a_pid_neuro_init</a> (<a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_neuro</a> *ctx)</td></tr>
-<tr class="memdesc:gae5b161b026e74f7a0815a8c8b0ecbbdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for single neuron PID controller  <br /></td></tr>
-<tr class="separator:gae5b161b026e74f7a0815a8c8b0ecbbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa51d3b917ac05484a6f6df14ca87c7a4" id="r_gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#gaa51d3b917ac05484a6f6df14ca87c7a4">a_pid_neuro_zero</a> (<a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_neuro</a> *ctx)</td></tr>
-<tr class="memdesc:gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for single neuron PID controller  <br /></td></tr>
-<tr class="separator:gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac4594b7b85152720b61cc5d6d3cad253" id="r_gac4594b7b85152720b61cc5d6d3cad253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#gac4594b7b85152720b61cc5d6d3cad253">a_pid_neuro_kpid</a> (<a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_neuro</a> *ctx, double k, double kp, double ki, double kd)</td></tr>
 <tr class="memdesc:gac4594b7b85152720b61cc5d6d3cad253"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for single neuron PID controller  <br /></td></tr>
 <tr class="separator:gac4594b7b85152720b61cc5d6d3cad253"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9a8c867e7aa63b18192611548dc8c5e8" id="r_ga9a8c867e7aa63b18192611548dc8c5e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#ga9a8c867e7aa63b18192611548dc8c5e8">a_pid_neuro_inc</a> (<a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_neuro</a> *ctx, double set, double fdb)</td></tr>
 <tr class="memdesc:ga9a8c867e7aa63b18192611548dc8c5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for incremental single neuron PID controller  <br /></td></tr>
 <tr class="separator:ga9a8c867e7aa63b18192611548dc8c5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa51d3b917ac05484a6f6df14ca87c7a4" id="r_gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/group__A__PID__NEURO.html#gaa51d3b917ac05484a6f6df14ca87c7a4">a_pid_neuro_zero</a> (<a class="el" href="../../d1/dab/structa__pid__neuro.html">a_pid_neuro</a> *ctx)</td></tr>
+<tr class="memdesc:gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for single neuron PID controller  <br /></td></tr>
+<tr class="separator:gaa51d3b917ac05484a6f6df14ca87c7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>single neuron proportional integral derivative controller </p>

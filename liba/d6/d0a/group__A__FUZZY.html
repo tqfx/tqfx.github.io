@@ -115,9 +115,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7ffd1a33e7a30747c9ce69644dc6d282" id="r_ga7ffd1a33e7a30747c9ce69644dc6d282"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7ffd1a33e7a30747c9ce69644dc6d282">a_fuzzy_cup_bounded</a> (double a, double b)</td></tr>
 <tr class="memdesc:ga7ffd1a33e7a30747c9ce69644dc6d282"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounded sum operator  <br /></td></tr>
 <tr class="separator:ga7ffd1a33e7a30747c9ce69644dc6d282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga994be791a960568c47836fbe4aee280a" id="r_ga994be791a960568c47836fbe4aee280a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga994be791a960568c47836fbe4aee280a">a_fuzzy_equ</a> (double gamma, double a, double b)</td></tr>
-<tr class="memdesc:ga994be791a960568c47836fbe4aee280a"><td class="mdescLeft">&#160;</td><td class="mdescRight">equilibrium operator  <br /></td></tr>
-<tr class="separator:ga994be791a960568c47836fbe4aee280a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d76a10757085bbddabd54db0b3fe669" id="r_ga4d76a10757085bbddabd54db0b3fe669"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4d76a10757085bbddabd54db0b3fe669">a_fuzzy_equ</a> (double a, double b)</td></tr>
+<tr class="memdesc:ga4d76a10757085bbddabd54db0b3fe669"><td class="mdescLeft">&#160;</td><td class="mdescRight">equilibrium operator  <br /></td></tr>
+<tr class="separator:ga4d76a10757085bbddabd54db0b3fe669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1876b79b9c4d71974c4efc24a413453" id="r_gaa1876b79b9c4d71974c4efc24a413453"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa1876b79b9c4d71974c4efc24a413453">a_fuzzy_equ_</a> (double gamma, double a, double b)</td></tr>
+<tr class="memdesc:gaa1876b79b9c4d71974c4efc24a413453"><td class="mdescLeft">&#160;</td><td class="mdescRight">equilibrium operator  <br /></td></tr>
+<tr class="separator:gaa1876b79b9c4d71974c4efc24a413453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -307,14 +310,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga994be791a960568c47836fbe4aee280a" name="ga994be791a960568c47836fbe4aee280a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga994be791a960568c47836fbe4aee280a">&#9670;&#160;</a></span>a_fuzzy_equ()</h2>
+<a id="ga4d76a10757085bbddabd54db0b3fe669" name="ga4d76a10757085bbddabd54db0b3fe669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d76a10757085bbddabd54db0b3fe669">&#9670;&#160;</a></span>a_fuzzy_equ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">double a_fuzzy_equ </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>equilibrium operator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gamma</td><td>gamma operator </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>left-hand operand </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>right-hand operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>= \( \sqrt{ab}\sqrt{1-(1-a)(1-b)} \) </dd></dl>
+
+</div>
+</div>
+<a id="gaa1876b79b9c4d71974c4efc24a413453" name="gaa1876b79b9c4d71974c4efc24a413453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1876b79b9c4d71974c4efc24a413453">&#9670;&#160;</a></span>a_fuzzy_equ_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double a_fuzzy_equ_ </td>
           <td>(</td>
           <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>gamma</em>, </span></td>
         </tr>

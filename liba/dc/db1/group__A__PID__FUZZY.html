@@ -105,6 +105,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ga910d87dc1c06ebff59586b4bb7394327" id="r_ga910d87dc1c06ebff59586b4bb7394327"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga910d87dc1c06ebff59586b4bb7394327">a_pid_fuzzy_init</a>(ctx)&#160;&#160;&#160;<a class="el" href="#ga297d71e0ba6e545eebbbb653b7ceb2f1">a_pid_fuzzy_zero</a>(ctx)</td></tr>
+<tr class="memdesc:ga910d87dc1c06ebff59586b4bb7394327"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for fuzzy PID controller  <br /></td></tr>
+<tr class="separator:ga910d87dc1c06ebff59586b4bb7394327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga509e5d69354265c05e8a9e4a583ae411" id="r_ga509e5d69354265c05e8a9e4a583ae411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga509e5d69354265c05e8a9e4a583ae411">A_PID_FUZZY_BLOCK</a>(n)&#160;&#160;&#160;(sizeof(unsigned int) * (n) * 2 + sizeof(<a class="el" href="../../d5/da3/group__A__FLOAT.html#gaee76129f3a4c2155c8c2bc38a4049d22">a_float</a>) * (n) * (2 + (n)))</td></tr>
 <tr class="memdesc:ga509e5d69354265c05e8a9e4a583ae411"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute size of memory block for fuzzy PID controller  <br /></td></tr>
 <tr class="separator:ga509e5d69354265c05e8a9e4a583ae411"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,12 +139,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46717e01a04408b769f638522329fbe7" id="r_ga46717e01a04408b769f638522329fbe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga46717e01a04408b769f638522329fbe7">a_pid_fuzzy_set_op</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, unsigned int op)</td></tr>
 <tr class="memdesc:ga46717e01a04408b769f638522329fbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set fuzzy relational operator for fuzzy PID controller  <br /></td></tr>
 <tr class="separator:ga46717e01a04408b769f638522329fbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3d748c18b4c6465232f513928f11bbcb" id="r_ga3d748c18b4c6465232f513928f11bbcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3d748c18b4c6465232f513928f11bbcb">a_pid_fuzzy_init</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx)</td></tr>
-<tr class="memdesc:ga3d748c18b4c6465232f513928f11bbcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for fuzzy PID controller  <br /></td></tr>
-<tr class="separator:ga3d748c18b4c6465232f513928f11bbcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga297d71e0ba6e545eebbbb653b7ceb2f1" id="r_ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga297d71e0ba6e545eebbbb653b7ceb2f1">a_pid_fuzzy_zero</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx)</td></tr>
-<tr class="memdesc:ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for fuzzy PID controller  <br /></td></tr>
-<tr class="separator:ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe22316cb8a7f01b4521a9ccc228421e" id="r_gabe22316cb8a7f01b4521a9ccc228421e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe22316cb8a7f01b4521a9ccc228421e">a_pid_fuzzy_rule</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, unsigned int order, double const *me, double const *mec, double const *mkp, double const *mki, double const *mkd)</td></tr>
 <tr class="memdesc:gabe22316cb8a7f01b4521a9ccc228421e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set rule base for fuzzy PID controller  <br /></td></tr>
 <tr class="separator:gabe22316cb8a7f01b4521a9ccc228421e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7057941b730988fb96bf63ed1100c5d6" id="r_ga7057941b730988fb96bf63ed1100c5d6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7057941b730988fb96bf63ed1100c5d6">a_pid_fuzzy_inc</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx, double set, double fdb)</td></tr>
 <tr class="memdesc:ga7057941b730988fb96bf63ed1100c5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for incremental fuzzy PID controller  <br /></td></tr>
 <tr class="separator:ga7057941b730988fb96bf63ed1100c5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga297d71e0ba6e545eebbbb653b7ceb2f1" id="r_ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga297d71e0ba6e545eebbbb653b7ceb2f1">a_pid_fuzzy_zero</a> (<a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *ctx)</td></tr>
+<tr class="memdesc:ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for fuzzy PID controller  <br /></td></tr>
+<tr class="separator:ga297d71e0ba6e545eebbbb653b7ceb2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -190,7 +190,32 @@ Variables</h2></td></tr>
 <p>compute size of memory block for fuzzy PID controller </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>the maximum number triggered by the rule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the maximum number triggered by the rule </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga910d87dc1c06ebff59586b4bb7394327" name="ga910d87dc1c06ebff59586b4bb7394327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga910d87dc1c06ebff59586b4bb7394327">&#9670;&#160;</a></span>a_pid_fuzzy_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_pid_fuzzy_init</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="#ga297d71e0ba6e545eebbbb653b7ceb2f1">a_pid_fuzzy_zero</a>(ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize for fuzzy PID controller </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of fuzzy PID controller </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,31 +316,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>output value </dd></dl>
-
-</div>
-</div>
-<a id="ga3d748c18b4c6465232f513928f11bbcb" name="ga3d748c18b4c6465232f513928f11bbcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3d748c18b4c6465232f513928f11bbcb">&#9670;&#160;</a></span>a_pid_fuzzy_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void a_pid_fuzzy_init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d27/structa__pid__fuzzy.html">a_pid_fuzzy</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>initialize for fuzzy PID controller </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of fuzzy PID controller </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

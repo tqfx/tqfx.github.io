@@ -83,6 +83,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">proportional integral derivative controller<div class="ingroups"><a class="el" href="../../df/d91/group__A.html">algorithm library</a></div></div></div>
@@ -100,6 +101,12 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for PID controller  <a href="../../db/d89/structa__pid.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2d7a15620c3667b062246928cbf6f15c" id="r_ga2d7a15620c3667b062246928cbf6f15c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2d7a15620c3667b062246928cbf6f15c">a_pid_init</a>(ctx)&#160;&#160;&#160;<a class="el" href="#gaad4b975dc0d59cca500783d8f0b1dd2c">a_pid_zero</a>(ctx)</td></tr>
+<tr class="memdesc:ga2d7a15620c3667b062246928cbf6f15c"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for PID controller  <br /></td></tr>
+<tr class="separator:ga2d7a15620c3667b062246928cbf6f15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gadfc7b3c2e09a0a9de71a7726a13244be" id="r_gadfc7b3c2e09a0a9de71a7726a13244be"><td class="memItemLeft" align="right" valign="top"><a id="gadfc7b3c2e09a0a9de71a7726a13244be" name="gadfc7b3c2e09a0a9de71a7726a13244be"></a>
@@ -108,12 +115,6 @@ typedef struct a_pid&#160;</td><td class="memItemRight" valign="bottom"><b>a_pid
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac955b69382c1c0e5ff5f67686ec5bbe8" id="r_gac955b69382c1c0e5ff5f67686ec5bbe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac955b69382c1c0e5ff5f67686ec5bbe8">a_pid_init</a> (<a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *ctx)</td></tr>
-<tr class="memdesc:gac955b69382c1c0e5ff5f67686ec5bbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for PID controller  <br /></td></tr>
-<tr class="separator:gac955b69382c1c0e5ff5f67686ec5bbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad4b975dc0d59cca500783d8f0b1dd2c" id="r_gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaad4b975dc0d59cca500783d8f0b1dd2c">a_pid_zero</a> (<a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *ctx)</td></tr>
-<tr class="memdesc:gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for PID controller  <br /></td></tr>
-<tr class="separator:gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaa73c3621a74f08ff55e475f700b196f" id="r_gaaa73c3621a74f08ff55e475f700b196f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaaa73c3621a74f08ff55e475f700b196f">a_pid_kpid</a> (<a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *ctx, double kp, double ki, double kd)</td></tr>
 <tr class="memdesc:gaaa73c3621a74f08ff55e475f700b196f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set proportional integral derivative constant for PID controller  <br /></td></tr>
 <tr class="separator:gaaa73c3621a74f08ff55e475f700b196f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,8 +127,37 @@ Functions</h2></td></tr>
 <tr class="memitem:gacfe508df6a21d1455f543efd01643029" id="r_gacfe508df6a21d1455f543efd01643029"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacfe508df6a21d1455f543efd01643029">a_pid_inc</a> (<a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *ctx, double set, double fdb)</td></tr>
 <tr class="memdesc:gacfe508df6a21d1455f543efd01643029"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for incremental PID controller  <br /></td></tr>
 <tr class="separator:gacfe508df6a21d1455f543efd01643029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad4b975dc0d59cca500783d8f0b1dd2c" id="r_gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaad4b975dc0d59cca500783d8f0b1dd2c">a_pid_zero</a> (<a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *ctx)</td></tr>
+<tr class="memdesc:gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for PID controller  <br /></td></tr>
+<tr class="separator:gaad4b975dc0d59cca500783d8f0b1dd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga2d7a15620c3667b062246928cbf6f15c" name="ga2d7a15620c3667b062246928cbf6f15c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d7a15620c3667b062246928cbf6f15c">&#9670;&#160;</a></span>a_pid_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_pid_init</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">ctx</span></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="#gaad4b975dc0d59cca500783d8f0b1dd2c">a_pid_zero</a>(ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize for PID controller </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gacfe508df6a21d1455f543efd01643029" name="gacfe508df6a21d1455f543efd01643029"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gacfe508df6a21d1455f543efd01643029">&#9670;&#160;</a></span>a_pid_inc()</h2>
@@ -163,31 +193,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>output value </dd></dl>
-
-</div>
-</div>
-<a id="gac955b69382c1c0e5ff5f67686ec5bbe8" name="gac955b69382c1c0e5ff5f67686ec5bbe8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac955b69382c1c0e5ff5f67686ec5bbe8">&#9670;&#160;</a></span>a_pid_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void a_pid_init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d89/structa__pid.html">a_pid</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>initialize for PID controller </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ctx</td><td>points to an instance of PID controller </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
