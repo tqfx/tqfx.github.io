@@ -2589,16 +2589,16 @@ liba = "0.1"
     </span><span class="kw">pub </span>summin: float,
     <span class="doccomment">/// controller integral output
     </span><span class="kw">pub </span>sum: float,
-    <span class="doccomment">/// maximum output
+    <span class="doccomment">/// maximum final output
     </span><span class="kw">pub </span>outmax: float,
-    <span class="doccomment">/// minimum output
+    <span class="doccomment">/// minimum final output
     </span><span class="kw">pub </span>outmin: float,
-    <span class="doccomment">/// controller output
+    <span class="doccomment">/// controller final output
     </span><span class="kw">pub </span>out: float,
-    <span class="doccomment">/// cache feedback
-    </span><span class="kw">pub </span>fdb: float,
     <span class="doccomment">/// cache variable
     </span><span class="kw">pub</span>(<span class="kw">crate</span>) var: float,
+    <span class="doccomment">/// cache feedback
+    </span><span class="kw">pub </span>fdb: float,
     <span class="doccomment">/// cache error
     </span><span class="kw">pub </span>err: float,
 }
@@ -2616,8 +2616,8 @@ liba = "0.1"
             outmax: float::INFINITY,
             outmin: -float::INFINITY,
             out: <span class="number">0.0</span>,
-            fdb: <span class="number">0.0</span>,
             var: <span class="number">0.0</span>,
+            fdb: <span class="number">0.0</span>,
             err: <span class="number">0.0</span>,
         }
     }

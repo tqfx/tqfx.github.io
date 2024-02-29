@@ -32,7 +32,7 @@ window.MathJax = {
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">liba<span id="projectnumber">&#160;0.1.5</span>
+   <div id="projectname">liba<span id="projectnumber">&#160;0.1.6</span>
    </div>
    <div id="projectbrief">An algorithm library based on C/C++ language</div>
   </td>
@@ -95,6 +95,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3995c97454b03ed9a634a19ead633d80" id="r_a3995c97454b03ed9a634a19ead633d80"><td class="memItemLeft" align="right" valign="top"><a id="a3995c97454b03ed9a634a19ead633d80" name="a3995c97454b03ed9a634a19ead633d80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:a3995c97454b03ed9a634a19ead633d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ee62c459ccd6b22aa2a5464533d5a2" id="r_a37ee62c459ccd6b22aa2a5464533d5a2"><td class="memItemLeft" align="right" valign="top"><a id="a37ee62c459ccd6b22aa2a5464533d5a2" name="a37ee62c459ccd6b22aa2a5464533d5a2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kpid</b> (double _kp, double _ki, double _kd)</td></tr>
 <tr class="separator:a37ee62c459ccd6b22aa2a5464533d5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,9 +110,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b> (double set
 <tr class="memitem:a5344afd6870f2403a2dbf800a6b20453" id="r_a5344afd6870f2403a2dbf800a6b20453"><td class="memItemLeft" align="right" valign="top"><a id="a5344afd6870f2403a2dbf800a6b20453" name="a5344afd6870f2403a2dbf800a6b20453"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>inc</b> (double set, double _fdb)</td></tr>
 <tr class="separator:a5344afd6870f2403a2dbf800a6b20453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3995c97454b03ed9a634a19ead633d80" id="r_a3995c97454b03ed9a634a19ead633d80"><td class="memItemLeft" align="right" valign="top"><a id="a3995c97454b03ed9a634a19ead633d80" name="a3995c97454b03ed9a634a19ead633d80"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:a3995c97454b03ed9a634a19ead633d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0805db330e42b33ce0a2d961201883d0" id="r_a0805db330e42b33ce0a2d961201883d0"><td class="memItemLeft" align="right" valign="top"><a id="a0805db330e42b33ce0a2d961201883d0" name="a0805db330e42b33ce0a2d961201883d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>zero</b> ()</td></tr>
 <tr class="separator:a0805db330e42b33ce0a2d961201883d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,16 +150,16 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>outmin</b></td></tr
 <tr class="separator:ad50df9408aca5243f55c697f19881d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fa84e6c923a21c5cf86022fefd2cd7" id="r_a95fa84e6c923a21c5cf86022fefd2cd7"><td class="memItemLeft" align="right" valign="top"><a id="a95fa84e6c923a21c5cf86022fefd2cd7" name="a95fa84e6c923a21c5cf86022fefd2cd7"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>out</b></td></tr>
-<tr class="memdesc:a95fa84e6c923a21c5cf86022fefd2cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">controller output <br /></td></tr>
+<tr class="memdesc:a95fa84e6c923a21c5cf86022fefd2cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">controller final output <br /></td></tr>
 <tr class="separator:a95fa84e6c923a21c5cf86022fefd2cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3d0640ec0d6f21051c62ae346451439" id="r_ac3d0640ec0d6f21051c62ae346451439"><td class="memItemLeft" align="right" valign="top"><a id="ac3d0640ec0d6f21051c62ae346451439" name="ac3d0640ec0d6f21051c62ae346451439"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>fdb</b></td></tr>
-<tr class="memdesc:ac3d0640ec0d6f21051c62ae346451439"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache feedback <br /></td></tr>
-<tr class="separator:ac3d0640ec0d6f21051c62ae346451439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad573d9cd4a3b2f4e7e05d58e1997de33" id="r_ad573d9cd4a3b2f4e7e05d58e1997de33"><td class="memItemLeft" align="right" valign="top"><a id="ad573d9cd4a3b2f4e7e05d58e1997de33" name="ad573d9cd4a3b2f4e7e05d58e1997de33"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>var</b></td></tr>
 <tr class="memdesc:ad573d9cd4a3b2f4e7e05d58e1997de33"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache variable <br /></td></tr>
 <tr class="separator:ad573d9cd4a3b2f4e7e05d58e1997de33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d0640ec0d6f21051c62ae346451439" id="r_ac3d0640ec0d6f21051c62ae346451439"><td class="memItemLeft" align="right" valign="top"><a id="ac3d0640ec0d6f21051c62ae346451439" name="ac3d0640ec0d6f21051c62ae346451439"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>fdb</b></td></tr>
+<tr class="memdesc:ac3d0640ec0d6f21051c62ae346451439"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache feedback <br /></td></tr>
+<tr class="separator:ac3d0640ec0d6f21051c62ae346451439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a316f1165a54681c87facf95d3bb3c6f5" id="r_a316f1165a54681c87facf95d3bb3c6f5"><td class="memItemLeft" align="right" valign="top"><a id="a316f1165a54681c87facf95d3bb3c6f5" name="a316f1165a54681c87facf95d3bb3c6f5"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>err</b></td></tr>
 <tr class="memdesc:a316f1165a54681c87facf95d3bb3c6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache error <br /></td></tr>
