@@ -151,8 +151,8 @@ C/C++</h2>
 xmake.lua</h3>
 <div class="fragment"><div class="line">add_requires(&quot;alib&quot;) -- static</div>
 <div class="line">add_requires(&quot;liba&quot;) -- shared</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
-CMakeLists.txt</h2>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md14"></a>
+CMakeLists.txt</h3>
 <div class="fragment"><div class="line">find_package(liba CONFIG REQUIRED)</div>
 <div class="line">target_link_libraries(&lt;TARGET&gt; PRIVATE alib) # static</div>
 <div class="line">target_link_libraries(&lt;TARGET&gt; PRIVATE liba) # shared</div>
@@ -164,22 +164,26 @@ conanfile.txt</h3>
 Lua</h2>
 <div class="fragment"><div class="line">luarocks install liba # release</div>
 </div><!-- fragment --><div class="fragment"><div class="line">luarocks install --server=https://luarocks.org/dev liba # latest</div>
-</div><!-- fragment --><div class="fragment"><div class="line">local liba = require(&quot;liba&quot;)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md17"></a>
+main.lua</h3>
+<div class="fragment"><div class="line">local liba = require(&quot;liba&quot;)</div>
 <div class="line">print(&quot;version&quot;, liba.VERSION)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
 Java</h2>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Main.java</h3>
 <div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Main {</div>
 <div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main(String[] args) {</div>
 <div class="line">        System.out.println(<span class="stringliteral">&quot;version &quot;</span> + liba.VERSION);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md20"></a>
 Rust</h2>
-<h3><a class="anchor" id="autotoc_md19"></a>
+<h3><a class="anchor" id="autotoc_md21"></a>
 Cargo.toml</h3>
-<div class="fragment"><div class="line">[dependencies]</div>
-<div class="line">liba = { git = &quot;https://github.com/tqfx/liba.git&quot; }</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md20"></a>
+<div class="fragment"><div class="line">cargo add liba # release</div>
+</div><!-- fragment --><div class="fragment"><div class="line">cargo add --git https://github.com/tqfx/liba.git # latest</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md22"></a>
 main.rs</h3>
 <div class="fragment"><div class="line">use liba;</div>
 <div class="line">fn main() {</div>
@@ -191,27 +195,27 @@ main.rs</h3>
 <div class="line">        liba::version::tweak()</div>
 <div class="line">    );</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
 Python</h2>
 <div class="fragment"><div class="line">pip install liba # release</div>
 </div><!-- fragment --><div class="fragment"><div class="line">pip install git+https://github.com/tqfx/liba.git # latest</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md24"></a>
 main.py</h3>
 <div class="fragment"><div class="line"><span class="keyword">import</span> liba</div>
 <div class="line">print(<span class="stringliteral">&quot;version&quot;</span>, liba.VERSION)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
 JavaScript</h2>
 <div class="fragment"><div class="line">npm i @tqfx/liba</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md26"></a>
 index.js</h3>
 <div class="fragment"><div class="line">import liba from &quot;@tqfx/liba&quot;;</div>
-<div class="line">console.log(liba.VERSION)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+<div class="line">console.log(liba.VERSION);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 QuickJS</h2>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 main.js</h3>
 <div class="fragment"><div class="line">import * as liba from &quot;liba.so&quot;;</div>
-<div class="line">console.log(&quot;version&quot;, liba.VERSION)</div>
+<div class="line">console.log(&quot;version&quot;, liba.VERSION);</div>
 </div><!-- fragment --><h1><a class="anchor" id="copyright"></a>
 Copyright</h1>
 <p>Copyright (C) 2020-present tqfx, All rights reserved.</p>
