@@ -1901,6 +1901,40 @@
 <a href="#1900" id="1900">1900</a>
 <a href="#1901" id="1901">1901</a>
 <a href="#1902" id="1902">1902</a>
+<a href="#1903" id="1903">1903</a>
+<a href="#1904" id="1904">1904</a>
+<a href="#1905" id="1905">1905</a>
+<a href="#1906" id="1906">1906</a>
+<a href="#1907" id="1907">1907</a>
+<a href="#1908" id="1908">1908</a>
+<a href="#1909" id="1909">1909</a>
+<a href="#1910" id="1910">1910</a>
+<a href="#1911" id="1911">1911</a>
+<a href="#1912" id="1912">1912</a>
+<a href="#1913" id="1913">1913</a>
+<a href="#1914" id="1914">1914</a>
+<a href="#1915" id="1915">1915</a>
+<a href="#1916" id="1916">1916</a>
+<a href="#1917" id="1917">1917</a>
+<a href="#1918" id="1918">1918</a>
+<a href="#1919" id="1919">1919</a>
+<a href="#1920" id="1920">1920</a>
+<a href="#1921" id="1921">1921</a>
+<a href="#1922" id="1922">1922</a>
+<a href="#1923" id="1923">1923</a>
+<a href="#1924" id="1924">1924</a>
+<a href="#1925" id="1925">1925</a>
+<a href="#1926" id="1926">1926</a>
+<a href="#1927" id="1927">1927</a>
+<a href="#1928" id="1928">1928</a>
+<a href="#1929" id="1929">1929</a>
+<a href="#1930" id="1930">1930</a>
+<a href="#1931" id="1931">1931</a>
+<a href="#1932" id="1932">1932</a>
+<a href="#1933" id="1933">1933</a>
+<a href="#1934" id="1934">1934</a>
+<a href="#1935" id="1935">1935</a>
+<a href="#1936" id="1936">1936</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++ language
 
@@ -1918,9 +1952,9 @@ liba = "0.1"
 #![allow(non_camel_case_types)]
 #![cfg_attr(not(features = <span class="string">"std"</span>), no_std)]
 
-</span><span class="doccomment">/// Equivalent to C’s int type.
+</span><span class="doccomment">/// Equivalent to C's int type.
 </span><span class="kw">pub type </span>int = core::ffi::c_int;
-<span class="doccomment">/// Equivalent to C’s unsigned int type.
+<span class="doccomment">/// Equivalent to C's unsigned int type.
 </span><span class="kw">pub type </span>uint = core::ffi::c_uint;
 <span class="doccomment">/// floating-point number stored using `f64`
 </span><span class="attr">#[cfg(not(feature = <span class="string">"float"</span>))]
@@ -3684,6 +3718,8 @@ liba = "0.1"
     </span><span class="kw">pub </span>third: uint,
     <span class="doccomment">/// extra number
     </span><span class="kw">pub </span>extra: uint,
+    <span class="doccomment">/// alphabet
+    </span><span class="kw">pub </span>alpha: [u8; <span class="number">4</span>],
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
@@ -3691,13 +3727,17 @@ liba = "0.1"
     <span class="kw">static </span>a_version_minor: uint;
     <span class="kw">static </span>a_version_patch: uint;
     <span class="kw">static </span>a_version_tweak: u32;
+    <span class="kw">fn </span>a_version_set_alpha(ctx: <span class="kw-2">*mut </span>version, alpha: <span class="kw-2">*const </span>u8);
+    <span class="kw">fn </span>a_version_alpha(ctx: <span class="kw-2">*const </span>version, alpha: <span class="kw-2">&amp;mut </span>[u8; <span class="number">5</span>]);
+    <span class="kw">fn </span>a_version_parse(ctx: <span class="kw-2">*mut </span>version, ver: <span class="kw-2">*const </span>u8) -&gt; uint;
+    <span class="kw">fn </span>a_version_tostr(ctx: <span class="kw-2">*const </span>version, p: <span class="kw-2">*mut </span>u8, n: usize) -&gt; int;
+    <span class="kw">fn </span>a_version_cmp(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
+    <span class="kw">fn </span>a_version_lt(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
+    <span class="kw">fn </span>a_version_gt(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
+    <span class="kw">fn </span>a_version_le(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
+    <span class="kw">fn </span>a_version_ge(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
+    <span class="kw">fn </span>a_version_eq(ctx: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
     <span class="kw">fn </span>a_version_check(major: uint, minor: uint, patch: uint) -&gt; int;
-    <span class="kw">fn </span>a_version_cmp(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; int;
-    <span class="kw">fn </span>a_version_lt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_gt(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_le(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_ge(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
-    <span class="kw">fn </span>a_version_eq(lhs: <span class="kw-2">*const </span>version, rhs: <span class="kw-2">*const </span>version) -&gt; bool;
 }
 
 <span class="kw">impl </span>version {
@@ -3709,7 +3749,28 @@ liba = "0.1"
             minor,
             third,
             extra: <span class="number">0</span>,
+            alpha: [<span class="string">b'.'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],
         }
+    }
+    <span class="doccomment">/// set alphabet for version
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>set_alpha(<span class="kw-2">&amp;mut </span><span class="self">self</span>, alpha: <span class="kw-2">&amp;</span>[u8]) {
+        <span class="kw">unsafe </span>{ a_version_set_alpha(<span class="self">self</span>, alpha.as_ptr()) }
+    }
+    <span class="doccomment">/// get alphabet for version
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>alpha(<span class="kw-2">&amp;</span><span class="self">self</span>, alpha: <span class="kw-2">&amp;mut </span>[u8; <span class="number">5</span>]) {
+        <span class="kw">unsafe </span>{ a_version_alpha(<span class="self">self</span>, alpha) }
+    }
+    <span class="doccomment">/// parse version string to version
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>parse(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ver: <span class="kw-2">&amp;</span>str) -&gt; uint {
+        <span class="kw">unsafe </span>{ a_version_parse(<span class="self">self</span>, ver.as_ptr()) }
+    }
+    <span class="doccomment">/// convert version to string
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>tostr(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ver: <span class="kw-2">&amp;mut </span>[u8]) -&gt; int {
+        <span class="kw">unsafe </span>{ a_version_tostr(<span class="self">self</span>, ver.as_mut_ptr(), ver.len()) }
     }
     <span class="doccomment">/// algorithm library version check
     </span><span class="attr">#[inline(always)]
@@ -3780,11 +3841,14 @@ liba = "0.1"
     <span class="kw">extern crate </span>std;
     <span class="kw">impl </span>core::fmt::Debug <span class="kw">for </span>version {
         <span class="kw">fn </span>fmt(<span class="kw-2">&amp;</span><span class="self">self</span>, f: <span class="kw-2">&amp;mut </span>core::fmt::Formatter&lt;<span class="lifetime">'_</span>&gt;) -&gt; core::fmt::Result {
+            <span class="kw">let </span><span class="kw-2">mut </span>alpha = [<span class="number">0u8</span>; <span class="number">5</span>];
+            <span class="self">self</span>.alpha(<span class="kw-2">&amp;mut </span>alpha);
             f.debug_struct(<span class="string">"version"</span>)
                 .field(<span class="string">"major"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.major)
                 .field(<span class="string">"minor"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.minor)
                 .field(<span class="string">"third"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.third)
                 .field(<span class="string">"extra"</span>, <span class="kw-2">&amp;</span><span class="self">self</span>.extra)
+                .field(<span class="string">"alpha"</span>, <span class="kw-2">&amp;</span>std::str::from_utf8(<span class="kw-2">&amp;</span>alpha).unwrap())
                 .finish()
         }
     }
@@ -3794,8 +3858,12 @@ liba = "0.1"
     <span class="macro">std::println!</span>(<span class="string">"patch {}"</span>, <span class="kw">crate</span>::version::patch());
     <span class="macro">std::println!</span>(<span class="string">"tweak {}"</span>, <span class="kw">crate</span>::version::tweak());
     <span class="kw">let </span>v000 = version::new(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);
-    <span class="kw">let </span>v001 = version::new(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>);
+    <span class="kw">let </span><span class="kw-2">mut </span>v001 = version::new(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);
+    <span class="kw">let </span><span class="kw-2">mut </span>ver = [<span class="number">0u8</span>; <span class="number">48</span>];
+    v001.parse(<span class="string">"0.0.1-a.1"</span>);
+    v001.tostr(<span class="kw-2">&amp;mut </span>ver);
     <span class="macro">std::println!</span>(<span class="string">"{:?}"</span>, v001);
+    <span class="macro">std::println!</span>(<span class="string">"{}"</span>, std::str::from_utf8(<span class="kw-2">&amp;</span>ver).unwrap());
     <span class="macro">assert!</span>(v001 &gt; v000);
     <span class="macro">assert!</span>(v000 &lt; v001);
     <span class="macro">assert!</span>(v000 &gt;= v000);
