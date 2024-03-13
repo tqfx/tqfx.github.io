@@ -21,6 +21,5 @@ var searchData=
   ['trapezoidal_20velocity_20trajectory_18',['trapezoidal velocity trajectory',['../d7/d57/group__A__TRAJTRAP.html',1,'']]],
   ['tree_19',['tree',['../d6/d8f/group__A__AVL.html',1,'AVL binary search tree'],['../d7/d06/group__A__RBT.html',1,'red–black binary search tree']]],
   ['tv_20',['tv',['../d1/dcc/structa__trajbell.html#a31265116f9029424a971c1a5c6c73336',1,'a_trajbell']]],
-  ['tweak_21',['TWEAK',['../d2/d04/structa__version.html#a5e8a699c8b14fe95400b33d1ee3dfca5',1,'a_version']]],
-  ['txt_22',['Txt',['../index.html#autotoc_md14',1,'CMakeLists.txt'],['../index.html#autotoc_md15',1,'conanfile.txt']]]
+  ['txt_21',['Txt',['../index.html#autotoc_md14',1,'CMakeLists.txt'],['../index.html#autotoc_md15',1,'conanfile.txt']]]
 ];
