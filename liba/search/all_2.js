@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['basic_20buffer_20library_0',['basic buffer library',['../d0/df8/group__A__BUF.html',1,'']]],
-  ['basic_20queue_20library_1',['basic queue library',['../df/d54/group__A__QUE.html',1,'']]],
-  ['basic_20string_20library_2',['basic string library',['../db/d6c/group__A__STR.html',1,'']]],
-  ['basic_20vector_20library_3',['basic vector library',['../da/d05/group__A__VEC.html',1,'']]],
-  ['bell_20shaped_20velocity_20trajectory_4',['bell-shaped velocity trajectory',['../d6/d1e/group__A__TRAJBELL.html',1,'']]],
-  ['binary_20search_20tree_5',['binary search tree',['../d6/d8f/group__A__AVL.html',1,'AVL binary search tree'],['../d7/d06/group__A__RBT.html',1,'red–black binary search tree']]],
-  ['block_6',['block',['../d0/d27/structa__pid__fuzzy.html#aec0805243888a304a2f1877d25037626',1,'a_pid_fuzzy']]],
-  ['buf_2eh_7',['buf.h',['../d6/d6d/buf_8h.html',1,'']]],
-  ['buffer_20library_8',['basic buffer library',['../d0/df8/group__A__BUF.html',1,'']]],
-  ['build_9',['build',['../index.html#autotoc_md3',1,'']]]
+  ['c_20c_0',['C/C++',['../index.html#autotoc_md12',1,'']]],
+  ['cargo_1',['cargo',['../index.html#autotoc_md9',1,'']]],
+  ['cargo_20toml_2',['Cargo.toml',['../index.html#autotoc_md21',1,'']]],
+  ['circular_20doubly_20linked_20list_3',['circular doubly linked list',['../d8/de5/group__A__LIST.html',1,'']]],
+  ['cmake_4',['cmake',['../index.html#autotoc_md5',1,'']]],
+  ['cmakelists_20txt_5',['CMakeLists.txt',['../index.html#autotoc_md14',1,'']]],
+  ['complex_20number_6',['complex number',['../d6/dbb/group__A__COMPLEX.html',1,'']]],
+  ['complex_2eh_7',['complex.h',['../d7/d3b/complex_8h.html',1,'']]],
+  ['conan_8',['conan',['../index.html#autotoc_md8',1,'']]],
+  ['conanfile_20txt_9',['conanfile.txt',['../index.html#autotoc_md15',1,'']]],
+  ['controller_10',['controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]],
+  ['copyright_11',['Copyright',['../index.html#copyright',1,'']]],
+  ['crc_2eh_12',['crc.h',['../dc/de6/crc_8h.html',1,'']]],
+  ['cubic_20polynomial_20trajectory_13',['cubic polynomial trajectory',['../d3/d9f/group__A__TRAJPOLY3.html',1,'']]],
+  ['cur_5f_14',['cur_',['../dc/dec/structa__que.html#a2b3e7d238ac8517fcd159006236c8672',1,'a_que']]],
+  ['cython_15',['cython',['../index.html#autotoc_md10',1,'']]]
 ];

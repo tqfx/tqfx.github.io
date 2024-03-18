@@ -1,25 +1,6 @@
 var searchData=
 [
-  ['t_0',['t',['../d1/dcc/structa__trajbell.html#af25f7d5a95829f42060293bd4c3ebb37',1,'a_trajbell::t'],['../d3/dfe/structa__trajtrap.html#a6f83ee1b1eb635f56f918d19aaa1c993',1,'a_trajtrap::t']]],
-  ['ta_1',['ta',['../d1/dcc/structa__trajbell.html#a1548a9c5f470057e22ef164c4995eddb',1,'a_trajbell::ta'],['../d3/dfe/structa__trajtrap.html#a573e3bf581c4ed1ba221899205a420c5',1,'a_trajtrap::ta']]],
-  ['table_2',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]],
-  ['taj_3',['taj',['../d1/dcc/structa__trajbell.html#a1f127d1f32d05be093a19bff7b8877a9',1,'a_trajbell']]],
-  ['td_4',['td',['../d1/dcc/structa__trajbell.html#a59b3ec9a1bc52d0cb86aeeda42057ce2',1,'a_trajbell::td'],['../d3/dfe/structa__trajtrap.html#a995e3d4a3c39f21207d9d4ea545e6aa4',1,'a_trajtrap::td']]],
-  ['tdj_5',['tdj',['../d1/dcc/structa__trajbell.html#a3bac7a7313ef2c8830738b6b76132c9e',1,'a_trajbell']]],
-  ['tf_2eh_6',['tf.h',['../d2/d16/tf_8h.html',1,'']]],
-  ['third_7',['third',['../d2/d04/structa__version.html#a83be37fd65e0fe9cf4b48ddc2eedf39f',1,'a_version']]],
-  ['toml_8',['Cargo.toml',['../index.html#autotoc_md21',1,'']]],
-  ['tools_9',['Tools',['../index.html#autotoc_md2',1,'optional tools'],['../index.html#autotoc_md1',1,'required tools']]],
-  ['trajbell_2eh_10',['trajbell.h',['../dc/de1/trajbell_8h.html',1,'']]],
-  ['trajectory_11',['trajectory',['../d6/d1e/group__A__TRAJBELL.html',1,'bell-shaped velocity trajectory'],['../d3/d9f/group__A__TRAJPOLY3.html',1,'cubic polynomial trajectory'],['../d9/dab/group__A__TRAJPOLY7.html',1,'hepta polynomial trajectory'],['../d2/d61/group__A__TRAJPOLY5.html',1,'quintic polynomial trajectory'],['../d7/d57/group__A__TRAJTRAP.html',1,'trapezoidal velocity trajectory']]],
-  ['trajpoly3_2eh_12',['trajpoly3.h',['../d2/dce/trajpoly3_8h.html',1,'']]],
-  ['trajpoly5_2eh_13',['trajpoly5.h',['../de/d02/trajpoly5_8h.html',1,'']]],
-  ['trajpoly7_2eh_14',['trajpoly7.h',['../d4/d90/trajpoly7_8h.html',1,'']]],
-  ['trajtrap_2eh_15',['trajtrap.h',['../de/d3b/trajtrap_8h.html',1,'']]],
-  ['transfer_20function_16',['transfer function',['../d0/ddd/group__A__TF.html',1,'']]],
-  ['transformation_20format_17',['Unicode Transformation Format',['../d9/da8/group__A__UTF.html',1,'']]],
-  ['trapezoidal_20velocity_20trajectory_18',['trapezoidal velocity trajectory',['../d7/d57/group__A__TRAJTRAP.html',1,'']]],
-  ['tree_19',['tree',['../d6/d8f/group__A__AVL.html',1,'AVL binary search tree'],['../d7/d06/group__A__RBT.html',1,'red–black binary search tree']]],
-  ['tv_20',['tv',['../d1/dcc/structa__trajbell.html#a31265116f9029424a971c1a5c6c73336',1,'a_trajbell']]],
-  ['txt_21',['Txt',['../index.html#autotoc_md14',1,'CMakeLists.txt'],['../index.html#autotoc_md15',1,'conanfile.txt']]]
+  ['unicode_20transformation_20format_0',['Unicode Transformation Format',['../d9/da8/group__A__UTF.html',1,'']]],
+  ['usage_1',['usage',['../index.html#autotoc_md11',1,'']]],
+  ['utf_2eh_2',['utf.h',['../de/db7/utf_8h.html',1,'']]]
 ];

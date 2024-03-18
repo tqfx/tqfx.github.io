@@ -32,7 +32,7 @@ window.MathJax = {
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">liba<span id="projectnumber">&#160;0.1.7</span>
+   <div id="projectname">liba<span id="projectnumber">&#160;0.1.8</span>
    </div>
    <div id="projectbrief">An algorithm library based on C/C++ language</div>
   </td>
@@ -103,27 +103,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a5a3382ef052ec8a2a3a73782f2a8cd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2398949bd512da628621e1f24df8ff05" id="r_a2398949bd512da628621e1f24df8ff05"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2398949bd512da628621e1f24df8ff05">right</a></td></tr>
 <tr class="separator:a2398949bd512da628621e1f24df8ff05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a002ae9ada555a2c4554fd0427a531ca0" id="r_a002ae9ada555a2c4554fd0427a531ca0"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a002ae9ada555a2c4554fd0427a531ca0">_parent</a></td></tr>
-<tr class="separator:a002ae9ada555a2c4554fd0427a531ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0c618f90d9480d6146b9c585d76b46" id="r_a2c0c618f90d9480d6146b9c585d76b46"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c0c618f90d9480d6146b9c585d76b46">parent_</a></td></tr>
+<tr class="separator:a2c0c618f90d9480d6146b9c585d76b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>instance structure for red–black binary search tree node </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a002ae9ada555a2c4554fd0427a531ca0" name="a002ae9ada555a2c4554fd0427a531ca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a002ae9ada555a2c4554fd0427a531ca0">&#9670;&#160;</a></span>_parent</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uintptr_t a_rbt_node::_parent</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>pointer to parent combined with the color. The mapping is: 0 =&gt; red, 1 =&gt; black. The rest of the bits are the pointer to the parent node. It must be 2-byte aligned, and it will be null if this is the root node and therefore has no parent. </p>
-
-</div>
-</div>
 <a id="a5a3382ef052ec8a2a3a73782f2a8cd0a" name="a5a3382ef052ec8a2a3a73782f2a8cd0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a3382ef052ec8a2a3a73782f2a8cd0a">&#9670;&#160;</a></span>left</h2>
 
@@ -136,6 +121,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>pointer to left child or null </p>
+
+</div>
+</div>
+<a id="a2c0c618f90d9480d6146b9c585d76b46" name="a2c0c618f90d9480d6146b9c585d76b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0c618f90d9480d6146b9c585d76b46">&#9670;&#160;</a></span>parent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uintptr_t a_rbt_node::parent_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pointer to parent combined with the color. The mapping is: 0 =&gt; red, 1 =&gt; black. The rest of the bits are the pointer to the parent node. It must be 2-byte aligned, and it will be null if this is the root node and therefore has no parent. </p>
 
 </div>
 </div>

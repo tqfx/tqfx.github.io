@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['main_20java_0',['Main.java',['../index.html#autotoc_md19',1,'']]],
-  ['main_20js_1',['main.js',['../index.html#autotoc_md28',1,'']]],
-  ['main_20lua_2',['main.lua',['../index.html#autotoc_md17',1,'']]],
-  ['main_20py_3',['main.py',['../index.html#autotoc_md24',1,'']]],
-  ['main_20rs_4',['main.rs',['../index.html#autotoc_md22',1,'']]],
-  ['major_5',['major',['../d2/d04/structa__version.html#a74ec6ea6fb159177a9b09146ce3fa2e4',1,'a_version']]],
-  ['math_2eh_6',['math.h',['../df/db1/math_8h.html',1,'']]],
-  ['mathematical_20algorithm_20library_7',['mathematical algorithm library',['../d1/d82/group__A__MATH.html',1,'']]],
-  ['me_8',['me',['../d0/d27/structa__pid__fuzzy.html#a57df1a34d32629b5783e262f01cfc7ca',1,'a_pid_fuzzy']]],
-  ['mec_9',['mec',['../d0/d27/structa__pid__fuzzy.html#a1217a0027e811955f83570490565f1e1',1,'a_pid_fuzzy']]],
-  ['membership_20function_10',['membership function',['../dd/d37/group__A__MF.html',1,'']]],
-  ['meson_11',['meson',['../index.html#autotoc_md6',1,'']]],
-  ['mf_2eh_12',['mf.h',['../d6/dea/mf_8h.html',1,'']]],
-  ['minor_13',['minor',['../d2/d04/structa__version.html#a4cf5c63736afd93251e96197015a75a2',1,'a_version']]],
-  ['mkd_14',['mkd',['../d0/d27/structa__pid__fuzzy.html#a11cde9fe53ce2b820354ffc36e448885',1,'a_pid_fuzzy']]],
-  ['mki_15',['mki',['../d0/d27/structa__pid__fuzzy.html#a5f7712d4737d3d7da922a01e574741d4',1,'a_pid_fuzzy']]],
-  ['mkp_16',['mkp',['../d0/d27/structa__pid__fuzzy.html#a6d798679cedea7dbb0024cbbb27aee8a',1,'a_pid_fuzzy']]]
+  ['neuron_20proportional_20integral_20derivative_20controller_0',['single neuron proportional integral derivative controller',['../db/d33/group__A__PID__NEURO.html',1,'']]],
+  ['node_1',['node',['../d5/d1c/uniona__avl.html#af8d6bfd16dfb5391991621650abd1800',1,'a_avl::node'],['../d0/d4d/uniona__rbt.html#a13655f7224385d623d627dce942745dc',1,'a_rbt::node']]],
+  ['node_5f_2',['node_',['../d4/de7/structa__que__node.html#a41723608d349a4d4e9564577278b66a3',1,'a_que_node']]],
+  ['note_20frequency_20table_3',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]],
+  ['notefreqs_2eh_4',['notefreqs.h',['../dd/d08/notefreqs_8h.html',1,'']]],
+  ['num_5f_5',['num_',['../de/d98/structa__buf.html#aa2acf41c2832778e78136b22b1cac8c3',1,'a_buf::num_'],['../dc/dec/structa__que.html#af1e61aa8921af582c883ac389924df83',1,'a_que::num_'],['../d8/d79/structa__str.html#a2c8fed62b5cdf79f8b3aa30d6c4014f2',1,'a_str::num_'],['../d7/d3b/structa__vec.html#a9651a2720cebd03c92388338ce3d0132',1,'a_vec::num_']]],
+  ['num_5fn_6',['num_n',['../de/ddd/structa__tf.html#a8495ed1d9b1f2fa33fb798d55b428024',1,'a_tf']]],
+  ['num_5fp_7',['num_p',['../de/ddd/structa__tf.html#aa9b8cc0e8cce561f3b824b11b5089bff',1,'a_tf']]],
+  ['number_8',['number',['../d6/dbb/group__A__COMPLEX.html',1,'complex number'],['../d5/da3/group__A__FLOAT.html',1,'floating-point number']]]
 ];

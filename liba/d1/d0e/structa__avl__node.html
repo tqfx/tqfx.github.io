@@ -32,7 +32,7 @@ window.MathJax = {
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">liba<span id="projectnumber">&#160;0.1.7</span>
+   <div id="projectname">liba<span id="projectnumber">&#160;0.1.8</span>
    </div>
    <div id="projectbrief">An algorithm library based on C/C++ language</div>
   </td>
@@ -103,27 +103,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:aaac1ce1e299cf7fda54b5b949f476589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bffbb4fbe19ed7bf377e35333489839" id="r_a8bffbb4fbe19ed7bf377e35333489839"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d1/d0e/structa__avl__node.html">a_avl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bffbb4fbe19ed7bf377e35333489839">right</a></td></tr>
 <tr class="separator:a8bffbb4fbe19ed7bf377e35333489839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a411ba113796359fed77bdedf214a3832" id="r_a411ba113796359fed77bdedf214a3832"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411ba113796359fed77bdedf214a3832">_parent</a></td></tr>
-<tr class="separator:a411ba113796359fed77bdedf214a3832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ffa82af5cd1b54b463115ed4698eee" id="r_a87ffa82af5cd1b54b463115ed4698eee"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87ffa82af5cd1b54b463115ed4698eee">parent_</a></td></tr>
+<tr class="separator:a87ffa82af5cd1b54b463115ed4698eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>instance structure for AVL binary search tree node </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a411ba113796359fed77bdedf214a3832" name="a411ba113796359fed77bdedf214a3832"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a411ba113796359fed77bdedf214a3832">&#9670;&#160;</a></span>_parent</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uintptr_t a_avl_node::_parent</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>pointer to parent combined with the balance factor Low 2 bits: One greater than the balance factor of this subtree, which is equal to height(right) - height(left). The mapping is: 00 =&gt; -1 01 =&gt; 0 10 =&gt; +1 11 =&gt; undefined The rest of the bits are the pointer to the parent node. It must be 4-byte aligned, and it will be null if this is the root node and therefore has no parent. </p>
-
-</div>
-</div>
 <a id="aaac1ce1e299cf7fda54b5b949f476589" name="aaac1ce1e299cf7fda54b5b949f476589"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaac1ce1e299cf7fda54b5b949f476589">&#9670;&#160;</a></span>left</h2>
 
@@ -136,6 +121,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>pointer to left child or null </p>
+
+</div>
+</div>
+<a id="a87ffa82af5cd1b54b463115ed4698eee" name="a87ffa82af5cd1b54b463115ed4698eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ffa82af5cd1b54b463115ed4698eee">&#9670;&#160;</a></span>parent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uintptr_t a_avl_node::parent_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pointer to parent combined with the balance factor Low 2 bits: One greater than the balance factor of this subtree, which is equal to height(right) - height(left). The mapping is: 00 =&gt; -1 01 =&gt; 0 10 =&gt; +1 11 =&gt; undefined The rest of the bits are the pointer to the parent node. It must be 4-byte aligned, and it will be null if this is the root node and therefore has no parent. </p>
 
 </div>
 </div>
