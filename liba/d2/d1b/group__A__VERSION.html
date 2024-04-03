@@ -117,12 +117,21 @@ Macros</h2></td></tr>
 <tr class="separator:ga327d6e6e9787c07b4bb9d59b5515d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga75d0aa0f3063e335903e46fd0ccaec7c" id="r_ga75d0aa0f3063e335903e46fd0ccaec7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga75d0aa0f3063e335903e46fd0ccaec7c">A_VERSION</a>&#160;&#160;&#160;A_VERSION_TOSTR(<a class="el" href="#ga42da476df05cc9f80c9dd3fafec26da5">A_VERSION_MAJOR</a>) &quot;.&quot; A_VERSION_TOSTR(<a class="el" href="#ga1d6b8989648e267598052d0255022d09">A_VERSION_MINOR</a>) &quot;.&quot; A_VERSION_TOSTR(<a class="el" href="#ga0b79c74482d50d3ebc462f759ad8fa55">A_VERSION_PATCH</a>)</td></tr>
 <tr class="separator:ga75d0aa0f3063e335903e46fd0ccaec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09f19f419270e7a076ca340234560ac7" id="r_ga09f19f419270e7a076ca340234560ac7"><td class="memItemLeft" align="right" valign="top"><a id="ga09f19f419270e7a076ca340234560ac7" name="ga09f19f419270e7a076ca340234560ac7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_C</b>(major,  minor,  third)&#160;&#160;&#160;{major, minor, third, 0, {'.', 0, 0, 0}}</td></tr>
-<tr class="separator:ga09f19f419270e7a076ca340234560ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafce8b095603be1321420824dc845bfd5" id="r_gafce8b095603be1321420824dc845bfd5"><td class="memItemLeft" align="right" valign="top"><a id="gafce8b095603be1321420824dc845bfd5" name="gafce8b095603be1321420824dc845bfd5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_EX</b>(major,  minor,  third,  extra)&#160;&#160;&#160;{major, minor, third, extra, {'.', 0, 0, 0}}</td></tr>
-<tr class="separator:gafce8b095603be1321420824dc845bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90af2ae292fb872bea93140a62904459" id="r_ga90af2ae292fb872bea93140a62904459"><td class="memItemLeft" align="right" valign="top"><a id="ga90af2ae292fb872bea93140a62904459" name="ga90af2ae292fb872bea93140a62904459"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_0</b>()&#160;&#160;&#160;A_VERSION_1(0)</td></tr>
+<tr class="separator:ga90af2ae292fb872bea93140a62904459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9bad465982151927d95192842d70006" id="r_gad9bad465982151927d95192842d70006"><td class="memItemLeft" align="right" valign="top"><a id="gad9bad465982151927d95192842d70006" name="gad9bad465982151927d95192842d70006"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_1</b>(major)&#160;&#160;&#160;A_VERSION_2(major, 0)</td></tr>
+<tr class="separator:gad9bad465982151927d95192842d70006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47f967e8d93da4ec92cf6e9b51187b82" id="r_ga47f967e8d93da4ec92cf6e9b51187b82"><td class="memItemLeft" align="right" valign="top"><a id="ga47f967e8d93da4ec92cf6e9b51187b82" name="ga47f967e8d93da4ec92cf6e9b51187b82"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_2</b>(major,  minor)&#160;&#160;&#160;A_VERSION_3(major, minor, 0)</td></tr>
+<tr class="separator:ga47f967e8d93da4ec92cf6e9b51187b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef85f2ad38b5386b0532cc8228a74944" id="r_gaef85f2ad38b5386b0532cc8228a74944"><td class="memItemLeft" align="right" valign="top"><a id="gaef85f2ad38b5386b0532cc8228a74944" name="gaef85f2ad38b5386b0532cc8228a74944"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_3</b>(major,  minor,  third)&#160;&#160;&#160;A_VERSION_4(major, minor, third, 0)</td></tr>
+<tr class="separator:gaef85f2ad38b5386b0532cc8228a74944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8483b6798eb0c3d9fa05c81d5c0453f6" id="r_ga8483b6798eb0c3d9fa05c81d5c0453f6"><td class="memItemLeft" align="right" valign="top"><a id="ga8483b6798eb0c3d9fa05c81d5c0453f6" name="ga8483b6798eb0c3d9fa05c81d5c0453f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VERSION_4</b>(major,  minor,  third,  extra)&#160;&#160;&#160;{major, minor, third, extra, {'.', 0, 0, 0}}</td></tr>
+<tr class="separator:ga8483b6798eb0c3d9fa05c81d5c0453f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad87dd3c0d42de516fee1883c67242f25" id="r_gad87dd3c0d42de516fee1883c67242f25"><td class="memItemLeft" align="right" valign="top"><a id="gad87dd3c0d42de516fee1883c67242f25" name="gad87dd3c0d42de516fee1883c67242f25"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_version_check</b>()&#160;&#160;&#160;a_version_check(<a class="el" href="#ga42da476df05cc9f80c9dd3fafec26da5">A_VERSION_MAJOR</a>, <a class="el" href="#ga1d6b8989648e267598052d0255022d09">A_VERSION_MINOR</a>, <a class="el" href="#ga0b79c74482d50d3ebc462f759ad8fa55">A_VERSION_PATCH</a>)</td></tr>
 <tr class="separator:gad87dd3c0d42de516fee1883c67242f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
