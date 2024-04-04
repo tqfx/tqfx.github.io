@@ -1924,18 +1924,6 @@
 <a href="#1922" id="1922">1922</a>
 <a href="#1923" id="1923">1923</a>
 <a href="#1924" id="1924">1924</a>
-<a href="#1925" id="1925">1925</a>
-<a href="#1926" id="1926">1926</a>
-<a href="#1927" id="1927">1927</a>
-<a href="#1928" id="1928">1928</a>
-<a href="#1929" id="1929">1929</a>
-<a href="#1930" id="1930">1930</a>
-<a href="#1931" id="1931">1931</a>
-<a href="#1932" id="1932">1932</a>
-<a href="#1933" id="1933">1933</a>
-<a href="#1934" id="1934">1934</a>
-<a href="#1935" id="1935">1935</a>
-<a href="#1936" id="1936">1936</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++
 
@@ -3250,10 +3238,10 @@ liba = "0.1"
         v0: float,
         v1: float,
     ) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_pos(ctx: <span class="kw-2">*const </span>trajbell, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_vel(ctx: <span class="kw-2">*const </span>trajbell, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_acc(ctx: <span class="kw-2">*const </span>trajbell, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_jer(ctx: <span class="kw-2">*const </span>trajbell, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_trajbell_pos(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajbell_vel(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajbell_acc(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajbell_jer(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
 }
 
 <span class="kw">impl </span>trajbell {
@@ -3279,40 +3267,34 @@ liba = "0.1"
     }
     <span class="doccomment">/// calculate position for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajbell_pos(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajbell_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajbell_vel(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajbell_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajbell_acc(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajbell_acc(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate jerk for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajbell_jer(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajbell_jer(<span class="self">self</span>, x) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>trajbell() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span>dt = <span class="number">0.5</span>;
+    <span class="kw">let </span>x = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajbell::new();
         <span class="macro">std::print!</span>(<span class="string">"{} "</span>, a.gen(<span class="number">3.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>, <span class="number">0.0</span>, <span class="number">10.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
-        <span class="macro">std::println!</span>(
-            <span class="string">"[{}, {}, {}, {}]"</span>,
-            a.pos(dt),
-            a.vel(dt),
-            a.acc(dt),
-            a.jer(dt)
-        );
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}, {}]"</span>, a.pos(x), a.vel(x), a.acc(x), a.jer(x));
     }
 }
 
@@ -3329,9 +3311,9 @@ liba = "0.1"
 
 <span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajpoly3_gen(ctx: <span class="kw-2">*mut </span>trajpoly3, ts: float, p0: float, p1: float, v0: float, v1: float);
-    <span class="kw">fn </span>a_trajpoly3_pos(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly3_vel(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly3_acc(ctx: <span class="kw-2">*const </span>trajpoly3, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly3_pos(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly3_vel(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly3_acc(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
 }
 
 <span class="kw">impl </span>trajpoly3 {
@@ -3354,28 +3336,28 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// calculate position for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly3_pos(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly3_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly3_vel(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly3_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly3_acc(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly3_acc(<span class="self">self</span>, x) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>trajpoly3() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span>dt = <span class="number">0.5</span>;
+    <span class="kw">let </span>x = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly3::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(x), a.vel(x), a.acc(x));
     }
 }
 
@@ -3401,9 +3383,9 @@ liba = "0.1"
         a0: float,
         a1: float,
     );
-    <span class="kw">fn </span>a_trajpoly5_pos(ctx: <span class="kw-2">*const </span>trajpoly5, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly5_vel(ctx: <span class="kw-2">*const </span>trajpoly5, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly5_acc(ctx: <span class="kw-2">*const </span>trajpoly5, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly5_pos(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly5_vel(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly5_acc(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
 }
 
 <span class="kw">impl </span>trajpoly5 {
@@ -3445,28 +3427,28 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// calculate position for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly5_pos(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly5_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly5_vel(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly5_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly5_acc(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly5_acc(<span class="self">self</span>, x) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>trajpoly5() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span>dt = <span class="number">0.5</span>;
+    <span class="kw">let </span>x = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly5::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(x), a.vel(x), a.acc(x));
     }
 }
 
@@ -3496,10 +3478,10 @@ liba = "0.1"
         j0: float,
         j1: float,
     );
-    <span class="kw">fn </span>a_trajpoly7_pos(ctx: <span class="kw-2">*const </span>trajpoly7, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_vel(ctx: <span class="kw-2">*const </span>trajpoly7, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_acc(ctx: <span class="kw-2">*const </span>trajpoly7, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_jer(ctx: <span class="kw-2">*const </span>trajpoly7, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly7_pos(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly7_vel(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly7_acc(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly7_jer(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
 }
 
 <span class="kw">impl </span>trajpoly7 {
@@ -3546,39 +3528,33 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// calculate position for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly7_pos(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly7_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly7_vel(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly7_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly7_acc(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly7_acc(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate jerk for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajpoly7_jer(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajpoly7_jer(<span class="self">self</span>, x) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>trajpoly7() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span>dt = <span class="number">0.5</span>;
+    <span class="kw">let </span>x = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajpoly7::new(<span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);
-        <span class="macro">std::println!</span>(
-            <span class="string">"[{}, {}, {}, {}]"</span>,
-            a.pos(dt),
-            a.vel(dt),
-            a.acc(dt),
-            a.jer(dt)
-        );
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}, {}]"</span>, a.pos(x), a.vel(x), a.acc(x), a.jer(x));
     }
 }
 
@@ -3642,9 +3618,9 @@ liba = "0.1"
         v0: float,
         v1: float,
     ) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_pos(ctx: <span class="kw-2">*const </span>trajtrap, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_vel(ctx: <span class="kw-2">*const </span>trajtrap, dt: float) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_acc(ctx: <span class="kw-2">*const </span>trajtrap, dt: float) -&gt; float;
+    <span class="kw">fn </span>a_trajtrap_pos(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajtrap_vel(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajtrap_acc(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
 }
 
 <span class="kw">impl </span>trajtrap {
@@ -3670,29 +3646,29 @@ liba = "0.1"
     }
     <span class="doccomment">/// calculate position for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajtrap_pos(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajtrap_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajtrap_vel(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajtrap_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, dt: float) -&gt; float {
-        <span class="kw">unsafe </span>{ a_trajtrap_acc(<span class="self">self</span>, dt) }
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+        <span class="kw">unsafe </span>{ a_trajtrap_acc(<span class="self">self</span>, x) }
     }
 }
 
 <span class="attr">#[test]
 </span><span class="kw">fn </span>trajtrap() {
     <span class="kw">extern crate </span>std;
-    <span class="kw">let </span>dt = <span class="number">0.5</span>;
+    <span class="kw">let </span>x = <span class="number">0.5</span>;
     {
         <span class="kw">let </span><span class="kw-2">mut </span>a = <span class="kw">crate</span>::trajtrap::new();
         <span class="macro">std::print!</span>(<span class="string">"{} "</span>, a.gen(<span class="number">2.0</span>, <span class="number">2.0</span>, -<span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">2.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
-        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(dt), a.vel(dt), a.acc(dt));
+        <span class="macro">std::println!</span>(<span class="string">"[{}, {}, {}]"</span>, a.pos(x), a.vel(x), a.acc(x));
     }
 }
 
