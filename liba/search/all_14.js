@@ -8,9 +8,9 @@ var searchData=
   ['vc_5',['vc',['../d3/dfe/structa__trajtrap.html#addfa9cfbcb0b01137374cdab9d6bc19b',1,'a_trajtrap']]],
   ['vcpkg_6',['vcpkg',['../index.html#autotoc_md7',1,'']]],
   ['vec_2eh_7',['vec.h',['../db/d65/vec_8h.html',1,'']]],
-  ['vector_20library_8',['basic vector library',['../da/d05/group__A__VEC.html',1,'']]],
-  ['velocity_20trajectory_9',['velocity trajectory',['../d6/d1e/group__A__TRAJBELL.html',1,'bell-shaped velocity trajectory'],['../d7/d57/group__A__TRAJTRAP.html',1,'trapezoidal velocity trajectory']]],
-  ['version_10',['algorithm library version',['../d2/d1b/group__A__VERSION.html',1,'']]],
+  ['vector_20library_8',['basic vector library',['../da/dc4/group__a__vec.html',1,'']]],
+  ['velocity_20trajectory_9',['velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'bell-shaped velocity trajectory'],['../d7/d75/group__a__trajtrap.html',1,'trapezoidal velocity trajectory']]],
+  ['version_10',['algorithm library version',['../d2/d6c/group__a__version.html',1,'']]],
   ['version_2eh_11',['version.h',['../df/dfc/version_8h.html',1,'']]],
   ['vm_12',['vm',['../d1/dcc/structa__trajbell.html#a03337f12bd7bca41372e0c13eada55ce',1,'a_trajbell']]]
 ];

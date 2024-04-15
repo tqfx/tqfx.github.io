@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['integral_20derivative_20controller_0',['integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'fuzzy proportional integral derivative controller'],['../d8/da8/group__A__PID.html',1,'proportional integral derivative controller'],['../db/d33/group__A__PID__NEURO.html',1,'single neuron proportional integral derivative controller']]]
+  ['integral_20derivative_20controller_0',['integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]]
 ];

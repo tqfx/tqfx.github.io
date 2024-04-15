@@ -1,0 +1,15 @@
+<map id="proportional integral derivative controller" name="proportional integral derivative controller">
+<area shape="rect" id="Node000003" href="$d5/d49/group__a__hpf.html" title=" " alt="" coords="446,5,569,31"/>
+<area shape="rect" id="Node000004" href="$d0/dae/group__a__lpf.html" title=" " alt="" coords="448,55,567,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,298,344,338"/>
+<area shape="rect" id="Node000005" href="$d9/da5/group__a__pid__fuzzy.html" title=" " alt="" coords="434,104,581,159"/>
+<area shape="rect" id="Node000006" href="$d1/da2/group__a__pid__neuro.html" title=" " alt="" coords="401,183,613,223"/>
+<area shape="rect" id="Node000007" href="$dd/dce/group__a__tf.html" title=" " alt="" coords="442,248,573,273"/>
+<area shape="rect" id="Node000008" href="$d1/d83/group__a__trajbell.html" title=" " alt="" coords="430,298,585,338"/>
+<area shape="rect" id="Node000009" href="$d3/d60/group__a__trajpoly3.html" title=" " alt="" coords="407,363,607,388"/>
+<area shape="rect" id="Node000010" href="$d6/dfe/group__a__trajpoly5.html" title=" " alt="" coords="436,413,579,453"/>
+<area shape="rect" id="Node000011" href="$df/d82/group__a__trajpoly7.html" title=" " alt="" coords="406,477,609,503"/>
+<area shape="rect" id="Node000012" href="$d7/d75/group__a__trajtrap.html" title=" " alt="" coords="432,527,583,567"/>
+<area shape="rect" id="Node000013" href="$d2/d6c/group__a__version.html" title=" " alt="" coords="416,592,599,617"/>
+<area shape="rect" id="Node000002" href="$d2/d6b/group__liba.html" title=" " alt="" coords="5,305,136,331"/>
+</map>

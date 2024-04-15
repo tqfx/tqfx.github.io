@@ -1,9 +1,9 @@
 var searchData=
 [
   ['op_0',['op',['../d0/d27/structa__pid__fuzzy.html#ae6e0c5649c293f14c5f32f36e0ff05bc',1,'a_pid_fuzzy']]],
-  ['operator_1',['fuzzy operator',['../d6/d0a/group__A__FUZZY.html',1,'']]],
+  ['operator_1',['fuzzy operator',['../d4/dfa/group__a__fuzzy.html',1,'']]],
   ['operator_2eh_2',['operator.h',['../d7/de0/operator_8h.html',1,'']]],
-  ['operators_3',['algorithm library operators',['../dd/d76/group__A__OPERATOR.html',1,'']]],
+  ['operators_3',['algorithm library operators',['../d9/d04/group__a__operator.html',1,'']]],
   ['optional_20tools_4',['optional tools',['../index.html#autotoc_md2',1,'']]],
   ['order_5',['order',['../d0/d27/structa__pid__fuzzy.html#afa6955b9b31c4f65804958bc68e435a0',1,'a_pid_fuzzy']]],
   ['out_6',['out',['../db/d89/structa__pid.html#a95fa84e6c923a21c5cf86022fefd2cd7',1,'a_pid']]],

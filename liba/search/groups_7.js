@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['library_0',['library',['../df/d91/group__A.html',1,'algorithm library'],['../d0/df8/group__A__BUF.html',1,'basic buffer library'],['../df/d54/group__A__QUE.html',1,'basic queue library'],['../db/d6c/group__A__STR.html',1,'basic string library'],['../da/d05/group__A__VEC.html',1,'basic vector library'],['../d1/d82/group__A__MATH.html',1,'mathematical algorithm library']]],
-  ['library_20operators_1',['algorithm library operators',['../dd/d76/group__A__OPERATOR.html',1,'']]],
-  ['library_20version_2',['algorithm library version',['../d2/d1b/group__A__VERSION.html',1,'']]],
-  ['linked_20list_3',['linked list',['../d8/de5/group__A__LIST.html',1,'circular doubly linked list'],['../d1/dfe/group__A__SLIST.html',1,'singly linked list']]],
-  ['list_4',['list',['../d8/de5/group__A__LIST.html',1,'circular doubly linked list'],['../d1/dfe/group__A__SLIST.html',1,'singly linked list']]],
-  ['low_20pass_20filter_5',['Low Pass Filter',['../df/d27/group__A__LPF.html',1,'']]]
+  ['library_0',['library',['../d2/d6b/group__liba.html',1,'algorithm library'],['../d9/d0a/group__a__buf.html',1,'basic buffer library'],['../df/d21/group__a__que.html',1,'basic queue library'],['../df/d28/group__a__str.html',1,'basic string library'],['../da/dc4/group__a__vec.html',1,'basic vector library'],['../d2/d44/group__a__math.html',1,'mathematical algorithm library']]],
+  ['library_20operators_1',['algorithm library operators',['../d9/d04/group__a__operator.html',1,'']]],
+  ['library_20version_2',['algorithm library version',['../d2/d6c/group__a__version.html',1,'']]],
+  ['linked_20list_3',['linked list',['../db/d65/group__a__list.html',1,'circular doubly linked list'],['../d9/d14/group__a__slist.html',1,'singly linked list']]],
+  ['list_4',['list',['../db/d65/group__a__list.html',1,'circular doubly linked list'],['../d9/d14/group__a__slist.html',1,'singly linked list']]],
+  ['low_20pass_20filter_5',['Low Pass Filter',['../d0/dae/group__a__lpf.html',1,'']]]
 ];

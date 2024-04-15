@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['filter_0',['Filter',['../dd/d71/group__A__HPF.html',1,'High Pass Filter'],['../df/d27/group__A__LPF.html',1,'Low Pass Filter']]],
-  ['floating_20point_20number_1',['floating-point number',['../d5/da3/group__A__FLOAT.html',1,'']]],
-  ['format_2',['Unicode Transformation Format',['../d9/da8/group__A__UTF.html',1,'']]],
-  ['frequency_20table_3',['note frequency table',['../db/ddc/group__A__NOTEFREQ.html',1,'']]],
-  ['function_4',['function',['../dd/d37/group__A__MF.html',1,'membership function'],['../d0/ddd/group__A__TF.html',1,'transfer function']]],
-  ['fuzzy_20operator_5',['fuzzy operator',['../d6/d0a/group__A__FUZZY.html',1,'']]],
-  ['fuzzy_20proportional_20integral_20derivative_20controller_6',['fuzzy proportional integral derivative controller',['../dc/db1/group__A__PID__FUZZY.html',1,'']]]
+  ['filter_0',['Filter',['../d5/d49/group__a__hpf.html',1,'High Pass Filter'],['../d0/dae/group__a__lpf.html',1,'Low Pass Filter']]],
+  ['floating_20point_20number_1',['floating-point number',['../dc/dd1/group__a__float.html',1,'']]],
+  ['format_2',['Unicode Transformation Format',['../d9/dba/group__a__utf.html',1,'']]],
+  ['frequency_20table_3',['note frequency table',['../db/ddd/group__a__notefreq.html',1,'']]],
+  ['function_4',['function',['../df/d67/group__a__mf.html',1,'membership function'],['../dd/dce/group__a__tf.html',1,'transfer function']]],
+  ['fuzzy_20operator_5',['fuzzy operator',['../d4/dfa/group__a__fuzzy.html',1,'']]],
+  ['fuzzy_20proportional_20integral_20derivative_20controller_6',['fuzzy proportional integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'']]]
 ];
