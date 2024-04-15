@@ -166,7 +166,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gad19d4682c55e2cde2b9768f60b5e86ca" id="r_gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad19d4682c55e2cde2b9768f60b5e86ca">A_ASSERT_BUILD</a>(x)&#160;&#160;&#160;((void)(sizeof(char[1 - 2 * !(x)]) - 1))</td></tr>
+<tr class="memitem:gad19d4682c55e2cde2b9768f60b5e86ca" id="r_gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad19d4682c55e2cde2b9768f60b5e86ca">A_ASSERT_BUILD</a>(x)&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]) - 1)</td></tr>
 <tr class="separator:gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f6a4b67ef4ab58e54b308e750b5839c" id="r_ga7f6a4b67ef4ab58e54b308e750b5839c"><td class="memItemLeft" align="right" valign="top"><a id="ga7f6a4b67ef4ab58e54b308e750b5839c" name="ga7f6a4b67ef4ab58e54b308e750b5839c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_cast_r</b>(T,  x)&#160;&#160;&#160;reinterpret_cast&lt;T&gt;(x)</td></tr>
@@ -686,16 +686,16 @@ Macros</h2></td></tr>
 <tr class="memitem:ga910b8130cea118773c709d8871f9657b" id="r_ga910b8130cea118773c709d8871f9657b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga910b8130cea118773c709d8871f9657b">a_forenum_reverse</a>(I,  i,  n)&#160;&#160;&#160;for (I i = (n); i-- &gt; 0;)</td></tr>
 <tr class="memdesc:ga910b8130cea118773c709d8871f9657b"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate from n to 0 and not include n  <br /></td></tr>
 <tr class="separator:ga910b8130cea118773c709d8871f9657b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68fe2094fd31346808ff2c5f54f509fc" id="r_ga68fe2094fd31346808ff2c5f54f509fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga68fe2094fd31346808ff2c5f54f509fc">a_foreach</a>(T,  it,  ptr,  num)</td></tr>
+<tr class="memitem:ga68fe2094fd31346808ff2c5f54f509fc" id="r_ga68fe2094fd31346808ff2c5f54f509fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga68fe2094fd31346808ff2c5f54f509fc">a_foreach</a>(T,  it,  ptr,  num)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = it + (num); it &lt; it##_; ++it)</td></tr>
 <tr class="memdesc:ga68fe2094fd31346808ff2c5f54f509fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array  <br /></td></tr>
 <tr class="separator:ga68fe2094fd31346808ff2c5f54f509fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac7d625eaabb55fb2799f666a9323042b" id="r_gac7d625eaabb55fb2799f666a9323042b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac7d625eaabb55fb2799f666a9323042b">a_foreach_reverse</a>(T,  it,  ptr,  num)</td></tr>
+<tr class="memitem:gac7d625eaabb55fb2799f666a9323042b" id="r_gac7d625eaabb55fb2799f666a9323042b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac7d625eaabb55fb2799f666a9323042b">a_foreach_reverse</a>(T,  it,  ptr,  num)&#160;&#160;&#160;    for (T *it##_ = a_cast_s(T *, ptr) - 1, *it = it##_ + (num); it &gt; it##_; --it)</td></tr>
 <tr class="memdesc:gac7d625eaabb55fb2799f666a9323042b"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array in reverse  <br /></td></tr>
 <tr class="separator:gac7d625eaabb55fb2799f666a9323042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga632ba1b10e16aa2e046c98d5a684a9db" id="r_ga632ba1b10e16aa2e046c98d5a684a9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga632ba1b10e16aa2e046c98d5a684a9db">a_iterate</a>(T,  it,  ptr,  end)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = a_cast_s(T *, end); it &lt; it##_; ++it)</td></tr>
 <tr class="memdesc:ga632ba1b10e16aa2e046c98d5a684a9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array  <br /></td></tr>
 <tr class="separator:ga632ba1b10e16aa2e046c98d5a684a9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4dfb31cd7a8c8e0f9db828f17b81c1a" id="r_gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4dfb31cd7a8c8e0f9db828f17b81c1a">a_iterate_reverse</a>(T,  it,  ptr,  end)</td></tr>
+<tr class="memitem:gac4dfb31cd7a8c8e0f9db828f17b81c1a" id="r_gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4dfb31cd7a8c8e0f9db828f17b81c1a">a_iterate_reverse</a>(T,  it,  ptr,  end)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, end) - 1, *it##_ = a_cast_s(T *, ptr) - 1; it &gt; it##_; --it)</td></tr>
 <tr class="memdesc:gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array in reverse  <br /></td></tr>
 <tr class="separator:gac4dfb31cd7a8c8e0f9db828f17b81c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4cfe6756c22fc1c05a321e5d677221bb" id="r_ga4cfe6756c22fc1c05a321e5d677221bb"><td class="memItemLeft" align="right" valign="top"><a id="ga4cfe6756c22fc1c05a321e5d677221bb" name="ga4cfe6756c22fc1c05a321e5d677221bb"></a>
@@ -829,7 +829,7 @@ Variables</h2></td></tr>
           <td class="memname">#define A_ASSERT_BUILD</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span></td><td>)</td>
-          <td>&#160;&#160;&#160;((void)(sizeof(char[1 - 2 * !(x)]) - 1))</td>
+          <td>&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]) - 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1183,14 +1183,11 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">num</span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">num</span>&#160;)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = it + (num); it &lt; it##_; ++it)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_s(T *, ptr),                    \</div>
-<div class="line">           *it##_ = a_likely(it) ? it + (num) : A_NULL; \</div>
-<div class="line">         it &lt; it##_; ++it)</div>
-</div><!-- fragment -->
+
 <p>iterate over an array </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1228,14 +1225,11 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">num</span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">num</span>&#160;)&#160;&#160;&#160;    for (T *it##_ = a_cast_s(T *, ptr) - 1, *it = it##_ + (num); it &gt; it##_; --it)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it##_ = a_likely(ptr) ? a_cast_s(T *, ptr) - 1 : A_NULL, \</div>
-<div class="line">           *it = a_likely(it##_) ? it##_ + (num) : A_NULL;           \</div>
-<div class="line">         it &gt; it##_; --it)</div>
-</div><!-- fragment -->
+
 <p>iterate over an array in reverse </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1618,14 +1612,11 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">end</span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">end</span>&#160;)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, end) - 1, *it##_ = a_cast_s(T *, ptr) - 1; it &gt; it##_; --it)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_likely(end) ? a_cast_s(T *, end) - 1 : A_NULL,   \</div>
-<div class="line">           *it##_ = a_likely(it) ? a_cast_s(T *, ptr) - 1 : A_NULL; \</div>
-<div class="line">         it &gt; it##_; --it)</div>
-</div><!-- fragment -->
+
 <p>iterate over an array in reverse </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
