@@ -168,8 +168,11 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gad19d4682c55e2cde2b9768f60b5e86ca" id="r_gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad19d4682c55e2cde2b9768f60b5e86ca">A_ASSERT_BUILD</a>(x)&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]) - 1)</td></tr>
-<tr class="separator:gad19d4682c55e2cde2b9768f60b5e86ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf32a8e7671699e6d87a0034ee6578978" id="r_gaf32a8e7671699e6d87a0034ee6578978"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf32a8e7671699e6d87a0034ee6578978">A_BUILD_ASSERT</a>(x)&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]))</td></tr>
+<tr class="separator:gaf32a8e7671699e6d87a0034ee6578978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21da9783c60f2e2f7f14dd9c3ab72780" id="r_ga21da9783c60f2e2f7f14dd9c3ab72780"><td class="memItemLeft" align="right" valign="top"><a id="ga21da9783c60f2e2f7f14dd9c3ab72780" name="ga21da9783c60f2e2f7f14dd9c3ab72780"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_BUILD_BUG_ON</b>(x)&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !!(x)]))</td></tr>
+<tr class="separator:ga21da9783c60f2e2f7f14dd9c3ab72780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f6a4b67ef4ab58e54b308e750b5839c" id="r_ga7f6a4b67ef4ab58e54b308e750b5839c"><td class="memItemLeft" align="right" valign="top"><a id="ga7f6a4b67ef4ab58e54b308e750b5839c" name="ga7f6a4b67ef4ab58e54b308e750b5839c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>a_cast_r</b>(T,  x)&#160;&#160;&#160;reinterpret_cast&lt;T&gt;(x)</td></tr>
 <tr class="separator:ga7f6a4b67ef4ab58e54b308e750b5839c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -821,24 +824,6 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="gad19d4682c55e2cde2b9768f60b5e86ca" name="gad19d4682c55e2cde2b9768f60b5e86ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad19d4682c55e2cde2b9768f60b5e86ca">&#9670;&#160;</a></span>A_ASSERT_BUILD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A_ASSERT_BUILD</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span></td><td>)</td>
-          <td>&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]) - 1)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>assert a build-time dependency, as an expression </p>
-
-</div>
-</div>
 <a id="ga591e2c7b026521f8a4c764985878debb" name="ga591e2c7b026521f8a4c764985878debb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga591e2c7b026521f8a4c764985878debb">&#9670;&#160;</a></span>a_bool</h2>
 
@@ -869,6 +854,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>static cast to <a class="el" href="#ga591e2c7b026521f8a4c764985878debb">a_bool</a> </p>
+
+</div>
+</div>
+<a id="gaf32a8e7671699e6d87a0034ee6578978" name="gaf32a8e7671699e6d87a0034ee6578978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf32a8e7671699e6d87a0034ee6578978">&#9670;&#160;</a></span>A_BUILD_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_BUILD_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(void)(sizeof(char[1 - 2 * !(x)]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>assert a build-time dependency, as an expression </p>
 
 </div>
 </div>
