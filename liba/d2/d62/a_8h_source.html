@@ -730,7 +730,7 @@ $(function() { codefold.init(1); });
 <div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span><span class="preprocessor">#define A_FLOAT_SINGLE 0x04</span></div>
 <div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span><span class="preprocessor">#define A_FLOAT_DOUBLE 0x08</span></div>
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span><span class="preprocessor">#define A_FLOAT_EXTEND 0x10</span></div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span><span class="preprocessor">#if defined(A_FLOAT_T)</span></div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span><span class="preprocessor">#if defined(A_FLOAT)</span></div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span><span class="preprocessor">#elif A_FLOAT_TYPE + 0 == A_FLOAT_SINGLE</span></div>
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span> </div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span><span class="preprocessor">#define A_FLOAT float</span></div>
@@ -807,7 +807,7 @@ $(function() { codefold.init(1); });
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span><span class="preprocessor">#define A_FLOAT_SCN(F, C) &quot;%&quot; F &quot;L&quot; C</span></div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span><span class="preprocessor">#else </span><span class="comment">/* !A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="preprocessor">#error unknown precision</span></div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="preprocessor">#error unsupported precision</span></div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="preprocessor">#define A_FLOAT_INF a_cast_s(A_FLOAT, A_F64_INF)</span></div>
