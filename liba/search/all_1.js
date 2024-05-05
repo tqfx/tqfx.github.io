@@ -8,6 +8,5 @@ var searchData=
   ['binary_20search_20tree_5',['binary search tree',['../dd/dba/group__a__avl.html',1,'AVL binary search tree'],['../de/d40/group__a__rbt.html',1,'red–black binary search tree']]],
   ['block_6',['block',['../d0/d27/structa__pid__fuzzy.html#aec0805243888a304a2f1877d25037626',1,'a_pid_fuzzy']]],
   ['buf_2eh_7',['buf.h',['../d6/d6d/buf_8h.html',1,'']]],
-  ['buffer_20library_8',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]],
-  ['build_9',['build',['../index.html#autotoc_md3',1,'']]]
+  ['buffer_20library_8',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]]
 ];

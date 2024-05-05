@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['search_20tree_0',['search tree',['../dd/dba/group__a__avl.html',1,'AVL binary search tree'],['../de/d40/group__a__rbt.html',1,'red–black binary search tree']]],
-  ['shaped_20velocity_20trajectory_1',['bell-shaped velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'']]],
-  ['single_20neuron_20proportional_20integral_20derivative_20controller_2',['single neuron proportional integral derivative controller',['../d1/da2/group__a__pid__neuro.html',1,'']]],
-  ['singly_20linked_20list_3',['singly linked list',['../d9/d14/group__a__slist.html',1,'']]],
-  ['siz_5f_4',['siz_',['../de/d98/structa__buf.html#a16384a530b768d3b9b43cea89b37e039',1,'a_buf::siz_'],['../dc/dec/structa__que.html#a85039fabb2873ff478934861229f960d',1,'a_que::siz_'],['../d7/d3b/structa__vec.html#ab4c50c4bc0e5d5ee06dd74cbf7fed4a0',1,'a_vec::siz_']]],
-  ['slist_2eh_5',['slist.h',['../d1/dad/slist_8h.html',1,'']]],
-  ['str_2eh_6',['str.h',['../d1/d93/str_8h.html',1,'']]],
-  ['string_20library_7',['basic string library',['../df/d28/group__a__str.html',1,'']]],
-  ['sum_8',['sum',['../db/d89/structa__pid.html#a1898664eb39b63e307763d95f55116be',1,'a_pid']]],
-  ['summax_9',['summax',['../db/d89/structa__pid.html#af1ecc730e35f0e9dde69b388397bfc50',1,'a_pid']]],
-  ['summin_10',['summin',['../db/d89/structa__pid.html#a58069f7873beba725031404ded9fb384',1,'a_pid']]]
+  ['rbt_2eh_0',['rbt.h',['../d6/d1b/rbt_8h.html',1,'']]],
+  ['real_1',['real',['../d5/d8b/structa__complex.html#aa62504aa6b83e8877da8986c6c9e816b',1,'a_complex']]],
+  ['red–black_20binary_20search_20tree_2',['red–black binary search tree',['../de/d40/group__a__rbt.html',1,'']]],
+  ['redundancy_20check_3',['Cyclic Redundancy Check',['../d0/de2/group__a__crc.html',1,'']]],
+  ['right_4',['right',['../d1/d0e/structa__avl__node.html#a8bffbb4fbe19ed7bf377e35333489839',1,'a_avl_node::right'],['../db/d47/structa__rbt__node.html#a2398949bd512da628621e1f24df8ff05',1,'a_rbt_node::right']]]
 ];

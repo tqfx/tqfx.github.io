@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['idx_0',['idx',['../d0/d27/structa__pid__fuzzy.html#acc37bc04bd92c568faf9843a2b22fc60',1,'a_pid_fuzzy']]],
-  ['imag_1',['imag',['../d5/d8b/structa__complex.html#a2f8ace35f9054429fb237c9cc4f29b9b',1,'a_complex']]],
-  ['index_20js_2',['index.js',['../index.html#autotoc_md26',1,'']]],
-  ['input_3',['input',['../d8/db1/structa__hpf.html#abda99d03967ff9356a3eee0afd13b873',1,'a_hpf::input'],['../de/ddd/structa__tf.html#ac31dad00fd190c463d107828ca7fbf79',1,'a_tf::input']]],
-  ['integral_20derivative_20controller_4',['integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]]
+  ['head_5f_0',['head_',['../dc/dec/structa__que.html#ae95a5c7dac09cc05fd0796ad9d065d9f',1,'a_que']]],
+  ['hepta_20polynomial_20trajectory_1',['hepta polynomial trajectory',['../df/d82/group__a__trajpoly7.html',1,'']]],
+  ['high_20pass_20filter_2',['High Pass Filter',['../d5/d49/group__a__hpf.html',1,'']]],
+  ['hpf_2eh_3',['hpf.h',['../d1/df9/hpf_8h.html',1,'']]],
+  ['href_20https_3a_20github_20com_20tqfx_20liba_20wiki_20getting_20started_20getting_20started_20a_4',['&lt;a href=&quot;https://github.com/tqfx/liba/wiki/Getting-started&quot; &gt;Getting started&lt;/a&gt;',['../index.html#autotoc_md0',1,'']]],
+  ['https_3a_20github_20com_20tqfx_20liba_20wiki_20getting_20started_20getting_20started_20a_5',['&lt;a href=&quot;https://github.com/tqfx/liba/wiki/Getting-started&quot; &gt;Getting started&lt;/a&gt;',['../index.html#autotoc_md0',1,'']]]
 ];

@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['neuron_20proportional_20integral_20derivative_20controller_0',['single neuron proportional integral derivative controller',['../d1/da2/group__a__pid__neuro.html',1,'']]],
-  ['node_1',['node',['../d5/d1c/uniona__avl.html#af8d6bfd16dfb5391991621650abd1800',1,'a_avl::node'],['../d0/d4d/uniona__rbt.html#a13655f7224385d623d627dce942745dc',1,'a_rbt::node']]],
-  ['note_20frequency_20table_2',['note frequency table',['../db/ddd/group__a__notefreq.html',1,'']]],
-  ['notefreqs_2eh_3',['notefreqs.h',['../dd/d08/notefreqs_8h.html',1,'']]],
-  ['num_5f_4',['num_',['../de/d98/structa__buf.html#aa2acf41c2832778e78136b22b1cac8c3',1,'a_buf::num_'],['../dc/dec/structa__que.html#af1e61aa8921af582c883ac389924df83',1,'a_que::num_'],['../d8/d79/structa__str.html#a2c8fed62b5cdf79f8b3aa30d6c4014f2',1,'a_str::num_'],['../d7/d3b/structa__vec.html#a9651a2720cebd03c92388338ce3d0132',1,'a_vec::num_']]],
-  ['num_5fn_5',['num_n',['../de/ddd/structa__tf.html#a8495ed1d9b1f2fa33fb798d55b428024',1,'a_tf']]],
-  ['num_5fp_6',['num_p',['../de/ddd/structa__tf.html#aa9b8cc0e8cce561f3b824b11b5089bff',1,'a_tf']]],
-  ['number_7',['number',['../de/d1c/group__a__complex.html',1,'complex number'],['../dc/dd1/group__a__float.html',1,'floating-point number']]]
+  ['major_0',['major',['../d2/d04/structa__version.html#a74ec6ea6fb159177a9b09146ce3fa2e4',1,'a_version']]],
+  ['math_2eh_1',['math.h',['../df/db1/math_8h.html',1,'']]],
+  ['mathematical_20algorithm_20library_2',['mathematical algorithm library',['../d2/d44/group__a__math.html',1,'']]],
+  ['me_3',['me',['../d0/d27/structa__pid__fuzzy.html#a57df1a34d32629b5783e262f01cfc7ca',1,'a_pid_fuzzy']]],
+  ['mec_4',['mec',['../d0/d27/structa__pid__fuzzy.html#a1217a0027e811955f83570490565f1e1',1,'a_pid_fuzzy']]],
+  ['mem_5f_5',['mem_',['../de/d98/structa__buf.html#ac6140ab2e10faa71e72082a4eeeb0796',1,'a_buf::mem_'],['../dc/dec/structa__que.html#af344fe29388a032a95dca72f94def3ec',1,'a_que::mem_'],['../d8/d79/structa__str.html#a387a39555b75b91738c0819857b09a4d',1,'a_str::mem_'],['../d7/d3b/structa__vec.html#af4694169f4bd3fb2535ffbc4346d812c',1,'a_vec::mem_']]],
+  ['membership_20function_6',['membership function',['../df/d67/group__a__mf.html',1,'']]],
+  ['mf_2eh_7',['mf.h',['../d6/dea/mf_8h.html',1,'']]],
+  ['minor_8',['minor',['../d2/d04/structa__version.html#a4cf5c63736afd93251e96197015a75a2',1,'a_version']]],
+  ['mkd_9',['mkd',['../d0/d27/structa__pid__fuzzy.html#a11cde9fe53ce2b820354ffc36e448885',1,'a_pid_fuzzy']]],
+  ['mki_10',['mki',['../d0/d27/structa__pid__fuzzy.html#a5f7712d4737d3d7da922a01e574741d4',1,'a_pid_fuzzy']]],
+  ['mkp_11',['mkp',['../d0/d27/structa__pid__fuzzy.html#a6d798679cedea7dbb0024cbbb27aee8a',1,'a_pid_fuzzy']]]
 ];
