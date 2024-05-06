@@ -1555,10 +1555,6 @@
 <a href="#1553" id="1553">1553</a>
 <a href="#1554" id="1554">1554</a>
 <a href="#1555" id="1555">1555</a>
-<a href="#1556" id="1556">1556</a>
-<a href="#1557" id="1557">1557</a>
-<a href="#1558" id="1558">1558</a>
-<a href="#1559" id="1559">1559</a>
 </pre></div><pre class="rust"><code><span class="doccomment">/*!
 An algorithm library based on C/C++
 
@@ -1576,29 +1572,25 @@ liba = "0.1"
 #![allow(non_camel_case_types)]
 #![cfg_attr(not(features = <span class="string">"std"</span>), no_std)]
 
-#[cfg(feature = <span class="string">"std"</span>)]
-</span><span class="kw">extern crate </span>std;
-
-<span class="doccomment">/// Equivalent to C's int type.
-</span><span class="attr">#[cfg(not(feature = <span class="string">"std"</span>))]
-</span><span class="kw">pub type </span>c_int = core::ffi::c_int;
-<span class="doccomment">/// Equivalent to C's int type.
-</span><span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
-</span><span class="kw">pub type </span>c_int = std::os::raw::c_int;
-
-<span class="doccomment">/// Equivalent to C's unsigned int type.
-</span><span class="attr">#[cfg(not(feature = <span class="string">"std"</span>))]
-</span><span class="kw">pub type </span>c_uint = core::ffi::c_uint;
-<span class="doccomment">/// Equivalent to C's unsigned int type.
-</span><span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
-</span><span class="kw">pub type </span>c_uint = std::os::raw::c_uint;
-
-<span class="doccomment">/// floating-point number stored using `f64`
+</span><span class="doccomment">/// floating-point number stored using `f64`
 </span><span class="attr">#[cfg(not(feature = <span class="string">"float"</span>))]
 </span><span class="kw">pub type </span>float = f64;
 <span class="doccomment">/// floating-point number stored using `f32`
 </span><span class="attr">#[cfg(feature = <span class="string">"float"</span>)]
 </span><span class="kw">pub type </span>float = f32;
+
+<span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
+</span><span class="kw">extern crate </span>std;
+
+<span class="attr">#[cfg(not(feature = <span class="string">"std"</span>))]
+</span><span class="kw">pub use </span>core::ffi::c_int;
+<span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
+</span><span class="kw">pub use </span>std::os::raw::c_int;
+
+<span class="attr">#[cfg(not(feature = <span class="string">"std"</span>))]
+</span><span class="kw">pub use </span>core::ffi::c_uint;
+<span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
+</span><span class="kw">pub use </span>std::os::raw::c_uint;
 
 <span class="attr">#[cfg(not(feature = <span class="string">"std"</span>))]
 </span><span class="kw">use </span>core::mem::size_of;
@@ -2112,7 +2104,7 @@ liba = "0.1"
     <span class="doccomment">/// controller final output
     </span><span class="kw">pub </span>out: float,
     <span class="doccomment">/// cache variable
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) var: float,
+    </span>var: float,
     <span class="doccomment">/// cache feedback
     </span><span class="kw">pub </span>fdb: float,
     <span class="doccomment">/// cache error
@@ -2206,15 +2198,15 @@ liba = "0.1"
 </span><span class="kw">pub struct </span>pid_fuzzy {
     <span class="doccomment">/// proportional integral derivative controller
     </span><span class="kw">pub </span>pid: pid,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) me: <span class="kw-2">*const </span>float,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) mec: <span class="kw-2">*const </span>float,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) mkp: <span class="kw-2">*const </span>float,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) mki: <span class="kw-2">*const </span>float,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) mkd: <span class="kw-2">*const </span>float,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) idx: <span class="kw-2">*mut </span>c_uint,
-    <span class="kw">pub</span>(<span class="kw">crate</span>) val: <span class="kw-2">*mut </span>float,
+    me: <span class="kw-2">*const </span>float,
+    mec: <span class="kw-2">*const </span>float,
+    mkp: <span class="kw-2">*const </span>float,
+    mki: <span class="kw-2">*const </span>float,
+    mkd: <span class="kw-2">*const </span>float,
+    idx: <span class="kw-2">*mut </span>c_uint,
+    val: <span class="kw-2">*mut </span>float,
     <span class="doccomment">/// fuzzy relational operator
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) op: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
+    </span>op: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
     <span class="doccomment">/// base proportional constant
     </span><span class="kw">pub </span>kp: float,
     <span class="doccomment">/// base integral constant
@@ -2222,9 +2214,9 @@ liba = "0.1"
     <span class="doccomment">/// base derivative constant
     </span><span class="kw">pub </span>kd: float,
     <span class="doccomment">/// number of order in the square matrix
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) order: c_uint,
+    </span>order: c_uint,
     <span class="doccomment">/// maximum number triggered by the rule
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) block: c_uint,
+    </span>block: c_uint,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>pid_fuzzy {
