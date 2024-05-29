@@ -143,6 +143,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa9923dd4ae620be107d59c9a5e03ce40" id="r_gaa9923dd4ae620be107d59c9a5e03ce40"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_BUF_END</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../d9/d0a/group__a__buf.html#ga51ecbef46aac88a52f633e78a44159d5">a_buf_end</a>(ctx))</td></tr>
 <tr class="separator:gaa9923dd4ae620be107d59c9a5e03ce40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd2703eef02e237ccdea24daa632346d" id="r_gabd2703eef02e237ccdea24daa632346d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_BUF_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../d9/d0a/group__a__buf.html#gac6b3e218a99faed3a1e5f3c7ad2ea7b5">a_buf_push_sort</a>(ctx, key, cmp))</td></tr>
+<tr class="separator:gabd2703eef02e237ccdea24daa632346d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab6189d6aab1c71c42b646fa7a9e4c51b" id="r_gab6189d6aab1c71c42b646fa7a9e4c51b"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_BUF_SEARCH</b>(T,  ctx,  obj,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../d9/d0a/group__a__buf.html#gac2f9f7ca9a0b6ace50e17e966536a9c0">a_buf_search</a>(ctx, obj, cmp))</td></tr>
 <tr class="separator:gab6189d6aab1c71c42b646fa7a9e4c51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +249,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga497c756ec5e0b0ecf0baa6ee1580e4bd" id="r_ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/group__a__buf.html#ga497c756ec5e0b0ecf0baa6ee1580e4bd">a_buf_sort_back</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to buffer structure  <br /></td></tr>
 <tr class="separator:ga497c756ec5e0b0ecf0baa6ee1580e4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6b3e218a99faed3a1e5f3c7ad2ea7b5" id="r_gac6b3e218a99faed3a1e5f3c7ad2ea7b5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/group__a__buf.html#gac6b3e218a99faed3a1e5f3c7ad2ea7b5">a_buf_push_sort</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> *ctx, void const *key, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:gac6b3e218a99faed3a1e5f3c7ad2ea7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the buffer and sort it  <br /></td></tr>
+<tr class="separator:gac6b3e218a99faed3a1e5f3c7ad2ea7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2f9f7ca9a0b6ace50e17e966536a9c0" id="r_gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d0a/group__a__buf.html#gac2f9f7ca9a0b6ace50e17e966536a9c0">a_buf_search</a> (<a class="el" href="../../de/d98/structa__buf.html">a_buf</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this buffer  <br /></td></tr>
 <tr class="separator:gac2f9f7ca9a0b6ace50e17e966536a9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>

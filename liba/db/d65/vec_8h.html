@@ -146,6 +146,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gad35602b02da6975eb2d239e0540aa5e6" id="r_gad35602b02da6975eb2d239e0540aa5e6"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_END</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../da/dc4/group__a__vec.html#gaf147696edc5790338f88e49091b81fe4">a_vec_end</a>(ctx))</td></tr>
 <tr class="separator:gad35602b02da6975eb2d239e0540aa5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6c076366662d6c7b85356956fb40c0a" id="r_gaf6c076366662d6c7b85356956fb40c0a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../da/dc4/group__a__vec.html#ga66b4790fc1d124d57d7f866a58be6a84">a_vec_push_sort</a>(ctx, key, cmp))</td></tr>
+<tr class="separator:gaf6c076366662d6c7b85356956fb40c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga074c6b28c8538605db597245f3de6f36" id="r_ga074c6b28c8538605db597245f3de6f36"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_SEARCH</b>(T,  ctx,  obj,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../da/dc4/group__a__vec.html#ga53e1c2448a0fec0193501c6cce5ccdf3">a_vec_search</a>(ctx, obj, cmp))</td></tr>
 <tr class="separator:ga074c6b28c8538605db597245f3de6f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,6 +270,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga878c37d234a78084d8be617742c985dd" id="r_ga878c37d234a78084d8be617742c985dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc4/group__a__vec.html#ga878c37d234a78084d8be617742c985dd">a_vec_sort_back</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga878c37d234a78084d8be617742c985dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to vector structure  <br /></td></tr>
 <tr class="separator:ga878c37d234a78084d8be617742c985dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66b4790fc1d124d57d7f866a58be6a84" id="r_ga66b4790fc1d124d57d7f866a58be6a84"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc4/group__a__vec.html#ga66b4790fc1d124d57d7f866a58be6a84">a_vec_push_sort</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, void const *key, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga66b4790fc1d124d57d7f866a58be6a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector and sort it  <br /></td></tr>
+<tr class="separator:ga66b4790fc1d124d57d7f866a58be6a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga53e1c2448a0fec0193501c6cce5ccdf3" id="r_ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc4/group__a__vec.html#ga53e1c2448a0fec0193501c6cce5ccdf3">a_vec_search</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this vector  <br /></td></tr>
 <tr class="separator:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>

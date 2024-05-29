@@ -140,6 +140,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gad35602b02da6975eb2d239e0540aa5e6" id="r_gad35602b02da6975eb2d239e0540aa5e6"><td class="memItemLeft" align="right" valign="top"><a id="gad35602b02da6975eb2d239e0540aa5e6" name="gad35602b02da6975eb2d239e0540aa5e6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_END</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#gaf147696edc5790338f88e49091b81fe4">a_vec_end</a>(ctx))</td></tr>
 <tr class="separator:gad35602b02da6975eb2d239e0540aa5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6c076366662d6c7b85356956fb40c0a" id="r_gaf6c076366662d6c7b85356956fb40c0a"><td class="memItemLeft" align="right" valign="top"><a id="gaf6c076366662d6c7b85356956fb40c0a" name="gaf6c076366662d6c7b85356956fb40c0a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga66b4790fc1d124d57d7f866a58be6a84">a_vec_push_sort</a>(ctx, key, cmp))</td></tr>
+<tr class="separator:gaf6c076366662d6c7b85356956fb40c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga074c6b28c8538605db597245f3de6f36" id="r_ga074c6b28c8538605db597245f3de6f36"><td class="memItemLeft" align="right" valign="top"><a id="ga074c6b28c8538605db597245f3de6f36" name="ga074c6b28c8538605db597245f3de6f36"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_VEC_SEARCH</b>(T,  ctx,  obj,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga53e1c2448a0fec0193501c6cce5ccdf3">a_vec_search</a>(ctx, obj, cmp))</td></tr>
 <tr class="separator:ga074c6b28c8538605db597245f3de6f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +264,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga878c37d234a78084d8be617742c985dd" id="r_ga878c37d234a78084d8be617742c985dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga878c37d234a78084d8be617742c985dd">a_vec_sort_back</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga878c37d234a78084d8be617742c985dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to vector structure  <br /></td></tr>
 <tr class="separator:ga878c37d234a78084d8be617742c985dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66b4790fc1d124d57d7f866a58be6a84" id="r_ga66b4790fc1d124d57d7f866a58be6a84"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga66b4790fc1d124d57d7f866a58be6a84">a_vec_push_sort</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *ctx, void const *key, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga66b4790fc1d124d57d7f866a58be6a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the vector and sort it  <br /></td></tr>
+<tr class="separator:ga66b4790fc1d124d57d7f866a58be6a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga53e1c2448a0fec0193501c6cce5ccdf3" id="r_ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga53e1c2448a0fec0193501c6cce5ccdf3">a_vec_search</a> (<a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> const *ctx, void const *obj, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">search the given element in this vector  <br /></td></tr>
 <tr class="separator:ga53e1c2448a0fec0193501c6cce5ccdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,7 +327,7 @@ Functions</h2></td></tr>
 <div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__a__vec_html_gaa666ce5bb7481c9284c07b9bdfa56d35"><div class="ttname"><a href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a></div><div class="ttdeci">size_t a_vec_siz(a_vec const *ctx)</div><div class="ttdoc">access size of a element for a pointer to vector structure</div><div class="ttdef"><b>Definition</b> vec.h:39</div></div>
-<div class="ttc" id="agroup__a__vec_html_gae8f1a7228f58ba98953ef8da3dd61be9"><div class="ttname"><a href="#gae8f1a7228f58ba98953ef8da3dd61be9">a_vec_foreach</a></div><div class="ttdeci">#define a_vec_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:408</div></div>
+<div class="ttc" id="agroup__a__vec_html_gae8f1a7228f58ba98953ef8da3dd61be9"><div class="ttname"><a href="#gae8f1a7228f58ba98953ef8da3dd61be9">a_vec_foreach</a></div><div class="ttdeci">#define a_vec_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:422</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the vector </td></tr>
@@ -362,7 +368,7 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__vec_html_ga415b333b1ac50769c1a5e92f598fdd6a"><div class="ttname"><a href="#ga415b333b1ac50769c1a5e92f598fdd6a">a_vec_foreach_reverse</a></div><div class="ttdeci">#define a_vec_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:422</div></div>
+<div class="ttc" id="agroup__a__vec_html_ga415b333b1ac50769c1a5e92f598fdd6a"><div class="ttname"><a href="#ga415b333b1ac50769c1a5e92f598fdd6a">a_vec_foreach_reverse</a></div><div class="ttdeci">#define a_vec_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:436</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the vector </td></tr>
@@ -399,7 +405,7 @@ Functions</h2></td></tr>
 <div class="line">    T *it = (T *)<a class="code hl_function" href="#ga99b11fe5bffc9acf34eeac3ce68455ad">a_vec_at</a>(ctx, i);</div>
 <div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__vec_html_ga0289e3fd1941361bb158ec043d5502fa"><div class="ttname"><a href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a></div><div class="ttdeci">#define a_vec_forenum(i, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:380</div></div>
+<div class="ttc" id="agroup__a__vec_html_ga0289e3fd1941361bb158ec043d5502fa"><div class="ttname"><a href="#ga0289e3fd1941361bb158ec043d5502fa">a_vec_forenum</a></div><div class="ttdeci">#define a_vec_forenum(i, ctx)</div><div class="ttdoc">iterate over a vector</div><div class="ttdef"><b>Definition</b> vec.h:394</div></div>
 <div class="ttc" id="agroup__a__vec_html_ga99b11fe5bffc9acf34eeac3ce68455ad"><div class="ttname"><a href="#ga99b11fe5bffc9acf34eeac3ce68455ad">a_vec_at</a></div><div class="ttdeci">void * a_vec_at(a_vec const *ctx, size_t idx)</div><div class="ttdoc">access specified element for a pointer to vector structure</div><div class="ttdef"><b>Definition</b> vec.h:73</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -436,7 +442,7 @@ Functions</h2></td></tr>
 <div class="line">    T *it = (T *)<a class="code hl_function" href="#ga99b11fe5bffc9acf34eeac3ce68455ad">a_vec_at</a>(ctx, i);</div>
 <div class="line">    assert(<a class="code hl_function" href="#gaa666ce5bb7481c9284c07b9bdfa56d35">a_vec_siz</a>(ctx) == <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__vec_html_gaeae695755c11f37396704bd280d28895"><div class="ttname"><a href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a></div><div class="ttdeci">#define a_vec_forenum_reverse(i, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:394</div></div>
+<div class="ttc" id="agroup__a__vec_html_gaeae695755c11f37396704bd280d28895"><div class="ttname"><a href="#gaeae695755c11f37396704bd280d28895">a_vec_forenum_reverse</a></div><div class="ttdeci">#define a_vec_forenum_reverse(i, ctx)</div><div class="ttdoc">iterate over a vector in reverse</div><div class="ttdef"><b>Definition</b> vec.h:408</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>index of elements in the vector </td></tr>
@@ -1209,6 +1215,54 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>element pointer </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga66b4790fc1d124d57d7f866a58be6a84" name="ga66b4790fc1d124d57d7f866a58be6a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66b4790fc1d124d57d7f866a58be6a84">&#9670;&#160;</a></span>a_vec_push_sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_vec_push_sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d3b/structa__vec.html">a_vec</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*</td>          <td class="paramname"><span class="paramname"><em>cmp&#160;</em></span>)(void const *, void const *)&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push an element into the vector and sort it </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of vector structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>the key on the right for insertion sort </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp</td><td>a function that compares two elements <ul>
+<li>cmp(lhs,rhs)==0 *lhs is equivalent to *rhs </li>
+<li>cmp(lhs,rhs)&lt;0 *lhs goes before *rhs </li>
+<li>cmp(lhs,rhs)&gt;0 *lhs goes after *rhs </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>

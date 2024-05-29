@@ -137,6 +137,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga09f8b27eaf9c34f2cb7d68c3253be18f" id="r_ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_AT</b>(T,  ctx,  idx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../df/d21/group__a__que.html#ga177dabe3f0f36deeac8aeda8b8a47147">a_que_at</a>(ctx, idx))</td></tr>
 <tr class="separator:ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e138ec46c1856c35bc76ce022b440e4" id="r_ga8e138ec46c1856c35bc76ce022b440e4"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../df/d21/group__a__que.html#ga115130c3543930bed47599647b6b8dae">a_que_push_sort</a>(ctx, key, cmp))</td></tr>
+<tr class="separator:ga8e138ec46c1856c35bc76ce022b440e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c11370fa313cf4a3962bfb4f98de35e" id="r_ga0c11370fa313cf4a3962bfb4f98de35e"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_PUSH_FORE</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="../../df/d21/group__a__que.html#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a>(ctx))</td></tr>
 <tr class="separator:ga0c11370fa313cf4a3962bfb4f98de35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +228,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9cd458955a24562e598ea2b3a6272723" id="r_ga9cd458955a24562e598ea2b3a6272723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d21/group__a__que.html#ga9cd458955a24562e598ea2b3a6272723">a_que_sort_back</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga9cd458955a24562e598ea2b3a6272723"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to queue structure  <br /></td></tr>
 <tr class="separator:ga9cd458955a24562e598ea2b3a6272723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga115130c3543930bed47599647b6b8dae" id="r_ga115130c3543930bed47599647b6b8dae"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d21/group__a__que.html#ga115130c3543930bed47599647b6b8dae">a_que_push_sort</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx, void const *key, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga115130c3543930bed47599647b6b8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the queue and sort it  <br /></td></tr>
+<tr class="separator:ga115130c3543930bed47599647b6b8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa985f78b3a3ab12b01ddfad43424a11c" id="r_gaa985f78b3a3ab12b01ddfad43424a11c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d21/group__a__que.html#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx)</td></tr>
 <tr class="memdesc:gaa985f78b3a3ab12b01ddfad43424a11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the queue forward  <br /></td></tr>
 <tr class="separator:gaa985f78b3a3ab12b01ddfad43424a11c"><td class="memSeparator" colspan="2">&#160;</td></tr>

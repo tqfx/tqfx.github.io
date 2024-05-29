@@ -131,6 +131,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga09f8b27eaf9c34f2cb7d68c3253be18f" id="r_ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memItemLeft" align="right" valign="top"><a id="ga09f8b27eaf9c34f2cb7d68c3253be18f" name="ga09f8b27eaf9c34f2cb7d68c3253be18f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_AT</b>(T,  ctx,  idx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga177dabe3f0f36deeac8aeda8b8a47147">a_que_at</a>(ctx, idx))</td></tr>
 <tr class="separator:ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e138ec46c1856c35bc76ce022b440e4" id="r_ga8e138ec46c1856c35bc76ce022b440e4"><td class="memItemLeft" align="right" valign="top"><a id="ga8e138ec46c1856c35bc76ce022b440e4" name="ga8e138ec46c1856c35bc76ce022b440e4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga115130c3543930bed47599647b6b8dae">a_que_push_sort</a>(ctx, key, cmp))</td></tr>
+<tr class="separator:ga8e138ec46c1856c35bc76ce022b440e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c11370fa313cf4a3962bfb4f98de35e" id="r_ga0c11370fa313cf4a3962bfb4f98de35e"><td class="memItemLeft" align="right" valign="top"><a id="ga0c11370fa313cf4a3962bfb4f98de35e" name="ga0c11370fa313cf4a3962bfb4f98de35e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_PUSH_FORE</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a>(ctx))</td></tr>
 <tr class="separator:ga0c11370fa313cf4a3962bfb4f98de35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +222,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9cd458955a24562e598ea2b3a6272723" id="r_ga9cd458955a24562e598ea2b3a6272723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9cd458955a24562e598ea2b3a6272723">a_que_sort_back</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> const *ctx, int(*cmp)(void const *, void const *))</td></tr>
 <tr class="memdesc:ga9cd458955a24562e598ea2b3a6272723"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert sort backmost element for a pointer to queue structure  <br /></td></tr>
 <tr class="separator:ga9cd458955a24562e598ea2b3a6272723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga115130c3543930bed47599647b6b8dae" id="r_ga115130c3543930bed47599647b6b8dae"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga115130c3543930bed47599647b6b8dae">a_que_push_sort</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx, void const *key, int(*cmp)(void const *, void const *))</td></tr>
+<tr class="memdesc:ga115130c3543930bed47599647b6b8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the queue and sort it  <br /></td></tr>
+<tr class="separator:ga115130c3543930bed47599647b6b8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa985f78b3a3ab12b01ddfad43424a11c" id="r_gaa985f78b3a3ab12b01ddfad43424a11c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx)</td></tr>
 <tr class="memdesc:gaa985f78b3a3ab12b01ddfad43424a11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the queue forward  <br /></td></tr>
 <tr class="separator:gaa985f78b3a3ab12b01ddfad43424a11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,7 +282,7 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a>(ctx) &gt;= <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__que_html_ga3986c7303ad6d032b575baca207b6db4"><div class="ttname"><a href="#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:294</div></div>
+<div class="ttc" id="agroup__a__que_html_ga3986c7303ad6d032b575baca207b6db4"><div class="ttname"><a href="#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:308</div></div>
 <div class="ttc" id="agroup__a__que_html_gada6c29672e8040f01ef2abf42f5f926d"><div class="ttname"><a href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a></div><div class="ttdeci">size_t a_que_siz(a_que const *ctx)</div><div class="ttdoc">access size of a element for a pointer to queue structure</div><div class="ttdef"><b>Definition</b> que.h:34</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -324,7 +330,7 @@ Functions</h2></td></tr>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a>(ctx) &gt;= <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__que_html_gae0f9aa71683c4e8cff28e0e9110d9f80"><div class="ttname"><a href="#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:314</div></div>
+<div class="ttc" id="agroup__a__que_html_gae0f9aa71683c4e8cff28e0e9110d9f80"><div class="ttname"><a href="#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:328</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>type of elements in the queue </td></tr>
@@ -900,6 +906,54 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of queue structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>element pointer </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga115130c3543930bed47599647b6b8dae" name="ga115130c3543930bed47599647b6b8dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga115130c3543930bed47599647b6b8dae">&#9670;&#160;</a></span>a_que_push_sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * a_que_push_sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dec/structa__que.html">a_que</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*</td>          <td class="paramname"><span class="paramname"><em>cmp&#160;</em></span>)(void const *, void const *)&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push an element into the queue and sort it </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of queue structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>the key on the right for insertion sort </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp</td><td>a function that compares two elements <ul>
+<li>cmp(lhs,rhs)==0 *lhs is equivalent to *rhs </li>
+<li>cmp(lhs,rhs)&lt;0 *lhs goes before *rhs </li>
+<li>cmp(lhs,rhs)&gt;0 *lhs goes after *rhs </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
