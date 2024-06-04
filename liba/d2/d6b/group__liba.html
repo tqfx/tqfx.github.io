@@ -705,9 +705,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga68fe2094fd31346808ff2c5f54f509fc" id="r_ga68fe2094fd31346808ff2c5f54f509fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga68fe2094fd31346808ff2c5f54f509fc">a_foreach</a>(T,  it,  ptr,  num)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = it + (num); it &lt; it##_; ++it)</td></tr>
 <tr class="memdesc:ga68fe2094fd31346808ff2c5f54f509fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array  <br /></td></tr>
 <tr class="separator:ga68fe2094fd31346808ff2c5f54f509fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65bb79f272a51689cebbf887a5e78cf1" id="r_ga65bb79f272a51689cebbf887a5e78cf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga65bb79f272a51689cebbf887a5e78cf1">a_forsafe</a>(T,  it,  ptr,  num)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = (num) ? it + (num) : it; it &lt; it##_; ++it)</td></tr>
+<tr class="memdesc:ga65bb79f272a51689cebbf887a5e78cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array     <br /></td></tr>
+<tr class="separator:ga65bb79f272a51689cebbf887a5e78cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac7d625eaabb55fb2799f666a9323042b" id="r_gac7d625eaabb55fb2799f666a9323042b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac7d625eaabb55fb2799f666a9323042b">a_foreach_reverse</a>(T,  it,  ptr,  num)&#160;&#160;&#160;    for (T *it##_ = a_cast_s(T *, ptr) - 1, *it = it##_ + (num); it &gt; it##_; --it)</td></tr>
 <tr class="memdesc:gac7d625eaabb55fb2799f666a9323042b"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array in reverse  <br /></td></tr>
 <tr class="separator:gac7d625eaabb55fb2799f666a9323042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6e6b58dc6754997285e73e492715f05" id="r_gae6e6b58dc6754997285e73e492715f05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae6e6b58dc6754997285e73e492715f05">a_forsafe_reverse</a>(T,  it,  ptr,  num)</td></tr>
+<tr class="memdesc:gae6e6b58dc6754997285e73e492715f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array in reverse     <br /></td></tr>
+<tr class="separator:gae6e6b58dc6754997285e73e492715f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga632ba1b10e16aa2e046c98d5a684a9db" id="r_ga632ba1b10e16aa2e046c98d5a684a9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga632ba1b10e16aa2e046c98d5a684a9db">a_iterate</a>(T,  it,  ptr,  end)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = a_cast_s(T *, end); it &lt; it##_; ++it)</td></tr>
 <tr class="memdesc:ga632ba1b10e16aa2e046c98d5a684a9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over an array  <br /></td></tr>
 <tr class="separator:ga632ba1b10e16aa2e046c98d5a684a9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1325,6 +1331,93 @@ Variables</h2></td></tr>
     <tr><td class="paramname">I</td><td>index type of the iteration </td></tr>
     <tr><td class="paramname">i</td><td>index variable of the iteration </td></tr>
     <tr><td class="paramname">n</td><td>final value of the iteration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga65bb79f272a51689cebbf887a5e78cf1" name="ga65bb79f272a51689cebbf887a5e78cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65bb79f272a51689cebbf887a5e78cf1">&#9670;&#160;</a></span>a_forsafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_forsafe</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>T</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>&#160;)&#160;&#160;&#160;    for (T *it = a_cast_s(T *, ptr), *it##_ = (num) ? it + (num) : it; it &lt; it##_; ++it)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterate over an array    </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>the element type in this array </td></tr>
+    <tr><td class="paramname">it</td><td>pointer to the current element </td></tr>
+    <tr><td class="paramname">ptr</td><td>starting address of this array </td></tr>
+    <tr><td class="paramname">num</td><td>number of elements in this array    </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae6e6b58dc6754997285e73e492715f05" name="gae6e6b58dc6754997285e73e492715f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6e6b58dc6754997285e73e492715f05">&#9670;&#160;</a></span>a_forsafe_reverse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define a_forsafe_reverse</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>T</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it##_ = (num) ? a_cast_s(T *, ptr) - 1 : a_cast_s(T *, ptr), \</div>
+<div class="line">           *it = (num) ? it##_ + (num) : it##_;                          \</div>
+<div class="line">         it &gt; it##_; --it)</div>
+</div><!-- fragment -->
+<p>iterate over an array in reverse    </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>the element type in this array </td></tr>
+    <tr><td class="paramname">it</td><td>pointer to the current element </td></tr>
+    <tr><td class="paramname">ptr</td><td>starting address of this array </td></tr>
+    <tr><td class="paramname">num</td><td>number of elements in this array    </td></tr>
   </table>
   </dd>
 </dl>
