@@ -152,12 +152,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga6b455862b25744315102f10e30bfd641" id="r_ga6b455862b25744315102f10e30bfd641"><td class="memItemLeft" align="right" valign="top"><a id="ga6b455862b25744315102f10e30bfd641" name="ga6b455862b25744315102f10e30bfd641"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_REMOVE</b>(T,  ctx,  idx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#gaa727cba6ef06c923aea126176602d989">a_que_remove</a>(ctx, idx))</td></tr>
 <tr class="separator:ga6b455862b25744315102f10e30bfd641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3986c7303ad6d032b575baca207b6db4" id="r_ga3986c7303ad6d032b575baca207b6db4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a>(T,  it,  ctx)</td></tr>
-<tr class="memdesc:ga3986c7303ad6d032b575baca207b6db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a queue  <br /></td></tr>
-<tr class="separator:ga3986c7303ad6d032b575baca207b6db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae0f9aa71683c4e8cff28e0e9110d9f80" id="r_gae0f9aa71683c4e8cff28e0e9110d9f80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a>(T,  it,  ctx)</td></tr>
-<tr class="memdesc:gae0f9aa71683c4e8cff28e0e9110d9f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a queue in reverse  <br /></td></tr>
-<tr class="separator:gae0f9aa71683c4e8cff28e0e9110d9f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39fdcf86f8abb80ecf11dba8283e9235" id="r_ga39fdcf86f8abb80ecf11dba8283e9235"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39fdcf86f8abb80ecf11dba8283e9235">a_que_foreach</a>(T,  P,  it,  ctx)</td></tr>
+<tr class="memdesc:ga39fdcf86f8abb80ecf11dba8283e9235"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a queue  <br /></td></tr>
+<tr class="separator:ga39fdcf86f8abb80ecf11dba8283e9235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc55e11e91e08696fa139d99777a7fe6" id="r_gafc55e11e91e08696fa139d99777a7fe6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafc55e11e91e08696fa139d99777a7fe6">a_que_foreach_reverse</a>(T,  P,  it,  ctx)</td></tr>
+<tr class="memdesc:gafc55e11e91e08696fa139d99777a7fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a queue in reverse  <br /></td></tr>
+<tr class="separator:gafc55e11e91e08696fa139d99777a7fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -246,8 +246,8 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga3986c7303ad6d032b575baca207b6db4" name="ga3986c7303ad6d032b575baca207b6db4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3986c7303ad6d032b575baca207b6db4">&#9670;&#160;</a></span>a_que_foreach</h2>
+<a id="ga39fdcf86f8abb80ecf11dba8283e9235" name="ga39fdcf86f8abb80ecf11dba8283e9235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39fdcf86f8abb80ecf11dba8283e9235">&#9670;&#160;</a></span>a_que_foreach</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,6 +260,11 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
         </tr>
         <tr>
@@ -269,24 +274,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;head_.next),                 \</div>
-<div class="line">           *it##_ = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;next);           \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T P it = a_cast_r(T P, (ctx)-&gt;head_.next),                \</div>
+<div class="line">             P it##_ = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;next);        \</div>
 <div class="line">         a_list_(*, it) != &amp;(ctx)-&gt;head_                           \</div>
-<div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it) + 1)), 1) \</div>
+<div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it) + 1)), 1) \</div>
 <div class="line">             : (0);                                                \</div>
-<div class="line">         it = it##_, it##_ = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;next))</div>
+<div class="line">         it = it##_, it##_ = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;next))</div>
 <div class="ttc" id="agroup__a__list_html_ga2809c539fa729c0714f7820646165ccc"><div class="ttname"><a href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a></div><div class="ttdeci">#define a_list_(_, x)</div><div class="ttdoc">cast a list pointer from another type pointer</div><div class="ttdef"><b>Definition</b> list.h:35</div></div>
 </div><!-- fragment -->
 <p>iterate over a queue </p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a>(T, it, ctx)</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="#ga39fdcf86f8abb80ecf11dba8283e9235">a_que_foreach</a>(T, *, it, ctx)</div>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a>(ctx) &gt;= <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__que_html_ga3986c7303ad6d032b575baca207b6db4"><div class="ttname"><a href="#ga3986c7303ad6d032b575baca207b6db4">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:308</div></div>
+<div class="ttc" id="agroup__a__que_html_ga39fdcf86f8abb80ecf11dba8283e9235"><div class="ttname"><a href="#ga39fdcf86f8abb80ecf11dba8283e9235">a_que_foreach</a></div><div class="ttdeci">#define a_que_foreach(T, P, it, ctx)</div><div class="ttdoc">iterate over a queue</div><div class="ttdef"><b>Definition</b> que.h:309</div></div>
 <div class="ttc" id="agroup__a__que_html_gada6c29672e8040f01ef2abf42f5f926d"><div class="ttname"><a href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a></div><div class="ttdeci">size_t a_que_siz(a_que const *ctx)</div><div class="ttdoc">access size of a element for a pointer to queue structure</div><div class="ttdef"><b>Definition</b> que.h:34</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">T</td><td>type of elements in the queue </td></tr>
+    <tr><td class="paramname">T</td><td>the prefix of the element type </td></tr>
+    <tr><td class="paramname">P</td><td>the suffix of the element type </td></tr>
     <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../dc/dec/structa__que.html" title="instance structure for basic queue">a_que</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of queue structure </td></tr>
   </table>
@@ -295,8 +301,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae0f9aa71683c4e8cff28e0e9110d9f80" name="gae0f9aa71683c4e8cff28e0e9110d9f80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae0f9aa71683c4e8cff28e0e9110d9f80">&#9670;&#160;</a></span>a_que_foreach_reverse</h2>
+<a id="gafc55e11e91e08696fa139d99777a7fe6" name="gafc55e11e91e08696fa139d99777a7fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc55e11e91e08696fa139d99777a7fe6">&#9670;&#160;</a></span>a_que_foreach_reverse</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,6 +315,11 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
         </tr>
         <tr>
@@ -318,22 +329,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T *it = a_cast_r(T *, (ctx)-&gt;head_.prev),                 \</div>
-<div class="line">           *it##_ = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;prev);           \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (T P it = a_cast_r(T P, (ctx)-&gt;head_.prev),                \</div>
+<div class="line">             P it##_ = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;prev);        \</div>
 <div class="line">         a_list_(*, it) != &amp;(ctx)-&gt;head_                           \</div>
-<div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it) + 1)), 1) \</div>
+<div class="line">             ? ((<span class="keywordtype">void</span>)(it = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it) + 1)), 1) \</div>
 <div class="line">             : (0);                                                \</div>
-<div class="line">         it = it##_, it##_ = a_cast_r(T *, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;prev))</div>
+<div class="line">         it = it##_, it##_ = a_cast_r(T P, <a class="code hl_define" href="../../db/d65/group__a__list.html#ga2809c539fa729c0714f7820646165ccc">a_list_</a>(*, it)-&gt;prev))</div>
 </div><!-- fragment -->
 <p>iterate over a queue in reverse </p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a>(T, it, ctx)</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="#gafc55e11e91e08696fa139d99777a7fe6">a_que_foreach_reverse</a>(T, *, it, ctx)</div>
 <div class="line">{</div>
 <div class="line">    assert(<a class="code hl_function" href="#gada6c29672e8040f01ef2abf42f5f926d">a_que_siz</a>(ctx) &gt;= <span class="keyword">sizeof</span>(*it));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__que_html_gae0f9aa71683c4e8cff28e0e9110d9f80"><div class="ttname"><a href="#gae0f9aa71683c4e8cff28e0e9110d9f80">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:328</div></div>
+<div class="ttc" id="agroup__a__que_html_gafc55e11e91e08696fa139d99777a7fe6"><div class="ttname"><a href="#gafc55e11e91e08696fa139d99777a7fe6">a_que_foreach_reverse</a></div><div class="ttdeci">#define a_que_foreach_reverse(T, P, it, ctx)</div><div class="ttdoc">iterate over a queue in reverse</div><div class="ttdef"><b>Definition</b> que.h:330</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">T</td><td>type of elements in the queue </td></tr>
+    <tr><td class="paramname">T</td><td>the prefix of the element type </td></tr>
+    <tr><td class="paramname">P</td><td>the suffix of the element type </td></tr>
     <tr><td class="paramname">it</td><td>the &amp;<a class="el" href="../../dc/dec/structa__que.html" title="instance structure for basic queue">a_que</a> to use as a loop counter </td></tr>
     <tr><td class="paramname">ctx</td><td>points to an instance of queue structure </td></tr>
   </table>
@@ -1053,14 +1065,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>insert sort backmost element for a pointer to queue structure </p>
-<div class="fragment"><div class="line">T *obj = <a class="code hl_function" href="#ga34fcc5af6b22fa136e3f8b85677f9a9d">a_que_push_back</a>(T, ctx);</div>
+<div class="fragment"><div class="line">T *obj = A_QUE_PUSH_BACK(T, ctx);</div>
 <div class="line"><span class="keywordflow">if</span> (obj)</div>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
 <div class="line">    INIT(obj);</div>
 <div class="line">    <a class="code hl_function" href="#ga9cd458955a24562e598ea2b3a6272723">a_que_sort_back</a>(ctx, cmp);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__a__que_html_ga34fcc5af6b22fa136e3f8b85677f9a9d"><div class="ttname"><a href="#ga34fcc5af6b22fa136e3f8b85677f9a9d">a_que_push_back</a></div><div class="ttdeci">void * a_que_push_back(a_que *ctx)</div><div class="ttdoc">push an element into the queue backward</div></div>
 <div class="ttc" id="agroup__a__que_html_ga9cd458955a24562e598ea2b3a6272723"><div class="ttname"><a href="#ga9cd458955a24562e598ea2b3a6272723">a_que_sort_back</a></div><div class="ttdeci">void a_que_sort_back(a_que const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort backmost element for a pointer to queue structure</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1097,7 +1108,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>insert sort foremost element for a pointer to queue structure </p>
-<div class="fragment"><div class="line">T *obj = <a class="code hl_function" href="#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a>(T, ctx);</div>
+<div class="fragment"><div class="line">T *obj = A_QUE_PUSH_FORE(T, ctx);</div>
 <div class="line"><span class="keywordflow">if</span> (obj)</div>
 <div class="line">{</div>
 <div class="line">    CTOR(obj);</div>
@@ -1105,7 +1116,6 @@ Functions</h2></td></tr>
 <div class="line">    <a class="code hl_function" href="#ga084cff3c026513ae463b7c16ed264a76">a_que_sort_fore</a>(ctx, cmp);</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__a__que_html_ga084cff3c026513ae463b7c16ed264a76"><div class="ttname"><a href="#ga084cff3c026513ae463b7c16ed264a76">a_que_sort_fore</a></div><div class="ttdeci">void a_que_sort_fore(a_que const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">insert sort foremost element for a pointer to queue structure</div></div>
-<div class="ttc" id="agroup__a__que_html_gaa985f78b3a3ab12b01ddfad43424a11c"><div class="ttname"><a href="#gaa985f78b3a3ab12b01ddfad43424a11c">a_que_push_fore</a></div><div class="ttdeci">void * a_que_push_fore(a_que *ctx)</div><div class="ttdoc">push an element into the queue forward</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of queue structure </td></tr>
