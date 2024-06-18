@@ -129,7 +129,7 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_BACK</b>(T,  ctx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga55a7225d83b489d5061221e643e2fc49">a_que_back</a>(ctx))</td></tr>
 <tr class="separator:gaf0306f6fa5d0a36f87d8d714ff6a439a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga09f8b27eaf9c34f2cb7d68c3253be18f" id="r_ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memItemLeft" align="right" valign="top"><a id="ga09f8b27eaf9c34f2cb7d68c3253be18f" name="ga09f8b27eaf9c34f2cb7d68c3253be18f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_AT</b>(T,  ctx,  idx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga177dabe3f0f36deeac8aeda8b8a47147">a_que_at</a>(ctx, idx))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_AT</b>(T,  ctx,  idx)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#gaca1d25427e3f44b3c104bc74c18a7c4e">a_que_at</a>(ctx, idx))</td></tr>
 <tr class="separator:ga09f8b27eaf9c34f2cb7d68c3253be18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8e138ec46c1856c35bc76ce022b440e4" id="r_ga8e138ec46c1856c35bc76ce022b440e4"><td class="memItemLeft" align="right" valign="top"><a id="ga8e138ec46c1856c35bc76ce022b440e4" name="ga8e138ec46c1856c35bc76ce022b440e4"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_QUE_PUSH_SORT</b>(T,  ctx,  key,  cmp)&#160;&#160;&#160;a_cast_s(T *, <a class="el" href="#ga115130c3543930bed47599647b6b8dae">a_que_push_sort</a>(ctx, key, cmp))</td></tr>
@@ -204,9 +204,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga40d239d8b73ed7f2b0e27742948212ab" id="r_ga40d239d8b73ed7f2b0e27742948212ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga40d239d8b73ed7f2b0e27742948212ab">a_que_move</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx, <a class="el" href="../../dc/dec/structa__que.html">a_que</a> *obj)</td></tr>
 <tr class="memdesc:ga40d239d8b73ed7f2b0e27742948212ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a pointer to queue structure by moving  <br /></td></tr>
 <tr class="separator:ga40d239d8b73ed7f2b0e27742948212ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga177dabe3f0f36deeac8aeda8b8a47147" id="r_ga177dabe3f0f36deeac8aeda8b8a47147"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga177dabe3f0f36deeac8aeda8b8a47147">a_que_at</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> const *ctx, intmax_t idx)</td></tr>
-<tr class="memdesc:ga177dabe3f0f36deeac8aeda8b8a47147"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to queue structure  <br /></td></tr>
-<tr class="separator:ga177dabe3f0f36deeac8aeda8b8a47147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca1d25427e3f44b3c104bc74c18a7c4e" id="r_gaca1d25427e3f44b3c104bc74c18a7c4e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaca1d25427e3f44b3c104bc74c18a7c4e">a_que_at</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> const *ctx, ptrdiff_t idx)</td></tr>
+<tr class="memdesc:gaca1d25427e3f44b3c104bc74c18a7c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">access specified element for a pointer to queue structure  <br /></td></tr>
+<tr class="separator:gaca1d25427e3f44b3c104bc74c18a7c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea490ebce7f7acef5b4a0ddf8618df83" id="r_gaea490ebce7f7acef5b4a0ddf8618df83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaea490ebce7f7acef5b4a0ddf8618df83">a_que_drop</a> (<a class="el" href="../../dc/dec/structa__que.html">a_que</a> *ctx, void(*dtor)(void *))</td></tr>
 <tr class="memdesc:gaea490ebce7f7acef5b4a0ddf8618df83"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all the elements for a pointer to queue structure  <br /></td></tr>
 <tr class="separator:gaea490ebce7f7acef5b4a0ddf8618df83"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,8 +355,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga177dabe3f0f36deeac8aeda8b8a47147" name="ga177dabe3f0f36deeac8aeda8b8a47147"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga177dabe3f0f36deeac8aeda8b8a47147">&#9670;&#160;</a></span>a_que_at()</h2>
+<a id="gaca1d25427e3f44b3c104bc74c18a7c4e" name="gaca1d25427e3f44b3c104bc74c18a7c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca1d25427e3f44b3c104bc74c18a7c4e">&#9670;&#160;</a></span>a_que_at()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +369,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">intmax_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+          <td class="paramtype">ptrdiff_t</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
