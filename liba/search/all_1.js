@@ -6,7 +6,6 @@ var searchData=
   ['basic_20vector_20library_3',['basic vector library',['../da/dc4/group__a__vec.html',1,'']]],
   ['bell_20shaped_20velocity_20trajectory_4',['bell-shaped velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'']]],
   ['binary_20search_20tree_5',['binary search tree',['../dd/dba/group__a__avl.html',1,'AVL binary search tree'],['../de/d40/group__a__rbt.html',1,'red–black binary search tree']]],
-  ['block_6',['block',['../d0/d27/structa__pid__fuzzy.html#aec0805243888a304a2f1877d25037626',1,'a_pid_fuzzy']]],
-  ['buf_2eh_7',['buf.h',['../d6/d6d/buf_8h.html',1,'']]],
-  ['buffer_20library_8',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]]
+  ['buf_2eh_6',['buf.h',['../d6/d6d/buf_8h.html',1,'']]],
+  ['buffer_20library_7',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]]
 ];

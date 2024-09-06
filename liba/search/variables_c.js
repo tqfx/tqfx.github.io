@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['node_0',['node',['../d5/d1c/uniona__avl.html#af8d6bfd16dfb5391991621650abd1800',1,'a_avl::node'],['../d0/d4d/uniona__rbt.html#a13655f7224385d623d627dce942745dc',1,'a_rbt::node']]],
-  ['num_5f_1',['num_',['../de/d98/structa__buf.html#aa2acf41c2832778e78136b22b1cac8c3',1,'a_buf::num_'],['../dc/dec/structa__que.html#af1e61aa8921af582c883ac389924df83',1,'a_que::num_'],['../d8/d79/structa__str.html#a2c8fed62b5cdf79f8b3aa30d6c4014f2',1,'a_str::num_'],['../d7/d3b/structa__vec.html#a9651a2720cebd03c92388338ce3d0132',1,'a_vec::num_']]],
-  ['num_5fn_2',['num_n',['../de/ddd/structa__tf.html#a8495ed1d9b1f2fa33fb798d55b428024',1,'a_tf']]],
-  ['num_5fp_3',['num_p',['../de/ddd/structa__tf.html#aa9b8cc0e8cce561f3b824b11b5089bff',1,'a_tf']]]
+  ['opr_0',['opr',['../d0/d27/structa__pid__fuzzy.html#a11be79379be80a0f315100eb6b13ae9d',1,'a_pid_fuzzy']]],
+  ['out_1',['out',['../db/d89/structa__pid.html#a95fa84e6c923a21c5cf86022fefd2cd7',1,'a_pid']]],
+  ['outmax_2',['outmax',['../db/d89/structa__pid.html#a4db1dba54cd23ecca363e8e06326c6b6',1,'a_pid']]],
+  ['outmin_3',['outmin',['../db/d89/structa__pid.html#ad50df9408aca5243f55c697f19881d0c',1,'a_pid']]],
+  ['output_4',['output',['../d8/db1/structa__hpf.html#aa080eff19336047b60ec8f64d10f824a',1,'a_hpf::output'],['../d8/d6c/structa__lpf.html#a60f586734299959c1eb436b7e8c637ab',1,'a_lpf::output'],['../de/ddd/structa__tf.html#ac6625f8ca3815e878c8c67dafb9dd605',1,'a_tf::output']]]
 ];

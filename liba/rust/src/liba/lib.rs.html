@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="liba" data-themes="" data-resource-suffix="" data-rustdoc-version="1.80.0 (051478957 2024-07-21)" data-channel="1.80.0" data-search-js="search-d52510db62a78183.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-dd39b87e5fcfba68.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="liba" data-themes="" data-resource-suffix="" data-rustdoc-version="1.80.1 (3f5fd8dd4 2024-08-06)" data-channel="1.80.1" data-search-js="search-d52510db62a78183.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../../static.files/src-script-e66d777a5a92e9b2.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-20a3ad099b048cf2.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -2130,7 +2130,7 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: float, ki: float, kd: float);
+    <span class="kw">fn </span>a_pid_set_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: float, ki: float, kd: float);
     <span class="kw">fn </span>a_pid_run(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
@@ -2145,8 +2145,8 @@ liba = "0.1"
     }
     <span class="doccomment">/// set proportional integral derivative constant for PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_kpid(<span class="self">self</span>, kp, ki, kd) };
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for PID controller
@@ -2204,7 +2204,7 @@ liba = "0.1"
     idx: <span class="kw-2">*mut </span>c_uint,
     val: <span class="kw-2">*mut </span>float,
     <span class="doccomment">/// fuzzy relational operator
-    </span>op: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
+    </span>opr: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
     <span class="doccomment">/// base proportional constant
     </span><span class="kw">pub </span>kp: float,
     <span class="doccomment">/// base integral constant
@@ -2212,9 +2212,9 @@ liba = "0.1"
     <span class="doccomment">/// base derivative constant
     </span><span class="kw">pub </span>kd: float,
     <span class="doccomment">/// number of order in the square matrix
-    </span>order: c_uint,
+    </span>nrule: c_uint,
     <span class="doccomment">/// maximum number triggered by the rule
-    </span>block: c_uint,
+    </span>nfuzz: c_uint,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>pid_fuzzy {
@@ -2229,20 +2229,22 @@ liba = "0.1"
             mkd: null(),
             idx: null_mut(),
             val: null_mut(),
-            op: <span class="kw">unsafe </span>{ a_pid_fuzzy_op(fuzzy::EQU) },
+            opr: <span class="kw">unsafe </span>{ a_pid_fuzzy_opr(fuzzy::EQU) },
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
-            order: <span class="number">0</span>,
-            block: <span class="number">0</span>,
+            nrule: <span class="number">0</span>,
+            nfuzz: <span class="number">0</span>,
         }
     }
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_fuzzy_op(op: c_uint) -&gt; <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float;
-    <span class="kw">fn </span>a_pid_fuzzy_set_op(ctx: <span class="kw-2">*mut </span>pid_fuzzy, op: c_uint);
-    <span class="kw">fn </span>a_pid_fuzzy_rule(
+    <span class="kw">fn </span>a_pid_fuzzy_opr(opr: c_uint) -&gt; <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float;
+    <span class="kw">fn </span>a_pid_fuzzy_set_opr(ctx: <span class="kw-2">*mut </span>pid_fuzzy, opr: c_uint);
+    <span class="kw">fn </span>a_pid_fuzzy_bfuzz(ctx: <span class="kw-2">*const </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
+    <span class="kw">fn </span>a_pid_fuzzy_set_bfuzz(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
+    <span class="kw">fn </span>a_pid_fuzzy_set_rule(
         ctx: <span class="kw-2">*mut </span>pid_fuzzy,
         num: c_uint,
         me: <span class="kw-2">*const </span>float,
@@ -2251,9 +2253,7 @@ liba = "0.1"
         mki: <span class="kw-2">*const </span>float,
         mkd: <span class="kw-2">*const </span>float,
     );
-    <span class="kw">fn </span>a_pid_fuzzy_block(ctx: <span class="kw-2">*mut </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
-    <span class="kw">fn </span>a_pid_fuzzy_set_block(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
-    <span class="kw">fn </span>a_pid_fuzzy_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
+    <span class="kw">fn </span>a_pid_fuzzy_set_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
     <span class="kw">fn </span>a_pid_fuzzy_run(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_pos(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_fuzzy_inc(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
@@ -2266,9 +2266,32 @@ liba = "0.1"
     </span><span class="kw">pub fn </span>new() -&gt; <span class="self">Self </span>{
         <span class="self">Self</span>::default()
     }
+    <span class="doccomment">/// set fuzzy relational operator for fuzzy PID controller
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>set_opr(<span class="kw-2">&amp;mut </span><span class="self">self</span>, opr: c_uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_opr(<span class="self">self</span>, opr) };
+        <span class="self">self
+    </span>}
+    <span class="doccomment">/// compute size of memory block for fuzzy PID controller
+    </span><span class="attr">#[inline(always)]
+    #[allow(non_snake_case)]
+    </span><span class="kw">pub const fn </span>BFUZZ(n: usize) -&gt; usize {
+        size_of::&lt;c_uint&gt;() * n * <span class="number">2 </span>+ size_of::&lt;float&gt;() * n * (<span class="number">2 </span>+ n)
+    }
+    <span class="doccomment">/// get memory block for fuzzy PID controller
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>bfuzz(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[u8] {
+        <span class="kw">unsafe </span>{ from_raw_parts_mut(a_pid_fuzzy_bfuzz(<span class="self">self</span>), <span class="self">Self</span>::BFUZZ(<span class="self">self</span>.nfuzz <span class="kw">as </span>usize)) }
+    }
+    <span class="doccomment">/// set memory block for fuzzy PID controller
+    </span><span class="attr">#[inline(always)]
+    </span><span class="kw">pub fn </span>set_bfuzz(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ptr: <span class="kw-2">&amp;mut </span>[u8], num: usize) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_bfuzz(<span class="self">self</span>, ptr.as_mut_ptr(), num) };
+        <span class="self">self
+    </span>}
     <span class="doccomment">/// set rule base for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>rule(
+    </span><span class="kw">pub fn </span>set_rule(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         col: usize,
         me: <span class="kw-2">&amp;</span>[float],
@@ -2278,7 +2301,7 @@ liba = "0.1"
         mkd: <span class="kw-2">&amp;</span>[float],
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
-            a_pid_fuzzy_rule(
+            a_pid_fuzzy_set_rule(
                 <span class="self">self</span>,
                 col <span class="kw">as </span>c_uint,
                 me.as_ptr(),
@@ -2292,31 +2315,8 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// set proportional integral derivative constant for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_kpid(<span class="self">self</span>, kp, ki, kd) };
-        <span class="self">self
-    </span>}
-    <span class="doccomment">/// compute size of memory block for fuzzy PID controller
-    </span><span class="attr">#[inline(always)]
-    #[allow(non_snake_case)]
-    </span><span class="kw">pub const fn </span>BLOCK(n: usize) -&gt; usize {
-        size_of::&lt;c_uint&gt;() * n * <span class="number">2 </span>+ size_of::&lt;float&gt;() * n * (<span class="number">2 </span>+ n)
-    }
-    <span class="doccomment">/// get memory block for fuzzy PID controller
-    </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>block(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[u8] {
-        <span class="kw">unsafe </span>{ from_raw_parts_mut(a_pid_fuzzy_block(<span class="self">self</span>), <span class="self">Self</span>::BLOCK(<span class="self">self</span>.block <span class="kw">as </span>usize)) }
-    }
-    <span class="doccomment">/// set memory block for fuzzy PID controller
-    </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_block(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ptr: <span class="kw-2">&amp;mut </span>[u8], num: usize) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_block(<span class="self">self</span>, ptr.as_mut_ptr(), num) };
-        <span class="self">self
-    </span>}
-    <span class="doccomment">/// set fuzzy relational operator for fuzzy PID controller
-    </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>op(<span class="kw-2">&amp;mut </span><span class="self">self</span>, op: c_uint) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_op(<span class="self">self</span>, op) };
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_fuzzy_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for fuzzy PID controller
@@ -2374,8 +2374,8 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_neuro_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: float, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_neuro_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: float, wi: float, wd: float);
+    <span class="kw">fn </span>a_pid_neuro_set_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: float, kp: float, ki: float, kd: float);
+    <span class="kw">fn </span>a_pid_neuro_set_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: float, wi: float, wd: float);
     <span class="kw">fn </span>a_pid_neuro_run(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_neuro_inc(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
     <span class="kw">fn </span>a_pid_neuro_zero(ctx: <span class="kw-2">*mut </span>pid_neuro);
@@ -2389,14 +2389,14 @@ liba = "0.1"
     }
     <span class="doccomment">/// set proportional integral derivative constant for single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, k: float, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_neuro_kpid(<span class="self">self</span>, k, kp, ki, kd) };
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, k: float, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_neuro_set_kpid(<span class="self">self</span>, k, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// set proportional integral derivative weight for single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>wpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, wp: float, wi: float, wd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
-        <span class="kw">unsafe </span>{ a_pid_neuro_wpid(<span class="self">self</span>, wp, wi, wd) };
+    </span><span class="kw">pub fn </span>set_wpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, wp: float, wi: float, wd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+        <span class="kw">unsafe </span>{ a_pid_neuro_set_wpid(<span class="self">self</span>, wp, wi, wd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for single neuron PID controller
