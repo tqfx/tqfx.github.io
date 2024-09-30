@@ -34,7 +34,7 @@ window.MathJax = {
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">liba<span id="projectnumber">&#160;0.1.14</span>
+   <div id="projectname">liba<span id="projectnumber">&#160;0.1.15</span>
    </div>
    <div id="projectbrief">An algorithm library based on C/C++</div>
   </td>
@@ -148,6 +148,8 @@ Topics</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d21/group__a__que.html">basic queue library</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d40/group__a__rbt.html">red–black binary search tree</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8d/group__a__regress.html">regression</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d14/group__a__slist.html">singly linked list</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -595,6 +597,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga84aacec7427e328d0a6b4c897cb02059" id="r_ga84aacec7427e328d0a6b4c897cb02059"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84aacec7427e328d0a6b4c897cb02059">A_ABS</a>(x)</td></tr>
 <tr class="memdesc:ga84aacec7427e328d0a6b4c897cb02059"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of x, \( |x| \)  <br /></td></tr>
 <tr class="separator:ga84aacec7427e328d0a6b4c897cb02059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9217d05180be054d201866775f2aa1d6" id="r_ga9217d05180be054d201866775f2aa1d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9217d05180be054d201866775f2aa1d6">A_ABS_</a>(f,  g)</td></tr>
+<tr class="memdesc:ga9217d05180be054d201866775f2aa1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of f-g, \( |f-g| \)  <br /></td></tr>
+<tr class="separator:ga9217d05180be054d201866775f2aa1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f85fcc489eeaed9a23932445c7dec1" id="r_ga16f85fcc489eeaed9a23932445c7dec1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga16f85fcc489eeaed9a23932445c7dec1">A_MIN</a>(x,  y)</td></tr>
 <tr class="memdesc:ga16f85fcc489eeaed9a23932445c7dec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum value between x and y  <br /></td></tr>
 <tr class="separator:ga16f85fcc489eeaed9a23932445c7dec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -602,8 +607,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum value between x and y  <br /></td></tr>
 <tr class="separator:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6616a52c6eb69d1026c534ed1a54aebb" id="r_ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6616a52c6eb69d1026c534ed1a54aebb">A_SGN</a>(x)</td></tr>
-<tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}{x}=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \)  <br /></td></tr>
+<tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}(x)=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \)  <br /></td></tr>
 <tr class="separator:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4acf6d6f51e216861115d8d0fd4a567" id="r_gad4acf6d6f51e216861115d8d0fd4a567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4acf6d6f51e216861115d8d0fd4a567">A_SGN_</a>(f,  g)</td></tr>
+<tr class="memdesc:gad4acf6d6f51e216861115d8d0fd4a567"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}(f,g)=\begin{cases}+1&amp;f&gt;g\\0&amp;f=g\\-1&amp;f&lt;g\end{cases} \)  <br /></td></tr>
+<tr class="separator:gad4acf6d6f51e216861115d8d0fd4a567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0f84bc53cc98d629c23ce6448bd96fed" id="r_ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0f84bc53cc98d629c23ce6448bd96fed">A_SAT</a>(x,  min,  max)</td></tr>
 <tr class="memdesc:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">saturation value of x, \( \texttt{sat}(x,min,max)=\begin{cases}min&amp;min&gt;x\\max&amp;x&gt;max\\x&amp;else\end{cases} \)  <br /></td></tr>
 <tr class="separator:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -752,12 +760,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_u64_setb</b> (void 
 <tr class="memitem:gaea6e3e7ca8cb5376df8fb21b243a2c1e" id="r_gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaea6e3e7ca8cb5376df8fb21b243a2c1e">a_hash_sdbm_</a> (void const *ptr, size_t siz, uint32_t val)</td></tr>
 <tr class="memdesc:gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a hash function whose prime number is 65599  <br /></td></tr>
 <tr class="separator:gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f71d4c9112b32e65f1949ceff4928af" id="r_ga2f71d4c9112b32e65f1949ceff4928af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2f71d4c9112b32e65f1949ceff4928af">a_float_push</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
-<tr class="memdesc:ga2f71d4c9112b32e65f1949ceff4928af"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array and save the cache array  <br /></td></tr>
-<tr class="separator:ga2f71d4c9112b32e65f1949ceff4928af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga113c8025d4c6ce9806869ee2afce2ed6" id="r_ga113c8025d4c6ce9806869ee2afce2ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga113c8025d4c6ce9806869ee2afce2ed6">a_float_roll</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
-<tr class="memdesc:ga113c8025d4c6ce9806869ee2afce2ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array circularly, array&gt;&gt;shift  <br /></td></tr>
-<tr class="separator:ga113c8025d4c6ce9806869ee2afce2ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e4820c49c207c9a7213eada56637ce5" id="r_ga2e4820c49c207c9a7213eada56637ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2e4820c49c207c9a7213eada56637ce5">a_float_push_fore</a> (double *p, size_t n, double x)</td></tr>
+<tr class="memdesc:ga2e4820c49c207c9a7213eada56637ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the front of a float array  <br /></td></tr>
+<tr class="separator:ga2e4820c49c207c9a7213eada56637ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab100b41149b0bed3cb7a78007ae8b279" id="r_gab100b41149b0bed3cb7a78007ae8b279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab100b41149b0bed3cb7a78007ae8b279">a_float_push_back</a> (double *p, size_t n, double x)</td></tr>
+<tr class="memdesc:gab100b41149b0bed3cb7a78007ae8b279"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the end of a float array  <br /></td></tr>
+<tr class="separator:gab100b41149b0bed3cb7a78007ae8b279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac97d39d90f02cbc28c09795e59876f0c" id="r_gac97d39d90f02cbc28c09795e59876f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac97d39d90f02cbc28c09795e59876f0c">a_float_push_fore_</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
+<tr class="memdesc:gac97d39d90f02cbc28c09795e59876f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">push the elements into the front of a float array  <br /></td></tr>
+<tr class="separator:gac97d39d90f02cbc28c09795e59876f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5825b0eeea60b379b763cbee872d211a" id="r_ga5825b0eeea60b379b763cbee872d211a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5825b0eeea60b379b763cbee872d211a">a_float_push_back_</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
+<tr class="memdesc:ga5825b0eeea60b379b763cbee872d211a"><td class="mdescLeft">&#160;</td><td class="mdescRight">push the elements into the end of a float array  <br /></td></tr>
+<tr class="separator:ga5825b0eeea60b379b763cbee872d211a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72a7d0e0a39a83e7c36da1d3858d56e2" id="r_ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga72a7d0e0a39a83e7c36da1d3858d56e2">a_float_roll_fore</a> (double *p, size_t n)</td></tr>
+<tr class="memdesc:ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll forward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4b95416e55e83e196699275ab53bfbd" id="r_gab4b95416e55e83e196699275ab53bfbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab4b95416e55e83e196699275ab53bfbd">a_float_roll_back</a> (double *p, size_t n)</td></tr>
+<tr class="memdesc:gab4b95416e55e83e196699275ab53bfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll backward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:gab4b95416e55e83e196699275ab53bfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae50de1f1d5b7dda036113a12f7f06fe5" id="r_gae50de1f1d5b7dda036113a12f7f06fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae50de1f1d5b7dda036113a12f7f06fe5">a_float_roll_fore_</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
+<tr class="memdesc:gae50de1f1d5b7dda036113a12f7f06fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll forward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:gae50de1f1d5b7dda036113a12f7f06fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50ce80220e78abefd7fcd839a8b094a5" id="r_ga50ce80220e78abefd7fcd839a8b094a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga50ce80220e78abefd7fcd839a8b094a5">a_float_roll_back_</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
+<tr class="memdesc:ga50ce80220e78abefd7fcd839a8b094a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll backward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:ga50ce80220e78abefd7fcd839a8b094a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadae140e4c4543ad71252c8c0386d8f1d" id="r_gadae140e4c4543ad71252c8c0386d8f1d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadae140e4c4543ad71252c8c0386d8f1d">a_float_mean</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:gadae140e4c4543ad71252c8c0386d8f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the mean of a float array  <br /></td></tr>
+<tr class="separator:gadae140e4c4543ad71252c8c0386d8f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9ec3c27a975ef71a439b6eb45ee0938" id="r_gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf9ec3c27a975ef71a439b6eb45ee0938">a_float_sum</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the sum of a float array  <br /></td></tr>
+<tr class="separator:gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d448b046b220412b46339b0a284a984" id="r_ga5d448b046b220412b46339b0a284a984"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5d448b046b220412b46339b0a284a984">a_float_sum1</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:ga5d448b046b220412b46339b0a284a984"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the absolute sum of a float array  <br /></td></tr>
+<tr class="separator:ga5d448b046b220412b46339b0a284a984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67061f3c1035f8d7bdfe0041d6443b49" id="r_ga67061f3c1035f8d7bdfe0041d6443b49"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67061f3c1035f8d7bdfe0041d6443b49">a_float_sum2</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:ga67061f3c1035f8d7bdfe0041d6443b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the sum of squares of a float array  <br /></td></tr>
+<tr class="separator:ga67061f3c1035f8d7bdfe0041d6443b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadef40a23a689439bf2f040bdb2245ee4" id="r_gadef40a23a689439bf2f040bdb2245ee4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadef40a23a689439bf2f040bdb2245ee4">a_alloc_</a> (void *addr, size_t size)</td></tr>
 <tr class="memdesc:gadef40a23a689439bf2f040bdb2245ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">default allocation function  <br /></td></tr>
 <tr class="separator:gadef40a23a689439bf2f040bdb2245ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -787,6 +825,30 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">((x) &lt; 0 ? -(x) : (x))</div>
 </div><!-- fragment -->
 <p>absolute value of x, \( |x| \) </p>
+
+</div>
+</div>
+<a id="ga9217d05180be054d201866775f2aa1d6" name="ga9217d05180be054d201866775f2aa1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9217d05180be054d201866775f2aa1d6">&#9670;&#160;</a></span>A_ABS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_ABS_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((f) &lt; (g) ? (g) - (f) : (f) - (g))</div>
+</div><!-- fragment -->
+<p>absolute value of f-g, \( |f-g| \) </p>
 
 </div>
 </div>
@@ -1231,7 +1293,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a_cast_r(type *, a_cast_r(<a class="code hl_define" href="#gac6913731ee67107c65d2b64f7aedb5c0">a_uptr</a>, ptr) - <a class="code hl_define" href="#gaa2986e23be61c0e170c030974eef9dce">a_offsetof</a>(type, member))</div>
-<div class="ttc" id="agroup__liba_html_gaa2986e23be61c0e170c030974eef9dce"><div class="ttname"><a href="#gaa2986e23be61c0e170c030974eef9dce">a_offsetof</a></div><div class="ttdeci">#define a_offsetof(type, member)</div><div class="ttdoc">offset of a structure member</div><div class="ttdef"><b>Definition</b> a.h:871</div></div>
+<div class="ttc" id="agroup__liba_html_gaa2986e23be61c0e170c030974eef9dce"><div class="ttname"><a href="#gaa2986e23be61c0e170c030974eef9dce">a_offsetof</a></div><div class="ttdeci">#define a_offsetof(type, member)</div><div class="ttdoc">offset of a structure member</div><div class="ttdef"><b>Definition</b> a.h:879</div></div>
 </div><!-- fragment -->
 <p>container of a structure member </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1260,7 +1322,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="#ga992a5d6b9d1364d29b2fef1c68f7a0df">a_alloc</a>(ptr, 0)</div>
-<div class="ttc" id="agroup__liba_html_ga992a5d6b9d1364d29b2fef1c68f7a0df"><div class="ttname"><a href="#ga992a5d6b9d1364d29b2fef1c68f7a0df">a_alloc</a></div><div class="ttdeci">void *(* a_alloc)(void *addr, size_t size)</div><div class="ttdoc">allocation function pointer</div><div class="ttdef"><b>Definition</b> a.h:1331</div></div>
+<div class="ttc" id="agroup__liba_html_ga992a5d6b9d1364d29b2fef1c68f7a0df"><div class="ttname"><a href="#ga992a5d6b9d1364d29b2fef1c68f7a0df">a_alloc</a></div><div class="ttdeci">void *(* a_alloc)(void *addr, size_t size)</div><div class="ttdoc">allocation function pointer</div><div class="ttdef"><b>Definition</b> a.h:1420</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2591,7 +2653,31 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((0 &lt; (x)) - ((x) &lt; 0))</div>
 </div><!-- fragment -->
-<p>signum function, \( \texttt{sgn}{x}=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \) </p>
+<p>signum function, \( \texttt{sgn}(x)=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \) </p>
+
+</div>
+</div>
+<a id="gad4acf6d6f51e216861115d8d0fd4a567" name="gad4acf6d6f51e216861115d8d0fd4a567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4acf6d6f51e216861115d8d0fd4a567">&#9670;&#160;</a></span>A_SGN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_SGN_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((f) &gt; (g)) - ((f) &lt; (g)))</div>
+</div><!-- fragment -->
+<p>signum function, \( \texttt{sgn}(f,g)=\begin{cases}+1&amp;f&gt;g\\0&amp;f=g\\-1&amp;f&lt;g\end{cases} \) </p>
 
 </div>
 </div>
@@ -3470,14 +3556,81 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2f71d4c9112b32e65f1949ceff4928af" name="ga2f71d4c9112b32e65f1949ceff4928af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2f71d4c9112b32e65f1949ceff4928af">&#9670;&#160;</a></span>a_float_push()</h2>
+<a id="gadae140e4c4543ad71252c8c0386d8f1d" name="gadae140e4c4543ad71252c8c0386d8f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadae140e4c4543ad71252c8c0386d8f1d">&#9670;&#160;</a></span>a_float_mean()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void a_float_push </td>
+          <td class="memname">double a_float_mean </td>
+          <td>(</td>
+          <td class="paramtype">double const *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the mean of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>mean of a float array </dd></dl>
+
+</div>
+</div>
+<a id="gab100b41149b0bed3cb7a78007ae8b279" name="gab100b41149b0bed3cb7a78007ae8b279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab100b41149b0bed3cb7a78007ae8b279">&#9670;&#160;</a></span>a_float_push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_push_back </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push an element into the end of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5825b0eeea60b379b763cbee872d211a" name="ga5825b0eeea60b379b763cbee872d211a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5825b0eeea60b379b763cbee872d211a">&#9670;&#160;</a></span>a_float_push_back_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_push_back_ </td>
           <td>(</td>
           <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>block_p</em></span>, </td>
         </tr>
@@ -3499,7 +3652,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>roll back the elements of a float array and save the cache array </p>
+<p>push the elements into the end of a float array </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">block_p</td><td>points to a float array </td></tr>
@@ -3512,14 +3665,122 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga113c8025d4c6ce9806869ee2afce2ed6" name="ga113c8025d4c6ce9806869ee2afce2ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga113c8025d4c6ce9806869ee2afce2ed6">&#9670;&#160;</a></span>a_float_roll()</h2>
+<a id="ga2e4820c49c207c9a7213eada56637ce5" name="ga2e4820c49c207c9a7213eada56637ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e4820c49c207c9a7213eada56637ce5">&#9670;&#160;</a></span>a_float_push_fore()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void a_float_roll </td>
+          <td class="memname">void a_float_push_fore </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push an element into the front of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac97d39d90f02cbc28c09795e59876f0c" name="gac97d39d90f02cbc28c09795e59876f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac97d39d90f02cbc28c09795e59876f0c">&#9670;&#160;</a></span>a_float_push_fore_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_push_fore_ </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>block_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>block_n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double const *</td>          <td class="paramname"><span class="paramname"><em>cache_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cache_n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push the elements into the front of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_p</td><td>points to a cache array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_n</td><td>number of a cache array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab4b95416e55e83e196699275ab53bfbd" name="gab4b95416e55e83e196699275ab53bfbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4b95416e55e83e196699275ab53bfbd">&#9670;&#160;</a></span>a_float_roll_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_roll_back </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>roll backward the elements of a float array circularly </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga50ce80220e78abefd7fcd839a8b094a5" name="ga50ce80220e78abefd7fcd839a8b094a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50ce80220e78abefd7fcd839a8b094a5">&#9670;&#160;</a></span>a_float_roll_back_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_roll_back_ </td>
           <td>(</td>
           <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>block_p</em></span>, </td>
         </tr>
@@ -3541,7 +3802,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>roll back the elements of a float array circularly, array&gt;&gt;shift </p>
+<p>roll backward the elements of a float array circularly </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">block_p</td><td>points to a float array </td></tr>
@@ -3551,6 +3812,171 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga72a7d0e0a39a83e7c36da1d3858d56e2" name="ga72a7d0e0a39a83e7c36da1d3858d56e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72a7d0e0a39a83e7c36da1d3858d56e2">&#9670;&#160;</a></span>a_float_roll_fore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_roll_fore </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>roll forward the elements of a float array circularly </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae50de1f1d5b7dda036113a12f7f06fe5" name="gae50de1f1d5b7dda036113a12f7f06fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae50de1f1d5b7dda036113a12f7f06fe5">&#9670;&#160;</a></span>a_float_roll_fore_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_float_roll_fore_ </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>block_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>block_n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>shift_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>shift_n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>roll forward the elements of a float array circularly </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_n</td><td>number of a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_p</td><td>points to a shift array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_n</td><td>number of a shift array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf9ec3c27a975ef71a439b6eb45ee0938" name="gaf9ec3c27a975ef71a439b6eb45ee0938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9ec3c27a975ef71a439b6eb45ee0938">&#9670;&#160;</a></span>a_float_sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double a_float_sum </td>
+          <td>(</td>
+          <td class="paramtype">double const *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the sum of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum of a float array </dd></dl>
+
+</div>
+</div>
+<a id="ga5d448b046b220412b46339b0a284a984" name="ga5d448b046b220412b46339b0a284a984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d448b046b220412b46339b0a284a984">&#9670;&#160;</a></span>a_float_sum1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double a_float_sum1 </td>
+          <td>(</td>
+          <td class="paramtype">double const *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the absolute sum of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>absolute sum of a float array </dd></dl>
+
+</div>
+</div>
+<a id="ga67061f3c1035f8d7bdfe0041d6443b49" name="ga67061f3c1035f8d7bdfe0041d6443b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67061f3c1035f8d7bdfe0041d6443b49">&#9670;&#160;</a></span>a_float_sum2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double a_float_sum2 </td>
+          <td>(</td>
+          <td class="paramtype">double const *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the sum of squares of a float array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>points to a float array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of a float array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum of squares of a float array </dd></dl>
 
 </div>
 </div>

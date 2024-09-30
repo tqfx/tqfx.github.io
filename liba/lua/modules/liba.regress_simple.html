@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.crc16.html">liba.crc16</a></li>
+  <li><a href="../modules/liba.crc32.html">liba.crc32</a></li>
+  <li><a href="../modules/liba.crc64.html">liba.crc64</a></li>
+  <li><a href="../modules/liba.crc8.html">liba.crc8</a></li>
+  <li><a href="../modules/liba.hpf.html">liba.hpf</a></li>
+  <li><a href="../modules/liba.lpf.html">liba.lpf</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><strong>liba.regress_simple</strong></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.trajbell.html">liba.trajbell</a></li>
+  <li><a href="../modules/liba.trajpoly3.html">liba.trajpoly3</a></li>
+  <li><a href="../modules/liba.trajpoly5.html">liba.trajpoly5</a></li>
+  <li><a href="../modules/liba.trajpoly7.html">liba.trajpoly7</a></li>
+  <li><a href="../modules/liba.trajtrap.html">liba.trajtrap</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.crc16.html">a.crc16</a></li>
+  <li><a href="../classes/a.crc32.html">a.crc32</a></li>
+  <li><a href="../classes/a.crc64.html">a.crc64</a></li>
+  <li><a href="../classes/a.crc8.html">a.crc8</a></li>
+  <li><a href="../classes/a.hpf.html">a.hpf</a></li>
+  <li><a href="../classes/a.lpf.html">a.lpf</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><a href="../classes/a.regress_simple.html">a.regress_simple</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.trajbell.html">a.trajbell</a></li>
+  <li><a href="../classes/a.trajpoly3.html">a.trajpoly3</a></li>
+  <li><a href="../classes/a.trajpoly5.html">a.trajpoly5</a></li>
+  <li><a href="../classes/a.trajpoly7.html">a.trajpoly7</a></li>
+  <li><a href="../classes/a.trajtrap.html">a.trajtrap</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>liba.regress_simple</code></h1>
+<p>simple linear regression</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#new">new (coef, bias)</a></td>
+	<td class="summary">constructor for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#init">init (ctx, coef, bias)</a></td>
+	<td class="summary">initialize for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#eval">eval (ctx, val)</a></td>
+	<td class="summary">calculate predicted value for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#evar">evar (ctx, val)</a></td>
+	<td class="summary">calculate predicted value for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ols_">ols_ (ctx, x, y, x_mean, y_mean)</a></td>
+	<td class="summary">ordinary least squares for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#olsx">olsx (ctx, x, y, x_mean)</a></td>
+	<td class="summary">ordinary least squares for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#olsy">olsy (ctx, x, y, y_mean)</a></td>
+	<td class="summary">ordinary least squares for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ols">ols (ctx, x, y)</a></td>
+	<td class="summary">ordinary least squares for simple linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#zero">zero (ctx)</a></td>
+	<td class="summary">zeroing for simple linear regression</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new (coef, bias)</strong>
+    </dt>
+    <dd>
+    constructor for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coef</span>
+            <span class="types"><span class="type">number</span></span>
+         regression coefficient
+        </li>
+        <li><span class="parameter">bias</span>
+            <span class="types"><span class="type">number</span></span>
+         intercept
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "init"></a>
+    <strong>init (ctx, coef, bias)</strong>
+    </dt>
+    <dd>
+    initialize for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">coef</span>
+            <span class="types"><span class="type">number</span></span>
+         regression coefficient
+        </li>
+        <li><span class="parameter">bias</span>
+            <span class="types"><span class="type">number</span></span>
+         intercept
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "eval"></a>
+    <strong>eval (ctx, val)</strong>
+    </dt>
+    <dd>
+    calculate predicted value for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">val</span>
+            <span class="types"><span class="type">number</span></span>
+         independent variable
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        predicted value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "evar"></a>
+    <strong>evar (ctx, val)</strong>
+    </dt>
+    <dd>
+    calculate predicted value for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">val</span>
+            <span class="types"><span class="type">number</span></span>
+         dependent variable
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        predicted value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ols_"></a>
+    <strong>ols_ (ctx, x, y, x_mean, y_mean)</strong>
+    </dt>
+    <dd>
+    ordinary least squares for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">x_mean</span>
+            <span class="types"><span class="type">number</span></span>
+         mean of predictor data
+        </li>
+        <li><span class="parameter">y_mean</span>
+            <span class="types"><span class="type">number</span></span>
+         mean of response data
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "olsx"></a>
+    <strong>olsx (ctx, x, y, x_mean)</strong>
+    </dt>
+    <dd>
+    ordinary least squares for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">x_mean</span>
+            <span class="types"><span class="type">number</span></span>
+         mean of predictor data
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "olsy"></a>
+    <strong>olsy (ctx, x, y, y_mean)</strong>
+    </dt>
+    <dd>
+    ordinary least squares for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">y_mean</span>
+            <span class="types"><span class="type">number</span></span>
+         mean of response data
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ols"></a>
+    <strong>ols (ctx, x, y)</strong>
+    </dt>
+    <dd>
+    ordinary least squares for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "zero"></a>
+    <strong>zero (ctx)</strong>
+    </dt>
+    <dd>
+    zeroing for simple linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ctx</span>
+            <span class="types"><span class="type">a.regress_simple</span></span>
+         simple linear regression userdata
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_simple</span></span>
+        simple linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-09-30 14:51:04 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

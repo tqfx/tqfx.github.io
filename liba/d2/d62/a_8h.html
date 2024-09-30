@@ -34,7 +34,7 @@ window.MathJax = {
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">liba<span id="projectnumber">&#160;0.1.14</span>
+   <div id="projectname">liba<span id="projectnumber">&#160;0.1.15</span>
    </div>
    <div id="projectbrief">An algorithm library based on C/C++</div>
   </td>
@@ -613,6 +613,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga84aacec7427e328d0a6b4c897cb02059" id="r_ga84aacec7427e328d0a6b4c897cb02059"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga84aacec7427e328d0a6b4c897cb02059">A_ABS</a>(x)</td></tr>
 <tr class="memdesc:ga84aacec7427e328d0a6b4c897cb02059"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of x, \( |x| \)  <br /></td></tr>
 <tr class="separator:ga84aacec7427e328d0a6b4c897cb02059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9217d05180be054d201866775f2aa1d6" id="r_ga9217d05180be054d201866775f2aa1d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga9217d05180be054d201866775f2aa1d6">A_ABS_</a>(f,  g)</td></tr>
+<tr class="memdesc:ga9217d05180be054d201866775f2aa1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value of f-g, \( |f-g| \)  <br /></td></tr>
+<tr class="separator:ga9217d05180be054d201866775f2aa1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f85fcc489eeaed9a23932445c7dec1" id="r_ga16f85fcc489eeaed9a23932445c7dec1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga16f85fcc489eeaed9a23932445c7dec1">A_MIN</a>(x,  y)</td></tr>
 <tr class="memdesc:ga16f85fcc489eeaed9a23932445c7dec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum value between x and y  <br /></td></tr>
 <tr class="separator:ga16f85fcc489eeaed9a23932445c7dec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -620,8 +623,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum value between x and y  <br /></td></tr>
 <tr class="separator:ga717954d5cadeae21d7bfc73db3dad6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6616a52c6eb69d1026c534ed1a54aebb" id="r_ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga6616a52c6eb69d1026c534ed1a54aebb">A_SGN</a>(x)</td></tr>
-<tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}{x}=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \)  <br /></td></tr>
+<tr class="memdesc:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}(x)=\begin{cases}+1&amp;x&gt;0\\0&amp;0\\-1&amp;x&lt;0\end{cases} \)  <br /></td></tr>
 <tr class="separator:ga6616a52c6eb69d1026c534ed1a54aebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4acf6d6f51e216861115d8d0fd4a567" id="r_gad4acf6d6f51e216861115d8d0fd4a567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gad4acf6d6f51e216861115d8d0fd4a567">A_SGN_</a>(f,  g)</td></tr>
+<tr class="memdesc:gad4acf6d6f51e216861115d8d0fd4a567"><td class="mdescLeft">&#160;</td><td class="mdescRight">signum function, \( \texttt{sgn}(f,g)=\begin{cases}+1&amp;f&gt;g\\0&amp;f=g\\-1&amp;f&lt;g\end{cases} \)  <br /></td></tr>
+<tr class="separator:gad4acf6d6f51e216861115d8d0fd4a567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0f84bc53cc98d629c23ce6448bd96fed" id="r_ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga0f84bc53cc98d629c23ce6448bd96fed">A_SAT</a>(x,  min,  max)</td></tr>
 <tr class="memdesc:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">saturation value of x, \( \texttt{sat}(x,min,max)=\begin{cases}min&amp;min&gt;x\\max&amp;x&gt;max\\x&amp;else\end{cases} \)  <br /></td></tr>
 <tr class="separator:ga0f84bc53cc98d629c23ce6448bd96fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -770,12 +776,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_u64_setb</b> (void 
 <tr class="memitem:gaea6e3e7ca8cb5376df8fb21b243a2c1e" id="r_gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gaea6e3e7ca8cb5376df8fb21b243a2c1e">a_hash_sdbm_</a> (void const *ptr, size_t siz, uint32_t val)</td></tr>
 <tr class="memdesc:gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a hash function whose prime number is 65599  <br /></td></tr>
 <tr class="separator:gaea6e3e7ca8cb5376df8fb21b243a2c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f71d4c9112b32e65f1949ceff4928af" id="r_ga2f71d4c9112b32e65f1949ceff4928af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga2f71d4c9112b32e65f1949ceff4928af">a_float_push</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
-<tr class="memdesc:ga2f71d4c9112b32e65f1949ceff4928af"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array and save the cache array  <br /></td></tr>
-<tr class="separator:ga2f71d4c9112b32e65f1949ceff4928af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga113c8025d4c6ce9806869ee2afce2ed6" id="r_ga113c8025d4c6ce9806869ee2afce2ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga113c8025d4c6ce9806869ee2afce2ed6">a_float_roll</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
-<tr class="memdesc:ga113c8025d4c6ce9806869ee2afce2ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll back the elements of a float array circularly, array&gt;&gt;shift  <br /></td></tr>
-<tr class="separator:ga113c8025d4c6ce9806869ee2afce2ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e4820c49c207c9a7213eada56637ce5" id="r_ga2e4820c49c207c9a7213eada56637ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga2e4820c49c207c9a7213eada56637ce5">a_float_push_fore</a> (double *p, size_t n, double x)</td></tr>
+<tr class="memdesc:ga2e4820c49c207c9a7213eada56637ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the front of a float array  <br /></td></tr>
+<tr class="separator:ga2e4820c49c207c9a7213eada56637ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab100b41149b0bed3cb7a78007ae8b279" id="r_gab100b41149b0bed3cb7a78007ae8b279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gab100b41149b0bed3cb7a78007ae8b279">a_float_push_back</a> (double *p, size_t n, double x)</td></tr>
+<tr class="memdesc:gab100b41149b0bed3cb7a78007ae8b279"><td class="mdescLeft">&#160;</td><td class="mdescRight">push an element into the end of a float array  <br /></td></tr>
+<tr class="separator:gab100b41149b0bed3cb7a78007ae8b279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac97d39d90f02cbc28c09795e59876f0c" id="r_gac97d39d90f02cbc28c09795e59876f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gac97d39d90f02cbc28c09795e59876f0c">a_float_push_fore_</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
+<tr class="memdesc:gac97d39d90f02cbc28c09795e59876f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">push the elements into the front of a float array  <br /></td></tr>
+<tr class="separator:gac97d39d90f02cbc28c09795e59876f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5825b0eeea60b379b763cbee872d211a" id="r_ga5825b0eeea60b379b763cbee872d211a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga5825b0eeea60b379b763cbee872d211a">a_float_push_back_</a> (double *block_p, size_t block_n, double const *cache_p, size_t cache_n)</td></tr>
+<tr class="memdesc:ga5825b0eeea60b379b763cbee872d211a"><td class="mdescLeft">&#160;</td><td class="mdescRight">push the elements into the end of a float array  <br /></td></tr>
+<tr class="separator:ga5825b0eeea60b379b763cbee872d211a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72a7d0e0a39a83e7c36da1d3858d56e2" id="r_ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga72a7d0e0a39a83e7c36da1d3858d56e2">a_float_roll_fore</a> (double *p, size_t n)</td></tr>
+<tr class="memdesc:ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll forward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:ga72a7d0e0a39a83e7c36da1d3858d56e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4b95416e55e83e196699275ab53bfbd" id="r_gab4b95416e55e83e196699275ab53bfbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gab4b95416e55e83e196699275ab53bfbd">a_float_roll_back</a> (double *p, size_t n)</td></tr>
+<tr class="memdesc:gab4b95416e55e83e196699275ab53bfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll backward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:gab4b95416e55e83e196699275ab53bfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae50de1f1d5b7dda036113a12f7f06fe5" id="r_gae50de1f1d5b7dda036113a12f7f06fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gae50de1f1d5b7dda036113a12f7f06fe5">a_float_roll_fore_</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
+<tr class="memdesc:gae50de1f1d5b7dda036113a12f7f06fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll forward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:gae50de1f1d5b7dda036113a12f7f06fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50ce80220e78abefd7fcd839a8b094a5" id="r_ga50ce80220e78abefd7fcd839a8b094a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga50ce80220e78abefd7fcd839a8b094a5">a_float_roll_back_</a> (double *block_p, size_t block_n, double *shift_p, size_t shift_n)</td></tr>
+<tr class="memdesc:ga50ce80220e78abefd7fcd839a8b094a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll backward the elements of a float array circularly  <br /></td></tr>
+<tr class="separator:ga50ce80220e78abefd7fcd839a8b094a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadae140e4c4543ad71252c8c0386d8f1d" id="r_gadae140e4c4543ad71252c8c0386d8f1d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gadae140e4c4543ad71252c8c0386d8f1d">a_float_mean</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:gadae140e4c4543ad71252c8c0386d8f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the mean of a float array  <br /></td></tr>
+<tr class="separator:gadae140e4c4543ad71252c8c0386d8f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9ec3c27a975ef71a439b6eb45ee0938" id="r_gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gaf9ec3c27a975ef71a439b6eb45ee0938">a_float_sum</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the sum of a float array  <br /></td></tr>
+<tr class="separator:gaf9ec3c27a975ef71a439b6eb45ee0938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d448b046b220412b46339b0a284a984" id="r_ga5d448b046b220412b46339b0a284a984"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga5d448b046b220412b46339b0a284a984">a_float_sum1</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:ga5d448b046b220412b46339b0a284a984"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the absolute sum of a float array  <br /></td></tr>
+<tr class="separator:ga5d448b046b220412b46339b0a284a984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67061f3c1035f8d7bdfe0041d6443b49" id="r_ga67061f3c1035f8d7bdfe0041d6443b49"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#ga67061f3c1035f8d7bdfe0041d6443b49">a_float_sum2</a> (double const *p, size_t n)</td></tr>
+<tr class="memdesc:ga67061f3c1035f8d7bdfe0041d6443b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the sum of squares of a float array  <br /></td></tr>
+<tr class="separator:ga67061f3c1035f8d7bdfe0041d6443b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadef40a23a689439bf2f040bdb2245ee4" id="r_gadef40a23a689439bf2f040bdb2245ee4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6b/group__liba.html#gadef40a23a689439bf2f040bdb2245ee4">a_alloc_</a> (void *addr, size_t size)</td></tr>
 <tr class="memdesc:gadef40a23a689439bf2f040bdb2245ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">default allocation function  <br /></td></tr>
 <tr class="separator:gadef40a23a689439bf2f040bdb2245ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
