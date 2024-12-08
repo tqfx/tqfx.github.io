@@ -6,8 +6,8 @@ var searchData=
   ['note_20frequency_20table_3',['note frequency table',['../db/ddd/group__a__notefreq.html',1,'']]],
   ['notefreqs_2eh_4',['notefreqs.h',['../dd/d08/notefreqs_8h.html',1,'']]],
   ['nrule_5',['nrule',['../d0/d27/structa__pid__fuzzy.html#aa9e32188230ba669f1f208668bf25609',1,'a_pid_fuzzy']]],
-  ['num_5f_6',['num_',['../de/d98/structa__buf.html#aa2acf41c2832778e78136b22b1cac8c3',1,'a_buf::num_'],['../dc/dec/structa__que.html#af1e61aa8921af582c883ac389924df83',1,'a_que::num_'],['../d8/d79/structa__str.html#a2c8fed62b5cdf79f8b3aa30d6c4014f2',1,'a_str::num_'],['../d7/d3b/structa__vec.html#a9651a2720cebd03c92388338ce3d0132',1,'a_vec::num_']]],
+  ['num_5f_6',['num_',['../de/d98/structa__buf.html#ad95e03e8378645e080312af9b74103ec',1,'a_buf::num_'],['../dc/dec/structa__que.html#a7735eaed0961507481bc31afe04c4869',1,'a_que::num_'],['../d8/d79/structa__str.html#ae96e25db6ee8b43eace945c2a4889d7e',1,'a_str::num_'],['../d7/d3b/structa__vec.html#a10fe8134985926c72c074c366ca09387',1,'a_vec::num_']]],
   ['num_5fn_7',['num_n',['../de/ddd/structa__tf.html#a8495ed1d9b1f2fa33fb798d55b428024',1,'a_tf']]],
-  ['num_5fp_8',['num_p',['../de/ddd/structa__tf.html#aa9b8cc0e8cce561f3b824b11b5089bff',1,'a_tf']]],
+  ['num_5fp_8',['num_p',['../de/ddd/structa__tf.html#ad5ff7a0d31c923b5d89b7a9dab509a05',1,'a_tf']]],
   ['number_9',['number',['../de/d1c/group__a__complex.html',1,'complex number'],['../dc/dd1/group__a__float.html',1,'floating-point number']]]
 ];

@@ -50,6 +50,7 @@
   <li><a href="../classes/a.pid.html">a.pid</a></li>
   <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
   <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><a href="../classes/a.regress_linear.html">a.regress_linear</a></li>
   <li><strong>a.regress_simple</strong></li>
   <li><a href="../classes/a.tf.html">a.tf</a></li>
   <li><a href="../classes/a.trajbell.html">a.trajbell</a></li>
@@ -73,6 +74,7 @@
   <li><a href="../modules/liba.pid.html">liba.pid</a></li>
   <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
   <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><a href="../modules/liba.regress_linear.html">liba.regress_linear</a></li>
   <li><a href="../modules/liba.regress_simple.html">liba.regress_simple</a></li>
   <li><a href="../modules/liba.tf.html">liba.tf</a></li>
   <li><a href="../modules/liba.trajbell.html">liba.trajbell</a></li>
@@ -118,19 +120,19 @@
 	<td class="summary">calculate predicted value for simple linear regression</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.regress_simple:ols_">a.regress_simple:ols_ (ctx, x, y, x_mean, y_mean)</a></td>
+	<td class="name" nowrap><a href="#a.regress_simple:ols_">a.regress_simple:ols_ (x, y, x_mean, y_mean)</a></td>
 	<td class="summary">ordinary least squares for simple linear regression</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.regress_simple:olsx">a.regress_simple:olsx (ctx, x, y, x_mean)</a></td>
+	<td class="name" nowrap><a href="#a.regress_simple:olsx">a.regress_simple:olsx (x, y, x_mean)</a></td>
 	<td class="summary">ordinary least squares for simple linear regression</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.regress_simple:olsy">a.regress_simple:olsy (ctx, x, y, y_mean)</a></td>
+	<td class="name" nowrap><a href="#a.regress_simple:olsy">a.regress_simple:olsy (x, y, y_mean)</a></td>
 	<td class="summary">ordinary least squares for simple linear regression</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#a.regress_simple:ols">a.regress_simple:ols (ctx, x, y)</a></td>
+	<td class="name" nowrap><a href="#a.regress_simple:ols">a.regress_simple:ols (x, y)</a></td>
 	<td class="summary">ordinary least squares for simple linear regression</td>
 	</tr>
 	<tr>
@@ -291,7 +293,7 @@
 </dd>
     <dt>
     <a name = "a.regress_simple:ols_"></a>
-    <strong>a.regress_simple:ols_ (ctx, x, y, x_mean, y_mean)</strong>
+    <strong>a.regress_simple:ols_ (x, y, x_mean, y_mean)</strong>
     </dt>
     <dd>
     ordinary least squares for simple linear regression
@@ -299,10 +301,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ctx</span>
-            <span class="types"><span class="type">a.regress_simple</span></span>
-         simple linear regression userdata
-        </li>
         <li><span class="parameter">x</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          predictor data, specified as a numeric vector
@@ -334,7 +332,7 @@
 </dd>
     <dt>
     <a name = "a.regress_simple:olsx"></a>
-    <strong>a.regress_simple:olsx (ctx, x, y, x_mean)</strong>
+    <strong>a.regress_simple:olsx (x, y, x_mean)</strong>
     </dt>
     <dd>
     ordinary least squares for simple linear regression
@@ -342,10 +340,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ctx</span>
-            <span class="types"><span class="type">a.regress_simple</span></span>
-         simple linear regression userdata
-        </li>
         <li><span class="parameter">x</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          predictor data, specified as a numeric vector
@@ -373,7 +367,7 @@
 </dd>
     <dt>
     <a name = "a.regress_simple:olsy"></a>
-    <strong>a.regress_simple:olsy (ctx, x, y, y_mean)</strong>
+    <strong>a.regress_simple:olsy (x, y, y_mean)</strong>
     </dt>
     <dd>
     ordinary least squares for simple linear regression
@@ -381,10 +375,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ctx</span>
-            <span class="types"><span class="type">a.regress_simple</span></span>
-         simple linear regression userdata
-        </li>
         <li><span class="parameter">x</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          predictor data, specified as a numeric vector
@@ -412,7 +402,7 @@
 </dd>
     <dt>
     <a name = "a.regress_simple:ols"></a>
-    <strong>a.regress_simple:ols (ctx, x, y)</strong>
+    <strong>a.regress_simple:ols (x, y)</strong>
     </dt>
     <dd>
     ordinary least squares for simple linear regression
@@ -420,10 +410,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">ctx</span>
-            <span class="types"><span class="type">a.regress_simple</span></span>
-         simple linear regression userdata
-        </li>
         <li><span class="parameter">x</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
          predictor data, specified as a numeric vector
@@ -472,7 +458,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
-<i style="float:right;">Last updated 2024-09-30 14:51:04 </i>
+<i style="float:right;">Last updated 2024-12-08 12:59:14 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

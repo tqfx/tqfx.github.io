@@ -103,9 +103,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d62/a_8h.html">a.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/* clang-format off */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define A_RBT_ROOT {A_NULL}</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* clang-format on */</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/d47/structa__rbt__node.html">   24</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a></div>
@@ -113,7 +113,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../db/d47/structa__rbt__node.html#a5a3382ef052ec8a2a3a73782f2a8cd0a">   26</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a5a3382ef052ec8a2a3a73782f2a8cd0a">left</a>; </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/d47/structa__rbt__node.html#a2398949bd512da628621e1f24df8ff05">   27</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a2398949bd512da628621e1f24df8ff05">right</a>; </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#if defined(A_SIZE_POINTER) &amp;&amp; (A_SIZE_POINTER + 0 &gt; 1)</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/d47/structa__rbt__node.html#a2c0c618f90d9480d6146b9c585d76b46">   33</a></span>    <a class="code hl_define" href="../../d2/d6b/group__liba.html#gac6913731ee67107c65d2b64f7aedb5c0">a_uptr</a> <a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a2c0c618f90d9480d6146b9c585d76b46">parent_</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/d47/structa__rbt__node.html#a720ad4f498474c19d5c592f1e99cf0fe">   33</a></span>    <a class="code hl_typedef" href="../../d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f">a_uptr</a> <a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a720ad4f498474c19d5c592f1e99cf0fe">parent_</a>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#else </span><span class="comment">/* !A_SIZE_POINTER */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *parent;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> color;</div>
@@ -125,7 +125,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga556d9e38671366390be61220e86faf38">   46</a></span>A_INTERN <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *<a class="code hl_function" href="../../de/d40/group__a__rbt.html#ga556d9e38671366390be61220e86faf38">a_rbt_parent</a>(<a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> <span class="keyword">const</span> *node)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#if defined(A_SIZE_POINTER) &amp;&amp; (A_SIZE_POINTER + 0 &gt; 1)</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> a_cast_r(<a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *, node-&gt;<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a2c0c618f90d9480d6146b9c585d76b46">parent_</a> &amp; ~<a class="code hl_define" href="../../d2/d6b/group__liba.html#ga8db981cbde244109bd685a457cc4770c">a_uptr_c</a>(1));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> a_cast_r(<a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *, node-&gt;<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a720ad4f498474c19d5c592f1e99cf0fe">parent_</a> &amp; ~<a class="code hl_define" href="../../d2/d6b/group__liba.html#ga8db981cbde244109bd685a457cc4770c">a_uptr_c</a>(1));</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#else </span><span class="comment">/* !A_SIZE_POINTER */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> node-&gt;parent;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">/* A_SIZE_POINTER */</span><span class="preprocessor"></span></div>
@@ -136,7 +136,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#gac09f3bb2cf7d4e45df4501b66180f9dd">   61</a></span>A_INTERN <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *<a class="code hl_function" href="../../de/d40/group__a__rbt.html#gac09f3bb2cf7d4e45df4501b66180f9dd">a_rbt_init</a>(<a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *node, <a class="code hl_struct" href="../../db/d47/structa__rbt__node.html">a_rbt_node</a> *parent)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#if defined(A_SIZE_POINTER) &amp;&amp; (A_SIZE_POINTER + 0 &gt; 1)</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    node-&gt;<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a2c0c618f90d9480d6146b9c585d76b46">parent_</a> = a_cast_r(<a class="code hl_define" href="../../d2/d6b/group__liba.html#gac6913731ee67107c65d2b64f7aedb5c0">a_uptr</a>, parent);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    node-&gt;<a class="code hl_variable" href="../../db/d47/structa__rbt__node.html#a720ad4f498474c19d5c592f1e99cf0fe">parent_</a> = a_cast_r(<a class="code hl_typedef" href="../../d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f">a_uptr</a>, parent);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#else </span><span class="comment">/* !A_SIZE_POINTER */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    node-&gt;parent = parent;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    node-&gt;color = 0;</div>
@@ -200,38 +200,52 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga87038afcbdd03340a7570f337a799b86">  237</a></span><span class="preprocessor">#define a_rbt_foreach(cur, root) \</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_head(root); cur; cur = a_rbt_next(cur))</span></div>
 </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="foldopen" id="foldopen00256" data-start="" data-end="">
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga9a03b36d2793c815feae6c20ec493826">  256</a></span><span class="preprocessor">#define a_rbt_foreach_reverse(cur, root) \</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_tail(root); cur; cur = a_rbt_prev(cur))</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#define A_RBT_FOREACH(cur, root) \</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">    for (cur = a_rbt_head(root); cur; cur = a_rbt_next(cur))</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="foldopen" id="foldopen00258" data-start="" data-end="">
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga9a03b36d2793c815feae6c20ec493826">  258</a></span><span class="preprocessor">#define a_rbt_foreach_reverse(cur, root) \</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_tail(root); cur; cur = a_rbt_prev(cur))</span></div>
 </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="foldopen" id="foldopen00275" data-start="" data-end="">
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#gaf6d7d0a2322858f1211db49b8114cbf8">  275</a></span><span class="preprocessor">#define a_rbt_pre_foreach(cur, root) \</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">    for (a_rbt_node *cur = (root)-&gt;node; cur; cur = a_rbt_pre_next(cur))</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#define A_RBT_FOREACH_REVERSE(cur, root) \</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">    for (cur = a_rbt_tail(root); cur; cur = a_rbt_prev(cur))</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="foldopen" id="foldopen00279" data-start="" data-end="">
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#gaf6d7d0a2322858f1211db49b8114cbf8">  279</a></span><span class="preprocessor">#define a_rbt_pre_foreach(cur, root) \</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">    for (a_rbt_node *cur = (root)-&gt;node; cur; cur = a_rbt_pre_next(cur))</span></div>
 </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="foldopen" id="foldopen00294" data-start="" data-end="">
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#gacf5b8fc53a36ddcc69036b04172de976">  294</a></span><span class="preprocessor">#define a_rbt_pre_foreach_reverse(cur, root) \</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">    for (a_rbt_node *cur = (root)-&gt;node; cur; cur = a_rbt_pre_prev(cur))</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#define A_RBT_PRE_FOREACH(cur, root) \</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">    for (cur = (root)-&gt;node; cur; cur = a_rbt_pre_next(cur))</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="" data-end="">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#gacf5b8fc53a36ddcc69036b04172de976">  300</a></span><span class="preprocessor">#define a_rbt_pre_foreach_reverse(cur, root) \</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">    for (a_rbt_node *cur = (root)-&gt;node; cur; cur = a_rbt_pre_prev(cur))</span></div>
 </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="foldopen" id="foldopen00313" data-start="" data-end="">
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga22fc9cb6bca5efa8b54102d13e206aed">  313</a></span><span class="preprocessor">#define a_rbt_post_foreach(cur, root) \</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_post_head(root); cur; cur = a_rbt_post_next(cur))</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#define A_RBT_PRE_FOREACH_REVERSE(cur, root) \</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">    for (cur = (root)-&gt;node; cur; cur = a_rbt_pre_prev(cur))</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="foldopen" id="foldopen00321" data-start="" data-end="">
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga22fc9cb6bca5efa8b54102d13e206aed">  321</a></span><span class="preprocessor">#define a_rbt_post_foreach(cur, root) \</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_post_head(root); cur; cur = a_rbt_post_next(cur))</span></div>
 </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="foldopen" id="foldopen00332" data-start="" data-end="">
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga523ec97a16f4af03765499018640d519">  332</a></span><span class="preprocessor">#define a_rbt_post_foreach_reverse(cur, root) \</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_post_tail(root); cur; cur = a_rbt_post_prev(cur))</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define A_RBT_POST_FOREACH(cur, root) \</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">    for (cur = a_rbt_post_head(root); cur; cur = a_rbt_post_next(cur))</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="foldopen" id="foldopen00342" data-start="" data-end="">
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga523ec97a16f4af03765499018640d519">  342</a></span><span class="preprocessor">#define a_rbt_post_foreach_reverse(cur, root) \</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">    for (a_rbt_node *cur = a_rbt_post_tail(root); cur; cur = a_rbt_post_prev(cur))</span></div>
 </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="foldopen" id="foldopen00352" data-start="" data-end="">
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga02459a57098710b5438cea2bce6e1522">  352</a></span><span class="preprocessor">#define a_rbt_fortear(cur, next, root) \</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">    for (a_rbt_node *next = A_NULL, *cur = a_rbt_tear(root, &amp;next); cur; cur = a_rbt_tear(root, &amp;next))</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">#define A_RBT_POST_FOREACH_REVERSE(cur, root) \</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">    for (cur = a_rbt_post_tail(root); cur; cur = a_rbt_post_prev(cur))</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="foldopen" id="foldopen00364" data-start="" data-end="">
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="../../de/d40/group__a__rbt.html#ga02459a57098710b5438cea2bce6e1522">  364</a></span><span class="preprocessor">#define a_rbt_fortear(cur, next, root) \</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">    for (a_rbt_node *next = A_NULL, *cur = a_rbt_tear(root, &amp;next); cur; cur = a_rbt_tear(root, &amp;next))</span></div>
 </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">#endif </span><span class="comment">/* a/rbt.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="preprocessor">#define A_RBT_FORTEAR(cur, next, root) \</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">    for ((void)(next = A_NULL), cur = a_rbt_tear(root, &amp;next); cur; cur = a_rbt_tear(root, &amp;next))</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="preprocessor">#endif </span><span class="comment">/* a/rbt.h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aa_8h_html"><div class="ttname"><a href="../../d2/d62/a_8h.html">a.h</a></div><div class="ttdoc">algorithm library</div></div>
 <div class="ttc" id="agroup__a__rbt_html_ga0141445079342f7dbd7ce63321cf4271"><div class="ttname"><a href="../../de/d40/group__a__rbt.html#ga0141445079342f7dbd7ce63321cf4271">a_rbt_pre_next</a></div><div class="ttdeci">a_rbt_node * a_rbt_pre_next(a_rbt_node *node)</div><div class="ttdoc">access next node of red–black binary search tree node preorder</div></div>
 <div class="ttc" id="agroup__a__rbt_html_ga02d2a6f1b6a83ac0a750dfef72ffeda4"><div class="ttname"><a href="../../de/d40/group__a__rbt.html#ga02d2a6f1b6a83ac0a750dfef72ffeda4">a_rbt_head</a></div><div class="ttdeci">a_rbt_node * a_rbt_head(a_rbt const *root)</div><div class="ttdoc">access head node of red–black binary search tree in-order</div></div>
@@ -253,14 +267,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agroup__a__rbt_html_gad9c346f9489801f34fcec39aebc276e2"><div class="ttname"><a href="../../de/d40/group__a__rbt.html#gad9c346f9489801f34fcec39aebc276e2">a_rbt_root</a></div><div class="ttdeci">void a_rbt_root(a_rbt *root)</div><div class="ttdoc">initialize for red–black binary search tree root</div><div class="ttdef"><b>Definition</b> rbt.h:86</div></div>
 <div class="ttc" id="agroup__a__rbt_html_gae1f9f2aad7b208a40651e2bae386247f"><div class="ttname"><a href="../../de/d40/group__a__rbt.html#gae1f9f2aad7b208a40651e2bae386247f">a_rbt_tail</a></div><div class="ttdeci">a_rbt_node * a_rbt_tail(a_rbt const *root)</div><div class="ttdoc">access tail node of red–black binary search tree in-order</div></div>
 <div class="ttc" id="agroup__a__rbt_html_gaf245d9095230c22e5da521689cea3a5e"><div class="ttname"><a href="../../de/d40/group__a__rbt.html#gaf245d9095230c22e5da521689cea3a5e">a_rbt_search</a></div><div class="ttdeci">a_rbt_node * a_rbt_search(a_rbt const *root, void const *ctx, int(*cmp)(void const *, void const *))</div><div class="ttdoc">search specified content from red–black binary search tree</div></div>
-<div class="ttc" id="agroup__liba_html_ga8db981cbde244109bd685a457cc4770c"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga8db981cbde244109bd685a457cc4770c">a_uptr_c</a></div><div class="ttdeci">#define a_uptr_c(x)</div><div class="ttdef"><b>Definition</b> a.h:580</div></div>
-<div class="ttc" id="agroup__liba_html_gac6913731ee67107c65d2b64f7aedb5c0"><div class="ttname"><a href="../../d2/d6b/group__liba.html#gac6913731ee67107c65d2b64f7aedb5c0">a_uptr</a></div><div class="ttdeci">#define a_uptr</div><div class="ttdef"><b>Definition</b> a.h:583</div></div>
+<div class="ttc" id="agroup__liba_html_ga8db981cbde244109bd685a457cc4770c"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga8db981cbde244109bd685a457cc4770c">a_uptr_c</a></div><div class="ttdeci">#define a_uptr_c(x)</div><div class="ttdoc">static cast to a_uptr</div><div class="ttdef"><b>Definition</b> a.h:735</div></div>
+<div class="ttc" id="agroup__liba_html_ga97cc1498bf780a09c31053c7feaf3d1f"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f">a_uptr</a></div><div class="ttdeci">unsigned long a_uptr</div><div class="ttdoc">unsigned integer type capable of holding a pointer to void</div><div class="ttdef"><b>Definition</b> a.h:738</div></div>
 <div class="ttc" id="astructa__rbt__node_html"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html">a_rbt_node</a></div><div class="ttdoc">instance structure for red–black binary search tree node</div><div class="ttdef"><b>Definition</b> rbt.h:25</div></div>
 <div class="ttc" id="astructa__rbt__node_html_a2398949bd512da628621e1f24df8ff05"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html#a2398949bd512da628621e1f24df8ff05">a_rbt_node::right</a></div><div class="ttdeci">struct a_rbt_node * right</div><div class="ttdef"><b>Definition</b> rbt.h:27</div></div>
-<div class="ttc" id="astructa__rbt__node_html_a2c0c618f90d9480d6146b9c585d76b46"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html#a2c0c618f90d9480d6146b9c585d76b46">a_rbt_node::parent_</a></div><div class="ttdeci">uintptr_t parent_</div><div class="ttdef"><b>Definition</b> rbt.h:33</div></div>
 <div class="ttc" id="astructa__rbt__node_html_a5a3382ef052ec8a2a3a73782f2a8cd0a"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html#a5a3382ef052ec8a2a3a73782f2a8cd0a">a_rbt_node::left</a></div><div class="ttdeci">struct a_rbt_node * left</div><div class="ttdef"><b>Definition</b> rbt.h:26</div></div>
+<div class="ttc" id="astructa__rbt__node_html_a720ad4f498474c19d5c592f1e99cf0fe"><div class="ttname"><a href="../../db/d47/structa__rbt__node.html#a720ad4f498474c19d5c592f1e99cf0fe">a_rbt_node::parent_</a></div><div class="ttdeci">a_uptr parent_</div><div class="ttdef"><b>Definition</b> rbt.h:33</div></div>
 <div class="ttc" id="auniona__rbt_html"><div class="ttname"><a href="../../d0/d4d/uniona__rbt.html">a_rbt</a></div><div class="ttdoc">instance structure for red–black binary search tree root</div><div class="ttdef"><b>Definition</b> rbt.h:78</div></div>
-<div class="ttc" id="auniona__rbt_html_a13655f7224385d623d627dce942745dc"><div class="ttname"><a href="../../d0/d4d/uniona__rbt.html#a13655f7224385d623d627dce942745dc">a_rbt::node</a></div><div class="ttdeci">struct a_rbt_node * node</div><div class="ttdoc">root node</div><div class="ttdef"><b>Definition</b> rbt.h:79</div></div>
+<div class="ttc" id="auniona__rbt_html_a13655f7224385d623d627dce942745dc"><div class="ttname"><a href="../../d0/d4d/uniona__rbt.html#a13655f7224385d623d627dce942745dc">a_rbt::node</a></div><div class="ttdeci">struct a_rbt_node * node</div><div class="ttdef"><b>Definition</b> rbt.h:79</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

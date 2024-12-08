@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['de_0',['de',['../d3/dfe/structa__trajtrap.html#aac9a5a0c3cfc5c823a3b232a549828ba',1,'a_trajtrap']]],
-  ['den_5fn_1',['den_n',['../de/ddd/structa__tf.html#a4bf0a3c22834db0d79faf4728f556942',1,'a_tf']]],
-  ['den_5fp_2',['den_p',['../de/ddd/structa__tf.html#acee8108ebd2a4579b6624e6f2e38f8c3',1,'a_tf']]],
-  ['dm_3',['dm',['../d1/dcc/structa__trajbell.html#a52963bcea8fb9a9c978e3cbaf3144d28',1,'a_trajbell']]]
+  ['coef_0',['coef',['../de/d63/structa__regress__simple.html#ac29375c02d74e06fd7fd5585da451371',1,'a_regress_simple']]],
+  ['coef_5fn_1',['coef_n',['../db/dd2/structa__regress__linear.html#adf4f39760141b6e349bc7996f702f875',1,'a_regress_linear']]],
+  ['coef_5fp_2',['coef_p',['../db/dd2/structa__regress__linear.html#a7a9adcc6a18934801c71b230b7da0ee7',1,'a_regress_linear']]],
+  ['cur_5f_3',['cur_',['../dc/dec/structa__que.html#a0651899329e0b28fbc03077a256de1f6',1,'a_que']]]
 ];

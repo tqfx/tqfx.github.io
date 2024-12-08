@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/a.complex.html">a.complex</a></li>
+  <li><a href="../classes/a.crc16.html">a.crc16</a></li>
+  <li><a href="../classes/a.crc32.html">a.crc32</a></li>
+  <li><a href="../classes/a.crc64.html">a.crc64</a></li>
+  <li><a href="../classes/a.crc8.html">a.crc8</a></li>
+  <li><a href="../classes/a.hpf.html">a.hpf</a></li>
+  <li><a href="../classes/a.lpf.html">a.lpf</a></li>
+  <li><a href="../classes/a.pid.html">a.pid</a></li>
+  <li><a href="../classes/a.pid_fuzzy.html">a.pid_fuzzy</a></li>
+  <li><a href="../classes/a.pid_neuro.html">a.pid_neuro</a></li>
+  <li><strong>a.regress_linear</strong></li>
+  <li><a href="../classes/a.regress_simple.html">a.regress_simple</a></li>
+  <li><a href="../classes/a.tf.html">a.tf</a></li>
+  <li><a href="../classes/a.trajbell.html">a.trajbell</a></li>
+  <li><a href="../classes/a.trajpoly3.html">a.trajpoly3</a></li>
+  <li><a href="../classes/a.trajpoly5.html">a.trajpoly5</a></li>
+  <li><a href="../classes/a.trajpoly7.html">a.trajpoly7</a></li>
+  <li><a href="../classes/a.trajtrap.html">a.trajtrap</a></li>
+  <li><a href="../classes/a.version.html">a.version</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/liba.html">liba</a></li>
+  <li><a href="../modules/liba.complex.html">liba.complex</a></li>
+  <li><a href="../modules/liba.crc16.html">liba.crc16</a></li>
+  <li><a href="../modules/liba.crc32.html">liba.crc32</a></li>
+  <li><a href="../modules/liba.crc64.html">liba.crc64</a></li>
+  <li><a href="../modules/liba.crc8.html">liba.crc8</a></li>
+  <li><a href="../modules/liba.hpf.html">liba.hpf</a></li>
+  <li><a href="../modules/liba.lpf.html">liba.lpf</a></li>
+  <li><a href="../modules/liba.mf.html">liba.mf</a></li>
+  <li><a href="../modules/liba.pid.html">liba.pid</a></li>
+  <li><a href="../modules/liba.pid_fuzzy.html">liba.pid_fuzzy</a></li>
+  <li><a href="../modules/liba.pid_neuro.html">liba.pid_neuro</a></li>
+  <li><a href="../modules/liba.regress_linear.html">liba.regress_linear</a></li>
+  <li><a href="../modules/liba.regress_simple.html">liba.regress_simple</a></li>
+  <li><a href="../modules/liba.tf.html">liba.tf</a></li>
+  <li><a href="../modules/liba.trajbell.html">liba.trajbell</a></li>
+  <li><a href="../modules/liba.trajpoly3.html">liba.trajpoly3</a></li>
+  <li><a href="../modules/liba.trajpoly5.html">liba.trajpoly5</a></li>
+  <li><a href="../modules/liba.trajpoly7.html">liba.trajpoly7</a></li>
+  <li><a href="../modules/liba.trajtrap.html">liba.trajtrap</a></li>
+  <li><a href="../modules/liba.version.html">liba.version</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>a.regress_linear</code></h1>
+<p>linear regression</p>
+<p></p>
+
+
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear">a.regress_linear</a></td>
+	<td class="summary">linear regression</td>
+	</tr>
+</table>
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:die">a.regress_linear:die ()</a></td>
+	<td class="summary">destructor for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:new">a.regress_linear:new (coef, bias)</a></td>
+	<td class="summary">constructor for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:init">a.regress_linear:init (coef, bias)</a></td>
+	<td class="summary">initialize for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:eval">a.regress_linear:eval (val)</a></td>
+	<td class="summary">calculate predicted value for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:err">a.regress_linear:err (x, y)</a></td>
+	<td class="summary">calculate residuals for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:gd">a.regress_linear:gd (input, error, alpha)</a></td>
+	<td class="summary">gradient descent for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:sgd">a.regress_linear:sgd (x, y, alpha)</a></td>
+	<td class="summary">stochastic gradient descent for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:bgd">a.regress_linear:bgd (x, y, alpha)</a></td>
+	<td class="summary">batch gradient descent for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:mgd">a.regress_linear:mgd (x, y, delta, lrmax, lrmin[, lrtim[, epoch[, batch]]])</a></td>
+	<td class="summary">mini-batch gradient descent for linear regression</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#a.regress_linear:zero">a.regress_linear:zero ()</a></td>
+	<td class="summary">zeroing for linear regression</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.regress_linear"></a>
+    <strong>a.regress_linear</strong>
+    </dt>
+    <dd>
+    linear regression
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">coef</span>
+         regression coefficient
+        </li>
+        <li><span class="parameter">bias</span>
+         intercept
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "a.regress_linear:die"></a>
+    <strong>a.regress_linear:die ()</strong>
+    </dt>
+    <dd>
+    destructor for linear regression
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:new"></a>
+    <strong>a.regress_linear:new (coef, bias)</strong>
+    </dt>
+    <dd>
+    constructor for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coef</span>
+            <span class="types"><span class="type">number</span></span>
+         regression coefficient
+        </li>
+        <li><span class="parameter">bias</span>
+            <span class="types"><span class="type">number</span></span>
+         intercept
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:init"></a>
+    <strong>a.regress_linear:init (coef, bias)</strong>
+    </dt>
+    <dd>
+    initialize for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coef</span>
+            <span class="types"><span class="type">number</span></span>
+         regression coefficient
+        </li>
+        <li><span class="parameter">bias</span>
+            <span class="types"><span class="type">number</span></span>
+         intercept
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:eval"></a>
+    <strong>a.regress_linear:eval (val)</strong>
+    </dt>
+    <dd>
+    calculate predicted value for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">val</span>
+            <span class="types"><span class="type">number</span></span>
+         independent variable
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        predicted value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:err"></a>
+    <strong>a.regress_linear:err (x, y)</strong>
+    </dt>
+    <dd>
+    calculate residuals for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric matrix
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+        residuals, specified as a numeric vector
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:gd"></a>
+    <strong>a.regress_linear:gd (input, error, alpha)</strong>
+    </dt>
+    <dd>
+    gradient descent for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">input</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">error</span>
+            <span class="types"><span class="type">number</span></span>
+         residual, specified as a numeric scalar
+        </li>
+        <li><span class="parameter">alpha</span>
+            <span class="types"><span class="type">number</span></span>
+         learning rate for gradient descent
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:sgd"></a>
+    <strong>a.regress_linear:sgd (x, y, alpha)</strong>
+    </dt>
+    <dd>
+    stochastic gradient descent for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric matrix
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">alpha</span>
+            <span class="types"><span class="type">number</span></span>
+         learning rate for gradient descent
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:bgd"></a>
+    <strong>a.regress_linear:bgd (x, y, alpha)</strong>
+    </dt>
+    <dd>
+    batch gradient descent for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric matrix
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">alpha</span>
+            <span class="types"><span class="type">number</span></span>
+         learning rate for gradient descent
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:mgd"></a>
+    <strong>a.regress_linear:mgd (x, y, delta, lrmax, lrmin[, lrtim[, epoch[, batch]]])</strong>
+    </dt>
+    <dd>
+    mini-batch gradient descent for linear regression
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         predictor data, specified as a numeric matrix
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.4/manual.html#6.6">table</a></span>
+         response data, specified as a numeric vector
+        </li>
+        <li><span class="parameter">delta</span>
+            <span class="types"><span class="type">number</span></span>
+         threshold for gradient descent value
+        </li>
+        <li><span class="parameter">lrmax</span>
+            <span class="types"><span class="type">number</span></span>
+         maximum learning rate of iterations
+        </li>
+        <li><span class="parameter">lrmin</span>
+            <span class="types"><span class="type">number</span></span>
+         minimum learning rate of iterations
+        </li>
+        <li><span class="parameter">lrtim</span>
+            <span class="types"><span class="type">integer</span></span>
+         total number of learning rate steps
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">epoch</span>
+            <span class="types"><span class="type">integer</span></span>
+         maximum number of epochs
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">batch</span>
+            <span class="types"><span class="type">integer</span></span>
+         batch size of data
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        change in loss function
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "a.regress_linear:zero"></a>
+    <strong>a.regress_linear:zero ()</strong>
+    </dt>
+    <dd>
+    zeroing for linear regression
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">a.regress_linear</span></span>
+        linear regression userdata
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2024-12-08 12:59:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -116,10 +116,10 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gab58866f993d39ecf8c8f467dfc15d1d4" id="r_gab58866f993d39ecf8c8f467dfc15d1d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab58866f993d39ecf8c8f467dfc15d1d4">A_LPF_INIT</a>(alpha)</td></tr>
-<tr class="separator:gab58866f993d39ecf8c8f467dfc15d1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0262a77c4e8e7a312c18b3a9865cc6a" id="r_gad0262a77c4e8e7a312c18b3a9865cc6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad0262a77c4e8e7a312c18b3a9865cc6a">A_LPF_INIT2</a>(fc,  ts)</td></tr>
-<tr class="separator:gad0262a77c4e8e7a312c18b3a9865cc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0813061d10bbdd388476cb7f78e5ad3f" id="r_ga0813061d10bbdd388476cb7f78e5ad3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0813061d10bbdd388476cb7f78e5ad3f">A_LPF_1</a>(alpha)</td></tr>
+<tr class="separator:ga0813061d10bbdd388476cb7f78e5ad3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3415c1631a880b5cda7c2377a086e3b9" id="r_ga3415c1631a880b5cda7c2377a086e3b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3415c1631a880b5cda7c2377a086e3b9">A_LPF_2</a>(fc,  ts)</td></tr>
+<tr class="separator:ga3415c1631a880b5cda7c2377a086e3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab6cc05fd143ecfba7616b51f68cd1c41" id="r_gab6cc05fd143ecfba7616b51f68cd1c41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab6cc05fd143ecfba7616b51f68cd1c41">A_LPF_GEN</a>(fc,  ts)</td></tr>
 <tr class="separator:gab6cc05fd143ecfba7616b51f68cd1c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -132,21 +132,62 @@ typedef struct a_lpf&#160;</td><td class="memItemRight" valign="bottom"><b>a_lpf
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gad917c95fc9f85d72e7056e9edbe9afda" id="r_gad917c95fc9f85d72e7056e9edbe9afda"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad917c95fc9f85d72e7056e9edbe9afda">a_lpf_gen</a> (double fc, double ts)</td></tr>
-<tr class="memdesc:gad917c95fc9f85d72e7056e9edbe9afda"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for Low Pass Filter  <br /></td></tr>
-<tr class="separator:gad917c95fc9f85d72e7056e9edbe9afda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4bf5ac257d6fef42c9b29292f460976a" id="r_ga4bf5ac257d6fef42c9b29292f460976a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4bf5ac257d6fef42c9b29292f460976a">a_lpf_init</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, double alpha)</td></tr>
-<tr class="memdesc:ga4bf5ac257d6fef42c9b29292f460976a"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for Low Pass Filter  <br /></td></tr>
-<tr class="separator:ga4bf5ac257d6fef42c9b29292f460976a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37d5a69038fd70a3e288905381b98c26" id="r_ga37d5a69038fd70a3e288905381b98c26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga37d5a69038fd70a3e288905381b98c26">a_lpf_iter</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, double x)</td></tr>
-<tr class="memdesc:ga37d5a69038fd70a3e288905381b98c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for Low Pass Filter  <br /></td></tr>
-<tr class="separator:ga37d5a69038fd70a3e288905381b98c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fe0a3359b987456a97725112aa62fc3" id="r_ga2fe0a3359b987456a97725112aa62fc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2fe0a3359b987456a97725112aa62fc3">a_lpf_gen</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> fc, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> ts)</td></tr>
+<tr class="memdesc:ga2fe0a3359b987456a97725112aa62fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate for Low Pass Filter  <br /></td></tr>
+<tr class="separator:ga2fe0a3359b987456a97725112aa62fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga481be424386e348c8d8a3b4f7ed8da87" id="r_ga481be424386e348c8d8a3b4f7ed8da87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga481be424386e348c8d8a3b4f7ed8da87">a_lpf_init</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> alpha)</td></tr>
+<tr class="memdesc:ga481be424386e348c8d8a3b4f7ed8da87"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for Low Pass Filter  <br /></td></tr>
+<tr class="separator:ga481be424386e348c8d8a3b4f7ed8da87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecaa03baf7999b950f975bf7b7231be7" id="r_gaecaa03baf7999b950f975bf7b7231be7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaecaa03baf7999b950f975bf7b7231be7">a_lpf_iter</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> x)</td></tr>
+<tr class="memdesc:gaecaa03baf7999b950f975bf7b7231be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate for Low Pass Filter  <br /></td></tr>
+<tr class="separator:gaecaa03baf7999b950f975bf7b7231be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f351dd4806aae266a5b6a927425e757" id="r_ga8f351dd4806aae266a5b6a927425e757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8f351dd4806aae266a5b6a927425e757">a_lpf_zero</a> (<a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *ctx)</td></tr>
 <tr class="memdesc:ga8f351dd4806aae266a5b6a927425e757"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for Low Pass Filter  <br /></td></tr>
 <tr class="separator:ga8f351dd4806aae266a5b6a927425e757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga0813061d10bbdd388476cb7f78e5ad3f" name="ga0813061d10bbdd388476cb7f78e5ad3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0813061d10bbdd388476cb7f78e5ad3f">&#9670;&#160;</a></span>A_LPF_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_LPF_1</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{<a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(alpha), 0}</div>
+<div class="ttc" id="agroup__a__float_html_ga8eb5b40b6679ff3b2e5e615f269b761d"><div class="ttname"><a href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a></div><div class="ttdeci">#define a_float_c(x)</div><div class="ttdoc">static cast to floating-point number</div><div class="ttdef"><b>Definition</b> a.h:1000</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga3415c1631a880b5cda7c2377a086e3b9" name="ga3415c1631a880b5cda7c2377a086e3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3415c1631a880b5cda7c2377a086e3b9">&#9670;&#160;</a></span>A_LPF_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_LPF_2</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{A_LPF_GEN(fc, ts), 0}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="gab6cc05fd143ecfba7616b51f68cd1c41" name="gab6cc05fd143ecfba7616b51f68cd1c41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab6cc05fd143ecfba7616b51f68cd1c41">&#9670;&#160;</a></span>A_LPF_GEN</h2>
 
@@ -167,66 +208,25 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(ts) / (<a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga5d9f07418cbfa6cd204a14dc85d81d5b">A_FLOAT_1_TAU</a> / <a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(fc) + <a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(ts)))</div>
 <div class="ttc" id="agroup__a__float_html_ga5d9f07418cbfa6cd204a14dc85d81d5b"><div class="ttname"><a href="../../dc/dd1/group__a__float.html#ga5d9f07418cbfa6cd204a14dc85d81d5b">A_FLOAT_1_TAU</a></div><div class="ttdeci">#define A_FLOAT_1_TAU</div><div class="ttdef"><b>Definition</b> math.h:249</div></div>
-<div class="ttc" id="agroup__a__float_html_ga8eb5b40b6679ff3b2e5e615f269b761d"><div class="ttname"><a href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a></div><div class="ttdeci">#define a_float_c(x)</div><div class="ttdef"><b>Definition</b> a.h:782</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="gab58866f993d39ecf8c8f467dfc15d1d4" name="gab58866f993d39ecf8c8f467dfc15d1d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab58866f993d39ecf8c8f467dfc15d1d4">&#9670;&#160;</a></span>A_LPF_INIT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A_LPF_INIT</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{<a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d">a_float_c</a>(alpha), 0}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="gad0262a77c4e8e7a312c18b3a9865cc6a" name="gad0262a77c4e8e7a312c18b3a9865cc6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad0262a77c4e8e7a312c18b3a9865cc6a">&#9670;&#160;</a></span>A_LPF_INIT2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define A_LPF_INIT2</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fc</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{A_LPF_GEN(fc, ts), 0}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad917c95fc9f85d72e7056e9edbe9afda" name="gad917c95fc9f85d72e7056e9edbe9afda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad917c95fc9f85d72e7056e9edbe9afda">&#9670;&#160;</a></span>a_lpf_gen()</h2>
+<a id="ga2fe0a3359b987456a97725112aa62fc3" name="ga2fe0a3359b987456a97725112aa62fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fe0a3359b987456a97725112aa62fc3">&#9670;&#160;</a></span>a_lpf_gen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double a_lpf_gen </td>
+          <td class="memname"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> a_lpf_gen </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>fc</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>fc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -254,8 +254,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4bf5ac257d6fef42c9b29292f460976a" name="ga4bf5ac257d6fef42c9b29292f460976a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4bf5ac257d6fef42c9b29292f460976a">&#9670;&#160;</a></span>a_lpf_init()</h2>
+<a id="ga481be424386e348c8d8a3b4f7ed8da87" name="ga481be424386e348c8d8a3b4f7ed8da87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga481be424386e348c8d8a3b4f7ed8da87">&#9670;&#160;</a></span>a_lpf_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +268,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,21 +284,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga37d5a69038fd70a3e288905381b98c26" name="ga37d5a69038fd70a3e288905381b98c26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga37d5a69038fd70a3e288905381b98c26">&#9670;&#160;</a></span>a_lpf_iter()</h2>
+<a id="gaecaa03baf7999b950f975bf7b7231be7" name="gaecaa03baf7999b950f975bf7b7231be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecaa03baf7999b950f975bf7b7231be7">&#9670;&#160;</a></span>a_lpf_iter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double a_lpf_iter </td>
+          <td class="memname"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> a_lpf_iter </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d8/d6c/structa__lpf.html">a_lpf</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

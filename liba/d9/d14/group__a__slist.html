@@ -135,9 +135,13 @@ Macros</h2></td></tr>
 <tr class="memitem:ga6c8622259bd161f3ac89d211c23539ba" id="r_ga6c8622259bd161f3ac89d211c23539ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6c8622259bd161f3ac89d211c23539ba">a_slist_foreach</a>(it,  ctx)</td></tr>
 <tr class="memdesc:ga6c8622259bd161f3ac89d211c23539ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list  <br /></td></tr>
 <tr class="separator:ga6c8622259bd161f3ac89d211c23539ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabeae244f025269c66e13f7fe1b1987db" id="r_gabeae244f025269c66e13f7fe1b1987db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabeae244f025269c66e13f7fe1b1987db">A_SLIST_FOREACH</a>(it,  ctx)</td></tr>
+<tr class="separator:gabeae244f025269c66e13f7fe1b1987db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c6ec69ecd3bb0c90eb6d701f5da6480" id="r_ga4c6ec69ecd3bb0c90eb6d701f5da6480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4c6ec69ecd3bb0c90eb6d701f5da6480">a_slist_forsafe</a>(it,  at,  ctx)</td></tr>
 <tr class="memdesc:ga4c6ec69ecd3bb0c90eb6d701f5da6480"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list safe against removal of list entry  <br /></td></tr>
 <tr class="separator:ga4c6ec69ecd3bb0c90eb6d701f5da6480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed05a2582b9d1d2bb6d1378774db4231" id="r_gaed05a2582b9d1d2bb6d1378774db4231"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaed05a2582b9d1d2bb6d1378774db4231">A_SLIST_FORSAFE</a>(it,  at,  ctx)</td></tr>
+<tr class="separator:gaed05a2582b9d1d2bb6d1378774db4231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -245,7 +249,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="../../d2/d6b/group__liba.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a>(ptr, type, member)</div>
-<div class="ttc" id="agroup__liba_html_gaf7e865c1b0bb30903a086320f8f00937"><div class="ttname"><a href="../../d2/d6b/group__liba.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a></div><div class="ttdeci">#define a_container_of(ptr, type, member)</div><div class="ttdoc">container of a structure member</div><div class="ttdef"><b>Definition</b> a.h:888</div></div>
+<div class="ttc" id="agroup__liba_html_gaf7e865c1b0bb30903a086320f8f00937"><div class="ttname"><a href="../../d2/d6b/group__liba.html#gaf7e865c1b0bb30903a086320f8f00937">a_container_of</a></div><div class="ttdeci">#define a_container_of(ptr, type, member)</div><div class="ttdoc">container of a structure member</div><div class="ttdef"><b>Definition</b> a.h:1106</div></div>
 </div><!-- fragment -->
 <p>access the struct for this entry </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -287,6 +291,28 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="gabeae244f025269c66e13f7fe1b1987db" name="gabeae244f025269c66e13f7fe1b1987db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabeae244f025269c66e13f7fe1b1987db">&#9670;&#160;</a></span>A_SLIST_FOREACH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_SLIST_FOREACH</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (it = (ctx)-&gt;head.next; it; it = it-&gt;next)</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ga6c8622259bd161f3ac89d211c23539ba" name="ga6c8622259bd161f3ac89d211c23539ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6c8622259bd161f3ac89d211c23539ba">&#9670;&#160;</a></span>a_slist_foreach</h2>
 
@@ -316,6 +342,34 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+</div>
+</div>
+<a id="gaed05a2582b9d1d2bb6d1378774db4231" name="gaed05a2582b9d1d2bb6d1378774db4231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed05a2582b9d1d2bb6d1378774db4231">&#9670;&#160;</a></span>A_SLIST_FORSAFE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A_SLIST_FORSAFE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>at</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (at = &amp;(ctx)-&gt;head, it = at-&gt;next; it; \</div>
+<div class="line">         at = it ? it : at, it = at-&gt;next)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ga4c6ec69ecd3bb0c90eb6d701f5da6480" name="ga4c6ec69ecd3bb0c90eb6d701f5da6480"></a>
