@@ -113,21 +113,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0f4a9e2583a8bd221c45291a1a194164" id="r_ga0f4a9e2583a8bd221c45291a1a194164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0f4a9e2583a8bd221c45291a1a194164">a_linalg_T2</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict T, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> m, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n)</td></tr>
 <tr class="memdesc:ga0f4a9e2583a8bd221c45291a1a194164"><td class="mdescLeft">&#160;</td><td class="mdescRight">transpose a given m x n matrix A into an n x m matrix T.  <br /></td></tr>
 <tr class="separator:ga0f4a9e2583a8bd221c45291a1a194164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe7a4ee08c31298aa5b397396558daa2" id="r_gafe7a4ee08c31298aa5b397396558daa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafe7a4ee08c31298aa5b397396558daa2">a_linalg_dot</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict Y, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n)</td></tr>
-<tr class="memdesc:gafe7a4ee08c31298aa5b397396558daa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the dot product of two vectors.  <br /></td></tr>
-<tr class="separator:gafe7a4ee08c31298aa5b397396558daa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga15aca59474f951de162559abc9fb23e8" id="r_ga15aca59474f951de162559abc9fb23e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga15aca59474f951de162559abc9fb23e8">a_linalg_mulmm</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
-<tr class="memdesc:ga15aca59474f951de162559abc9fb23e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply two matrices X and Y, storing the result in Z.  <br /></td></tr>
-<tr class="separator:ga15aca59474f951de162559abc9fb23e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga57882de4cb6f1f1fd77ec3ce9d711157" id="r_ga57882de4cb6f1f1fd77ec3ce9d711157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga57882de4cb6f1f1fd77ec3ce9d711157">a_linalg_mulTm</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
-<tr class="memdesc:ga57882de4cb6f1f1fd77ec3ce9d711157"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply the transpose of matrix X with matrix Y, storing the result in Z.  <br /></td></tr>
-<tr class="separator:ga57882de4cb6f1f1fd77ec3ce9d711157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf4b238e77e834ffe3292de1cc8746009" id="r_gaf4b238e77e834ffe3292de1cc8746009"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf4b238e77e834ffe3292de1cc8746009">a_linalg_mulmT</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r)</td></tr>
-<tr class="memdesc:gaf4b238e77e834ffe3292de1cc8746009"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply matrix X with the transpose of matrix Y, storing the result in Z.  <br /></td></tr>
-<tr class="separator:gaf4b238e77e834ffe3292de1cc8746009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga39ca6134838afa48156e383fe5e5b2d6" id="r_ga39ca6134838afa48156e383fe5e5b2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39ca6134838afa48156e383fe5e5b2d6">a_linalg_mulTT</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
-<tr class="memdesc:ga39ca6134838afa48156e383fe5e5b2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply the transpose of matrix X with the transpose of matrix Y, storing the result in Z.  <br /></td></tr>
-<tr class="separator:ga39ca6134838afa48156e383fe5e5b2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7342b8981240d28c2a3544a410d1777" id="r_gaa7342b8981240d28c2a3544a410d1777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa7342b8981240d28c2a3544a410d1777">a_linalg_dot</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *Y, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n)</td></tr>
+<tr class="memdesc:gaa7342b8981240d28c2a3544a410d1777"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the dot product of two vectors.  <br /></td></tr>
+<tr class="separator:gaa7342b8981240d28c2a3544a410d1777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga322c50378474af2774b83ed696322669" id="r_ga322c50378474af2774b83ed696322669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga322c50378474af2774b83ed696322669">a_linalg_mulmm</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
+<tr class="memdesc:ga322c50378474af2774b83ed696322669"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply two matrices X and Y, storing the result in Z.  <br /></td></tr>
+<tr class="separator:ga322c50378474af2774b83ed696322669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92d36ad7f5d1358c4a528bd53f66f9de" id="r_ga92d36ad7f5d1358c4a528bd53f66f9de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga92d36ad7f5d1358c4a528bd53f66f9de">a_linalg_mulTm</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
+<tr class="memdesc:ga92d36ad7f5d1358c4a528bd53f66f9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply the transpose of matrix X with matrix Y, storing the result in Z.  <br /></td></tr>
+<tr class="separator:ga92d36ad7f5d1358c4a528bd53f66f9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefbf77c85fc30c646fa07255d2f5a741" id="r_gaefbf77c85fc30c646fa07255d2f5a741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaefbf77c85fc30c646fa07255d2f5a741">a_linalg_mulmT</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r)</td></tr>
+<tr class="memdesc:gaefbf77c85fc30c646fa07255d2f5a741"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply matrix X with the transpose of matrix Y, storing the result in Z.  <br /></td></tr>
+<tr class="separator:gaefbf77c85fc30c646fa07255d2f5a741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga805267f5fe0deb63607c1c33a23e6318" id="r_ga805267f5fe0deb63607c1c33a23e6318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga805267f5fe0deb63607c1c33a23e6318">a_linalg_mulTT</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict Z, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict X, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict Y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> row, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> c_r, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> col)</td></tr>
+<tr class="memdesc:ga805267f5fe0deb63607c1c33a23e6318"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply the transpose of matrix X with the transpose of matrix Y, storing the result in Z.  <br /></td></tr>
+<tr class="separator:ga805267f5fe0deb63607c1c33a23e6318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac6b1b20d5c5847e761a6a3613831b98f" id="r_gac6b1b20d5c5847e761a6a3613831b98f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac6b1b20d5c5847e761a6a3613831b98f">a_linalg_plu</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> *p, int *sign)</td></tr>
 <tr class="memdesc:gac6b1b20d5c5847e761a6a3613831b98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute LU decomposition of a square matrix with partial pivoting.  <br /></td></tr>
 <tr class="separator:gac6b1b20d5c5847e761a6a3613831b98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,11 +164,252 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6077634d66643e10c5a1a05b7e2c4659" id="r_ga6077634d66643e10c5a1a05b7e2c4659"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6077634d66643e10c5a1a05b7e2c4659">a_linalg_plu_sgndet</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, int sign)</td></tr>
 <tr class="memdesc:ga6077634d66643e10c5a1a05b7e2c4659"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the sign of the determinant of a matrix using its LU decomposition.  <br /></td></tr>
 <tr class="separator:ga6077634d66643e10c5a1a05b7e2c4659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d9b8fefd933acf695900a6214545da9" id="r_ga2d9b8fefd933acf695900a6214545da9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2d9b8fefd933acf695900a6214545da9">a_linalg_cho</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n)</td></tr>
+<tr class="memdesc:ga2d9b8fefd933acf695900a6214545da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute Cholesky decomposition of a symmetric positive-definite matrix.  <br /></td></tr>
+<tr class="separator:ga2d9b8fefd933acf695900a6214545da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga271e5b3de5fb9a41aa7d723f78bc0703" id="r_ga271e5b3de5fb9a41aa7d723f78bc0703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga271e5b3de5fb9a41aa7d723f78bc0703">a_linalg_cho_get_L</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *L)</td></tr>
+<tr class="memdesc:ga271e5b3de5fb9a41aa7d723f78bc0703"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the lower triangular matrix L from matrix A.  <br /></td></tr>
+<tr class="separator:ga271e5b3de5fb9a41aa7d723f78bc0703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaffe91c876a6e67ad2c1f845f3e76d1d7" id="r_gaffe91c876a6e67ad2c1f845f3e76d1d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaffe91c876a6e67ad2c1f845f3e76d1d7">a_linalg_cho_lower</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *L, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *y)</td></tr>
+<tr class="memdesc:gaffe91c876a6e67ad2c1f845f3e76d1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve the lower triangular system Ly = b for y.  <br /></td></tr>
+<tr class="separator:gaffe91c876a6e67ad2c1f845f3e76d1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65c0826d487506d0fdf092fbef584f70" id="r_ga65c0826d487506d0fdf092fbef584f70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga65c0826d487506d0fdf092fbef584f70">a_linalg_cho_upper</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *L, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *x)</td></tr>
+<tr class="memdesc:ga65c0826d487506d0fdf092fbef584f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve the upper triangular system L^T x = y for x.  <br /></td></tr>
+<tr class="separator:ga65c0826d487506d0fdf092fbef584f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2544faeca70fea71bfef79d22f319bf" id="r_gae2544faeca70fea71bfef79d22f319bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae2544faeca70fea71bfef79d22f319bf">a_linalg_cho_solve</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *x)</td></tr>
+<tr class="memdesc:gae2544faeca70fea71bfef79d22f319bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve the linear system Ax = b using the Cholesky factorization A = LL^T.  <br /></td></tr>
+<tr class="separator:gae2544faeca70fea71bfef79d22f319bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa44dec0e0ff0f5b67bf689017cfa9ef8" id="r_gaa44dec0e0ff0f5b67bf689017cfa9ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa44dec0e0ff0f5b67bf689017cfa9ef8">a_linalg_cho_inv</a> (<a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *A, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *b, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *I)</td></tr>
+<tr class="memdesc:gaa44dec0e0ff0f5b67bf689017cfa9ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the inverse of a matrix using its Cholesky factorization A = LL^T.  <br /></td></tr>
+<tr class="separator:gaa44dec0e0ff0f5b67bf689017cfa9ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gafe7a4ee08c31298aa5b397396558daa2" name="gafe7a4ee08c31298aa5b397396558daa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe7a4ee08c31298aa5b397396558daa2">&#9670;&#160;</a></span>a_linalg_dot()</h2>
+<a id="ga2d9b8fefd933acf695900a6214545da9" name="ga2d9b8fefd933acf695900a6214545da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d9b8fefd933acf695900a6214545da9">&#9670;&#160;</a></span>a_linalg_cho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_linalg_cho </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute Cholesky decomposition of a symmetric positive-definite matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>an n x n square matrix. on input, contains the matrix to decompose. on output, contains the L matrix. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix A (number of rows and columns). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a non-zero error code if the decomposition fails. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>on failure, A is a singular matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga271e5b3de5fb9a41aa7d723f78bc0703" name="ga271e5b3de5fb9a41aa7d723f78bc0703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga271e5b3de5fb9a41aa7d723f78bc0703">&#9670;&#160;</a></span>a_linalg_cho_get_L()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_linalg_cho_get_L </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>L</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>extract the lower triangular matrix L from matrix A. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>the matrix containing L form after Cholesky decomposition. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix that was decomposed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">L</td><td>the output matrix where the lower triangular matrix will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa44dec0e0ff0f5b67bf689017cfa9ef8" name="gaa44dec0e0ff0f5b67bf689017cfa9ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa44dec0e0ff0f5b67bf689017cfa9ef8">&#9670;&#160;</a></span>a_linalg_cho_inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_linalg_cho_inv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>I</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the inverse of a matrix using its Cholesky factorization A = LL^T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>the matrix containing L form after Cholesky decomposition. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix A (number of rows and columns). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>a pre-allocated temporary buffer of size n for intermediate computations. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">I</td><td>the output matrix where the inverse of A will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaffe91c876a6e67ad2c1f845f3e76d1d7" name="gaffe91c876a6e67ad2c1f845f3e76d1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaffe91c876a6e67ad2c1f845f3e76d1d7">&#9670;&#160;</a></span>a_linalg_cho_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_linalg_cho_lower </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>L</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>solve the lower triangular system Ly = b for y. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>the lower triangular matrix L, stored in row-major order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix L (number of rows and columns). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">y</td><td>on input, contains the vector b. on output, contains the solution vector y. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae2544faeca70fea71bfef79d22f319bf" name="gae2544faeca70fea71bfef79d22f319bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2544faeca70fea71bfef79d22f319bf">&#9670;&#160;</a></span>a_linalg_cho_solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_linalg_cho_solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>solve the linear system Ax = b using the Cholesky factorization A = LL^T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>the matrix containing L form after Cholesky decomposition. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix A (number of rows and columns). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">x</td><td>on input, contains the vector b. on output, contains the solution vector x. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga65c0826d487506d0fdf092fbef584f70" name="ga65c0826d487506d0fdf092fbef584f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65c0826d487506d0fdf092fbef584f70">&#9670;&#160;</a></span>a_linalg_cho_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_linalg_cho_upper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>L</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>solve the upper triangular system L^T x = y for x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>the lower triangular matrix L, stored in row-major order. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix L (number of rows and columns). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">x</td><td>on input, contains the vector y. on output, contains the solution vector x. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa7342b8981240d28c2a3544a410d1777" name="gaa7342b8981240d28c2a3544a410d1777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7342b8981240d28c2a3544a410d1777">&#9670;&#160;</a></span>a_linalg_dot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,12 +417,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> a_linalg_dot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -204,8 +445,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga15aca59474f951de162559abc9fb23e8" name="ga15aca59474f951de162559abc9fb23e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga15aca59474f951de162559abc9fb23e8">&#9670;&#160;</a></span>a_linalg_mulmm()</h2>
+<a id="ga322c50378474af2774b83ed696322669" name="ga322c50378474af2774b83ed696322669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga322c50378474af2774b83ed696322669">&#9670;&#160;</a></span>a_linalg_mulmm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,17 +454,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_linalg_mulmm </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -280,8 +521,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf4b238e77e834ffe3292de1cc8746009" name="gaf4b238e77e834ffe3292de1cc8746009"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf4b238e77e834ffe3292de1cc8746009">&#9670;&#160;</a></span>a_linalg_mulmT()</h2>
+<a id="gaefbf77c85fc30c646fa07255d2f5a741" name="gaefbf77c85fc30c646fa07255d2f5a741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefbf77c85fc30c646fa07255d2f5a741">&#9670;&#160;</a></span>a_linalg_mulmT()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,17 +530,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_linalg_mulmT </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -356,8 +597,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga57882de4cb6f1f1fd77ec3ce9d711157" name="ga57882de4cb6f1f1fd77ec3ce9d711157"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga57882de4cb6f1f1fd77ec3ce9d711157">&#9670;&#160;</a></span>a_linalg_mulTm()</h2>
+<a id="ga92d36ad7f5d1358c4a528bd53f66f9de" name="ga92d36ad7f5d1358c4a528bd53f66f9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92d36ad7f5d1358c4a528bd53f66f9de">&#9670;&#160;</a></span>a_linalg_mulTm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,17 +606,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_linalg_mulTm </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -443,8 +684,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga39ca6134838afa48156e383fe5e5b2d6" name="ga39ca6134838afa48156e383fe5e5b2d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga39ca6134838afa48156e383fe5e5b2d6">&#9670;&#160;</a></span>a_linalg_mulTT()</h2>
+<a id="ga805267f5fe0deb63607c1c33a23e6318" name="ga805267f5fe0deb63607c1c33a23e6318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga805267f5fe0deb63607c1c33a23e6318">&#9670;&#160;</a></span>a_linalg_mulTT()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,17 +693,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void a_linalg_mulTT </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *__restrict</td>          <td class="paramname"><span class="paramname"><em>Z</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *__restrict</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
