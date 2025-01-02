@@ -1,0 +1,24 @@
+var group__a__math =
+[
+    [ "A_1_PI", "d2/d44/group__a__math.html#ga52d9167fd7c741714df70576df68a763", null ],
+    [ "A_1_TAU", "d2/d44/group__a__math.html#gae50ce7f1d8906b12921f3c75568a1102", null ],
+    [ "A_2_PI", "d2/d44/group__a__math.html#gacbcbf1da874dc25591bd9a06badb6e9e", null ],
+    [ "A_2_SQRTPI", "d2/d44/group__a__math.html#gaa0b60d65eae658dbafa47697cd34df0c", null ],
+    [ "A_E", "d2/d44/group__a__math.html#ga272d60cdeecd44bda349a9a8deb783ab", null ],
+    [ "A_LN10", "d2/d44/group__a__math.html#ga64654c115e779cfeda469ddc531a6936", null ],
+    [ "A_LN1_10", "d2/d44/group__a__math.html#gac49174e9fdf9b644eeb284c107792dd5", null ],
+    [ "A_LN1_2", "d2/d44/group__a__math.html#ga89303c7f3d24d25520d1940d08899e0a", null ],
+    [ "A_LN2", "d2/d44/group__a__math.html#ga653b4266538597c861adc55cf2cd5259", null ],
+    [ "A_LOG10E", "d2/d44/group__a__math.html#ga075206a2e28fcd3dce8c31088a385b45", null ],
+    [ "A_LOG2E", "d2/d44/group__a__math.html#ga50d5be900e0a9167bbb2ede4a23979aa", null ],
+    [ "A_PI", "d2/d44/group__a__math.html#gad37649758ce967343cee82772583fd9c", null ],
+    [ "A_PI_2", "d2/d44/group__a__math.html#ga9d01f1becda5c5819bdac0568e61a762", null ],
+    [ "A_PI_4", "d2/d44/group__a__math.html#gaa54b111e1ac5e4c7010e161e80e654d3", null ],
+    [ "A_SQRT1_2", "d2/d44/group__a__math.html#gae29c69e74a53f4a1a260f3fda0ccfbe2", null ],
+    [ "A_SQRT1_3", "d2/d44/group__a__math.html#ga940ea1a6518d79bd0f706a239bac6e43", null ],
+    [ "A_SQRT2", "d2/d44/group__a__math.html#ga4ce830c7ac10626f90b78bee25e2cd54", null ],
+    [ "A_SQRT3", "d2/d44/group__a__math.html#ga3b45523be1ffff826a58361a7a41fba6", null ],
+    [ "A_TAU", "d2/d44/group__a__math.html#gaf71826046920813738ea3f3814020e26", null ],
+    [ "a_f32_rsqrt", "d2/d44/group__a__math.html#ga141d6566b4546c190de0889e43458bce", null ],
+    [ "a_u32_sqrt", "d2/d44/group__a__math.html#gaa69119e1c81c86f6b1409a135375e513", null ]
+];

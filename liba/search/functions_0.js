@@ -215,7 +215,7 @@ var searchData=
   ['a_5fpid_5fzero_212',['a_pid_zero',['../dd/d81/group__a__pid.html#gaad4b975dc0d59cca500783d8f0b1dd2c',1,'pid.h']]],
   ['a_5fpoly_5feval_213',['a_poly_eval',['../d1/d14/group__a__poly.html#ga3486869ac335a176eb0e54d099b34af6',1,'poly.h']]],
   ['a_5fpoly_5fevar_214',['a_poly_evar',['../d1/d14/group__a__poly.html#gaedcbe904822d60cb6d9bde7cd7291b6c',1,'poly.h']]],
-  ['a_5fpoly_5fswap_215',['a_poly_swap',['../d1/d14/group__a__poly.html#ga4c78b6df98d2e63bbdd9356a6169c229',1,'poly.h']]],
+  ['a_5fpoly_5fswap_215',['a_poly_swap',['../d1/d14/group__a__poly.html#ga3ffe9918f0e8a05ce6baea8d0adbe3df',1,'poly.h']]],
   ['a_5fque_5fat_216',['a_que_at',['../df/d21/group__a__que.html#ga09b14dedd6ec62aedcfee45b7ed7f4b5',1,'que.h']]],
   ['a_5fque_5fback_217',['a_que_back',['../df/d21/group__a__que.html#ga55a7225d83b489d5061221e643e2fc49',1,'que.h']]],
   ['a_5fque_5fback_5f_218',['a_que_back_',['../df/d21/group__a__que.html#ga3d3e3e9ad641a4f6471e147601be8e7e',1,'que.h']]],
