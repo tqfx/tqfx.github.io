@@ -1,5 +1,5 @@
 (function() {
-    var implementors = Object.fromEntries([["liba",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.83.0/core/cmp/trait.PartialOrd.html\" title=\"trait core::cmp::PartialOrd\">PartialOrd</a> for <a class=\"struct\" href=\"liba/struct.version.html\" title=\"struct liba::version\">version</a>"]]]]);
+    var implementors = Object.fromEntries([["liba",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.84.0/core/cmp/trait.PartialOrd.html\" title=\"trait core::cmp::PartialOrd\">PartialOrd</a> for <a class=\"struct\" href=\"liba/struct.version.html\" title=\"struct liba::version\">version</a>"]]]]);
     if (window.register_implementors) {
         window.register_implementors(implementors);
     } else {
