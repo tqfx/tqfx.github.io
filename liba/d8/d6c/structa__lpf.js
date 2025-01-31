@@ -1,5 +1,5 @@
 var structa__lpf =
 [
-    [ "alpha", "d8/d6c/structa__lpf.html#a7b12d92e198342aff20bcbfd2e44217d", null ],
-    [ "output", "d8/d6c/structa__lpf.html#a1dfc13545871149e9621c6babdd48f9b", null ]
+    [ "alpha", "d8/d6c/structa__lpf.html#af1e015881d1a84b0f1b87c8ab6ab79bd", null ],
+    [ "output", "d8/d6c/structa__lpf.html#a1a3ead94c76a71f9ae9653a2bb7495c7", null ]
 ];

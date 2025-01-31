@@ -2,9 +2,9 @@ var searchData=
 [
   ['check_0',['Cyclic Redundancy Check',['../d0/de2/group__a__crc.html',1,'']]],
   ['circular_20doubly_20linked_20list_1',['circular doubly linked list',['../db/d65/group__a__list.html',1,'']]],
-  ['coef_2',['coef',['../de/d63/structa__regress__simple.html#ac29375c02d74e06fd7fd5585da451371',1,'a_regress_simple']]],
+  ['coef_2',['coef',['../de/d63/structa__regress__simple.html#a359b79faa0684693c4989a97491cd62a',1,'a_regress_simple']]],
   ['coef_5fn_3',['coef_n',['../db/dd2/structa__regress__linear.html#adf4f39760141b6e349bc7996f702f875',1,'a_regress_linear']]],
-  ['coef_5fp_4',['coef_p',['../db/dd2/structa__regress__linear.html#a7a9adcc6a18934801c71b230b7da0ee7',1,'a_regress_linear']]],
+  ['coef_5fp_4',['coef_p',['../db/dd2/structa__regress__linear.html#a9464b627421d5e951f4e1452f4635d44',1,'a_regress_linear']]],
   ['com_20tqfx_20liba_20wiki_20getting_20started_20getting_20started_20a_5',['&lt;a href=&quot;https://github.com/tqfx/liba/wiki/Getting-started&quot; &gt;Getting started&lt;/a&gt;',['../index.html#autotoc_md0',1,'']]],
   ['complex_20number_6',['complex number',['../de/d1c/group__a__complex.html',1,'']]],
   ['complex_2eh_7',['complex.h',['../d7/d3b/complex_8h.html',1,'']]],

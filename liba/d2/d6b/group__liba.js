@@ -1,6 +1,6 @@
 var group__liba =
 [
-    [ "floating-point number", "dc/dd1/group__a__float.html", "dc/dd1/group__a__float" ],
+    [ "floating-point number", "d5/d19/group__a__real.html", "d5/d19/group__a__real" ],
     [ "AVL binary search tree", "dd/dba/group__a__avl.html", "dd/dba/group__a__avl" ],
     [ "basic buffer library", "d9/d0a/group__a__buf.html", "d9/d0a/group__a__buf" ],
     [ "complex number", "de/d1c/group__a__complex.html", "de/d1c/group__a__complex" ],

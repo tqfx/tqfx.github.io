@@ -20,5 +20,7 @@ var group__a__math =
     [ "A_SQRT3", "d2/d44/group__a__math.html#ga3b45523be1ffff826a58361a7a41fba6", null ],
     [ "A_TAU", "d2/d44/group__a__math.html#gaf71826046920813738ea3f3814020e26", null ],
     [ "a_f32_rsqrt", "d2/d44/group__a__math.html#ga141d6566b4546c190de0889e43458bce", null ],
+    [ "a_u32_gcd", "d2/d44/group__a__math.html#ga8b26a3a7f6dbf0075ac3bfaf9ee11263", null ],
+    [ "a_u32_lcm", "d2/d44/group__a__math.html#ga63f7998c9c457550837bd040c498cb42", null ],
     [ "a_u32_sqrt", "d2/d44/group__a__math.html#gaa69119e1c81c86f6b1409a135375e513", null ]
 ];

@@ -935,77 +935,77 @@ $(function(){initNavTree('d2/d62/a_8h_source.html','../../'); initResizable(true
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno"><a class="line" href="../../d2/d6b/group__liba.html#gad2b66e4a4da01a96c68e79a9682330be">  901</a></span><span class="keyword">typedef</span> A_F64 <a class="code hl_typedef" href="../../d2/d6b/group__liba.html#gad2b66e4a4da01a96c68e79a9682330be">a_f64</a>;</div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span></div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span></div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span><span class="preprocessor">#if !defined A_FLOAT_TYPE</span></div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span><span class="preprocessor">#if !defined A_SIZE_FLOAT</span></div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#gad703c6ba1a605e50cf689816712b03b0">  914</a></span><span class="preprocessor">#define A_FLOAT_TYPE A_FLOAT_DOUBLE</span></div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span><span class="preprocessor">#else </span><span class="comment">/* !A_SIZE_FLOAT */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span><span class="preprocessor">#define A_FLOAT_TYPE A_SIZE_FLOAT</span></div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span><span class="preprocessor">#endif </span><span class="comment">/* A_SIZE_FLOAT */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span><span class="preprocessor">#define A_FLOAT_SINGLE 0x04</span></div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span><span class="preprocessor">#define A_FLOAT_DOUBLE 0x08</span></div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="preprocessor">#define A_FLOAT_EXTEND 0x10</span></div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span><span class="preprocessor">#if defined(A_FLOAT)</span></div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span><span class="preprocessor">#elif A_FLOAT_TYPE + 0 == A_FLOAT_SINGLE</span></div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span><span class="preprocessor">#if !defined A_REAL_TYPE</span></div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span><span class="preprocessor">#if !defined A_SIZE_REAL</span></div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#ga799f8e821233f0f6803b7d5e53d8aa35">  914</a></span><span class="preprocessor">#define A_REAL_TYPE A_REAL_DOUBLE</span></div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span><span class="preprocessor">#else </span><span class="comment">/* !A_SIZE_REAL */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span><span class="preprocessor">#define A_REAL_TYPE A_SIZE_REAL</span></div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span><span class="preprocessor">#endif </span><span class="comment">/* A_SIZE_REAL */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span><span class="preprocessor">#endif </span><span class="comment">/* A_REAL_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span><span class="preprocessor">#define A_REAL_SINGLE 0x04</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span><span class="preprocessor">#define A_REAL_DOUBLE 0x08</span></div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="preprocessor">#define A_REAL_EXTEND 0x10</span></div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span><span class="preprocessor">#if defined(A_REAL)</span></div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span><span class="preprocessor">#elif A_REAL_TYPE + 0 == A_REAL_SINGLE</span></div>
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span></div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="preprocessor">#define A_FLOAT float</span></div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span><span class="preprocessor">#define A_FLOAT_DIG FLT_DIG</span></div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><span class="preprocessor">#define A_FLOAT_EPSILON FLT_EPSILON</span></div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="preprocessor">#define A_FLOAT_MANT_DIG FLT_MANT_DIG</span></div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span><span class="preprocessor">#define A_FLOAT_MAX FLT_MAX</span></div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span><span class="preprocessor">#define A_FLOAT_MAX_10_EXP FLT_MAX_10_EXP</span></div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="preprocessor">#define A_FLOAT_MAX_EXP FLT_MAX_EXP</span></div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><span class="preprocessor">#define A_FLOAT_MIN FLT_MIN</span></div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="preprocessor">#define A_FLOAT_MIN_10_EXP FLT_MIN_10_EXP</span></div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="preprocessor">#define A_FLOAT_MIN_EXP FLT_MIN_EXP</span></div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><span class="preprocessor">#define A_FLOAT_C(X) A_CAST_2(X, F)</span></div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="preprocessor">#define A_FLOAT_F(F) A_CAST_2(F, f)</span></div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="preprocessor">#define A_FLOAT_PRI</span></div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span><span class="preprocessor">#define A_FLOAT_SCN</span></div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="preprocessor">#define A_REAL float</span></div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span><span class="preprocessor">#define A_REAL_DIG FLT_DIG</span></div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><span class="preprocessor">#define A_REAL_EPSILON FLT_EPSILON</span></div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="preprocessor">#define A_REAL_MANT_DIG FLT_MANT_DIG</span></div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span><span class="preprocessor">#define A_REAL_MAX FLT_MAX</span></div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span><span class="preprocessor">#define A_REAL_MAX_10_EXP FLT_MAX_10_EXP</span></div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="preprocessor">#define A_REAL_MAX_EXP FLT_MAX_EXP</span></div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><span class="preprocessor">#define A_REAL_MIN FLT_MIN</span></div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="preprocessor">#define A_REAL_MIN_10_EXP FLT_MIN_10_EXP</span></div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="preprocessor">#define A_REAL_MIN_EXP FLT_MIN_EXP</span></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><span class="preprocessor">#define A_REAL_C(X) A_CAST_2(X, F)</span></div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="preprocessor">#define A_REAL_F(F) A_CAST_2(F, f)</span></div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="preprocessor">#define A_REAL_PRI</span></div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span><span class="preprocessor">#define A_REAL_SCN</span></div>
 <div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span> </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span><span class="preprocessor">#elif A_FLOAT_TYPE + 0 == A_FLOAT_DOUBLE</span></div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span><span class="preprocessor">#elif A_REAL_TYPE + 0 == A_REAL_DOUBLE</span></div>
 <div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span></div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga91692b1aad25649a053ac2de98cb63d7">  944</a></span><span class="preprocessor">#define A_FLOAT double</span></div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span><span class="preprocessor">#define A_FLOAT_DIG DBL_DIG</span></div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="preprocessor">#define A_FLOAT_EPSILON DBL_EPSILON</span></div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span><span class="preprocessor">#define A_FLOAT_MANT_DIG DBL_MANT_DIG</span></div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span><span class="preprocessor">#define A_FLOAT_MAX DBL_MAX</span></div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span><span class="preprocessor">#define A_FLOAT_MAX_10_EXP DBL_MAX_10_EXP</span></div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span><span class="preprocessor">#define A_FLOAT_MAX_EXP DBL_MAX_EXP</span></div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span><span class="preprocessor">#define A_FLOAT_MIN DBL_MIN</span></div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span><span class="preprocessor">#define A_FLOAT_MIN_10_EXP DBL_MIN_10_EXP</span></div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="preprocessor">#define A_FLOAT_MIN_EXP DBL_MIN_EXP</span></div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#gaf78ed809b087065f4ff92b771d69a185">  954</a></span><span class="preprocessor">#define A_FLOAT_C(X) X</span></div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga8418faf154b879db947f8bb96970e971">  955</a></span><span class="preprocessor">#define A_FLOAT_F(F) F</span></div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga959328da415749062086f79a7a78ad56">  956</a></span><span class="preprocessor">#define A_FLOAT_PRI</span></div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga8ffc0ceef810c50502977310a7823bbd">  957</a></span><span class="preprocessor">#define A_FLOAT_SCN &quot;l&quot;</span></div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#gac6a1600f7492f071c47545f520e9508e">  944</a></span><span class="preprocessor">#define A_REAL double</span></div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span><span class="preprocessor">#define A_REAL_DIG DBL_DIG</span></div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="preprocessor">#define A_REAL_EPSILON DBL_EPSILON</span></div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span><span class="preprocessor">#define A_REAL_MANT_DIG DBL_MANT_DIG</span></div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span><span class="preprocessor">#define A_REAL_MAX DBL_MAX</span></div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span><span class="preprocessor">#define A_REAL_MAX_10_EXP DBL_MAX_10_EXP</span></div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span><span class="preprocessor">#define A_REAL_MAX_EXP DBL_MAX_EXP</span></div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span><span class="preprocessor">#define A_REAL_MIN DBL_MIN</span></div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span><span class="preprocessor">#define A_REAL_MIN_10_EXP DBL_MIN_10_EXP</span></div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="preprocessor">#define A_REAL_MIN_EXP DBL_MIN_EXP</span></div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#ga03126bc97c74da114b73ef363112d651">  954</a></span><span class="preprocessor">#define A_REAL_C(X) X</span></div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#gaba5982fdb46e28dfca2222bb89df9a5c">  955</a></span><span class="preprocessor">#define A_REAL_F(F) F</span></div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#ga89d9d57b8b278cc9674179a279a9bbc2">  956</a></span><span class="preprocessor">#define A_REAL_PRI</span></div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#ga9e5bb0715d44a301bf9d8c44cd4f46e4">  957</a></span><span class="preprocessor">#define A_REAL_SCN &quot;l&quot;</span></div>
 <div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span> </div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span><span class="preprocessor">#elif A_FLOAT_TYPE + 0 == A_FLOAT_EXTEND</span></div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span><span class="preprocessor">#elif A_REAL_TYPE + 0 == A_REAL_EXTEND</span></div>
 <div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span></div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span><span class="preprocessor">#define A_FLOAT long double</span></div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="preprocessor">#define A_FLOAT_DIG LDBL_DIG</span></div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span><span class="preprocessor">#define A_FLOAT_EPSILON LDBL_EPSILON</span></div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="preprocessor">#define A_FLOAT_MANT_DIG LDBL_MANT_DIG</span></div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="preprocessor">#define A_FLOAT_MAX LDBL_MAX</span></div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span><span class="preprocessor">#define A_FLOAT_MAX_10_EXP LDBL_MAX_10_EXP</span></div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span><span class="preprocessor">#define A_FLOAT_MAX_EXP LDBL_MAX_EXP</span></div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span><span class="preprocessor">#define A_FLOAT_MIN LDBL_MIN</span></div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span><span class="preprocessor">#define A_FLOAT_MIN_10_EXP LDBL_MIN_10_EXP</span></div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span><span class="preprocessor">#define A_FLOAT_MIN_EXP LDBL_MIN_EXP</span></div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span><span class="preprocessor">#define A_FLOAT_C(X) A_CAST_2(X, L)</span></div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span><span class="preprocessor">#define A_FLOAT_F(F) A_CAST_2(F, l)</span></div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span><span class="preprocessor">#define A_FLOAT_PRI &quot;L&quot;</span></div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span><span class="preprocessor">#define A_FLOAT_SCN &quot;L&quot;</span></div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span><span class="preprocessor">#define A_REAL long double</span></div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="preprocessor">#define A_REAL_DIG LDBL_DIG</span></div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span><span class="preprocessor">#define A_REAL_EPSILON LDBL_EPSILON</span></div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="preprocessor">#define A_REAL_MANT_DIG LDBL_MANT_DIG</span></div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="preprocessor">#define A_REAL_MAX LDBL_MAX</span></div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span><span class="preprocessor">#define A_REAL_MAX_10_EXP LDBL_MAX_10_EXP</span></div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span><span class="preprocessor">#define A_REAL_MAX_EXP LDBL_MAX_EXP</span></div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span><span class="preprocessor">#define A_REAL_MIN LDBL_MIN</span></div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span><span class="preprocessor">#define A_REAL_MIN_10_EXP LDBL_MIN_10_EXP</span></div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span><span class="preprocessor">#define A_REAL_MIN_EXP LDBL_MIN_EXP</span></div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span><span class="preprocessor">#define A_REAL_C(X) A_CAST_2(X, L)</span></div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span><span class="preprocessor">#define A_REAL_F(F) A_CAST_2(F, l)</span></div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span><span class="preprocessor">#define A_REAL_PRI &quot;L&quot;</span></div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span><span class="preprocessor">#define A_REAL_SCN &quot;L&quot;</span></div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span> </div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span><span class="preprocessor">#else </span><span class="comment">/* !A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span><span class="preprocessor">#else </span><span class="comment">/* !A_REAL_TYPE */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span><span class="preprocessor">#error unsupported precision</span></div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span><span class="preprocessor">#endif </span><span class="comment">/* A_REAL_TYPE */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span><span class="preprocessor">#define A_FLOAT_INF a_cast_s(A_FLOAT, A_F64_INF)</span></div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span><span class="preprocessor">#define A_FLOAT_NAN (A_FLOAT_C(0.0) * A_FLOAT_INF)</span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga8eb5b40b6679ff3b2e5e615f269b761d"> 1000</a></span><span class="preprocessor">#define a_float_c(x) a_cast_s(a_float, x)</span></div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span><span class="preprocessor">#define a_float_(_, x) a_cast_s(a_float _, x)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"><a class="line" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044"> 1003</a></span><span class="keyword">typedef</span> <a class="code hl_define" href="../../dc/dd1/group__a__float.html#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a> <a class="code hl_typedef" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>;</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span><span class="preprocessor">#define A_REAL_INF a_cast_s(A_REAL, A_F64_INF)</span></div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span><span class="preprocessor">#define A_REAL_NAN (A_REAL_C(0.0) * A_REAL_INF)</span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b"> 1000</a></span><span class="preprocessor">#define a_real_c(x) a_cast_s(a_real, x)</span></div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span><span class="preprocessor">#define a_real_(_, x) a_cast_s(a_real _, x)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"><a class="line" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364"> 1003</a></span><span class="keyword">typedef</span> <a class="code hl_define" href="../../d5/d19/group__a__real.html#gac6a1600f7492f071c47545f520e9508e">A_REAL</a> <a class="code hl_typedef" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>;</div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span></div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span> </div>
 <div class="foldopen" id="foldopen01007" data-start="{" data-end="};">
@@ -1042,9 +1042,9 @@ $(function(){initNavTree('d2/d62/a_8h_source.html','../../'); initResizable(true
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    <span class="keywordtype">void</span> *ptr;</div>
 <div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <span class="keywordtype">char</span> <span class="keyword">const</span> *STR;</div>
 <div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    <span class="keywordtype">char</span> *str;</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span><span class="preprocessor">#if defined(A_FLOAT_TYPE) &amp;&amp; (A_FLOAT_TYPE + 0 &lt; A_FLOAT_EXTEND)</span></div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    <a class="code hl_typedef" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> f;</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span><span class="preprocessor">#endif </span><span class="comment">/* A_FLOAT_TYPE */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span><span class="preprocessor">#if defined(A_REAL_TYPE) &amp;&amp; (A_REAL_TYPE + 0 &lt; A_REAL_EXTEND)</span></div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    <a class="code hl_typedef" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> f;</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span><span class="preprocessor">#endif </span><span class="comment">/* A_REAL_TYPE */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>} <a class="code hl_union" href="../../d3/d73/uniona__cast.html">a_cast</a>;</div>
 </div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span></div>
@@ -1393,8 +1393,8 @@ $(function(){initNavTree('d2/d62/a_8h_source.html','../../'); initResizable(true
 <div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span></div>
 <div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span> </div>
 <div class="line"><a id="l01544" name="l01544"></a><span class="lineno"> 1544</span><span class="preprocessor">#endif </span><span class="comment">/* a/a.h */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="agroup__a__float_html_ga4bd1b1bb27d5c9df6c57560abb0cd044"><div class="ttname"><a href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></div><div class="ttdeci">double a_float</div><div class="ttdoc">compiler built-in floating-point number type</div><div class="ttdef"><b>Definition</b> a.h:1003</div></div>
-<div class="ttc" id="agroup__a__float_html_ga91692b1aad25649a053ac2de98cb63d7"><div class="ttname"><a href="../../dc/dd1/group__a__float.html#ga91692b1aad25649a053ac2de98cb63d7">A_FLOAT</a></div><div class="ttdeci">#define A_FLOAT</div><div class="ttdoc">floating-point number stored using double</div><div class="ttdef"><b>Definition</b> a.h:944</div></div>
+<div class="ttc" id="agroup__a__real_html_gaa6f5bef334f17e35f9ef8fab5046c364"><div class="ttname"><a href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></div><div class="ttdeci">double a_real</div><div class="ttdoc">compiler built-in floating-point number type</div><div class="ttdef"><b>Definition</b> a.h:1003</div></div>
+<div class="ttc" id="agroup__a__real_html_gac6a1600f7492f071c47545f520e9508e"><div class="ttname"><a href="../../d5/d19/group__a__real.html#gac6a1600f7492f071c47545f520e9508e">A_REAL</a></div><div class="ttdeci">#define A_REAL</div><div class="ttdoc">floating-point number stored using double</div><div class="ttdef"><b>Definition</b> a.h:944</div></div>
 <div class="ttc" id="agroup__liba_html_ga0418a535fad97c25ad2137eb9ca9d3d8"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga0418a535fad97c25ad2137eb9ca9d3d8">a_f32</a></div><div class="ttdeci">float a_f32</div><div class="ttdoc">single precision floating point type. Matches IEEE-754 binary32 format if supported.</div><div class="ttdef"><b>Definition</b> a.h:877</div></div>
 <div class="ttc" id="agroup__liba_html_ga155e383bb3a1a9917410b40c64080969"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga155e383bb3a1a9917410b40c64080969">a_u64_rev</a></div><div class="ttdeci">a_u64 a_u64_rev(a_u64 x)</div><div class="ttdoc">reverse the bits in a 64-bit unsigned integer</div></div>
 <div class="ttc" id="agroup__liba_html_ga2d81774427feedc075684b5f981d0d1e"><div class="ttname"><a href="../../d2/d6b/group__liba.html#ga2d81774427feedc075684b5f981d0d1e">a_i8</a></div><div class="ttdeci">signed char a_i8</div><div class="ttdoc">signed integer type with width of exactly 8 bits</div><div class="ttdef"><b>Definition</b> a.h:427</div></div>

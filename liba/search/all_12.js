@@ -11,7 +11,7 @@ var searchData=
   ['started_20getting_20started_20a_8',['&lt;a href=&quot;https://github.com/tqfx/liba/wiki/Getting-started&quot; &gt;Getting started&lt;/a&gt;',['../index.html#autotoc_md0',1,'']]],
   ['str_2eh_9',['str.h',['../d1/d93/str_8h.html',1,'']]],
   ['string_20library_10',['basic string library',['../df/d28/group__a__str.html',1,'']]],
-  ['sum_11',['sum',['../db/d89/structa__pid.html#a79eccad8473a3665509d3462f2496b2b',1,'a_pid']]],
-  ['summax_12',['summax',['../db/d89/structa__pid.html#ad30fcdc8d8451a093b7df54d70951e2d',1,'a_pid']]],
-  ['summin_13',['summin',['../db/d89/structa__pid.html#aac7ce6bc1f79154707fcde07f9320f99',1,'a_pid']]]
+  ['sum_11',['sum',['../db/d89/structa__pid.html#a266062b550183c41883adb684149b3c0',1,'a_pid']]],
+  ['summax_12',['summax',['../db/d89/structa__pid.html#afec32785122efb9e45b85568b4eb424f',1,'a_pid']]],
+  ['summin_13',['summin',['../db/d89/structa__pid.html#abeeb21b04e1de223cb970f26d9ff19cd',1,'a_pid']]]
 ];

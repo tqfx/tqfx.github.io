@@ -1850,10 +1850,10 @@ liba = "0.1"
 
 </span><span class="doccomment">/// floating-point number stored using `f64`
 </span><span class="attr">#[cfg(not(feature = <span class="string">"float"</span>))]
-</span><span class="kw">pub type </span>float = f64;
+</span><span class="kw">pub type </span>real = f64;
 <span class="doccomment">/// floating-point number stored using `f32`
 </span><span class="attr">#[cfg(feature = <span class="string">"float"</span>)]
-</span><span class="kw">pub type </span>float = f32;
+</span><span class="kw">pub type </span>real = f32;
 
 <span class="attr">#[cfg(feature = <span class="string">"std"</span>)]
 </span><span class="kw">extern crate </span>std;
@@ -1921,31 +1921,31 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_float_sum(p: <span class="kw-2">*const </span>float, n: usize) -&gt; float;
-    <span class="kw">fn </span>a_float_sum1(p: <span class="kw-2">*const </span>float, n: usize) -&gt; float;
-    <span class="kw">fn </span>a_float_sum2(p: <span class="kw-2">*const </span>float, n: usize) -&gt; float;
-    <span class="kw">fn </span>a_float_mean(p: <span class="kw-2">*const </span>float, n: usize) -&gt; float;
+    <span class="kw">fn </span>a_real_sum(p: <span class="kw-2">*const </span>real, n: usize) -&gt; real;
+    <span class="kw">fn </span>a_real_sum1(p: <span class="kw-2">*const </span>real, n: usize) -&gt; real;
+    <span class="kw">fn </span>a_real_sum2(p: <span class="kw-2">*const </span>real, n: usize) -&gt; real;
+    <span class="kw">fn </span>a_real_mean(p: <span class="kw-2">*const </span>real, n: usize) -&gt; real;
 }
 
 <span class="doccomment">/// calculate the sum of a float array
 </span><span class="attr">#[inline(always)]
-</span><span class="kw">pub fn </span>float_sum(x: <span class="kw-2">&amp;</span>[float]) -&gt; float {
-    <span class="kw">unsafe </span>{ a_float_sum(x.as_ptr(), x.len()) }
+</span><span class="kw">pub fn </span>real_sum(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
+    <span class="kw">unsafe </span>{ a_real_sum(x.as_ptr(), x.len()) }
 }
 <span class="doccomment">/// calculate the absolute sum of a float array
 </span><span class="attr">#[inline(always)]
-</span><span class="kw">pub fn </span>float_sum1(x: <span class="kw-2">&amp;</span>[float]) -&gt; float {
-    <span class="kw">unsafe </span>{ a_float_sum1(x.as_ptr(), x.len()) }
+</span><span class="kw">pub fn </span>real_sum1(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
+    <span class="kw">unsafe </span>{ a_real_sum1(x.as_ptr(), x.len()) }
 }
 <span class="doccomment">/// calculate the sum of squares of a float array
 </span><span class="attr">#[inline(always)]
-</span><span class="kw">pub fn </span>float_sum2(x: <span class="kw-2">&amp;</span>[float]) -&gt; float {
-    <span class="kw">unsafe </span>{ a_float_sum2(x.as_ptr(), x.len()) }
+</span><span class="kw">pub fn </span>real_sum2(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
+    <span class="kw">unsafe </span>{ a_real_sum2(x.as_ptr(), x.len()) }
 }
 <span class="doccomment">/// calculate the mean of a float array
 </span><span class="attr">#[inline(always)]
-</span><span class="kw">pub fn </span>float_mean(x: <span class="kw-2">&amp;</span>[float]) -&gt; float {
-    <span class="kw">unsafe </span>{ a_float_mean(x.as_ptr(), x.len()) }
+</span><span class="kw">pub fn </span>real_mean(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
+    <span class="kw">unsafe </span>{ a_real_mean(x.as_ptr(), x.len()) }
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
@@ -2183,23 +2183,23 @@ liba = "0.1"
 }
 
 <span class="attr">#[allow(clippy::excessive_precision)]
-</span><span class="kw">const </span>TAU: float = <span class="number">6.28318530717958647692528676655900577</span>;
+</span><span class="kw">const </span>TAU: real = <span class="number">6.28318530717958647692528676655900577</span>;
 
 <span class="doccomment">/// High Pass Filter
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>hpf {
     <span class="doccomment">/// filter coefficient
-    </span><span class="kw">pub </span>alpha: float,
+    </span><span class="kw">pub </span>alpha: real,
     <span class="doccomment">/// filter output
-    </span><span class="kw">pub </span>output: float,
+    </span><span class="kw">pub </span>output: real,
     <span class="doccomment">/// filter input
-    </span><span class="kw">pub </span>input: float,
+    </span><span class="kw">pub </span>input: real,
 }
 
 <span class="kw">impl </span>hpf {
     <span class="doccomment">/// initialize for High Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(fc: float, ts: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(fc: real, ts: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             alpha: <span class="number">1.0 </span>/ (TAU * fc * ts + <span class="number">1.0</span>),
             output: <span class="number">0.0</span>,
@@ -2208,13 +2208,13 @@ liba = "0.1"
     }
     <span class="doccomment">/// generate for High Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, fc: float, ts: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, fc: real, ts: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="self">self</span>.alpha = <span class="number">1.0 </span>/ (TAU * fc * ts + <span class="number">1.0</span>);
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for High Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="self">self</span>.output = <span class="self">self</span>.alpha * (<span class="self">self</span>.output + x - <span class="self">self</span>.input);
         <span class="self">self</span>.input = x;
         <span class="self">self</span>.output
@@ -2229,21 +2229,21 @@ liba = "0.1"
 }
 
 <span class="attr">#[allow(clippy::excessive_precision)]
-</span><span class="kw">const </span>_1_TAU: float = <span class="number">0.159154943091895335768883763372514362</span>;
+</span><span class="kw">const </span>_1_TAU: real = <span class="number">0.159154943091895335768883763372514362</span>;
 
 <span class="doccomment">/// Low Pass Filter
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>lpf {
     <span class="doccomment">/// filter coefficient
-    </span><span class="kw">pub </span>alpha: float,
+    </span><span class="kw">pub </span>alpha: real,
     <span class="doccomment">/// filter output
-    </span><span class="kw">pub </span>output: float,
+    </span><span class="kw">pub </span>output: real,
 }
 
 <span class="kw">impl </span>lpf {
     <span class="doccomment">/// initialize for Low Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(fc: float, ts: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(fc: real, ts: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             alpha: ts / (_1_TAU / fc + ts),
             output: <span class="number">0.0</span>,
@@ -2251,13 +2251,13 @@ liba = "0.1"
     }
     <span class="doccomment">/// generate for Low Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, fc: float, ts: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, fc: real, ts: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="self">self</span>.alpha = ts / (_1_TAU / fc + ts);
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for Low Pass Filter
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="self">self</span>.output <span class="kw-2">*</span>= <span class="number">1.0 </span>- <span class="self">self</span>.alpha;
         <span class="self">self</span>.output += x * <span class="self">self</span>.alpha;
         <span class="self">self</span>.output
@@ -2302,86 +2302,86 @@ liba = "0.1"
     <span class="doccomment">/// pi-shaped membership function
     </span><span class="kw">pub const </span>PI: c_int = <span class="number">13</span>;
 
-    <span class="kw">use </span><span class="kw">crate</span>::float;
+    <span class="kw">use </span><span class="kw">crate</span>::real;
     <span class="kw">extern </span><span class="string">"C" </span>{
-        <span class="kw">fn </span>a_mf_gauss(x: float, sigma: float, c: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_gauss2(x: float, sigma1: float, c1: float, sigma2: float, c2: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_gbell(x: float, a: float, b: float, c: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_sig(x: float, a: float, c: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_dsig(x: float, a1: float, c1: float, a2: float, c2: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_psig(x: float, a1: float, c1: float, a2: float, c2: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_trap(x: float, a: float, b: float, c: float, d: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_tri(x: float, a: float, b: float, c: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_lins(x: float, a: float, b: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_linz(x: float, a: float, b: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_s(x: float, a: float, b: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_z(x: float, a: float, b: float) -&gt; float;
-        <span class="kw">fn </span>a_mf_pi(x: float, a: float, b: float, c: float, d: float) -&gt; float;
+        <span class="kw">fn </span>a_mf_gauss(x: real, sigma: real, c: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_gauss2(x: real, sigma1: real, c1: real, sigma2: real, c2: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_gbell(x: real, a: real, b: real, c: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_sig(x: real, a: real, c: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_dsig(x: real, a1: real, c1: real, a2: real, c2: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_psig(x: real, a1: real, c1: real, a2: real, c2: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_trap(x: real, a: real, b: real, c: real, d: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_tri(x: real, a: real, b: real, c: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_lins(x: real, a: real, b: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_linz(x: real, a: real, b: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_s(x: real, a: real, b: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_z(x: real, a: real, b: real) -&gt; real;
+        <span class="kw">fn </span>a_mf_pi(x: real, a: real, b: real, c: real, d: real) -&gt; real;
     }
 
     <span class="doccomment">/// gaussian membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gauss(x: float, sigma: float, c: float) -&gt; float {
+    </span><span class="kw">pub fn </span>gauss(x: real, sigma: real, c: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_gauss(x, sigma, c) }
     }
     <span class="doccomment">/// gaussian combination membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gauss2(x: float, sigma1: float, c1: float, sigma2: float, c2: float) -&gt; float {
+    </span><span class="kw">pub fn </span>gauss2(x: real, sigma1: real, c1: real, sigma2: real, c2: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_gauss2(x, sigma1, c1, sigma2, c2) }
     }
     <span class="doccomment">/// generalized bell-shaped membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gbell(x: float, a: float, b: float, c: float) -&gt; float {
+    </span><span class="kw">pub fn </span>gbell(x: real, a: real, b: real, c: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_gbell(x, a, b, c) }
     }
     <span class="doccomment">/// sigmoidal membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>sig(x: float, a: float, c: float) -&gt; float {
+    </span><span class="kw">pub fn </span>sig(x: real, a: real, c: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_sig(x, a, c) }
     }
     <span class="doccomment">/// difference between two sigmoidal membership functions
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>dsig(x: float, a1: float, c1: float, a2: float, c2: float) -&gt; float {
+    </span><span class="kw">pub fn </span>dsig(x: real, a1: real, c1: real, a2: real, c2: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_dsig(x, a1, c1, a2, c2) }
     }
     <span class="doccomment">/// product of two sigmoidal membership functions
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>psig(x: float, a1: float, c1: float, a2: float, c2: float) -&gt; float {
+    </span><span class="kw">pub fn </span>psig(x: real, a1: real, c1: real, a2: real, c2: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_psig(x, a1, c1, a2, c2) }
     }
     <span class="doccomment">/// trapezoidal membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>trap(x: float, a: float, b: float, c: float, d: float) -&gt; float {
+    </span><span class="kw">pub fn </span>trap(x: real, a: real, b: real, c: real, d: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_trap(x, a, b, c, d) }
     }
     <span class="doccomment">/// triangular membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>tri(x: float, a: float, b: float, c: float) -&gt; float {
+    </span><span class="kw">pub fn </span>tri(x: real, a: real, b: real, c: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_tri(x, a, b, c) }
     }
     <span class="doccomment">/// linear s-shaped saturation membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>lins(x: float, a: float, b: float) -&gt; float {
+    </span><span class="kw">pub fn </span>lins(x: real, a: real, b: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_lins(x, a, b) }
     }
     <span class="doccomment">/// linear z-shaped saturation membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>linz(x: float, a: float, b: float) -&gt; float {
+    </span><span class="kw">pub fn </span>linz(x: real, a: real, b: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_linz(x, a, b) }
     }
     <span class="doccomment">/// s-shaped membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>s(x: float, a: float, b: float) -&gt; float {
+    </span><span class="kw">pub fn </span>s(x: real, a: real, b: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_s(x, a, b) }
     }
     <span class="doccomment">/// z-shaped membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>z(x: float, a: float, b: float) -&gt; float {
+    </span><span class="kw">pub fn </span>z(x: real, a: real, b: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_z(x, a, b) }
     }
     <span class="doccomment">/// pi-shaped membership function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pi(x: float, a: float, b: float, c: float, d: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pi(x: real, a: real, b: real, c: real, d: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_mf_pi(x, a, b, c, d) }
     }
 }
@@ -2390,29 +2390,29 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>pid {
     <span class="doccomment">/// proportional constant
-    </span><span class="kw">pub </span>kp: float,
+    </span><span class="kw">pub </span>kp: real,
     <span class="doccomment">/// integral constant
-    </span><span class="kw">pub </span>ki: float,
+    </span><span class="kw">pub </span>ki: real,
     <span class="doccomment">/// derivative constant
-    </span><span class="kw">pub </span>kd: float,
+    </span><span class="kw">pub </span>kd: real,
     <span class="doccomment">/// maximum integral output
-    </span><span class="kw">pub </span>summax: float,
+    </span><span class="kw">pub </span>summax: real,
     <span class="doccomment">/// minimum integral output
-    </span><span class="kw">pub </span>summin: float,
+    </span><span class="kw">pub </span>summin: real,
     <span class="doccomment">/// controller integral output
-    </span><span class="kw">pub </span>sum: float,
+    </span><span class="kw">pub </span>sum: real,
     <span class="doccomment">/// maximum final output
-    </span><span class="kw">pub </span>outmax: float,
+    </span><span class="kw">pub </span>outmax: real,
     <span class="doccomment">/// minimum final output
-    </span><span class="kw">pub </span>outmin: float,
+    </span><span class="kw">pub </span>outmin: real,
     <span class="doccomment">/// controller final output
-    </span><span class="kw">pub </span>out: float,
+    </span><span class="kw">pub </span>out: real,
     <span class="doccomment">/// cache variable
-    </span>var: float,
+    </span>var: real,
     <span class="doccomment">/// cache feedback
-    </span><span class="kw">pub </span>fdb: float,
+    </span><span class="kw">pub </span>fdb: real,
     <span class="doccomment">/// cache error
-    </span><span class="kw">pub </span>err: float,
+    </span><span class="kw">pub </span>err: real,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>pid {
@@ -2422,11 +2422,11 @@ liba = "0.1"
             kp: <span class="number">0.0</span>,
             ki: <span class="number">0.0</span>,
             kd: <span class="number">0.0</span>,
-            summax: float::INFINITY,
-            summin: -float::INFINITY,
+            summax: real::INFINITY,
+            summin: -real::INFINITY,
             sum: <span class="number">0.0</span>,
-            outmax: float::INFINITY,
-            outmin: -float::INFINITY,
+            outmax: real::INFINITY,
+            outmin: -real::INFINITY,
             out: <span class="number">0.0</span>,
             var: <span class="number">0.0</span>,
             fdb: <span class="number">0.0</span>,
@@ -2436,10 +2436,10 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_set_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_run(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>pid, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_set_kpid(ctx: <span class="kw-2">*mut </span>pid, kp: real, ki: real, kd: real);
+    <span class="kw">fn </span>a_pid_run(ctx: <span class="kw-2">*mut </span>pid, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_pid_pos(ctx: <span class="kw-2">*mut </span>pid, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_pid_inc(ctx: <span class="kw-2">*mut </span>pid, set: real, fdb: real) -&gt; real;
     <span class="kw">fn </span>a_pid_zero(ctx: <span class="kw-2">*mut </span>pid);
 }
 
@@ -2451,23 +2451,23 @@ liba = "0.1"
     }
     <span class="doccomment">/// set proportional integral derivative constant for PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for positional PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_pos(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for incremental PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_inc(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// zeroing for PID controller
@@ -2502,21 +2502,21 @@ liba = "0.1"
 </span><span class="kw">pub struct </span>pid_fuzzy {
     <span class="doccomment">/// proportional integral derivative controller
     </span><span class="kw">pub </span>pid: pid,
-    me: <span class="kw-2">*const </span>float,
-    mec: <span class="kw-2">*const </span>float,
-    mkp: <span class="kw-2">*const </span>float,
-    mki: <span class="kw-2">*const </span>float,
-    mkd: <span class="kw-2">*const </span>float,
+    me: <span class="kw-2">*const </span>real,
+    mec: <span class="kw-2">*const </span>real,
+    mkp: <span class="kw-2">*const </span>real,
+    mki: <span class="kw-2">*const </span>real,
+    mkd: <span class="kw-2">*const </span>real,
     idx: <span class="kw-2">*mut </span>c_uint,
-    val: <span class="kw-2">*mut </span>float,
+    val: <span class="kw-2">*mut </span>real,
     <span class="doccomment">/// fuzzy relational operator
-    </span>opr: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float,
+    </span>opr: <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(real, real) -&gt; real,
     <span class="doccomment">/// base proportional constant
-    </span><span class="kw">pub </span>kp: float,
+    </span><span class="kw">pub </span>kp: real,
     <span class="doccomment">/// base integral constant
-    </span><span class="kw">pub </span>ki: float,
+    </span><span class="kw">pub </span>ki: real,
     <span class="doccomment">/// base derivative constant
-    </span><span class="kw">pub </span>kd: float,
+    </span><span class="kw">pub </span>kd: real,
     <span class="doccomment">/// number of order in the square matrix
     </span>nrule: c_uint,
     <span class="doccomment">/// maximum number triggered by the rule
@@ -2546,23 +2546,23 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_fuzzy_opr(opr: c_uint) -&gt; <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(float, float) -&gt; float;
+    <span class="kw">fn </span>a_pid_fuzzy_opr(opr: c_uint) -&gt; <span class="kw">extern </span><span class="string">"C" </span><span class="kw">fn</span>(real, real) -&gt; real;
     <span class="kw">fn </span>a_pid_fuzzy_set_opr(ctx: <span class="kw-2">*mut </span>pid_fuzzy, opr: c_uint);
     <span class="kw">fn </span>a_pid_fuzzy_bfuzz(ctx: <span class="kw-2">*const </span>pid_fuzzy) -&gt; <span class="kw-2">*mut </span>u8;
     <span class="kw">fn </span>a_pid_fuzzy_set_bfuzz(ctx: <span class="kw-2">*mut </span>pid_fuzzy, ptr: <span class="kw-2">*mut </span>u8, num: usize);
     <span class="kw">fn </span>a_pid_fuzzy_set_rule(
         ctx: <span class="kw-2">*mut </span>pid_fuzzy,
         num: c_uint,
-        me: <span class="kw-2">*const </span>float,
-        mec: <span class="kw-2">*const </span>float,
-        mkp: <span class="kw-2">*const </span>float,
-        mki: <span class="kw-2">*const </span>float,
-        mkd: <span class="kw-2">*const </span>float,
+        me: <span class="kw-2">*const </span>real,
+        mec: <span class="kw-2">*const </span>real,
+        mkp: <span class="kw-2">*const </span>real,
+        mki: <span class="kw-2">*const </span>real,
+        mkd: <span class="kw-2">*const </span>real,
     );
-    <span class="kw">fn </span>a_pid_fuzzy_set_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_fuzzy_run(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_fuzzy_pos(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_fuzzy_inc(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_fuzzy_set_kpid(ctx: <span class="kw-2">*mut </span>pid_fuzzy, kp: real, ki: real, kd: real);
+    <span class="kw">fn </span>a_pid_fuzzy_run(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_pid_fuzzy_pos(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_pid_fuzzy_inc(ctx: <span class="kw-2">*mut </span>pid_fuzzy, set: real, fdb: real) -&gt; real;
     <span class="kw">fn </span>a_pid_fuzzy_zero(ctx: <span class="kw-2">*mut </span>pid_fuzzy);
 }
 
@@ -2582,7 +2582,7 @@ liba = "0.1"
     </span><span class="attr">#[inline(always)]
     #[allow(non_snake_case)]
     </span><span class="kw">pub const fn </span>BFUZZ(n: usize) -&gt; usize {
-        size_of::&lt;c_uint&gt;() * n * <span class="number">2 </span>+ size_of::&lt;float&gt;() * n * (<span class="number">2 </span>+ n)
+        size_of::&lt;c_uint&gt;() * n * <span class="number">2 </span>+ size_of::&lt;real&gt;() * n * (<span class="number">2 </span>+ n)
     }
     <span class="doccomment">/// get memory block for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
@@ -2600,11 +2600,11 @@ liba = "0.1"
     </span><span class="kw">pub fn </span>set_rule(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
         col: usize,
-        me: <span class="kw-2">&amp;</span>[float],
-        mec: <span class="kw-2">&amp;</span>[float],
-        mkp: <span class="kw-2">&amp;</span>[float],
-        mki: <span class="kw-2">&amp;</span>[float],
-        mkd: <span class="kw-2">&amp;</span>[float],
+        me: <span class="kw-2">&amp;</span>[real],
+        mec: <span class="kw-2">&amp;</span>[real],
+        mkp: <span class="kw-2">&amp;</span>[real],
+        mki: <span class="kw-2">&amp;</span>[real],
+        mkd: <span class="kw-2">&amp;</span>[real],
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{
             a_pid_fuzzy_set_rule(
@@ -2621,23 +2621,23 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// set proportional integral derivative constant for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_fuzzy_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for positional fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_pos(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for incremental fuzzy PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_inc(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// zeroing for fuzzy PID controller
@@ -2654,15 +2654,15 @@ liba = "0.1"
     <span class="doccomment">/// proportional integral derivative controller
     </span><span class="kw">pub </span>pid: pid,
     <span class="doccomment">/// proportional coefficient
-    </span><span class="kw">pub </span>k: float,
+    </span><span class="kw">pub </span>k: real,
     <span class="doccomment">/// proportional weight
-    </span><span class="kw">pub </span>wp: float,
+    </span><span class="kw">pub </span>wp: real,
     <span class="doccomment">/// integral weight
-    </span><span class="kw">pub </span>wi: float,
+    </span><span class="kw">pub </span>wi: real,
     <span class="doccomment">/// derivative weight
-    </span><span class="kw">pub </span>wd: float,
+    </span><span class="kw">pub </span>wd: real,
     <span class="doccomment">/// error change
-    </span><span class="kw">pub </span>ec: float,
+    </span><span class="kw">pub </span>ec: real,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>pid_neuro {
@@ -2680,10 +2680,10 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_pid_neuro_set_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: float, kp: float, ki: float, kd: float);
-    <span class="kw">fn </span>a_pid_neuro_set_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: float, wi: float, wd: float);
-    <span class="kw">fn </span>a_pid_neuro_run(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
-    <span class="kw">fn </span>a_pid_neuro_inc(ctx: <span class="kw-2">*mut </span>pid_neuro, set: float, fdb: float) -&gt; float;
+    <span class="kw">fn </span>a_pid_neuro_set_kpid(ctx: <span class="kw-2">*mut </span>pid_neuro, k: real, kp: real, ki: real, kd: real);
+    <span class="kw">fn </span>a_pid_neuro_set_wpid(ctx: <span class="kw-2">*mut </span>pid_neuro, wp: real, wi: real, wd: real);
+    <span class="kw">fn </span>a_pid_neuro_run(ctx: <span class="kw-2">*mut </span>pid_neuro, set: real, fdb: real) -&gt; real;
+    <span class="kw">fn </span>a_pid_neuro_inc(ctx: <span class="kw-2">*mut </span>pid_neuro, set: real, fdb: real) -&gt; real;
     <span class="kw">fn </span>a_pid_neuro_zero(ctx: <span class="kw-2">*mut </span>pid_neuro);
 }
 
@@ -2695,24 +2695,24 @@ liba = "0.1"
     }
     <span class="doccomment">/// set proportional integral derivative constant for single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, k: float, kp: float, ki: float, kd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_kpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, k: real, kp: real, ki: real, kd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_neuro_set_kpid(<span class="self">self</span>, k, kp, ki, kd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// set proportional integral derivative weight for single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_wpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, wp: float, wi: float, wd: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_wpid(<span class="kw-2">&amp;mut </span><span class="self">self</span>, wp: real, wi: real, wd: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_pid_neuro_set_wpid(<span class="self">self</span>, wp, wi, wd) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate for single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_neuro_run(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// calculate for incremental single neuron PID controller
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: float, fdb: float) -&gt; float {
+    </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_neuro_inc(<span class="self">self</span>, set, fdb) }
     }
     <span class="doccomment">/// zeroing for single neuron PID controller
@@ -2727,58 +2727,58 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>regress_linear {
     <span class="doccomment">/// points to regression coefficients
-    </span>coef_p: <span class="kw-2">*mut </span>float,
+    </span>coef_p: <span class="kw-2">*mut </span>real,
     <span class="doccomment">/// number of regression coefficients
     </span>coef_n: usize,
     <span class="doccomment">/// intercept
-    </span><span class="kw">pub </span>bias: float,
+    </span><span class="kw">pub </span>bias: real,
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_regress_linear_eval(ctx: <span class="kw-2">*const </span>regress_linear, val: <span class="kw-2">*const </span>float) -&gt; float;
+    <span class="kw">fn </span>a_regress_linear_eval(ctx: <span class="kw-2">*const </span>regress_linear, val: <span class="kw-2">*const </span>real) -&gt; real;
     <span class="kw">fn </span>a_regress_linear_err(
         ctx: <span class="kw-2">*const </span>regress_linear,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        err: <span class="kw-2">*mut </span>float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        err: <span class="kw-2">*mut </span>real,
     );
     <span class="kw">fn </span>a_regress_linear_pdm(
         ctx: <span class="kw-2">*const </span>regress_linear,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        pdm: <span class="kw-2">*mut </span>float,
-        y_mean: float,
+        x: <span class="kw-2">*const </span>real,
+        pdm: <span class="kw-2">*mut </span>real,
+        y_mean: real,
     );
     <span class="kw">fn </span>a_regress_linear_gd(
         ctx: <span class="kw-2">*mut </span>regress_linear,
-        input: <span class="kw-2">*const </span>float,
-        error: float,
-        alpha: float,
+        input: <span class="kw-2">*const </span>real,
+        error: real,
+        alpha: real,
     );
     <span class="kw">fn </span>a_regress_linear_sgd(
         ctx: <span class="kw-2">*mut </span>regress_linear,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        alpha: float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        alpha: real,
     );
     <span class="kw">fn </span>a_regress_linear_bgd(
         ctx: <span class="kw-2">*mut </span>regress_linear,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        err: <span class="kw-2">*const </span>float,
-        alpha: float,
+        x: <span class="kw-2">*const </span>real,
+        err: <span class="kw-2">*const </span>real,
+        alpha: real,
     );
     <span class="kw">fn </span>a_regress_linear_mgd(
         ctx: <span class="kw-2">*mut </span>regress_linear,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        err: <span class="kw-2">*mut </span>float,
-        delta: float,
-        lrmax: float,
-        lrmin: float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        err: <span class="kw-2">*mut </span>real,
+        delta: real,
+        lrmax: real,
+        lrmin: real,
         lrtim: usize,
         epoch: usize,
         batch: usize,
@@ -2789,7 +2789,7 @@ liba = "0.1"
 <span class="kw">impl </span>regress_linear {
     <span class="doccomment">/// initialize for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(coef: <span class="kw-2">&amp;mut </span>[float], bias: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(coef: <span class="kw-2">&amp;mut </span>[real], bias: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{
             coef_p: coef.as_mut_ptr(),
             coef_n: coef.len(),
@@ -2798,47 +2798,47 @@ liba = "0.1"
     }
     <span class="doccomment">/// get regression coefficients for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>coef(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[float] {
+    </span><span class="kw">pub fn </span>coef(<span class="kw-2">&amp;mut </span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;mut </span>[real] {
         <span class="kw">unsafe </span>{ from_raw_parts_mut(<span class="self">self</span>.coef_p, <span class="self">self</span>.coef_n) }
     }
     <span class="doccomment">/// set regression coefficients for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_coef(<span class="kw-2">&amp;mut </span><span class="self">self</span>, coef: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_coef(<span class="kw-2">&amp;mut </span><span class="self">self</span>, coef: <span class="kw-2">&amp;mut </span>[real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="self">self</span>.coef_p = coef.as_mut_ptr();
         <span class="self">self</span>.coef_n = coef.len();
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate predicted value for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: <span class="kw-2">&amp;</span>[float]) -&gt; float {
+    </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: <span class="kw-2">&amp;</span>[real]) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_linear_eval(<span class="self">self</span>, val.as_ptr()) }
     }
     <span class="doccomment">/// calculate residuals for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>err(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float], err: <span class="kw-2">&amp;mut </span>[float]) {
+    </span><span class="kw">pub fn </span>err(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], err: <span class="kw-2">&amp;mut </span>[real]) {
         <span class="kw">unsafe </span>{ a_regress_linear_err(<span class="self">self</span>, y.len(), x.as_ptr(), y.as_ptr(), err.as_mut_ptr()) }
     }
     <span class="doccomment">/// calculate prediction deviation from mean for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pdm(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], pdm: <span class="kw-2">&amp;mut </span>[float], y_mean: float) {
+    </span><span class="kw">pub fn </span>pdm(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], pdm: <span class="kw-2">&amp;mut </span>[real], y_mean: real) {
         <span class="kw">let </span>n = x.len() / <span class="self">self</span>.coef_n;
         <span class="kw">unsafe </span>{ a_regress_linear_pdm(<span class="self">self</span>, n, x.as_ptr(), pdm.as_mut_ptr(), y_mean) }
     }
     <span class="doccomment">/// gradient descent for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, input: <span class="kw-2">&amp;</span>[float], error: float, alpha: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>gd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, input: <span class="kw-2">&amp;</span>[real], error: real, alpha: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_regress_linear_gd(<span class="self">self</span>, input.as_ptr(), error, alpha) }
         <span class="self">self
     </span>}
     <span class="doccomment">/// stochastic gradient descent for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>sgd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float], alpha: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>sgd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], alpha: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_regress_linear_sgd(<span class="self">self</span>, y.len(), x.as_ptr(), y.as_ptr(), alpha) }
         <span class="self">self
     </span>}
     <span class="doccomment">/// batch gradient descent for linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>bgd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], err: <span class="kw-2">&amp;</span>[float], alpha: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>bgd(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], err: <span class="kw-2">&amp;</span>[real], alpha: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">let </span>n = x.len() / <span class="self">self</span>.coef_n;
         <span class="kw">unsafe </span>{ a_regress_linear_bgd(<span class="self">self</span>, n, x.as_ptr(), err.as_ptr(), alpha) }
         <span class="self">self
@@ -2848,12 +2848,12 @@ liba = "0.1"
     #[inline(always)]
     </span><span class="kw">pub fn </span>mgd(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        x: <span class="kw-2">&amp;</span>[float],
-        y: <span class="kw-2">&amp;</span>[float],
-        err: <span class="kw-2">&amp;mut </span>[float],
-        delta: float,
-        lrmax: float,
-        lrmin: float,
+        x: <span class="kw-2">&amp;</span>[real],
+        y: <span class="kw-2">&amp;</span>[real],
+        err: <span class="kw-2">&amp;mut </span>[real],
+        delta: real,
+        lrmax: real,
+        lrmin: real,
         lrtim: usize,
         epoch: usize,
         batch: usize,
@@ -2887,80 +2887,80 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>regress_simple {
     <span class="doccomment">/// regression coefficient
-    </span><span class="kw">pub </span>coef: float,
+    </span><span class="kw">pub </span>coef: real,
     <span class="doccomment">/// intercept
-    </span><span class="kw">pub </span>bias: float,
+    </span><span class="kw">pub </span>bias: real,
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_regress_simple_eval(ctx: <span class="kw-2">*const </span>regress_simple, val: float) -&gt; float;
-    <span class="kw">fn </span>a_regress_simple_evar(ctx: <span class="kw-2">*const </span>regress_simple, val: float) -&gt; float;
+    <span class="kw">fn </span>a_regress_simple_eval(ctx: <span class="kw-2">*const </span>regress_simple, val: real) -&gt; real;
+    <span class="kw">fn </span>a_regress_simple_evar(ctx: <span class="kw-2">*const </span>regress_simple, val: real) -&gt; real;
     <span class="kw">fn </span>a_regress_simple_ols_(
         ctx: <span class="kw-2">*mut </span>regress_simple,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        x_mean: float,
-        y_mean: float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        x_mean: real,
+        y_mean: real,
     );
     <span class="kw">fn </span>a_regress_simple_olsx(
         ctx: <span class="kw-2">*mut </span>regress_simple,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        x_mean: float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        x_mean: real,
     );
     <span class="kw">fn </span>a_regress_simple_olsy(
         ctx: <span class="kw-2">*mut </span>regress_simple,
         n: usize,
-        x: <span class="kw-2">*const </span>float,
-        y: <span class="kw-2">*const </span>float,
-        y_mean: float,
+        x: <span class="kw-2">*const </span>real,
+        y: <span class="kw-2">*const </span>real,
+        y_mean: real,
     );
-    <span class="kw">fn </span>a_regress_simple_ols(ctx: <span class="kw-2">*mut </span>regress_simple, n: usize, x: <span class="kw-2">*const </span>float, y: <span class="kw-2">*const </span>float);
+    <span class="kw">fn </span>a_regress_simple_ols(ctx: <span class="kw-2">*mut </span>regress_simple, n: usize, x: <span class="kw-2">*const </span>real, y: <span class="kw-2">*const </span>real);
     <span class="kw">fn </span>a_regress_simple_zero(ctx: <span class="kw-2">*mut </span>regress_simple);
 }
 
 <span class="kw">impl </span>regress_simple {
     <span class="doccomment">/// initialize for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(coef: float, bias: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(coef: real, bias: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{ coef, bias }
     }
     <span class="doccomment">/// calculate predicted value for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: float) -&gt; float {
+    </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_simple_eval(<span class="self">self</span>, val) }
     }
     <span class="doccomment">/// calculate predicted value for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>evar(<span class="kw-2">&amp;</span><span class="self">self</span>, val: float) -&gt; float {
+    </span><span class="kw">pub fn </span>evar(<span class="kw-2">&amp;</span><span class="self">self</span>, val: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_simple_evar(<span class="self">self</span>, val) }
     }
     <span class="doccomment">/// ordinary least squares for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>ols_(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float], x_mean: float, y_mean: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>ols_(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], x_mean: real, y_mean: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">let </span>n = x.len().min(y.len());
         <span class="kw">unsafe </span>{ a_regress_simple_ols_(<span class="self">self</span>, n, x.as_ptr(), y.as_ptr(), x_mean, y_mean) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// ordinary least squares for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>olsx(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float], x_mean: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>olsx(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], x_mean: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">let </span>n = x.len().min(y.len());
         <span class="kw">unsafe </span>{ a_regress_simple_olsx(<span class="self">self</span>, n, x.as_ptr(), y.as_ptr(), x_mean) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// ordinary least squares for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>olsy(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float], y_mean: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>olsy(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], y_mean: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">let </span>n = x.len().min(y.len());
         <span class="kw">unsafe </span>{ a_regress_simple_olsy(<span class="self">self</span>, n, x.as_ptr(), y.as_ptr(), y_mean) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// ordinary least squares for simple linear regression
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>ols(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[float], y: <span class="kw-2">&amp;</span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>ols(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">let </span>n = x.len().min(y.len());
         <span class="kw">unsafe </span>{ a_regress_simple_ols(<span class="self">self</span>, n, x.as_ptr(), y.as_ptr()) };
         <span class="self">self
@@ -2977,13 +2977,13 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>tf {
     <span class="doccomment">/// input
-    </span>input: <span class="kw-2">*mut </span>float,
+    </span>input: <span class="kw-2">*mut </span>real,
     <span class="doccomment">/// output
-    </span>output: <span class="kw-2">*mut </span>float,
+    </span>output: <span class="kw-2">*mut </span>real,
     <span class="doccomment">/// numerator
-    </span>num_p: <span class="kw-2">*const </span>float,
+    </span>num_p: <span class="kw-2">*const </span>real,
     <span class="doccomment">/// denominator
-    </span>den_p: <span class="kw-2">*const </span>float,
+    </span>den_p: <span class="kw-2">*const </span>real,
     <span class="doccomment">/// numerator number
     </span>num_n: c_uint,
     <span class="doccomment">/// denominator number
@@ -2991,25 +2991,25 @@ liba = "0.1"
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_tf_set_num(ctx: <span class="kw-2">*mut </span>tf, num_n: c_uint, num_p: <span class="kw-2">*const </span>float, input: <span class="kw-2">*mut </span>float);
-    <span class="kw">fn </span>a_tf_set_den(ctx: <span class="kw-2">*mut </span>tf, den_n: c_uint, den_p: <span class="kw-2">*const </span>float, output: <span class="kw-2">*mut </span>float);
+    <span class="kw">fn </span>a_tf_set_num(ctx: <span class="kw-2">*mut </span>tf, num_n: c_uint, num_p: <span class="kw-2">*const </span>real, input: <span class="kw-2">*mut </span>real);
+    <span class="kw">fn </span>a_tf_set_den(ctx: <span class="kw-2">*mut </span>tf, den_n: c_uint, den_p: <span class="kw-2">*const </span>real, output: <span class="kw-2">*mut </span>real);
     <span class="kw">fn </span>a_tf_init(
         ctx: <span class="kw-2">*mut </span>tf,
         num_n: c_uint,
-        num_p: <span class="kw-2">*const </span>float,
-        input: <span class="kw-2">*mut </span>float,
+        num_p: <span class="kw-2">*const </span>real,
+        input: <span class="kw-2">*mut </span>real,
         den_n: c_uint,
-        den_p: <span class="kw-2">*const </span>float,
-        output: <span class="kw-2">*mut </span>float,
+        den_p: <span class="kw-2">*const </span>real,
+        output: <span class="kw-2">*mut </span>real,
     );
-    <span class="kw">fn </span>a_tf_iter(ctx: <span class="kw-2">*const </span>tf, x: float) -&gt; float;
+    <span class="kw">fn </span>a_tf_iter(ctx: <span class="kw-2">*const </span>tf, x: real) -&gt; real;
     <span class="kw">fn </span>a_tf_zero(ctx: <span class="kw-2">*const </span>tf);
 }
 
 <span class="kw">impl </span>tf {
     <span class="doccomment">/// initialize for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(num: <span class="kw-2">&amp;</span>[float], input: <span class="kw-2">&amp;mut </span>[float], den: <span class="kw-2">&amp;</span>[float], output: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(num: <span class="kw-2">&amp;</span>[real], input: <span class="kw-2">&amp;mut </span>[real], den: <span class="kw-2">&amp;</span>[real], output: <span class="kw-2">&amp;mut </span>[real]) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             input: null_mut(),
             output: null_mut(),
@@ -3033,7 +3033,7 @@ liba = "0.1"
     }
     <span class="doccomment">/// calculate for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_tf_iter(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// zeroing for transfer function
@@ -3044,33 +3044,33 @@ liba = "0.1"
     </span>}
     <span class="doccomment">/// get input for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>input(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+    </span><span class="kw">pub fn </span>input(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[real] {
         <span class="kw">unsafe </span>{ from_raw_parts(<span class="self">self</span>.input, <span class="self">self</span>.num_n <span class="kw">as </span>usize) }
     }
     <span class="doccomment">/// get numerator for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>num(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+    </span><span class="kw">pub fn </span>num(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[real] {
         <span class="kw">unsafe </span>{ from_raw_parts(<span class="self">self</span>.num_p, <span class="self">self</span>.num_n <span class="kw">as </span>usize) }
     }
     <span class="doccomment">/// set numerator for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_num(<span class="kw-2">&amp;mut </span><span class="self">self</span>, num: <span class="kw-2">&amp;</span>[float], input: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_num(<span class="kw-2">&amp;mut </span><span class="self">self</span>, num: <span class="kw-2">&amp;</span>[real], input: <span class="kw-2">&amp;mut </span>[real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_tf_set_num(<span class="self">self</span>, num.len() <span class="kw">as </span>c_uint, num.as_ptr(), input.as_mut_ptr()) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// get output for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>output(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+    </span><span class="kw">pub fn </span>output(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[real] {
         <span class="kw">unsafe </span>{ from_raw_parts(<span class="self">self</span>.output, <span class="self">self</span>.den_n <span class="kw">as </span>usize) }
     }
     <span class="doccomment">/// get denominator for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>den(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[float] {
+    </span><span class="kw">pub fn </span>den(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="kw-2">&amp;</span>[real] {
         <span class="kw">unsafe </span>{ from_raw_parts(<span class="self">self</span>.den_p, <span class="self">self</span>.den_n <span class="kw">as </span>usize) }
     }
     <span class="doccomment">/// set denominator for transfer function
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>set_den(<span class="kw-2">&amp;mut </span><span class="self">self</span>, den: <span class="kw-2">&amp;</span>[float], output: <span class="kw-2">&amp;mut </span>[float]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>set_den(<span class="kw-2">&amp;mut </span><span class="self">self</span>, den: <span class="kw-2">&amp;</span>[real], output: <span class="kw-2">&amp;mut </span>[real]) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_tf_set_den(<span class="self">self</span>, den.len() <span class="kw">as </span>c_uint, den.as_ptr(), output.as_mut_ptr()) };
         <span class="self">self
     </span>}
@@ -3080,33 +3080,33 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajbell {
     <span class="doccomment">/// total duration
-    </span><span class="kw">pub </span>t: float,
+    </span><span class="kw">pub </span>t: real,
     <span class="doccomment">/// constant velocity phase
-    </span><span class="kw">pub </span>tv: float,
+    </span><span class="kw">pub </span>tv: real,
     <span class="doccomment">/// acceleration phase
-    </span><span class="kw">pub </span>ta: float,
+    </span><span class="kw">pub </span>ta: real,
     <span class="doccomment">/// deceleration phase
-    </span><span class="kw">pub </span>td: float,
+    </span><span class="kw">pub </span>td: real,
     <span class="doccomment">/// time-interval in which the jerk is constant (j max or j min ) during the acceleration phase
-    </span><span class="kw">pub </span>taj: float,
+    </span><span class="kw">pub </span>taj: real,
     <span class="doccomment">/// time-interval in which the jerk is constant (j max or j min ) during the deceleration phase
-    </span><span class="kw">pub </span>tdj: float,
+    </span><span class="kw">pub </span>tdj: real,
     <span class="doccomment">/// initial position
-    </span><span class="kw">pub </span>p0: float,
+    </span><span class="kw">pub </span>p0: real,
     <span class="doccomment">/// final position
-    </span><span class="kw">pub </span>p1: float,
+    </span><span class="kw">pub </span>p1: real,
     <span class="doccomment">/// initial velocity
-    </span><span class="kw">pub </span>v0: float,
+    </span><span class="kw">pub </span>v0: real,
     <span class="doccomment">/// final velocity
-    </span><span class="kw">pub </span>v1: float,
+    </span><span class="kw">pub </span>v1: real,
     <span class="doccomment">/// maximum velocity
-    </span><span class="kw">pub </span>vm: float,
+    </span><span class="kw">pub </span>vm: real,
     <span class="doccomment">/// maximum jerk
-    </span><span class="kw">pub </span>jm: float,
+    </span><span class="kw">pub </span>jm: real,
     <span class="doccomment">/// maximum acceleration
-    </span><span class="kw">pub </span>am: float,
+    </span><span class="kw">pub </span>am: real,
     <span class="doccomment">/// maximum deceleration
-    </span><span class="kw">pub </span>dm: float,
+    </span><span class="kw">pub </span>dm: real,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>trajbell {
@@ -3134,18 +3134,18 @@ liba = "0.1"
 <span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajbell_gen(
         ctx: <span class="kw-2">*mut </span>trajbell,
-        jm: float,
-        am: float,
-        vm: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-    ) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_pos(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_vel(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_acc(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajbell_jer(ctx: <span class="kw-2">*const </span>trajbell, x: float) -&gt; float;
+        jm: real,
+        am: real,
+        vm: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+    ) -&gt; real;
+    <span class="kw">fn </span>a_trajbell_pos(ctx: <span class="kw-2">*const </span>trajbell, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajbell_vel(ctx: <span class="kw-2">*const </span>trajbell, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajbell_acc(ctx: <span class="kw-2">*const </span>trajbell, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajbell_jer(ctx: <span class="kw-2">*const </span>trajbell, x: real) -&gt; real;
 }
 
 <span class="kw">impl </span>trajbell {
@@ -3159,34 +3159,34 @@ liba = "0.1"
     #[inline(always)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        jm: float,
-        am: float,
-        vm: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-    ) -&gt; float {
+        jm: real,
+        am: real,
+        vm: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+    ) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_gen(<span class="self">self</span>, jm, am, vm, p0, p1, v0, v1) }
     }
     <span class="doccomment">/// calculate position for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_acc(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate jerk for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_jer(<span class="self">self</span>, x) }
     }
 }
@@ -3195,24 +3195,24 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly3 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>p: [float; <span class="number">4</span>],
+    </span><span class="kw">pub </span>p: [real; <span class="number">4</span>],
     <span class="doccomment">/// coefficients of velocity
-    </span><span class="kw">pub </span>v: [float; <span class="number">3</span>],
+    </span><span class="kw">pub </span>v: [real; <span class="number">3</span>],
     <span class="doccomment">/// coefficients of acceleration
-    </span><span class="kw">pub </span>a: [float; <span class="number">2</span>],
+    </span><span class="kw">pub </span>a: [real; <span class="number">2</span>],
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
-    <span class="kw">fn </span>a_trajpoly3_gen(ctx: <span class="kw-2">*mut </span>trajpoly3, ts: float, p0: float, p1: float, v0: float, v1: float);
-    <span class="kw">fn </span>a_trajpoly3_pos(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly3_vel(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly3_acc(ctx: <span class="kw-2">*const </span>trajpoly3, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly3_gen(ctx: <span class="kw-2">*mut </span>trajpoly3, ts: real, p0: real, p1: real, v0: real, v1: real);
+    <span class="kw">fn </span>a_trajpoly3_pos(ctx: <span class="kw-2">*const </span>trajpoly3, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly3_vel(ctx: <span class="kw-2">*const </span>trajpoly3, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly3_acc(ctx: <span class="kw-2">*const </span>trajpoly3, x: real) -&gt; real;
 }
 
 <span class="kw">impl </span>trajpoly3 {
     <span class="doccomment">/// initialize for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>new(ts: float, p0: float, p1: float, v0: float, v1: float) -&gt; <span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>new(ts: real, p0: real, p1: real, v0: real, v1: real) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             p: [<span class="number">0.0</span>; <span class="number">4</span>],
             v: [<span class="number">0.0</span>; <span class="number">3</span>],
@@ -3223,23 +3223,23 @@ liba = "0.1"
     }
     <span class="doccomment">/// generate for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ts: float, p0: float, p1: float, v0: float, v1: float) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
+    </span><span class="kw">pub fn </span>gen(<span class="kw-2">&amp;mut </span><span class="self">self</span>, ts: real, p0: real, p1: real, v0: real, v1: real) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="self">self</span>, ts, p0, p1, v0, v1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_acc(<span class="self">self</span>, x) }
     }
 }
@@ -3248,27 +3248,27 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly5 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>p: [float; <span class="number">6</span>],
+    </span><span class="kw">pub </span>p: [real; <span class="number">6</span>],
     <span class="doccomment">/// coefficients of velocity
-    </span><span class="kw">pub </span>v: [float; <span class="number">5</span>],
+    </span><span class="kw">pub </span>v: [real; <span class="number">5</span>],
     <span class="doccomment">/// coefficients of acceleration
-    </span><span class="kw">pub </span>a: [float; <span class="number">4</span>],
+    </span><span class="kw">pub </span>a: [real; <span class="number">4</span>],
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajpoly5_gen(
         ctx: <span class="kw-2">*mut </span>trajpoly5,
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
     );
-    <span class="kw">fn </span>a_trajpoly5_pos(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly5_vel(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly5_acc(ctx: <span class="kw-2">*const </span>trajpoly5, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly5_pos(ctx: <span class="kw-2">*const </span>trajpoly5, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly5_vel(ctx: <span class="kw-2">*const </span>trajpoly5, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly5_acc(ctx: <span class="kw-2">*const </span>trajpoly5, x: real) -&gt; real;
 }
 
 <span class="kw">impl </span>trajpoly5 {
@@ -3276,13 +3276,13 @@ liba = "0.1"
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     #[inline(always)]
     </span><span class="kw">pub fn </span>new(
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             p: [<span class="number">0.0</span>; <span class="number">6</span>],
@@ -3297,30 +3297,30 @@ liba = "0.1"
     #[inline(always)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_acc(<span class="self">self</span>, x) }
     }
 }
@@ -3329,32 +3329,32 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajpoly7 {
     <span class="doccomment">/// coefficients of position
-    </span><span class="kw">pub </span>p: [float; <span class="number">8</span>],
+    </span><span class="kw">pub </span>p: [real; <span class="number">8</span>],
     <span class="doccomment">/// coefficients of velocity
-    </span><span class="kw">pub </span>v: [float; <span class="number">7</span>],
+    </span><span class="kw">pub </span>v: [real; <span class="number">7</span>],
     <span class="doccomment">/// coefficients of acceleration
-    </span><span class="kw">pub </span>a: [float; <span class="number">6</span>],
+    </span><span class="kw">pub </span>a: [real; <span class="number">6</span>],
     <span class="doccomment">/// coefficients of jerk
-    </span><span class="kw">pub </span>j: [float; <span class="number">5</span>],
+    </span><span class="kw">pub </span>j: [real; <span class="number">5</span>],
 }
 
 <span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajpoly7_gen(
         ctx: <span class="kw-2">*mut </span>trajpoly7,
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
-        j0: float,
-        j1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
+        j0: real,
+        j1: real,
     );
-    <span class="kw">fn </span>a_trajpoly7_pos(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_vel(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_acc(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajpoly7_jer(ctx: <span class="kw-2">*const </span>trajpoly7, x: float) -&gt; float;
+    <span class="kw">fn </span>a_trajpoly7_pos(ctx: <span class="kw-2">*const </span>trajpoly7, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly7_vel(ctx: <span class="kw-2">*const </span>trajpoly7, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly7_acc(ctx: <span class="kw-2">*const </span>trajpoly7, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajpoly7_jer(ctx: <span class="kw-2">*const </span>trajpoly7, x: real) -&gt; real;
 }
 
 <span class="kw">impl </span>trajpoly7 {
@@ -3362,15 +3362,15 @@ liba = "0.1"
     </span><span class="attr">#[allow(clippy::too_many_arguments)]
     #[inline(always)]
     </span><span class="kw">pub fn </span>new(
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
-        j0: float,
-        j1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
+        j0: real,
+        j1: real,
     ) -&gt; <span class="self">Self </span>{
         <span class="kw">let </span><span class="kw-2">mut </span>ctx: <span class="self">Self </span>= <span class="self">Self </span>{
             p: [<span class="number">0.0</span>; <span class="number">8</span>],
@@ -3386,37 +3386,37 @@ liba = "0.1"
     #[inline(always)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        ts: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-        a0: float,
-        a1: float,
-        j0: float,
-        j1: float,
+        ts: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+        a0: real,
+        a1: real,
+        j0: real,
+        j1: real,
     ) -&gt; <span class="kw-2">&amp;mut </span><span class="self">Self </span>{
         <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1, j0, j1) };
         <span class="self">self
     </span>}
     <span class="doccomment">/// calculate position for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_acc(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate jerk for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_jer(<span class="self">self</span>, x) }
     }
 }
@@ -3425,29 +3425,29 @@ liba = "0.1"
 </span><span class="attr">#[repr(C)]
 </span><span class="kw">pub struct </span>trajtrap {
     <span class="doccomment">/// total duration
-    </span><span class="kw">pub </span>t: float,
+    </span><span class="kw">pub </span>t: real,
     <span class="doccomment">/// initial position
-    </span><span class="kw">pub </span>p0: float,
+    </span><span class="kw">pub </span>p0: real,
     <span class="doccomment">/// final position
-    </span><span class="kw">pub </span>p1: float,
+    </span><span class="kw">pub </span>p1: real,
     <span class="doccomment">/// initial velocity
-    </span><span class="kw">pub </span>v0: float,
+    </span><span class="kw">pub </span>v0: real,
     <span class="doccomment">/// final velocity
-    </span><span class="kw">pub </span>v1: float,
+    </span><span class="kw">pub </span>v1: real,
     <span class="doccomment">/// constant velocity
-    </span><span class="kw">pub </span>vc: float,
+    </span><span class="kw">pub </span>vc: real,
     <span class="doccomment">/// time before constant velocity
-    </span><span class="kw">pub </span>ta: float,
+    </span><span class="kw">pub </span>ta: real,
     <span class="doccomment">/// time after constant velocity
-    </span><span class="kw">pub </span>td: float,
+    </span><span class="kw">pub </span>td: real,
     <span class="doccomment">/// position before constant velocity
-    </span><span class="kw">pub </span>pa: float,
+    </span><span class="kw">pub </span>pa: real,
     <span class="doccomment">/// position after constant velocity
-    </span><span class="kw">pub </span>pd: float,
+    </span><span class="kw">pub </span>pd: real,
     <span class="doccomment">/// acceleration before constant velocity
-    </span><span class="kw">pub </span>ac: float,
+    </span><span class="kw">pub </span>ac: real,
     <span class="doccomment">/// acceleration after constant velocity
-    </span><span class="kw">pub </span>de: float,
+    </span><span class="kw">pub </span>de: real,
 }
 
 <span class="kw">impl </span>Default <span class="kw">for </span>trajtrap {
@@ -3473,17 +3473,17 @@ liba = "0.1"
 <span class="kw">extern </span><span class="string">"C" </span>{
     <span class="kw">fn </span>a_trajtrap_gen(
         ctx: <span class="kw-2">*mut </span>trajtrap,
-        vm: float,
-        ac: float,
-        de: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-    ) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_pos(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_vel(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
-    <span class="kw">fn </span>a_trajtrap_acc(ctx: <span class="kw-2">*const </span>trajtrap, x: float) -&gt; float;
+        vm: real,
+        ac: real,
+        de: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+    ) -&gt; real;
+    <span class="kw">fn </span>a_trajtrap_pos(ctx: <span class="kw-2">*const </span>trajtrap, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajtrap_vel(ctx: <span class="kw-2">*const </span>trajtrap, x: real) -&gt; real;
+    <span class="kw">fn </span>a_trajtrap_acc(ctx: <span class="kw-2">*const </span>trajtrap, x: real) -&gt; real;
 }
 
 <span class="kw">impl </span>trajtrap {
@@ -3497,29 +3497,29 @@ liba = "0.1"
     #[inline(always)]
     </span><span class="kw">pub fn </span>gen(
         <span class="kw-2">&amp;mut </span><span class="self">self</span>,
-        vm: float,
-        ac: float,
-        de: float,
-        p0: float,
-        p1: float,
-        v0: float,
-        v1: float,
-    ) -&gt; float {
+        vm: real,
+        ac: real,
+        de: real,
+        p0: real,
+        p1: real,
+        v0: real,
+        v1: real,
+    ) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_gen(<span class="self">self</span>, vm, ac, de, p0, p1, v0, v1) }
     }
     <span class="doccomment">/// calculate position for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_pos(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate velocity for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_vel(<span class="self">self</span>, x) }
     }
     <span class="doccomment">/// calculate acceleration for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
-    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: float) -&gt; float {
+    </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_acc(<span class="self">self</span>, x) }
     }
 }

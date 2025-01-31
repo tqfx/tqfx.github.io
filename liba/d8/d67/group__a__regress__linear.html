@@ -139,38 +139,38 @@ typedef struct a_regress_linear&#160;</td><td class="memItemRight" valign="botto
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga97419e96459c8d0f95e25891695fd899" id="r_ga97419e96459c8d0f95e25891695fd899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga97419e96459c8d0f95e25891695fd899">a_regress_linear_init</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *coef_p, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> coef_n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> bias)</td></tr>
-<tr class="memdesc:ga97419e96459c8d0f95e25891695fd899"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for linear regression  <br /></td></tr>
-<tr class="separator:ga97419e96459c8d0f95e25891695fd899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae93676fd76e7977216efeb938e0f7e77" id="r_gae93676fd76e7977216efeb938e0f7e77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae93676fd76e7977216efeb938e0f7e77">a_regress_linear_eval</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *val)</td></tr>
-<tr class="memdesc:gae93676fd76e7977216efeb938e0f7e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate predicted value for linear regression  <br /></td></tr>
-<tr class="separator:gae93676fd76e7977216efeb938e0f7e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae42e53fab580de0e72bfc0bda49fb625" id="r_gae42e53fab580de0e72bfc0bda49fb625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae42e53fab580de0e72bfc0bda49fb625">a_regress_linear_err</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *x, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *y, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *err)</td></tr>
-<tr class="memdesc:gae42e53fab580de0e72bfc0bda49fb625"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate residuals for linear regression  <br /></td></tr>
-<tr class="separator:gae42e53fab580de0e72bfc0bda49fb625"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa69dd0120847a4605ea9cecdfcee32bb" id="r_gaa69dd0120847a4605ea9cecdfcee32bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa69dd0120847a4605ea9cecdfcee32bb">a_regress_linear_pdm</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *x, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *pdm, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> y_mean)</td></tr>
-<tr class="memdesc:gaa69dd0120847a4605ea9cecdfcee32bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate prediction deviation from mean for linear regression  <br /></td></tr>
-<tr class="separator:gaa69dd0120847a4605ea9cecdfcee32bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52a6350d711e9690c0c7b5a17057c35b" id="r_ga52a6350d711e9690c0c7b5a17057c35b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga52a6350d711e9690c0c7b5a17057c35b">a_regress_linear_gd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *input, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> error, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> alpha)</td></tr>
-<tr class="memdesc:ga52a6350d711e9690c0c7b5a17057c35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">gradient descent for linear regression  <br /></td></tr>
-<tr class="separator:ga52a6350d711e9690c0c7b5a17057c35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga075c33531e5c064c055acdf9b67ec894" id="r_ga075c33531e5c064c055acdf9b67ec894"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga075c33531e5c064c055acdf9b67ec894">a_regress_linear_sgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *x, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *y, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> alpha)</td></tr>
-<tr class="memdesc:ga075c33531e5c064c055acdf9b67ec894"><td class="mdescLeft">&#160;</td><td class="mdescRight">stochastic gradient descent for linear regression  <br /></td></tr>
-<tr class="separator:ga075c33531e5c064c055acdf9b67ec894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9b493a6d5eeb5bc5a1cdb902abb8b1c" id="r_gad9b493a6d5eeb5bc5a1cdb902abb8b1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad9b493a6d5eeb5bc5a1cdb902abb8b1c">a_regress_linear_bgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *x, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *err, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> alpha)</td></tr>
-<tr class="memdesc:gad9b493a6d5eeb5bc5a1cdb902abb8b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">batch gradient descent for linear regression  <br /></td></tr>
-<tr class="separator:gad9b493a6d5eeb5bc5a1cdb902abb8b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3cbd43701265ea789c33076066b164bd" id="r_ga3cbd43701265ea789c33076066b164bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3cbd43701265ea789c33076066b164bd">a_regress_linear_mgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *x, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *y, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *err, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> delta, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> lrmax, <a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> lrmin, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> lrtim, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> epoch, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> batch)</td></tr>
-<tr class="memdesc:ga3cbd43701265ea789c33076066b164bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">mini-batch gradient descent for linear regression  <br /></td></tr>
-<tr class="separator:ga3cbd43701265ea789c33076066b164bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4aa6420aff27acd2a6208a0be5d6e6e3" id="r_ga4aa6420aff27acd2a6208a0be5d6e6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4aa6420aff27acd2a6208a0be5d6e6e3">a_regress_linear_init</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *coef_p, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> coef_n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> bias)</td></tr>
+<tr class="memdesc:ga4aa6420aff27acd2a6208a0be5d6e6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize for linear regression  <br /></td></tr>
+<tr class="separator:ga4aa6420aff27acd2a6208a0be5d6e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c79cbd2248a209ced4ef33e55357375" id="r_ga3c79cbd2248a209ced4ef33e55357375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3c79cbd2248a209ced4ef33e55357375">a_regress_linear_eval</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *val)</td></tr>
+<tr class="memdesc:ga3c79cbd2248a209ced4ef33e55357375"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate predicted value for linear regression  <br /></td></tr>
+<tr class="separator:ga3c79cbd2248a209ced4ef33e55357375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaede072767faf678828661dca1089c345" id="r_gaede072767faf678828661dca1089c345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaede072767faf678828661dca1089c345">a_regress_linear_err</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *y, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *err)</td></tr>
+<tr class="memdesc:gaede072767faf678828661dca1089c345"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate residuals for linear regression  <br /></td></tr>
+<tr class="separator:gaede072767faf678828661dca1089c345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b8d016575ba22636a60f02bd47eb54c" id="r_ga1b8d016575ba22636a60f02bd47eb54c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b8d016575ba22636a60f02bd47eb54c">a_regress_linear_pdm</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *pdm, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y_mean)</td></tr>
+<tr class="memdesc:ga1b8d016575ba22636a60f02bd47eb54c"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate prediction deviation from mean for linear regression  <br /></td></tr>
+<tr class="separator:ga1b8d016575ba22636a60f02bd47eb54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga674ea37d605d32432b80974010cbd382" id="r_ga674ea37d605d32432b80974010cbd382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga674ea37d605d32432b80974010cbd382">a_regress_linear_gd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *input, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> error, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> alpha)</td></tr>
+<tr class="memdesc:ga674ea37d605d32432b80974010cbd382"><td class="mdescLeft">&#160;</td><td class="mdescRight">gradient descent for linear regression  <br /></td></tr>
+<tr class="separator:ga674ea37d605d32432b80974010cbd382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecdd9ce396c5f51e493a1aa0760fcf79" id="r_gaecdd9ce396c5f51e493a1aa0760fcf79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaecdd9ce396c5f51e493a1aa0760fcf79">a_regress_linear_sgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *y, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> alpha)</td></tr>
+<tr class="memdesc:gaecdd9ce396c5f51e493a1aa0760fcf79"><td class="mdescLeft">&#160;</td><td class="mdescRight">stochastic gradient descent for linear regression  <br /></td></tr>
+<tr class="separator:gaecdd9ce396c5f51e493a1aa0760fcf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf608fdcca3655b5a2a92b66fd2102e4" id="r_gadf608fdcca3655b5a2a92b66fd2102e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadf608fdcca3655b5a2a92b66fd2102e4">a_regress_linear_bgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *err, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> alpha)</td></tr>
+<tr class="memdesc:gadf608fdcca3655b5a2a92b66fd2102e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">batch gradient descent for linear regression  <br /></td></tr>
+<tr class="separator:gadf608fdcca3655b5a2a92b66fd2102e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d62f3014509f991fdb492c065f3e9d7" id="r_ga3d62f3014509f991fdb492c065f3e9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3d62f3014509f991fdb492c065f3e9d7">a_regress_linear_mgd</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *y, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *err, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> delta, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> lrmax, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> lrmin, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> lrtim, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> epoch, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> batch)</td></tr>
+<tr class="memdesc:ga3d62f3014509f991fdb492c065f3e9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">mini-batch gradient descent for linear regression  <br /></td></tr>
+<tr class="separator:ga3d62f3014509f991fdb492c065f3e9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2bc4fa0037af86296c1f6b3f95b980f" id="r_gac2bc4fa0037af86296c1f6b3f95b980f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac2bc4fa0037af86296c1f6b3f95b980f">a_regress_linear_zero</a> (<a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *ctx)</td></tr>
 <tr class="memdesc:gac2bc4fa0037af86296c1f6b3f95b980f"><td class="mdescLeft">&#160;</td><td class="mdescRight">zeroing for linear regression  <br /></td></tr>
 <tr class="separator:gac2bc4fa0037af86296c1f6b3f95b980f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gad9b493a6d5eeb5bc5a1cdb902abb8b1c" name="gad9b493a6d5eeb5bc5a1cdb902abb8b1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad9b493a6d5eeb5bc5a1cdb902abb8b1c">&#9670;&#160;</a></span>a_regress_linear_bgd()</h2>
+<a id="gadf608fdcca3655b5a2a92b66fd2102e4" name="gadf608fdcca3655b5a2a92b66fd2102e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf608fdcca3655b5a2a92b66fd2102e4">&#9670;&#160;</a></span>a_regress_linear_bgd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,17 +188,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,8 +217,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae42e53fab580de0e72bfc0bda49fb625" name="gae42e53fab580de0e72bfc0bda49fb625"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae42e53fab580de0e72bfc0bda49fb625">&#9670;&#160;</a></span>a_regress_linear_err()</h2>
+<a id="gaede072767faf678828661dca1089c345" name="gaede072767faf678828661dca1089c345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaede072767faf678828661dca1089c345">&#9670;&#160;</a></span>a_regress_linear_err()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,17 +236,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -265,21 +265,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae93676fd76e7977216efeb938e0f7e77" name="gae93676fd76e7977216efeb938e0f7e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae93676fd76e7977216efeb938e0f7e77">&#9670;&#160;</a></span>a_regress_linear_eval()</h2>
+<a id="ga3c79cbd2248a209ced4ef33e55357375" name="ga3c79cbd2248a209ced4ef33e55357375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c79cbd2248a209ced4ef33e55357375">&#9670;&#160;</a></span>a_regress_linear_eval()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> a_regress_linear_eval </td>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_regress_linear_eval </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -296,8 +296,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga52a6350d711e9690c0c7b5a17057c35b" name="ga52a6350d711e9690c0c7b5a17057c35b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga52a6350d711e9690c0c7b5a17057c35b">&#9670;&#160;</a></span>a_regress_linear_gd()</h2>
+<a id="ga674ea37d605d32432b80974010cbd382" name="ga674ea37d605d32432b80974010cbd382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga674ea37d605d32432b80974010cbd382">&#9670;&#160;</a></span>a_regress_linear_gd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,17 +310,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>error</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>error</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -338,8 +338,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga97419e96459c8d0f95e25891695fd899" name="ga97419e96459c8d0f95e25891695fd899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97419e96459c8d0f95e25891695fd899">&#9670;&#160;</a></span>a_regress_linear_init()</h2>
+<a id="ga4aa6420aff27acd2a6208a0be5d6e6e3" name="ga4aa6420aff27acd2a6208a0be5d6e6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4aa6420aff27acd2a6208a0be5d6e6e3">&#9670;&#160;</a></span>a_regress_linear_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +352,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>coef_p</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>coef_p</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -362,7 +362,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>bias</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>bias</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -380,14 +380,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3cbd43701265ea789c33076066b164bd" name="ga3cbd43701265ea789c33076066b164bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3cbd43701265ea789c33076066b164bd">&#9670;&#160;</a></span>a_regress_linear_mgd()</h2>
+<a id="ga3d62f3014509f991fdb492c065f3e9d7" name="ga3d62f3014509f991fdb492c065f3e9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d62f3014509f991fdb492c065f3e9d7">&#9670;&#160;</a></span>a_regress_linear_mgd()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> a_regress_linear_mgd </td>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_regress_linear_mgd </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dd2/structa__regress__linear.html">a_regress_linear</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
         </tr>
@@ -399,32 +399,32 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>err</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>delta</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>delta</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>lrmax</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>lrmax</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>lrmin</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>lrmin</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -465,8 +465,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaa69dd0120847a4605ea9cecdfcee32bb" name="gaa69dd0120847a4605ea9cecdfcee32bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa69dd0120847a4605ea9cecdfcee32bb">&#9670;&#160;</a></span>a_regress_linear_pdm()</h2>
+<a id="ga1b8d016575ba22636a60f02bd47eb54c" name="ga1b8d016575ba22636a60f02bd47eb54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b8d016575ba22636a60f02bd47eb54c">&#9670;&#160;</a></span>a_regress_linear_pdm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,17 +484,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> *</td>          <td class="paramname"><span class="paramname"><em>pdm</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>pdm</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>y_mean</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>y_mean</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -513,8 +513,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga075c33531e5c064c055acdf9b67ec894" name="ga075c33531e5c064c055acdf9b67ec894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga075c33531e5c064c055acdf9b67ec894">&#9670;&#160;</a></span>a_regress_linear_sgd()</h2>
+<a id="gaecdd9ce396c5f51e493a1aa0760fcf79" name="gaecdd9ce396c5f51e493a1aa0760fcf79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecdd9ce396c5f51e493a1aa0760fcf79">&#9670;&#160;</a></span>a_regress_linear_sgd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,17 +532,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/dd1/group__a__float.html#ga4bd1b1bb27d5c9df6c57560abb0cd044">a_float</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

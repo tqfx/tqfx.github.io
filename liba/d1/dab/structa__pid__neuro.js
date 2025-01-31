@@ -1,9 +1,9 @@
 var structa__pid__neuro =
 [
-    [ "ec", "d1/dab/structa__pid__neuro.html#a4e377ec4c81b0405338b25c5552d43b0", null ],
-    [ "k", "d1/dab/structa__pid__neuro.html#a43c5495867b206271fbe81efbc0eb75f", null ],
+    [ "ec", "d1/dab/structa__pid__neuro.html#ab000b86a737d6eb6e3e67d77e3c97dbb", null ],
+    [ "k", "d1/dab/structa__pid__neuro.html#a85749d897fcb2cb8586f1822ccbe0d27", null ],
     [ "pid", "d1/dab/structa__pid__neuro.html#a207f42e94920a648107eb8bb539e2086", null ],
-    [ "wd", "d1/dab/structa__pid__neuro.html#ae934f1c82cdb2c09bdbdfe767d8baf9b", null ],
-    [ "wi", "d1/dab/structa__pid__neuro.html#aad71dd6ab9ebffb3a16f729ec26db328", null ],
-    [ "wp", "d1/dab/structa__pid__neuro.html#a58a54a3f7013285a7ad71698f1977771", null ]
+    [ "wd", "d1/dab/structa__pid__neuro.html#a3500dd6334dcab950acd32a04f89c035", null ],
+    [ "wi", "d1/dab/structa__pid__neuro.html#ad1a3425c8227759e119defa4f9c9e823", null ],
+    [ "wp", "d1/dab/structa__pid__neuro.html#a6079861e442953ad8cbcee53d15c3636", null ]
 ];

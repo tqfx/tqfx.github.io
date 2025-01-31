@@ -1,13 +1,13 @@
 var group__a__hpf =
 [
     [ "a_hpf", "d8/db1/structa__hpf.html", [
-      [ "alpha", "d8/db1/structa__hpf.html#a2e9d0fc5c46192afaa9d2c2b5ec36723", null ],
-      [ "input", "d8/db1/structa__hpf.html#a4cf25ede8cd620ac965ffb43cda6134a", null ],
-      [ "output", "d8/db1/structa__hpf.html#a6ee4e0d475c3a0ce92438ebc65c7043a", null ]
+      [ "alpha", "d8/db1/structa__hpf.html#a48dd7da381d0430145adcf597363c67a", null ],
+      [ "input", "d8/db1/structa__hpf.html#a0db3880a5c0f39f2d95c225cacde4e0d", null ],
+      [ "output", "d8/db1/structa__hpf.html#a85e631f6a560b93fcdbbb2c61bb92481", null ]
     ] ],
     [ "a_hpf", "d5/d49/group__a__hpf.html#gab274fbc5efbce5e901b58240ff2266fb", null ],
-    [ "a_hpf_gen", "d5/d49/group__a__hpf.html#ga88094b1e50f943a449c135b0142b1521", null ],
-    [ "a_hpf_init", "d5/d49/group__a__hpf.html#gae587e929a6031509eced23f908181b43", null ],
-    [ "a_hpf_iter", "d5/d49/group__a__hpf.html#ga3501508c089209375bf26c3831d15365", null ],
+    [ "a_hpf_gen", "d5/d49/group__a__hpf.html#ga23f54af7286e065c116a4d36706ec0f1", null ],
+    [ "a_hpf_init", "d5/d49/group__a__hpf.html#ga11f589b5cada6aaf492a0e77ba53907c", null ],
+    [ "a_hpf_iter", "d5/d49/group__a__hpf.html#ga617166296f4c8c283850c2ee4373e35a", null ],
     [ "a_hpf_zero", "d5/d49/group__a__hpf.html#gada6142f8d6a329a18bf14c0fef66439e", null ]
 ];
