@@ -27,7 +27,12 @@ var group__a__real =
     [ "A_REAL_TAU", "d5/d19/group__a__real.html#ga4915f99ab772a7bfa32c0a04f623e356", null ],
     [ "A_REAL_TYPE", "d5/d19/group__a__real.html#ga799f8e821233f0f6803b7d5e53d8aa35", null ],
     [ "a_real", "d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364", null ],
-    [ "a_real_mean", "d5/d19/group__a__real.html#ga03461dcb22b69906132a64452e8b4da4", null ],
+    [ "a_real_copy", "d5/d19/group__a__real.html#gad69ae490eb65d41594265e0c9b160bcb", null ],
+    [ "a_real_dot", "d5/d19/group__a__real.html#ga03372265b82b0a8390e024d3b8106556", null ],
+    [ "a_real_dot_", "d5/d19/group__a__real.html#ga09750b265a4690d4d3d0c2cc5c16a040", null ],
+    [ "a_real_fill", "d5/d19/group__a__real.html#gaf2e85709fc06a68b8cbb596bd44e3a47", null ],
+    [ "a_real_mean", "d5/d19/group__a__real.html#ga6af0ea3c546017b3b9d21efa5d4c4ad4", null ],
+    [ "a_real_norm", "d5/d19/group__a__real.html#ga8e434c8fce8375bcfaf89c24c96dbe2f", null ],
     [ "a_real_push_back", "d5/d19/group__a__real.html#ga1911cbfbcb01609c480b0f0076f5f5db", null ],
     [ "a_real_push_back_", "d5/d19/group__a__real.html#ga527fc6cecd5e91e009d552d0525290d5", null ],
     [ "a_real_push_fore", "d5/d19/group__a__real.html#gabf661d8426c02f35fcffab17095bdfc2", null ],
@@ -36,8 +41,9 @@ var group__a__real =
     [ "a_real_roll_back_", "d5/d19/group__a__real.html#gae28b36dccd25d7ef523a051a69df086d", null ],
     [ "a_real_roll_fore", "d5/d19/group__a__real.html#ga1ba4e050ea675666188f18e4177b972c", null ],
     [ "a_real_roll_fore_", "d5/d19/group__a__real.html#gac7bb9c5521b7a8edd9f4451efa7adbcd", null ],
-    [ "a_real_sum", "d5/d19/group__a__real.html#ga84794d7641393b96ac81143b15899a02", null ],
-    [ "a_real_sum1", "d5/d19/group__a__real.html#ga9ce447eea830562984c244b9cec349c7", null ],
-    [ "a_real_sum2", "d5/d19/group__a__real.html#ga8e81133456c9db25de81f805c2e44082", null ],
-    [ "a_real_swap", "d5/d19/group__a__real.html#gaf1b4a3db5b672d33e0ee3e79073e521f", null ]
+    [ "a_real_sum", "d5/d19/group__a__real.html#gaf58f92e19616f92c7478fcb46f3a5639", null ],
+    [ "a_real_sum1", "d5/d19/group__a__real.html#ga012961cdff82fed6acc1925410c74d37", null ],
+    [ "a_real_sum2", "d5/d19/group__a__real.html#gaeb5841aa1d8a5562422ac9315986e241", null ],
+    [ "a_real_swap", "d5/d19/group__a__real.html#gaacc0981b619a25ef265412b061e05378", null ],
+    [ "a_real_zero", "d5/d19/group__a__real.html#ga1012adaf8fe61d6e5dc25b2700074e76", null ]
 ];
