@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d3/d73/uniona__cast.html":[1,0,32],
 "d3/d7f/group__a__hash.html":[1,0,6],
 "d3/d7f/group__a__hash.html#ga0b4bedd7e117651eefeb9bcb8cca2555":[1,0,6,3],
 "d3/d7f/group__a__hash.html#ga36c62dd7d7dc5b6f9c62f8e11ffc18d5":[1,0,6,2],
@@ -79,10 +78,7 @@ var NAVTREEINDEX1 =
 "d5/d19/group__a__real.html#gaf2e85709fc06a68b8cbb596bd44e3a47":[1,0,0,30],
 "d5/d19/group__a__real.html#gaf58f92e19616f92c7478fcb46f3a5639":[1,0,0,41],
 "d5/d1c/structa__trajpoly7.html":[1,0,27,0],
-"d5/d1c/structa__trajpoly7.html#a1169626b418d92aa3f32b74fcef8905b":[1,0,27,0,0],
-"d5/d1c/structa__trajpoly7.html#a2d4e43d6bfd13177e4f0f2c560040a3d":[1,0,27,0,2],
-"d5/d1c/structa__trajpoly7.html#a2da4c4f84c1c21a0d63aaa330463fd69":[1,0,27,0,3],
-"d5/d1c/structa__trajpoly7.html#a701d3c02f1539068dc871b241b120c44":[1,0,27,0,1],
+"d5/d1c/structa__trajpoly7.html#a5f6715facfb2b4d13070dd779a79e3fa":[1,0,27,0,0],
 "d5/d1c/uniona__avl.html":[1,0,1,1],
 "d5/d1c/uniona__avl.html#af8d6bfd16dfb5391991621650abd1800":[1,0,1,1,0],
 "d5/d25/pid__neuro_8h.html":[3,0,16],
@@ -104,10 +100,13 @@ var NAVTREEINDEX1 =
 "d6/dea/mf_8h.html":[3,0,12],
 "d6/dea/mf_8h_source.html":[3,0,12],
 "d6/dfe/group__a__trajpoly5.html":[1,0,26],
-"d6/dfe/group__a__trajpoly5.html#ga2f3348295f9b2c8810013d746c42ef82":[1,0,26,3],
-"d6/dfe/group__a__trajpoly5.html#gac32d6c0be0e922833d6796bbe3747175":[1,0,26,2],
+"d6/dfe/group__a__trajpoly5.html#ga10f055a0d7afda2a0aa6d2545384cbdf":[1,0,26,4],
+"d6/dfe/group__a__trajpoly5.html#ga2f3348295f9b2c8810013d746c42ef82":[1,0,26,6],
+"d6/dfe/group__a__trajpoly5.html#ga36eab15022a765924c43594faa9dab64":[1,0,26,3],
+"d6/dfe/group__a__trajpoly5.html#ga43e13ae3e5524ed162daca247002bc95":[1,0,26,2],
+"d6/dfe/group__a__trajpoly5.html#gac32d6c0be0e922833d6796bbe3747175":[1,0,26,5],
 "d6/dfe/group__a__trajpoly5.html#gad4a8c7673f0c2412a1a3bcdccb189f3f":[1,0,26,1],
-"d6/dfe/group__a__trajpoly5.html#gae5dbc6d1a99eb05a91d5afd1d2ce3410":[1,0,26,4],
+"d6/dfe/group__a__trajpoly5.html#gae5dbc6d1a99eb05a91d5afd1d2ce3410":[1,0,26,7],
 "d7/d30/pid__fuzzy_8h.html":[3,0,15],
 "d7/d30/pid__fuzzy_8h_source.html":[3,0,15],
 "d7/d3b/complex_8h.html":[3,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "da/dc4/group__a__vec.html#ga42480a3a503e35412efcbf21b0f033e5":[1,0,30,27],
 "da/dc4/group__a__vec.html#ga4f35e7a6384419614a893854e1b316a6":[1,0,30,28],
 "da/dc4/group__a__vec.html#ga514babf8fe114fc0a7f0928a84fa4672":[1,0,30,11],
-"da/dc4/group__a__vec.html#ga53e1c2448a0fec0193501c6cce5ccdf3":[1,0,30,32]
+"da/dc4/group__a__vec.html#ga53e1c2448a0fec0193501c6cce5ccdf3":[1,0,30,32],
+"da/dc4/group__a__vec.html#ga669977ee431d7f5544129fcf5606a9d8":[1,0,30,13]
 };

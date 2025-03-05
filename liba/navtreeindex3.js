@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"db/ddd/group__a__notefreq.html#ga89015870fc052ca9498f3686a25a4069":[1,0,13,20],
 "db/ddd/group__a__notefreq.html#ga899f0d40e7f60dcb90420a8e6d22cd43":[1,0,13,69],
 "db/ddd/group__a__notefreq.html#ga89dd59c08812d767832b4ce49e1306ea":[1,0,13,304],
 "db/ddd/group__a__notefreq.html#ga8a8602d9fac3a7ddd995fedf5196039e":[1,0,13,247],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "de/d1c/group__a__complex.html#ga3dfc6d7b9243a74ddf25b54dc693f9a7":[1,0,3,18],
 "de/d1c/group__a__complex.html#ga43a542ac00e3c1f1f111c5310c7abf64":[1,0,3,37],
 "de/d1c/group__a__complex.html#ga44f065ab89a491b6b2b7ffb93ff33620":[1,0,3,30],
-"de/d1c/group__a__complex.html#ga488a3222fc0c6656754fe21b5acb1be5":[1,0,3,17]
+"de/d1c/group__a__complex.html#ga488a3222fc0c6656754fe21b5acb1be5":[1,0,3,17],
+"de/d1c/group__a__complex.html#ga549ad679d6fe4ceba30ef2ecfbca5a8a":[1,0,3,1]
 };
