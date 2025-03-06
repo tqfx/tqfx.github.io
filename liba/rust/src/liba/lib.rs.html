@@ -1947,22 +1947,22 @@ liba = "0.1"
     <span class="kw">fn </span>a_real_mean(n: usize, p: <span class="kw-2">*const </span>real) -&gt; real;
 }
 
-<span class="doccomment">/// calculate the sum of a float array
+<span class="doccomment">/// compute the sum of a float array
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>real_sum(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
     <span class="kw">unsafe </span>{ a_real_sum(x.len(), x.as_ptr()) }
 }
-<span class="doccomment">/// calculate the absolute sum of a float array
+<span class="doccomment">/// compute the absolute sum of a float array
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>real_sum1(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
     <span class="kw">unsafe </span>{ a_real_sum1(x.len(), x.as_ptr()) }
 }
-<span class="doccomment">/// calculate the sum of squares of a float array
+<span class="doccomment">/// compute the sum of squares of a float array
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>real_sum2(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
     <span class="kw">unsafe </span>{ a_real_sum2(x.len(), x.as_ptr()) }
 }
-<span class="doccomment">/// calculate the mean of a float array
+<span class="doccomment">/// compute the mean of a float array
 </span><span class="attr">#[inline(always)]
 </span><span class="kw">pub fn </span>real_mean(x: <span class="kw-2">&amp;</span>[real]) -&gt; real {
     <span class="kw">unsafe </span>{ a_real_mean(x.len(), x.as_ptr()) }
@@ -2024,7 +2024,7 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_crc8l_init(<span class="self">self</span>.table.as_mut_ptr(), poly) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for CRC-8
+    <span class="doccomment">/// compute for CRC-8
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u8) -&gt; u8 {
         <span class="kw">unsafe </span>{ a_crc8(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
@@ -2081,7 +2081,7 @@ liba = "0.1"
         <span class="self">self</span>.eval = a_crc16l;
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for CRC-16
+    <span class="doccomment">/// compute for CRC-16
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u16) -&gt; u16 {
         <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
@@ -2138,7 +2138,7 @@ liba = "0.1"
         <span class="self">self</span>.eval = a_crc32l;
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for CRC-32
+    <span class="doccomment">/// compute for CRC-32
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u32) -&gt; u32 {
         <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
@@ -2195,7 +2195,7 @@ liba = "0.1"
         <span class="self">self</span>.eval = a_crc64l;
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for CRC-64
+    <span class="doccomment">/// compute for CRC-64
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, block: <span class="kw-2">&amp;</span>[u8], value: u64) -&gt; u64 {
         <span class="kw">unsafe </span>{ (<span class="self">self</span>.eval)(<span class="self">self</span>.table.as_ptr(), block.as_ptr(), block.len(), value) }
@@ -2232,7 +2232,7 @@ liba = "0.1"
         <span class="self">self</span>.alpha = <span class="number">1.0 </span>/ (TAU * fc * ts + <span class="number">1.0</span>);
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for High Pass Filter
+    <span class="doccomment">/// compute for High Pass Filter
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="self">self</span>.output = <span class="self">self</span>.alpha * (<span class="self">self</span>.output + x - <span class="self">self</span>.input);
@@ -2275,7 +2275,7 @@ liba = "0.1"
         <span class="self">self</span>.alpha = ts / (_1_TAU / fc + ts);
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for Low Pass Filter
+    <span class="doccomment">/// compute for Low Pass Filter
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="self">self</span>.output <span class="kw-2">*</span>= <span class="number">1.0 </span>- <span class="self">self</span>.alpha;
@@ -2475,17 +2475,17 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_pid_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for PID controller
+    <span class="doccomment">/// compute for PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_run(<span class="self">self</span>, set, fdb) }
     }
-    <span class="doccomment">/// calculate for positional PID controller
+    <span class="doccomment">/// compute for positional PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_pos(<span class="self">self</span>, set, fdb) }
     }
-    <span class="doccomment">/// calculate for incremental PID controller
+    <span class="doccomment">/// compute for incremental PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_inc(<span class="self">self</span>, set, fdb) }
@@ -2645,17 +2645,17 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_pid_fuzzy_set_kpid(<span class="self">self</span>, kp, ki, kd) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for fuzzy PID controller
+    <span class="doccomment">/// compute for fuzzy PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_run(<span class="self">self</span>, set, fdb) }
     }
-    <span class="doccomment">/// calculate for positional fuzzy PID controller
+    <span class="doccomment">/// compute for positional fuzzy PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_pos(<span class="self">self</span>, set, fdb) }
     }
-    <span class="doccomment">/// calculate for incremental fuzzy PID controller
+    <span class="doccomment">/// compute for incremental fuzzy PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_fuzzy_inc(<span class="self">self</span>, set, fdb) }
@@ -2725,12 +2725,12 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_pid_neuro_set_wpid(<span class="self">self</span>, wp, wi, wd) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate for single neuron PID controller
+    <span class="doccomment">/// compute for single neuron PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>run(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_neuro_run(<span class="self">self</span>, set, fdb) }
     }
-    <span class="doccomment">/// calculate for incremental single neuron PID controller
+    <span class="doccomment">/// compute for incremental single neuron PID controller
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>inc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, set: real, fdb: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_pid_neuro_inc(<span class="self">self</span>, set, fdb) }
@@ -2823,17 +2823,17 @@ liba = "0.1"
         <span class="self">self</span>.coef_n = coef.len();
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate predicted value for linear regression
+    <span class="doccomment">/// compute predicted value for linear regression
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: <span class="kw-2">&amp;</span>[real]) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_linear_eval(<span class="self">self</span>, val.as_ptr()) }
     }
-    <span class="doccomment">/// calculate residuals for linear regression
+    <span class="doccomment">/// compute residuals for linear regression
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>err(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], y: <span class="kw-2">&amp;</span>[real], err: <span class="kw-2">&amp;mut </span>[real]) {
         <span class="kw">unsafe </span>{ a_regress_linear_err(<span class="self">self</span>, y.len(), x.as_ptr(), y.as_ptr(), err.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate prediction deviation from mean for linear regression
+    <span class="doccomment">/// compute prediction deviation from mean for linear regression
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pdm(<span class="kw-2">&amp;</span><span class="self">self</span>, x: <span class="kw-2">&amp;</span>[real], pdm: <span class="kw-2">&amp;mut </span>[real], y_mean: real) {
         <span class="kw">let </span>n = x.len() / <span class="self">self</span>.coef_n;
@@ -2942,12 +2942,12 @@ liba = "0.1"
     </span><span class="kw">pub fn </span>new(coef: real, bias: real) -&gt; <span class="self">Self </span>{
         <span class="self">Self </span>{ coef, bias }
     }
-    <span class="doccomment">/// calculate predicted value for simple linear regression
+    <span class="doccomment">/// compute predicted value for simple linear regression
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>eval(<span class="kw-2">&amp;</span><span class="self">self</span>, val: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_simple_eval(<span class="self">self</span>, val) }
     }
-    <span class="doccomment">/// calculate predicted value for simple linear regression
+    <span class="doccomment">/// compute predicted value for simple linear regression
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>evar(<span class="kw-2">&amp;</span><span class="self">self</span>, val: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_regress_simple_evar(<span class="self">self</span>, val) }
@@ -3046,7 +3046,7 @@ liba = "0.1"
         };
         ctx
     }
-    <span class="doccomment">/// calculate for transfer function
+    <span class="doccomment">/// compute for transfer function
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>iter(<span class="kw-2">&amp;mut </span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_tf_iter(<span class="self">self</span>, x) }
@@ -3184,22 +3184,22 @@ liba = "0.1"
     ) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_gen(<span class="self">self</span>, jm, am, vm, p0, p1, v0, v1) }
     }
-    <span class="doccomment">/// calculate position for bell-shaped velocity trajectory
+    <span class="doccomment">/// compute position for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_pos(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate velocity for bell-shaped velocity trajectory
+    <span class="doccomment">/// compute velocity for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_vel(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate acceleration for bell-shaped velocity trajectory
+    <span class="doccomment">/// compute acceleration for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_acc(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate jerk for bell-shaped velocity trajectory
+    <span class="doccomment">/// compute jerk for bell-shaped velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajbell_jer(<span class="self">self</span>, x) }
@@ -3237,32 +3237,32 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_trajpoly3_gen(<span class="self">self</span>, ts, p0, p1, v0, v1) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate coefficients of position for cubic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of position for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c0(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">4</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly3_c0(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of velocity for cubic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of velocity for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c1(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">3</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly3_c1(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of acceleration for cubic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of acceleration for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c2(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">2</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly3_c2(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate position for cubic polynomial trajectory
+    <span class="doccomment">/// compute position for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_pos(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate velocity for cubic polynomial trajectory
+    <span class="doccomment">/// compute velocity for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_vel(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate acceleration for cubic polynomial trajectory
+    <span class="doccomment">/// compute acceleration for cubic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly3_acc(<span class="self">self</span>, x) }
@@ -3320,32 +3320,32 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_trajpoly5_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate coefficients of position for quintic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of position for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c0(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">6</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly5_c0(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of velocity for quintic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of velocity for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c1(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">5</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly5_c1(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of acceleration for quintic polynomial trajectory
+    <span class="doccomment">/// compute coefficients of acceleration for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c2(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">4</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly5_c2(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate position for quintic polynomial trajectory
+    <span class="doccomment">/// compute position for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_pos(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate velocity for quintic polynomial trajectory
+    <span class="doccomment">/// compute velocity for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_vel(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate acceleration for quintic polynomial trajectory
+    <span class="doccomment">/// compute acceleration for quintic polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly5_acc(<span class="self">self</span>, x) }
@@ -3419,42 +3419,42 @@ liba = "0.1"
         <span class="kw">unsafe </span>{ a_trajpoly7_gen(<span class="self">self</span>, ts, p0, p1, v0, v1, a0, a1, j0, j1) };
         <span class="self">self
     </span>}
-    <span class="doccomment">/// calculate coefficients of position for hepta polynomial trajectory
+    <span class="doccomment">/// compute coefficients of position for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c0(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">8</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly7_c0(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of velocity for hepta polynomial trajectory
+    <span class="doccomment">/// compute coefficients of velocity for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c1(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">7</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly7_c1(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of acceleration for hepta polynomial trajectory
+    <span class="doccomment">/// compute coefficients of acceleration for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c2(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">6</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly7_c2(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate coefficients of jerk for hepta polynomial trajectory
+    <span class="doccomment">/// compute coefficients of jerk for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>c3(<span class="kw-2">&amp;</span><span class="self">self</span>, c: <span class="kw-2">&amp;mut </span>[real; <span class="number">5</span>]) {
         <span class="kw">unsafe </span>{ a_trajpoly7_c3(<span class="self">self</span>, c.as_mut_ptr()) }
     }
-    <span class="doccomment">/// calculate position for hepta polynomial trajectory
+    <span class="doccomment">/// compute position for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_pos(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate velocity for hepta polynomial trajectory
+    <span class="doccomment">/// compute velocity for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_vel(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate acceleration for hepta polynomial trajectory
+    <span class="doccomment">/// compute acceleration for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_acc(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate jerk for hepta polynomial trajectory
+    <span class="doccomment">/// compute jerk for hepta polynomial trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>jer(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajpoly7_jer(<span class="self">self</span>, x) }
@@ -3547,17 +3547,17 @@ liba = "0.1"
     ) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_gen(<span class="self">self</span>, vm, ac, de, p0, p1, v0, v1) }
     }
-    <span class="doccomment">/// calculate position for trapezoidal velocity trajectory
+    <span class="doccomment">/// compute position for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>pos(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_pos(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate velocity for trapezoidal velocity trajectory
+    <span class="doccomment">/// compute velocity for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>vel(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_vel(<span class="self">self</span>, x) }
     }
-    <span class="doccomment">/// calculate acceleration for trapezoidal velocity trajectory
+    <span class="doccomment">/// compute acceleration for trapezoidal velocity trajectory
     </span><span class="attr">#[inline(always)]
     </span><span class="kw">pub fn </span>acc(<span class="kw-2">&amp;</span><span class="self">self</span>, x: real) -&gt; real {
         <span class="kw">unsafe </span>{ a_trajtrap_acc(<span class="self">self</span>, x) }

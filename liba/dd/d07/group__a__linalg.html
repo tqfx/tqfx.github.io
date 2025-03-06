@@ -853,7 +853,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_real_llt_inv_</b> (
 </div><div class="memdoc">
 
 <p>compute LU decomposition of a square matrix with partial pivoting. </p>
-<p>This function performs an LU decomposition on the given square matrix A, where L is a lower triangular matrix, and U is an upper triangular matrix. Partial pivoting is used to improve numerical stability during the decomposition process. The result is stored in the original matrix A, with L stored below, and U stored in the diagonal and above. Additionally, it calculates a permutation matrix P that records the row exchanges made during partial pivoting, and determines the sign of the permutation (which can be used to find the determinant's sign). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This function performs an LU decomposition on the given square matrix A, where L is a lower triangular matrix, and U is an upper triangular matrix. Partial pivoting is used to improve numerical stability during the decomposition process. The result is stored in the original matrix A, with L stored below, and U stored in the diagonal and above. Additionally, it computes a permutation matrix P that records the row exchanges made during partial pivoting, and determines the sign of the permutation (which can be used to find the determinant's sign). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>the order of the square matrix A (number of rows and columns). </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>an n x n square matrix. on input, contains the matrix to decompose. on output, contains the L and U matrices. </td></tr>
