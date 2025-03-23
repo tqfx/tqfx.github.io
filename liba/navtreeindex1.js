@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"d3/d60/group__a__trajpoly3.html#gaf067f9cc9c6f09027f60cab59315ec2d":[1,0,25,1],
+"d3/d73/uniona__cast.html":[1,0,32],
 "d3/d7f/group__a__hash.html":[1,0,6],
 "d3/d7f/group__a__hash.html#ga0b4bedd7e117651eefeb9bcb8cca2555":[1,0,6,3],
 "d3/d7f/group__a__hash.html#ga36c62dd7d7dc5b6f9c62f8e11ffc18d5":[1,0,6,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "da/dc4/group__a__vec.html#ga3c01720c0f4fcfb50c86e2539a8489cc":[1,0,30,8],
 "da/dc4/group__a__vec.html#ga42480a3a503e35412efcbf21b0f033e5":[1,0,30,27],
 "da/dc4/group__a__vec.html#ga4f35e7a6384419614a893854e1b316a6":[1,0,30,28],
-"da/dc4/group__a__vec.html#ga514babf8fe114fc0a7f0928a84fa4672":[1,0,30,11],
-"da/dc4/group__a__vec.html#ga53e1c2448a0fec0193501c6cce5ccdf3":[1,0,30,32],
-"da/dc4/group__a__vec.html#ga669977ee431d7f5544129fcf5606a9d8":[1,0,30,13]
+"da/dc4/group__a__vec.html#ga514babf8fe114fc0a7f0928a84fa4672":[1,0,30,11]
 };

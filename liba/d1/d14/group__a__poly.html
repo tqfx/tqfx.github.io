@@ -144,6 +144,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_poly_swap_</b> (<a 
 <tr class="memitem:gac1e54b5cda5618a49418b9e2d6bcec5a" id="r_gac1e54b5cda5618a49418b9e2d6bcec5a"><td class="memItemLeft" align="right" valign="top"><a id="gac1e54b5cda5618a49418b9e2d6bcec5a" name="gac1e54b5cda5618a49418b9e2d6bcec5a"></a>
 <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_poly_evar_</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *a, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *b, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x)</td></tr>
 <tr class="separator:gac1e54b5cda5618a49418b9e2d6bcec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeff3db779fe6a753b729ecd3b4b54729" id="r_gaeff3db779fe6a753b729ecd3b4b54729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeff3db779fe6a753b729ecd3b4b54729">a_poly_xTx</a> (<a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> m, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *A)</td></tr>
+<tr class="memdesc:gaeff3db779fe6a753b729ecd3b4b54729"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the matrix A^T * A for polynomial fitting.  <br /></td></tr>
+<tr class="separator:gaeff3db779fe6a753b729ecd3b4b54729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7217012edcf28bbec5bc534d12372297" id="r_ga7217012edcf28bbec5bc534d12372297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7217012edcf28bbec5bc534d12372297">a_poly_xTy</a> (<a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> m, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *y, <a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a> n, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *b)</td></tr>
+<tr class="memdesc:ga7217012edcf28bbec5bc534d12372297"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the vector A^T * y for polynomial fitting.  <br /></td></tr>
+<tr class="separator:ga7217012edcf28bbec5bc534d12372297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -217,6 +223,96 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_poly_swap_</b> (<a 
 \]
 </p>
  
+</div>
+</div>
+<a id="gaeff3db779fe6a753b729ecd3b4b54729" name="gaeff3db779fe6a753b729ecd3b4b54729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeff3db779fe6a753b729ecd3b4b54729">&#9670;&#160;</a></span>a_poly_xTx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_poly_xTx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>A</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the matrix A^T * A for polynomial fitting. </p>
+<p>This function computes the product of the transpose of a design matrix A with itself (A^T * A), which is used in the normal equations for polynomial fitting using least squares method. The matrix A is implicitly defined by the input vector x, where each element of x corresponds to a data point. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>number of data points (rows in matrix A). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>points to an array of size m containing the data points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>degree of the polynomial plus one (columns in matrix A). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>points to an array of size n*n where the result A^T * A will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7217012edcf28bbec5bc534d12372297" name="ga7217012edcf28bbec5bc534d12372297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7217012edcf28bbec5bc534d12372297">&#9670;&#160;</a></span>a_poly_xTy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_poly_xTy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> const *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#ga3ef841d16be62d8bd3d7bb8673105093">a_uint</a></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the vector A^T * y for polynomial fitting. </p>
+<p>This function computes the product of the transpose of a design matrix A with a vector y (A^T * y), which is used in the normal equations for polynomial fitting using least squares method. The matrix A is implicitly defined by the input vector x, where each element of x corresponds to a data point. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>number of data points (rows in matrix A). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>points to an array of size m containing the data points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>points to an array of size m containing the target values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>degree of the polynomial plus one (columns in matrix A). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>points to an array of size n where the result A^T * y will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->
