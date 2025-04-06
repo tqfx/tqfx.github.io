@@ -18,11 +18,9 @@ var group__a__que =
     [ "a_que_die", "df/d21/group__a__que.html#ga7ee34cb39483efc3c5933404069bb35f", null ],
     [ "a_que_drop", "df/d21/group__a__que.html#gaea490ebce7f7acef5b4a0ddf8618df83", null ],
     [ "a_que_dtor", "df/d21/group__a__que.html#ga74a7547fb0e3f896f4371a01a9570d05", null ],
-    [ "a_que_edit", "df/d21/group__a__que.html#ga607bf3a642e3c9e105cae3dc4ab26082", null ],
     [ "a_que_fore", "df/d21/group__a__que.html#ga9a25f77541b47b8c3bdbc8f8b5b4ce80", null ],
     [ "a_que_fore_", "df/d21/group__a__que.html#gabe91dbd3dc892bbd86e1094df13bcf23", null ],
     [ "a_que_insert", "df/d21/group__a__que.html#gaa2730415a123cca5d5680e2c0e0ba788", null ],
-    [ "a_que_move", "df/d21/group__a__que.html#ga40d239d8b73ed7f2b0e27742948212ab", null ],
     [ "a_que_new", "df/d21/group__a__que.html#ga33f7a156a87b82a971fd658f5c599d26", null ],
     [ "a_que_num", "df/d21/group__a__que.html#ga4892ffe5555396ef6b945bedc63ebbe4", null ],
     [ "a_que_pull_back", "df/d21/group__a__que.html#gab25937d6a830948a8bb05586fde21721", null ],
@@ -31,9 +29,10 @@ var group__a__que =
     [ "a_que_push_fore", "df/d21/group__a__que.html#gaa985f78b3a3ab12b01ddfad43424a11c", null ],
     [ "a_que_push_sort", "df/d21/group__a__que.html#ga115130c3543930bed47599647b6b8dae", null ],
     [ "a_que_remove", "df/d21/group__a__que.html#gad306977400988dfc8570e6535881f8e4", null ],
+    [ "a_que_setz", "df/d21/group__a__que.html#ga391de04469e8f86314c7ba8fe1759905", null ],
     [ "a_que_siz", "df/d21/group__a__que.html#gac7418b0d350469c3f800f7f272be1689", null ],
     [ "a_que_sort_back", "df/d21/group__a__que.html#ga9cd458955a24562e598ea2b3a6272723", null ],
     [ "a_que_sort_fore", "df/d21/group__a__que.html#ga084cff3c026513ae463b7c16ed264a76", null ],
-    [ "a_que_swap", "df/d21/group__a__que.html#gae0b9b8547c42fc29022d3f9073c811ab", null ],
+    [ "a_que_swap", "df/d21/group__a__que.html#gaa89bf43943b929dbf4a5a822caa89736", null ],
     [ "a_que_swap_", "df/d21/group__a__que.html#gafbe18f42b4976ef0c358361c5760e96d", null ]
 ];

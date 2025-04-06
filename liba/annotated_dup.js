@@ -2,7 +2,7 @@ var annotated_dup =
 [
     [ "a_avl", "d5/d1c/uniona__avl.html", "d5/d1c/uniona__avl" ],
     [ "a_avl_node", "d1/d0e/structa__avl__node.html", "d1/d0e/structa__avl__node" ],
-    [ "a_buf", "de/d98/structa__buf.html", "de/d98/structa__buf" ],
+    [ "a_buf", "de/d98/structa__buf.html", null ],
     [ "a_cast", "d3/d73/uniona__cast.html", null ],
     [ "a_complex", "d5/d8b/structa__complex.html", "d5/d8b/structa__complex" ],
     [ "a_hpf", "d8/db1/structa__hpf.html", "d8/db1/structa__hpf" ],

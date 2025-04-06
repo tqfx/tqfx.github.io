@@ -653,7 +653,7 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_MIN_EXP</b>&#160;&#160;&#160;FLT_MIN_EXP</td></tr>
 <tr class="separator:gaccbe6b29e97a4a1c837d3e7562b01ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa258a25014368802466c68dd89b2de41" id="r_gaa258a25014368802466c68dd89b2de41"><td class="memItemLeft" align="right" valign="top"><a id="gaa258a25014368802466c68dd89b2de41" name="gaa258a25014368802466c68dd89b2de41"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_INF</b>&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga0418a535fad97c25ad2137eb9ca9d3d8">a_f32</a>, A_F64_INF)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_INF</b>&#160;&#160;&#160;a_cast_s(<a class="el" href="#ga0418a535fad97c25ad2137eb9ca9d3d8">a_f32</a>, DBL_MAX)</td></tr>
 <tr class="separator:gaa258a25014368802466c68dd89b2de41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga974c35a15f9abf54a4fee7f4ebfa2dbe" id="r_ga974c35a15f9abf54a4fee7f4ebfa2dbe"><td class="memItemLeft" align="right" valign="top"><a id="ga974c35a15f9abf54a4fee7f4ebfa2dbe" name="ga974c35a15f9abf54a4fee7f4ebfa2dbe"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>A_F32_NAN</b>&#160;&#160;&#160;(A_F32_C(0.0) * A_F32_INF)</td></tr>
@@ -933,12 +933,17 @@ typedef union a_cast&#160;</td><td class="memItemRight" valign="bottom"><b>a_cas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gafeb8341b641eac4d01afea880d9dcc61" id="r_gafeb8341b641eac4d01afea880d9dcc61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#ggafeb8341b641eac4d01afea880d9dcc61a1145c4b993224f2f585bd7e961b93224">A_SUCCESS</a>
-, <a class="el" href="#ggafeb8341b641eac4d01afea880d9dcc61a7948d60f66afa7f38066acc9a0d55bcc">A_FAILURE</a>
-, <a class="el" href="#ggafeb8341b641eac4d01afea880d9dcc61acad2cd6e154573909af61bb502e9b91d">A_INVALID</a>
+<tr class="memitem:gacdd1d5a45299ab63bc4314d3fc6165e6" id="r_gacdd1d5a45299ab63bc4314d3fc6165e6"><td class="memItemLeft" align="right" valign="top"><a id="gacdd1d5a45299ab63bc4314d3fc6165e6" name="gacdd1d5a45299ab63bc4314d3fc6165e6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacdd1d5a45299ab63bc4314d3fc6165e6">a_return_code</a> { <br />
+&#160;&#160;<b>A_SUCCESS</b>
+, <b>A_FAILURE</b>
+, <b>A_INVALID</b>
+, <b>A_OBOUNDS</b>
+, <br />
+&#160;&#160;<b>A_OMEMORY</b>
+<br />
  }</td></tr>
-<tr class="memdesc:gafeb8341b641eac4d01afea880d9dcc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumeration for return values  <a href="#gafeb8341b641eac4d01afea880d9dcc61">More...</a><br /></td></tr>
-<tr class="separator:gafeb8341b641eac4d01afea880d9dcc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gacdd1d5a45299ab63bc4314d3fc6165e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumeration for return values <br /></td></tr>
+<tr class="separator:gacdd1d5a45299ab63bc4314d3fc6165e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -1494,7 +1499,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="#ga798f626df777b8264fa32f2491df1f89">a_alloc</a>(ptr, 0)</div>
-<div class="ttc" id="agroup__liba_html_ga798f626df777b8264fa32f2491df1f89"><div class="ttname"><a href="#ga798f626df777b8264fa32f2491df1f89">a_alloc</a></div><div class="ttdeci">void *(* a_alloc)(void *addr, a_size size)</div><div class="ttdoc">allocation function pointer</div><div class="ttdef"><b>Definition</b> a.h:1519</div></div>
+<div class="ttc" id="agroup__liba_html_ga798f626df777b8264fa32f2491df1f89"><div class="ttname"><a href="#ga798f626df777b8264fa32f2491df1f89">a_alloc</a></div><div class="ttdeci">void *(* a_alloc)(void *addr, a_size size)</div><div class="ttdoc">allocation function pointer</div><div class="ttdef"><b>Definition</b> a.h:1521</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3654,31 +3659,6 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">a_cast_s(<span class="keywordtype">void</span>, x)</div>
 </div><!-- fragment -->
 <p>static cast to <a class="el" href="#ga7e530f685d796d16fdd19b715268c37c">a_void</a> </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="gafeb8341b641eac4d01afea880d9dcc61" name="gafeb8341b641eac4d01afea880d9dcc61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafeb8341b641eac4d01afea880d9dcc61">&#9670;&#160;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>enumeration for return values </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggafeb8341b641eac4d01afea880d9dcc61a1145c4b993224f2f585bd7e961b93224" name="ggafeb8341b641eac4d01afea880d9dcc61a1145c4b993224f2f585bd7e961b93224"></a>A_SUCCESS&#160;</td><td class="fielddoc"><p>return success </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggafeb8341b641eac4d01afea880d9dcc61a7948d60f66afa7f38066acc9a0d55bcc" name="ggafeb8341b641eac4d01afea880d9dcc61a7948d60f66afa7f38066acc9a0d55bcc"></a>A_FAILURE&#160;</td><td class="fielddoc"><p>return failure </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggafeb8341b641eac4d01afea880d9dcc61acad2cd6e154573909af61bb502e9b91d" name="ggafeb8341b641eac4d01afea880d9dcc61acad2cd6e154573909af61bb502e9b91d"></a>A_INVALID&#160;</td><td class="fielddoc"><p>return invalid </p>
-</td></tr>
-</table>
 
 </div>
 </div>

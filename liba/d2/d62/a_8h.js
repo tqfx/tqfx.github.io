@@ -90,6 +90,13 @@ var a_8h =
     [ "a_umax", "d2/d6b/group__liba.html#ga87c1bf06a1fa1fa186eab10a73238a73", null ],
     [ "a_uptr", "d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f", null ],
     [ "a_ushrt", "d2/d6b/group__liba.html#ga88d966a327f56ee1f0c95bd58e6696b2", null ],
+    [ "a_return_code", "d2/d6b/group__liba.html#gacdd1d5a45299ab63bc4314d3fc6165e6", [
+      [ "A_SUCCESS", "d2/d6b/group__liba.html#ggacdd1d5a45299ab63bc4314d3fc6165e6a1145c4b993224f2f585bd7e961b93224", null ],
+      [ "A_FAILURE", "d2/d6b/group__liba.html#ggacdd1d5a45299ab63bc4314d3fc6165e6a7948d60f66afa7f38066acc9a0d55bcc", null ],
+      [ "A_INVALID", "d2/d6b/group__liba.html#ggacdd1d5a45299ab63bc4314d3fc6165e6acad2cd6e154573909af61bb502e9b91d", null ],
+      [ "A_OBOUNDS", "d2/d6b/group__liba.html#ggacdd1d5a45299ab63bc4314d3fc6165e6a605b9b3cd8358afc75c703c4fe4317a9", null ],
+      [ "A_OMEMORY", "d2/d6b/group__liba.html#ggacdd1d5a45299ab63bc4314d3fc6165e6a3b95f91d11f6eb593bf2c4821eb7da86", null ]
+    ] ],
     [ "a_alloc_", "d2/d6b/group__liba.html#gaa3643ca000f95185cf70bbb190c4db76", null ],
     [ "a_copy", "d2/d6b/group__liba.html#ga72114623aa2c9d105c30ef074978cdff", null ],
     [ "a_fill", "d2/d6b/group__liba.html#ga54e47d924b3c63a69be8feda8249baec", null ],
