@@ -25,13 +25,16 @@ var group__a__str =
     [ "a_str_getc", "df/d28/group__a__str.html#ga594295c16fc725d3449c298c7037e490", null ],
     [ "a_str_getn", "df/d28/group__a__str.html#ga5ea52043e5760ade3603996ce8ec162d", null ],
     [ "a_str_len", "df/d28/group__a__str.html#gac81daa78009906a3a334e2696cea62a1", null ],
+    [ "a_str_ltrim", "df/d28/group__a__str.html#ga2816a6b555b15581dd50107d9e749d56", null ],
     [ "a_str_mem", "df/d28/group__a__str.html#gac9c775f512b10dccba8fa7eec68fbf01", null ],
     [ "a_str_new", "df/d28/group__a__str.html#ga3b49b069bafe9514454682d844dec4a7", null ],
     [ "a_str_of", "df/d28/group__a__str.html#ga351fd4248b36ee634741a17ce64685e0", null ],
     [ "a_str_ptr", "df/d28/group__a__str.html#ga08f6a9177bf1d046ca4a667c3c67a5bd", null ],
+    [ "a_str_rtrim", "df/d28/group__a__str.html#gac3ba301aeddc9c7b45e07a4d58107a68", null ],
     [ "a_str_setm", "df/d28/group__a__str.html#ga73c85d25630da48787cbe2b319de0fa0", null ],
     [ "a_str_setn", "df/d28/group__a__str.html#gad46eca0bc8aa25d336b0aafe26598e27", null ],
     [ "a_str_setn_", "df/d28/group__a__str.html#ga438b1a1b78ab5f87c5f841b8ca88aade", null ],
     [ "a_str_swap", "df/d28/group__a__str.html#ga42337a121070d0d0d3a670f3482decc7", null ],
-    [ "a_str_utflen", "df/d28/group__a__str.html#gaf24f6f159e7ba3e72106e65f6f39b49e", null ]
+    [ "a_str_trim", "df/d28/group__a__str.html#ga89c64cb5cd23d112f5fb8bf590dc848b", null ],
+    [ "a_utf_len", "df/d28/group__a__str.html#gaac8fc8824edcae43bb4fc468bfa74891", null ]
 ];

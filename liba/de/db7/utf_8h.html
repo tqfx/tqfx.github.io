@@ -113,7 +113,6 @@ $(function(){initNavTree('de/db7/utf_8h.html','../../'); initResizable(true); })
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">utf.h File Reference</div></div>
 </div><!--header-->
@@ -130,22 +129,17 @@ Include dependency graph for utf.h:</div>
 </div>
 <p><a href="../../de/db7/utf_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga39c2864fdcff2c0d6bbddeb6915330c4" id="r_ga39c2864fdcff2c0d6bbddeb6915330c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#ga39c2864fdcff2c0d6bbddeb6915330c4">a_utf_len</a>(str)</td></tr>
-<tr class="separator:ga39c2864fdcff2c0d6bbddeb6915330c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafe3e06b8132ef6d676c33cc32321ffa8" id="r_gafe3e06b8132ef6d676c33cc32321ffa8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#gafe3e06b8132ef6d676c33cc32321ffa8">a_utf_encode</a> (void *str, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> val)</td></tr>
-<tr class="memdesc:gafe3e06b8132ef6d676c33cc32321ffa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode one unicode code point into UTF-8  <br /></td></tr>
-<tr class="separator:gafe3e06b8132ef6d676c33cc32321ffa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab05bfbd21ba3aec8220701465cfab369" id="r_gab05bfbd21ba3aec8220701465cfab369"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#gab05bfbd21ba3aec8220701465cfab369">a_utf_decode</a> (void const *str, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> *val)</td></tr>
-<tr class="memdesc:gab05bfbd21ba3aec8220701465cfab369"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode one unicode code point from UTF-8  <br /></td></tr>
-<tr class="separator:gab05bfbd21ba3aec8220701465cfab369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga80d2a0cb507333ae91938efffb63b028" id="r_ga80d2a0cb507333ae91938efffb63b028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#ga80d2a0cb507333ae91938efffb63b028">a_utf_length</a> (void const *str)</td></tr>
-<tr class="memdesc:ga80d2a0cb507333ae91938efffb63b028"><td class="mdescLeft">&#160;</td><td class="mdescRight">length of a UTF-8 string terminated with a null character  <br /></td></tr>
-<tr class="separator:ga80d2a0cb507333ae91938efffb63b028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1606267b22e8fb0ab0cacc6840277284" id="r_ga1606267b22e8fb0ab0cacc6840277284"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#ga1606267b22e8fb0ab0cacc6840277284">a_utf_encode</a> (<a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> val, void *buf)</td></tr>
+<tr class="memdesc:ga1606267b22e8fb0ab0cacc6840277284"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode one unicode code point into UTF-8  <br /></td></tr>
+<tr class="separator:ga1606267b22e8fb0ab0cacc6840277284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeaa9662af31ccf4355388856b841b745" id="r_gaeaa9662af31ccf4355388856b841b745"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#gaeaa9662af31ccf4355388856b841b745">a_utf_decode</a> (void const *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> *val)</td></tr>
+<tr class="memdesc:gaeaa9662af31ccf4355388856b841b745"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode one unicode code point from UTF-8  <br /></td></tr>
+<tr class="separator:gaeaa9662af31ccf4355388856b841b745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4de168b8816847134efa5b9f379b990" id="r_gae4de168b8816847134efa5b9f379b990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dba/group__a__utf.html#gae4de168b8816847134efa5b9f379b990">a_utf_length</a> (void const *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> *stop)</td></tr>
+<tr class="memdesc:gae4de168b8816847134efa5b9f379b990"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of unicode code points in a UTF-8 encoded byte sequence  <br /></td></tr>
+<tr class="separator:gae4de168b8816847134efa5b9f379b990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Unicode Transformation Format. </p>

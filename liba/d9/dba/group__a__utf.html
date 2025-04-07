@@ -113,7 +113,6 @@ $(function(){initNavTree('d9/dba/group__a__utf.html','../../'); initResizable(tr
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Unicode Transformation Format<div class="ingroups"><a class="el" href="../../d2/d6b/group__liba.html">algorithm library</a></div></div></div>
 </div><!--header-->
@@ -124,47 +123,22 @@ Collaboration diagram for Unicode Transformation Format:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/dba/group__a__utf.svg" width="367" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga39c2864fdcff2c0d6bbddeb6915330c4" id="r_ga39c2864fdcff2c0d6bbddeb6915330c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39c2864fdcff2c0d6bbddeb6915330c4">a_utf_len</a>(str)</td></tr>
-<tr class="separator:ga39c2864fdcff2c0d6bbddeb6915330c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafe3e06b8132ef6d676c33cc32321ffa8" id="r_gafe3e06b8132ef6d676c33cc32321ffa8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafe3e06b8132ef6d676c33cc32321ffa8">a_utf_encode</a> (void *str, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> val)</td></tr>
-<tr class="memdesc:gafe3e06b8132ef6d676c33cc32321ffa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode one unicode code point into UTF-8  <br /></td></tr>
-<tr class="separator:gafe3e06b8132ef6d676c33cc32321ffa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab05bfbd21ba3aec8220701465cfab369" id="r_gab05bfbd21ba3aec8220701465cfab369"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab05bfbd21ba3aec8220701465cfab369">a_utf_decode</a> (void const *str, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> *val)</td></tr>
-<tr class="memdesc:gab05bfbd21ba3aec8220701465cfab369"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode one unicode code point from UTF-8  <br /></td></tr>
-<tr class="separator:gab05bfbd21ba3aec8220701465cfab369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga80d2a0cb507333ae91938efffb63b028" id="r_ga80d2a0cb507333ae91938efffb63b028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80d2a0cb507333ae91938efffb63b028">a_utf_length</a> (void const *str)</td></tr>
-<tr class="memdesc:ga80d2a0cb507333ae91938efffb63b028"><td class="mdescLeft">&#160;</td><td class="mdescRight">length of a UTF-8 string terminated with a null character  <br /></td></tr>
-<tr class="separator:ga80d2a0cb507333ae91938efffb63b028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1606267b22e8fb0ab0cacc6840277284" id="r_ga1606267b22e8fb0ab0cacc6840277284"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1606267b22e8fb0ab0cacc6840277284">a_utf_encode</a> (<a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> val, void *buf)</td></tr>
+<tr class="memdesc:ga1606267b22e8fb0ab0cacc6840277284"><td class="mdescLeft">&#160;</td><td class="mdescRight">encode one unicode code point into UTF-8  <br /></td></tr>
+<tr class="separator:ga1606267b22e8fb0ab0cacc6840277284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeaa9662af31ccf4355388856b841b745" id="r_gaeaa9662af31ccf4355388856b841b745"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeaa9662af31ccf4355388856b841b745">a_utf_decode</a> (void const *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> *val)</td></tr>
+<tr class="memdesc:gaeaa9662af31ccf4355388856b841b745"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode one unicode code point from UTF-8  <br /></td></tr>
+<tr class="separator:gaeaa9662af31ccf4355388856b841b745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4de168b8816847134efa5b9f379b990" id="r_gae4de168b8816847134efa5b9f379b990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae4de168b8816847134efa5b9f379b990">a_utf_length</a> (void const *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> *stop)</td></tr>
+<tr class="memdesc:gae4de168b8816847134efa5b9f379b990"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of unicode code points in a UTF-8 encoded byte sequence  <br /></td></tr>
+<tr class="separator:gae4de168b8816847134efa5b9f379b990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga39c2864fdcff2c0d6bbddeb6915330c4" name="ga39c2864fdcff2c0d6bbddeb6915330c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga39c2864fdcff2c0d6bbddeb6915330c4">&#9670;&#160;</a></span>a_utf_len</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define a_utf_len</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#ga80d2a0cb507333ae91938efffb63b028">a_utf_length</a>(str)</div>
-<div class="ttc" id="agroup__a__utf_html_ga80d2a0cb507333ae91938efffb63b028"><div class="ttname"><a href="#ga80d2a0cb507333ae91938efffb63b028">a_utf_length</a></div><div class="ttdeci">a_size a_utf_length(void const *str)</div><div class="ttdoc">length of a UTF-8 string terminated with a null character</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gab05bfbd21ba3aec8220701465cfab369" name="gab05bfbd21ba3aec8220701465cfab369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab05bfbd21ba3aec8220701465cfab369">&#9670;&#160;</a></span>a_utf_decode()</h2>
+<a id="gaeaa9662af31ccf4355388856b841b745" name="gaeaa9662af31ccf4355388856b841b745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeaa9662af31ccf4355388856b841b745">&#9670;&#160;</a></span>a_utf_decode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +146,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned int a_utf_decode </td>
           <td>(</td>
-          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -185,8 +164,12 @@ Functions</h2></td></tr>
 <p>decode one unicode code point from UTF-8 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>string terminated with a null character </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">val</td><td>a pointer to a variable that stores unicode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>points to the buffer containing the UTF-8 byte </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>number of the buffer containing the UTF-8 byte </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">val</td><td>store the unicode code point <ul>
+<li>0 don't return the unicode code point </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -200,8 +183,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafe3e06b8132ef6d676c33cc32321ffa8" name="gafe3e06b8132ef6d676c33cc32321ffa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe3e06b8132ef6d676c33cc32321ffa8">&#9670;&#160;</a></span>a_utf_encode()</h2>
+<a id="ga1606267b22e8fb0ab0cacc6840277284" name="ga1606267b22e8fb0ab0cacc6840277284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1606267b22e8fb0ab0cacc6840277284">&#9670;&#160;</a></span>a_utf_encode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,12 +192,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned int a_utf_encode </td>
           <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -222,17 +205,17 @@ Functions</h2></td></tr>
 <p>encode one unicode code point into UTF-8 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>a buffer to store a UTF-8 character </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>the unicode value to be encoded </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>the unicode code point to be encoded </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>a buffer to store a UTF-8 character </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>offset to the next character </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes used in the UTF-8 encoding </dd></dl>
 
 </div>
 </div>
-<a id="ga80d2a0cb507333ae91938efffb63b028" name="ga80d2a0cb507333ae91938efffb63b028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga80d2a0cb507333ae91938efffb63b028">&#9670;&#160;</a></span>a_utf_length()</h2>
+<a id="gae4de168b8816847134efa5b9f379b990" name="gae4de168b8816847134efa5b9f379b990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4de168b8816847134efa5b9f379b990">&#9670;&#160;</a></span>a_utf_length()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,20 +223,34 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> a_utf_length </td>
           <td>(</td>
-          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> *</td>          <td class="paramname"><span class="paramname"><em>stop</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>length of a UTF-8 string terminated with a null character </p>
+<p>number of unicode code points in a UTF-8 encoded byte sequence </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>string terminated with a null character </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>points to the buffer containing the UTF-8 byte </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>number of the buffer containing the UTF-8 byte </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">stop</td><td>store the number of consumed bytes <ul>
+<li>0 don't return the number of consumed bytes </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>length of the UTF-8 string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of unicode code points </dd></dl>
 
 </div>
 </div>
