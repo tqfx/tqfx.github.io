@@ -36,5 +36,6 @@ var group__a__str =
     [ "a_str_setn_", "df/d28/group__a__str.html#ga438b1a1b78ab5f87c5f841b8ca88aade", null ],
     [ "a_str_swap", "df/d28/group__a__str.html#ga42337a121070d0d0d3a670f3482decc7", null ],
     [ "a_str_trim", "df/d28/group__a__str.html#ga89c64cb5cd23d112f5fb8bf590dc848b", null ],
+    [ "a_utf_catc", "df/d28/group__a__str.html#ga4dbeac705e77e0ba30746d4cbff75fc4", null ],
     [ "a_utf_len", "df/d28/group__a__str.html#gaac8fc8824edcae43bb4fc468bfa74891", null ]
 ];

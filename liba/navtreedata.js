@@ -53,10 +53,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d7f/group__a__hash.html",
-"da/dc4/group__a__vec.html#ga3a02fb44dd641883fdb63cd64ff58ce7",
-"db/ddd/group__a__notefreq.html#ga82788b1fc1e330e43a47dbc822c77889",
-"dd/dce/group__a__tf.html"
+"d3/d60/group__a__trajpoly3.html#gaf067f9cc9c6f09027f60cab59315ec2d",
+"da/dc4/group__a__vec.html#ga1987526027a7ff68e58ad02187712d76",
+"db/ddd/group__a__notefreq.html#ga7dfb87dea608c9d3d765ec714c81309a",
+"dd/dba/group__a__avl.html#gad4f5cac56fa7add3cd284de7f16d163c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

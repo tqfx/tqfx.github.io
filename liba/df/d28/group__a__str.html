@@ -209,13 +209,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_setm_</b> (<a cl
 <tr class="memdesc:gad651dc920de842dd92de9868f3fd0665"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare the string <code>ctx</code> with the C string <code>str</code>  <br /></td></tr>
 <tr class="separator:gad651dc920de842dd92de9868f3fd0665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga594295c16fc725d3449c298c7037e490" id="r_ga594295c16fc725d3449c298c7037e490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga594295c16fc725d3449c298c7037e490">a_str_getc</a> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> *ctx)</td></tr>
-<tr class="memdesc:ga594295c16fc725d3449c298c7037e490"><td class="mdescLeft">&#160;</td><td class="mdescRight">get character for a pointer to string structure  <br /></td></tr>
+<tr class="memdesc:ga594295c16fc725d3449c298c7037e490"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a character for a pointer to string structure  <br /></td></tr>
 <tr class="separator:ga594295c16fc725d3449c298c7037e490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb07b949679b0aa6b1341c51847c4e5d" id="r_gadb07b949679b0aa6b1341c51847c4e5d"><td class="memItemLeft" align="right" valign="top"><a id="gadb07b949679b0aa6b1341c51847c4e5d" name="gadb07b949679b0aa6b1341c51847c4e5d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_getc_</b> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> *ctx)</td></tr>
 <tr class="separator:gadb07b949679b0aa6b1341c51847c4e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6c8319a0906cbc7fdb4726bba7bf4fc2" id="r_ga6c8319a0906cbc7fdb4726bba7bf4fc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6c8319a0906cbc7fdb4726bba7bf4fc2">a_str_catc</a> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> *ctx, int c)</td></tr>
-<tr class="memdesc:ga6c8319a0906cbc7fdb4726bba7bf4fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">concatenate character to a pointer to string structure  <br /></td></tr>
+<tr class="memdesc:ga6c8319a0906cbc7fdb4726bba7bf4fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">concatenate a character to a pointer to string structure  <br /></td></tr>
 <tr class="separator:ga6c8319a0906cbc7fdb4726bba7bf4fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9b72e9768851235344d759cdf90a6ac0" id="r_ga9b72e9768851235344d759cdf90a6ac0"><td class="memItemLeft" align="right" valign="top"><a id="ga9b72e9768851235344d759cdf90a6ac0" name="ga9b72e9768851235344d759cdf90a6ac0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_catc_</b> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> *ctx, int c)</td></tr>
@@ -271,6 +271,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_trim_</b> (<a c
 <tr class="memitem:gaac8fc8824edcae43bb4fc468bfa74891" id="r_gaac8fc8824edcae43bb4fc468bfa74891"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac8fc8824edcae43bb4fc468bfa74891">a_utf_len</a> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> const *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> *stop)</td></tr>
 <tr class="memdesc:gaac8fc8824edcae43bb4fc468bfa74891"><td class="mdescLeft">&#160;</td><td class="mdescRight">length for a pointer to string structure using UTF-8  <br /></td></tr>
 <tr class="separator:gaac8fc8824edcae43bb4fc468bfa74891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dbeac705e77e0ba30746d4cbff75fc4" id="r_ga4dbeac705e77e0ba30746d4cbff75fc4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4dbeac705e77e0ba30746d4cbff75fc4">a_utf_catc</a> (<a class="el" href="../../d8/d79/structa__str.html">a_str</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> c)</td></tr>
+<tr class="memdesc:ga4dbeac705e77e0ba30746d4cbff75fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">concatenate a unicode character to a pointer to string structure  <br /></td></tr>
+<tr class="separator:ga4dbeac705e77e0ba30746d4cbff75fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -399,11 +402,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_trim_</b> (<a c
       </table>
 </div><div class="memdoc">
 
-<p>concatenate character to a pointer to string structure </p>
+<p>concatenate a character to a pointer to string structure </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of string structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>character to be parsed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>a character to be parsed </td></tr>
   </table>
   </dd>
 </dl>
@@ -861,14 +864,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_trim_</b> (<a c
       </table>
 </div><div class="memdoc">
 
-<p>get character for a pointer to string structure </p>
+<p>get a character for a pointer to string structure </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of string structure </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>parsed character </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a parsed character </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">~0</td><td>failure </td></tr>
@@ -1267,6 +1270,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_str_trim_</b> (<a c
     <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of string structure. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>points to the characters to remove. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of the characters to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4dbeac705e77e0ba30746d4cbff75fc4" name="ga4dbeac705e77e0ba30746d4cbff75fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4dbeac705e77e0ba30746d4cbff75fc4">&#9670;&#160;</a></span>a_utf_catc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_utf_catc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d79/structa__str.html">a_str</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>concatenate a unicode character to a pointer to string structure </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to an instance of string structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>a unicode character to concatenate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error code value </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>success </td></tr>
   </table>
   </dd>
 </dl>
