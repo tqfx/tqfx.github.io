@@ -1,0 +1,24 @@
+<map id="plane.h" name="plane.h">
+<area shape="rect" id="Node000001" title="three&#45;dimensional plane" alt="" coords="38,5,109,31"/>
+<area shape="rect" id="Node000002" href="$d2/d62/a_8h.html" title="algorithm library" alt="" coords="119,372,161,397"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,32,53,88,45,125,41,163,41,239,49,276,67,310,91,339,115,361,112,365,87,342,63,313,44,278,36,240,36,163,39,124,48,86,66,30"/>
+<area shape="rect" id="Node000006" href="$d2/de1/line3_8h.html" title="three&#45;dimensional line" alt="" coords="76,79,143,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="82,30,100,65,95,68,77,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,445,80,471"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,400,71,439,68,435,123,395"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,445,175,471"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="143,398,143,432,137,432,137,398"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="199,445,262,471"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="156,395,207,434,203,439,153,399"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="113,104,117,177,139,358,134,359,112,178,107,104"/>
+<area shape="rect" id="Node000007" href="$d1/d0b/point3_8h.html" title="three&#45;dimensional point" alt="" coords="127,152,201,177"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="120,103,149,140,145,143,116,106"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="165,178,145,358,140,357,160,177"/>
+<area shape="rect" id="Node000008" href="$d0/d7e/vector3_8h.html" title="three&#45;dimensional vector" alt="" coords="177,225,260,251"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="175,176,204,213,199,216,171,179"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="215,252,155,361,150,359,210,250"/>
+<area shape="rect" id="Node000009" href="$df/db1/math_8h.html" title="mathematical algorithm library" alt="" coords="229,299,297,324"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="228,250,251,286,246,288,224,252"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="244,326,173,367,170,363,242,322"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="290,296,312,297,320,303,323,312,318,323,304,327,303,322,314,318,318,311,316,306,310,302,290,301"/>
+</map>

@@ -10,10 +10,15 @@ var searchData=
   ['pid_2eh_7',['pid.h',['../da/df0/pid_8h.html',1,'']]],
   ['pid_5ffuzzy_2eh_8',['pid_fuzzy.h',['../d7/d30/pid__fuzzy_8h.html',1,'']]],
   ['pid_5fneuro_2eh_9',['pid_neuro.h',['../d5/d25/pid__neuro_8h.html',1,'']]],
-  ['point_20number_10',['floating-point number',['../d5/d19/group__a__real.html',1,'']]],
-  ['poly_2eh_11',['poly.h',['../db/d57/poly_8h.html',1,'']]],
-  ['polynomial_12',['polynomial',['../d1/d14/group__a__poly.html',1,'']]],
-  ['polynomial_20trajectory_13',['polynomial trajectory',['../d3/d60/group__a__trajpoly3.html',1,'cubic polynomial trajectory'],['../df/d82/group__a__trajpoly7.html',1,'hepta polynomial trajectory'],['../d6/dfe/group__a__trajpoly5.html',1,'quintic polynomial trajectory']]],
-  ['proportional_20integral_20derivative_20controller_14',['proportional integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]],
-  ['ptr_5f_15',['ptr_',['../dc/dec/structa__que.html#a66f348559cf57818feece3395807fd9c',1,'a_que::ptr_'],['../d8/d79/structa__str.html#ae21fc851b2921719ca8834ce1f723062',1,'a_str::ptr_'],['../d7/d3b/structa__vec.html#a9d5dc9dbbfcd9138bdc1c068de6d04cc',1,'a_vec::ptr_']]]
+  ['plane_10',['three-dimensional plane',['../db/d44/group__a__plane.html',1,'']]],
+  ['plane_2eh_11',['plane.h',['../db/d8b/plane_8h.html',1,'']]],
+  ['point_12',['point',['../de/d3c/group__a__point3.html',1,'three-dimensional point'],['../d2/d21/group__a__point2.html',1,'two-dimensional point']]],
+  ['point_20number_13',['floating-point number',['../d5/d19/group__a__real.html',1,'']]],
+  ['point2_2eh_14',['point2.h',['../df/d7b/point2_8h.html',1,'']]],
+  ['point3_2eh_15',['point3.h',['../d1/d0b/point3_8h.html',1,'']]],
+  ['poly_2eh_16',['poly.h',['../db/d57/poly_8h.html',1,'']]],
+  ['polynomial_17',['polynomial',['../d1/d14/group__a__poly.html',1,'']]],
+  ['polynomial_20trajectory_18',['polynomial trajectory',['../d3/d60/group__a__trajpoly3.html',1,'cubic polynomial trajectory'],['../df/d82/group__a__trajpoly7.html',1,'hepta polynomial trajectory'],['../d6/dfe/group__a__trajpoly5.html',1,'quintic polynomial trajectory']]],
+  ['proportional_20integral_20derivative_20controller_19',['proportional integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]],
+  ['ptr_5f_20',['ptr_',['../dc/dec/structa__que.html#a66f348559cf57818feece3395807fd9c',1,'a_que::ptr_'],['../d8/d79/structa__str.html#ae21fc851b2921719ca8834ce1f723062',1,'a_str::ptr_'],['../d7/d3b/structa__vec.html#a9d5dc9dbbfcd9138bdc1c068de6d04cc',1,'a_vec::ptr_']]]
 ];

@@ -9,6 +9,8 @@ var files_dup =
     [ "hash.h", "db/dfb/hash_8h.html", "db/dfb/hash_8h" ],
     [ "hpf.h", "d1/df9/hpf_8h.html", "d1/df9/hpf_8h" ],
     [ "linalg.h", "dd/d46/linalg_8h.html", "dd/d46/linalg_8h" ],
+    [ "line2.h", "de/d8d/line2_8h.html", "de/d8d/line2_8h" ],
+    [ "line3.h", "d2/de1/line3_8h.html", "d2/de1/line3_8h" ],
     [ "list.h", "da/d23/list_8h.html", "da/d23/list_8h" ],
     [ "lpf.h", "db/d80/lpf_8h.html", "db/d80/lpf_8h" ],
     [ "math.h", "df/db1/math_8h.html", "df/db1/math_8h" ],
@@ -17,6 +19,9 @@ var files_dup =
     [ "pid.h", "da/df0/pid_8h.html", "da/df0/pid_8h" ],
     [ "pid_fuzzy.h", "d7/d30/pid__fuzzy_8h.html", "d7/d30/pid__fuzzy_8h" ],
     [ "pid_neuro.h", "d5/d25/pid__neuro_8h.html", "d5/d25/pid__neuro_8h" ],
+    [ "plane.h", "db/d8b/plane_8h.html", "db/d8b/plane_8h" ],
+    [ "point2.h", "df/d7b/point2_8h.html", "df/d7b/point2_8h" ],
+    [ "point3.h", "d1/d0b/point3_8h.html", "d1/d0b/point3_8h" ],
     [ "poly.h", "db/d57/poly_8h.html", "db/d57/poly_8h" ],
     [ "que.h", "d9/dc9/que_8h.html", "d9/dc9/que_8h" ],
     [ "rbt.h", "d6/d1b/rbt_8h.html", "d6/d1b/rbt_8h" ],
@@ -33,5 +38,7 @@ var files_dup =
     [ "trajtrap.h", "de/d3b/trajtrap_8h.html", "de/d3b/trajtrap_8h" ],
     [ "utf.h", "de/db7/utf_8h.html", "de/db7/utf_8h" ],
     [ "vec.h", "db/d65/vec_8h.html", "db/d65/vec_8h" ],
+    [ "vector2.h", "d1/d03/vector2_8h.html", "d1/d03/vector2_8h" ],
+    [ "vector3.h", "d0/d7e/vector3_8h.html", "d0/d7e/vector3_8h" ],
     [ "version.h", "df/dfc/version_8h.html", "df/dfc/version_8h" ]
 ];

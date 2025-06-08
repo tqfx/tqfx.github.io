@@ -6,9 +6,12 @@ var searchData=
   ['var_3',['var',['../db/d89/structa__pid.html#a89934528594b23aa5f1da7326e744ac0',1,'a_pid']]],
   ['vc_4',['vc',['../d3/dfe/structa__trajtrap.html#a196abd82dd1452e24f7f953dacbdcbc3',1,'a_trajtrap']]],
   ['vec_2eh_5',['vec.h',['../db/d65/vec_8h.html',1,'']]],
-  ['vector_20library_6',['basic vector library',['../da/dc4/group__a__vec.html',1,'']]],
-  ['velocity_20trajectory_7',['velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'bell-shaped velocity trajectory'],['../d7/d75/group__a__trajtrap.html',1,'trapezoidal velocity trajectory']]],
-  ['version_8',['algorithm library version',['../d2/d6c/group__a__version.html',1,'']]],
-  ['version_2eh_9',['version.h',['../df/dfc/version_8h.html',1,'']]],
-  ['vm_10',['vm',['../d1/dcc/structa__trajbell.html#a5dad0ebff70b25bc99bd053274431ae1',1,'a_trajbell']]]
+  ['vector_6',['vector',['../d5/db6/group__a__vector3.html',1,'three-dimensional vector'],['../d6/d5a/group__a__vector2.html',1,'two-dimensional vector']]],
+  ['vector_20library_7',['basic vector library',['../da/dc4/group__a__vec.html',1,'']]],
+  ['vector2_2eh_8',['vector2.h',['../d1/d03/vector2_8h.html',1,'']]],
+  ['vector3_2eh_9',['vector3.h',['../d0/d7e/vector3_8h.html',1,'']]],
+  ['velocity_20trajectory_10',['velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'bell-shaped velocity trajectory'],['../d7/d75/group__a__trajtrap.html',1,'trapezoidal velocity trajectory']]],
+  ['version_11',['algorithm library version',['../d2/d6c/group__a__version.html',1,'']]],
+  ['version_2eh_12',['version.h',['../df/dfc/version_8h.html',1,'']]],
+  ['vm_13',['vm',['../d1/dcc/structa__trajbell.html#a5dad0ebff70b25bc99bd053274431ae1',1,'a_trajbell']]]
 ];

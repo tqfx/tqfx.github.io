@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_0',['An algorithm library',['../index.html',1,'']]]
+  ['copyright_0',['Copyright',['../index.html#copyright',1,'']]]
 ];
