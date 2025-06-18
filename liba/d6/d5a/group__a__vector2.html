@@ -129,6 +129,8 @@ typedef struct a_vector2&#160;</td><td class="memItemRight" valign="bottom"><b>a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga37a61e86c756d7185cdad647cd8e3e0f" id="r_ga37a61e86c756d7185cdad647cd8e3e0f"><td class="memItemLeft" align="right" valign="top"><a id="ga37a61e86c756d7185cdad647cd8e3e0f" name="ga37a61e86c756d7185cdad647cd8e3e0f"></a>
+<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_set_dir</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
 <tr class="memitem:gac7a9be39889c295f8265201489dafa91" id="r_gac7a9be39889c295f8265201489dafa91"><td class="memItemLeft" align="right" valign="top"><a id="gac7a9be39889c295f8265201489dafa91" name="gac7a9be39889c295f8265201489dafa91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_val</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> *y)</td></tr>
 <tr class="memitem:ga29774421108b8e131aa34ce9f1dea954" id="r_ga29774421108b8e131aa34ce9f1dea954"><td class="memItemLeft" align="right" valign="top"><a id="ga29774421108b8e131aa34ce9f1dea954" name="ga29774421108b8e131aa34ce9f1dea954"></a>
@@ -171,6 +173,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_neg</b> (<a
 <a class="el" href="../../d2/d6b/group__liba.html#gade2e28b96a73b9ecd34f90dd58f43da9">a_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_ispar</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *lhs, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *rhs)</td></tr>
 <tr class="memitem:ga7f97127e3c415c606daac76ea7786d47" id="r_ga7f97127e3c415c606daac76ea7786d47"><td class="memItemLeft" align="right" valign="top"><a id="ga7f97127e3c415c606daac76ea7786d47" name="ga7f97127e3c415c606daac76ea7786d47"></a>
 <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_cross</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *lhs, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *rhs)</td></tr>
+<tr class="memitem:gae27fccdce6fd28df53f224fcc4b9a9f8" id="r_gae27fccdce6fd28df53f224fcc4b9a9f8"><td class="memItemLeft" align="right" valign="top"><a id="gae27fccdce6fd28df53f224fcc4b9a9f8" name="gae27fccdce6fd28df53f224fcc4b9a9f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_rot_</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> sin, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> cos, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> *res)</td></tr>
+<tr class="memitem:gaf4f5add970f8d476cfa19af6de6f9e18" id="r_gaf4f5add970f8d476cfa19af6de6f9e18"><td class="memItemLeft" align="right" valign="top"><a id="gaf4f5add970f8d476cfa19af6de6f9e18" name="gaf4f5add970f8d476cfa19af6de6f9e18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_rot</b> (<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const *ctx, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> angle, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> *res)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -193,7 +199,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_neg</b> (<a
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a_cast_s(<a class="code hl_struct" href="../../db/de9/structa__vector2.html">a_vector2</a> _, x)</div>
-<div class="ttc" id="astructa__vector2_html"><div class="ttname"><a href="../../db/de9/structa__vector2.html">a_vector2</a></div><div class="ttdoc">instance structure for two-dimensional vector</div><div class="ttdef"><b>Definition</b> vector2.h:78</div></div>
+<div class="ttc" id="astructa__vector2_html"><div class="ttname"><a href="../../db/de9/structa__vector2.html">a_vector2</a></div><div class="ttdoc">instance structure for two-dimensional vector</div><div class="ttdef"><b>Definition</b> vector2.h:82</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -216,7 +222,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2_neg</b> (<a
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{<a class="code hl_define" href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a>(x), <a class="code hl_define" href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a>(y)}</div>
-<div class="ttc" id="agroup__a__real_html_ga6753ba3e7de1379e2404e857e531ef6b"><div class="ttname"><a href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a></div><div class="ttdeci">#define a_real_c(x)</div><div class="ttdoc">static cast to floating-point number</div><div class="ttdef"><b>Definition</b> a.h:1006</div></div>
+<div class="ttc" id="agroup__a__real_html_ga6753ba3e7de1379e2404e857e531ef6b"><div class="ttname"><a href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a></div><div class="ttdeci">#define a_real_c(x)</div><div class="ttdoc">static cast to floating-point number</div><div class="ttdef"><b>Definition</b> a.h:1009</div></div>
 </div><!-- fragment --><p>constructs a two-dimensional vector from cartesian coordinate </p>
 
 </div>

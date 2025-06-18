@@ -147,6 +147,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_sub</b> (<a 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_mul</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *lhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> *res)</td></tr>
 <tr class="memitem:ga161c51b0e7edfabef4b046f5eb6dcfbf" id="r_ga161c51b0e7edfabef4b046f5eb6dcfbf"><td class="memItemLeft" align="right" valign="top"><a id="ga161c51b0e7edfabef4b046f5eb6dcfbf" name="ga161c51b0e7edfabef4b046f5eb6dcfbf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_div</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *lhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> *res)</td></tr>
+<tr class="memitem:ga2ba0eafb1a95b158c8e1d71edc0a810f" id="r_ga2ba0eafb1a95b158c8e1d71edc0a810f"><td class="memItemLeft" align="right" valign="top"><a id="ga2ba0eafb1a95b158c8e1d71edc0a810f" name="ga2ba0eafb1a95b158c8e1d71edc0a810f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_pos</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *ctx, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> *res)</td></tr>
+<tr class="memitem:ga1e3a8cfebe20b49082028654a50476da" id="r_ga1e3a8cfebe20b49082028654a50476da"><td class="memItemLeft" align="right" valign="top"><a id="ga1e3a8cfebe20b49082028654a50476da" name="ga1e3a8cfebe20b49082028654a50476da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_neg</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *ctx, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> *res)</td></tr>
 <tr class="memitem:ga0e66360e02a0e56026120e43439d1b0a" id="r_ga0e66360e02a0e56026120e43439d1b0a"><td class="memItemLeft" align="right" valign="top"><a id="ga0e66360e02a0e56026120e43439d1b0a" name="ga0e66360e02a0e56026120e43439d1b0a"></a>
 <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a_point2_dist</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *lhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const *rhs)</td></tr>
 <tr class="memitem:gaebd1233e3af622b71f43c60badb62c8c" id="r_gaebd1233e3af622b71f43c60badb62c8c"><td class="memItemLeft" align="right" valign="top"><a id="gaebd1233e3af622b71f43c60badb62c8c" name="gaebd1233e3af622b71f43c60badb62c8c"></a>
@@ -177,7 +181,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2::set</b> (<
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a_cast_s(<a class="code hl_struct" href="../../d1/db5/structa__point2.html">a_point2</a> _, x)</div>
-<div class="ttc" id="astructa__point2_html"><div class="ttname"><a href="../../d1/db5/structa__point2.html">a_point2</a></div><div class="ttdoc">instance structure for two-dimensional point</div><div class="ttdef"><b>Definition</b> point2.h:73</div></div>
+<div class="ttc" id="astructa__point2_html"><div class="ttname"><a href="../../d1/db5/structa__point2.html">a_point2</a></div><div class="ttdoc">instance structure for two-dimensional point</div><div class="ttdef"><b>Definition</b> point2.h:75</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -200,7 +204,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a_vector2::set</b> (<
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{<a class="code hl_define" href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a>(x), <a class="code hl_define" href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a>(y)}</div>
-<div class="ttc" id="agroup__a__real_html_ga6753ba3e7de1379e2404e857e531ef6b"><div class="ttname"><a href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a></div><div class="ttdeci">#define a_real_c(x)</div><div class="ttdoc">static cast to floating-point number</div><div class="ttdef"><b>Definition</b> a.h:1006</div></div>
+<div class="ttc" id="agroup__a__real_html_ga6753ba3e7de1379e2404e857e531ef6b"><div class="ttname"><a href="../../d5/d19/group__a__real.html#ga6753ba3e7de1379e2404e857e531ef6b">a_real_c</a></div><div class="ttdeci">#define a_real_c(x)</div><div class="ttdoc">static cast to floating-point number</div><div class="ttdef"><b>Definition</b> a.h:1009</div></div>
 </div><!-- fragment --><p>constructs a two-dimensional point from cartesian coordinate </p>
 
 </div>
