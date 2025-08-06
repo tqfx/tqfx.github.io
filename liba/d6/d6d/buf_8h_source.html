@@ -128,7 +128,7 @@ $(function(){initNavTree('d6/d6d/buf_8h_source.html','../../',''); });
 <div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d9/d0a/group__a__buf.html#ga189b6df888d4aebac005e7ed15188d87">   56</a></span>A_INTERN <span class="keywordtype">void</span> *<a class="code hl_function" href="../../d9/d0a/group__a__buf.html#ga189b6df888d4aebac005e7ed15188d87">a_buf_ptr</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *ctx)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> a_cast_r(<a class="code hl_struct" href="../../de/d98/structa__buf.html">a_buf</a> *, a_cast_r(<a class="code hl_typedef" href="../../d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f">a_uptr</a>, ctx)) + 1;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> a_cast_r(<span class="keywordtype">void</span> *, a_cast_r(<a class="code hl_typedef" href="../../d2/d6b/group__liba.html#ga97cc1498bf780a09c31053c7feaf3d1f">a_uptr</a>, ctx) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../de/d98/structa__buf.html">a_buf</a>));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define A_BUF_PTR(T, ctx) a_cast_s(T *, a_buf_ptr(ctx))</span></div>
