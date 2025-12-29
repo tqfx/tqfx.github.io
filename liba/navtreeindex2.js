@@ -142,7 +142,6 @@ var NAVTREEINDEX2 =
 "db/ddd/group__a__notefreq.html#ga133f23f5df7f7876db6c652025f6ae7d":[1,0,15,111],
 "db/ddd/group__a__notefreq.html#ga1357b81adfad8341dc01d289fd175df4":[1,0,15,116],
 "db/ddd/group__a__notefreq.html#ga13f31f26549a278f3aec72e3afe1ea7f":[1,0,15,143],
-"db/ddd/group__a__notefreq.html#ga14898ea60a3a2bd5f13b3d28676a7803":[1,0,15,5],
 "db/ddd/group__a__notefreq.html#ga14898ea60a3a2bd5f13b3d28676a7803":[1,0,15,6],
 "db/ddd/group__a__notefreq.html#ga1557c68183ed51b5eeb690c2ede5553b":[1,0,15,17],
 "db/ddd/group__a__notefreq.html#ga1707bc4a12201a3075ef60505df44f26":[1,0,15,203],
@@ -247,6 +246,7 @@ var NAVTREEINDEX2 =
 "db/ddd/group__a__notefreq.html#ga6796ccc54599f264686ba600e8dc7929":[1,0,15,263],
 "db/ddd/group__a__notefreq.html#ga67ede9d9ec2b73bf6421d9b3e5799103":[1,0,15,302],
 "db/ddd/group__a__notefreq.html#ga699019fa6b350f06d5534dbbde24706f":[1,0,15,286],
+"db/ddd/group__a__notefreq.html#ga6a2079dcf67f4416fc9074f9dbf5af72":[1,0,15,5],
 "db/ddd/group__a__notefreq.html#ga6bdec0d8afcf28e103ac918a1d43297c":[1,0,15,86],
 "db/ddd/group__a__notefreq.html#ga6ef86789265483d8a20cac77bb10c0c5":[1,0,15,144],
 "db/ddd/group__a__notefreq.html#ga6f949cb171c690e2b7b3d3e17d7ed0f9":[1,0,15,294]

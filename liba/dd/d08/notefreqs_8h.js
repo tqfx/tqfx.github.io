@@ -5,7 +5,7 @@ var notefreqs_8h =
     [ "A_NOTEFREQ_A1", "db/ddd/group__a__notefreq.html#gacdb8647b432e97402f52eb768e6a8088", null ],
     [ "A_NOTEFREQ_A2", "db/ddd/group__a__notefreq.html#ga2ed5adde128676dca60e250da704ecde", null ],
     [ "A_NOTEFREQ_A3", "db/ddd/group__a__notefreq.html#ga7a821bb74acc102b176dbb0098115724", null ],
-    [ "A_NOTEFREQ_A4", "db/ddd/group__a__notefreq.html#ga14898ea60a3a2bd5f13b3d28676a7803", null ],
+    [ "A_NOTEFREQ_A4", "db/ddd/group__a__notefreq.html#ga6a2079dcf67f4416fc9074f9dbf5af72", null ],
     [ "A_NOTEFREQ_A4", "db/ddd/group__a__notefreq.html#ga14898ea60a3a2bd5f13b3d28676a7803", null ],
     [ "A_NOTEFREQ_A5", "db/ddd/group__a__notefreq.html#gafae1f535ddbbecf74ce56ee5f5e166eb", null ],
     [ "A_NOTEFREQ_A6", "db/ddd/group__a__notefreq.html#ga2dbe82229626370fcece2a82cdbb953e", null ],
