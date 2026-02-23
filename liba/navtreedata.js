@@ -31,8 +31,10 @@ var NAVTREE =
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -53,11 +55,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/dce/trajpoly3_8h_source.html",
-"d9/dba/group__a__utf.html#ga1606267b22e8fb0ab0cacc6840277284",
-"db/ddd/group__a__notefreq.html#ga7007715d719ae82d6c1804a8a825078a",
-"dd/d81/group__a__pid.html#ga3c3c5e8fa0c14add908c02433986f728",
-"globals_eval.html"
+"d2/d6b/group__liba.html#gabf70f43bf7aeab45552f768d8afca439",
+"d6/dfe/group__a__trajpoly5.html#gac32d6c0be0e922833d6796bbe3747175",
+"db/dd2/structa__regress__linear.html#a9c24209e672d8786f60e46586605dd3a",
+"db/ddd/group__a__notefreq.html#gacbb8ade34bf87635d39f2e804be3478f",
+"dd/dba/group__a__avl.html#gaef001ee6968d03e862234b51ae88ea57",
+"df/d82/group__a__trajpoly7.html#gac5ae2ebf80d918cf45ca728778ef4b24"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

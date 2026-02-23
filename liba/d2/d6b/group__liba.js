@@ -2,8 +2,10 @@ var group__liba =
 [
     [ "floating-point number", "d5/d19/group__a__real.html", "d5/d19/group__a__real" ],
     [ "AVL binary search tree", "dd/dba/group__a__avl.html", "dd/dba/group__a__avl" ],
+    [ "bounding volume", "d9/d97/group__a__bounding.html", "d9/d97/group__a__bounding" ],
     [ "basic buffer library", "d9/d0a/group__a__buf.html", "d9/d0a/group__a__buf" ],
     [ "complex number", "de/d1c/group__a__complex.html", "de/d1c/group__a__complex" ],
+    [ "convex hull algorithms", "d4/d2d/group__a__convexhull.html", "d4/d2d/group__a__convexhull" ],
     [ "Cyclic Redundancy Check", "d0/de2/group__a__crc.html", null ],
     [ "fuzzy operator", "d4/dfa/group__a__fuzzy.html", "d4/dfa/group__a__fuzzy" ],
     [ "hash function", "d3/d7f/group__a__hash.html", "d3/d7f/group__a__hash" ],
@@ -24,6 +26,7 @@ var group__liba =
     [ "three-dimensional point", "de/d3c/group__a__point3.html", "de/d3c/group__a__point3" ],
     [ "polynomial", "d1/d14/group__a__poly.html", "d1/d14/group__a__poly" ],
     [ "basic queue library", "df/d21/group__a__que.html", "df/d21/group__a__que" ],
+    [ "pseudorandom number generator", "d9/d8d/group__a__rand.html", "d9/d8d/group__a__rand" ],
     [ "red–black binary search tree", "de/d40/group__a__rbt.html", "de/d40/group__a__rbt" ],
     [ "regression", "d7/d8d/group__a__regress.html", "d7/d8d/group__a__regress" ],
     [ "singly linked list", "d9/d14/group__a__slist.html", "d9/d14/group__a__slist" ],

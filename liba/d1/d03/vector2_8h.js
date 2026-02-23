@@ -1,5 +1,31 @@
 var vector2_8h =
 [
     [ "A_VECTOR2_C", "d6/d5a/group__a__vector2.html#gaa4446f473009e5b8364b87e04f1b49e9", null ],
-    [ "a_vector2_c", "d6/d5a/group__a__vector2.html#gaf9e32936d753fbd28ac65d3bf8dec175", null ]
+    [ "a_vector2_c", "d6/d5a/group__a__vector2.html#gaf9e32936d753fbd28ac65d3bf8dec175", null ],
+    [ "a_vector2_add", "d6/d5a/group__a__vector2.html#ga18b0dd6e5b0fc07ed089de5d7e1fe1a7", null ],
+    [ "a_vector2_angle", "d6/d5a/group__a__vector2.html#gabe99305a7f452f4b4c9a73c72c04f0da", null ],
+    [ "a_vector2_cross", "d6/d5a/group__a__vector2.html#ga7f97127e3c415c606daac76ea7786d47", null ],
+    [ "a_vector2_dist", "d6/d5a/group__a__vector2.html#gaebf5f11ef195d88a58e3f2b993150fc0", null ],
+    [ "a_vector2_dist2", "d6/d5a/group__a__vector2.html#gab718a14066a2473d415833bbe9f6f0af", null ],
+    [ "a_vector2_div", "d6/d5a/group__a__vector2.html#gab489c863fef2c18594c2978e127cb51c", null ],
+    [ "a_vector2_dot", "d6/d5a/group__a__vector2.html#ga86045120353e426f15657a7e09e16b7b", null ],
+    [ "a_vector2_ispar", "d6/d5a/group__a__vector2.html#ga50ff1e806470d9c64724e8514d918737", null ],
+    [ "a_vector2_isver", "d6/d5a/group__a__vector2.html#ga73a10c0d3ca036c6e08445225e732013", null ],
+    [ "a_vector2_mul", "d6/d5a/group__a__vector2.html#ga3ab61659c8da292c56d2eac1413cd38a", null ],
+    [ "a_vector2_neg", "d6/d5a/group__a__vector2.html#gabde02bff8296c4316007a31126fdf320", null ],
+    [ "a_vector2_norm", "d6/d5a/group__a__vector2.html#ga93b80930dd1bac494ac8b3bf6df21e41", null ],
+    [ "a_vector2_norm2", "d6/d5a/group__a__vector2.html#ga65ca8519648a172c5085fc379ab5154a", null ],
+    [ "a_vector2_outer", "d6/d5a/group__a__vector2.html#gabdf6321d36e298a7e6170912288cd278", null ],
+    [ "a_vector2_perp", "d6/d5a/group__a__vector2.html#gac287119f9de816f6910f8af608e22d54", null ],
+    [ "a_vector2_pol", "d6/d5a/group__a__vector2.html#ga3ea7c41640651ae7f3cef65bb1bc1488", null ],
+    [ "a_vector2_proj", "d6/d5a/group__a__vector2.html#gaa7cad6c8434d5c70b0e0afb3a96be435", null ],
+    [ "a_vector2_refl", "d6/d5a/group__a__vector2.html#gac32e97d6a64c6785f65aa06eb730a64e", null ],
+    [ "a_vector2_rot", "d6/d5a/group__a__vector2.html#gaf4f5add970f8d476cfa19af6de6f9e18", null ],
+    [ "a_vector2_rot_", "d6/d5a/group__a__vector2.html#gae27fccdce6fd28df53f224fcc4b9a9f8", null ],
+    [ "a_vector2_set_dir", "d6/d5a/group__a__vector2.html#ga37a61e86c756d7185cdad647cd8e3e0f", null ],
+    [ "a_vector2_set_pol", "d6/d5a/group__a__vector2.html#ga75e6796f9a05c3b1698e733457cdfcd8", null ],
+    [ "a_vector2_set_val", "d6/d5a/group__a__vector2.html#ga29774421108b8e131aa34ce9f1dea954", null ],
+    [ "a_vector2_sub", "d6/d5a/group__a__vector2.html#gac03e7d0b9b32ff327c5d74eebe7486f8", null ],
+    [ "a_vector2_unit", "d6/d5a/group__a__vector2.html#ga9f1ddc857ec605a97c7ae1d0a361258f", null ],
+    [ "a_vector2_val", "d6/d5a/group__a__vector2.html#gac7a9be39889c295f8265201489dafa91", null ]
 ];

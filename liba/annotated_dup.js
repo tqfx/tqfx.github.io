@@ -14,9 +14,10 @@ var annotated_dup =
     [ "a_pid_fuzzy", "d0/d27/structa__pid__fuzzy.html", "d0/d27/structa__pid__fuzzy" ],
     [ "a_pid_neuro", "d1/dab/structa__pid__neuro.html", "d1/dab/structa__pid__neuro" ],
     [ "a_plane", "d3/dc7/structa__plane.html", null ],
-    [ "a_point2", "d1/db5/structa__point2.html", null ],
-    [ "a_point3", "dd/de2/structa__point3.html", null ],
+    [ "a_point2", "d1/db5/structa__point2.html", "d1/db5/structa__point2" ],
+    [ "a_point3", "dd/de2/structa__point3.html", "dd/de2/structa__point3" ],
     [ "a_que", "dc/dec/structa__que.html", "dc/dec/structa__que" ],
+    [ "a_rand_lcg48", "d4/d3b/structa__rand__lcg48.html", "d4/d3b/structa__rand__lcg48" ],
     [ "a_rbt", "d0/d4d/uniona__rbt.html", "d0/d4d/uniona__rbt" ],
     [ "a_rbt_node", "db/d47/structa__rbt__node.html", "db/d47/structa__rbt__node" ],
     [ "a_regress_linear", "db/dd2/structa__regress__linear.html", "db/dd2/structa__regress__linear" ],
@@ -31,7 +32,7 @@ var annotated_dup =
     [ "a_trajpoly7", "d5/d1c/structa__trajpoly7.html", "d5/d1c/structa__trajpoly7" ],
     [ "a_trajtrap", "d3/dfe/structa__trajtrap.html", "d3/dfe/structa__trajtrap" ],
     [ "a_vec", "d7/d3b/structa__vec.html", "d7/d3b/structa__vec" ],
-    [ "a_vector2", "db/de9/structa__vector2.html", null ],
-    [ "a_vector3", "dd/d68/structa__vector3.html", null ],
+    [ "a_vector2", "db/de9/structa__vector2.html", "db/de9/structa__vector2" ],
+    [ "a_vector3", "dd/d68/structa__vector3.html", "dd/d68/structa__vector3" ],
     [ "a_version", "d2/d04/structa__version.html", "d2/d04/structa__version" ]
 ];

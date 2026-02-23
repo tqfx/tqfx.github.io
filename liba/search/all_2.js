@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_0',['c',['../d2/d69/structa__trajpoly3.html#a72d9b7e21d4bc85adde6da54be75beae',1,'a_trajpoly3::c'],['../d0/dae/structa__trajpoly5.html#aaabb49d5c4a63b432e9299cf2be2ead5',1,'a_trajpoly5::c'],['../d5/d1c/structa__trajpoly7.html#a5f6715facfb2b4d13070dd779a79e3fa',1,'a_trajpoly7::c']]],
+  ['c_0',['c',['../d4/d3b/structa__rand__lcg48.html#adb0f1e4cd6974771b26305952056f15f',1,'a_rand_lcg48::c'],['../d2/d69/structa__trajpoly3.html#a72d9b7e21d4bc85adde6da54be75beae',1,'a_trajpoly3::c'],['../d0/dae/structa__trajpoly5.html#aaabb49d5c4a63b432e9299cf2be2ead5',1,'a_trajpoly5::c'],['../d5/d1c/structa__trajpoly7.html#a5f6715facfb2b4d13070dd779a79e3fa',1,'a_trajpoly7::c']]],
   ['check_1',['Cyclic Redundancy Check',['../d0/de2/group__a__crc.html',1,'']]],
   ['circular_20doubly_20linked_20list_2',['circular doubly linked list',['../db/d65/group__a__list.html',1,'']]],
   ['coef_3',['coef',['../de/d63/structa__regress__simple.html#a359b79faa0684693c4989a97491cd62a',1,'a_regress_simple']]],
@@ -9,9 +9,13 @@ var searchData=
   ['complex_20number_6',['complex number',['../de/d1c/group__a__complex.html',1,'']]],
   ['complex_2eh_7',['complex.h',['../d7/d3b/complex_8h.html',1,'']]],
   ['controller_8',['controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]],
-  ['copyright_9',['Copyright',['../index.html#copyright',1,'']]],
-  ['crc_2eh_10',['crc.h',['../dc/de6/crc_8h.html',1,'']]],
-  ['cubic_20polynomial_20trajectory_11',['cubic polynomial trajectory',['../d3/d60/group__a__trajpoly3.html',1,'']]],
-  ['cur_5f_12',['cur_',['../dc/dec/structa__que.html#a0651899329e0b28fbc03077a256de1f6',1,'a_que']]],
-  ['cyclic_20redundancy_20check_13',['Cyclic Redundancy Check',['../d0/de2/group__a__crc.html',1,'']]]
+  ['convex_20hull_20algorithms_9',['convex hull algorithms',['../d4/d2d/group__a__convexhull.html',1,'']]],
+  ['convexhull_2eh_10',['convexhull.h',['../d3/d57/convexhull_8h.html',1,'']]],
+  ['copyright_11',['Copyright',['../index.html#copyright',1,'']]],
+  ['crc_2eh_12',['crc.h',['../dc/de6/crc_8h.html',1,'']]],
+  ['cross_13',['cross',['../db/de9/structa__vector2.html#a52eb3b31fe027e1d6f1c70140770ce7e',1,'a_vector2::cross()'],['../dd/d68/structa__vector3.html#aee24d7aab5ff0c988010d74e17cf0a7b',1,'a_vector3::cross()']]],
+  ['cubic_20polynomial_20trajectory_14',['cubic polynomial trajectory',['../d3/d60/group__a__trajpoly3.html',1,'']]],
+  ['cur_5f_15',['cur_',['../dc/dec/structa__que.html#a0651899329e0b28fbc03077a256de1f6',1,'a_que']]],
+  ['cyclic_20redundancy_20check_16',['Cyclic Redundancy Check',['../d0/de2/group__a__crc.html',1,'']]],
+  ['cyl_17',['cyl',['../dd/de2/structa__point3.html#a6e3665644f5758ca6a4528502dacbc1d',1,'a_point3::cyl()'],['../dd/d68/structa__vector3.html#a5fab56dafc778ff3b35eec07da865a56',1,'a_vector3::cyl()']]]
 ];

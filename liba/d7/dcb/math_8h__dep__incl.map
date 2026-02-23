@@ -7,16 +7,22 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,45,120,81,115,78,138,42"/>
 <area shape="rect" id="Node000004" href="$d1/d03/vector2_8h.html" title="two&#45;dimensional vector" alt="" coords="159,79,242,105"/>
 <area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="172,42,196,78,191,81,168,45"/>
-<area shape="rect" id="Node000007" href="$d0/d7e/vector3_8h.html" title="three&#45;dimensional vector" alt="" coords="266,79,349,105"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="193,34,284,77,281,81,191,39"/>
-<area shape="rect" id="Node000005" href="$df/d7b/point2_8h.html" title="two&#45;dimensional point" alt="" coords="163,153,238,178"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="203,118,203,152,198,152,198,118"/>
-<area shape="rect" id="Node000006" href="$de/d8d/line2_8h.html" title="two&#45;dimensional line" alt="" coords="167,226,234,251"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="203,192,203,226,198,226,198,192"/>
-<area shape="rect" id="Node000008" href="$d1/d0b/point3_8h.html" title="three&#45;dimensional point" alt="" coords="270,153,345,178"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="310,118,310,152,305,152,305,118"/>
-<area shape="rect" id="Node000009" href="$d2/de1/line3_8h.html" title="three&#45;dimensional line" alt="" coords="274,226,341,251"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="310,192,310,226,305,226,305,192"/>
-<area shape="rect" id="Node000010" href="$db/d8b/plane_8h.html" title="three&#45;dimensional plane" alt="" coords="272,299,343,325"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="310,265,310,299,305,299,305,265"/>
+<area shape="rect" id="Node000009" href="$d0/d7e/vector3_8h.html" title="three&#45;dimensional vector" alt="" coords="270,79,353,105"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="194,34,287,77,285,81,192,39"/>
+<area shape="rect" id="Node000005" href="$df/d7b/point2_8h.html" title="two&#45;dimensional point" alt="" coords="162,153,237,178"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="203,118,202,153,197,152,198,118"/>
+<area shape="rect" id="Node000006" href="$d3/d44/bounding_8h.html" title="bounding volume" alt="" coords="144,226,239,251"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="199,192,195,226,190,226,194,191"/>
+<area shape="rect" id="Node000007" href="$d3/d57/convexhull_8h.html" title="convex hull algorithms" alt="" coords="263,226,368,251"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="231,183,298,223,295,228,228,187"/>
+<area shape="rect" id="Node000008" href="$de/d8d/line2_8h.html" title="two&#45;dimensional line" alt="" coords="53,226,119,251"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="171,188,106,228,103,223,168,183"/>
+<area shape="rect" id="Node000010" href="$d1/d0b/point3_8h.html" title="three&#45;dimensional point" alt="" coords="277,153,351,178"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="315,118,316,152,311,153,310,118"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="284,187,213,228,210,223,281,182"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="317,192,318,226,312,226,312,192"/>
+<area shape="rect" id="Node000011" href="$d2/de1/line3_8h.html" title="three&#45;dimensional line" alt="" coords="393,226,459,251"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="345,183,409,223,406,228,342,188"/>
+<area shape="rect" id="Node000012" href="$db/d8b/plane_8h.html" title="three&#45;dimensional plane" alt="" coords="391,299,461,325"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="429,265,429,299,423,299,423,265"/>
 </map>

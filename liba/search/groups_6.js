@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['integral_20derivative_20controller_0',['integral derivative controller',['../d9/da5/group__a__pid__fuzzy.html',1,'fuzzy proportional integral derivative controller'],['../dd/d81/group__a__pid.html',1,'proportional integral derivative controller'],['../d1/da2/group__a__pid__neuro.html',1,'single neuron proportional integral derivative controller']]]
+  ['hash_20function_0',['hash function',['../d3/d7f/group__a__hash.html',1,'']]],
+  ['hepta_20polynomial_20trajectory_1',['hepta polynomial trajectory',['../df/d82/group__a__trajpoly7.html',1,'']]],
+  ['high_20pass_20filter_2',['High Pass Filter',['../d5/d49/group__a__hpf.html',1,'']]],
+  ['hull_20algorithms_3',['convex hull algorithms',['../d4/d2d/group__a__convexhull.html',1,'']]]
 ];

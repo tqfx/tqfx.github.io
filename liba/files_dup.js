@@ -2,8 +2,10 @@ var files_dup =
 [
     [ "a.h", "d2/d62/a_8h.html", "d2/d62/a_8h" ],
     [ "avl.h", "d3/d51/avl_8h.html", "d3/d51/avl_8h" ],
+    [ "bounding.h", "d3/d44/bounding_8h.html", "d3/d44/bounding_8h" ],
     [ "buf.h", "d6/d6d/buf_8h.html", "d6/d6d/buf_8h" ],
     [ "complex.h", "d7/d3b/complex_8h.html", "d7/d3b/complex_8h" ],
+    [ "convexhull.h", "d3/d57/convexhull_8h.html", "d3/d57/convexhull_8h" ],
     [ "crc.h", "dc/de6/crc_8h.html", null ],
     [ "fuzzy.h", "df/d2a/fuzzy_8h.html", "df/d2a/fuzzy_8h" ],
     [ "hash.h", "db/dfb/hash_8h.html", "db/dfb/hash_8h" ],
@@ -24,6 +26,7 @@ var files_dup =
     [ "point3.h", "d1/d0b/point3_8h.html", "d1/d0b/point3_8h" ],
     [ "poly.h", "db/d57/poly_8h.html", "db/d57/poly_8h" ],
     [ "que.h", "d9/dc9/que_8h.html", "d9/dc9/que_8h" ],
+    [ "rand.h", "d5/d66/rand_8h.html", "d5/d66/rand_8h" ],
     [ "rbt.h", "d6/d1b/rbt_8h.html", "d6/d1b/rbt_8h" ],
     [ "regress.h", "d2/de8/regress_8h.html", "d2/de8/regress_8h" ],
     [ "regress_linear.h", "d1/dfb/regress__linear_8h.html", "d1/dfb/regress__linear_8h" ],

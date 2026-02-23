@@ -1,5 +1,24 @@
 var point3_8h =
 [
     [ "A_POINT3_C", "de/d3c/group__a__point3.html#ga23d8e912c457e3ab1c956ada30fb2187", null ],
-    [ "a_point3_c", "de/d3c/group__a__point3.html#gaf6368242c5de3b16f66e7ffcec4278a3", null ]
+    [ "a_point3_c", "de/d3c/group__a__point3.html#gaf6368242c5de3b16f66e7ffcec4278a3", null ],
+    [ "a_point3_add", "de/d3c/group__a__point3.html#ga7cfa5b331efb71a5cb7c9f5f08f36bb9", null ],
+    [ "a_point3_cmpxy", "de/d3c/group__a__point3.html#ga8dd25810e6c4e41f0ead1db9fffe365a", null ],
+    [ "a_point3_cmpyx", "de/d3c/group__a__point3.html#ga79f385cfa5eb23a12f0f016db7abfd9f", null ],
+    [ "a_point3_cyl", "de/d3c/group__a__point3.html#gaccfd5aed55466e696041a0d8d681bd88", null ],
+    [ "a_point3_dist", "de/d3c/group__a__point3.html#ga49bfbf96ef4d2b9ba374cab8debc2812", null ],
+    [ "a_point3_dist2", "de/d3c/group__a__point3.html#ga88bf16cba92bbf861b653cb478904a6e", null ],
+    [ "a_point3_div", "de/d3c/group__a__point3.html#gadabe775b68ab1b6161842250532a33f4", null ],
+    [ "a_point3_maxdist", "de/d3c/group__a__point3.html#ga90b89065d68ee8ddabf728ac78f118ae", null ],
+    [ "a_point3_mindist", "de/d3c/group__a__point3.html#ga85d3f4c28e1e26e96b00a3f527693c0d", null ],
+    [ "a_point3_mul", "de/d3c/group__a__point3.html#gab8ce843f027d8e719916daeeeb6a0b97", null ],
+    [ "a_point3_neg", "de/d3c/group__a__point3.html#gadf7676a5ca419f740b424d94743dad38", null ],
+    [ "a_point3_pos", "de/d3c/group__a__point3.html#ga36c76acce37fdccb5163bd163bbfed67", null ],
+    [ "a_point3_set_cyl", "de/d3c/group__a__point3.html#ga78190e0372ed78e58a7a3c2c1fcedfc7", null ],
+    [ "a_point3_set_sph", "de/d3c/group__a__point3.html#ga9edc1edff514e8b7639093386e3a2d81", null ],
+    [ "a_point3_set_val", "de/d3c/group__a__point3.html#gaa8aa36e95bec9213652542d866d5df8d", null ],
+    [ "a_point3_sph", "de/d3c/group__a__point3.html#gab85ccde0aa2e6749d3c5fbfe3366bcbb", null ],
+    [ "a_point3_sub", "de/d3c/group__a__point3.html#gaec28079bd2000d4768986122393c33a2", null ],
+    [ "a_point3_val", "de/d3c/group__a__point3.html#ga156fdae6dc84a7747215d36e1a27688b", null ],
+    [ "a_vector3_set", "de/d3c/group__a__point3.html#ga7c7afdbd9d644aa6164141e2be4fd0e9", null ]
 ];

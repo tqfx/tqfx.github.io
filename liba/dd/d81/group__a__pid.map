@@ -3,22 +3,23 @@
 <area shape="rect" id="Node000004" href="$dd/d35/group__a__line2.html" title=" " alt="" coords="428,55,587,80"/>
 <area shape="rect" id="Node000005" href="$d8/ddb/group__a__line3.html" title=" " alt="" coords="423,104,592,129"/>
 <area shape="rect" id="Node000006" href="$d0/dae/group__a__lpf.html" title=" " alt="" coords="448,153,567,179"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,513,344,553"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,553,344,593"/>
 <area shape="rect" id="Node000007" href="$d9/da5/group__a__pid__fuzzy.html" title=" " alt="" coords="434,203,581,257"/>
 <area shape="rect" id="Node000008" href="$d1/da2/group__a__pid__neuro.html" title=" " alt="" coords="401,282,613,322"/>
 <area shape="rect" id="Node000009" href="$db/d44/group__a__plane.html" title=" " alt="" coords="417,347,598,372"/>
 <area shape="rect" id="Node000010" href="$d2/d21/group__a__point2.html" title=" " alt="" coords="423,396,591,421"/>
 <area shape="rect" id="Node000011" href="$de/d3c/group__a__point3.html" title=" " alt="" coords="418,445,597,471"/>
-<area shape="rect" id="Node000012" href="$d8/d67/group__a__regress__linear.html" title=" " alt="" coords="442,495,573,520"/>
-<area shape="rect" id="Node000013" href="$d9/ddc/group__a__regress__simple.html" title=" " alt="" coords="418,544,597,569"/>
-<area shape="rect" id="Node000014" href="$dd/dce/group__a__tf.html" title=" " alt="" coords="442,593,573,619"/>
-<area shape="rect" id="Node000015" href="$d1/d83/group__a__trajbell.html" title=" " alt="" coords="430,643,585,683"/>
-<area shape="rect" id="Node000016" href="$d3/d60/group__a__trajpoly3.html" title=" " alt="" coords="407,708,607,733"/>
-<area shape="rect" id="Node000017" href="$d6/dfe/group__a__trajpoly5.html" title=" " alt="" coords="436,758,579,798"/>
-<area shape="rect" id="Node000018" href="$df/d82/group__a__trajpoly7.html" title=" " alt="" coords="406,823,609,848"/>
-<area shape="rect" id="Node000019" href="$d7/d75/group__a__trajtrap.html" title=" " alt="" coords="432,873,583,913"/>
-<area shape="rect" id="Node000020" href="$d6/d5a/group__a__vector2.html" title=" " alt="" coords="419,937,595,963"/>
-<area shape="rect" id="Node000021" href="$d5/db6/group__a__vector3.html" title=" " alt="" coords="414,987,601,1012"/>
-<area shape="rect" id="Node000022" href="$d2/d6c/group__a__version.html" title=" " alt="" coords="416,1036,599,1061"/>
-<area shape="rect" id="Node000002" href="$d2/d6b/group__liba.html" title=" " alt="" coords="5,520,136,545"/>
+<area shape="rect" id="Node000012" href="$d9/d8d/group__a__rand.html" title=" " alt="" coords="421,495,594,535"/>
+<area shape="rect" id="Node000013" href="$d8/d67/group__a__regress__linear.html" title=" " alt="" coords="442,560,573,585"/>
+<area shape="rect" id="Node000014" href="$d9/ddc/group__a__regress__simple.html" title=" " alt="" coords="418,609,597,635"/>
+<area shape="rect" id="Node000015" href="$dd/dce/group__a__tf.html" title=" " alt="" coords="442,659,573,684"/>
+<area shape="rect" id="Node000016" href="$d1/d83/group__a__trajbell.html" title=" " alt="" coords="430,709,585,749"/>
+<area shape="rect" id="Node000017" href="$d3/d60/group__a__trajpoly3.html" title=" " alt="" coords="407,773,607,799"/>
+<area shape="rect" id="Node000018" href="$d6/dfe/group__a__trajpoly5.html" title=" " alt="" coords="436,823,579,863"/>
+<area shape="rect" id="Node000019" href="$df/d82/group__a__trajpoly7.html" title=" " alt="" coords="406,888,609,913"/>
+<area shape="rect" id="Node000020" href="$d7/d75/group__a__trajtrap.html" title=" " alt="" coords="432,938,583,978"/>
+<area shape="rect" id="Node000021" href="$d6/d5a/group__a__vector2.html" title=" " alt="" coords="419,1003,595,1028"/>
+<area shape="rect" id="Node000022" href="$d5/db6/group__a__vector3.html" title=" " alt="" coords="414,1052,601,1077"/>
+<area shape="rect" id="Node000023" href="$d2/d6c/group__a__version.html" title=" " alt="" coords="416,1101,599,1127"/>
+<area shape="rect" id="Node000002" href="$d2/d6b/group__liba.html" title=" " alt="" coords="5,560,136,585"/>
 </map>

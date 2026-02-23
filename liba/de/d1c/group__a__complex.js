@@ -1,7 +1,8 @@
 var group__a__complex =
 [
     [ "a_complex", "d5/d8b/structa__complex.html", [
-      [ "imag", "d5/d8b/structa__complex.html#a8bc04b4d57856f9af38914ddf006174a", null ]
+      [ "imag", "d5/d8b/structa__complex.html#a8bc04b4d57856f9af38914ddf006174a", null ],
+      [ "real", "d5/d8b/structa__complex.html#a5760bdd475aecf8f319ac690d89f2200", null ]
     ] ],
     [ "A_COMPLEX_C", "de/d1c/group__a__complex.html#ga549ad679d6fe4ceba30ef2ecfbca5a8a", null ],
     [ "a_complex_c", "de/d1c/group__a__complex.html#ga070213b87ef9a36e984faa64b8e47c3e", null ],
