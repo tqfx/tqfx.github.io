@@ -157,9 +157,10 @@ Functions</h2></td></tr>
 \[ V_{\mathrm o}(n)=\frac{RC}{RC+T_s}V_{\mathrm o}(n-1)+\frac{T_s}{RC+T_s}V_{\mathrm i}(n)
 \]
 </p>
-   <p class="formulaDsp">
-\[ V_{\mathrm o}(n)=(1-\alpha)V_{\mathrm o}(n-1)+\alpha V_{\mathrm i}(n)
-\]
+    <p class="formulaDsp">
+\begin{aligned} V_{\mathrm o}(n)&amp;=(1-\alpha)V_{\mathrm o}(n-1)+\alpha V_{\mathrm i}(n) \\
+ &amp;=V_{\mathrm o}(n-1)+(V_{\mathrm i}(n)-V_{\mathrm o}(n-1))\alpha
+\end{aligned}
 </p>
    <p class="formulaDsp">
 \[ \alpha=\frac{T_s}{RC+T_s}=\frac{T_s}{{\frac{1}{2\pi f_c}}+T_s}

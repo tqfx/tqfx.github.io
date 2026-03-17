@@ -1,25 +1,25 @@
 <map id="single neuron proportional integral derivative controller" name="single neuron proportional integral derivative controller">
 <area shape="rect" id="Node000003" href="$d5/d49/group__a__hpf.html" title=" " alt="" coords="495,5,617,31"/>
-<area shape="rect" id="Node000004" href="$dd/d35/group__a__line2.html" title=" " alt="" coords="477,55,635,80"/>
-<area shape="rect" id="Node000005" href="$d8/ddb/group__a__line3.html" title=" " alt="" coords="471,104,641,129"/>
-<area shape="rect" id="Node000006" href="$d0/dae/group__a__lpf.html" title=" " alt="" coords="497,153,615,179"/>
-<area shape="rect" id="Node000007" href="$dd/d81/group__a__pid.html" title=" " alt="" coords="477,203,635,243"/>
-<area shape="rect" id="Node000008" href="$d9/da5/group__a__pid__fuzzy.html" title=" " alt="" coords="483,268,629,323"/>
-<area shape="rect" id="Node000001" title=" " alt="" coords="185,553,397,593"/>
-<area shape="rect" id="Node000009" href="$db/d44/group__a__plane.html" title=" " alt="" coords="465,347,647,372"/>
-<area shape="rect" id="Node000010" href="$d2/d21/group__a__point2.html" title=" " alt="" coords="472,396,640,421"/>
-<area shape="rect" id="Node000011" href="$de/d3c/group__a__point3.html" title=" " alt="" coords="467,445,645,471"/>
-<area shape="rect" id="Node000012" href="$d9/d8d/group__a__rand.html" title=" " alt="" coords="469,495,643,535"/>
-<area shape="rect" id="Node000013" href="$d8/d67/group__a__regress__linear.html" title=" " alt="" coords="491,560,621,585"/>
-<area shape="rect" id="Node000014" href="$d9/ddc/group__a__regress__simple.html" title=" " alt="" coords="467,609,645,635"/>
-<area shape="rect" id="Node000015" href="$dd/dce/group__a__tf.html" title=" " alt="" coords="491,659,621,684"/>
-<area shape="rect" id="Node000016" href="$d1/d83/group__a__trajbell.html" title=" " alt="" coords="479,709,633,749"/>
-<area shape="rect" id="Node000017" href="$d3/d60/group__a__trajpoly3.html" title=" " alt="" coords="456,773,656,799"/>
-<area shape="rect" id="Node000018" href="$d6/dfe/group__a__trajpoly5.html" title=" " alt="" coords="485,823,627,863"/>
-<area shape="rect" id="Node000019" href="$df/d82/group__a__trajpoly7.html" title=" " alt="" coords="455,888,657,913"/>
-<area shape="rect" id="Node000020" href="$d7/d75/group__a__trajtrap.html" title=" " alt="" coords="481,938,631,978"/>
-<area shape="rect" id="Node000021" href="$d6/d5a/group__a__vector2.html" title=" " alt="" coords="468,1003,644,1028"/>
-<area shape="rect" id="Node000022" href="$d5/db6/group__a__vector3.html" title=" " alt="" coords="463,1052,649,1077"/>
-<area shape="rect" id="Node000023" href="$d2/d6c/group__a__version.html" title=" " alt="" coords="465,1101,647,1127"/>
-<area shape="rect" id="Node000002" href="$d2/d6b/group__liba.html" title=" " alt="" coords="5,560,136,585"/>
+<area shape="rect" id="Node000004" href="$dd/d35/group__a__line2.html" title=" " alt="" coords="470,55,642,125"/>
+<area shape="rect" id="Node000005" href="$d8/ddb/group__a__line3.html" title=" " alt="" coords="470,149,642,218"/>
+<area shape="rect" id="Node000006" href="$d0/dae/group__a__lpf.html" title=" " alt="" coords="497,243,615,268"/>
+<area shape="rect" id="Node000007" href="$dd/d81/group__a__pid.html" title=" " alt="" coords="477,293,635,333"/>
+<area shape="rect" id="Node000008" href="$d9/da5/group__a__pid__fuzzy.html" title=" " alt="" coords="483,357,629,412"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,642,397,682"/>
+<area shape="rect" id="Node000009" href="$db/d44/group__a__plane.html" title=" " alt="" coords="465,436,647,461"/>
+<area shape="rect" id="Node000010" href="$d2/d21/group__a__point2.html" title=" " alt="" coords="472,485,640,511"/>
+<area shape="rect" id="Node000011" href="$de/d3c/group__a__point3.html" title=" " alt="" coords="467,535,645,560"/>
+<area shape="rect" id="Node000012" href="$d9/d8d/group__a__rand.html" title=" " alt="" coords="469,585,643,625"/>
+<area shape="rect" id="Node000013" href="$d8/d67/group__a__regress__linear.html" title=" " alt="" coords="491,649,621,675"/>
+<area shape="rect" id="Node000014" href="$d9/ddc/group__a__regress__simple.html" title=" " alt="" coords="467,699,645,724"/>
+<area shape="rect" id="Node000015" href="$dd/dce/group__a__tf.html" title=" " alt="" coords="491,748,621,773"/>
+<area shape="rect" id="Node000016" href="$d1/d83/group__a__trajbell.html" title=" " alt="" coords="479,798,633,838"/>
+<area shape="rect" id="Node000017" href="$d3/d60/group__a__trajpoly3.html" title=" " alt="" coords="456,863,656,888"/>
+<area shape="rect" id="Node000018" href="$d6/dfe/group__a__trajpoly5.html" title=" " alt="" coords="485,913,627,953"/>
+<area shape="rect" id="Node000019" href="$df/d82/group__a__trajpoly7.html" title=" " alt="" coords="455,977,657,1003"/>
+<area shape="rect" id="Node000020" href="$d7/d75/group__a__trajtrap.html" title=" " alt="" coords="481,1027,631,1067"/>
+<area shape="rect" id="Node000021" href="$d6/d5a/group__a__vector2.html" title=" " alt="" coords="468,1092,644,1117"/>
+<area shape="rect" id="Node000022" href="$d5/db6/group__a__vector3.html" title=" " alt="" coords="463,1141,649,1167"/>
+<area shape="rect" id="Node000023" href="$d2/d6c/group__a__version.html" title=" " alt="" coords="465,1191,647,1216"/>
+<area shape="rect" id="Node000002" href="$d2/d6b/group__liba.html" title=" " alt="" coords="5,649,136,675"/>
 </map>

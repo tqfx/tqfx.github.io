@@ -9,5 +9,10 @@ var rand_8h =
     [ "a_rand_lcg48i", "d9/d8d/group__a__rand.html#gaa53230ce072720896134156085ace4fe", null ],
     [ "a_rand_lcg48i_", "d9/d8d/group__a__rand.html#ga66c8b8302116fdf459f520e6aa48b6a5", null ],
     [ "a_rand_lcg48u", "d9/d8d/group__a__rand.html#gab3f8d897f63c703939ebeb8d5d565588", null ],
-    [ "a_rand_lcg48u_", "d9/d8d/group__a__rand.html#gaa06105de0f506396f85435cc234aacff", null ]
+    [ "a_rand_lcg48u_", "d9/d8d/group__a__rand.html#gaa06105de0f506396f85435cc234aacff", null ],
+    [ "a_rand_pcg32_init", "d9/d8d/group__a__rand.html#gabd7a32bf542b90a71e4fe11e9a08d71c", null ],
+    [ "a_rand_pcg32_shuf", "d9/d8d/group__a__rand.html#ga50b9c5d30c2e2a012b3bb1552aeca02c", null ],
+    [ "a_rand_pcg32f", "d9/d8d/group__a__rand.html#ga3cdf9cd58fceb79bf5d74f6d337f02b1", null ],
+    [ "a_rand_pcg32n", "d9/d8d/group__a__rand.html#ga74f39f92807eb47ed5c8b8efe6b51030", null ],
+    [ "a_rand_pcg32u", "d9/d8d/group__a__rand.html#ga91a682f201f8d389e927020827849d2e", null ]
 ];

@@ -1,5 +1,5 @@
 <map id="a_line2" name="a_line2">
-<area shape="rect" id="Node000001" title="instance structure for two&#45;dimensional line" alt="" coords="63,101,133,127"/>
+<area shape="rect" id="Node000001" title="instance structure for two&#45;dimensional line defined by an origin, a direction vector,..." alt="" coords="63,101,133,127"/>
 <area shape="rect" id="Node000002" href="$d1/db5/structa__point2.html" title="instance structure for two&#45;dimensional point" alt="" coords="5,5,84,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,41,94,100,89,102,56,44"/>
 <area shape="rect" id="Node000003" href="$db/de9/structa__vector2.html" title="instance structure for two&#45;dimensional vector" alt="" coords="108,5,195,31"/>

@@ -98,11 +98,11 @@ $(function(){initNavTree('d0/dc0/structa__line2.html','../../',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">a_line2 Struct Reference<div class="ingroups"><a class="el" href="../../d2/d6b/group__liba.html">algorithm library</a> &raquo; <a class="el" href="../../dd/d35/group__a__line2.html">two-dimensional line</a></div></div></div>
+  <div class="headertitle"><div class="title">a_line2 Struct Reference<div class="ingroups"><a class="el" href="../../d2/d6b/group__liba.html">algorithm library</a> &raquo; <a class="el" href="../../dd/d35/group__a__line2.html">two-dimensional line defined by an origin, a direction vector, and a length</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>instance structure for two-dimensional line  
+<p>instance structure for two-dimensional line defined by an origin, a direction vector, and a length  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../de/d8d/line2_8h_source.html">line2.h</a>&gt;</code></p>
@@ -114,67 +114,986 @@ Collaboration diagram for a_line2:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1f1ed6450298eb0f12900261922c153b" id="r_a1f1ed6450298eb0f12900261922c153b"><td class="memItemLeft"><a id="a1f1ed6450298eb0f12900261922c153b" name="a1f1ed6450298eb0f12900261922c153b"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>lim</b> () const</td></tr>
-<tr class="memitem:af0e416b6c3e9616078c7f86ede72640f" id="r_af0e416b6c3e9616078c7f86ede72640f"><td class="memItemLeft"><a id="af0e416b6c3e9616078c7f86ede72640f" name="af0e416b6c3e9616078c7f86ede72640f"></a>
-void&#160;</td><td class="memItemRight"><b>set_lim</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_)</td></tr>
-<tr class="memitem:a89b0ac52f93b740274d84f2ee40472c0" id="r_a89b0ac52f93b740274d84f2ee40472c0"><td class="memItemLeft"><a id="a89b0ac52f93b740274d84f2ee40472c0" name="a89b0ac52f93b740274d84f2ee40472c0"></a>
-<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;&#160;</td><td class="memItemRight"><b>org</b> () const</td></tr>
-<tr class="memitem:a6b939a71ff4dee22899b220daa08f8c3" id="r_a6b939a71ff4dee22899b220daa08f8c3"><td class="memItemLeft"><a id="a6b939a71ff4dee22899b220daa08f8c3" name="a6b939a71ff4dee22899b220daa08f8c3"></a>
-void&#160;</td><td class="memItemRight"><b>set_org</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
-<tr class="memitem:a645cd704fe4d224e5f1db73da44ce91b" id="r_a645cd704fe4d224e5f1db73da44ce91b"><td class="memItemLeft"><a id="a645cd704fe4d224e5f1db73da44ce91b" name="a645cd704fe4d224e5f1db73da44ce91b"></a>
-<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const &amp;&#160;</td><td class="memItemRight"><b>dir</b> () const</td></tr>
-<tr class="memitem:a671cea9004ecdf258c10a4250356dd44" id="r_a671cea9004ecdf258c10a4250356dd44"><td class="memItemLeft"><a id="a671cea9004ecdf258c10a4250356dd44" name="a671cea9004ecdf258c10a4250356dd44"></a>
-int&#160;</td><td class="memItemRight"><b>set_dir</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
-<tr class="memitem:aa2022cf2fc1c121e59f3ba7e0ac98c5c" id="r_aa2022cf2fc1c121e59f3ba7e0ac98c5c"><td class="memItemLeft"><a id="aa2022cf2fc1c121e59f3ba7e0ac98c5c" name="aa2022cf2fc1c121e59f3ba7e0ac98c5c"></a>
-void&#160;</td><td class="memItemRight"><b>tgt</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
-<tr class="memitem:a59ddaea0ea2fba18e5ef12318083812f" id="r_a59ddaea0ea2fba18e5ef12318083812f"><td class="memItemLeft"><a id="a59ddaea0ea2fba18e5ef12318083812f" name="a59ddaea0ea2fba18e5ef12318083812f"></a>
-int&#160;</td><td class="memItemRight"><b>set_tgt</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
-<tr class="memitem:a5d78696b1b5f654ab9a68ac839ae1ce8" id="r_a5d78696b1b5f654ab9a68ac839ae1ce8"><td class="memItemLeft"><a id="a5d78696b1b5f654ab9a68ac839ae1ce8" name="a5d78696b1b5f654ab9a68ac839ae1ce8"></a>
-int&#160;</td><td class="memItemRight"><b>set</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;p, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const &amp;v)</td></tr>
-<tr class="memitem:a0960fb2345f0e9531cad5f8081766e34" id="r_a0960fb2345f0e9531cad5f8081766e34"><td class="memItemLeft"><a id="a0960fb2345f0e9531cad5f8081766e34" name="a0960fb2345f0e9531cad5f8081766e34"></a>
-int&#160;</td><td class="memItemRight"><b>set</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;p, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;q)</td></tr>
-<tr class="memitem:a7e22e7695c7cb11e558f6e1b7fc82c5a" id="r_a7e22e7695c7cb11e558f6e1b7fc82c5a"><td class="memItemLeft"><a id="a7e22e7695c7cb11e558f6e1b7fc82c5a" name="a7e22e7695c7cb11e558f6e1b7fc82c5a"></a>
-void&#160;</td><td class="memItemRight"><b>eval</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
-<tr class="memitem:a9a4dcf6c3cf36ad9a06b8c6db54d3446" id="r_a9a4dcf6c3cf36ad9a06b8c6db54d3446"><td class="memItemLeft"><a id="a9a4dcf6c3cf36ad9a06b8c6db54d3446" name="a9a4dcf6c3cf36ad9a06b8c6db54d3446"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>parm</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
-<tr class="memitem:a39247166893cc139c5e4c86a0a5bd26a" id="r_a39247166893cc139c5e4c86a0a5bd26a"><td class="memItemLeft"><a id="a39247166893cc139c5e4c86a0a5bd26a" name="a39247166893cc139c5e4c86a0a5bd26a"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>proj</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
-<tr class="memitem:a8e2e94abc3ecce509a3c2b8bc024c079" id="r_a8e2e94abc3ecce509a3c2b8bc024c079"><td class="memItemLeft"><a id="a8e2e94abc3ecce509a3c2b8bc024c079" name="a8e2e94abc3ecce509a3c2b8bc024c079"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>limparm</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
-<tr class="memitem:a868cef4b2c1bc93b9d391a05143f6592" id="r_a868cef4b2c1bc93b9d391a05143f6592"><td class="memItemLeft"><a id="a868cef4b2c1bc93b9d391a05143f6592" name="a868cef4b2c1bc93b9d391a05143f6592"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>limproj</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
-<tr class="memitem:a3096c6ede02fac492c083aaff55c84ed" id="r_a3096c6ede02fac492c083aaff55c84ed"><td class="memItemLeft"><a id="a3096c6ede02fac492c083aaff55c84ed" name="a3096c6ede02fac492c083aaff55c84ed"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>sdist</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
-<tr class="memitem:a34d8a22750926ac9b4abbb62a844700a" id="r_a34d8a22750926ac9b4abbb62a844700a"><td class="memItemLeft"><a id="a34d8a22750926ac9b4abbb62a844700a" name="a34d8a22750926ac9b4abbb62a844700a"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>dist</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
-<tr class="memitem:ad9b8d28cb3c8ed2a00c8d49f35bbc852" id="r_ad9b8d28cb3c8ed2a00c8d49f35bbc852"><td class="memItemLeft"><a id="ad9b8d28cb3c8ed2a00c8d49f35bbc852" name="ad9b8d28cb3c8ed2a00c8d49f35bbc852"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>limdist</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p)</td></tr>
-<tr class="memitem:ae893725ac68f7151672efa163d35a63f" id="r_ae893725ac68f7151672efa163d35a63f"><td class="memItemLeft"><a id="ae893725ac68f7151672efa163d35a63f" name="ae893725ac68f7151672efa163d35a63f"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>limdist2</b> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p)</td></tr>
-<tr class="memitem:a52e2445a401b225e2d9b8cdfd01cea11" id="r_a52e2445a401b225e2d9b8cdfd01cea11"><td class="memItemLeft"><a id="a52e2445a401b225e2d9b8cdfd01cea11" name="a52e2445a401b225e2d9b8cdfd01cea11"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>segdist</b> (<a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p1, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p2) const</td></tr>
-<tr class="memitem:a6623e0280497b582de52f7e181536b04" id="r_a6623e0280497b582de52f7e181536b04"><td class="memItemLeft"><a id="a6623e0280497b582de52f7e181536b04" name="a6623e0280497b582de52f7e181536b04"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>segdist2</b> (<a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p1, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p2) const</td></tr>
-<tr class="memitem:a204a10ad0773cdc7a8bc03bed457754e" id="r_a204a10ad0773cdc7a8bc03bed457754e"><td class="memItemLeft"><a id="a204a10ad0773cdc7a8bc03bed457754e" name="a204a10ad0773cdc7a8bc03bed457754e"></a>
-int&#160;</td><td class="memItemRight"><b>int0</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w) const</td></tr>
-<tr class="memitem:a6a0031537f5b0b2808c78d0ca52e541f" id="r_a6a0031537f5b0b2808c78d0ca52e541f"><td class="memItemLeft"><a id="a6a0031537f5b0b2808c78d0ca52e541f" name="a6a0031537f5b0b2808c78d0ca52e541f"></a>
-int&#160;</td><td class="memItemRight"><b>int1</b> (<a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2) const</td></tr>
-<tr class="memitem:a3c92cbdec5d5c2b738430d478691f742" id="r_a3c92cbdec5d5c2b738430d478691f742"><td class="memItemLeft"><a id="a3c92cbdec5d5c2b738430d478691f742" name="a3c92cbdec5d5c2b738430d478691f742"></a>
-void&#160;</td><td class="memItemRight"><b>rot</b> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> angle, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> &amp;res) const</td></tr>
+<tr class="memitem:a6c2c0b309a572962646180a97dbfc93b" id="r_a6c2c0b309a572962646180a97dbfc93b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c2c0b309a572962646180a97dbfc93b">set_max</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_)</td></tr>
+<tr class="memdesc:a6c2c0b309a572962646180a97dbfc93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the maximum length of the line segment.     <br /></td></tr>
+<tr class="memitem:a6b939a71ff4dee22899b220daa08f8c3" id="r_a6b939a71ff4dee22899b220daa08f8c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6b939a71ff4dee22899b220daa08f8c3">set_org</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
+<tr class="memdesc:a6b939a71ff4dee22899b220daa08f8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the origin coordinates of the line.     <br /></td></tr>
+<tr class="memitem:a645cd704fe4d224e5f1db73da44ce91b" id="r_a645cd704fe4d224e5f1db73da44ce91b"><td class="memItemLeft"><a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a645cd704fe4d224e5f1db73da44ce91b">dir</a> () const</td></tr>
+<tr class="memdesc:a645cd704fe4d224e5f1db73da44ce91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the address of the direction vector of the line.     <br /></td></tr>
+<tr class="memitem:a671cea9004ecdf258c10a4250356dd44" id="r_a671cea9004ecdf258c10a4250356dd44"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a671cea9004ecdf258c10a4250356dd44">set_dir</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
+<tr class="memdesc:a671cea9004ecdf258c10a4250356dd44"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the direction vector and length of the line using raw components.     <br /></td></tr>
+<tr class="memitem:aa2022cf2fc1c121e59f3ba7e0ac98c5c" id="r_aa2022cf2fc1c121e59f3ba7e0ac98c5c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa2022cf2fc1c121e59f3ba7e0ac98c5c">tgt</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
+<tr class="memdesc:aa2022cf2fc1c121e59f3ba7e0ac98c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the target endpoint of the line segment.     <br /></td></tr>
+<tr class="memitem:a59ddaea0ea2fba18e5ef12318083812f" id="r_a59ddaea0ea2fba18e5ef12318083812f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a59ddaea0ea2fba18e5ef12318083812f">set_tgt</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> x, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> y)</td></tr>
+<tr class="memdesc:a59ddaea0ea2fba18e5ef12318083812f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the line direction and length based on a target point relative to the current origin.     <br /></td></tr>
+<tr class="memitem:a5d78696b1b5f654ab9a68ac839ae1ce8" id="r_a5d78696b1b5f654ab9a68ac839ae1ce8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5d78696b1b5f654ab9a68ac839ae1ce8">set</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;p, <a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const &amp;v)</td></tr>
+<tr class="memdesc:a5d78696b1b5f654ab9a68ac839ae1ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the line segment from a start point and a direction vector.     <br /></td></tr>
+<tr class="memitem:a0960fb2345f0e9531cad5f8081766e34" id="r_a0960fb2345f0e9531cad5f8081766e34"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0960fb2345f0e9531cad5f8081766e34">set</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;p, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;q)</td></tr>
+<tr class="memdesc:a0960fb2345f0e9531cad5f8081766e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the line segment from two points (start point p, end point q).     <br /></td></tr>
+<tr class="memitem:a7e22e7695c7cb11e558f6e1b7fc82c5a" id="r_a7e22e7695c7cb11e558f6e1b7fc82c5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e22e7695c7cb11e558f6e1b7fc82c5a">eval</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
+<tr class="memdesc:a7e22e7695c7cb11e558f6e1b7fc82c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate a point on the line at a given parameter.     <br /></td></tr>
+<tr class="memitem:a9a4dcf6c3cf36ad9a06b8c6db54d3446" id="r_a9a4dcf6c3cf36ad9a06b8c6db54d3446"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9a4dcf6c3cf36ad9a06b8c6db54d3446">parm</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
+<tr class="memdesc:a9a4dcf6c3cf36ad9a06b8c6db54d3446"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the scalar projection parameter of a point onto the infinite line.     <br /></td></tr>
+<tr class="memitem:a39247166893cc139c5e4c86a0a5bd26a" id="r_a39247166893cc139c5e4c86a0a5bd26a"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a39247166893cc139c5e4c86a0a5bd26a">proj</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
+<tr class="memdesc:a39247166893cc139c5e4c86a0a5bd26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">project a point onto the infinite line.     <br /></td></tr>
+<tr class="memitem:aad7050779f9f4dffd76a9a05841f8bdd" id="r_aad7050779f9f4dffd76a9a05841f8bdd"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#aad7050779f9f4dffd76a9a05841f8bdd">limparm</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
+<tr class="memdesc:aad7050779f9f4dffd76a9a05841f8bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the scalar projection parameter of a point onto the line segment.     <br /></td></tr>
+<tr class="memitem:aaaf3720381bd47b1e633b9bb80e5756e" id="r_aaaf3720381bd47b1e633b9bb80e5756e"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaaf3720381bd47b1e633b9bb80e5756e">limproj</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;res) const</td></tr>
+<tr class="memdesc:aaaf3720381bd47b1e633b9bb80e5756e"><td class="mdescLeft">&#160;</td><td class="mdescRight">project a point onto a line segment.     <br /></td></tr>
+<tr class="memitem:a3096c6ede02fac492c083aaff55c84ed" id="r_a3096c6ede02fac492c083aaff55c84ed"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3096c6ede02fac492c083aaff55c84ed">sdist</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
+<tr class="memdesc:a3096c6ede02fac492c083aaff55c84ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the signed distance from a point to the infinite line.     <br /></td></tr>
+<tr class="memitem:a34d8a22750926ac9b4abbb62a844700a" id="r_a34d8a22750926ac9b4abbb62a844700a"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a34d8a22750926ac9b4abbb62a844700a">dist</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs) const</td></tr>
+<tr class="memdesc:a34d8a22750926ac9b4abbb62a844700a"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the absolute distance from a point to the infinite line.     <br /></td></tr>
+<tr class="memitem:a85e3bde49628fee8387e92793b16d45b" id="r_a85e3bde49628fee8387e92793b16d45b"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a85e3bde49628fee8387e92793b16d45b">limdist</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p)</td></tr>
+<tr class="memdesc:a85e3bde49628fee8387e92793b16d45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the distance from a point to the closest point on a line segment.     <br /></td></tr>
+<tr class="memitem:a54c3ec3140ab5fb46fcc53a1042a5cd2" id="r_a54c3ec3140ab5fb46fcc53a1042a5cd2"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a54c3ec3140ab5fb46fcc53a1042a5cd2">limdist2</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p)</td></tr>
+<tr class="memdesc:a54c3ec3140ab5fb46fcc53a1042a5cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the squared distance from a point to the closest point on a line segment.     <br /></td></tr>
+<tr class="memitem:a6769e247ee328d7d5fc5a55d17e93488" id="r_a6769e247ee328d7d5fc5a55d17e93488"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6769e247ee328d7d5fc5a55d17e93488">segdist</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p2) const</td></tr>
+<tr class="memdesc:a6769e247ee328d7d5fc5a55d17e93488"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the distance between two line segments.     <br /></td></tr>
+<tr class="memitem:a059640f404300082c619f45fd813070d" id="r_a059640f404300082c619f45fd813070d"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#a059640f404300082c619f45fd813070d">segdist2</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;p2) const</td></tr>
+<tr class="memdesc:a059640f404300082c619f45fd813070d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the squared distance between two line segments.     <br /></td></tr>
+<tr class="memitem:af0581f3d5001029254cd603c875d7684" id="r_af0581f3d5001029254cd603c875d7684"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af0581f3d5001029254cd603c875d7684">int0</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min_, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max_, <a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w) const</td></tr>
+<tr class="memdesc:af0581f3d5001029254cd603c875d7684"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the intersection between a point and a line segment.     <br /></td></tr>
+<tr class="memitem:a1ddf1b6d6990ed16b97341c78edd0255" id="r_a1ddf1b6d6990ed16b97341c78edd0255"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1ddf1b6d6990ed16b97341c78edd0255">int1</a> (<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max1, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> min2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> max2, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w1, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;w2) const</td></tr>
+<tr class="memdesc:a1ddf1b6d6990ed16b97341c78edd0255"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the intersection between two line segments.     <br /></td></tr>
+<tr class="memitem:ad27825ff86c0e896b7c68cfe927a7032" id="r_ad27825ff86c0e896b7c68cfe927a7032"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad27825ff86c0e896b7c68cfe927a7032">rot</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> sin, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> cos, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> &amp;res) const</td></tr>
+<tr class="memdesc:ad27825ff86c0e896b7c68cfe927a7032"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a line segment around a pivot point using pre-calculated sine and cosine values.     <br /></td></tr>
+<tr class="memitem:a3c92cbdec5d5c2b738430d478691f742" id="r_a3c92cbdec5d5c2b738430d478691f742"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c92cbdec5d5c2b738430d478691f742">rot</a> (<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> angle, <a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> &amp;res) const</td></tr>
+<tr class="memdesc:a3c92cbdec5d5c2b738430d478691f742"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate a line segment around a specified pivot point.     <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a0f399a3616a7c49dabb91d73375e91fd" id="r_a0f399a3616a7c49dabb91d73375e91fd"><td class="memItemLeft"><a id="a0f399a3616a7c49dabb91d73375e91fd" name="a0f399a3616a7c49dabb91d73375e91fd"></a>
-<a class="el" href="../../d1/db5/structa__point2.html">a_point2</a>&#160;</td><td class="memItemRight"><b>orig</b></td></tr>
-<tr class="memitem:acbfba77f9df50806e28f5eeb9a5d1852" id="r_acbfba77f9df50806e28f5eeb9a5d1852"><td class="memItemLeft"><a id="acbfba77f9df50806e28f5eeb9a5d1852" name="acbfba77f9df50806e28f5eeb9a5d1852"></a>
-<a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a>&#160;</td><td class="memItemRight"><b>dir_</b></td></tr>
-<tr class="memitem:adefaf4e840f41af290221eeaecf206ed" id="r_adefaf4e840f41af290221eeaecf206ed"><td class="memItemLeft"><a id="adefaf4e840f41af290221eeaecf206ed" name="adefaf4e840f41af290221eeaecf206ed"></a>
-<a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><b>max</b></td></tr>
+<tr class="memitem:a9800ab39c44291e3b53ccd4f7dbd9a96" id="r_a9800ab39c44291e3b53ccd4f7dbd9a96"><td class="memItemLeft"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9800ab39c44291e3b53ccd4f7dbd9a96">org</a></td></tr>
+<tr class="memitem:acbfba77f9df50806e28f5eeb9a5d1852" id="r_acbfba77f9df50806e28f5eeb9a5d1852"><td class="memItemLeft"><a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a>&#160;</td><td class="memItemRight"><a class="el" href="#acbfba77f9df50806e28f5eeb9a5d1852">dir_</a></td></tr>
+<tr class="memitem:adefaf4e840f41af290221eeaecf206ed" id="r_adefaf4e840f41af290221eeaecf206ed"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#adefaf4e840f41af290221eeaecf206ed">max</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>instance structure for two-dimensional line </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>instance structure for two-dimensional line defined by an origin, a direction vector, and a length </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a645cd704fe4d224e5f1db73da44ce91b" name="a645cd704fe4d224e5f1db73da44ce91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645cd704fe4d224e5f1db73da44ce91b">&#9670;&#160;</a></span>dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const  &amp; a_line2::dir </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the address of the direction vector of the line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga6f34b40f6566fcf678cdd116a56a6398" title="get the address of the direction vector of the line.">a_line2_dir</a> </dd></dl>
+
+</div>
+</div>
+<a id="a34d8a22750926ac9b4abbb62a844700a" name="a34d8a22750926ac9b4abbb62a844700a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d8a22750926ac9b4abbb62a844700a">&#9670;&#160;</a></span>dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::dist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the absolute distance from a point to the infinite line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga1d71456edd5dc1cf8fb4ab00ebf40d1b" title="compute the absolute distance from a point to the infinite line.">a_line2_dist</a> </dd></dl>
+
+</div>
+</div>
+<a id="a7e22e7695c7cb11e558f6e1b7fc82c5a" name="a7e22e7695c7cb11e558f6e1b7fc82c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e22e7695c7cb11e558f6e1b7fc82c5a">&#9670;&#160;</a></span>eval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::eval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>evaluate a point on the line at a given parameter.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga07019fe983b573e51199804376bc4837" title="evaluate a point on the line at a given parameter.">a_line2_eval</a> </dd></dl>
+
+</div>
+</div>
+<a id="af0581f3d5001029254cd603c875d7684" name="af0581f3d5001029254cd603c875d7684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0581f3d5001029254cd603c875d7684">&#9670;&#160;</a></span>int0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::int0 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the intersection between a point and a line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gac6d567071065904ede7d69150b0300fc" title="compute the intersection between a point and a line segment.">a_line2_int0</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1ddf1b6d6990ed16b97341c78edd0255" name="a1ddf1b6d6990ed16b97341c78edd0255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ddf1b6d6990ed16b97341c78edd0255">&#9670;&#160;</a></span>int1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::int1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the intersection between two line segments.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gaca0de5c2a90c53f0b93ba732e9c3f561" title="compute the intersection between two line segments.">a_line2_int1</a> </dd></dl>
+
+</div>
+</div>
+<a id="a85e3bde49628fee8387e92793b16d45b" name="a85e3bde49628fee8387e92793b16d45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e3bde49628fee8387e92793b16d45b">&#9670;&#160;</a></span>limdist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::limdist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the distance from a point to the closest point on a line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gac6a7efc958c9076ec62905daf7f01770" title="compute the distance from a point to the closest point on a line segment.">a_line2_limdist</a> </dd></dl>
+
+</div>
+</div>
+<a id="a54c3ec3140ab5fb46fcc53a1042a5cd2" name="a54c3ec3140ab5fb46fcc53a1042a5cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c3ec3140ab5fb46fcc53a1042a5cd2">&#9670;&#160;</a></span>limdist2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::limdist2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the squared distance from a point to the closest point on a line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga2b979bf47dc7900c3a39281d74251822" title="compute the squared distance from a point to the closest point on a line segment.">a_line2_limdist2</a> </dd></dl>
+
+</div>
+</div>
+<a id="aad7050779f9f4dffd76a9a05841f8bdd" name="aad7050779f9f4dffd76a9a05841f8bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7050779f9f4dffd76a9a05841f8bdd">&#9670;&#160;</a></span>limparm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::limparm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the scalar projection parameter of a point onto the line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga982262468a9799e19208b8c622a6fe39" title="compute the scalar projection parameter of a point onto the line segment.">a_line2_limparm</a> </dd></dl>
+
+</div>
+</div>
+<a id="aaaf3720381bd47b1e633b9bb80e5756e" name="aaaf3720381bd47b1e633b9bb80e5756e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf3720381bd47b1e633b9bb80e5756e">&#9670;&#160;</a></span>limproj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::limproj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>project a point onto a line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gaae25dbf27181f9526eb8f55d4221558a" title="project a point onto a line segment.">a_line2_limproj</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9a4dcf6c3cf36ad9a06b8c6db54d3446" name="a9a4dcf6c3cf36ad9a06b8c6db54d3446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4dcf6c3cf36ad9a06b8c6db54d3446">&#9670;&#160;</a></span>parm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::parm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the scalar projection parameter of a point onto the infinite line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga7a59bc6fa8a3d6ac187f53fb1210be37" title="compute the scalar projection parameter of a point onto the infinite line.">a_line2_parm</a> </dd></dl>
+
+</div>
+</div>
+<a id="a39247166893cc139c5e4c86a0a5bd26a" name="a39247166893cc139c5e4c86a0a5bd26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39247166893cc139c5e4c86a0a5bd26a">&#9670;&#160;</a></span>proj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::proj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>project a point onto the infinite line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gae19e887b2c0a8d5b34378b39422b4e4c" title="project a point onto the infinite line.">a_line2_proj</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3c92cbdec5d5c2b738430d478691f742" name="a3c92cbdec5d5c2b738430d478691f742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c92cbdec5d5c2b738430d478691f742">&#9670;&#160;</a></span>rot() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::rot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rotate a line segment around a specified pivot point.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga49efd05c31dfd5c01c6c95c717dabb84" title="rotate a line segment around a specified pivot point.">a_line2_rot</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad27825ff86c0e896b7c68cfe927a7032" name="ad27825ff86c0e896b7c68cfe927a7032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27825ff86c0e896b7c68cfe927a7032">&#9670;&#160;</a></span>rot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::rot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>sin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>cos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rotate a line segment around a pivot point using pre-calculated sine and cosine values.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga1b6fcb301982f2bc8611ab685e7e4950" title="rotate a line segment around a pivot point using pre-calculated sine and cosine values.">a_line2_rot_</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3096c6ede02fac492c083aaff55c84ed" name="a3096c6ede02fac492c083aaff55c84ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3096c6ede02fac492c083aaff55c84ed">&#9670;&#160;</a></span>sdist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::sdist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the signed distance from a point to the infinite line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gadaf7dee47fd25553a7f60e6cdef86180" title="compute the signed distance from a point to the infinite line.">a_line2_sdist</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6769e247ee328d7d5fc5a55d17e93488" name="a6769e247ee328d7d5fc5a55d17e93488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6769e247ee328d7d5fc5a55d17e93488">&#9670;&#160;</a></span>segdist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::segdist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the distance between two line segments.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga03d7e5a54f3586b3e4a358a5f2a431ce" title="compute the distance between two line segments.">a_line2_segdist</a> </dd></dl>
+
+</div>
+</div>
+<a id="a059640f404300082c619f45fd813070d" name="a059640f404300082c619f45fd813070d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059640f404300082c619f45fd813070d">&#9670;&#160;</a></span>segdist2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::segdist2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc0/structa__line2.html">a_line2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>min2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the squared distance between two line segments.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga0850a2f84dfe3cb1711127f606e0035e" title="compute the squared distance between two line segments.">a_line2_segdist2</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0960fb2345f0e9531cad5f8081766e34" name="a0960fb2345f0e9531cad5f8081766e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0960fb2345f0e9531cad5f8081766e34">&#9670;&#160;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialize the line segment from two points (start point p, end point q).    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga3547da943ba1849eb7f4fa5206ecfaeb" title="initialize the line segment from two points (start point p, end point q).">a_line2_set</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5d78696b1b5f654ab9a68ac839ae1ce8" name="a5d78696b1b5f654ab9a68ac839ae1ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d78696b1b5f654ab9a68ac839ae1ce8">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialize the line segment from a start point and a direction vector.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga1494982a41511e55c2a121308dd5c9d6" title="initialize the line segment from a start point and a direction vector.">a_line2_setv</a> </dd></dl>
+
+</div>
+</div>
+<a id="a671cea9004ecdf258c10a4250356dd44" name="a671cea9004ecdf258c10a4250356dd44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671cea9004ecdf258c10a4250356dd44">&#9670;&#160;</a></span>set_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::set_dir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the direction vector and length of the line using raw components.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga97b8a57d43444409296361479b4888a5" title="set the direction vector and length of the line using raw components.">a_line2_set_dir</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6c2c0b309a572962646180a97dbfc93b" name="a6c2c0b309a572962646180a97dbfc93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2c0b309a572962646180a97dbfc93b">&#9670;&#160;</a></span>set_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::set_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>max_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the maximum length of the line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gaf0b500a61ba053b1f39b1175408268b0" title="set the maximum length of the line segment.">a_line2_set_max</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6b939a71ff4dee22899b220daa08f8c3" name="a6b939a71ff4dee22899b220daa08f8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b939a71ff4dee22899b220daa08f8c3">&#9670;&#160;</a></span>set_org()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::set_org </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the origin coordinates of the line.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga1115afc7c56e6c22020dada7e4464d51" title="set the origin coordinates of the line.">a_line2_set_org</a> </dd></dl>
+
+</div>
+</div>
+<a id="a59ddaea0ea2fba18e5ef12318083812f" name="a59ddaea0ea2fba18e5ef12318083812f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ddaea0ea2fba18e5ef12318083812f">&#9670;&#160;</a></span>set_tgt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int a_line2::set_tgt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the line direction and length based on a target point relative to the current origin.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#ga4526932fc3c18e7a0e15fea663a83616" title="Set the line direction and length based on a target point relative to the current origin.">a_line2_set_tgt</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa2022cf2fc1c121e59f3ba7e0ac98c5c" name="aa2022cf2fc1c121e59f3ba7e0ac98c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2022cf2fc1c121e59f3ba7e0ac98c5c">&#9670;&#160;</a></span>tgt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_line2::tgt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute the target endpoint of the line segment.    </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d35/group__a__line2.html#gac2bc09afdd0584177b850b865bdce9d7" title="compute the target endpoint of the line segment.">a_line2_tgt</a> </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="acbfba77f9df50806e28f5eeb9a5d1852" name="acbfba77f9df50806e28f5eeb9a5d1852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbfba77f9df50806e28f5eeb9a5d1852">&#9670;&#160;</a></span>dir_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/de9/structa__vector2.html">a_vector2</a> a_line2::dir_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>normalized direction vector of the line </p>
+
+</div>
+</div>
+<a id="adefaf4e840f41af290221eeaecf206ed" name="adefaf4e840f41af290221eeaecf206ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefaf4e840f41af290221eeaecf206ed">&#9670;&#160;</a></span>max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_line2::max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>maximum length of the line segment </p>
+
+</div>
+</div>
+<a id="a9800ab39c44291e3b53ccd4f7dbd9a96" name="a9800ab39c44291e3b53ccd4f7dbd9a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9800ab39c44291e3b53ccd4f7dbd9a96">&#9670;&#160;</a></span>org</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/db5/structa__point2.html">a_point2</a> a_line2::org</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>origin point of the line </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="../../de/d8d/line2_8h_source.html">line2.h</a></li>
 </ul>
 </div><!-- contents -->

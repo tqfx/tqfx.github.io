@@ -164,6 +164,10 @@ void&#160;</td><td class="memItemRight"><b>a_point3_pos</b> (<a class="el" href=
 <tr class="memitem:gadf7676a5ca419f740b424d94743dad38" id="r_gadf7676a5ca419f740b424d94743dad38"><td class="memItemLeft"><a id="gadf7676a5ca419f740b424d94743dad38" name="gadf7676a5ca419f740b424d94743dad38"></a>
 void&#160;</td><td class="memItemRight"><b>a_point3_neg</b> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *ctx, <a class="el" href="../../dd/d68/structa__vector3.html">a_vector3</a> *res)</td></tr>
 <tr class="memdesc:gadf7676a5ca419f740b424d94743dad38"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert it into a vector from the point to the origin. <br /></td></tr>
+<tr class="memitem:gaa4a67b067db1b6dee81f680690b93bf1" id="r_gaa4a67b067db1b6dee81f680690b93bf1"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa4a67b067db1b6dee81f680690b93bf1">a_point3_norm</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *ctx)</td></tr>
+<tr class="memdesc:gaa4a67b067db1b6dee81f680690b93bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the magnitude of a 3D point.  <br /></td></tr>
+<tr class="memitem:ga6c09a3f90cd41de209078b7013283954" id="r_ga6c09a3f90cd41de209078b7013283954"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga6c09a3f90cd41de209078b7013283954">a_point3_norm2</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *ctx)</td></tr>
+<tr class="memdesc:ga6c09a3f90cd41de209078b7013283954"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the squared magnitude of a 3D point.  <br /></td></tr>
 <tr class="memitem:ga49bfbf96ef4d2b9ba374cab8debc2812" id="r_ga49bfbf96ef4d2b9ba374cab8debc2812"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga49bfbf96ef4d2b9ba374cab8debc2812">a_point3_dist</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *lhs, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *rhs)</td></tr>
 <tr class="memdesc:ga49bfbf96ef4d2b9ba374cab8debc2812"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the distance between two 3D points.  <br /></td></tr>
 <tr class="memitem:ga88bf16cba92bbf861b653cb478904a6e" id="r_ga88bf16cba92bbf861b653cb478904a6e"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga88bf16cba92bbf861b653cb478904a6e">a_point3_dist2</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *lhs, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *rhs)</td></tr>
@@ -172,6 +176,16 @@ void&#160;</td><td class="memItemRight"><b>a_point3_neg</b> (<a class="el" href=
 <tr class="memdesc:ga85d3f4c28e1e26e96b00a3f527693c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the minimum distance from a reference point to a point set.  <br /></td></tr>
 <tr class="memitem:ga90b89065d68ee8ddabf728ac78f118ae" id="r_ga90b89065d68ee8ddabf728ac78f118ae"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga90b89065d68ee8ddabf728ac78f118ae">a_point3_maxdist</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *ctx, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *i_p, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> i_n, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *o_p, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> *o_i)</td></tr>
 <tr class="memdesc:ga90b89065d68ee8ddabf728ac78f118ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the maximum distance from a reference point to a point set.  <br /></td></tr>
+<tr class="memitem:ga60278ab784da9d06104b768f72fc53eb" id="r_ga60278ab784da9d06104b768f72fc53eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga60278ab784da9d06104b768f72fc53eb">a_point3_lerp</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *lhs, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *rhs, <a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> val, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *res)</td></tr>
+<tr class="memdesc:ga60278ab784da9d06104b768f72fc53eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute linear interpolation (LERP) between two 3D points.  <br /></td></tr>
+<tr class="memitem:ga8e0e827897d19a5cd3ec54dd3d663b38" id="r_ga8e0e827897d19a5cd3ec54dd3d663b38"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8e0e827897d19a5cd3ec54dd3d663b38">a_point3_tricir</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p1, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p2, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p3, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *pc)</td></tr>
+<tr class="memdesc:ga8e0e827897d19a5cd3ec54dd3d663b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the circumcenter and circumradius of a triangle defined by three 3D points.  <br /></td></tr>
+<tr class="memitem:gab85c15f16c61f464f292a794fe156865" id="r_gab85c15f16c61f464f292a794fe156865"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab85c15f16c61f464f292a794fe156865">a_point3_tricir2</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p1, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p2, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p3, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *pc)</td></tr>
+<tr class="memdesc:gab85c15f16c61f464f292a794fe156865"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the circumcenter and squared circumradius of a triangle defined by three 3D points.  <br /></td></tr>
+<tr class="memitem:ga1359c8aab52e9280f36f5d49d1249b55" id="r_ga1359c8aab52e9280f36f5d49d1249b55"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga1359c8aab52e9280f36f5d49d1249b55">a_point3_tetsph</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p1, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p2, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p3, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p4, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *pc)</td></tr>
+<tr class="memdesc:ga1359c8aab52e9280f36f5d49d1249b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the circumcenter and circumradius of a tetrahedron defined by four 3D points.  <br /></td></tr>
+<tr class="memitem:ga305843ebd4317fd1cd0c321ff968a44f" id="r_ga305843ebd4317fd1cd0c321ff968a44f"><td class="memItemLeft"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga305843ebd4317fd1cd0c321ff968a44f">a_point3_tetsph2</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p1, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p2, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p3, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *p4, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *pc)</td></tr>
+<tr class="memdesc:ga305843ebd4317fd1cd0c321ff968a44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the circumcenter and squared circumradius of a tetrahedron defined by four 3D points.  <br /></td></tr>
 <tr class="memitem:ga8dd25810e6c4e41f0ead1db9fffe365a" id="r_ga8dd25810e6c4e41f0ead1db9fffe365a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga8dd25810e6c4e41f0ead1db9fffe365a">a_point3_cmpxy</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *lhs, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *rhs)</td></tr>
 <tr class="memdesc:ga8dd25810e6c4e41f0ead1db9fffe365a"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two 3D points primarily by X, then by Y, and finally by Z.  <br /></td></tr>
 <tr class="memitem:ga79f385cfa5eb23a12f0f016db7abfd9f" id="r_ga79f385cfa5eb23a12f0f016db7abfd9f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga79f385cfa5eb23a12f0f016db7abfd9f">a_point3_cmpyx</a> (<a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *lhs, <a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *rhs)</td></tr>
@@ -200,7 +214,7 @@ void&#160;</td><td class="memItemRight"><b>a_point3_neg</b> (<a class="el" href=
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a_cast_s(<a class="code hl_struct" href="../../dd/de2/structa__point3.html">a_point3</a> _, x)</div>
-<div class="ttc" id="astructa__point3_html"><div class="ttname"><a href="../../dd/de2/structa__point3.html">a_point3</a></div><div class="ttdoc">instance structure for three-dimensional point</div><div class="ttdef"><b>Definition</b> point3.h:193</div></div>
+<div class="ttc" id="astructa__point3_html"><div class="ttname"><a href="../../dd/de2/structa__point3.html">a_point3</a></div><div class="ttdoc">instance structure for three-dimensional point</div><div class="ttdef"><b>Definition</b> point3.h:350</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -401,6 +415,52 @@ void&#160;</td><td class="memItemRight"><b>a_point3_neg</b> (<a class="el" href=
 
 </div>
 </div>
+<a id="ga60278ab784da9d06104b768f72fc53eb" name="ga60278ab784da9d06104b768f72fc53eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60278ab784da9d06104b768f72fc53eb">&#9670;&#160;</a></span>a_point3_lerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void a_point3_lerp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute linear interpolation (LERP) between two 3D points. </p>
+<p>Let \(\vec{a}\) and \(\vec{b}\) be two 3D points and let \(t\) be the interpolation factor. Then the linear interpolation \(\vec{p}\) between \(\vec{a}\) and \(\vec{b}\) is given by:   </p><p class="formulaDsp">
+\[ \vec{p} = \vec{a} + (\vec{b} - \vec{a}) * t
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lhs</td><td>points to the starting point </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>points to the ending point </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>is the interpolation factor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">res</td><td>stores the interpolated point </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga90b89065d68ee8ddabf728ac78f118ae" name="ga90b89065d68ee8ddabf728ac78f118ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga90b89065d68ee8ddabf728ac78f118ae">&#9670;&#160;</a></span>a_point3_maxdist()</h2>
 
@@ -505,6 +565,357 @@ void&#160;</td><td class="memItemRight"><b>a_point3_neg</b> (<a class="el" href=
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">+inf</td><td>failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa4a67b067db1b6dee81f680690b93bf1" name="gaa4a67b067db1b6dee81f680690b93bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4a67b067db1b6dee81f680690b93bf1">&#9670;&#160;</a></span>a_point3_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the magnitude of a 3D point. </p>
+<p>In three-dimensional space, a point \(\vec{p}\) with coordinates \((x,y,z)\) has a magnitude defined as:   </p><p class="formulaDsp">
+\[ \|\vec{p}\|=\sqrt{x^2+y^2+z^2}
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to the input point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the magnitude of the point </dd></dl>
+
+</div>
+</div>
+<a id="ga6c09a3f90cd41de209078b7013283954" name="ga6c09a3f90cd41de209078b7013283954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c09a3f90cd41de209078b7013283954">&#9670;&#160;</a></span>a_point3_norm2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_norm2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the squared magnitude of a 3D point. </p>
+<p>In three-dimensional space, a point \(\vec{p}\) with coordinates \((x,y,z)\) has a squared magnitude defined as:   </p><p class="formulaDsp">
+\[ \|\vec{p}\|^2=x^2+y^2+z^2
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>points to the input point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the squared magnitude of the point </dd></dl>
+
+</div>
+</div>
+<a id="ga1359c8aab52e9280f36f5d49d1249b55" name="ga1359c8aab52e9280f36f5d49d1249b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1359c8aab52e9280f36f5d49d1249b55">&#9670;&#160;</a></span>a_point3_tetsph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_tetsph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the circumcenter and circumradius of a tetrahedron defined by four 3D points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>is the first 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>is the second 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>is the third 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p4</td><td>is the fourth 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pc</td><td>stores the circumcenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the circumradius </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if points are coplanar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga305843ebd4317fd1cd0c321ff968a44f" title="compute the circumcenter and squared circumradius of a tetrahedron defined by four 3D points.">a_point3_tetsph2</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga305843ebd4317fd1cd0c321ff968a44f" name="ga305843ebd4317fd1cd0c321ff968a44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga305843ebd4317fd1cd0c321ff968a44f">&#9670;&#160;</a></span>a_point3_tetsph2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_tetsph2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the circumcenter and squared circumradius of a tetrahedron defined by four 3D points. </p>
+<p>Solves for center (x,y,z) where distances to all four points are equal:    </p><p class="formulaDsp">
+\begin{aligned} (x_1 - x)^2 + (y_1 - y)^2 + (z_1 - z)^2 &amp;= \\ (x_2 - x)^2 + (y_2 - y)^2 + (z_2 - z)^2 &amp;= \\
+ (x_3 - x)^2 + (y_3 - y)^2 + (z_3 - z)^2 &amp;= \\ (x_4 - x)^2 + (y_4 - y)^2 + (z_4 - z)^2
+\end{aligned}
+</p>
+<p> This simplifies to:     </p><p class="formulaDsp">
+\begin{cases} 2(x_2−x_1)dx + 2(y_2−y_1)dy + 2(z_2−z_1)dz = (x_2−x_1)^2 + (y_2−y_1)^2 + (z_2−z_1)^2 \\
+ 2(x_3−x_1)dx + 2(y_3−y_1)dy + 2(z_3−z_1)dz = (x_3−x_1)^2 + (y_3−y_1)^2 + (z_3−z_1)^2 \\
+ 2(x_4−x_1)dx + 2(y_4−y_1)dy + 2(z_4−z_1)dz = (x_4−x_1)^2 + (y_4−y_1)^2 + (z_4−z_1)^2
+\end{cases}
+</p>
+<p> Where </p><p class="formulaDsp">
+\begin{aligned} dx &amp;= x - x_1 \\ dy &amp;= y - y_1 \\ dz &amp;= z - z_1 \end{aligned}
+</p>
+<p> Matrix form:    </p><p class="formulaDsp">
+\[ 2\begin{bmatrix} x_{21}&amp;y_{21}&amp;z_{21} \\ x_{31}&amp;y_{31}&amp;z_{31} \\ x_{41}&amp;y_{41}&amp;z_{41} \end{bmatrix}
+ \begin{bmatrix} dx\\dy\\dz \end{bmatrix} = \begin{bmatrix} b_{21}\\b_{31}\\b_{41} \end{bmatrix}
+\]
+</p>
+<p> Where   </p><p class="formulaDsp">
+\begin{aligned} x_{ji} &amp;= x_j-x_i \\ y_{ji} &amp;= y_j-y_i \\ z_{ji} &amp;= z_j-z_i \\ b_{ji} &amp;= x_{ji}^2+y_{ji}^2+z_{ji}^2
+\end{aligned}
+</p>
+<p> Explicit Solution (Cramer's Rule): </p><p class="formulaDsp">
+\begin{aligned} dx &amp;= \frac{D_x}{2D} \\ dy &amp;= \frac{D_y}{2D} \\ dz &amp;= \frac{D_z}{2D} \end{aligned}
+</p>
+<p> Where              </p><p class="formulaDsp">
+\begin{aligned} D   &amp;= x_{41} \begin{vmatrix} y_{21}&amp;z_{21}\\y_{31}&amp;z_{31} \end{vmatrix} +
+        y_{41} \begin{vmatrix} z_{21}&amp;x_{21}\\z_{31}&amp;x_{31} \end{vmatrix} +
+        z_{41} \begin{vmatrix} x_{21}&amp;y_{21}\\x_{31}&amp;y_{31} \end{vmatrix} \\
+ D_x &amp;= b_{41} \begin{vmatrix} y_{21}&amp;z_{21}\\y_{31}&amp;z_{31} \end{vmatrix} +
+        y_{41} \begin{vmatrix} z_{21}&amp;b_{21}\\z_{31}&amp;b_{31} \end{vmatrix} +
+        z_{41} \begin{vmatrix} b_{21}&amp;y_{21}\\b_{31}&amp;y_{31} \end{vmatrix} \\
+ D_y &amp;= x_{41} \begin{vmatrix} b_{21}&amp;z_{21}\\b_{31}&amp;z_{31} \end{vmatrix} +
+        b_{41} \begin{vmatrix} z_{21}&amp;x_{21}\\z_{31}&amp;x_{31} \end{vmatrix} +
+        z_{41} \begin{vmatrix} x_{21}&amp;b_{21}\\x_{31}&amp;b_{31} \end{vmatrix} \\
+ D_z &amp;= x_{41} \begin{vmatrix} y_{21}&amp;b_{21}\\y_{31}&amp;b_{31} \end{vmatrix} +
+        y_{41} \begin{vmatrix} b_{21}&amp;x_{21}\\b_{31}&amp;x_{31} \end{vmatrix} +
+        b_{41} \begin{vmatrix} x_{21}&amp;y_{21}\\x_{31}&amp;y_{31} \end{vmatrix}
+\end{aligned}
+</p>
+<p> Radius (r): </p><p class="formulaDsp">
+\[ r = \sqrt{dx^2+dy^2+dz^2} \]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>is the first 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>is the second 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>is the third 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p4</td><td>is the fourth 3D point on sphere </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pc</td><td>stores the circumcenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the squared circumradius </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if points are coplanar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8e0e827897d19a5cd3ec54dd3d663b38" name="ga8e0e827897d19a5cd3ec54dd3d663b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e0e827897d19a5cd3ec54dd3d663b38">&#9670;&#160;</a></span>a_point3_tricir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_tricir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the circumcenter and circumradius of a triangle defined by three 3D points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>is the first 3D point on circle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>is the second 3D point on circle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>is the third 3D point on circle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pc</td><td>stores the circumcenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the circumradius </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if points are collinear </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gab85c15f16c61f464f292a794fe156865" title="compute the circumcenter and squared circumradius of a triangle defined by three 3D points.">a_point3_tricir2</a> </dd></dl>
+
+</div>
+</div>
+<a id="gab85c15f16c61f464f292a794fe156865" name="gab85c15f16c61f464f292a794fe156865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab85c15f16c61f464f292a794fe156865">&#9670;&#160;</a></span>a_point3_tricir2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d19/group__a__real.html#gaa6f5bef334f17e35f9ef8fab5046c364">a_real</a> a_point3_tricir2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> const *</td>          <td class="paramname"><span class="paramname"><em>p3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/structa__point3.html">a_point3</a> *</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compute the circumcenter and squared circumradius of a triangle defined by three 3D points. </p>
+<p>Solves for center (x,y,z) where distances to all three points are equal: </p><p class="formulaDsp">
+\[ (x_1-x)^2+(y_1-y)^2+(z_1-z)^2=(x_2-x)^2+(y_2-y)^2+(z_2-z)^2=(x_3-x)^2+(y_3-y)^2+(z_3-z)^2 \]
+</p>
+<p> This simplifies to:    </p><p class="formulaDsp">
+\begin{cases} 2(x_2−x_1)x + 2(y_2−y_1)y + 2(z_2−z_1)z = (x_2^2−x_1^2) + (y_2^2−y_1^2) + (z_2^2−z_1^2) \\
+ 2(x_3−x_1)x + 2(y_3−y_1)y + 2(z_3−z_1)z = (x_3^2−x_1^2) + (y_3^2−y_1^2) + (z_3^2−z_1^2)
+\end{cases}
+</p>
+<p> The solution can be expressed in terms of parameters \(k_1\) and \(k_2\):     </p><p class="formulaDsp">
+\begin{cases} x = x_1 + dx = x_1 + k_1(x_2−x_1) + k_2(x_2−x_1) \\
+ y = y_1 + dy = y_1 + k_1(y_2−y_1) + k_2(y_2−y_1) \\
+ z = z_1 + dz = z_1 + k_1(z_2−z_1) + k_2(z_2−z_1)
+\end{cases}
+</p>
+<p> The parameters \(k_1\) and \(k_2\) are found by solving:    </p><p class="formulaDsp">
+\begin{aligned} 2(\vec{v_1}\cdot\vec{v_1})k_1 + 2(\vec{v_1}\cdot\vec{v_2})k_2 = \vec{v_1}\cdot\vec{v_1} \\
+ 2(\vec{v_1}\cdot\vec{v_2})k_1 + 2(\vec{v_2}\cdot\vec{v_2})k_2 = \vec{v_2}\cdot\vec{v_2}
+\end{aligned}
+</p>
+<p> Where </p><p class="formulaDsp">
+\begin{aligned} \vec{v_1}&amp;=(x_2−x_1,y_2−y_1,z_2−z_1) \\ \vec{v_2}&amp;=(x_3−x_1,y_3−y_1,z_3−z_1) \end{aligned}
+</p>
+<p> Matrix form:    </p><p class="formulaDsp">
+\[ 2\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix} \begin{bmatrix} k_1 \\ k_2 \end{bmatrix}
+ =\begin{bmatrix} a \\ c \end{bmatrix}
+\]
+</p>
+<p> Where   </p><p class="formulaDsp">
+\begin{aligned} a&amp;=\vec{v_1}\cdot\vec{v_1} \\ b&amp;=\vec{v_1}\cdot\vec{v_2} \\ c&amp;=\vec{v_2}\cdot\vec{v_2}
+\end{aligned}
+</p>
+<p> Explicit Solution (Cramer's Rule): </p><p class="formulaDsp">
+\begin{aligned} k_1=\frac{c(a-b)}{2(ac-b^2)} \\ k_2=\frac{a(c-b)}{2(ac-b^2)} \end{aligned}
+</p>
+<p> Radius (r): </p><p class="formulaDsp">
+\[ r = \sqrt{dx^2+dy^2+dz^2} \]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>is the first 3D point on circle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>is the second 3D point on circle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p3</td><td>is the third 3D point on circle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pc</td><td>stores the circumcenter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the squared circumradius </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if points are collinear </td></tr>
   </table>
   </dd>
 </dl>

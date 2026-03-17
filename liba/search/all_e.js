@@ -11,10 +11,11 @@ var searchData=
   ['operator_2f_3d_8',['operator/=',['../d1/db5/structa__point2.html#a01d01d3f159c3cd1b7b9c9fc0889fe15',1,'a_point2::operator/=()'],['../dd/de2/structa__point3.html#a1a725df9ee9ecec3e4a1d4afc9c6e1c9',1,'a_point3::operator/=()'],['../db/de9/structa__vector2.html#aa9ab718fa7a771213bbc676b2641b61d',1,'a_vector2::operator/=()'],['../dd/d68/structa__vector3.html#af38d36e2ff985a52ebdd154b5c92c477',1,'a_vector3::operator/=()']]],
   ['operator_5e_9',['operator^',['../db/de9/structa__vector2.html#a1df74ed35fafddaece2ccac25d09e397',1,'a_vector2::operator^()'],['../dd/d68/structa__vector3.html#a4f33bcbb4f4e343b7cf8ca0156aeb137',1,'a_vector3::operator^()']]],
   ['opr_10',['opr',['../d0/d27/structa__pid__fuzzy.html#ad4eb6e44f4e21700995d6a2b3c88b069',1,'a_pid_fuzzy']]],
-  ['ortho_11',['ortho',['../dd/d68/structa__vector3.html#aac928cf4b6ef3ba8f6ff783e202bfd1d',1,'a_vector3']]],
-  ['out_12',['out',['../db/d89/structa__pid.html#a7cb8a72cd8518c0c76c258cce9b4412b',1,'a_pid']]],
-  ['outer_13',['outer',['../db/de9/structa__vector2.html#abe4d1c8f9456b5bba83f3556ed040225',1,'a_vector2::outer()'],['../dd/d68/structa__vector3.html#a5aac9077acf889d6ac7933f8b00a4b9b',1,'a_vector3::outer()']]],
-  ['outmax_14',['outmax',['../db/d89/structa__pid.html#a6b701e90614bb44e9d34f51214aef952',1,'a_pid']]],
-  ['outmin_15',['outmin',['../db/d89/structa__pid.html#a73e2bca4ca08e436ecf4b6337449de7e',1,'a_pid']]],
-  ['output_16',['output',['../d8/db1/structa__hpf.html#a85e631f6a560b93fcdbbb2c61bb92481',1,'a_hpf::output'],['../d8/d6c/structa__lpf.html#a1a3ead94c76a71f9ae9653a2bb7495c7',1,'a_lpf::output'],['../de/ddd/structa__tf.html#a06a47bd46711fc5f550d0df53b802196',1,'a_tf::output']]]
+  ['org_11',['org',['../d0/dc0/structa__line2.html#a9800ab39c44291e3b53ccd4f7dbd9a96',1,'a_line2::org'],['../d0/ddf/structa__line3.html#a1b4751ceceebb3dcb0691fcf55fcfd1e',1,'a_line3::org']]],
+  ['origin_20a_20direction_20vector_20and_20a_20length_12',['origin a direction vector and a length',['../d8/ddb/group__a__line3.html',1,'three-dimensional line defined by an origin, a direction vector, and a length'],['../dd/d35/group__a__line2.html',1,'two-dimensional line defined by an origin, a direction vector, and a length']]],
+  ['out_13',['out',['../db/d89/structa__pid.html#a7cb8a72cd8518c0c76c258cce9b4412b',1,'a_pid']]],
+  ['outer_14',['outer',['../db/de9/structa__vector2.html#abe4d1c8f9456b5bba83f3556ed040225',1,'a_vector2::outer()'],['../dd/d68/structa__vector3.html#a5aac9077acf889d6ac7933f8b00a4b9b',1,'a_vector3::outer()']]],
+  ['outmax_15',['outmax',['../db/d89/structa__pid.html#a6b701e90614bb44e9d34f51214aef952',1,'a_pid']]],
+  ['outmin_16',['outmin',['../db/d89/structa__pid.html#a73e2bca4ca08e436ecf4b6337449de7e',1,'a_pid']]],
+  ['output_17',['output',['../d8/db1/structa__hpf.html#a85e631f6a560b93fcdbbb2c61bb92481',1,'a_hpf::output'],['../d8/d6c/structa__lpf.html#a1a3ead94c76a71f9ae9653a2bb7495c7',1,'a_lpf::output'],['../de/ddd/structa__tf.html#a06a47bd46711fc5f550d0df53b802196',1,'a_tf::output']]]
 ];

@@ -293,8 +293,9 @@ Functions</h2></td></tr>
 
 <p>compute for Low Pass Filter </p>
 <p class="formulaDsp">
-\[ V_{\mathrm o}(n)=(1-\alpha)V_{\mathrm o}(n-1)+\alpha V_{\mathrm i}(n)
-\]
+\begin{aligned} V_{\mathrm o}(n)&amp;=(1-\alpha)V_{\mathrm o}(n-1)+\alpha V_{\mathrm i}(n) \\
+ &amp;=V_{\mathrm o}(n-1)+(V_{\mathrm i}(n)-V_{\mathrm o}(n-1))\alpha
+\end{aligned}
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

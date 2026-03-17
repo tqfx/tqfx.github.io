@@ -117,18 +117,26 @@ Include dependency graph for rand.h:</div>
 Data Structures</h2></td></tr>
 <tr class="memitem:a_5Frand_5Flcg48" id="r_a_5Frand_5Flcg48"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d3b/structa__rand__lcg48.html">a_rand_lcg48</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for the linear congruential generator and 48-bit integer arithmetic  <a href="../../d4/d3b/structa__rand__lcg48.html#details">More...</a><br /></td></tr>
+<tr class="memitem:a_5Frand_5Fpcg32" id="r_a_5Frand_5Fpcg32"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance structure for the permuted congruential generator and 64-bit integer arithmetic  <a href="../../d5/dda/structa__rand__pcg32.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga58f4f76dc95d8f62be22aa8a1edcc352" id="r_ga58f4f76dc95d8f62be22aa8a1edcc352"><td class="memItemLeft">
 #define&#160;</td><td class="memItemRight"><b>A_RAND_LCG48_INIT</b>&#160;&#160;&#160;{A_U64_C(0x5DEECE66D), A_U16_C(0xB), {A_U16_C(0x330E), A_U16_C(0xABCD), A_U16_C(0x1234)}}</td></tr>
+<tr class="memitem:ga9a08aeec1b986547f58875a2ae7c24bb" id="r_ga9a08aeec1b986547f58875a2ae7c24bb"><td class="memItemLeft">
+#define&#160;</td><td class="memItemRight"><b>A_RAND_PCG32_INIT</b>&#160;&#160;&#160;{A_U64_C(0x5851F42D4C957F2D), A_U64_C(0xDA3E39CB94B95BDB), A_U64_C(0x853C49E6748FEA9B)}</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga25ba9fa4c5d347d15f122f57bec2ce36" id="r_ga25ba9fa4c5d347d15f122f57bec2ce36"><td class="memItemLeft">
 typedef struct a_rand_lcg48&#160;</td><td class="memItemRight"><b>a_rand_lcg48</b></td></tr>
+<tr class="memitem:gac5125e087c9cfb812c7a001de7ead286" id="r_gac5125e087c9cfb812c7a001de7ead286"><td class="memItemLeft">
+typedef struct a_rand_pcg32&#160;</td><td class="memItemRight"><b>a_rand_pcg32</b></td></tr>
 <tr class="memitem:a8239d0d0199df529383ea39aaa08c22c" id="r_a8239d0d0199df529383ea39aaa08c22c"><td class="memItemLeft"><a id="a8239d0d0199df529383ea39aaa08c22c" name="a8239d0d0199df529383ea39aaa08c22c"></a>
 typedef struct <a class="el" href="../../d4/d3b/structa__rand__lcg48.html">a_rand_lcg48</a>&#160;</td><td class="memItemRight"><b>a::rand_lcg48</b></td></tr>
+<tr class="memitem:a15ce731640599a220763d51079ea0d29" id="r_a15ce731640599a220763d51079ea0d29"><td class="memItemLeft"><a id="a15ce731640599a220763d51079ea0d29" name="a15ce731640599a220763d51079ea0d29"></a>
+typedef struct <a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a>&#160;</td><td class="memItemRight"><b>a::rand_pcg32</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -152,6 +160,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga2d0ea272fec3b80aab6bc49996f48020"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate a 64-bit floating-point random number in [0,1).  <br /></td></tr>
 <tr class="memitem:gaf5c8690e0849bbb1d64c88be613f2394" id="r_gaf5c8690e0849bbb1d64c88be613f2394"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#gaf5c8690e0849bbb1d64c88be613f2394">a_rand_lcg48_shuf</a> (<a class="el" href="../../d4/d3b/structa__rand__lcg48.html">a_rand_lcg48</a> *ctx, void *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> siz)</td></tr>
 <tr class="memdesc:gaf5c8690e0849bbb1d64c88be613f2394"><td class="mdescLeft">&#160;</td><td class="mdescRight">shuffle the elements of an array in place using the Fisher-Yates (Knuth) shuffle algorithm.  <br /></td></tr>
+<tr class="memitem:gabd7a32bf542b90a71e4fe11e9a08d71c" id="r_gabd7a32bf542b90a71e4fe11e9a08d71c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#gabd7a32bf542b90a71e4fe11e9a08d71c">a_rand_pcg32_init</a> (<a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#ga30c99f362a812de54ce985d69b0fe6f9">a_u64</a> x, <a class="el" href="../../d2/d6b/group__liba.html#ga30c99f362a812de54ce985d69b0fe6f9">a_u64</a> c)</td></tr>
+<tr class="memdesc:gabd7a32bf542b90a71e4fe11e9a08d71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize with initial value for the permuted congruential generator and 64-bit integer arithmetic.  <br /></td></tr>
+<tr class="memitem:ga91a682f201f8d389e927020827849d2e" id="r_ga91a682f201f8d389e927020827849d2e"><td class="memItemLeft"><a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#ga91a682f201f8d389e927020827849d2e">a_rand_pcg32u</a> (<a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a> *ctx)</td></tr>
+<tr class="memdesc:ga91a682f201f8d389e927020827849d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate an unsigned 32-bit random integer.  <br /></td></tr>
+<tr class="memitem:ga74f39f92807eb47ed5c8b8efe6b51030" id="r_ga74f39f92807eb47ed5c8b8efe6b51030"><td class="memItemLeft"><a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#ga74f39f92807eb47ed5c8b8efe6b51030">a_rand_pcg32n</a> (<a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a> *ctx, <a class="el" href="../../d2/d6b/group__liba.html#gaecbf44239274b93233e4c1b18946737a">a_u32</a> n)</td></tr>
+<tr class="memdesc:ga74f39f92807eb47ed5c8b8efe6b51030"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate an unsigned 32-bit random integer in [0,n).  <br /></td></tr>
+<tr class="memitem:ga3cdf9cd58fceb79bf5d74f6d337f02b1" id="r_ga3cdf9cd58fceb79bf5d74f6d337f02b1"><td class="memItemLeft"><a class="el" href="../../d2/d6b/group__liba.html#gad2b66e4a4da01a96c68e79a9682330be">a_f64</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#ga3cdf9cd58fceb79bf5d74f6d337f02b1">a_rand_pcg32f</a> (<a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a> *ctx)</td></tr>
+<tr class="memdesc:ga3cdf9cd58fceb79bf5d74f6d337f02b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate a 64-bit floating-point random number in [0,1).  <br /></td></tr>
+<tr class="memitem:ga50b9c5d30c2e2a012b3bb1552aeca02c" id="r_ga50b9c5d30c2e2a012b3bb1552aeca02c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d8d/group__a__rand.html#ga50b9c5d30c2e2a012b3bb1552aeca02c">a_rand_pcg32_shuf</a> (<a class="el" href="../../d5/dda/structa__rand__pcg32.html">a_rand_pcg32</a> *ctx, void *ptr, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> num, <a class="el" href="../../d2/d6b/group__liba.html#gaf0d622157a1497b43d5076797701ff54">a_size</a> siz)</td></tr>
+<tr class="memdesc:ga50b9c5d30c2e2a012b3bb1552aeca02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">shuffle the elements of an array in place using the Fisher-Yates (Knuth) shuffle algorithm.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>pseudorandom number generator </p>

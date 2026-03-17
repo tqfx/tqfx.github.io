@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['perp_0',['perp',['../db/de9/structa__vector2.html#a58ff0616227620545f5659561cc19d8d',1,'a_vector2::perp()'],['../dd/d68/structa__vector3.html#a46d5d31f199ed88f88f1fcc72dad8fcf',1,'a_vector3::perp()']]],
-  ['pol_1',['pol',['../d1/db5/structa__point2.html#ad8b256b8568c09861d652b3b1e08a6bf',1,'a_point2::pol()'],['../db/de9/structa__vector2.html#a1f4c727617323b984ba6df726b8ffb1e',1,'a_vector2::pol()']]],
-  ['pos_2',['pos',['../d1/db5/structa__point2.html#a72857e160c8fa6c721e0ca86af7ac8dc',1,'a_point2::pos()'],['../dd/de2/structa__point3.html#ac0417dd51d26761a37d68caa0881648f',1,'a_point3::pos()']]],
-  ['proj_3',['proj',['../db/de9/structa__vector2.html#aa21f38c9bde841dee75de851bb1739d0',1,'a_vector2::proj()'],['../dd/d68/structa__vector3.html#a0c6b85b5c996ad866ed8d469480afab2',1,'a_vector3::proj()']]]
+  ['maxdist_0',['maxdist',['../d1/db5/structa__point2.html#a7df85b646bd87620cba78d2dbb2c056f',1,'a_point2::maxdist()'],['../dd/de2/structa__point3.html#a186f5f6e9d7d18fb2dcc6e5190a9b0e0',1,'a_point3::maxdist()']]],
+  ['mindist_1',['mindist',['../d1/db5/structa__point2.html#af853c635b2ea8059cbc5f01788448ed6',1,'a_point2::mindist()'],['../dd/de2/structa__point3.html#a06bc11d8cfc8d17184ebe29c786ee51a',1,'a_point3::mindist()']]],
+  ['mul_2',['mul',['../d1/db5/structa__point2.html#a01a2ca288ad85415d71606c934b0c4b8',1,'a_point2::mul()'],['../dd/de2/structa__point3.html#adcea812ad60921b5b20d9de7cf33231b',1,'a_point3::mul()'],['../db/de9/structa__vector2.html#a979d25a44b37c5c308eb3cb0a5d5dadd',1,'a_vector2::mul()'],['../dd/d68/structa__vector3.html#a9f754571c3c71b03dcbeabeda01059b3',1,'a_vector3::mul()']]]
 ];

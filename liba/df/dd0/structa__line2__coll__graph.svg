@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="instance structure for two&#45;dimensional line">
+<g id="a_Node000001"><a xlink:title="instance structure for two&#45;dimensional line defined by an origin, a direction vector,...">
 <polygon fill="#999999" stroke="#666666" points="95.5,-19 43.5,-19 43.5,0 95.5,0 95.5,-19"/>
 <text text-anchor="middle" x="69.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">a_line2</text>
 </a>
@@ -45,7 +45,7 @@
 <polygon fill="#9a32cd" stroke="#9a32cd" points="36.33,-61.5 34.4,-71.92 42.41,-64.97 36.33,-61.5"/>
 </a>
 </g>
-<text text-anchor="start" x="58" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">orig</text>
+<text text-anchor="start" x="57.5" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">org</text>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
