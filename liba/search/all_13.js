@@ -11,7 +11,7 @@ var searchData=
   ['tf_2eh_8',['tf.h',['../d2/d16/tf_8h.html',1,'']]],
   ['tgt_9',['tgt',['../d0/dc0/structa__line2.html#aa2022cf2fc1c121e59f3ba7e0ac98c5c',1,'a_line2::tgt()'],['../d0/ddf/structa__line3.html#acae8165267602837fb940bb2ada40d4b',1,'a_line3::tgt()']]],
   ['third_10',['third',['../d2/d04/structa__version.html#a83be37fd65e0fe9cf4b48ddc2eedf39f',1,'a_version']]],
-  ['three_20dimensional_20line_20defined_20by_20an_20origin_20a_20direction_20vector_20and_20a_20length_11',['three-dimensional line defined by an origin, a direction vector, and a length',['../d8/ddb/group__a__line3.html',1,'']]],
+  ['three_20dimensional_20line_11',['three-dimensional line',['../d8/ddb/group__a__line3.html',1,'']]],
   ['three_20dimensional_20plane_12',['three-dimensional plane',['../db/d44/group__a__plane.html',1,'']]],
   ['three_20dimensional_20point_13',['three-dimensional point',['../de/d3c/group__a__point3.html',1,'']]],
   ['three_20dimensional_20vector_14',['three-dimensional vector',['../d5/db6/group__a__vector3.html',1,'']]],
@@ -28,7 +28,7 @@ var searchData=
   ['tricir_25',['tricir',['../d1/db5/structa__point2.html#a746039b7ae267c661502033ff3df242b',1,'a_point2::tricir()'],['../dd/de2/structa__point3.html#ade25e1cf285825487da0fde2a88a2c55',1,'a_point3::tricir()']]],
   ['tricir2_26',['tricir2',['../d1/db5/structa__point2.html#af4c7e226c157c46b0e7d016b27fc8c60',1,'a_point2::tricir2()'],['../dd/de2/structa__point3.html#a3f4b793ebfe45ee029ddb9bf557f167e',1,'a_point3::tricir2()']]],
   ['tv_27',['tv',['../d1/dcc/structa__trajbell.html#add0f84d3fb2047bc11cae4e3272cebcd',1,'a_trajbell']]],
-  ['two_20dimensional_20line_20defined_20by_20an_20origin_20a_20direction_20vector_20and_20a_20length_28',['two-dimensional line defined by an origin, a direction vector, and a length',['../dd/d35/group__a__line2.html',1,'']]],
+  ['two_20dimensional_20line_28',['two-dimensional line',['../dd/d35/group__a__line2.html',1,'']]],
   ['two_20dimensional_20point_29',['two-dimensional point',['../d2/d21/group__a__point2.html',1,'']]],
   ['two_20dimensional_20vector_30',['two-dimensional vector',['../d6/d5a/group__a__vector2.html',1,'']]]
 ];

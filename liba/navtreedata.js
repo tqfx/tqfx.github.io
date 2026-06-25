@@ -63,6 +63,6 @@ var NAVTREEINDEX =
 "de/d3c/group__a__point3.html#gaa4a67b067db1b6dee81f680690b93bf1"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';

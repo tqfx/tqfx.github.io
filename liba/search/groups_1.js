@@ -7,6 +7,5 @@ var searchData=
   ['bell_20shaped_20velocity_20trajectory_4',['bell-shaped velocity trajectory',['../d1/d83/group__a__trajbell.html',1,'']]],
   ['binary_20search_20tree_5',['binary search tree',['../dd/dba/group__a__avl.html',1,'AVL binary search tree'],['../de/d40/group__a__rbt.html',1,'red–black binary search tree']]],
   ['bounding_20volume_6',['bounding volume',['../d9/d97/group__a__bounding.html',1,'']]],
-  ['buffer_20library_7',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]],
-  ['by_20an_20origin_20a_20direction_20vector_20and_20a_20length_8',['by an origin a direction vector and a length',['../d8/ddb/group__a__line3.html',1,'three-dimensional line defined by an origin, a direction vector, and a length'],['../dd/d35/group__a__line2.html',1,'two-dimensional line defined by an origin, a direction vector, and a length']]]
+  ['buffer_20library_7',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]]
 ];

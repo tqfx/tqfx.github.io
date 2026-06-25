@@ -11,6 +11,5 @@ var searchData=
   ['bounding_20volume_8',['bounding volume',['../d9/d97/group__a__bounding.html',1,'']]],
   ['bounding_2eh_9',['bounding.h',['../d3/d44/bounding_8h.html',1,'']]],
   ['buf_2eh_10',['buf.h',['../d6/d6d/buf_8h.html',1,'']]],
-  ['buffer_20library_11',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]],
-  ['by_20an_20origin_20a_20direction_20vector_20and_20a_20length_12',['by an origin a direction vector and a length',['../d8/ddb/group__a__line3.html',1,'three-dimensional line defined by an origin, a direction vector, and a length'],['../dd/d35/group__a__line2.html',1,'two-dimensional line defined by an origin, a direction vector, and a length']]]
+  ['buffer_20library_11',['basic buffer library',['../d9/d0a/group__a__buf.html',1,'']]]
 ];
